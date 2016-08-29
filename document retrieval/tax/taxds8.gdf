@@ -1,0 +1,30 @@
+nodedef> name,label
+v0,array
+v1,binary search
+v2,binary search tree
+v3,data structure
+v4,deletion
+v5,dictionary
+v6,height
+v7,insertion
+v8,key element pair
+v9,logarithmic time
+v10,ordered dictionaries
+v11,ordering relation
+v12,recursive procedure
+v13,running time
+v14,total order
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,15.3611111111,true
+v2,v1,false,0.0,true
+v3,v5,false,12.2777777778,true
+v4,v1,false,12.9166666667,true
+v6,v2,false,39.6666666667,true
+v7,v1,false,3.77777777778,true
+v8,v12,false,40.6666666666,true
+v9,v12,false,11.8888888889,true
+v10,v5,false,9.44444444444,true
+v11,v12,false,65.5555555555,true
+v12,v2,false,5.66666666667,true
+v13,v6,false,14.6666666667,true
+v14,v5,false,34.0888888889,true

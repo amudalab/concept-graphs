@@ -1,0 +1,37 @@
+nodedef> name,label
+v0,abstract data type
+v1,data structure
+v2,last in first out
+v3,object
+v4,pop
+v5,push
+v6,size
+v7,stack
+v8,top
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v1,false,3.55555555556,true
+v0,v7,false,2.66666666667,true
+v1,v0,false,3.55555555556,true
+v1,v5,false,7.11111111111,true
+v1,v7,false,3.55555555556,true
+v1,v8,false,8.88888888889,true
+v2,v7,false,10.1111111111,true
+v3,v7,false,8.16666666667,true
+v4,v7,false,3.55555555556,true
+v4,v8,false,1.77777777778,true
+v5,v1,false,7.11111111111,true
+v5,v7,false,5.44444444444,true
+v5,v8,false,7.11111111111,true
+v6,v7,false,7.38888888889,true
+v7,v0,false,2.66666666667,true
+v7,v1,false,3.55555555556,true
+v7,v2,false,10.1111111111,true
+v7,v3,false,8.16666666667,true
+v7,v4,false,3.55555555556,true
+v7,v5,false,5.44444444444,true
+v7,v6,false,7.38888888889,true
+v7,v8,false,0.0,true
+v8,v1,false,8.88888888889,true
+v8,v4,false,1.77777777778,true
+v8,v5,false,7.11111111111,true
+v8,v7,false,0.0,true

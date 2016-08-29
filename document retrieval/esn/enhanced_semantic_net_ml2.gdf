@@ -1,0 +1,35 @@
+nodedef> name,label
+v0,batch gradient descent
+v1,descent
+v2,gradient descent
+v3,gradient descent algorithm
+v4,learning algorithm
+v5,regression
+v6,supervised learning
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,6.8028169014,true
+v0,v2,false,0.971830985915,true
+v1,v0,false,20.4084507042,true
+v1,v2,false,0.0,true
+v1,v3,false,31.6126760563,true
+v1,v5,false,123.855633803,true
+v1,v6,false,109.816901408,true
+v2,v0,false,0.971830985915,true
+v2,v1,false,0.0,true
+v2,v3,false,0.0,true
+v2,v4,false,6.9014084507,true
+v2,v5,false,45.6525821596,true
+v3,v1,false,5.26877934272,true
+v3,v2,false,0.0,true
+v3,v5,false,300.704225352,true
+v4,v2,false,6.9014084507,true
+v4,v5,false,169.623239437,true
+v4,v6,false,84.0338028169,true
+v5,v1,false,123.855633803,true
+v5,v2,false,45.6525821596,true
+v5,v3,false,300.704225352,true
+v5,v4,false,169.623239437,true
+v5,v6,false,140.788732394,true
+v6,v1,false,18.3028169013,true
+v6,v4,false,84.0338028169,true
+v6,v5,false,140.788732394,true

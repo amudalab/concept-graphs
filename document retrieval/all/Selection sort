@@ -1,0 +1,413 @@
+
+Selection sort
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+Selection sort
+
+
+
+
+
+
+Class
+Sorting algorithm
+
+
+Data structure
+Array
+
+
+Worst case performance
+(n2)
+
+
+Best case performance
+(n2)
+
+
+Average case performance
+(n2)
+
+
+Worst case space complexity
+(n) total, O(1) auxiliary
+
+
+
+
+
+
+Selection sort animation
+
+
+In computer science, a selection sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and also has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.
+The algorithm divides the input list into two parts: the sublist of items already sorted, which is built up from left to right and is found at the end, and the sublist of items remaining to be sorted, occupying the rest of the list. Initially, the sorted sublist is empty and the unsorted sublist is the entire input list. The algorithm proceeds by always finding the next largest (or smallest, depending on sorting order) element in the unsorted sublist and exchanging it with the leftmost unsorted element.
+Here is an example of this sort algorithm sorting five elements:
+
+64 25 12 22 11
+
+11 25 12 22 64
+
+11 12 25 22 64
+
+11 12 22 25 64
+
+11 12 22 25 64   
+
+(nothing appears changed on this last line because the last 2 numbers were already in order)
+Selection sort can also be used on list structures that make add and remove efficient, such as a linked list. In this case it is more common to remove the minimum element from the remainder of the list, and then insert it at the end of the values sorted so far. For example:
+
+64 25 12 22 11
+
+11 64 25 12 22
+
+11 12 64 25 22
+
+11 12 22 64 25
+
+11 12 22 25 64
+
+
+
+
+/* a[0] to a[n-1] is the array to sort */
+int i,j;
+int iMin;
+ 
+/* advance the position through the entire array */
+/*   (could do j < n-1 because single element is also min element) */
+for (j = 0; j < n-1; j++) {
+    /* find the min element in the unsorted a[j .. n-1] */
+ 
+    /* assume the min is the first element */
+    iMin = j;
+    /* test against elements after j to find the smallest */
+    for ( i = j+1; i < n; i++) {
+        /* if this element is less, then it is the new minimum */  
+        if (a[i] < a[iMin]) {
+            /* found new minimum; remember its index */
+            iMin = i;
+        }
+    }
+ 
+    /* iMin is the index of the minimum element. Swap it with the current position */
+    if ( iMin != j ) {
+        swap(a[j], a[iMin]);
+    }
+}
+
+
+
+
+
+
+Contents
+
+
+1 Mathematical definition
+2 Analysis
+3 Comparison to other sorting algorithms
+4 Variants
+5 References
+6 External links
+
+
+
+
+[edit] Mathematical definition
+Let  be a non-empty set and  such that  where:
+
+ is a permutation of ,
+ for all  and ,
+,
+ is the smallest element of , and
+ is the set of elements of  without one instance of the smallest element of .
+
+[edit] Analysis
+Selection sort is not difficult to analyze compared to other sorting algorithms since none of the loops depend on the data in the array. Selecting the lowest element requires scanning all n elements (this takes n1 comparisons) and then swapping it into the first position. Finding the next lowest element requires scanning the remaining n1 elements and so on, for (n1)+(n2)+...+2+1 =n(n1)/2 (n2) comparisons (see arithmetic progression). Each of these scans requires one swap for n1 elements (the final element is already in place).
+[edit] Comparison to other sorting algorithms
+Among simple average-case (n2) algorithms, selection sort almost always outperforms bubble sort and gnome sort. Insertion sort is very similar in that after the kth iteration, the first k elements in the array are in sorted order. Insertion sort's advantage is that it only scans as many elements as it needs in order to place the k+1st element, while selection sort must scan all remaining elements to find the k+1st element.
+Simple calculation shows that insertion sort will therefore usually perform about half as many comparisons as selection sort, although it can perform just as many or far fewer depending on the order the array was in prior to sorting. It can be seen as an advantage for some real-time applications that selection sort will perform identically regardless of the order of the array, while insertion sort's running time can vary considerably. However, this is more often an advantage for insertion sort in that it runs much more efficiently if the array is already sorted or "close to sorted."
+While selection sort is preferable to insertion sort in terms of number of writes ((n) swaps versus (n2) swaps), it almost always far exceeds (and never beats) the number of writes that cycle sort makes, as cycle sort is theoretically optimal in the number of writes. This can be important if writes are significantly more expensive than reads, such as with EEPROM or Flash memory, where every write lessens the lifespan of the memory.
+Finally, selection sort is greatly outperformed on larger arrays by (nlogn) divide-and-conquer algorithms such as mergesort. However, insertion sort or selection sort are both typically faster for small arrays (i.e. fewer than 1020 elements). A useful optimization in practice for the recursive algorithms is to switch to insertion sort or selection sort for "small enough" sublists.
+[edit] Variants
+Heapsort greatly improves the basic algorithm by using an implicit heap data structure to speed up finding and removing the lowest datum. If implemented correctly, the heap will allow finding the next lowest element in (logn) time instead of (n) for the inner loop in normal selection sort, reducing the total running time to (nlogn).
+A bidirectional variant of selection sort, called cocktail sort, is an algorithm which finds both the minimum and maximum values in the list in every pass. This reduces the number of scans of the list by a factor of 2, eliminating some loop overhead but not actually decreasing the number of comparisons or swaps. Note, however, that cocktail sort more often refers to a bidirectional variant of bubble sort.
+Selection sort can be implemented as a stable sort. If, rather than swapping in step 2, the minimum value is inserted into the first position (that is, all intervening items moved down), the algorithm is stable. However, this modification either requires a data structure that supports efficient insertions or deletions, such as a linked list, or it leads to performing (n2) writes.
+In the bingo sort variant, items are ordered by repeatedly looking through the remaining items to find the greatest value and moving all items with that value to their final location.[1] Like counting sort, this is an efficient variant if there are many duplicate values. Indeed, selection sort does one pass through the remaining items for each item moved. Bingo sort does one pass for each value (not item): after an initial pass to find the biggest value, the next passes can move every item with that value to its final location while finding the next value as in the following pseudocode (arrays are zero-based and the for-loop includes both the top and bottom limits, as in Pascal):
+
+
+
+bingo(array A)
+ 
+{ This procedure sorts in ascending order. }
+begin
+    max := length(A)-1;
+ 
+    { The first iteration is written to look very similar to the subsequent ones, but
+      without swaps. }
+    nextValue := A[max];
+    for i := max - 1 downto 0 do
+        if A[i] > nextValue then
+            nextValue := A[i];
+    while (max > 0) and (A[max] = nextValue) do
+        max := max - 1;
+ 
+    while max > 0 do begin
+        value := nextValue;
+        nextValue := A[max];
+        for i := max - 1 downto 0 do
+             if A[i] = value then begin
+                 swap(A[i], A[max]);
+                 max := max - 1;
+             end else if A[i] > nextValue then
+                 nextValue := A[i];
+        while (max > 0) and (A[max] = nextValue) do
+            max := max - 1;
+    end;
+end;
+
+
+Thus if on average there are more than two items with each value, bingo sort can be expected to be faster, because it executes the inner loop fewer times than selection sort.
+[edit] References
+
+
+^ Paul E. Black, Bingo sort at the NIST Dictionary of Algorithms and Data Structures.
+
+
+
+
+Donald Knuth. The Art of Computer Programming, Volume 3: Sorting and Searching, Third Edition. AddisonWesley, 1997. ISBN 0-201-89685-0. Pages 138141 of Section 5.2.3: Sorting by Selection.
+Anany Levitin. Introduction to the Design & Analysis of Algorithms, 2nd Edition. ISBN 0-321-35828-7. Section 3.1: Selection Sort, pp 98100.
+Robert Sedgewick. Algorithms in C++, Parts 14: Fundamentals, Data Structure, Sorting, Searching: Fundamentals, Data Structures, Sorting, Searching Pts. 14, Second Edition. AddisonWesley Longman, 1998. ISBN 0-201-35088-2. Pages 273274
+
+
+[edit] External links
+
+
+
+The Wikibook Algorithm implementation has a page on the topic of: Selection sort
+
+
+
+Animated Sorting Algorithms: Selection Sort  graphical demonstration and discussion of selection sort
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sorting algorithms
+
+
+
+
+
+
+Theory
+
+
+
+Computational complexity theory
+Big O notation
+Total order
+Lists
+Stability
+Comparison sort
+Adaptive sort
+Sorting network
+Integer sorting
+
+
+
+
+
+
+
+
+Exchange sorts
+
+
+
+Bubble sort
+Cocktail sort
+Oddeven sort
+Comb sort
+Gnome sort
+Quicksort
+Stooge sort
+Bogosort
+
+
+
+
+
+
+
+
+Selection sorts
+
+
+
+Selection sort
+Heapsort
+Smoothsort
+Cartesian tree sort
+Tournament sort
+Cycle sort
+
+
+
+
+
+
+
+
+Insertion sorts
+
+
+
+Insertion sort
+Shellsort
+Tree sort
+Library sort
+Patience sorting
+
+
+
+
+
+
+
+
+Merge sorts
+
+
+
+Merge sort
+Cascade merge sort
+Oscillating merge sort
+Polyphase merge sort
+Strand sort
+
+
+
+
+
+
+
+
+Distribution sorts
+
+
+
+American flag sort
+Bead sort
+Bucket sort
+Burstsort
+Counting sort
+Pigeonhole sort
+Proxmap sort
+Radix sort
+Flashsort
+
+
+
+
+
+
+
+
+Concurrent sorts
+
+
+
+Bitonic sorter
+Batcher oddeven mergesort
+Pairwise sorting network
+
+
+
+
+
+
+
+
+Hybrid sorts
+
+
+
+Timsort
+Introsort
+Spreadsort
+UnShuffle sort
+JSort
+
+
+
+
+
+
+
+
+Other
+
+
+
+Topological sorting
+Pancake sorting
+Spaghetti sort
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 3198/1000000
+Preprocessor generated node count: 24328/1500000
+Post-expand include size: 27238/2048000 bytes
+Template argument size: 6377/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:29352-0!0!0!!en!4!* and timestamp 20130119001223 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Selection_sort&oldid=533771792"				
+ /printfooter 
+ catlinks 
+Categories: Sorting algorithmsComparison sorts  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

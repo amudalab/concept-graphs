@@ -1,0 +1,242 @@
+
+UB-tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+This algorithms or data structures-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+The UB-tree as proposed by Rudolf Bayer and Volker Markl is a balanced tree for storing and efficiently retrieving multidimensional data. It is basically a B+ tree (information only in the leaves) with records stored according to Z-order, also called Morton order. Z-order is simply calculated by bitwise interlacing the keys.
+Insertion, deletion, and point query are done as with ordinary B+ trees. To perform range searches in multidimensional point data, however, an algorithm must be provided for calculating, from a point encountered in the data base, the next Z-value which is in the multidimensional search range.
+The original algorithm to solve this key problem was exponential with the dimensionality and thus not feasible[1] ("GetNextZ-address"). A solution to this "crucial part of the UB-tree range query" linear with the z-address bit length has been described later.[2] This method has already been described in an older paper[3] where using Z-order with search trees has first been proposed.
+[edit] References
+
+^ Markl, V. (1999). MISTRAL: Processing Relational Queries using a Multidimensional Access Technique. http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.32.6487.
+^ Ramsak, Frank; Markl, Volker; Fenk, Robert; Zirkel, Martin; Elhardt, Klaus; Bayer, Rudolf (September 1014, 2000). "Integrating the UB-tree into a Database System Kernel". 26th International Conference on Very Large Data Bases. pp.263272. http://www.vldb.org/dblp/db/conf/vldb/RamsakMFZEB00.html.
+^ Tropf, H.; Herzog, H.. "Multidimensional Range Search in Dynamically Balanced Trees" (PDF). Angewandte Informatik (Applied Informatics) (2/1981): 7177. ISSN0013-5704. http://www.vision-tools.com/h-tropf/multidimensionalrangequery.pdf.
+
+[edit] External links
+
+Mistral
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 2535/1000000
+Preprocessor generated node count: 27280/1500000
+Post-expand include size: 30479/2048000 bytes
+Template argument size: 8282/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:5786138-0!*!0!!*!4!* and timestamp 20130122175509 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=UB-tree&oldid=530477718"				
+ /printfooter 
+ catlinks 
+Categories: Algorithms and data structures stubsTrees (data structures)Database index techniquesHidden categories: WikiProject Computer science stubs  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

@@ -1,0 +1,190 @@
+nodedef> name,label
+v0,algorithms
+v1,arithmetic operations
+v2,array
+v3,asymptotic analysis
+v4,asymptotic running time
+v5,average case
+v6,best case
+v7,big oh notation
+v8,big omega
+v9,big omega notation
+v10,big theta notation
+v11,boolean expression
+v12,control statement
+v13,data structure
+v14,efficient algorithm
+v15,exponential
+v16,insertion sort
+v17,linear algorithm
+v18,linear time algorithm
+v19,list
+v20,little oh notation
+v21,little omega notation
+v22,logarithmic
+v23,logical operation
+v24,memory
+v25,non linear function
+v26,primitive operation
+v27,program
+v28,programming construct
+v29,programming language
+v30,pseudo code
+v31,quadratic
+v32,running time
+v33,sorting
+v34,sorting technique
+v35,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v8,false,262.222222222,true
+v0,v13,false,21.7777777778,true
+v0,v14,false,16.8888888889,true
+v0,v26,false,5.33333333333,true
+v0,v27,false,17.8888888889,true
+v0,v30,false,7.33333333333,true
+v0,v32,false,0.0,true
+v0,v35,false,6.22222222222,true
+v1,v12,false,15.1111111111,true
+v1,v23,false,2.66666666667,true
+v2,v13,false,2.66666666667,true
+v2,v16,false,16.8888888889,true
+v2,v19,false,1.77777777778,true
+v2,v27,false,129.555555556,true
+v2,v28,false,17.7777777778,true
+v2,v30,false,28.1944444444,true
+v2,v32,false,12.8981481481,true
+v2,v33,false,150.222222222,true
+v3,v6,false,23.1111111111,true
+v3,v30,false,0.888888888888,true
+v3,v32,false,5.5111111111,true
+v4,v17,false,4.44444444444,true
+v4,v32,false,0.555555555555,true
+v5,v6,false,0.324074074073,true
+v5,v33,false,15.1111111111,true
+v5,v35,false,0.0,true
+v6,v3,false,23.1111111111,true
+v6,v5,false,1.94444444444,true
+v6,v18,false,29.1666666667,true
+v6,v35,false,1.51111111111,true
+v7,v8,false,6.22222222222,true
+v7,v15,false,582.222222222,true
+v7,v26,false,11.6666666667,true
+v7,v27,false,9.77777777778,true
+v7,v32,false,4.81481481482,true
+v8,v0,false,262.222222222,true
+v8,v7,false,6.22222222222,true
+v8,v9,false,0.0,true
+v8,v10,false,3.55555555556,true
+v8,v21,false,20.4444444444,true
+v9,v8,false,0.0,true
+v9,v10,false,3.55555555556,true
+v9,v20,false,256.888888889,true
+v10,v8,false,1.18518518519,true
+v10,v9,false,0.592592592593,true
+v11,v28,false,64.0,true
+v11,v30,false,2.96296296296,true
+v12,v1,false,15.1111111111,true
+v12,v26,false,3.11111111112,true
+v13,v0,false,21.7777777778,true
+v13,v2,false,2.66666666667,true
+v13,v19,false,12.4444444444,true
+v13,v27,false,14.0,true
+v13,v29,false,3.55555555556,true
+v14,v0,false,5.62962962963,true
+v14,v32,false,8.0,true
+v15,v7,false,582.222222222,true
+v15,v22,false,23.1111111111,true
+v15,v25,false,9.77777777778,true
+v15,v32,false,0.592592592593,true
+v16,v2,false,16.8888888889,true
+v16,v30,false,5.1851851852,true
+v16,v33,false,130.666666667,true
+v17,v4,false,4.44444444444,true
+v17,v32,false,4.88888888889,true
+v18,v6,false,29.1666666667,true
+v18,v32,false,16.3333333333,true
+v19,v2,false,1.77777777778,true
+v19,v13,false,12.4444444444,true
+v19,v32,false,14.7777777778,true
+v20,v9,false,256.888888889,true
+v20,v21,false,7.11111111111,true
+v21,v8,false,3.4074074074,true
+v21,v20,false,7.11111111111,true
+v22,v15,false,23.1111111111,true
+v22,v31,false,0.888888888889,true
+v23,v1,false,2.66666666667,true
+v23,v26,false,1.03703703704,true
+v24,v32,false,6.35185185187,true
+v25,v15,false,9.77777777778,true
+v25,v32,false,105.777777778,true
+v26,v0,false,5.33333333333,true
+v26,v7,false,11.6666666667,true
+v26,v12,false,18.6666666667,true
+v26,v23,false,6.22222222222,true
+v26,v27,false,36.2222222222,true
+v26,v30,false,2.91666666667,true
+v26,v31,false,23.1111111111,true
+v26,v32,false,21.5185185185,true
+v26,v33,false,21.3333333333,true
+v27,v0,false,17.8888888889,true
+v27,v2,false,129.555555556,true
+v27,v7,false,9.77777777778,true
+v27,v13,false,14.0,true
+v27,v26,false,36.2222222222,true
+v27,v28,false,81.7777777778,true
+v27,v29,false,5.55555555556,true
+v27,v30,false,14.2222222222,true
+v27,v32,false,4.66666666667,true
+v27,v33,false,465.777777778,true
+v28,v2,false,17.7777777778,true
+v28,v11,false,64.0,true
+v28,v27,false,81.7777777778,true
+v28,v30,false,1.92592592593,true
+v29,v13,false,3.55555555556,true
+v29,v27,false,5.55555555556,true
+v30,v0,false,7.33333333333,true
+v30,v2,false,28.1944444444,true
+v30,v3,false,5.33333333333,true
+v30,v11,false,8.88888888889,true
+v30,v16,false,15.5555555556,true
+v30,v26,false,2.91666666667,true
+v30,v27,false,14.2222222222,true
+v30,v28,false,11.5555555556,true
+v30,v32,false,13.4814814815,true
+v31,v22,false,0.888888888889,true
+v31,v26,false,23.1111111111,true
+v31,v32,false,2.36111111111,true
+v32,v0,false,0.0,true
+v32,v2,false,77.3888888889,true
+v32,v3,false,16.5333333333,true
+v32,v4,false,1.11111111111,true
+v32,v7,false,28.8888888889,true
+v32,v14,false,16.0,true
+v32,v15,false,3.55555555556,true
+v32,v17,false,9.77777777778,true
+v32,v18,false,49.0,true
+v32,v19,false,29.5555555556,true
+v32,v24,false,19.0555555556,true
+v32,v25,false,211.555555556,true
+v32,v26,false,129.111111111,true
+v32,v27,false,28.0,true
+v32,v30,false,80.8888888889,true
+v32,v31,false,7.08333333333,true
+v32,v33,false,86.2222222222,true
+v32,v34,false,10.6666666667,true
+v32,v35,false,42.6666666667,true
+v33,v2,false,150.222222222,true
+v33,v5,false,15.1111111111,true
+v33,v16,false,130.666666667,true
+v33,v26,false,21.3333333333,true
+v33,v27,false,465.777777778,true
+v33,v32,false,14.3703703704,true
+v33,v34,false,0.0,true
+v33,v35,false,28.4444444444,true
+v34,v32,false,5.33333333335,true
+v34,v33,false,0.0,true
+v35,v0,false,6.22222222222,true
+v35,v5,false,0.0,true
+v35,v6,false,9.06666666667,true
+v35,v32,false,7.11111111112,true
+v35,v33,false,28.4444444444,true

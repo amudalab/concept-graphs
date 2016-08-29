@@ -1,0 +1,126 @@
+This chapter discusses a very useful data structure called a stack. It has numerous
+applications in computer science.
+Stacks
+Suppose that you have a program with several functions. To be specific, suppose that you
+have the functions A, B, C, and D in your program. Now suppose that function A calls
+function B, function B calls function C, and function C calls function D. When function
+D terminates, control goes back to function C; when function C terminates, control goes
+back to function B; and when function B terminates, control goes back to function A.
+During program execution, how do you think the computer keeps track of the function
+calls? What about recursive functions? How does the computer keep track of the
+recursive functions? In Chapter 6, we designed a recursive function to print a linked list
+backward. What if you want to write a non recursive algorithm to print a linked list
+backward?
+This section discusses the data structure called the
+stack
+, which the computer uses to
+implement function calls. You can also use stacks to convert recursive algorithms into
+nonrecursive algorithms, especially recursive algorithms that are not tail recursive. Stacks
+have numerous other applications in computer science. After developing the tools
+necessary to implement a stack, we will examine some applications of stacks.
+A stack is a list of homogenous elements in which the addition and deletion of elements
+occurs only at one end, called the
+top
+of the stack. For example, in a cafeteria, the second
+tray in a stack of trays can be removed only if the first tray has been removed. For another
+example, to get to your favorite computer science book, which is underneath your math
+and history books, you must first remove the math and history books. After removing
+these books, the computer science book becomes the top book-that is, the top element
+of the stack. This chapter discusses a very useful data structure called a stack. It has numerous
+applications in computer science.
+Stacks
+Suppose that you have a program with several functions. To be specific, suppose that you
+have the functions A, B, C, and D in your program. Now suppose that function A calls
+function B, function B calls function C, and function C calls function D. When function
+D terminates, control goes back to function C; when function C terminates, control goes
+back to function B; and when function B terminates, control goes back to function A.
+During program execution, how do you think the computer keeps track of the function
+calls? What about recursive functions? How does the computer keep track of the
+recursive functions? In Chapter 6, we designed a recursive function to print a linked list
+backward. What if you want to write a nonrecursive algorithm to print a linked list
+backward?
+This section discusses the data structure called the
+stack
+, which the computer uses to
+implement function calls. You can also use stacks to convert recursive algorithms into
+nonrecursive algorithms, especially recursive algorithms that are not tail recursive. Stacks
+have numerous other applications in computer science. After developing the tools
+necessary to implement a stack, we will examine some applications of stacks.
+A stack is a list of homogenous elements in which the addition and deletion of elements
+occurs only at one end, called the
+top
+of the stack. For example, in a cafeteria, the second
+tray in a stack of trays can be removed only if the first tray has been removed. For another
+example, to get to your favorite computer science book, which is underneath your math
+and history books, you must first remove the math and history books. After removing
+these books, the computer science book becomes the top book-that is, the top element
+of the stack. Figure 7-1 shows some examples of stacks.
+The elements at the bottom of the stack have been in the stack the longest. The top
+element of the stack is the last element added to the stack. Because the elements are added .
+and removed from one end (that is, the top), it follows that the item that is added last will
+be removed first. For this reason, a stack is also called a
+last in first out ()
+data
+structure.
+Stack
+: A data structure in which the elements are added and removed from one end
+only; a last in first out () data structure.
+Now that you know what a stack is, let us see what kinds of operations can be performed
+on a stack. Because new items can be added to the stack, we can perform the add
+operation, called
+push
+, to add an element onto the stack. Similarly, because the top item
+can be retrieved and/or removed from the stack, we can perform the operation
+top
+to
+retrieve the top element of the stack, and the operation
+pop
+to remove the top element
+from the stack.
+The push, pop and top operations work as follows: Suppose there are boxes lying on
+the floor that need to be stacked on a table. Initially, all of the boxes are on the floor and
+the stack is empty.
+the stack. After this
+push
+operation, the stack is as shown in Figure 7-3(e). Next, we pop
+the stack. After the
+pop
+operation, the stack is as shown in Figure 7-3(f).
+An element can be removed from the stack only if there is something in the stack, and an
+element can be added to the stack only if there is room. The two operations that
+immediately follow from push, pop and top
+isFullStack
+(checks whether the
+stack is full) and
+isEmptyStack
+(checks whether the stack is empty). Because a stack
+keeps changing as we add and remove elements, the stack must be empty before we first
+start using it. Thus, we need another operation, called
+initializeStack
+, which
+initializes the stack to an empty state. Therefore, to successfully implement a stack, we
+need at least these six operations, which are described next. (We might also need other
+operations on a stack, depending on the specific implementation.)
+.
+initializeStack
+-Initializes the stack to an empty state.
+.
+isEmptyStack
+-Determines whether the stack is empty. If the stack
+is empty, it returns the value true otherwise false
+.
+isFullStack
+-Determines whether the stack is full. If the stack is full, it
+returns the value true otherwise false
+push
+-Adds a new element to the top of the stack. The input to this
+operation consists of the stack and the new element. Prior to this opera-
+tion, the stack must exist and must not be full.
+.
+top
+-Returns the top element of the stack. Prior to this operation, the
+stack must exist and must not be empty.
+.
+pop
+-Removes the top element of the stack. Prior to this operation, the
+stack must exist and must not be empty.

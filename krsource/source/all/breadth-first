@@ -1,0 +1,278 @@
+
+Breadth-first search
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (April 2012) 
+
+
+
+Breadth-first search
+
+
+
+
+Order in which the nodes are expanded
+
+
+Class
+Search algorithm
+
+
+Data structure
+Graph
+
+
+Worst case performance
+
+
+
+Worst case space complexity
+
+
+
+In graph theory, breadth-first search (BFS) is a strategy for searching in a graph when search is limited to essentially two operations: (a) visit and inspect a node of a graph; (b) gain access to visit the nodes that neighbor the currently visited node. The BFS begins at a root node and inspects all the neighboring nodes. Then for each of those neighbor nodes in turn, it inspects their neighbor nodes which were unvisited, and so on. Compare it with the depth-first search.
+
+
+
+
+Animated example of a breadth-first search
+
+
+
+
+
+
+Contents
+
+
+1 Algorithm
+
+1.1 Pseudocode
+
+
+2 Features
+
+2.1 Space complexity
+2.2 Time complexity
+
+
+3 Applications
+
+3.1 Finding connected components
+3.2 Testing bipartiteness
+
+
+4 See also
+5 References
+6 External links
+
+
+
+
+[edit] Algorithm
+
+
+
+
+An example map of Germany with some connections between cities
+
+
+
+
+
+
+The breadth-first tree obtained when running BFS on the given map and starting in Frankfurt
+
+
+
+
+Graph and tree
+search algorithms
+
+
+
+
+
+A*
+B*
+Beam
+BellmanFord
+Best-first
+Bidirectional
+Borvka
+Branch & bound
+BFS
+British Museum
+D*
+DFS
+Depth-limited
+Dijkstra
+Edmonds
+FloydWarshall
+Hill climbing
+Iterative deepening
+Kruskal
+Johnson
+Lexicographic BFS
+Prim
+Uniform-cost
+
+
+
+
+Listings
+
+
+
+
+Graph algorithms
+Search algorithms
+List of graph algorithms
+
+
+
+
+Related topics
+
+
+
+
+Dynamic programming
+Graph traversal
+Tree traversal
+Search games
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The algorithm uses a queue data structure to store intermediate results as it traverses the graph, as follows:
+
+Enqueue the root node
+Dequeue a node and examine it
+
+If the element sought is found in this node, quit the search and return a result.
+Otherwise enqueue any successors (the direct child nodes) that have not yet been discovered.
+
+
+If the queue is empty, every node on the graph has been examined  quit the search and return "not found".
+If the queue is not empty, repeat from Step 2.
+
+Note: Using a stack instead of a queue would turn this algorithm into a depth-first search.
+[edit] Pseudocode
+Input: A graph G and a root v of G
+
+1  procedure BFS(G,v):
+2      create a queue Q
+3      enqueue v onto Q
+4      mark v
+5      while Q is not empty:
+6          t  Q.dequeue()
+7          if t is what we are looking for:
+8              return t
+9          for all edges e in G.adjacentEdges(t) do
+12             u  G.adjacentVertex(t,e)
+13             if u is not marked:
+14                  mark u
+15                  enqueue u onto Q
+
+[edit] Features
+[edit] Space complexity
+When the number of vertices in the graph is known ahead of time, and additional data structures are used to determine which vertices have already been added to the queue, the space complexity can be expressed as  where  is the cardinality of the set of vertices. If the graph is represented by an Adjacency list it occupies [1] space in memory, while an Adjacency matrix representation occupies .[2]
+[edit] Time complexity
+The time complexity can be expressed as  [3] since every vertex and every edge will be explored in the worst case. Note:  may vary between  and , depending on how sparse the input graph is (assuming that the graph is connected).
+[edit] Applications
+Breadth-first search can be used to solve many problems in graph theory, for example:
+
+Finding all nodes within one connected component
+Copying Collection, Cheney's algorithm
+Finding the shortest path between two nodes u and v (with path length measured by number of edges)
+Testing a graph for bipartiteness
+(Reverse) CuthillMcKee mesh numbering
+FordFulkerson method for computing the maximum flow in a flow network
+Serialization/Deserialization of a binary tree vs serialization in sorted order, allows the tree to be re-constructed in an efficient manner.
+
+[edit] Finding connected components
+The set of nodes reached by a BFS (breadth-first search) form the connected component containing the starting node.
+[edit] Testing bipartiteness
+BFS can be used to test bipartiteness, by starting the search at any vertex and giving alternating labels to the vertices visited during the search. That is, give label 0 to the starting vertex, 1 to all its neighbours, 0 to those neighbours' neighbours, and so on. If at any step a vertex has (visited) neighbours with the same label as itself, then the graph is not bipartite. If the search ends without such a situation occurring, then the graph is bipartite.
+[edit] See also
+
+Depth-first search
+Level structure
+
+[edit] References
+
+
+^ Cormen, Thomas H., Charles E. Leiserson, and Ronald L. Rivest. p.590
+^ Cormen, Thomas H., Charles E. Leiserson, and Ronald L. Rivest. p.591
+^ Cormen, Thomas H., Charles E. Leiserson, and Ronald L. Rivest. p.597
+
+
+
+
+Knuth, Donald E. (1997), The Art Of Computer Programming Vol 1. 3rd ed., Boston: Addison-Wesley, ISBN0-201-89683-4, http://www-cs-faculty.stanford.edu/~knuth/taocp.html
+
+
+[edit] External links
+
+
+
+Wikimedia Commons has media related to: Breadth-first search
+
+
+
+Breadth-First Explanation and Example
+
+ 
+NewPP limit report
+Preprocessor visited node count: 3891/1000000
+Preprocessor generated node count: 38780/1500000
+Post-expand include size: 23893/2048000 bytes
+Template argument size: 8113/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:97026-0!0!0!!en!4!* and timestamp 20130115063207 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Breadth-first_search&oldid=530047507"				
+ /printfooter 
+ catlinks 
+Categories: Graph algorithmsSearch algorithmsHidden categories: Articles needing additional references from April 2012All articles needing additional references  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

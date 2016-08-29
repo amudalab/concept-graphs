@@ -1,0 +1,83 @@
+nodedef> name,label
+v0,classification
+v1,error
+v2,fitting
+v3,gaussian
+v4,linear regression
+v5,locally weighted regression
+v6,log likelihood
+v7,non-parametric learning algorithm
+v8,overfitting
+v9,perceptron
+v10,probabilistic interpretation
+v11,regression
+v12,underfitting
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v4,false,105.892682927,true
+v0,v5,false,6.82926829268,true
+v0,v10,false,14.6341463415,true
+v0,v11,false,11.3082039911,true
+v1,v3,false,27.0682926829,true
+v1,v6,false,50.5365853659,true
+v1,v11,false,31.3902439024,true
+v2,v3,false,124.87804878,true
+v2,v5,false,48.7804878049,true
+v2,v6,false,151.219512195,true
+v2,v8,false,10.7317073171,true
+v2,v9,false,29.2682926829,true
+v2,v10,false,308.292682927,true
+v2,v11,false,89.0341463415,true
+v2,v12,false,41.9512195122,true
+v3,v1,false,27.0682926829,true
+v3,v2,false,124.87804878,true
+v3,v4,false,54.2195121951,true
+v3,v5,false,80.0,true
+v3,v6,false,198.804878049,true
+v3,v8,false,107.317073171,true
+v3,v11,false,59.3170731707,true
+v4,v0,false,105.892682927,true
+v4,v3,false,54.2195121951,true
+v4,v7,false,41.9512195122,true
+v4,v8,false,48.7804878049,true
+v4,v10,false,2.92682926829,true
+v4,v11,false,0.0,true
+v5,v0,false,6.82926829268,true
+v5,v2,false,48.7804878049,true
+v5,v3,false,80.0,true
+v5,v7,false,15.6951219512,true
+v5,v11,false,10.7817073171,true
+v5,v12,false,9.75609756098,true
+v6,v1,false,50.5365853659,true
+v6,v2,false,151.219512195,true
+v6,v3,false,198.804878049,true
+v6,v9,false,266.341463415,true
+v6,v11,false,158.853658537,true
+v7,v4,false,41.9512195122,true
+v7,v5,false,15.6951219512,true
+v7,v11,false,37.0731707317,true
+v8,v2,false,10.7317073171,true
+v8,v3,false,107.317073171,true
+v8,v4,false,48.7804878049,true
+v8,v11,false,8.78048780488,true
+v8,v12,false,19.0243902439,true
+v9,v2,false,29.2682926829,true
+v9,v6,false,266.341463415,true
+v9,v11,false,28.4487804878,true
+v10,v0,false,14.6341463415,true
+v10,v2,false,308.292682927,true
+v10,v4,false,2.92682926829,true
+v10,v11,false,11.2390243902,true
+v11,v0,false,11.3082039911,true
+v11,v1,false,31.3902439024,true
+v11,v2,false,89.0341463415,true
+v11,v3,false,59.3170731707,true
+v11,v4,false,0.0,true
+v11,v5,false,10.7817073171,true
+v11,v6,false,158.853658537,true
+v11,v7,false,37.0731707317,true
+v11,v8,false,8.78048780488,true
+v11,v9,false,28.4487804878,true
+v11,v10,false,11.2390243902,true
+v12,v2,false,41.9512195122,true
+v12,v5,false,9.75609756098,true
+v12,v8,false,19.0243902439,true

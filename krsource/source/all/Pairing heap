@@ -1,0 +1,161 @@
+
+Pairing heap
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+A pairing heap is a type of heap data structure with relatively simple implementation and excellent practical amortized performance. However, it has proven very difficult to determine the precise asymptotic running time of pairing heaps.
+Pairing heaps are heap ordered multiway trees. Describing the various heap operations is relatively simple (in the following we assume a min-heap):
+
+find-min: simply return the top element of the heap.
+merge: compare the two root elements, the smaller remains the root of the result, the larger element and its subtree is appended as a child of this root.
+insert: create a new heap for the inserted element and merge into the original heap.
+decrease-key (optional): remove the subtree rooted at the key to be decreased then merge it with the heap.
+delete-min: remove the root and merge its subtrees. Various strategies are employed.
+
+The amortized time per delete-min is .[1] The operations find-min, merge, and insert are  [2] and decrease-key takes  amortized time.[3] Fredman proved that the amortized time per decrease-key is at least .[4]
+Although this is worse than other priority queue algorithms such as Fibonacci heaps, which perform decrease-key in  amortized time, the performance in practice is excellent. Stasko and Vitter[5] and Moret and Shapiro[6] conducted experiments on pairing heaps and other heap data structures. They concluded that the pairing heap is as fast as, and often faster than, other efficient data structures like the binary heaps.
+
+
+
+
+Contents
+
+
+1 Implementation
+2 Operations
+
+2.1 find-min
+2.2 merge
+2.3 insert
+2.4 delete-min
+
+
+3 References
+4 External links
+
+
+
+
+[edit] Implementation
+A pairing heap is either an empty heap, or a pair consisting of a root element and a possibly empty list of pairing heaps. The heap ordering property requires that all the root elements of the subheaps in the list are not smaller than the root element of the heap. The following description assumes a purely functional heap that does not support the decrease-key operation.
+
+type PairingHeap[Elem] = Empty | Heap(elem: Elem, subheaps: List[PairingHeap[Elem]])
+
+[edit] Operations
+[edit] find-min
+The function find-min simply returns the root element of the heap:
+
+function find-min(heap)
+  if heap == Empty
+    error
+  else
+    return heap.elem
+
+[edit] merge
+Merging with an empty heap returns the other heap, otherwise a new heap is returned that has the minimum of the two root elements as its root element and just adds the heap with the larger root to the list of subheaps:
+
+function merge(heap1, heap2)
+  if heap1 == Empty
+    return heap2
+  elsif heap2 == Empty
+    return heap1
+  elsif heap1.elem < heap2.elem
+    return Heap(heap1.elem, heap2 :: heap1.subheaps)
+  else
+    return Heap(heap2.elem, heap1 :: heap2.subheaps)
+
+[edit] insert
+The easiest way to insert an element into a heap is to merge the heap with a new heap containing just this element and an empty list of subheaps:
+
+function insert(elem, heap)
+  return merge(Heap(elem, []), heap)
+
+[edit] delete-min
+The only non-trivial fundamental operation is the deletion of the minimum element from the heap. The standard strategy first merges the subheaps in pairs (this is the step that gave this datastructure its name) from left to right and then merges the resulting list of heaps from right to left:
+
+function delete-min(heap)
+  if heap == Empty
+    error
+  else
+    return merge-pairs(heap.subheaps)
+
+This uses the auxiliary function merge-pairs:
+
+function merge-pairs(l)
+  if length(l) == 0
+    return Empty
+  elsif length(l) == 1
+    return l[0]
+  else
+    return merge(merge(l[0], l[1]), merge-pairs(l[2.. ]))
+
+That this does indeed implement the described two-pass left-to-right then right-to-left merging strategy can be seen from this reduction:
+
+   merge-pairs([H1, H2, H3, H4, H5, H6, H7])
+=> merge(merge(H1, H2), merge-pairs([H3, H4, H5, H6, H7]))
+     # merge H1 and H2 to H12, then the rest of the list
+=> merge(H12, merge(merge(H3, H4), merge-pairs([H5, H6, H7])))
+     # merge H3 and H4 to H34, then the rest of the list
+=> merge(H12, merge(H34, merge(merge(H5, H6), merge-pairs([H7]))))
+     # merge H5 and H5 to H56, then the rest of the list
+=> merge(H12, merge(H34, merge(H56, H7)))
+     # switch direction, merge the last two resulting heaps, giving H567
+=> merge(H12, merge(H34, H567))
+     # merge the last two resulting heaps, giving H34567
+=> merge(H12, H34567) 
+     # finally, merge the first merged pair with the result of merging the rest
+=> H1234567
+
+[edit] References
+
+^ Fredman, Michael L.; Sedgewick, Robert; Sleator, Daniel D.; Tarjan, Robert E. (1986), "The pairing heap: a new form of self-adjusting heap", Algorithmica 1 (1): 111129, doi:10.1007/BF01840439, http://www.lb.cs.cmu.edu/afs/cs.cmu.edu/user/sleator/www/papers/pairing-heaps.pdf.
+^ Iacono, John (2000), "Improved upper bounds for pairing heaps", Proc. 7th Scandinavian Workshop on Algorithm Theory, Lecture Notes in Computer Science, 1851, Springer-Verlag, pp.6377, doi:10.1007/3-540-44985-X_5, ISBN978-3-540-67690-4, http://john2.poly.edu/papers/swat00/paper.pdf.
+^ Pettie, Seth (2005), "Towards a final analysis of pairing heaps", Proc. 46th Annual IEEE Symposium on Foundations of Computer Science, pp.174183, doi:10.1109/SFCS.2005.75, ISBN0-7695-2468-0, http://www.eecs.umich.edu/~pettie/papers/focs05.pdf.
+^ Fredman, Michael L. (1999), "On the efficiency of pairing heaps and related data structures", Journal of the ACM 46 (4): 473501, doi:10.1145/320211.320214, http://wwwens.uqac.ca/azinflou/Fichiers840/EfficiencyPairingHeap.pdf.
+^ Stasko, John T.; Vitter, Jeffrey S. (1987), "Pairing heaps: experiments and analysis", Communications of the ACM 30 (3): 234249, doi:10.1145/214748.214759, CiteSeerX: 10.1.1.106.2988.
+^ Moret, Bernard M. E.; Shapiro, Henry D. (1991), "An empirical analysis of algorithms for constructing a minimum spanning tree", Proc. 2nd Workshop on Algorithms and Data Structures, Lecture Notes in Computer Science, 519, Springer-Verlag, pp.400411, doi:10.1007/BFb0028279, ISBN3-540-54343-0, CiteSeerX: 10.1.1.53.5960.
+
+[edit] External links
+
+Louis Wasserman discusses pairing heaps and their implementation in Haskell in The Monad Reader, Issue 16 (pp.3752).
+pairing heaps, Sartaj Sahni
+Amr Elmasry (2009), "Pairing Heaps with O(log log n) decrease Cost", Proceedings of the twentieth Annual ACM-SIAM Symposium on Discrete Algorithms {SODA '09} (New York): 471476, http://www.siam.org/proceedings/soda/2009/SODA09_052_elmasrya.pdf
+heaps library in SWI-Prolog, uses pairing heaps
+Open source implementation of pairing heaps in Erlang
+
+ 
+NewPP limit report
+Preprocessor visited node count: 4863/1000000
+Preprocessor generated node count: 15376/1500000
+Post-expand include size: 37816/2048000 bytes
+Template argument size: 12788/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:3402053-0!0!0!!en!*!* and timestamp 20121231081223 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Pairing_heap&oldid=529096518"				
+ /printfooter 
+ catlinks 
+Categories: Heaps (data structures)  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

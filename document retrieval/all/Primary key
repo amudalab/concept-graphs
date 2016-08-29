@@ -1,0 +1,368 @@
+
+Unique key
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from Primary key)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article or section lacks a single coherent topic. Please help improve this article by rewording sentences or removing irrelevant information. Specific concerns may appear on the talk page. (November 2012) 
+
+
+
+
+
+
+
+The lead section of this article may need to be rewritten. Please discuss this issue on the talk page and read the layout guide to make sure the section will be inclusive of all essential details. (May 2012) 
+
+
+
+
+
+
+
+It has been suggested that this article or section be merged with Key field. (Discuss) Proposed since March 2010. 
+
+
+In an entity relationship diagram of a data model, one or more unique keys may be declared for each data entity. Each unique key is composed from one or more data attributes of that data entity. The set of unique keys declared for a data entity is often referred to as the candidate keys for that data entity. From the set of candidate keys, a single unique key is selected and declared the primary key for that data entity. In an entity relationship diagram, each entity relationship uses a unique key, most often the primary key, of one data entity and copies the unique key data attributes to another data entity to which it relates. This inheritance of the unique key data attributes is referred to as a foreign key and is used to provide data access paths between data entities. Once the data model is instantiated into a database, each data entity usually becomes a database table, unique keys become unique indexes associated with their assigned database tables, and entity relationships become foreign key constraints. In integrated data models,[1] commonality relationships[2] do not become foreign key constraints since commonality relationships are a peer-to-peer type of relationship.
+In a relational database, a "Primary Key" is a key that uniquely defines the characteristics of each row (also known as record or tuple). The primary key has to consist of characteristics that cannot be duplicated by any other row.The primary key may consist of a single attribute or a multiple attributes in combination. For example, a birthday could be shared by many people and so would not be a prime candidate for the Primary Key, but a social security number or Driver's License number would be ideal since it correlates to one single data value. Another unique characteristic of a Primary Key as it pertains to a relational database, is that a Primary Key must also serve as a Foreign Key on a related table. For example:
+
+
+
+Author TABLE Schema:
+ 
+AuthorTable(AUTHOR_ID,AuthorName,CountryBorn,YearBorn)
+ 
+Book TABLE Schema:
+ 
+Book TABLE(ISBN,Author_ID,Title,Publisher,Price)
+
+
+Here we can see that AUTHOR_ID serves as the Primary Key in AuthorTable but also serves as the Foreign Key on the BookTable. The Foreign Key serves as the link and therefore the connection between the two "related" tables in this sample database.
+In a relational database, a unique key index can uniquely identify each row of data values in a database table. A unique key index comprises a single column or a set of columns in a single database table. No two distinct rows or data records in a database table can have the same data value (or combination of data values) in those unique key index columns if NULL values are not used. Depending on its design, a database table may have many unique key indexes but at most one primary key index.
+A unique key constraint does not imply the NOT NULL constraint in practice. Because NULL is not an actual value (it represents the lack of a value), when two rows are compared, and both rows have NULL in a column, the column values are not considered to be equal. Thus, in order for a unique key to uniquely identify each row in a table, NULL values must not be used. According to the SQL[3] standard and Relational Model theory, a unique key (unique constraint) should accept NULL in several rows/tuples  however not all RDBMS implement this feature correctly.[4][5]
+A unique key should uniquely identify all possible rows that exist in a table and not only the currently existing rows[citation needed]. Examples of unique keys are Social Security numbers (associated with a specific person[6]) or ISBNs (associated with a specific book). Telephone books and dictionaries cannot use names, words, or Dewey Decimal system numbers as candidate keys because they do not uniquely identify telephone numbers or words.
+A table can have at most one primary key, but more than one unique key. A primary key is a combination of columns which uniquely specify a row. It is a special case of unique keys. One difference is that primary keys have an implicit NOT NULL constraint while unique keys do not. Thus, the values in unique key columns may or may not be NULL, and in fact such a column may contain at most one NULL fields.[7] Another difference is that primary keys must be defined using another syntax.
+The relational model, as expressed through relational calculus and relational algebra, does not distinguish between primary keys and other kinds of keys. Primary keys were added to the SQL standard mainly as a convenience to the application programmer.[citation needed]
+Unique keys as well as primary keys can be referenced by foreign keys.
+
+
+
+
+Contents
+
+
+1 Defining primary keys
+2 Defining unique keys
+3 Surrogate keys
+4 Alternate key
+5 See also
+6 References
+7 External links
+
+
+
+
+[edit] Defining primary keys
+Primary keys are defined in the ANSI SQL Standard, through the PRIMARY KEY constraint. The syntax to add such a constraint to an existing table is defined in SQL:2003 like this:
+
+
+
+  ALTER TABLE <TABLE identifier> 
+      ADD [ CONSTRAINT <CONSTRAINT identifier> ] 
+      PRIMARY KEY ( <COLUMN expression> {, <COLUMN expression>}... )
+
+
+The primary key can also be specified directly during table creation. In the SQL Standard, primary keys may consist of one or multiple columns. Each column participating in the primary key is implicitly defined as NOT NULL. Note that some DBMS require explicitly marking primary-key columns as NOT NULL.
+
+
+
+  CREATE TABLE TABLE_NAME (
+ 
+     ...
+  )
+
+
+If the primary key consists only of a single column, the column can be marked as such using the following syntax:
+
+
+
+  CREATE TABLE TABLE_NAME (
+     id_col  INT  PRIMARY KEY,
+     col2    CHARACTER VARYING(20),
+     ...
+  )
+
+
+Differences between Primary Key and Unique Key:
+Primary Key
+1. A primary key cannot allow null values. (You cannot define a primary key on columns that allow nulls.)
+2. Each table can have at most one primary key.
+3. On some RDBMS A primary key automatically generates a clustered table index by default.
+Unique Key
+1. A unique key can allow null values. (You can define a unique key on columns that allow nulls.)
+2. Each table can have multiple unique keys.
+3. On some RDBMS A unique key automatically generates a non-clustered table index by default.
+[edit] Defining unique keys
+The definition of unique keys is syntactically very similar to primary keys.
+
+
+
+  ALTER TABLE <TABLE identifier> 
+      ADD [ CONSTRAINT <CONSTRAINT identifier> ] 
+      UNIQUE ( <COLUMN expression> {, <COLUMN expression>}... )
+
+
+Likewise, unique keys can be defined as part of the CREATE TABLE SQL statement.
+
+
+
+  CREATE TABLE TABLE_NAME (
+     id_col   INT,
+     col2     CHARACTER VARYING(20),
+     key_col  SMALLINT,
+     ...
+     CONSTRAINT key_unique UNIQUE(key_col),
+     ...
+  )
+
+
+
+
+
+  CREATE TABLE TABLE_NAME (
+     id_col  INT  PRIMARY KEY,
+     col2    CHARACTER VARYING(20),
+     ...
+     key_col  SMALLINT UNIQUE,
+     ...
+  )
+
+
+[edit] Surrogate keys
+Main article: Surrogate key
+In some design situations the natural key that uniquely identifies a tuple in a relation is difficult to use for software development. For example, it may involve multiple columns or large text fields. A surrogate key can be used as the primary key. In other situations there may be more than one candidate key for a relation, and no candidate key is obviously preferred. A surrogate key may be used as the primary key to avoid giving one candidate key artificial primacy over the others.
+Since primary keys exist primarily as a convenience to the programmer, surrogate primary keys are often usedin many cases exclusivelyin database application design.
+Due to the popularity of surrogate primary keys, many developers and in some cases even theoreticians have come to regard surrogate primary keys as an inalienable part of the relational data model. This is largely due to a migration of principles from the Object-Oriented Programming model to the relational model, creating the hybrid object-relational model. In the ORM, these additional restrictions are placed on primary keys:
+
+Primary keys should be immutable, that is, not changed until the record is destroyed.
+Primary keys should be anonymous integer or numeric identifiers.
+
+However, neither of these restrictions is part of the relational model or any SQL standard. Due diligence should be applied when deciding on the immutability of primary key values during database and application design. Some database systems even imply that values in primary key columns cannot be changed using the UPDATE SQL statement[citation needed].
+[edit] Alternate key
+It is commonplace in SQL databases to declare a single primary key, the most important unique key. However, there could be further unique keys that could serve the same purpose. These should be marked as 'unique' keys. This is done to prevent incorrect data from entering a table (a duplicate entry is not valid in a unique column) and to make the database more complete and useful. These could be called alternate keys.[8]
+[edit] See also
+
+Globally Unique Identifier
+Natural key
+Persistent Object Identifier
+
+[edit] References
+
+
+^ Data Model Integration | The Integration of Data Models
+^ Commonality Relationships | Commonality Constraints
+^ Summary of ANSI/ISO/IEC SQL
+^ Constraints - SQL Database Reference Material - Learn sql, read an sql manual, follow an sql tutorial, or learn how to structure an SQL query
+^ Comparison of different SQL implementations
+^ SSN uniqueness: Rare SSN duplicates do exist in the field, a condition that led to problems with early commercial computer systems that relied on SSN uniqueness. Practitioners are taught that well-known duplications in SSN assignments[citation needed] occurred in the early days of the SSN system. This situation points out the complexity of designing systems that assume unique keys in real-world data.
+^ MySQL 5.5 Reference Manual:: 12.1.14. CREATE TABLE Syntax "For all engines, a UNIQUE index permits multiple NULL values for columns that can contain NULL."
+^ Alternate key - Oracle FAQ
+
+
+[edit] External links
+
+Relation Database terms of reference, Keys: An overview of the different types of keys in an RDBMS
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Database management systems
+
+
+
+
+
+
+
+
+
+Database models
+Database normalization
+Database storage
+Distributed DBMS
+Federated database system
+Referential integrity
+Relational algebra
+Relational calculus
+Relational database
+Relational DBMS
+Relational model
+Object-relational database
+Transaction processing
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Database
+ACID
+CRUD
+Null
+Candidate key
+Foreign key
+Primary key
+Superkey
+Surrogate key
+Armstrong's axioms
+NoSQL
+
+
+
+
+
+
+
+
+Objects
+
+
+
+Relation
+
+table
+column
+row
+
+
+View
+Transaction
+Log
+Trigger
+Index
+Stored procedure
+Cursor
+Partition
+
+
+
+
+
+
+
+
+Components
+
+
+
+Concurrency control
+Data dictionary
+JDBC
+XQJ
+ODBC
+Query language
+Query optimizer
+Query plan
+
+
+
+
+
+
+
+
+Functions
+
+
+
+Administration and automation
+Query optimization
+Replication
+
+
+
+
+
+
+
+
+
+
+
+Database products
+Object-oriented
+
+comparison
+
+
+Relational
+
+comparison
+
+
+Document-oriented
+NewSQL
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 3802/1000000
+Preprocessor generated node count: 18661/1500000
+Post-expand include size: 40647/2048000 bytes
+Template argument size: 18307/2048000 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 7/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:6850099-0!*!0!!en!4!* and timestamp 20121215022916 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Unique_key&oldid=526202006"				
+ /printfooter 
+ catlinks 
+Categories: Database management systemsData modelingHidden categories: All articles with unsourced statementsArticles with unsourced statements from March 2009Wikipedia articles without coherent topicWikipedia introduction cleanup from May 2012All pages needing cleanupArticles covered by WikiProject Wikify from May 2012All articles covered by WikiProject WikifyArticles to be merged from March 2010All articles to be mergedArticles with unsourced statements from November 2011Articles with unsourced statements from March 2012Articles with unsourced statements from January 2009  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

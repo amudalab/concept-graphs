@@ -1,0 +1,66 @@
+
+Doubly connected edge list
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+The doubly connected edge list (DCEL) is a data structure to represent an embedding of a planar graph in the plane and polytopes in 3D. This data structure provides efficient manipulation of the topological information associated with the objects in question (vertices, edges, faces). It is used in many algorithms of computational geometry to handle polygonal subdivisions of the plane, commonly called planar straight-line graphs (PSLG).[1] For example, a Voronoi diagram is commonly represented by a DCEL inside a bounding box.
+This data structure was originally suggested by Muller and Preparata[2] for representations of 3D convex polyhedra.
+Later a somewhat different data structuring was suggested, but the name "DCEL" was retained.
+For simplicity, only connected graphs are considered, however the DCEL structure may be extended to handle disconnected graphs as well.
+[edit] Data structure
+
+
+
+
+Each half-edge has exactly one previous half-edge, next half-edge and twin.
+
+
+DCEL is more than just a doubly linked list of edges. In the general case, a DCEL contains a record for each edge, vertex and face of the subdivision. Each record may contain additional information, for example, a face may contain the name of the area. Each edge usually bounds two faces and it is therefore convenient to regard each edge as half-edge. Each half-edge bounds a single face and thus has a pointer to that face. A half-edge has a pointer to the next half-edge and previous half-edge of the same face. To reach the other face, we can go to the twin of the half-edge and then traverse the other face. Each half-edge also has a pointer to its origin vertex (the destination vertex can be obtained by querying the origin of its twin).
+Each vertex v contains the coordinates of the vertex and also stores a pointer to an arbitrary edge that has v as its origin. Each face stores a pointer to some half-edge of its outer boundary (if the face is unbounded then pointer is null). It also has a list of half-edges, one for each hole that may be incident within the face. If the vertices or faces do not hold any interesting information, there is no need to store them, thus saving space and reducing the data structure complexity.
+[edit] See also
+
+Quad-edge data structure
+Doubly linked face list
+Winged edge
+
+[edit] References
+
+^ The definition of a DCEL may be found in all major books in computational geometry.
+^ Muller, D. E.; Preparata, F. P. "Finding the Intersection of Two Convex Polyhedra", Tech. Rept. UIUC, 1977, 38pp, also Theoretical Computer Science", Vol. 7, 1978, 217236
+
+ 
+NewPP limit report
+Preprocessor visited node count: 55/1000000
+Preprocessor generated node count: 178/1500000
+Post-expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:12015290-0!*!0!!*!4!* and timestamp 20130122224826 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Doubly_connected_edge_list&oldid=521521347"				
+ /printfooter 
+ catlinks 
+Categories: Graph data structuresGeometric graph theoryGeometric data structures  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

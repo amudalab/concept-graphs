@@ -1,0 +1,33 @@
+nodedef> name,label
+v0,cross validation
+v1,empirical risk minimization
+v2,empty heart problem
+v3,feature selection
+v4,feature selection algorithm
+v5,forward selection algorithm
+v6,forward selections
+v7,generalization error
+v8,k-fold cross validation
+v9,k-l divergence
+v10,learning theory
+v11,model selection
+v12,mutual information
+v13,vc dimension
+v14,wrapper feature selection
+v15,wrapper model feature selection
+v16,wrapper model feature selection algorithms
+edgedef>node1,node2,directed,weight,labelvisible
+v1,v7,false,70.5818181818,true
+v2,v3,false,9.09090909091,true
+v4,v14,false,4.45454545454,true
+v5,v2,false,11.8181818182,true
+v6,v15,false,14.7272727273,true
+v8,v11,false,23.3454545455,true
+v9,v8,false,27.4909090909,true
+v10,v13,false,75.1636363636,true
+v11,v3,false,3.63636363636,true
+v12,v8,false,15.2727272727,true
+v13,v0,false,49.696969697,true
+v14,v11,false,4.45454545454,true
+v15,v14,false,2.63636363636,true
+v16,v14,false,2.63636363636,true

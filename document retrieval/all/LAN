@@ -1,0 +1,246 @@
+
+Local area network
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from LAN)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+"LAN" redirects here. For other uses, see LAN (disambiguation).
+
+
+Computer network types by geographical scope
+
+
+
+
+Near field (NFC)
+Body (BAN)
+Personal (PAN)
+Near-me (NAN)
+Local (LAN)
+
+Home (HAN)
+Storage (SAN)
+
+
+Campus (CAN)
+Backbone
+Metropolitan (MAN)
+Wide (WAN)
+Internet
+Interplanetary Internet
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+A local area network (LAN) is a computer network that interconnects computers in a limited area such as a home, school, computer laboratory, or office building using network media.[1] The defining characteristics of LANs, in contrast to wide area networks (WANs), include their usually higher data-transfer rates, smaller geographic area, and lack of a need for leased telecommunication lines.
+ARCNET, Token Ring and other technology standards have been used in the past, but Ethernet over twisted pair cabling, and Wi-Fi are the two most common technologies currently used to build LANs.
+
+
+
+
+Contents
+
+
+1 History
+
+1.1 Standards evolution
+1.2 Cabling
+
+
+2 Technical aspects
+3 See also
+4 References
+5 External links
+
+
+
+
+[edit] History
+
+
+
+
+A conceptual diagram of a local area network using 10BASE5 Ethernet
+
+
+The increasing demand and use of computers in universities and research labs in the late 1960s generated the need to provide high-speed interconnections between computer systems. A 1970 report from the Lawrence Radiation Laboratory detailing the growth of their "Octopus" network[2][3] gave a good indication of the situation.
+Cambridge Ring was developed at Cambridge University in 1974[4] but was never developed into a successful commercial product.
+Ethernet was developed at Xerox PARC in 19731975,[5] and filed as U.S. Patent 4,063,220. In 1976, after the system was deployed at PARC, Metcalfe and Boggs published a seminal paper, "Ethernet: Distributed Packet-Switching For Local Computer Networks."[6]
+ARCNET was developed by Datapoint Corporation in 1976 and announced in 1977.[7] It had the first commercial installation in December 1977 at Chase Manhattan Bank in New York.[8]
+[edit] Standards evolution
+The development and proliferation of personal computers using the CP/M operating system in the late 1970s, and later DOS-based systems starting in 1981, meant that many sites grew to dozens or even hundreds of computers. The initial driving force for networking was generally to share storage and printers, which were both expensive at the time. There was much enthusiasm for the concept and for several years, from about 1983 onward, computer industry pundits would regularly declare the coming year to be the year of the LAN.[9][10][11]
+In practice, the concept was marred by proliferation of incompatible physical layer and network protocol implementations, and a plethora of methods of sharing resources. Typically, each vendor would have its own type of network card, cabling, protocol, and network operating system. A solution appeared with the advent of Novell NetWare which provided even-handed support for dozens of competing card/cable types, and a much more sophisticated operating system than most of its competitors. Netware dominated[12] the personal computer LAN business from early after its introduction in 1983 until the mid 1990s when Microsoft introduced Windows NT Advanced Server and Windows for Workgroups.
+Of the competitors to NetWare, only Banyan Vines had comparable technical strengths, but Banyan never gained a secure base. Microsoft and 3Com worked together to create a simple network operating system which formed the base of 3Com's 3+Share, Microsoft's LAN Manager and IBM's LAN Server - but none of these were particularly successful.
+During the same period, Unix computer workstations from vendors such as Sun Microsystems, Hewlett-Packard, Silicon Graphics, Intergraph, NeXT and Apollo were using TCP/IP based networking. Although this market segment is now much reduced, the technologies developed in this area continue to be influential on the Internet and in both Linux and Apple Mac OS X networkingand the TCP/IP protocol has now almost completely replaced IPX, AppleTalk, NBF, and other protocols used by the early PC LANs.
+[edit] Cabling
+Early LAN cabling had always been based on various grades of coaxial cable. However shielded twisted pair was used in IBM's Token Ring implementation, and in 1984 StarLAN showed the potential of simple unshielded twisted pair by using Cat3the same simple cable used for telephone systems. This led to the development of 10Base-T (and its successors) and structured cabling which is still the basis of most commercial LANs today. In addition, fiber-optic cabling is increasingly used in commercial applications.
+As cabling is not always possible, wireless Wi-Fi is now very common in residential premises - and elsewhere where support for mobile laptops and smartphones is important.
+[edit] Technical aspects
+Network topology describes the layout pattern of interconnections between devices and network segments. Switched Ethernet has been for some time the most common Data Link Layer and Physical Layer implementation for local area networks. At the higher layers, the Internet Protocol (TCP/IP) has become the standard. Smaller LANs generally consist of one or more switches linked to each other, often at least one is connected to a router, cable modem, or ADSL modem for Internet access.
+Larger LANs are characterized by their use of redundant links with switches using the spanning tree protocol to prevent loops, their ability to manage differing traffic types via quality of service (QoS), and to segregate traffic with VLANs. Larger LANs also contain a wide variety of network devices such as switches, firewalls, routers, load balancers, and sensors.[13]
+LANs may have connections with other LANs via leased lines, leased services, or by tunneling across the Internet using virtual private network technologies. Depending on how the connections are established and secured in a LAN, and the distance involved, a LAN may also be classified as a metropolitan area network (MAN) or a wide area network (WAN).
+[edit] See also
+
+
+
+
+Computer networking  portal
+
+
+
+Computer Science  portal
+
+
+
+
+IEEE 802 family of IEEE standards
+Ethernet physical layer
+LAN messenger
+LAN party
+Network card
+
+[edit] References
+
+
+^ Gary A. Donahue (2007-06). Network Warrior. O'Reilly. p.5.
+^ Samuel F. Mendicino (1970-12-01). "Octopus: The Lawrence Radiation Laboratory Network". Rogerdmoore.ca. Archived from the original on 2010-10-11. http://www.webcitation.org/5tP07Xoec.
+^ "THE LAWRENCE RADIATION LABORATORY OCTOPUS". Courant symposium series on networks (Osti.gov). 29 Nov 1970. OSTI4045588.
+^ "A brief informal history of the Computer Laboratory". University of Cambridge. 20 December 2001. Archived from the original on 2010-10-11. http://www.webcitation.org/5tP0nKIlL.
+^ "Ethernet Prototype Circuit Board". Smithsonian National Museum of American History. http://americanhistory.si.edu/collections/object.cfm?key=35&objkey=96. Retrieved 2007-09-02.
+^ "Ethernet: Distributed Packet-Switching For Local Computer Networks". Acm.org. http://www.acm.org/classics/apr96/. Retrieved 2010-10-11.
+^ "ARCNET Timeline". ARCNETworks magazine. Fall 1998. Archived from the original on 2010-10-11. http://www.webcitation.org/5tP1JOSj5.
+^ Lamont Wood (2008-01-31). "The LAN turns 30, but will it reach 40?". Computerworld.com. http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9060198. Retrieved 2010-10-11.
+^ "'The Year of The LAN' is a long-standing joke, and I freely admit to being the comedian that first declared it in 1982...", Robert Metcalfe, InfoWorld Dec 27, 1993
+^ "...you will remember numerous computer magazines, over numerous years, announcing 'the year of the LAN.'", Quotes in 1999
+^ "...a bit like the Year of the LAN which computer industry pundits predicted for the good part of a decade...", Christopher Herot
+^ Wayne Spivak (2001-07-13). "Has Microsoft Ever Read the History Books?". VARBusiness. Archived from the original on 2010-10-11. http://www.webcitation.org/5tP23vwBy.
+^ "A Review of the Basic Components of a Local Area Network (LAN)". NetworkBits.net. http://networkbits.net/lan-components/local-area-network-lan-basic-components/. Retrieved 2008-04-08.
+
+
+[edit] External links
+
+
+
+Wikimedia Commons has media related to: Local area network
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Internet access
+
+
+
+
+
+
+Wired
+
+
+
+Cable modem
+Dial-up
+DSL
+DOCSIS
+Ethernet
+FTTx
+G.hn
+HD-PLC
+HomePlug
+HomePNA
+IEEE 1901
+ISDN
+MoCA
+PON
+Power line
+
+
+
+
+
+
+
+
+Wireless
+
+
+
+LTE
+Bluetooth
+DECT
+EVDO
+GPRS
+HSPA
+iBurst
+Li-Fi
+MMDS
+Muni Wi-Fi
+Satellite
+UMTS-TDD
+WiBro/WiMAX
+Wi-Fi
+Wireless USB
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 6034/1000000
+Preprocessor generated node count: 34487/1500000
+Post-expand include size: 37222/2048000 bytes
+Template argument size: 14612/2048000 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 3/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:17739-0!*!0!!en!4!* and timestamp 20121219054822 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Local_area_network&oldid=528508349"				
+ /printfooter 
+ catlinks 
+Categories: Local area networksOffice equipment  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

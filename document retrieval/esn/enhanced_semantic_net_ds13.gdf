@@ -1,0 +1,168 @@
+nodedef> name,label
+v0,binary search
+v1,binary search trees
+v2,binary tree
+v3,borrow from sibling
+v4,data structure
+v5,delete
+v6,height of the tree
+v7,inorder traversal
+v8,insert
+v9,internal node
+v10,keys
+v11,leaf node
+v12,merge
+v13,multi way search trees
+v14,order log n
+v15,rotation
+v16,search
+v17,search property
+v18,search tree
+v19,split
+v20,sub tree
+v21,tree height
+v22,two four trees
+v23,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,0.0,true
+v0,v2,false,3.87096774194,true
+v0,v16,false,1.92903225807,true
+v0,v18,false,0.516129032258,true
+v1,v0,false,0.0,true
+v1,v5,false,10.6451612903,true
+v1,v8,false,25.7258064516,true
+v1,v10,false,30.0,true
+v1,v11,false,6.77419354839,true
+v1,v14,false,24.1935483871,true
+v1,v16,false,1.73476702508,true
+v2,v0,false,3.87096774194,true
+v2,v6,false,38.7096774194,true
+v2,v16,false,0.935483870968,true
+v2,v21,false,41.6129032258,true
+v2,v22,false,17.4193548387,true
+v3,v5,false,19.3548387097,true
+v3,v17,false,4.51612903225,true
+v4,v5,false,2.90322580645,true
+v4,v22,false,14.752688172,true
+v5,v1,false,10.6451612903,true
+v5,v3,false,6.45161290323,true
+v5,v4,false,0.483870967742,true
+v5,v9,false,19.6451612903,true
+v5,v11,false,90.9677419355,true
+v5,v12,false,24.0860215054,true
+v5,v14,false,17.4193548387,true
+v5,v15,false,72.5806451613,true
+v5,v16,false,5.25591397849,true
+v5,v17,false,26.6129032258,true
+v5,v19,false,63.8709677419,true
+v6,v2,false,38.7096774194,true
+v6,v10,false,26.1290322581,true
+v6,v19,false,87.4677419355,true
+v6,v21,false,0.967741935484,true
+v6,v22,false,2.41935483872,true
+v6,v23,false,14.5,true
+v7,v10,false,20.0322580645,true
+v7,v20,false,1.74193548387,true
+v8,v1,false,25.7258064516,true
+v8,v10,false,27.5967741935,true
+v8,v11,false,63.5806451613,true
+v8,v16,false,27.0161290323,true
+v8,v19,false,54.4946236559,true
+v8,v22,false,2.90322580645,true
+v9,v5,false,19.6451612903,true
+v9,v10,false,37.4193548387,true
+v9,v13,false,3.87096774194,true
+v9,v16,false,2.8064516129,true
+v9,v20,false,50.3225806452,true
+v10,v1,false,30.0,true
+v10,v6,false,26.1290322581,true
+v10,v7,false,20.0322580645,true
+v10,v8,false,27.5967741935,true
+v10,v9,false,37.4193548387,true
+v10,v11,false,52.0403225806,true
+v10,v12,false,17.4193548387,true
+v10,v13,false,42.5806451613,true
+v10,v16,false,4.3682795699,true
+v10,v17,false,82.2580645161,true
+v10,v19,false,25.0,true
+v10,v20,false,28.3483870968,true
+v10,v22,false,38.7580645161,true
+v11,v1,false,6.77419354839,true
+v11,v5,false,90.9677419355,true
+v11,v8,false,63.5806451613,true
+v11,v10,false,52.0403225806,true
+v11,v12,false,48.3870967742,true
+v11,v16,false,3.26164874552,true
+v11,v22,false,35.0564516129,true
+v12,v5,false,24.0860215054,true
+v12,v10,false,17.4193548387,true
+v12,v11,false,48.3870967742,true
+v12,v16,false,140.322580645,true
+v12,v19,false,30.9677419355,true
+v12,v22,false,1.77419354838,true
+v13,v9,false,3.87096774194,true
+v13,v10,false,42.5806451613,true
+v13,v16,false,3.12096774193,true
+v13,v18,false,1.29032258065,true
+v13,v20,false,23.2258064516,true
+v13,v22,false,8.92741935484,true
+v14,v1,false,24.1935483871,true
+v14,v5,false,17.4193548387,true
+v14,v16,false,25.2903225806,true
+v14,v19,false,15.435483871,true
+v14,v22,false,0.967741935483,true
+v15,v5,false,72.5806451613,true
+v15,v16,false,5.48387096773,true
+v16,v0,false,11.5741935484,true
+v16,v1,false,10.4086021505,true
+v16,v2,false,5.61290322581,true
+v16,v5,false,7.88387096774,true
+v16,v8,false,27.0161290323,true
+v16,v9,false,16.8387096774,true
+v16,v10,false,26.2096774194,true
+v16,v11,false,19.5698924731,true
+v16,v12,false,140.322580645,true
+v16,v13,false,18.7258064516,true
+v16,v14,false,25.2903225806,true
+v16,v15,false,16.4516129032,true
+v16,v17,false,0.0,true
+v16,v18,false,0.0,true
+v16,v19,false,22.2580645161,true
+v16,v20,false,132.580645161,true
+v16,v22,false,17.4780058651,true
+v17,v3,false,27.0967741935,true
+v17,v5,false,53.2258064516,true
+v17,v10,false,82.2580645161,true
+v17,v16,false,0.0,true
+v18,v0,false,0.516129032258,true
+v18,v13,false,1.29032258065,true
+v18,v16,false,0.0,true
+v18,v22,false,4.83870967742,true
+v19,v5,false,63.8709677419,true
+v19,v6,false,87.4677419355,true
+v19,v8,false,54.4946236559,true
+v19,v10,false,25.0,true
+v19,v12,false,30.9677419355,true
+v19,v14,false,15.435483871,true
+v19,v16,false,22.2580645161,true
+v20,v7,false,10.4516129032,true
+v20,v9,false,50.3225806452,true
+v20,v10,false,28.3483870968,true
+v20,v13,false,23.2258064516,true
+v20,v16,false,22.0967741935,true
+v21,v2,false,41.6129032258,true
+v21,v6,false,0.161290322581,true
+v21,v22,false,13.876344086,true
+v22,v2,false,17.4193548387,true
+v22,v4,false,14.752688172,true
+v22,v6,false,14.5161290323,true
+v22,v8,false,17.4193548387,true
+v22,v10,false,38.7580645161,true
+v22,v11,false,35.0564516129,true
+v22,v12,false,10.6451612903,true
+v22,v13,false,8.92741935484,true
+v22,v14,false,5.8064516129,true
+v22,v16,false,17.4780058651,true
+v22,v18,false,4.83870967742,true
+v22,v21,false,41.6290322581,true
+v23,v6,false,4.83333333333,true

@@ -1,0 +1,32 @@
+nodedef> name,label
+v0,avl trees
+v1,binary search tree
+v2,child
+v3,deletion
+v4,double rotation
+v5,height balance
+v6,height balance problem
+v7,height balance property
+v8,height imbalance
+v9,insertion
+v10,local reorganization
+v11,node
+v12,rebalance
+v13,rotation
+v14,single rotation
+v15,subtree
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v2,false,8.3275862069,true
+v1,v9,false,3.72413793103,true
+v3,v2,false,11.5862068966,true
+v4,v3,false,15.4482758621,true
+v5,v13,false,11.3563218391,true
+v6,v5,false,0.0,true
+v7,v6,false,0.0,true
+v8,v15,false,4.8275862069,true
+v9,v2,false,9.88045977011,true
+v10,v1,false,7.72413793103,true
+v11,v2,false,0.0,true
+v12,v11,false,8.68965517241,true
+v14,v0,false,3.86206896552,true
+v15,v2,false,4.88793103448,true

@@ -1,0 +1,140 @@
+nodedef> name,label
+v0,array
+v1,average time
+v2,divide and conquer
+v3,expected time
+v4,insertion sort
+v5,linear time
+v6,median element
+v7,partition procedure
+v8,partitioning
+v9,pivot
+v10,pivot element
+v11,quick sort
+v12,random element
+v13,randomized algorithm
+v14,randomized partition
+v15,randomized quick sort
+v16,running time
+v17,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v2,false,106.615384615,true
+v0,v4,false,23.7115384615,true
+v0,v6,false,22.0512820513,true
+v0,v7,false,25.3846153846,true
+v0,v8,false,48.9743589744,true
+v0,v9,false,0.0,true
+v0,v10,false,22.4230769231,true
+v0,v11,false,4.83916083916,true
+v0,v14,false,12.0,true
+v0,v16,false,84.9230769231,true
+v0,v17,false,29.5384615385,true
+v1,v3,false,1.53846153846,true
+v1,v9,false,84.9230769231,true
+v2,v0,false,106.615384615,true
+v2,v8,false,16.3076923077,true
+v2,v11,false,24.0,true
+v3,v1,false,9.23076923077,true
+v3,v6,false,34.1538461538,true
+v3,v9,false,60.9230769231,true
+v3,v11,false,1.39423076923,true
+v3,v15,false,797.538461538,true
+v3,v16,false,72.3461538462,true
+v3,v17,false,494.153846154,true
+v4,v0,false,23.7115384615,true
+v4,v9,false,20.3076923077,true
+v4,v11,false,19.3846153846,true
+v4,v17,false,1.64423076923,true
+v5,v6,false,13.1153846154,true
+v5,v7,false,5.53846153846,true
+v5,v8,false,1.79487179487,true
+v5,v11,false,46.3269230769,true
+v6,v0,false,22.0512820513,true
+v6,v3,false,34.1538461538,true
+v6,v5,false,13.1153846154,true
+v6,v9,false,5.21794871793,true
+v6,v12,false,6.46153846154,true
+v6,v16,false,5.23076923077,true
+v7,v0,false,25.3846153846,true
+v7,v5,false,5.53846153846,true
+v7,v9,false,9.73076923077,true
+v7,v11,false,11.3230769231,true
+v7,v14,false,3.58974358974,true
+v8,v0,false,48.9743589744,true
+v8,v2,false,48.9230769231,true
+v8,v5,false,5.38461538462,true
+v8,v9,false,21.2307692308,true
+v8,v10,false,8.30769230769,true
+v8,v11,false,0.76923076923,true
+v8,v12,false,8.30769230769,true
+v8,v17,false,210.461538462,true
+v9,v0,false,0.0,true
+v9,v1,false,84.9230769231,true
+v9,v3,false,60.9230769231,true
+v9,v4,false,40.6153846154,true
+v9,v6,false,15.6538461538,true
+v9,v7,false,9.73076923077,true
+v9,v8,false,21.2307692308,true
+v9,v10,false,5.14615384615,true
+v9,v11,false,12.3557692308,true
+v9,v12,false,9.75824175824,true
+v9,v13,false,13.8461538462,true
+v9,v14,false,17.5384615385,true
+v9,v15,false,81.2307692308,true
+v9,v16,false,7.09615384615,true
+v9,v17,false,24.0576923077,true
+v10,v0,false,22.4230769231,true
+v10,v8,false,2.76923076923,true
+v10,v9,false,5.14615384615,true
+v10,v11,false,7.40384615385,true
+v10,v16,false,28.6153846154,true
+v11,v0,false,4.83916083916,true
+v11,v2,false,48.0,true
+v11,v3,false,4.18269230769,true
+v11,v4,false,19.3846153846,true
+v11,v5,false,92.6538461538,true
+v11,v7,false,22.6461538462,true
+v11,v8,false,4.61538461538,true
+v11,v9,false,12.3557692308,true
+v11,v10,false,14.8076923077,true
+v11,v12,false,13.8461538462,true
+v11,v13,false,49.8461538462,true
+v11,v14,false,9.23076923077,true
+v11,v15,false,0.807692307692,true
+v11,v16,false,8.20512820513,true
+v11,v17,false,64.9038461538,true
+v12,v6,false,6.46153846154,true
+v12,v8,false,8.30769230769,true
+v12,v9,false,3.25274725275,true
+v12,v11,false,13.8461538462,true
+v12,v15,false,131.076923077,true
+v12,v16,false,1.23076923077,true
+v13,v9,false,13.8461538462,true
+v13,v11,false,24.9230769231,true
+v13,v16,false,167.538461538,true
+v14,v0,false,12.0,true
+v14,v7,false,3.58974358974,true
+v14,v9,false,17.5384615385,true
+v14,v11,false,4.61538461538,true
+v15,v3,false,797.538461538,true
+v15,v9,false,81.2307692308,true
+v15,v11,false,0.269230769231,true
+v15,v12,false,131.076923077,true
+v15,v16,false,12.9230769231,true
+v16,v0,false,84.9230769231,true
+v16,v3,false,72.3461538462,true
+v16,v6,false,31.3846153846,true
+v16,v9,false,1.18269230769,true
+v16,v10,false,28.6153846154,true
+v16,v11,false,8.20512820513,true
+v16,v12,false,7.38461538462,true
+v16,v13,false,167.538461538,true
+v16,v15,false,12.9230769231,true
+v16,v17,false,1.69230769231,true
+v17,v0,false,29.5384615385,true
+v17,v3,false,494.153846154,true
+v17,v4,false,9.86538461538,true
+v17,v8,false,210.461538462,true
+v17,v9,false,8.01923076923,true
+v17,v11,false,64.9038461538,true
+v17,v16,false,0.282051282052,true

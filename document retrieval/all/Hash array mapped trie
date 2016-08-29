@@ -1,0 +1,96 @@
+
+Hash array mapped trie
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+A hash array mapped trie[1] (HAMT) is an implementation of an associative array that combines the characteristics of a hash table and an array mapped trie.[2]
+
+
+
+
+Contents
+
+
+1 Operation
+2 Advantages of HAMTs
+3 Problems with HAMTs
+4 Implementations
+5 References
+
+
+
+
+[edit] Operation
+A HAMT is an array mapped trie where the keys are first hashed in order to ensure an even distribution of keys and to ensure a constant key length.
+In a typical implementation of an array mapped trie, each node may branch to up to 32 other nodes. However, as allocating space for 32 pointers for each node would be expensive, each node instead contains a bitmap which is 32 bits long where each bit indicates the presence of a path. This is followed by an array of pointers equal in length to the Hamming weight of the bitmap.
+[edit] Advantages of HAMTs
+The hash array mapped trie achieves almost hash table-like speed, despite being a functional, persistent data structure.
+[edit] Problems with HAMTs
+Implementation of a HAMT involves the use of the population count function, which counts the number of ones in the binary representation of a number. This operation is available in many instruction set architectures (where it is sometimes called "CTPOP"), but it is only available in some high-level languages. Although population count can be implemented in software in O(1) time using a series of shift and add instructions, doing so may perform the operation an order of magnitude slower.
+[edit] Implementations
+The programming languages Clojure[3] and Scala use a persistent variant of hash array mapped tries for their native hash map type. The Haskell library unordered-containers uses the same to implement persistent map and set data types.[4] The Rubinius[5] implementation of Ruby includes a HAMT, mostly written in Ruby but with 3[6] primitives.
+The concurrent lock-free version[7] of the hash trie called Ctrie is a mutable thread-safe implementation which ensures progress. The data-structure has been proven to be correct[8] - Ctrie operations have been shown to have the atomicity, linearizability and lock-freedom properties.
+[edit] References
+
+
+^ Bagwell, P. (2001) Ideal Hash Trees. Technical Report, 2001.
+^ Bagwell, P. (2000) Fast And Space Efficient Trie Searches. Technical Report, 2000.
+^ Java source file of Clojure's hash map type.
+^ Johan Tibell, A. Announcing unordered-containers 0.2
+^ Ruby source file of Rubinius's HAMT
+^ [1]
+^ Prokopec, A. Implementation of Concurrent Hash Tries on GitHub
+^ Prokopec, A. et al. (2011) Cache-Aware Lock-Free Concurrent Hash Tries. Technical Report, 2011.
+
+
+
+
+
+
+This algorithms or data structures-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 371/1000000
+Preprocessor generated node count: 2115/1500000
+Post-expand include size: 3995/2048000 bytes
+Template argument size: 563/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:14514583-0!*!0!!en!4!* and timestamp 20130122175513 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Hash_array_mapped_trie&oldid=504701279"				
+ /printfooter 
+ catlinks 
+Categories: Associative arraysHashingAlgorithms and data structures stubsHidden categories: WikiProject Computer science stubs  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

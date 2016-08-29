@@ -1,0 +1,1192 @@
+
+Recursion
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+For other uses, see Recursion (disambiguation).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2012) 
+
+
+
+
+
+
+A visual form of recursion known as the Droste effect. The woman in this image is holding an object which contains a smaller image of her holding an identical object, which in turn contains a smaller image of herself holding an identical object, and so forth.
+
+
+Recursion is the process of repeating items in a self-similar way. For instance, when the surfaces of two mirrors are exactly parallel with each other the nested images that occur are a form of infinite recursion. The term has a variety of meanings specific to a variety of disciplines ranging from linguistics to logic. The most common application of recursion is in mathematics and computer science, in which it refers to a method of defining functions in which the function being defined is applied within its own definition. Specifically this defines an infinite number of instances (function values), using a finite expression that for some instances may refer to other instances, but in such a way that no loop or infinite chain of references can occur. The term is also used more generally to describe a process of repeating objects in a self-similar way.
+
+
+
+
+Contents
+
+
+1 Formal definitions of recursion
+2 Informal definition
+3 Recursion in language
+
+3.1 Recursive humor
+
+
+4 Recursion in mathematics
+
+4.1 Recursively defined sets
+
+4.1.1 Example: the natural numbers
+4.1.2 Example: The set of true reachable propositions
+
+
+4.2 Functional recursion
+4.3 Proofs involving recursive definitions
+4.4 Recursive optimization
+
+
+5 Recursion in computer science
+6 The recursion theorem
+
+6.1 Proof of uniqueness
+6.2 Examples
+
+
+7 Bibliography
+8 See also
+9 References
+10 External links
+
+
+
+
+[edit] Formal definitions of recursion
+
+
+
+
+Recursion in a screen recording program, where the smaller window contains a snapshot of the entire screen.
+
+
+In mathematics and computer science, a class of objects or methods exhibit recursive behavior when they can be defined by two properties:
+
+A simple base case (or cases), and
+A set of rules which reduce all other cases toward the base case.
+
+For example, the following is a recursive definition of a person's ancestors:
+
+One's parents are one's ancestors (base case).
+The parents of one's ancestors are also one's ancestors (recursion step).
+
+The Fibonacci sequence is a classic example of recursion:
+
+Fib(0) is 0 [base case]
+Fib(1) is 1 [base case]
+For all integers n > 1: Fib(n) is (Fib(n-1) + Fib(n-2)) [recursive definition]
+
+Many mathematical axioms are based upon recursive rules. For example, the formal definition of the natural numbers in set theory follows: 1 is a natural number, and each natural number has a successor, which is also a natural number. By this base case and recursive rule, one can generate the set of all natural numbers
+A more humorous illustration goes: "To understand recursion, you must first understand recursion." Or perhaps more accurate is the following, from Andrew Plotkin: "If you already know what recursion is, just remember the answer. Otherwise, find someone who is standing closer to Douglas Hofstadter than you are; then ask him or her what recursion is."
+Recursively defined mathematical objects include functions, sets, and especially fractals.
+[edit] Informal definition
+Recursion is the process a procedure goes through when one of the steps of the procedure involves invoking the procedure itself. A procedure that goes through recursion is said to be 'recursive'.
+To understand recursion, one must recognize the distinction between a procedure and the running of a procedure. A procedure is a set of steps that are to be taken based on a set of rules. The running of a procedure involves actually following the rules and performing the steps. An analogy: a procedure is like a written recipe; running a procedure is like actually preparing the meal.
+Recursion is related to, but not the same as, a reference within the specification of a procedure to the execution of some other procedure. For instance, a recipe might refer to cooking vegetables, which is another procedure that in turn requires heating water, and so forth. However, a recursive procedure is where (at least) one of its steps calls for a new instance of the very same procedure, like a sourdough recipe calling for some dough left over from the last time the same recipe was made. This of course immediately creates the possibility of an endless loop; recursion can only be properly used in a definition if the step in question is skipped in certain cases so that the procedure can complete, like a sourdough recipe that also tells you how to get some starter dough in case you've never made it before. Even if properly defined, a recursive procedure is not easy for humans to perform, as it requires distinguishing the new from the old (partially executed) invocation of the procedure; this requires some administration of how far various simultaneous instances of the procedures have progressed. For this reason recursive definitions are very rare in everyday situations. An example could be the following procedure to find a way through a maze. Proceed forward until reaching either an exit or a branching point (a dead end is considered a branching point with 0 branches). If the point reached is an exit, terminate. Otherwise try each branch in turn, using the procedure recursively; if every trial fails by reaching only dead ends, return on the path that led to this branching point and report failure. Whether this actually defines a terminating procedure depends on the nature of the maze: it must not allow loops. In any case, executing the procedure requires carefully recording all currently explored branching points, and which of their branches have already been exhaustively tried.
+[edit] Recursion in language
+Linguist Noam Chomsky theorizes that unlimited extension of any natural language is possible using the recursive device of embedding clauses within sentences (Aspects of the Theory of Syntax. 1965). For example, two simple sentences"Dorothy met the Wicked Witch of the West in Munchkin Land" and "The Wicked Witch's sister was killed in Munchkin Land"can be embedded in a third sentence, "Dorothy liquidated the Wicked Witch with a pail of water," to obtain a recursive sentence: "Dorothy, who met the Wicked Witch of the West in Munchkin Land where her sister was killed, liquidated her with a pail of water."
+The idea that recursion is an essential property of human language (as Chomsky suggests) is challenged by linguist Daniel Everett in his work Cultural Constraints on Grammar and Cognition in Pirah: Another Look at the Design Features of Human Language, in which he hypothesizes that cultural factors made recursion unnecessary in the development of the Pirah language. This concept, which challenges Chomsky's idea that recursion is the only trait which differentiates human and animal communication, is currently under debate. Andrew Nevins, David Pesetsky and Cilene Rodrigues provide a debate against this proposal.[1]
+Recursion in linguistics enables 'discrete infinity' by embedding phrases within phrases of the same type in a hierarchical structure. Without recursion, language does not have 'discrete infinity' and cannot embed sentences into infinity (with a 'Russian nesting doll' effect). Everett contests that language must have discrete infinity, and asserts that the Pirah language which he claims lacks recursion is in fact finite. He likens it to the finite game of chess, which has a finite number of moves but is nevertheless very productive, with novel moves being discovered throughout history.
+[edit] Recursive humor
+Recursion is sometimes used humorously in computer science, programming, philosophy, or mathematics textbooks. It is not unusual for such books to include a joke entry in their glossary along the lines of:
+
+Recursion, see Recursion.[2]
+
+A variation is found in the index on page 269 of some editions of Kernighan and Ritchie's book The C Programming Language; thus the index entry recursively references itself ("recursion 86, 139, 141, 182, 202, 269"). The earliest version of this joke was in "Software Tools" by Kernighan and Plauger, and also appears in "The UNIX Programming Environment" by Kernighan and Pike. It did not appear in the first edition of The C Programming Language.
+Another joke is that "To understand recursion, you must understand recursion."[2] In the English language version of the Google web search engine, when a search for "recursion" is made, the site suggests "Did you mean: recursion."
+Recursive acronyms can also be examples of recursive humor. PHP, for example, stands for "PHP Hypertext Preprocessor" and WINE, for example, stands for "Wine Is Not an Emulator." GNU stands for "GNU's not Unix".
+[edit] Recursion in mathematics
+
+
+
+
+A Sierpinski trianglea confined recursion of triangles to form a geometric lattice
+
+
+[edit] Recursively defined sets
+Main article: Recursive definition
+[edit] Example: the natural numbers
+See also: Closure (mathematics)
+The canonical example of a recursively defined set is given by the natural numbers:
+
+0 is in 
+if n is in , then n + 1 is in 
+The set of natural numbers is the smallest set satisfying the previous two properties.
+
+[edit] Example: The set of true reachable propositions
+Another interesting example is the set of all "true reachable" propositions in an axiomatic system.
+
+if a proposition is an axiom, it is a true reachable proposition.
+if a proposition can be obtained from true reachable propositions by means of inference rules, it is a true reachable proposition.
+The set of true reachable propositions is the smallest set of propositions satisfying these conditions.
+
+This set is called 'true reachable propositions' because in non-constructive approaches to the foundations of mathematics, the set of true propositions may be larger than the set recursively constructed from the axioms and rules of inference. See also Gdel's incompleteness theorems.
+[edit] Functional recursion
+A function may be partly defined in terms of itself. A familiar example is the Fibonacci number sequence: F(n) = F(n  1) + F(n  2). For such a definition to be useful, it must lead to values which are non-recursively defined, in this case F(0) = 0 and F(1) = 1.
+A famous recursive function is the Ackermann function which, unlike the Fibonacci sequence, cannot easily be expressed without recursion.
+[edit] Proofs involving recursive definitions
+Applying the standard technique of proof by cases to recursively defined sets or functions, as in the preceding sections, yields structural induction, a powerful generalization of mathematical induction which is widely used to derive proofs in mathematical logic and computer science.
+[edit] Recursive optimization
+Dynamic programming is an approach to optimization which restates a multiperiod or multistep optimization problem in recursive form. The key result in dynamic programming is the Bellman equation, which writes the value of the optimization problem at an earlier time (or earlier step) in terms of its value at a later time (or later step).
+[edit] Recursion in computer science
+Main article: Recursion (computer science)
+A common method of simplification is to divide a problem into subproblems of the same type. As a computer programming technique, this is called divide and conquer and is key to the design of many important algorithms. Divide and conquer serves as a top-down approach to problem solving, where problems are solved by solving smaller and smaller instances. A contrary approach is dynamic programming. This approach serves as a bottom-up approach, where problems are solved by solving larger and larger instances, until the desired size is reached.
+A classic example of recursion is the definition of the factorial function, given here in C code:
+
+
+
+unsigned int factorial(unsigned int n) {
+    if (!n) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+
+The function calls itself recursively on a smaller version of the input (n - 1) and multiplies the result of the recursive call by n, until reaching the base case, analogously to the mathematical definition of factorial.
+Recursion in computer programming is exemplified when a function is defined in terms of simpler, often smaller versions of itself. The solution to the problem is then devised by combining the solutions obtained from the simpler versions of the problem. One example application of recursion is in parsers for programming languages. The great advantage of recursion is that an infinite set of possible sentences, designs or other data can be defined, parsed or produced by a finite computer program.
+Recurrence relations are equations to define one or more sequences recursively. Some specific kinds of recurrence relation can be "solved" to obtain a non-recursive definition.
+Use of recursion in an algorithm has both advantages and disadvantages. The main advantage is usually simplicity. The main disadvantage is often that the algorithm may require large amounts of memory if the depth of the recursion is very large.
+[edit] The recursion theorem
+In set theory, this is a theorem guaranteeing that recursively defined functions exist. Given a set X, an element a of X and a function , the theorem states that there is a unique function  (where  denotes the set of natural numbers including zero) such that
+
+
+
+
+for any natural number n.
+[edit] Proof of uniqueness
+Take two functions  and  such that:
+
+
+
+
+
+
+where a is an element of X.
+It can be proved by mathematical induction that  for all natural numbers n:
+
+Base Case:  so the equality holds for .
+
+
+Inductive Step: Suppose  for some . Then 
+
+Hence F(k) = G(k) implies F(k+1) = G(k+1).
+
+
+
+By Induction,  for all .
+[edit] Examples
+Some common recurrence relations are:
+
+
+
+
+Golden Ratio: 
+Factorial: 
+Fibonacci numbers: 
+Catalan numbers: , 
+Computing compound interest
+The Tower of Hanoi
+Ackermann function
+
+
+
+
+[edit] Bibliography
+
+Dijkstra, Edsger W. (1960). "Recursive Programming". Numerische Mathematik 2 (1): 312318. doi:10.1007/BF01386232.
+Johnsonbaugh, Richard (2004). Discrete Mathematics. Prentice Hall. ISBN0-13-117686-2.
+Hofstadter, Douglas (1999). Gdel, Escher, Bach: an Eternal Golden Braid. Basic Books. ISBN0-465-02656-7.
+Shoenfield, Joseph R. (2000). Recursion Theory. A K Peters Ltd. ISBN1-56881-149-7.
+Causey, Robert L. (2001). Logic, Sets, and Recursion. Jones & Bartlett. ISBN0-7637-1695-2.
+Cori, Rene; Lascar, Daniel; Pelletier, Donald H. (2001). Recursion Theory, Godel's Theorems, Set Theory, Model Theory. Oxford University Press. ISBN0-19-850050-5.
+Barwise, Jon; Moss, Lawrence S. (1996). Vicious Circles. Stanford Univ Center for the Study of Language and Information. ISBN0-19-850050-5. - offers a treatment of corecursion.
+Rosen, Kenneth H. (2002). Discrete Mathematics and Its Applications. McGraw-Hill College. ISBN0-07-293033-0.
+Cormen, Thomas H., Charles E. Leiserson, Ronald L. Rivest, Clifford Stein (2001). Introduction to Algorithms. Mit Pr. ISBN0-262-03293-7.
+Kernighan, B.; Ritchie, D. (1988). The C programming Language. Prentice Hall. ISBN0-13-110362-8.
+Stokey, Nancy,; Robert Lucas; Edward Prescott (1989). Recursive Methods in Economic Dynamics. Harvard University Press. ISBN0-674-75096-9.
+Hungerford (1980). Algebra. Springer. ISBN978-0-387-90518-1., first chapter on set theory.
+
+[edit] See also
+
+
+Corecursion
+Course-of-values recursion
+Digital infinity
+Fixed point combinator
+Infinite loop
+Infinitism
+Iterated function
+Mise en abyme
+Reentrant (subroutine)
+Self-reference
+Strange loop
+Tail recursion
+Tupper's self-referential formula
+Turtles all the way down
+
+
+[edit] References
+
+^ Nevins, Andrew; Pesetsky, David; Rodrigues, Cilene (2009). "Evidence and argumentation: A reply to Everett (2009)" (PDF). Language 85 (3): 671681. doi:10.1353/lan.0.0140. http://web.mit.edu/linguistics/people/faculty/pesetsky/Nevins_Pesetsky_Rodrigues_2_Evidence_and_Argumentation_Reply_to_Everett.pdf.
+^ a b Hunter, David (2011). Essentials of Discrete Mathematics. Jones and Bartlett. pp.494. http://books.google.com/books?id=kuwhTxCVovQC&dq=recursion+joke&source=gbs_navlinks_s.
+
+[edit] External links
+
+
+
+Look up recursionor recursivity in Wiktionary, the free dictionary.
+
+
+
+Recursion - tutorial by Alan Gauld
+A Primer on Recursion- contains pointers to recursion in Formal Languages, Linguistics, Math and Computer Science
+Zip Files All The Way Down
+Nevins, Andrew and David Pesetsky and Cilene Rodrigues. Evidence and Argumentation: A Reply to Everett (2009). Language 85.3: 671--681 (2009)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Fractals
+
+
+
+
+
+
+Characteristics
+
+
+
+Fractal dimension (Hausdorff dimension & Topological dimension)
+Self-similarity
+Recursion
+
+
+
+
+
+
+
+
+
+
+
+Iterated function system
+
+
+
+Koch snowflake
+Cantor set
+Sierpinski carpet
+Sierpinski triangle
+Space-filling curve
+Dragon curve
+T-square
+Menger sponge
+Barnsley fern
+
+
+
+
+
+
+
+
+Strange attractor
+
+
+
+Multifractal system
+
+
+
+
+
+
+
+
+L-system
+
+
+
+Space-filling curve
+
+
+
+
+
+
+
+
+Escape-time fractals
+
+
+
+Mandelbrot set
+Julia set
+Burning Ship fractal
+Nova fractal
+Lyapunov fractal
+
+
+
+
+
+
+
+
+Random fractals
+
+
+
+Lvy flight
+Percolation theory
+Self-avoiding walk
+Fractal landscape
+Brownian motion
+Brownian tree
+Diffusion-limited aggregation
+
+
+
+
+
+
+
+
+People
+
+
+
+Georg Cantor
+Felix Hausdorff
+Gaston Julia
+Paul Pierre Lvy
+Aleksandr Lyapunov
+Benot Mandelbrot
+Lewis Fry Richardson
+Wacaw Sierpiski
+Helge von Koch
+
+
+
+
+
+
+
+
+Other
+
+
+
+List of fractals by Hausdorff dimension
+"How Long Is the Coast of Britain? Statistical Self-Similarity and Fractional Dimension"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Logic
+
+
+
+
+
+
+
+
+
+
+
+Overview
+
+
+
+
+
+
+
+
+
+
+Academic
+areas
+
+
+
+Argumentation theory
+Axiology
+Critical thinking
+Computability theory
+Formal semantics
+History of logic
+Informal logic
+Logic in computer science
+Mathematical logic
+Mathematics
+Metalogic
+Metamathematics
+Model theory
+Philosophical logic
+Philosophy
+Philosophy of logic
+Philosophy of mathematics
+Proof theory
+Set theory
+
+
+
+
+
+
+
+
+Foundational
+concepts
+
+
+
+Abduction
+Analytic truth
+Antinomy
+A priori
+Deduction
+Definition
+Description
+Induction
+Inference
+Logical form
+Logical consequence
+Logical truth
+Name
+Necessity
+Meaning
+Paradox
+Possible world
+Presupposition
+Probability
+Reason
+Reasoning
+Reference
+Semantics
+Statement
+Strict implication
+Substitution
+Syntax
+Truth
+Truth value
+Validity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Philosophical logic
+
+
+
+
+
+
+
+
+
+
+Critical thinking
+and
+Informal logic
+
+
+
+Analysis
+Ambiguity
+Argument
+Belief
+Bias
+Credibility
+Evidence
+Explanation
+Explanatory power
+Fact
+Fallacy
+Inquiry
+Opinion
+Parsimony
+Premise
+Propaganda
+Prudence
+Reasoning
+Relevance
+Rhetoric
+Rigor
+Vagueness
+
+
+
+
+
+
+
+
+Theories of deduction
+
+
+
+Constructivism
+Dialetheism
+Fictionalism
+Finitism
+Formalism
+Intuitionism
+Logical atomism
+Logicism
+Nominalism
+Platonic realism
+Pragmatism
+Realism
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Metalogic and metamathematics
+
+
+
+
+
+
+
+
+
+Cantor's theorem
+Church's theorem
+Church's thesis
+Consistency
+Effective method
+Foundations of mathematics
+Gdel's completeness theorem
+Gdel's incompleteness theorems
+Soundness
+Completeness
+Decidability
+Interpretation
+LwenheimSkolem theorem
+Metatheorem
+Satisfiability
+Independence
+Typetoken distinction
+Usemention distinction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mathematical logic
+
+
+
+
+
+
+
+
+
+
+
+General
+
+
+
+
+Formal language
+Formation rule
+Formal system
+Deductive system
+Formal proof
+Formal semantics
+Well-formed formula
+Set
+Element
+Class
+Classical logic
+Axiom
+Natural deduction
+Rule of inference
+Relation
+Theorem
+Logical consequence
+Axiomatic system
+Type theory
+Symbol
+Syntax
+Theory
+
+
+
+
+
+
+
+
+
+Traditional logic
+
+
+
+
+Proposition
+Inference
+Argument
+Validity
+Cogency
+Syllogism
+Square of opposition
+Venn diagram
+
+
+
+
+
+
+
+
+
+Propositional calculus
+and Boolean logic
+
+
+
+
+Boolean functions
+Propositional calculus
+Propositional formula
+Logical connectives
+Truth tables
+
+
+
+
+
+
+
+
+
+Predicate
+
+
+
+
+First-order
+Quantifiers
+Predicate
+Second-order
+Monadic predicate calculus
+
+
+
+
+
+
+
+
+
+Set theory
+
+
+
+
+Set
+Empty set
+Enumeration
+Extensionality
+Finite set
+Function
+Subset
+Power set
+Countable set
+Recursive set
+Domain
+Range
+Ordered pair
+Uncountable set
+
+
+
+
+
+
+
+
+
+Model theory
+
+
+
+
+Model
+Interpretation
+Non-standard model
+Finite model theory
+Truth value
+Validity
+
+
+
+
+
+
+
+
+
+Proof theory
+
+
+
+
+Formal proof
+Deductive system
+Formal system
+Theorem
+Logical consequence
+Rule of inference
+Syntax
+
+
+
+
+
+
+
+
+
+Computability theory
+
+
+
+
+Recursion
+Recursive set
+Recursively enumerable set
+Decision problem
+ChurchTuring thesis
+Computable function
+Primitive recursive function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Non-classical logic
+
+
+
+
+
+
+
+
+
+
+
+Modal logic
+
+
+
+
+Alethic
+Axiologic
+Deontic
+Doxastic
+Epistemic
+Temporal
+
+
+
+
+
+
+
+
+
+Intuitionism
+
+
+
+
+Intuitionistic logic
+Constructive analysis
+Heyting arithmetic
+Intuitionistic type theory
+Constructive set theory
+
+
+
+
+
+
+
+
+
+Fuzzy logic
+
+
+
+
+Degree of truth
+Fuzzy rule
+Fuzzy set
+Fuzzy finite element
+Fuzzy set operations
+
+
+
+
+
+
+
+
+
+Substructural logic
+
+
+
+
+Structural rule
+Relevance logic
+Linear logic
+
+
+
+
+
+
+
+
+
+Paraconsistent logic
+
+
+
+
+Dialetheism
+
+
+
+
+
+
+
+
+
+Description logic
+
+
+
+
+Ontology
+Ontology language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Logicians
+
+
+
+
+
+
+
+
+
+Anderson
+Aristotle
+Averroes
+Avicenna
+Bain
+Barwise
+Bernays
+Boole
+Boolos
+Cantor
+Carnap
+Church
+Chrysippus
+Curry
+De Morgan
+Frege
+Geach
+Gentzen
+Gdel
+Hilbert
+Kleene
+Kripke
+Leibniz
+Lwenheim
+Peano
+Peirce
+Putnam
+Quine
+Russell
+Schrder
+Scotus
+Skolem
+Smullyan
+Tarski
+Turing
+Whitehead
+William of Ockham
+Wittgenstein
+Zermelo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lists
+
+
+
+
+
+
+
+
+
+
+Topics
+
+
+
+Outline of logic
+Index of logic articles
+Mathematical logic
+Boolean algebra
+Set theory
+
+
+
+
+
+
+
+
+Other
+
+
+
+Logicians
+Rules of inference
+Paradoxes
+Fallacies
+Logic symbols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Common logical symbols
+
+
+
+
+
+
+
+
+&   ~    |        
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+Outline
+WikiProject
+Talk
+changes
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 13245/1000000
+Preprocessor generated node count: 43568/1500000
+Post-expand include size: 234218/2048000 bytes
+Template argument size: 129514/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:25407-0!0!0!!en!4!* and timestamp 20130118125612 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Recursion&oldid=533685070"				
+ /printfooter 
+ catlinks 
+Categories: Mathematical logicTheory of computationProgramming idiomsRecursionSelf-referenceHidden categories: Articles needing additional references from June 2012All articles needing additional references  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

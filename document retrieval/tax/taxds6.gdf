@@ -1,0 +1,46 @@
+nodedef> name,label
+v0,abstract data type
+v1,ancestor
+v2,arithmetic expression
+v3,binary tree
+v4,complete binary tree
+v5,data structure
+v6,decision tree
+v7,degree
+v8,depth
+v9,generic method
+v10,height
+v11,hierarchy
+v12,internal node
+v13,leaf
+v14,level
+v15,linked list
+v16,node
+v17,ordered tree
+v18,parent
+v19,root
+v20,sibling
+v21,tree
+v22,unbounded tree
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v5,false,13.871559633,true
+v1,v18,false,17.8287461774,true
+v2,v5,false,9.84403669725,true
+v4,v3,false,0.724770642202,true
+v5,v4,false,3.69724770642,true
+v6,v4,false,10.125382263,true
+v7,v19,false,9.56957186544,true
+v8,v10,false,2.97247706422,true
+v9,v5,false,5.94495412844,true
+v10,v3,false,3.77494266055,true
+v11,v19,false,31.367737003,true
+v12,v16,false,3.87844036697,true
+v13,v16,false,6.9495412844,true
+v14,v16,false,4.20042342978,true
+v15,v4,false,15.5871559633,true
+v17,v4,false,7.45259938838,true
+v18,v16,false,7.11544342508,true
+v19,v16,false,3.18883792049,true
+v20,v18,false,6.87155963303,true
+v21,v3,false,0.0,true
+v22,v19,false,9.13379204893,true

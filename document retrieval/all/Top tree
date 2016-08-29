@@ -1,0 +1,420 @@
+
+Top tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+A Top tree is a data structure based on a binary tree for unrooted dynamic trees that is used mainly for various path-related operations. It allows simple divide-and-conquer algorithms. It has since been augmented to maintain dynamically various properties of a tree such as diameter, center and median.
+A Top tree  is defined for an underlying tree  and a pair of vertices  called as External Boundary Vertices
+
+
+
+
+An image depicting a Top tree built on an underlying tree (black nodes)A tree divided into edge clusters and the complete top-tree for it. Filled nodes in the top-tree are path-clusters, while small circle nodes are leaf-clusters. The big circle node is the root. Capital letters denote clusters, non-capital letters are nodes.
+
+
+
+
+
+
+Contents
+
+
+1 Glossary
+
+1.1 Boundary Node
+1.2 Boundary Vertex
+
+1.2.1 External Boundary Vertices
+
+
+1.3 Cluster
+
+1.3.1 Path Cluster
+1.3.2 Point Cluster
+1.3.3 Leaf Cluster
+1.3.4 Edge Cluster
+
+1.3.4.1 Leaf Edge Cluster
+1.3.4.2 Path Edge Cluster
+
+
+
+
+1.4 Internal Node
+1.5 Cluster Path
+1.6 Mergeable Clusters
+
+
+2 Introduction
+3 Dynamic Operations
+4 Internal Operations
+5 Non local search
+
+5.1 Examples of non local search
+
+
+6 Interesting Results and Applications
+7 Implementation
+
+7.1 Using Multilevel Partitioning
+
+
+8 References
+9 External links
+
+
+
+
+[edit] Glossary
+[edit] Boundary Node
+See Boundary Vertex
+[edit] Boundary Vertex
+A vertex in a connected subtree is a Boundary Vertex if it is connected to a vertex outside the subtree by an edge.
+[edit] External Boundary Vertices
+Up to a pair of vertices in the Top Tree  can be called as External Boundary Vertices, they can be thought of as Boundary Vertices of the cluster which represents the entire Top Tree.
+[edit] Cluster
+A cluster is a connected subtree with at most two Boundary Vertices. The set of Boundary Vertices of a given cluster  is denoted as  With each cluster  the user may associate some meta information  and give methods to maintain it under the various internal operations.
+[edit] Path Cluster
+If  contains at least one edge then  is called a Path Cluster.
+[edit] Point Cluster
+See Leaf Cluster
+[edit] Leaf Cluster
+If  does not contain any edge i.e.  has only one Boundary Vertex then  is called a Leaf Cluster.
+[edit] Edge Cluster
+A Cluster containing a single edge is called an Edge Cluster.
+[edit] Leaf Edge Cluster
+A Leaf in the original Cluster is represented by a Cluster with just a single Boundary Vertex and is called a Leaf Edge Cluster.
+[edit] Path Edge Cluster
+Edge Clusters with two Boundary Nodes are called Path Edge Cluster.
+[edit] Internal Node
+A node in  \  is called an Internal Node of 
+[edit] Cluster Path
+The path between the Boundary Vertices of  is called the cluster path of  and it is denoted by 
+[edit] Mergeable Clusters
+Two Clusters  and  are Mergeable if  is a singleton set (they have exactly one node in common) and  is a Cluster.
+[edit] Introduction
+Top Trees are used for maintaining a Dynamic forest (set of trees) under link and cut operations.
+The basic idea is to maintain a balanced Binary tree  of logarithmic height in the number of nodes in the original tree ( i.e. in  time); the Top Tree essentially represents the recursive subdivision of the original tree  into clusters.
+In general the tree  may have weight on its edges.
+There is a one to one correspondence with the edges of the original tree  and the leaf nodes of the Top Tree  and each internal node of  represents a cluster that is formed due to the union of the clusters that are its children.
+The Top Tree data structure can be initialized in  time. 
+Therefore the Top Tree  over ( ) is a binary tree such that
+
+The nodes of  are clusters of (  );
+The leaves of  are the edges of 
+Sibling clusters are neighbours in the sense that they intersect in a single vertex, and then their parent cluster is their union.
+Root of  if the tree  itself, with a set of at most two External Boundary Vertices.
+
+A tree with a single node has an empty top tree, and one with just an edge is just a single node.
+These trees are freely augmentable allowing the user a wide variety of flexibility and productivity without going into the details of the internal workings of the data structure, something which is also referred to as the Black Box.
+[edit] Dynamic Operations
+The following three are the user allowable Forest Updates.
+
+Link(v, w): Where  and  are nodes in different trees 1 and 2. It returns a single top tree representing vw
+
+
+Cut(v, w): Removes the Edge  from a tree  with Top Tree  thereby turning it into two trees v and w and returning two Top Trees v and w.
+
+
+Expose(S): Is called as a subroutine for implementing most of the queries on a Top Tree.  contains at most 2 vertices. It makes original external vertices to be normal vertices and makes verices from  the new External Boundary Vertices of the Top Tree. If  is nonempty it returns the new Root cluster  with  Expose({v,w}) fails if the vertices are from different trees.
+
+[edit] Internal Operations
+The Forest updates are all carried out by a sequence of at most  Internal Operations, the sequence of which is computed in further  time. It may happen that during a tree update, a leaf cluster may change to a path cluster and the converse. Updates to top tree are done exclusively by these internal operations.
+The  is updated by calling a user defined function associated with each internal operation.
+
+Merge Here  and  are Mergeable Clusters, it returns  as the parent cluster of  and  and with boundary vertices as the boundary vertices of  Computes  using  and 
+
+
+Split Here  is the root cluster  It updates  and  using  and than it deletes the cluster  from .
+
+Split is usually implemented using Clean method which calls user method for updates of  and  using  and updates  such that it's known there is no pending update needed in its children. Than the  is discarded without calling user defined functions. Clean is often required for queries without need to Split. If Split does not use Clean subroutine, and Clean is required, its effect could be achieved with overhead by combining Merge and Split.
+The next two functions are analogous to the above two and are used for base clusters.
+
+Create Creates a cluster  for the edge  Sets   is computed from scratch.
+
+
+Eradicate  is the edge cluster  User defined function is called to process  and than the cluster  is deleted from the top tree.
+
+[edit] Non local search
+User can define Choose operation which for a root (nonleaf) cluster selects one of its child clusters. The Top Tree blackbox provides Search routine, which organizes Choose queries and reorganization of the Top tree (using the Internal operations) such that it locates the only edge in intersection of all selected clusters. Sometimes the search should be limited to a path. There is a variant of nonlocal search for such purposes. If there are two external boundary vertices in the root cluster , the edge is searched only on the path . It is sufficient to do following modification: If only one of root cluster children is path cluster, it is selected by default without calling the Choose operation.
+[edit] Examples of non local search
+Finding i-th edge on longer path from  to  could be done by =Expose({v,w}) followed by Search() with appropriate Choose. To implement the Choose we use global variable representing  and global variable representing  Choose selects the cluster  with  iff length of  is at least . To support the operation the length must be maintained in the .
+Similar task could be formulated for graph with edges with nonunit lengths. In that case the distance could address an edge or a vertex between two edges. We could define Choose such that the edge leading to the vertex is returned in the latter case. There could be defined update increasing all edge lengths along a path by a constant. In such scenario these updates are done in constant time just in root cluster. Clean is required to distribute the delayed update to the children. The Clean should be called before the Search is invoked. To maintain length in  in that case would require to maintain unitlength in  as well.
+Finding center of tree containing vertex  could be done by finding either bicenter edge or edge with center as one endpoint. The edge could be found by =Expose({v}) followed by Search() with appropriate Choose. The choose selects between childs   with  the child with higher maxdistance. To support the operation the maximal distance in the cluster subtree from a boundary vertex should be maintained in the . That requires maintenance of the cluster path length as well.
+[edit] Interesting Results and Applications
+A number of interesting applications originally implemented by other methods have been easily implemented using the Top Trees interface. Some of them include
+
+([SLEATOR AND TARJAN 1983]). We can maintain a dynamic collection of weighted trees in  time per link and cut, supporting queries about the maximum edge weight between any two vertices in  time.
+
+Proof outline: It involves maintaining at each node the maximum weight (max_wt) on its cluster path, if it is a point cluster then max_wt() is initialsed as  When a cluster is a union of two clusters then it is the maximum value of the two merged clusters. If we have to find the max wt between  and  then we do  Expose and report max_wt
+
+
+
+
+([SLEATOR AND TARJAN 1983]). In the scenario of the above application we can also add a common weight  to all edges on a given path     in  time.
+
+Proof outline: We introduce a weight called extra() to be added to all the edges in  Which is maintained appropriately; split() requires that, for each path child  of  we set max_wt(A):= max_wt() + extra() and extra():= extra() + extra(). For := join( ), we set max_wt():= max {max_wt(), max_wt()} and extra():= 0. Finally, to find the maximum weight on the path     we set := Expose and return max_wt().
+
+
+
+
+([GOLDBERG ET AL. 1991]). We can ask for the maximum weight in the underlying tree containing a given vertex  in  time.
+
+Proof outline: This requires maintaining additional information about the maximum weight non cluster path edge in a cluster under the Merge and Split operations.
+
+
+
+
+The distance between two vertices  and  can be found in  time as length(Expose).
+
+Proof outline:We will maintain the length length() of the cluster path. The length is maintained as the maximum weight except that, if  is created by a join(Merge), length() is the sum of lengths stored with its path children.
+
+
+
+
+Queries regarding diameter of a tree and its subsequent maintenance takes  time.
+
+
+The Center and Median can me maintained under Link(Merge) and Cut(Split) operations and queried by non local search in  time.
+
+
+The graph could be maintained allowing to update the edge set and ask queries on edge 2-connectivity. Amortized complexity of updates is . Queries could be implemented even faster. The algorithm is not trivial,  uses  space ([HOLM, LICHTENBERG, THORUP 2000]).
+
+
+The graph could be maintained allowing to update the edge set and ask queries on vertex 2-connectivity. Amortized complexity of updates is . Queries could be implemented even faster. The algorithm is not trivial,  uses  space ([HOLM, LICHTENBERG, THORUP 2001]).
+
+[edit] Implementation
+Top Trees have been implemented in a variety of ways, some of them include implementation using a Multilevel Partition (Top-trees and dynamic graph algorithms Jacob Holm and Kristian de Lichtenberg. Technical Report), and even by using Sleator-Tarjan s-t trees (typically with amortized time bounds), Fredericksons Topology Trees (with worst case time bounds) (Alstrup et al. Maintaining Information in Fully Dynamic Trees with Top Trees).
+Amortized implementations are more simple, and with small multiplicative factors in time complexity. On the contrary the worst case implementations allow speeding up queries by switching off unneeded info updates during the query (implemented by persistence techniques). After the query is answered the original state of the top tree is used and the query version is discarded.
+[edit] Using Multilevel Partitioning
+Any partitioning of clusters of a tree  can be represented by a Cluster Partition Tree CPT by replacing each cluster in the tree  by an edge. If we use a strategy P for partitioning  then the CPT would be CPTP This is done recursively till only one edge remains.
+We would notice that all the nodes of the corresponding Top Tree  are uniquely mapped into the edges of this multilevel partition. There may be some edges in the multilevel partition that do not correspond to any node in the Top tree, these are the edges which represent only a single child in the level below it, i.e. a simple cluster. Only the edges that correspond to composite clusters correspond to nodes in the Top Tree 
+A Partitioning Strategy is important while we partition the Tree  into clusters. Only a careful strategy ensures that we end up in an  height Multilevel Partition ( and therefore the Top Tree).
+
+The number of edges in subsequent levels should decrease by a constant factor.
+If a lower level is changed by an update then we should be able to update the one immediately above it using at most a constant number of insertions and deletions.
+
+The above partitioning strategy ensures the maintenance of the Top Tree in  time.
+[edit] References
+
+Stephen Alstrup, Jacob Holm, Kristian De Lichtenberg, and Mikkel Thorup, Maintaining information in fully dynamic trees with top trees, ACM Transactions on Algorithms (TALG), Vol. 1 (2005), 243264, doi:10.1145/1103963.1103966
+Stephen Alstrup, Jacob Holm, Kristian De Lichtenberg, and Mikkel Thorup, Poly-logarithmic deterministic fully-dynamic algorithms for connectivity, minimum spanning tree, 2-edge, and biconnectivity, Journal of the ACM (JACM), Vol. 48 Issue 4(July 2001), 723760, doi:10.1145/502090.502095
+Donald Knuth. The Art of Computer Programming: Fundamental Algorithms, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89683-4 . Section 2.3: Trees, pp.308423.
+Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. Introduction to Algorithms, Second Edition. MIT Press and McGraw-Hill, 2001. ISBN 0-262-03293-7 . Section 10.4: Representing rooted trees, pp.214217. Chapters 1214 (Binary Search Trees, Red-Black Trees, Augmenting Data Structures), pp.253320.
+
+[edit] External links
+
+Maintaining Information in Fully Dynamic Trees with Top Trees. Alstrup et al
+Self Adjusting Top Trees. Tarjan and Werneck
+Self-Adjusting Top Trees. Tarjan and Werneck, Proc. 16th SoDA, 2005
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 2419/1000000
+Preprocessor generated node count: 12056/1500000
+Post-expand include size: 17987/2048000 bytes
+Template argument size: 3956/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:31075365-0!0!0!!en!4!* and timestamp 20130123184944 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Top_tree&oldid=534528528"				
+ /printfooter 
+ catlinks 
+Categories: Binary trees  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

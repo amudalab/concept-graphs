@@ -1,0 +1,44 @@
+nodedef> name,label
+v0,abstract data type
+v1,abstract model
+v2,big oh notation
+v3,binary search
+v4,chaining
+v5,collision resolution
+v6,data structure
+v7,delete
+v8,dictionary
+v9,dictionary abstract data type
+v10,divide and conquer
+v11,hash function
+v12,hash table
+v13,hashing
+v14,insert
+v15,iterative procedure
+v16,linked list
+v17,load factor
+v18,recursive procedure
+v19,search
+v20,simple uniform function
+v21,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v13,false,8.95,true
+v1,v0,false,46.6,true
+v2,v0,false,41.25,true
+v3,v14,false,5.4,true
+v4,v9,false,31.2166666667,true
+v5,v9,false,13.75,true
+v6,v8,false,7.6,true
+v7,v14,false,6.5,true
+v9,v13,false,4.75,true
+v10,v3,false,13.95,true
+v11,v8,false,7.6,true
+v12,v8,false,6.81666666667,true
+v13,v8,false,2.85,true
+v14,v19,false,5.4,true
+v15,v14,false,17.75,true
+v16,v8,false,11.9,true
+v17,v6,false,21.1,true
+v18,v14,false,9.2,true
+v20,v17,false,18.05,true
+v21,v8,false,14.25,true

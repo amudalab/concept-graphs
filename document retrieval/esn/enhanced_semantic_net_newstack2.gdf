@@ -1,0 +1,47 @@
+nodedef> name,label
+v0,computer science
+v1,data structure
+v2,function call
+v3,last in first out
+v4,linked list
+v5,non recursive algorithm
+v6,pop
+v7,push
+v8,recursive function
+v9,stack
+v10,top
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v2,false,48.5714285714,true
+v0,v9,false,9.04761904762,true
+v0,v10,false,4.52380952381,true
+v1,v3,false,6.57142857143,true
+v1,v4,false,6.33333333333,true
+v1,v9,false,0.902777777777,true
+v2,v0,false,48.5714285714,true
+v2,v8,false,3.61904761905,true
+v2,v9,false,6.33333333333,true
+v3,v1,false,6.57142857143,true
+v3,v9,false,4.7619047619,true
+v4,v1,false,6.33333333333,true
+v4,v5,false,7.2380952381,true
+v4,v8,false,4.52380952381,true
+v5,v4,false,7.2380952381,true
+v6,v7,false,0.904761904762,true
+v6,v9,false,3.69047619048,true
+v6,v10,false,2.22619047619,true
+v7,v6,false,0.904761904762,true
+v7,v9,false,4.38095238095,true
+v7,v10,false,6.66666666667,true
+v8,v2,false,3.61904761905,true
+v8,v4,false,4.52380952381,true
+v9,v0,false,9.04761904762,true
+v9,v1,false,2.70833333333,true
+v9,v2,false,6.33333333333,true
+v9,v3,false,4.7619047619,true
+v9,v6,false,3.69047619048,true
+v9,v7,false,4.38095238095,true
+v9,v10,false,0.0,true
+v10,v0,false,4.52380952381,true
+v10,v6,false,2.22619047619,true
+v10,v7,false,6.66666666667,true
+v10,v9,false,0.0,true

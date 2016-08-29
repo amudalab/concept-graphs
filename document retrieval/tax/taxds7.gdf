@@ -1,0 +1,24 @@
+nodedef> name,label
+v0,arithmetic expression
+v1,binary tree
+v2,children
+v3,euler walk
+v4,eulers rule
+v5,inorder traversal
+v6,node
+v7,ordered trees
+v8,postorder traversal
+v9,preorder traversal
+v10,recursive procedure
+v11,tree traversal
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v6,false,15.4838709677,true
+v2,v8,false,9.50518084067,true
+v3,v0,false,13.0967741935,true
+v4,v0,false,10.6451612903,true
+v5,v1,false,9.67741935484,true
+v7,v8,false,26.1290322581,true
+v8,v6,false,9.18475073314,true
+v9,v6,false,9.18475073314,true
+v10,v2,false,29.150342131,true
+v11,v1,false,7.40322580645,true

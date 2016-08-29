@@ -1,0 +1,850 @@
+
+Telex
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+This article is about the teleprinter network.  For other uses, see Telex (disambiguation).
+
+
+
+
+A Teletype Model 32 used for Telex service.
+
+
+The telex network is a switched network of teleprinters similar to a telephone network, for the purposes of sending text-based messages. This network provided the first common medium for international record communications using standard signalling techniques and operating criteria as specified by the International Telecommunication Union.
+
+
+
+
+Contents
+
+
+1 Development
+2 Operation and applications
+3 Teletypewriter eXchange
+4 International record carriers
+5 Decline
+6 References
+
+
+
+
+[edit] Development
+
+
+
+
+A Siemens T100 telex machine
+
+
+
+
+
+
+A late-model British Telecom "Puma" telex machine of the 1980s
+
+
+Telex began in Germany as a research and development program in 1926 that became an operational teleprinter service in 1933. The service was operated by the Federal Post Office and had a speed of 50 baud - approximately 66 words-per-minute.
+Canada-wide automatic teleprinter exchange service was introduced by the CPR Telegraph Company and CN Telegraph in July 1957 (the two companies, operated by rivals Canadian National Railway and Canadian Pacific Railway, would join to form CNCP Telecommunications in 1967). This service supplemented the existing international telex service that was put in place in November 1956. Canadian telex customers could connect with nineteen European countries in addition to eighteen Latin American, African, and trans-Pacific countries.[1] The major exchanges were located in Montreal (01), Toronto (02), and Winnipeg (03).[2]
+In 1958, Western Union started to build a telex network in the United States.[3] This telex network started as a satellite exchange located in New York City and expanded to a nationwide network. Western Union chose Siemens & Halske AG,[4] now Siemens AG, and ITT [5] to supply the exchange equipment, provisioned the exchange trunks via the Western Union national microwave system and leased the exchange to customer site facilities from the local telephone company. Teleprinter equipment was originally provided by Siemens & Halske AG [6] and later by Teletype Corporation.[7] Initial direct international telex service was offered by Western Union, via W.U. International, in the summer of 1960 with limited service to London and Paris.[8]
+In 1962, the major exchanges were located in New York City (1), Chicago (2), San Francisco (3), Kansas City (4) and Atlanta (5).[9] The telex network expanded by adding the final parent exchanges cities of Los Angeles (6), Dallas (7), Philadelphia (8) and Boston (9) starting in 1966.
+The telex numbering plan, usually a six-digit number in the United States, was based on the major exchange where the customer's telex machine terminated.[10] For example, all telex customers that terminated in the New York City exchange were assigned a telex number that started with a first digit "1". Further, all Chicago-based customers had telex numbers that started with a first digit of "2". This numbering plan was maintained by Western Union as the telex exchanges proliferated to smaller cities in the United States. The Western Union Telex network was built on three levels of exchanges.[11] The highest level was made up of the nine exchange cities previously mentioned. Each of these cities had the dual capability of terminating both telex customer lines and setting up trunk connections to multiple distant telex exchanges. The second level of exchanges, located in large cities such as Buffalo, Cleveland, Miami, Newark, Pittsburgh and Seattle, were similar to the highest level of exchanges in capability of terminating telex customer lines and setting up trunk connections. However, these second level exchanges had a smaller customer line capacity and only had trunk circuits to regional cities. The third level of exchanges, located in small to medium sized cities, could terminate telex customer lines and had a single trunk group running to its parent exchange.
+Loop signaling was offered in two different configurations for Western Union Telex in the United States. The first option, sometimes called local or loop service, provided a 60 milliampere loop circuit from the exchange to the customer teleprinter. The second option, sometimes called long distance or polar was used when a 60 milliampere connection could not be achieved, provided a ground return polar circuit using 35 milliamperes on separate send and receive wires. By the 1970s, and under pressure from the Bell operating companies wanting to modernize their cable plant and lower the adjacent circuit noise that these telex circuits sometimes caused, Western Union migrated customers to a third option called F1F2. This F1F2 option replaced the DC voltage of the local and long distance options with modems at the exchange and subscriber ends of the telex circuit.
+Western Union offered connections from telex to the AT&T Teletypewriter eXchange (TWX) system in May 1966 via its New York Information Services Computer Center.[12] These connections were limited to those TWX machines that were equipped with automatic answerback capability per CCITT standard.
+Telex grew around the world very rapidly. By 1978, West Germany and West Berlin together had 123,298 telex connections. Long before automatic telephony was available, most countries, even in central Africa and Asia, had at least a few high-frequency (shortwave) telex links. Often these radio links were first established by government postal and telegraph services (PTTs). The most common radio standard, CCITT R.44 had error-corrected retransmitting time-division multiplexing of radio channels. Most impoverished PTTs operated their telex-on-radio (TOR) channels non-stop, to get the maximum value from them.
+The cost of TOR equipment has continued to fall. Although initially specialised equipment was required, many amateur radio operators now operate TOR (also known as RTTY) with special software and inexpensive hardware to adapt computer sound cards to short-wave radios.[13]
+Modern "cablegrams" or "telegrams" actually operate over dedicated telex networks, using TOR whenever required.[citation needed]
+Telex was the forerunner of modern email and texting[citation needed]. Abbreviated English (like: CU L8R for 'see you later') used in texting was first used by telex operators exchanging informal messages in real time[citation needed] - they were the first 'texters' long before mobile phones[citation needed]. Telex users could send the same message to several places around the world at the same time, like email today, using the Western Union InfoMaster Computer. This involved transmitting the message via paper tape to the InfoMaster Computer (dial code 6111) and specifying the destination addresses for the single text. In this way, a single message could be sent to multiple distant Telex and TWX machines as well as delivering the same message to non-Telex and non-TWX subscribers via Western Union Mailgram.
+[edit] Operation and applications
+Telex messages are routed by addressing them to a telex address, e.g., "14910 ERIC S", where 14910 is the subscriber number, ERIC is an abbreviation for the subscriber's name (in this case Telefonaktiebolaget L.M. Ericsson in Sweden) and S is the country code. Solutions also exist for the automatic routing of messages to different telex terminals within a subscriber organization, by using different terminal identities, e.g., "+T148".
+A major advantage of telex is that the receipt of the message by the recipient could be confirmed with a high degree of certainty by the "answerback". At the beginning of the message, the sender would transmit a WRU (Who aRe yoU) code, and the recipient machine would automatically initiate a response which was usually encoded in a rotating drum with pegs, much like a music box. The position of the pegs sent an unambiguous identifying code to the sender, so the sender could verify connection to the correct recipient. The WRU code would also be sent at the end of the message, so a correct response would confirm that the connection had remained unbroken during the message transmission. This gave telex a major advantage over less verifiable forms of communications such as telephone and fax.
+The usual method of operation was that the message would be prepared off-line, using paper tape. All common telex machines incorporated a 5-hole paper-tape punch and reader. Once the paper tape had been prepared, the message could be transmitted in minimum time. Telex billing was always by connected duration, so minimizing the connected time saved money. However, it was also possible to connect in "real time", where the sender and the recipient could both type on the keyboard and these characters would be immediately printed on the distant machine.
+Telex could also be used as a rudimentary but functional carrier of information from one IT system to another, in effect a primitive forerunner of Electronic Data Interchange. The sending IT system would create an output (e.g., an inventory list) on paper tape using a mutually agreed format. The tape would be sent by telex and collected on a corresponding paper tape by the receiver and this tape could then be read into the receiving IT system.
+One use of telex circuits, in use until the widescale adoption of x.400 and Internet email, was to facilitate a message handling system, allowing local email systems to exchange messages with other email and telex systems via a central routing operation, or switch. One of the largest such switches was operated by Royal Dutch Shell as recently as 1994, permitting the exchange of messages between a number of IBM Officevision, Digital Equipment Corporation ALL-IN-1 and Microsoft Mail systems. In addition to permitting email to be sent to telex addresses, formal coding conventions adopted in the composition of telex messages enabled automatic routing of telexes to email recipients.
+[edit] Teletypewriter eXchange
+The Teletypewriter eXchange Service (TWX) was developed by the AT&T Corporation in the United States and originally ran at 45.45 baud or 60 words per minute, using five level Baudot code. AT&T began TWX on November 21, 1931.[14][15] AT&T later developed a second generation of TWX called "four row" that ran at 110 baud, using eight level ASCII code. TWX was offered in both "3-row" Baudot and "4-row" ASCII versions up to the late 1970s.
+TWX used the public switched telephone network. In addition to having separate Area Codes (510, 610, 710, 810 and 910) for the TWX service, the TWX lines were also set up with a special Class of Service to prevent connections to and from POTS to TWX and vice versa.
+The code/speed conversion between "3-row" Baudot and "4-row" ASCII TWX service was accomplished using a special Bell "10A/B board" via a live operator. A TWX customer would place a call to the 10A/B board operator for Baudot  ASCII calls, ASCII  Baudot calls and also TWX Conference calls. The code / speed conversion was done by a Western Electric unit that provided this capability. There were multiple code / speed conversion units at each operator position.
+AT&T operated a trade magazine related to the Teletypewriter eXchange service called TWX Magazine, from 1944 to 1952, and published articles which touched upon many aspects of the technology.
+Western Union purchased the TWX system from AT&T in January 1969.[16] The TWX system and the special area codes (510, 610, 710, 810 and 910) continued right up to 1981 when Western Union completed the conversion to the Western Union Telex II system. Any remaining "3-row" Baudot customers were converted to Western Union Telex service during the period 1979 to 1981.
+The modem for this service was the Bell 101 dataset, which is the direct ancestor of the Bell 103 modem that launched computer time-sharing. The 101 was revolutionary, because it ran on ordinary unconditioned telephone subscriber lines, allowing the Bell System to run TWX along with POTS on a single public switched telephone network.
+[edit] International record carriers
+Bell's original consent agreement limited it to international dial telephony. The Western Union Telegraph Company had given up its international telegraphic operation in a 1939 bid to monopolize U.S. telegraphy by taking over ITT's PTT business. The result was a de-emphasis on telex in the U.S. and a "cat's cradle" of international telex and telegraphy companies. The Federal Communications Commission referred to these companies as "International Record Carriers" (IRCs).
+
+Western Union Telegraph Company developed a subsidiary named Western Union Cable System. This company later was renamed as Western Union International (WUI) when it was spun off by Western Union as an independent company. WUI was purchased by MCI Communications (MCI) in 1983 and operated as a subsidiary of MCI International.
+ITT's "World Communications" division (later known as ITT World Communications) was amalgamated from many smaller companies: "Federal Telegraph", "All American Cables and Radio", "Globe Wireless", and the common carrier division of Mackay Marine. ITT World Communications was purchased by Western Union in 1987.
+RCA Communications (later known as RCA Global Communications) had specialized in global radiotelegraphic connections. In 1986 it was purchased by MCI International.
+Before World War I, the Tropical Radiotelegraph Company (later known as Tropical Radio Telecommunications, or TRT) put radio telegraphs on ships for its owner, the United Fruit Company (UFC), to enable them to deliver bananas to the best-paying markets. Communications expanded to UFC's plantations, and were eventually provided to local governments. TRT eventually became the national carrier for many small Central American nations.
+The French Telegraph Cable Company (later known as FTC Communications, or just FTCC), which was owned by French investors, had always been in the U.S. It laid undersea cable from the U.S. to France. It was formed by Monsieur Puyer-Quartier. International telegrams routed via FTCC were routed using the telegraphic routing ID "PQ", which are the initials of the founder of the company.
+Firestone Rubber developed its own IRC, the "Trans-Liberia Radiotelegraph Company".[citation needed] It operated shortwave from Akron, Ohio, USA to the rubber plantations in Liberia. TL is still based in Akron.
+
+Bell Telex users had to select which IRC to use, and then append the necessary routing digits. The IRCs converted between TWX and Western Union Telegraph Co. standards.
+[edit] Decline
+Telex is still in operation, but has been mostly superseded by fax, email, and SWIFT, although radiotelex, telex via HF radio, is still used in the maritime industry and is a required element of the GMDSS. See Telegraphy#Worldwide status of telegram services for current information in different countries. Many major airlines still use telex in addition to regular email as a means of communication between stations mainly as a cost-saving step due to its simple overall structure.
+[edit] References
+
+
+^ C. J. Colombo, Telex in Canada, Western Union Technical Review, January 1958: 21
+^ Phillip R. Easterlin, Telex in New York, Western Union Technical Review, April 1959: 47 figure 4
+^ Phillip R. Easterlin, "Telex in New York", Western Union Technical Review, April 1959: 45
+^ Phillip R. Easterlin, "Telex in Private Wire Systems", Western Union Technical Review, October 1960: 131
+^ James S. Chin and Jan J. Gomerman, "CSR4 Exchange", Western Union Technical Review, July 1966: 142149
+^ Fred W. Smith, "European Teleprinters", Western Union Technical Review, October 1960: 172174
+^ Fred W. Smith, "A New Line of Light-duty Teleprinters and ASR Sets", Western Union Technical Review, January 1964: 1831
+^ T.J. OSullivan, "TW 56 Concentrator", Western Union Technical Review, July 1963: 111112
+^ Phillip R. Easterlin, "Telex in the U.S.A.", Western Union Technical Review, January 1962: 215
+^ Kenneth M. Jockers, "Planning Western Union Telex", Western Union Technical Review, July 1966: 9295
+^ Kenneth M. Jockers, "Planning Western Union Telex", Western Union Technical Review, July 1966: 94 figure 2
+^ Sergio Wernikoff, "Information Services Computer Center", Western Union Technical Review, July 1966: 130
+^ "RTTY Software". The DXZone. http://www.dxzone.com/catalog/Software/RTTY/.
+^ Anton A. Huurdeman (2003). The worldwide history of telecommunications. John Wiley & Sons. p.302. ISBN978-0-471-20505-0. http://books.google.com/books?id=SnjGRDVIUL4C&pg=PA302.
+^ "Typing From Afar". http://www.seas.upenn.edu/~uparc/documents/TypingFromAfar.pdf.
+^ name="Western_Union_1969_4">"WU to Buy AT&T TWX". Western Union News Volume II (4). January 15, 1969.
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications
+
+
+
+
+
+
+History
+
+
+
+Beacons
+Broadcasting
+Communications satellites
+Computer networks
+Drums
+Electrical telegraphs
+Fax
+Heliographs
+Hydraulic telegraphs
+Internet
+Mass media
+Mobile phones
+Optical telegraphy
+Photophones
+Radio
+Radiotelephones
+Smoke signals
+Telegraphy
+Telephones
+The Telephone Cases
+Television
+Undersea telegraph lines
+Videotelephony
+
+
+
+
+
+
+
+
+
+
+
+Pioneers
+
+
+
+Edwin Howard Armstrong
+John Logie Baird
+Alexander Graham Bell
+Tim Berners-Lee
+Jagadish Chandra Bose
+Vint Cerf
+Claude Chappe
+Lee De Forest
+Philo Farnsworth
+Reginald Fessenden
+Elisha Gray
+Guglielmo Marconi
+Alexander Stepanovich Popov
+Johann Philipp Reis
+Nikola Tesla
+Camille Papin Tissot
+Alfred Vail
+Charles Wheatstone
+Vladimir K. Zworykin
+
+
+
+
+
+
+
+
+Transmission media
+
+
+
+Coaxial cable
+Free-space optical
+Optical fiber
+Radio waves
+Telephone lines
+Terrestrial microwave
+
+
+
+
+
+
+
+
+Networks
+
+
+
+ARPANET
+BITNET
+Ethernet
+FidoNet
+Internet
+ISDN
+LAN
+Mobile
+NGN
+Packet switched
+Public Switched Telephone
+Radio
+Telecommunications equipment
+Television
+Telex
+WAN
+Wireless
+World Wide Web
+
+
+
+
+
+
+
+
+Geographic
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Africa
+
+
+
+
+
+
+Sovereign states
+
+
+
+Algeria
+Angola
+Benin
+Botswana
+Burkina Faso
+Burundi
+Cameroon
+Cape Verde
+Central African Republic
+Chad
+Comoros
+Democratic Republic of the Congo
+Republic of the Congo
+Djibouti
+Egypt
+Equatorial Guinea
+Eritrea
+Ethiopia
+Gabon
+The Gambia
+Ghana
+Guinea
+Guinea-Bissau
+Ivory Coast (Cte d'Ivoire)
+Kenya
+Lesotho
+Liberia
+Libya
+Madagascar
+Malawi
+Mali
+Mauritania
+Mauritius
+Morocco
+Mozambique
+Namibia
+Niger
+Nigeria
+Rwanda
+So Tom and Prncipe
+Senegal
+Seychelles
+Sierra Leone
+Somalia
+South Africa
+South Sudan
+Sudan
+Swaziland
+Tanzania
+Togo
+Tunisia
+Uganda
+Zambia
+Zimbabwe
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Sahrawi Arab Democratic Republic
+Somaliland
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Canary Islands/ Ceuta/ Melilla/ Plazas de soberana(Spain)
+Madeira(Portugal)
+Mayotte/ Runion(France)
+Saint Helena/ Ascension Island/ Tristan da Cunha(United Kingdom)
+Western Sahara
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Asia
+
+
+
+
+
+
+Sovereign
+states
+
+
+
+Afghanistan
+Armenia
+Azerbaijan
+Bahrain
+Bangladesh
+Bhutan
+Brunei
+Burma (Myanmar)
+Cambodia
+People's Republic of China
+Cyprus
+East Timor (Timor-Leste)
+Egypt
+Georgia
+India
+Indonesia
+Iran
+Iraq
+Israel
+Japan
+Jordan
+Kazakhstan
+North Korea
+South Korea
+Kuwait
+Kyrgyzstan
+Laos
+Lebanon
+Malaysia
+Maldives
+Mongolia
+Nepal
+Oman
+Pakistan
+Philippines
+Qatar
+Russia
+Saudi Arabia
+Singapore
+Sri Lanka
+Syria
+Tajikistan
+Thailand
+Turkey
+Turkmenistan
+United Arab Emirates
+Uzbekistan
+Vietnam
+Yemen
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Abkhazia
+Nagorno-Karabakh
+Northern Cyprus
+Palestine
+South Ossetia
+Taiwan
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+British Indian Ocean Territory
+Christmas Island
+Cocos (Keeling) Islands
+Hong Kong
+Macau
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Europe
+
+
+
+
+
+
+Sovereign states
+
+
+
+Albania
+Andorra
+Armenia
+Austria
+Azerbaijan
+Belarus
+Belgium
+Bosnia and Herzegovina
+Bulgaria
+Croatia
+Cyprus
+Czech Republic
+Denmark
+Estonia
+Finland
+France
+Georgia
+Germany
+Greece
+Hungary
+Iceland
+Ireland
+Italy
+Kazakhstan
+Latvia
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Malta
+Moldova
+Monaco
+Montenegro
+Netherlands
+Norway
+Poland
+Portugal
+Romania
+Russia
+San Marino
+Serbia
+Slovakia
+Slovenia
+Spain
+Sweden
+Switzerland
+Turkey
+Ukraine
+United Kingdom
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Abkhazia
+Kosovo
+Nagorno-Karabakh
+Northern Cyprus
+South Ossetia
+Transnistria
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+land
+Faroe Islands
+Gibraltar
+Guernsey
+Jersey
+Isle of Man
+Svalbard
+
+
+
+
+
+
+
+
+Other entities
+
+
+
+European Union
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in North America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Antigua and Barbuda
+Bahamas
+Barbados
+Belize
+Canada
+Costa Rica
+Cuba
+Dominica
+Dominican Republic
+El Salvador
+Grenada
+Guatemala
+Haiti
+Honduras
+Jamaica
+Mexico
+Nicaragua
+Panama
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Trinidad and Tobago
+United States
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Anguilla
+Aruba
+Bermuda
+Bonaire
+British Virgin Islands
+Cayman Islands
+Curaao
+Greenland
+Guadeloupe
+Martinique
+Montserrat
+Navassa Island
+Puerto Rico
+Saint Barthlemy
+Saint Martin
+Saint Pierre and Miquelon
+Saba
+Sint Eustatius
+Sint Maarten
+Turks and Caicos Islands
+United States Virgin Islands
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Oceania
+
+
+
+
+
+
+Sovereign states
+
+
+
+Australia
+East Timor (Timor-Leste)
+Fiji
+Indonesia
+Kiribati
+Marshall Islands
+Federated States of Micronesia
+Nauru
+New Zealand
+Palau
+Papua New Guinea
+Samoa
+Solomon Islands
+Tonga
+Tuvalu
+Vanuatu
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+American Samoa
+Christmas Island
+Cocos (Keeling) Islands
+Cook Islands
+Easter Island
+French Polynesia
+Guam
+Hawaii
+New Caledonia
+Niue
+Norfolk Island
+Northern Mariana Islands
+Pitcairn Islands
+Tokelau
+Wallis and Futuna
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in South America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Aruba
+Bonaire
+Curaao
+Falkland Islands
+French Guiana
+South Georgia and the South Sandwich Islands
+
+
+
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 20154/1000000
+Preprocessor generated node count: 55275/1500000
+Post-expand include size: 249336/2048000 bytes
+Template argument size: 159964/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 17/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:28658647-0!*!0!!en!4!* and timestamp 20121220203211 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Telex&oldid=526327644"				
+ /printfooter 
+ catlinks 
+Categories: Telecommunications equipmentTelecommunications systemsHidden categories: All articles with unsourced statementsArticles with unsourced statements from December 2007Articles with unsourced statements from October 2012  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

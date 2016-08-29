@@ -1,0 +1,100 @@
+nodedef> name,label
+v0,active constraint
+v1,convex optimization
+v2,duo optimization problem
+v3,duo problem
+v4,gamma hat
+v5,geometric margin
+v6,kkt conditions
+v7,lagrange multipliers
+v8,method of lagrange multipliers
+v9,optimal margin classifier
+v10,optimization problems
+v11,primal and duo optimization problem
+v12,primal optimization problem
+v13,primal problem
+v14,prime optimization problem
+v15,support vector machines
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v2,false,37.2727272727,true
+v0,v7,false,138.181818182,true
+v0,v10,false,108.818181818,true
+v1,v4,false,24.4848484848,true
+v1,v8,false,16.3636363636,true
+v1,v9,false,57.4545454545,true
+v1,v10,false,3.27272727273,true
+v1,v15,false,36.3636363636,true
+v2,v0,false,37.2727272727,true
+v2,v3,false,16.3636363636,true
+v2,v10,false,0.0,true
+v2,v11,false,1.63636363636,true
+v2,v15,false,65.9393939394,true
+v3,v2,false,16.3636363636,true
+v3,v7,false,8.78787878788,true
+v3,v10,false,60.1363636364,true
+v3,v13,false,11.6727272727,true
+v3,v14,false,10.0,true
+v3,v15,false,17.5064935065,true
+v4,v1,false,24.4848484848,true
+v4,v5,false,22.9090909091,true
+v4,v9,false,60.0,true
+v4,v10,false,13.7045454545,true
+v4,v15,false,30.9090909091,true
+v5,v4,false,22.9090909091,true
+v5,v9,false,10.2272727273,true
+v5,v10,false,11.7171717172,true
+v6,v7,false,14.5454545455,true
+v6,v10,false,21.2121212121,true
+v6,v12,false,10.0,true
+v7,v0,false,138.181818182,true
+v7,v3,false,8.78787878788,true
+v7,v6,false,14.5454545455,true
+v7,v8,false,2.80808080808,true
+v7,v10,false,10.4444444444,true
+v7,v13,false,60.1363636364,true
+v8,v1,false,16.3636363636,true
+v8,v7,false,2.80808080808,true
+v8,v10,false,9.81818181818,true
+v9,v1,false,57.4545454545,true
+v9,v4,false,60.0,true
+v9,v5,false,10.2272727273,true
+v9,v10,false,5.625,true
+v9,v11,false,11.8181818182,true
+v9,v13,false,14.5454545455,true
+v9,v15,false,4.45454545455,true
+v10,v0,false,108.818181818,true
+v10,v1,false,3.27272727273,true
+v10,v2,false,0.0,true
+v10,v3,false,60.1363636364,true
+v10,v4,false,13.7045454545,true
+v10,v5,false,11.7171717172,true
+v10,v6,false,21.2121212121,true
+v10,v7,false,10.4444444444,true
+v10,v8,false,9.81818181818,true
+v10,v9,false,5.625,true
+v10,v11,false,51.8181818182,true
+v10,v12,false,0.727272727273,true
+v10,v13,false,20.1038961039,true
+v10,v14,false,18.6666666667,true
+v10,v15,false,53.5909090909,true
+v11,v2,false,1.63636363636,true
+v11,v9,false,11.8181818182,true
+v11,v10,false,51.8181818182,true
+v12,v6,false,10.0,true
+v12,v10,false,0.727272727273,true
+v12,v13,false,109.090909091,true
+v12,v15,false,10.0,true
+v13,v3,false,11.6727272727,true
+v13,v7,false,60.1363636364,true
+v13,v9,false,14.5454545455,true
+v13,v10,false,20.1038961039,true
+v13,v12,false,109.090909091,true
+v14,v3,false,10.0,true
+v14,v10,false,18.6666666667,true
+v15,v1,false,36.3636363636,true
+v15,v2,false,65.9393939394,true
+v15,v3,false,17.5064935065,true
+v15,v4,false,30.9090909091,true
+v15,v9,false,4.45454545455,true
+v15,v10,false,53.5909090909,true
+v15,v12,false,10.0,true

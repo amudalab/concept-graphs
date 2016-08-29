@@ -1,0 +1,70 @@
+In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child. A recursive definition using just set theory notions is that a (non-empty) binary tree is a triple (L, S, R), where L and R are binary trees or the empty set and S is a singleton set.[1] Some authors allow the binary tree to be the empty set as well.[2]
+
+From a graph theory perspective, binary trees (and K-ary trees) trees as defined here are actually arborescences.[3] A binary tree may thus be also called a bifurcating arborescence[3]—a term which actually appears in some very old programming books,[4] before the modern computer science terminology prevailed. It is also possible to interpret a binary tree as an undirected, rather than a directed graph, in which case a binary tree is an ordered, rooted tree.[5] Some authors use rooted binary tree instead of binary tree to emphasize the fact that the tree is rooted, but as defined above, a binary tree is always rooted.[6] A binary tree is a special case of an ordered K-ary tree, where k is 2. There is however a subtle difference between the binary tree data structure as defined here and the notions from graph theory or as K-ary tree is usually defined. As defined here, a binary tree node having a left child but no right child is not the same as a node having a right child but no left child, whereas an ordered/plane tree (or arborescence) from graph theory cannot tell these cases apart, and neither does k-ary as usually understood as using a list of children.[7] An actual generalization of binary tree would have to discern, for example, a case like having a first and third, but no second child; the trie data structure is actually the more appropriate generalization in this respect.[8]
+
+In computing, binary trees are seldom used solely for their structure. Much more typical is to define a labeling function on the nodes, which associates some value to each node.[9] Binary trees labelled this way are used to implement binary search trees and binary heaps, and are used for efficient searching and sorting. The designation of non-root nodes as left or right child even when there is only one child present matters in some of these applications, in particular it is significant in binary search trees.[10] In mathematics, what is termed binary tree can vary significantly from author to author. Some use the definition commonly used computer science,[11] but others define it as every non-leaf having exactly two children and don't necessarily order (as left/right) the children either.
+Another way of defining a full binary tree is a recursive definition. A full binary tree is either:[13]
+
+A single vertex.
+A graph formed by taking two (full) binary trees, adding a vertex, and adding an edge directed from the new vertex to the root of each binary tree.
+This also does not establish the order of children, but does fix a specific root node.
+
+To actually define a binary tree in general, we must allow for the possibility that only one of children may be empty. An artifact, which in some textbooks is called an extended binary tree is needed for that purpose. An extended binary tree is thus recursively defined as:[13]
+
+the empty set is an extended binary tree
+if T1 and T2 are extended binary trees, then denote by T1 • T2 the extended binary tree obtained by adding a root r connected to the left to T1 and to the right to T2 by adding edges when these sub-trees are non-empty.
+Another way of imagining this construction (and understanding the terminology) is to consider instead of the empty set a different type of node—for instance square nodes if the regular ones are circles.[14]
+
+Using graph theory concepts
+A binary tree is a rooted tree that is also an ordered tree (a.k.a. plane tree) in which every node has at most two children. A rooted tree naturally imparts a notion of levels (distance from the root), thus for every node a notion of children may be defined as the nodes connected to it a level below. Ordering of these children (e.g., by drawing them on a plane) makes possible to distinguish left child from right child.[15] But this still doesn't distinguish between a node with left but not a right child from a one with right but no left child.
+
+The necessary distinction can be made by first partitioning the edges, i.e., defining the binary tree as triplet (V, E1, E2), where (V, E1 ∪ E2) is a rooted tree (equivalently arborescence) and E1 ∩ E2 is empty, and also requiring that for all j ∈ { 1, 2 } every node has at most one Ej child.[16] A more informal way of making the distinction is to say, quoting the Encyclopedia of Mathematics, that "every node has a left child, a right child, neither, or both" and to specify that these "are all different" binary trees.[11]
+
+Types of binary trees
+Tree terminology is not well-standardized and so varies in the literature.
+
+A rooted binary tree has a root node and every node has at most two children.
+A full binary tree (sometimes referred to as a proper[citation needed] or plane binary tree)[17][18] is a tree in which every node in the tree has either 0 or 2 children.
+
+An ancestry chart which maps to a perfect depth-4 binary tree.
+A perfect binary tree is a binary tree in which all leaves have the same depth or same level.[19] (This is ambiguously also called a complete or full binary tree.[citation needed]) An example of a perfect binary tree is the ancestry chart of a person to a given depth, as each person has exactly two biological parents (one mother and one father).
+In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes at the last level h.[20] A binary tree is called an almost complete binary tree or nearly complete binary tree if the last level is not completely filled.[clarification needed] This type of binary tree is used as a specialized data structure called a binary heap.[20]
+In the infinite complete binary tree, every node has two children (and so the set of levels is countably infinite). The set of all nodes is countably infinite, but the set of all infinite paths from the root is uncountable, having the cardinality of the continuum. These paths correspond by an order-preserving bijection to the points of the Cantor set, or (using the example of a Stern–Brocot tree) to the set of positive irrational numbers.
+A balanced binary tree has the minimum possible maximum height (a.k.a. depth) for the leaf nodes, because for any given number of leaf nodes the leaf nodes are placed at the greatest height possible.
+One common balanced tree structure is a binary tree structure in which the left subtrees and right subtrees of every node differ in height by no more than 1.[21] One may also consider binary trees where no leaf is much farther away from the root than any other leaf. (Different balancing schemes allow different definitions of "much farther".[22])
+A degenerate (or pathological) tree is where each parent node has only one associated child node. This means that performance-wise[clarification needed], the tree will behave like a linked list data structure.
+There are a variety of different operations that can be performed on binary trees. Some are mutator operations, while others simply return useful information about the tree.
+
+Insertion
+Nodes can be inserted into binary trees in between two other nodes or added after a leaf node. In binary trees, a node that is inserted is specified as to which child it is.
+
+External nodes
+Suppose that the external node being added onto is node A. To add a new node after node A, A assigns the new node as one of its children and the new node assigns node A as its parent.
+
+Internal nodes
+
+The process of inserting a node into a binary tree
+Insertion on internal nodes is slightly more complex than on external nodes. Say that the internal node is node A and that node B is the child of A. (If the insertion is to insert a right child, then B is the right child of A, and similarly with a left child insertion.) A assigns its child to the new node and the new node assigns its parent to A. Then the new node assigns its child to B and B assigns its parent as the new node.
+
+Deletion
+Deletion is the process whereby a node is removed from the tree. Only certain nodes in a binary tree can be removed unambiguously.[26]
+
+Node with zero or one children
+
+The process of deleting an internal node in a binary tree
+Suppose that the node to delete is node A. If a node has no children (external node), deletion is accomplished by setting the child of A's parent to null. If it has one child, set the parent of A's child to A's parent and set the child of A's parent to A's child.
+
+Node with two children
+In a binary tree, a node with two children cannot be deleted unambiguously.[26] However, in certain binary trees (including binary search trees) these nodes can be deleted, though with a rearrangement of the tree structure.
+
+Traversal
+Main article: Tree traversal
+Preorder traversal, inorder traversal, and postorder traversal visit each node in a tree by recursively visiting each node in the left and right subtrees of the root.
+
+Depth-first order
+In depth-first order, we always attempt to visit the node farthest from the root node that we can, but with the caveat that it must be a child of a node we have already visited. Unlike a depth-first search on graphs, there is no need to remember all the nodes we have visited, because a tree cannot contain cycles. Pre-order is a special case of this. See depth-first search for more information.
+
+Breadth-first order
+Contrasting with depth-first order is breadth-first order, which always attempts to visit the node closest to the root that it has not already visited. See breadth-first search for more information. Also called a level-order traversal.
+
+In a complete binary tree, a node's breadth-index (i - (2d - 1)) can be used as traversal instructions from the root. Reading bitwise from left to right, starting at bit d - 1, where d is the node's distance from the root (d = floor(log2(i+1))) and the node in question is not the root itself (d > 0). When the breadth-index is masked at bit d - 1, the bit values 0 and 1 mean to step either left or right, respectively. The process continues by successively checking the next bit to the right until there are no more. The rightmost bit indicates the final traversal from the desired node's parent to the node itself. There is a time-space trade-off between iterating a complete binary tree this way versus each node having pointer/s to its sibling/s.

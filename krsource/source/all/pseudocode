@@ -1,0 +1,224 @@
+
+Pseudocode
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article does not cite any references or sources. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2012) 
+
+
+In computer science and numerical computation, pseudocode is an informal high-level description of the operating principle of a computer program or other algorithm. It uses the structural conventions of a programming language, but is intended for human reading rather than machine reading. Pseudocode typically omits details that are not essential for human understanding of the algorithm, such as variable declarations, system-specific code and some subroutines. The programming language is augmented with natural language description details, where convenient, or with compact mathematical notation. The purpose of using pseudocode is that it is easier for people to understand than conventional programming language code, and that it is an efficient and environment-independent description of the key principles of an algorithm. It is commonly used in textbooks and scientific publications that are documenting various algorithms, and also in planning of computer program development, for sketching out the structure of the program before the actual coding takes place.
+No standard for pseudocode syntax exists, as a program in pseudocode is not an executable program. Pseudocode resembles, but should not be confused with skeleton programs, including dummy code, which can be compiled without errors. Flowcharts and UML charts can be thought of as a graphical alternative to pseudocode, but are more spacious on paper.
+
+
+
+
+Contents
+
+
+1 Application
+2 Syntax
+3 Mathematical style pseudocode
+4 Machine compilation of pseudo-code style languages
+
+4.1 Natural language grammar in programming languages
+4.2 Mathematical programming languages
+
+4.2.1 Alternative forms of pseudocode
+
+
+
+
+5 See also
+6 External links
+
+
+
+
+[edit] Application
+Textbooks and scientific publications related to computer science and numerical computation often use pseudocode in description of algorithms, so that all programmers can understand them, even if they do not all know the same programming languages. In textbooks, there is usually an accompanying introduction explaining the particular conventions in use. The level of detail of the pseudo-code may in some cases approach that of formalized general-purpose languages.
+A programmer who needs to implement a specific algorithm, especially an unfamiliar one, will often start with a pseudocode description, and then "translate" that description into the target programming language and modify it to interact correctly with the rest of the program. Programmers may also start a project by sketching out the code in pseudocode on paper before writing it in its actual language, as a top-down structuring approach.
+[edit] Syntax
+As the name suggests, pseudocode generally does not actually obey the syntax rules of any particular language; there is no systematic standard form, although any particular writer will generally borrow style and syntax; for example, control structures from some conventional programming language. Popular syntax sources include Pascal, BASIC, C, C++, Java, Lisp, and ALGOL. Variable declarations are typically omitted. Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.
+Depending on the writer, pseudocode may therefore vary widely in style, from a near-exact imitation of a real programming language at one extreme, to a description approaching formatted prose at the other.
+This is an example of pseudocode (for the mathematical game bizz buzz):
+
+
+
+Fortran style pseudo code
+
+
+
+program bizzbuzz
+do i = 1 to 100 
+    set print_number to true
+    if i is divisible by 3
+        print "Bizz"
+        set print_number to false
+    if i is divisible by 5
+        print "Buzz" 
+        set print_number to false
+    if print_number, print i
+    print a newline
+end do
+
+
+
+
+Pascal style pseudo code
+
+
+
+procedure bizzbuzz
+for i := 1 to 100 do
+    set print_number to true;
+    if i is divisible by 3 then
+        print "Bizz";
+        set print_number to false;
+    if i is divisible by 5 then
+        print "Buzz";
+        set print_number to false;
+    if print_number, print i;
+    print a newline;
+end
+
+
+
+
+C style pseudo code:
+
+
+
+void function bizzbuzz
+for (i = 1; i<=100; i++) {
+    set print_number to true;
+    if i is divisible by 3
+        print "Bizz";
+        set print_number to false;
+    if i is divisible by 5
+        print "Buzz";
+        set print_number to false;
+    if print_number, print i;
+    print a newline;
+}
+
+
+
+
+
+See also category: Articles with example pseudocode
+[edit] Mathematical style pseudocode
+In numerical computation, pseudocode often consists of mathematical notation, typically from set and matrix theory, mixed with the control structures of a conventional programming language, and perhaps also natural language descriptions. This is a compact and often informal notation that can be understood by a wide range of mathematically trained people, and is frequently used as a way to describe mathematical algorithms. For example, the sum operator (capital-sigma notation) or the product operator (capital-pi notation) may represent a for loop and perhaps a selection structure in one expression:
+
+Return 
+
+Normally non-ASCII typesetting is used for the mathematical equations, for example by means of TeX or MathML markup, or proprietary formula editors.
+These are examples of articles that contain mathematical style pseudo code:
+
+
+
+
+Algorithm
+Conjugate gradient method
+Ford-Fulkerson algorithm
+GaussSeidel method
+Generalized minimal residual method
+Jacobi eigenvalue algorithm
+Jacobi method
+
+
+
+
+Karmarkar's algorithm
+Particle swarm optimization
+Stone method
+Successive over-relaxation
+Symbolic Cholesky decomposition
+Tridiagonal matrix algorithm
+
+
+
+
+Mathematical style pseudocode is sometimes referred to as pidgin code, for example pidgin ALGOL (the origin of the concept), pidgin Fortran, pidgin BASIC, pidgin Pascal, pidgin C, and pidgin Lisp.
+[edit] Machine compilation of pseudo-code style languages
+[edit] Natural language grammar in programming languages
+Various attempts to bring elements of natural language grammar into computer programming have produced programming languages such as HyperTalk, Lingo, AppleScript, SQL, Inform and to some extent Python. In these languages, parentheses and other special characters are replaced by prepositions, resulting in quite talkative code. These languages are typically dynamically typed, meaning that variable declarations and other boilerplate code can be omitted. Such languages may make it easier for a person without knowledge about the language to understand the code and perhaps also to learn the language. However, the similarity to natural language is usually more cosmetic than genuine. The syntax rules may be just as strict and formal as in conventional programming, and do not necessarily make development of the programs easier.
+[edit] Mathematical programming languages
+An alternative to using mathematical pseudocode (involving set theory notation or matrix operations) for documentation of algorithms is to use a formal mathematical programming language that is a mix of non-ASCII mathematical notation and program control structures. Then the code can be parsed and interpreted by a machine.
+Several formal specification languages include set theory notation using special characters. Examples are:
+
+Z notation
+Vienna Development Method Specification Language (VDM-SL).
+
+Some array programming languages include vectorized expressions and matrix operations as non-ASCII formulas, mixed with conventional control structures. Examples are:
+
+A programming language (APL), and its dialects APLX and A+.
+MathCAD.
+
+[edit] Alternative forms of pseudocode
+Since the usual aim of pseudocode is to present a simple form of some algorithm, using a language syntax closer to the problem domain[example needed] would make the expression of ideas in the pseudocode simpler to convey in those domains.
+[edit] See also
+
+
+
+Look up pseudocode in Wiktionary, the free dictionary.
+
+
+
+Concept programming
+Dummy code
+Literate programming
+Pidgin code
+Program Design Language (PDL)
+Short Code
+Skeleton program
+Structured English
+
+[edit] External links
+
+A pseudocode standard
+Collected Algorithms of the ACM
+Pseudocode Guidelines, PDF file.
+Pseudocode Programming Process base on data from Code Complete book
+Pseudocode generation tool from a model tree learn how to generate pseudocode in a second
+
+ 
+NewPP limit report
+Preprocessor visited node count: 893/1000000
+Preprocessor generated node count: 8758/1500000
+Post-expand include size: 8171/2048000 bytes
+Template argument size: 3176/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:24185-0!0!0!!en!4!* and timestamp 20130115062916 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Pseudocode&oldid=523825399"				
+ /printfooter 
+ catlinks 
+Categories: Source codeAlgorithm description languagesHidden categories: Articles lacking sources from October 2012All articles lacking sourcesArticles with example pseudocode  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

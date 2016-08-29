@@ -1,0 +1,415 @@
+two four Trees
+in today’s  class we going to talking about to two four trees this is another way of representing (additionally)
+so we are going to see operation of insert search and delete on this data structure and we are going to have same kind of performance guarantee as was the case in AVL trees 
+but we us going to in later classes see how this data structure is useful 
+so today I am just I will just begin with this 
+so what are two four trees 
+they are search trees they are kind of search trees but they are not binary search trees 
+so recall in a binary search trees what was happening 
+the tree was a binary tree ya 
+each node at two at most two children right 
+so this not going to be a binary tree that’s a first point 
+so nodes can have more then two children now 
+so this two four trees are also called two three four trees right
+I will tell you what this really needs 
+so two three four actually refers to the number of children and node can have 
+so node can have either two three or four children right
+
+such trees in which node can have many children but satisfy a certain kind of search properties or called multi way search trees right
+so each internal node of a multi way search tree has at least two children right
+so besides the child so it will have so at least two which means it could have more then two children right any number of children more then two 
+each node of tree also stored a collection of items the form key coma element right 
+so just as a binary search in the binary tree in a binary search each node was storing one key and the element there was lets say reference to the element or the element itself could be stored there right 
+if the key was lets say student record student entry number the student record as you said the key could also be stored in the node itself 
+so in the similar way we have that in the multi way search tree you will have each node containing a pairs of this kind
+ 
+key comma element and how many pairs there could be more then one right 
+in the binary search tree there is only one such such pair and each node and in a multi way search tree there could be more then one 
+in particular there could be d minus one search pairs or items right where d is the number of children that particular node has right
+so just as so we just as generalizing a binary search trees 
+in the binary search trees there is each node has two children ya 
+each node could have two children and then there is only one keys that is left kept in the node 
+because that keys helps us helps us determine if we should go left or right 
+similarly here we have d children 
+d is the number of children then you really needs to know in the search process whether you should go to the first child second child third child fourth child and so on 
+so you will have d minus one difference keys sitting in the node to help you determine that 
+i will soon showing the example and that should clear with that right and I think I come back to this after I show you the example  okay
+so this is an example of multi way search tree okay
+as you can see this node has two children 
+this has three children this node has two children this has actually d children 
+so sorry this is actually six children ya  okay 
+now how many keys are there in a node 
+the number of keys in a node is one less the number of children in that node has  and why is that ya 
+so for instance this node has three children and you read need two keys in the node 
+the key is determined you know the keys in the node determined what set of keys the various sub trees are going to have right 
+
+so what I am trying to say here is this is key twenty two 
+so everything in this sub tree 
+so this sub tree is actually this is also in the left sub tree here ya 
+so everything in this left sub tree here is less then twenty two and everything here is more then twenty two yes
+is just clear everything here is more then twenty two and everything here is so if you look at this key everything to the left of this is less then five everything more then ten so in the right sub tree so we now have three children right 
+so in this first sub tree everything would be less then five 
+in the last sub tree everything will be more then ten and those in between five and ten would  lie in the middle sub tree 
+so that’s a concept right 
+now you understand why you need d minus one keys if you have d children right 
+so everything less then the first key would been in the first sub tree for that you have to follow in the first child 
+everything between the first key and the second key you will have to follow in the second child and so on and on right
+so with that let me go back to the previous slide 
+
+so the children of each internal node are between this items right 
+this is what I mean by between in code 
+so you have certain node it has various keys or items 
+so if you look at two consecutive keys then all the elements all the items which have key value between the consecutive pairs would be in one sub tree for that you will have to follow one child okay 
+so lets get back to this 
+this is an example of an multi way search tree right and how do you search such as tree searching is similar to the binary search procedure as you did in the binary search tree 
+so suppose we are searching for eight you come down here compare eight with twenty two eight is less so you go here 
+now you will have to find so eight is not less then five 
+eight is not more then ten 
+
+but eight lies between five and ten 
+so you will follow this and then you will find that eight is sitting here 
+so it’s a success visit right 
+so when you searching for a key s you will compare it with k one 
+k one is lets say the very first key in that node and k lets say k d minus one is the last key in that node 
+so you compare it with the very first key if it is less then that means you go to the left most sub tree 
+if it is more then k d minus one then you have to go to the right most sub tree okay
+so when you searching for the node for instance when we searching here for for eight we came down we went left because eight is less then twenty two eight lies between five and ten so we came down here and then we found eight here right
+so while we are when we are searching for twenty two we came down the sequence of steps and we found the twenty two was not yet sorry twelve yes 
+we found that twelve was not yet okay
+
+so in particular when you (are at) a node you have to determine that the key that you searching for which two keys is lies between right and once you determine that and you will follow the appropriate child now 
+at the two extrimate is you will check whether it is less then the first key or its larger then the last key which keys is should follow either it left most child or right most child 
+so as simple as that so what would in order driver in traversal tree look like that was the question we were at okay
+so first what is the inorder traversal in a tree so we recall inorder traversal says left then you print the data of the data and then you go right but now there is no left and right a because a node can have many children 
+so what should in what does an inorder traversal here here mean right 
+so first go the left most then print the key then go to the next child then print the key then go to the third child then print the key then go to the next child and so on 
+right that would correspond to inorder traversal right
+
+so for instance in here if I have to do in a inorder traversal what would I do 
+so first I would print twenty two no not first twenty two sorry what would first I would come down here first go left I will first do an inorder traversal on this part of the tree ya which means at first come in here I will first go left I will do an inorder traversal here which means I come in here I first go left but there is nothing so then I print the key that’s three then I go to the middle child nothing there 
+so then I print the next key four 
+then I go to the right child nothing there 
+so that finishes inorder traversal on this node 
+I have finish the inorder traversal on that node I go back to the parent right and then I will print this key ya because first I went left then I print the key which I print five then having printed this key I will now doing inorder traversal of this tree this sub tree this sub tree here 
+
+so when I doing inorder traversal of this I will get six and eight having finish that I go back print this key now 
+it gives me ten and then I will do inorder traversal of this right sub tree here right and that would give me eleven first thirteen fourteen and then all of this ya
+so seventeen eighteen nineteen twenty twenty one 
+now I finishes the inorder traversal of this entire thing 
+so I print the key twenty two and then I go right so we can see you will get the keys in sorted order that’s see also easy to prove why
+because in an inorder traversal I will first print out all these keys and only then  will i print out these key right 
+
+so which means that in the order of printing all the keys which are less then this key will appear before and all the keys which have more then this key will appear after and this is true for every key so which means that what you get in this sorted order okay ya can a node which have more then two keys yes six eight  put more then other children also for instance I could have something some other here lets say five point five ya five point five would be a valid node here instead of this I could have just one node with five point five here yes ya
+so that of course we can we could organized in a different manner 
+but five point five is a valid node here right there could be a more nodes here 
+okay great 
+so now lets understand what two four trees okay so two four tree is something like this 
+what are the properties each node has at most four children 
+so first it’s a multi way search tree okay multi way search tree which mean every node has at least two children ya
+now we are seeing each node has either two three or four children that’s why its called two four tree or two three four tree 
+each node has atmost two has two three or four children the second important property is a all the leaf nodes are at the same level right
+so the leaf node here are this just forget this square boxes for now 
+so these are the leaf nodes and they are in the same level they are all at level suppose we are numbering level zero one two again 
+
+so they at level two right so these are the only two properties of the two four tree of course it is multi way search tree so that is two four tree is a multi way search tree with two addition properties 
+search tree a it will have a properties that everything which is less then this key is going to be in that left everything that is more is going to be in the right 
+this is an example of an two four tree as you can see this node has three children and this is two there is no node with four children but you could also have a node with four children in it 
+yes its clear to everyone 
+what is the height of an two four tree node
+okay don’t read from the slide tell why should the height of the tree the at least log n to the base four and at most log n to the base two right
+
+so what is the worst case when would height of the tree be maximum [noise:student]
+when everyone has two children right and when its in that case everyone has two children and all the leafs are at the last level 
+then its basically its exactly a complete binary tree and complete binary tree we were argued with the height is log n base two there was plus one minus one some where while forge where it was but its some thing like that right 
+log n base two that’s a setting when the tree height is maximum the tree height is minimum when every node has four children in it ya 
+
+because then the nodes are closer to root right you have four and then sixteen and then next level and then four to the sixteen to the four at the next level sixteen time four sixty four at the next level and so on and of ya
+once again if we do the same analysis you will find the height of this tree is log n to the base four 
+so height of the two four tree on n nodes always lies between these two quantities ya
+its either log n base two its lies between log n base two and log n base four log n base four is essentially half of log n base two yes 
+so basically the height of the two four tree lies between half of log n and log n okay
+
+now you can tell me how much time it takes two for search how much time does it takes search for the two four tree then um 
+why log n 
+how do we search in a two four tree it’s a multi way search tree right so if I am searching for a particular key lets say suppose what do I want to search I want to search for eleven lets say
+suppose I want to search for eleven once again I want to search for eleven I came here with eleven like where would i go compare eleven with twelve like come here right I will change color eleven I am comparing with ten so I go right and then I find eleven here 
+so found eleven ya
+
+so how much time it doesn’t take for me too search in a two four tree height of the tree is it something more that need to do right 
+it is correct it is order height of the tree I have to compare with in each node right because when I am searching for eleven after essentially now compare against how many keys there could been in a node 
+how many keys there could be in a node and node we said has how many children 
+four 
+if it has four children how many keys ( ) it have three
+the maximum number of keys therefore is three if it has two children how many keys do a require one right node has either one two or three keys so when I search for the key and I come with key then I have to compare it with this node with this key with this key and with this key 
+some what require three comparison and all right
+to determine which particular branch to take out some what require three comparison 
+so that time three comparison with in a node times log n because that’s log n is a number of node I would be given to order log n ya 
+
+so order log n is correct but you have to careful about this 
+right within each node you require more then one comparison is in a binary search tree you required only one comparison 
+but now you could require up to three comparison great
+why three log n 
+so he is asking me why we did I say three log n 
+when I am searching I start from here ya start at the root and then whatever key I have with the key is a node here this node has only one key but it could have three keys in it 
+
+then I have to compare again each of those three keys to determine which particular branch to take out of that node right if it has three keys then there are four different branches which should I take to determine that if it make three comparison great
+so now lets look at insertion in a two four trees 
+so I am I have largest example that I am going to be using to show you the process okay 
+so is it a two four tree this has four children this has four this has two children this has two children and the last one is also have two children 
+I have shown the node with three location in it right 
+
+so in each node will have space for three keys right and for four pointers 
+so it has only one key but I am shown each node has having space for three okay
+so first element I am going to insert as twenty one 
+so how do we insert we insert just as in the case as in the case of the binary search tree right
+so first we will search and wherever our search terminates 
+if we found that element then it would say that okay its already exist you will not insert then right 
+but wherever the search terminates we would insert element is so lets see twenty one I am trying to insert 
+so twenty one I come and compare 
+so here twenty one lies between thirteen and twenty two so which means I am going to take this branch out 
+
+so take this branch out I compare against the eighty its larger then eighteen so i am going to take this branch out 
+so take this and goes and sit that particular node ya
+why does it go and sit this node 
+why did I compare with the twenty and say okay let me go down further ya 
+this is a leaf node 
+right 
+if i when I hit the leaf node you know if I okay I could also said it okay I compare it with twenty then I try to go right but right node is empty the right pointer is no its null pointer because its not going to any further 
+so I know that this is the place where I have to insert and this is empty and there is space here so I just put it in 
+[noise:student]
+
+no we would not put it in next to eighty we would continue till we cant go any further this is what happens in the binary search tree right[noise:hindi] till you heat the null pointer and then you put it there 
+so till we heat the null pointer 
+so we comparing twenty one with twenty lets say we were trying to go right but this is a null pointer and so we put the node here okay
+now you wound ring how am I going to use this page we will see how we are going to use this page what was if this was already filled [noise:hindi] you will have to wait till the next slide not next week but next slide okay 
+so there is empty space no problem you can do the insertion 
+
+lets say now we try to insert the twenty three okay 
+so twenty three lie between twenty two and thirty two 
+so we are going to take this link out 
+so we took this link out 
+twenty three is less then twenty five 
+so we come down here okay 
+so twenty three in an node we will try to keep this key in a inserted order so we keep them in a sorted order right ya
+because only then ( ) twenty three should come in this place what should I do move twenty four to the right and twenty three will come at this place ya
+
+so insertion always actually happens at the very last node at the leaf nodes
+so here other way could think of it twenty four was here I compare twenty three at the right to go left that’s null pointer 
+so that’s mean I have to insert that node itself 
+okay so now we are trying to insert forty 
+there should be no problem with forty forty is more then thirty two so I go right I come here forty is more then thirty five 
+so again go right and there is space here so I compare forty with thirty nine is a null pointer so which is means I have to put it right here there is space I put it okay
+so now lets say I was so  now if I am trying to insert a node 
+so now the question if I am trying to insert a node and there is no space available I am trying to insert a key and there is no space available and then node in which the key should go then what do I do and that’s an example 
+so when I am inserting twenty nine that the kind of thing that could happen right 
+so twenty nine between twenty two and thirty two 
+
+so I follow this twenty nine more then twenty five so its wants to come and sit here between twenty eight and thirty except there is no space here 
+
+so this is what we are going to do we are going to split the node 
+which node have been going to split this node 
+the one containing twenty six twenty eight twenty nine and thirty 
+we are going to split it in to the two okay
+lets say these are four keys the two smaller one will go to the left and two larger one will go to the right okay and we will remove this node ( ) we need to 
+link up this node right this should be children of this guy here yes
+
+
+because this are all originally children of this node right 
+so this should also be child of this node 
+but now its going to have three children but how many keys are there one so we need one more key if it has three children it should have two key so which key I should put here okay
+I am going to have promote [noise:hindi] 
+
+so its best to just promote twenty eight okay 
+so that’s what I will promote twenty eight here 
+I could also have promote twenty nine 
+you understand why twenty eight and why not twenty six if I promoted up twenty six what could be the problem then the search property would not be the valid yes 
+so I have to promote either the largest key from this node up here or smallest from here everyone with me right
+
+so this will become the new structure 
+so we have promoted one key to the parent and inserted that key 
+we could insert the key in to the parent because there was a space in to the parent it might happen that you know when I am trying to insert the key in to the parent the parent doesn’t have any space [noise:hindi] 
+seven less then thirteen so we have go to left 
+seven between three and eight 
+
+so we should follow the second child we follow the second pointer 
+so it should come here and we want to put it here except that there is no space 
+so we will split this node two nodes created four five go to the left node six seven to the right node we have get read of this node these are the five children 
+of this node now [noise:hindi] 
+so if parent node does not have sufficient split then it is split okay 
+so we split in the parent node in to two 
+three and five will go to the smaller one 
+Eight ten will go to the larger one to the right to the other node okay 
+now I have one two three four five children right and they have to be made children of these guys okay and one of the smaller [noise:hindi] that has to be promoted up 
+because when a split happens then we take the key of the largest key of the smaller node and promoted up 
+so we are going to create so the left two would go in to these two left children the first two children would be made children of this node the right three would be made in to this node 
+right two of this and three of this 
+because five is going to be promoted up right
+
+so that means that only one key is going to be left here which means that this can have only two children the first two children will go here five is going to be promoted up so this will have two keys which means three children 
+so these three would be its children and we promote five up right 
+so we split this node [noise:hindi] that we split first then we went and split the parent and now we will see the split here also because this will not have any space 
+so we split in to two five thirteen will go to in one node twenty two and thirty two will go to the other node 
+this will disappear [noise] and now one two three four five these are five children so thirteen will get promoted up now remember right 
+so the first two will become children of this and the next three will become children of this and thirteen gets promoted but where does it get promoted it is nothing at above right so we will create a new root eventually we may have to create a new root its what going to have we create a new root thirteen goes up there and these two become the children of this right 
+so if we create the new root the height of the tree increases by one 
+is everyone with me 
+
+you understand the procedure right 
+so you try to so first you will come down the tree till you hit the leaf 
+you will try to put the key there if there is space great nothing to be done 
+very simple 
+if there is no space when you split that node ya and then we decided that the lower two lower keys will go to the one node and two higher keys will go to the other node 
+the largest key in the lower part would be promoted up right 
+so when we split there are four keys in a node there are four keys four [noise:hindi] 
+to which mans the second key of those four ya is one which will get promoted up promoted up means we are trying to insert the key in to the parent node 
+if there are successful if there is a space no problem otherwise repeat the split process of the parent node 
+
+so split it right and these split my cascading all the way up to the root if its case up to the root and the root also get split then we have to create the new root that’s it ya
+any questions great 
+how much time does insertion take so search was very clear search we take order log n time 
+how many splits can be there in process of insertion right
+it’s a each level we might be doing the split 
+how much time does one split take how much time does it take me for the split the node I will create two some two node [noise:hindi] constant time independent of the number ya
+
+so each node split takes constant time 
+so that total time order log n [noise:hindi] great
+so now lets look at deletion right
+so suppose I wanted to delete twenty one 
+so first as in the case of the binary search tree 
+first you have to search for twenty one find out where the key is 
+in the case of binary search tree we recall deletion require three different cases if the key was at the leaf then we just ( ) of the leaf nothing to be done 
+
+if it was at the internal node then you had to then distinguish between one child and two child the one child cases not really happening here right 
+so only two child cases we have to be worried about right if it is such as internal node two children then what it we do we found the successor or predecessor of the key lets say with form the predecessor and we move the predecessor to that and delete the predecessor that’s what we would mean( )  right 
+so we are going to do something similar here 
+lets see 
+
+suppose I want should delete twenty one so twenty one there is no problem twenty one is an node right so we will search for twenty one so we come down here go right go left go right and I find twenty one right here 
+now why is the problem deleting twenty one its in a leaf node I can just remove it and I can remove it without violating the property of the two four tree 
+in a two four tree we require each node has at least one key and at most three keys so after deleting this will still continue to have one key so no problem okay
+
+so that’s what is going to happen sorry so I am not shown the process but this twenty one will get deleted we just mark it up nothing to be done 
+now if key to be deleted is an internal node is it an internal node 
+
+fine for instance suppose I will try to delete twenty five right 
+so I search for twenty five I fine twenty five  bite here ya
+so what do I do 
+I am going to swap it with its predecessor so what is the predecessor of twenty five how do I find the predecessor of twenty five i am now 
+in the case of two four tree I will go left and then keep going right [noise:hindi] then I find the largest key in this node ya
+
+I find the largest key its twenty four so predecessor of twenty five has to be twenty four I am going to swap this two okay then I am going to remove the twenty five from here 
+this is a same thing now I can remove the twenty five from here why because its leaf node already yes and there are more then one more then there are two keys in the leaf 
+so if I remove one there is no problem 
+
+note that predecessor will always be in the leaf in this case not in the case of a binary search tree lets check this point out 
+in the case of the binary search tree the predecessor of a node need not be a leaf node
+right 
+suppose this was my binary search tree this was a node then I am finding the predecessor so I go left and then I go right right 
+this could have been in the binary search tree 
+so what would be the predicessor of ten it could be this line right
+yes this is not a leaf node 
+but here predecessor will always be a leaf node 
+why
+
+why would be the predecessor always be so how do I find the predecessor I go left and then keep going right keep taking the right most child 
+so when will I stop [noise:student]
+what 
+when there is no right child 
+when there is no right child what does it mean [noise] right when my right child is null then that means that all the children are null right 
+because I cannot have a situation in which there is a node which has a key it has no right child but it has left child 
+this is not a permitted at all here right 
+
+if there is a key then we have a both we will have two children 
+if there were two keys then we will have three children and so on it great 
+so my predecessor would also in be a leaf so I would just remove that leaf node and I would be done so that’s what I do
+now I have to recall I was deleting twenty five 
+so I swapped twenty four and twenty five and now I have just get read of twenty five 
+so I get read of oh sorry I just have to get read of twenty five 
+so I will get read of twenty five by that right twenty five is a disappear from
+so very simple case as you can imagine problem raising when I am in a leaf I am trying to delete a key from a leaf which was only that one key in it 
+
+that leaf becomes empty what do I do now right
+so lets look at there 
+so if after deleting a key and node becomes empty then we borrow a key from its sibling 
+lets see what that means
+so suppose I am trying to delete twenty 
+so I search for twenty I come down in this manner right 
+I reach here 
+now if I delete twenty so twenty is removed problem is this is in a empty node not permitted 
+
+what will I do 
+borrow from sibling 
+what is borrow from sibling here 
+well this guys means only one sibling this
+so can I borrow fifteen from here to here no it is ( ) 38:57 right 
+because search property is not going to be valid
+so we are going to do something like a rotation like with in a AVL tree 
+what is it mean fifteen goes up and eighteen comes down fifteen goes up eighteen comes down 
+now everything is fine ya okay
+
+so then the next thing you are wondering is if I cant borrow from my sibling ya if I cant when can I not borrow from my sibling   
+when the sibling has only one key in it right for instance now if I trying to delete eighteen then that could be a problem 
+
+wait lets see(Refer slide time 39:40) so if sibling has only one key then we merge with the sibling we merge with the sibling we combine with the sibling okay 
+
+
+
+suppose I was trying to delete twenty three right so again so twenty three is right here if I deleted this is an empty node 
+so if try to borrow from a sibling right okay 
+now there is small catch here [noise:hindi] 
+one and two right but I cannot borrow from this one
+you see why 
+because for the search property it will get because you know if I have to promote something then twenty eight is going to come down but this going to jumble this 
+
+so when I say borrow from a sibling I really mean and adjusting sibling 
+if I am I can borrow from here so when I am here I can borrow from here if I am here I can borrow from here 
+if I am here I can borrow from here or from here right
+but here I can only borrow from this guy 
+everyone understand why this is require 
+so I try to borrow from here but if I borrow from here that is twenty six goes up and twenty four come down this is going to become empty ya
+
+so that’s not going to solve our problem 
+so what we are going to do is merge 
+these two are going to merge combine but if these two combine then the number of children here of this guy will become two which means [noise:hindi] 
+so the key in the parent node which separate this two sibling which is this key which is separating these two siblings is going to move down in to the merge okay
+
+lets see I create a new node which is merge of this two nodes this goes moves down and this also is these are all the only keys in the new node right 
+because there was one here there was none here and there was non here two keys and all so they come and sitting 
+these two will now disappear and this becomes the child of this node right (noise:hindi) ok
+now what can happen 
+
+so essentially what we have done is we said we are going to one of the keys from the parent node is going to come down 
+but  what if diverse only one key in the parent node right same as before right [noise:hindi] and so on and on 
+so moving the key down from the parent node corresponds to deletion in the parent 
+
+deleting the key from the parent node 
+this procedure will be same as that we have done in so far in this leaf node 
+but it can lead to the cascading right cascading as in right [noise:hindi]we will see that happening in this example [noise:hindi] 
+this is the only child left of it parent right [noise:hindi] per sibling is also only one key 
+so we are going to merge with the sibling
+we are going to create a new node which is going to get the sibling key and the key from the parent which is twenty two 
+
+so this is the situation now 
+right and we will delete this and this [noise:hindi] right
+so because of this deletion height can reduce by one after all we said height [noise:hindi] right log n base is less then what it was that means height has shrink what could happen ya or insertion may height 
+so everyone understand this procedure right 
+there are just very few concept that we really and it insertion may split [noise:hindi] or deletion may [noise:hindi] right 
+[noise:student] [noise:hindi] no point is doing that
+
+so first you try to copy try to borrow if not successful then you merge great 
+so lets conclude today’s discussion  height of a two four tree we seen is log n right 
+this would actually be theta of log n right because its at least log n base four and at most log n base two right 
+so as far as deletion was concern we have not looked at vaning time for deletion yet but you can see that that is also log n why it was come down the tree to search for the key that’s log n right and then we keep moving back up 
+at every step we might up we might go to all the way back up to the root right 
+so another log n step each step where either borrowing one from the one from the sibling or we are merging with sibling 
+but all of them are constant time operation right
+
+borrowing could corresponds to [noise:hindi] constant time right [noise:hindi]
+so what you seen in search insertion deletion all take order log n time in a two four tree 
+so why did we come up with the very complicated data structure 
+why are we doing all of this okay
+so well they are fine right no [noise:student] okay
+you don’t  ( ) this is the another reason we are going to see another data structure called red black tree okay and that’s also very fast data structure for implementing dictionaries and what we are going to see is that what we learnt about two four trees today’s is going to be very helpful in understanding how the red black trees functions 
+so we are going to look at this  in next class 
+so that we done in that today’s discussion on two four trees 
+

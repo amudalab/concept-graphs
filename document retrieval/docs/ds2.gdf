@@ -1,0 +1,147 @@
+nodedef> name,label
+v0,abstract data type
+v1,array implementation
+v2,catch block
+v3,constructor method
+v4,data structure
+v5,data type
+v6,exception
+v7,generic type
+v8,growth strategy
+v9,java
+v10,java virtual machine
+v11,parent class
+v12,pop
+v13,programming
+v14,push
+v15,regular push
+v16,special push
+v17,stack
+v18,stack empty exception
+v19,stack full exception
+v20,stack implementation
+v21,stack interface
+v22,super class
+v23,tight strategy
+v24,top
+v25,try block
+v26,worst case
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v5,false,33.3675213675,true
+v0,v10,false,5.86666666667,true
+v0,v12,false,12.4222222222,true
+v0,v14,false,6.84444444444,true
+v0,v17,false,3.82222222222,true
+v1,v6,false,164.266666667,true
+v1,v17,false,32.2666666667,true
+v2,v6,false,13.1878787879,true
+v2,v25,false,3.11111111111,true
+v3,v5,false,158.4,true
+v3,v6,false,7.46666666667,true
+v3,v9,false,9.55555555556,true
+v3,v17,false,11.4666666667,true
+v3,v22,false,20.5333333333,true
+v3,v25,false,18.5777777778,true
+v4,v5,false,21.0222222222,true
+v4,v17,false,0.977777777778,true
+v4,v21,false,7.82222222222,true
+v5,v0,false,33.3675213675,true
+v5,v3,false,158.4,true
+v5,v4,false,21.0222222222,true
+v5,v9,false,13.3777777778,true
+v5,v17,false,42.1333333333,true
+v5,v24,false,8.8,true
+v6,v1,false,164.266666667,true
+v6,v2,false,13.1878787879,true
+v6,v3,false,7.46666666667,true
+v6,v9,false,14.9333333333,true
+v6,v11,false,19.1111111111,true
+v6,v17,false,5.28888888889,true
+v6,v18,false,2.93333333333,true
+v6,v19,false,26.4,true
+v6,v22,false,17.6,true
+v6,v24,false,23.8888888889,true
+v6,v25,false,32.9333333333,true
+v7,v9,false,2.93333333333,true
+v7,v17,false,118.311111111,true
+v8,v14,false,26.4,true
+v8,v17,false,7.82222222222,true
+v8,v23,false,26.7555555556,true
+v9,v3,false,9.55555555556,true
+v9,v5,false,13.3777777778,true
+v9,v6,false,14.9333333333,true
+v9,v7,false,2.93333333333,true
+v9,v10,false,0.0,true
+v9,v17,false,16.1777777778,true
+v10,v0,false,5.86666666667,true
+v10,v9,false,0.0,true
+v11,v6,false,19.1111111111,true
+v12,v0,false,12.4222222222,true
+v12,v14,false,5.28888888889,true
+v12,v17,false,7.94248366013,true
+v12,v24,false,4.21388888889,true
+v13,v17,false,154.488888889,true
+v13,v20,false,6.84444444444,true
+v14,v0,false,6.84444444444,true
+v14,v8,false,26.4,true
+v14,v12,false,5.28888888889,true
+v14,v15,false,4.43076923077,true
+v14,v16,false,4.44444444444,true
+v14,v17,false,5.48282828283,true
+v14,v21,false,21.5111111111,true
+v14,v23,false,146.222222222,true
+v14,v24,false,7.36666666667,true
+v14,v26,false,43.0222222222,true
+v15,v14,false,4.43076923077,true
+v15,v17,false,13.6888888889,true
+v16,v14,false,4.44444444444,true
+v16,v17,false,40.0888888889,true
+v17,v0,false,3.82222222222,true
+v17,v1,false,32.2666666667,true
+v17,v3,false,11.4666666667,true
+v17,v4,false,0.977777777778,true
+v17,v5,false,42.1333333333,true
+v17,v6,false,5.28888888889,true
+v17,v7,false,118.311111111,true
+v17,v8,false,7.82222222222,true
+v17,v9,false,16.1777777778,true
+v17,v12,false,7.94248366013,true
+v17,v13,false,154.488888889,true
+v17,v14,false,5.48282828283,true
+v17,v15,false,13.6888888889,true
+v17,v16,false,40.0888888889,true
+v17,v18,false,3.32222222222,true
+v17,v19,false,5.06666666667,true
+v17,v20,false,9.95555555556,true
+v17,v21,false,2.16666666667,true
+v17,v23,false,10.7555555556,true
+v17,v24,false,0.0,true
+v17,v26,false,186.044444444,true
+v18,v6,false,2.93333333333,true
+v18,v17,false,3.32222222222,true
+v18,v24,false,8.8,true
+v19,v6,false,26.4,true
+v19,v17,false,5.06666666667,true
+v20,v13,false,6.84444444444,true
+v20,v17,false,9.95555555556,true
+v21,v4,false,7.82222222222,true
+v21,v14,false,21.5111111111,true
+v21,v17,false,2.16666666667,true
+v22,v3,false,20.5333333333,true
+v22,v6,false,17.6,true
+v23,v8,false,26.7555555556,true
+v23,v14,false,146.222222222,true
+v23,v17,false,10.7555555556,true
+v23,v24,false,31.2888888889,true
+v24,v5,false,8.8,true
+v24,v6,false,23.8888888889,true
+v24,v12,false,4.21388888889,true
+v24,v14,false,7.36666666667,true
+v24,v17,false,0.0,true
+v24,v18,false,8.8,true
+v24,v23,false,31.2888888889,true
+v25,v2,false,3.11111111111,true
+v25,v3,false,18.5777777778,true
+v25,v6,false,32.9333333333,true
+v26,v14,false,43.0222222222,true
+v26,v17,false,186.044444444,true

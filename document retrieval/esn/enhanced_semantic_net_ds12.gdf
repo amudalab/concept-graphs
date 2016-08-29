@@ -1,0 +1,114 @@
+nodedef> name,label
+v0,avl trees
+v1,binary search tree
+v2,child
+v3,deletion
+v4,double rotation
+v5,height balance
+v6,height balance problem
+v7,height balance property
+v8,height imbalance
+v9,insertion
+v10,local reorganization
+v11,node
+v12,rebalance
+v13,rotation
+v14,single rotation
+v15,subtree
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v2,false,1.72413793103,true
+v0,v3,false,11.3563218391,true
+v0,v5,false,6.75862068966,true
+v0,v9,false,20.6206896552,true
+v0,v11,false,8.3275862069,true
+v0,v13,false,700.965517241,true
+v0,v14,false,3.86206896552,true
+v1,v3,false,3.86206896552,true
+v1,v9,false,0.620689655172,true
+v1,v10,false,7.72413793103,true
+v1,v11,false,17.0517241379,true
+v1,v13,false,10.1293103448,true
+v2,v0,false,10.3448275862,true
+v2,v3,false,11.5862068966,true
+v2,v4,false,111.034482759,true
+v2,v9,false,24.1379310345,true
+v2,v10,false,21.2413793103,true
+v2,v11,false,0.0,true
+v2,v12,false,8.68965517241,true
+v2,v13,false,14.7783251232,true
+v2,v14,false,149.655172414,true
+v2,v15,false,4.88793103448,true
+v3,v0,false,11.3563218391,true
+v3,v1,false,3.86206896552,true
+v3,v2,false,1.93103448277,true
+v3,v4,false,15.4482758621,true
+v3,v9,false,2.15517241379,true
+v3,v11,false,29.0948275862,true
+v3,v13,false,11.6379310345,true
+v4,v2,false,37.011494253,true
+v4,v3,false,2.57471264368,true
+v4,v8,false,42.4827586207,true
+v4,v13,false,8.14655172414,true
+v4,v15,false,35.724137931,true
+v5,v0,false,6.75862068966,true
+v5,v6,false,0.0,true
+v5,v7,false,0.0,true
+v5,v8,false,10.6206896552,true
+v5,v11,false,12.5517241379,true
+v5,v13,false,1.89272030652,true
+v5,v15,false,16.1379310345,true
+v6,v5,false,0.0,true
+v6,v11,false,18.3448275862,true
+v7,v5,false,0.0,true
+v7,v9,false,12.1034482759,true
+v8,v4,false,42.4827586207,true
+v8,v5,false,10.6206896552,true
+v8,v13,false,42.4827586207,true
+v8,v15,false,0.80459770115,true
+v9,v0,false,20.6206896552,true
+v9,v1,false,3.72413793103,true
+v9,v2,false,4.02298850575,true
+v9,v3,false,2.15517241379,true
+v9,v7,false,12.1034482759,true
+v9,v11,false,9.88045977011,true
+v9,v13,false,37.5172413793,true
+v9,v15,false,25.1034482759,true
+v10,v1,false,1.28735632184,true
+v10,v2,false,10.6206896552,true
+v11,v0,false,8.3275862069,true
+v11,v1,false,17.0517241379,true
+v11,v2,false,0.0,true
+v11,v3,false,29.0948275862,true
+v11,v5,false,12.5517241379,true
+v11,v6,false,18.3448275862,true
+v11,v9,false,9.88045977011,true
+v11,v13,false,19.3879310345,true
+v11,v15,false,8.87068965517,true
+v12,v2,false,2.89655172414,true
+v12,v13,false,8.68965517241,true
+v12,v15,false,17.6896551724,true
+v13,v0,false,700.965517241,true
+v13,v1,false,10.1293103448,true
+v13,v2,false,14.7783251232,true
+v13,v3,false,11.6379310345,true
+v13,v4,false,8.14655172414,true
+v13,v5,false,11.3563218391,true
+v13,v8,false,42.4827586207,true
+v13,v9,false,37.5172413793,true
+v13,v11,false,19.3879310345,true
+v13,v12,false,8.68965517241,true
+v13,v14,false,15.5736677116,true
+v13,v15,false,21.8390804598,true
+v14,v0,false,0.64367816092,true
+v14,v2,false,49.8850574713,true
+v14,v13,false,15.5736677116,true
+v14,v15,false,38.6206896552,true
+v15,v2,false,0.814655172413,true
+v15,v4,false,35.724137931,true
+v15,v5,false,16.1379310345,true
+v15,v8,false,4.8275862069,true
+v15,v9,false,25.1034482759,true
+v15,v11,false,8.87068965517,true
+v15,v12,false,17.6896551724,true
+v15,v13,false,21.8390804598,true
+v15,v14,false,38.6206896552,true

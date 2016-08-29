@@ -1,0 +1,319 @@
+
+Y-fast trie
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+Y-fast trie
+
+
+Type
+Trie
+
+
+Invented
+1982
+
+
+Invented by
+Dan Willard
+
+
+Asymptotic complexity
+in big O notation
+
+
+Space
+O(n)
+
+
+Search
+O(log log M)
+
+
+Insert
+O(log log M) amortized
+
+
+Delete
+O(log log M) amortized
+
+
+In computer science, a y-fast trie is a data structure for storing integers from a bounded domain. It supports exact and predecessor or successor queries in time O(loglogM), using O(n) space, where n is the number of stored values and M is the maximum value in the domain. The structure was proposed by Dan Willard in 1982[1] to decrease the O(nlogM) space used by an x-fast trie.
+
+
+
+
+Contents
+
+
+1 Structure
+2 Operations
+
+2.1 Find
+2.2 Successor and Predecessor
+2.3 Insert
+2.4 Delete
+
+
+3 References
+4 External links
+
+
+
+
+[edit] Structure
+
+
+
+
+An example of a y-fast trie. The nodes shown in the x-fast trie are the representatives of the O(n/logM) balanced binary search trees.
+
+
+A y-fast trie consists of two data structures: the top half is an x-fast trie and the lower half consists of a number of balanced binary trees. The keys are divided into groups of O(logM) consecutive elements and for each group a balanced binary search tree is created. To facilitate efficient insertion and deletion, each group contains at least (logM)/4 and at most 2logM elements.[2] For each balanced binary search tree a representative r is chosen. These representatives are stored in the x-fast trie. A representative r need not to be an element of the tree associated with it, but it does need be an integer smaller than the successor of r and the minimum element of the tree associated with that successor and greater than the predecessor of r and the maximum element of the tree associated with that predecessor. Initially, the representative of a tree will be an integer between the minimum and maximum element in its tree.
+Since the x-fast trie stores O(n/logM) representatives and each representative occurs in O(logM) hash tables, this part of the y-fast trie uses O(n) space. The balanced binary search trees store n elements in total which uses O(n) space. Hence, in total a y-fast trie uses O(n) space.
+[edit] Operations
+Like van Emde Boas trees and x-fast tries, y-fast tries support the operations of an ordered associative array. This includes the usual associative array operations, along with two more order operations, Successor and Predecessor:
+
+Find(k): find the value associated with the given key
+Successor(k): find the key/value pair with the smallest key larger than or equal to the given key
+Predecessor(k): find the key/value pair with the largest key less than or equal to the given key
+Insert(k, v): insert the given key/value pair
+Delete(k): remove the key/value pair with the given key
+
+[edit] Find
+A key k can be stored in either the tree of the smallest representative r greater than k or in the tree of the predecessor of r since the representative of a binary search tree need not be an element stored in its tree. Hence, we first find the smallest representative r greater than k in the x-fast trie. Using this representative, we retrieve the predecessor of r. These two representatives point to two balanced binary search trees, which we both search for k.
+Finding the smallest representative r greater than k in the x-fast trie takes O(loglogM). Using r, finding its predecessor takes constant time. Searching the two balanced binary search trees containing O(logM) elements each takes O(loglogM) time. Hence, a key k can be found, and its value retrieved, in O(loglogM) time.[1]
+[edit] Successor and Predecessor
+Similarly to the key k itself, its successor can be stored in either the tree of the smallest representative r greater than k or in the tree of the predecessor of r. Hence, to find the successor of a key k, we first search the x-fast trie for the smallest representative greater than k. Next, we use this representative to retrieve its predecessor in the x-fast trie. These two representatives point to two balanced binary search trees, which we search for the successor of k.[3]
+Finding the smallest representative r greater than k in the x-fast trie takes O(loglogM) time and using r to find its predecessor takes constant time. Searching the two balanced binary search trees containing O(logM) elements each takes O(loglogM) time. Hence, the successor of a key k can be found, and its value retrieved, in O(loglogM) time.[1]
+Searching for the predecessor of a key k is highly similar to finding its successor. We search the x-fast trie for the largest representative r smaller than k and we use r to retrieve its predecessor in the x-fast trie. Finally, we search the two balanced binary search trees of these two representatives for the predecessor of k. This takes O(loglogM) time.
+[edit] Insert
+To insert a new key/value pair (k, v), we first need to determine in which balanced binary search tree we need to insert k. To this end, we find the tree T containing the successor of k. Next, we insert k into T. To ensure that all balanced binary search trees contain O(logM) elements, we split T into two balanced binary trees and remove its representative from the x-fast trie if it contains more than 2logM elements. Each of the two new balanced binary search trees contains at most logM+1 elements. We pick a representative for each tree and insert these into the x-fast trie.
+Finding the successor of k takes O(loglogM) time. Inserting k into a balanced binary search tree that contains O(logM) elements also takes O(loglogM) time. Splitting a binary search tree that contains O(logM) elements can be done in O(logM) time. Finally, inserting and deleting the three representatives takes O(logM) time. However, since we split the tree at most once every O(logM) insertions and deletions, this takes constant amortized time. Therefore, inserting a new key/value pair takes O(loglogM) amortized time.[3]
+[edit] Delete
+Deletions are very similar to insertions. We first find the key k in one of the balanced binary search trees and delete it from this tree T. To ensure that all balanced binary search trees contain O(logM) elements, we merge T with the balanced binary search tree of its successor or predecessor if it contains less than (logM)/4 elements. The representatives of the merged trees are removed from the x-fast trie. It is possible for the merged tree to contain more than 2logM elements. If this is the case, the newly formed tree is split into two trees of about equal size. Next, we pick a new representative for each of the new trees and we insert these into the x-fast trie.
+Finding the key k takes O(loglogM) time. Deleting k from a balanced binary search tree that contains O(logM) elements also takes O(loglogM) time. Merging and possibly splitting the balanced binary search trees takes O(logM) time. Finally, deleting the old representatives and inserting the new representatives into the x-fast trie takes O(logM) time. Merging and possibly splitting the balanced binary search tree, however, is done at most once for every O(logM) insertions and deletions. Hence, it takes constant amortized time. Therefore, deleting a key/value pair takes O(loglogM) amortized time.[3]
+[edit] References
+
+
+^ a b c Willard, Dan E. (1983). "Log-logarithmic worst-case range queries are possible in space (N)". Information Processing Letters (Elsevier) 17 (2): 8184. doi:10.1016/0020-0190(83)90075-3. ISSN0020-0190.
+^ Bose, Prosenjit; Doueb, Karim; Dujmovi, Vida; Howat, John; Morin, Pat (2010), "Fast Local Searches and Updates in Bounded Universes", Proceedings of the 22nd Canadian Conference on Computational Geometry (CCCG2010), pp.261264, http://cccg.ca/proceedings/2010/paper69.pdf
+^ a b c Schulz, Andr; Christiano, Paul (2010-03-04). "Lecture Notes from Lecture 9 of Advanced Data Structures (Spring '10, 6.851)". http://courses.csail.mit.edu/6.851/spring10/scribe/lec09.pdf. Retrieved 2011-04-14.
+
+
+[edit] External links
+
+Open Data Structure - Chapter 13 - Data Structures for Integers
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 2562/1000000
+Preprocessor generated node count: 28068/1500000
+Post-expand include size: 27035/2048000 bytes
+Template argument size: 7246/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:31499648-0!*!0!!en!4!* and timestamp 20130122004113 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Y-fast_trie&oldid=522701218"				
+ /printfooter 
+ catlinks 
+Categories: Trees (data structures)Hidden categories: Articles created via the Article Wizard  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

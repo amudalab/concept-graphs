@@ -1,0 +1,1612 @@
+
+Hypertext Transfer Protocol
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from HTTP)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+Internet protocols
+
+
+Application layer
+
+
+
+
+DHCP
+DHCPv6
+DNS
+FTP
+HTTP
+IMAP
+IRC
+LDAP
+MGCP
+NNTP
+NTP
+POP
+RPC
+RTP
+RTCP
+RTSP
+SIP
+SMTP
+SNMP
+SOCKS
+SSH
+Telnet
+TLS/SSL
+XMPP
+(more)
+
+
+
+
+Transport layer
+
+
+
+
+TCP
+UDP
+DCCP
+SCTP
+RSVP
+(more)
+
+
+
+
+Routing protocols *
+
+
+
+
+BGP
+OSPF
+RIP
+(more)
+
+
+
+
+Internet layer
+
+
+
+
+IP
+
+IPv4
+IPv6
+
+
+ICMP
+ICMPv6
+ECN
+IGMP
+IPsec
+(more)
+
+
+
+
+Link layer
+
+
+
+
+ARP/InARP
+NDP
+Tunnels
+
+L2TP
+
+
+PPP
+Media access control
+
+Ethernet
+DSL
+ISDN
+FDDI
+
+
+(more)
+
+
+
+
+* Not a layer. A routing protocol belongs either to application or network layer.
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+HTTP
+
+
+
+
+Persistence
+Compression
+HTTPS
+
+
+
+
+Request methods
+
+
+
+
+OPTIONS
+GET
+HEAD
+POST
+PUT
+DELETE
+TRACE
+CONNECT
+PATCH
+
+
+
+
+Header fields
+
+
+
+
+Cookie
+ETag
+Location
+HTTP referer
+DNT
+X-Forwarded-For
+
+
+
+
+Status codes
+
+
+
+
+301 Moved permanently
+302 Found
+303 See Other
+403 Forbidden
+404 Not Found
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+Internet
+
+
+
+An Opte Project visualization of routing
+paths through a portion of the Internet
+
+
+
+
+
+General
+
+
+Access Censorship Democracy
+Digital divide Digital rights
+Freedom of information
+History Internet phenomena
+Network neutrality
+Pioneers Privacy
+Sociology Usage
+
+
+
+
+
+
+
+
+Governance
+
+
+
+Internet Corporation for Assigned
+Names and Numbers (ICANN)
+
+
+Internet Engineering
+Task Force (IETF)
+
+
+Internet Governance
+Forum (IGF)
+
+Internet Society (ISOC)
+
+
+
+
+
+
+
+
+Protocols/Infrastructure
+
+
+Domain Name System (DNS)
+
+Hypertext Transfer
+Protocol (HTTP)
+
+Internet exchange point
+Internet Protocol (IP)
+Internet Protocol Suite (TCP/IP)
+Internet service provider (ISP)
+IP address
+POP3 email protocol
+
+Simple Mail Transfer
+Protocol (SMTP)
+
+
+
+
+
+
+
+
+
+Services
+
+
+Blogs (Microblogging)
+Email Fax
+File sharing File transfer
+Games Instant messaging
+Podcasts Shopping Television
+Voice over IP (VoIP)
+
+World Wide Web
+(Web search)
+
+
+
+
+
+
+
+
+
+Guides
+
+
+Book Index Outline
+
+
+
+
+
+
+ Internet portal
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems.[1] HTTP is the foundation of data communication for the World Wide Web.
+Hypertext is a multi-linear set of objects, building a network by using logical links (the so-called hyperlinks) between the nodes (e.g. text or words). HTTP is the protocol to exchange or transfer hypertext.
+The standards development of HTTP was coordinated by the Internet Engineering Task Force (IETF) and the World Wide Web Consortium (W3C), culminating in the publication of a series of Requests for Comments (RFCs), most notably RFC 2616 (June 1999), which defines HTTP/1.1, the version of HTTP in common use.
+
+
+
+
+Contents
+
+
+1 Technical overview
+2 History
+3 HTTP session
+4 Request methods
+
+4.1 Safe methods
+4.2 Idempotent methods and web applications
+4.3 Security
+
+
+5 Status codes
+6 Persistent connections
+7 HTTP session state
+8 Secure HTTP
+9 Request message
+10 Response message
+11 Example session
+
+11.1 Client request
+11.2 Server response
+
+
+12 See also
+
+12.1 HTTP replacements or enhancements
+12.2 Further information
+12.3 Related topics and technologies
+
+
+13 Notes
+14 References
+15 External links
+
+
+
+
+[edit] Technical overview
+
+
+
+
+Image of the networking protocol HTTP and the WWW letters.
+
+
+HTTP functions as a request-response protocol in the client-server computing model. A web browser, for example, may be the client and an application running on a computer hosting a web site may be the server. The client submits an HTTP request message to the server. The server, which provides resources such as HTML files and other content, or performs other functions on behalf of the client, returns a response message to the client. The response contains completion status information about the request and may also contain requested content in its message body.
+A web browser is an example of a user agent (UA). Other types of user agent include the indexing software used by search providers (web crawlers), voice browsers, mobile apps and other software that accesses, consumes or displays web content.
+HTTP is designed to permit intermediate network elements to improve or enable communications between clients and servers. High-traffic websites often benefit from web cache servers that deliver content on behalf of upstream servers to improve response time. Web browsers cache previously accessed web resources and reuse them when possible to reduce network traffic. HTTP proxy servers at private network boundaries can facilitate communication for clients without a globally routable address, by relaying messages with external servers.
+HTTP is an application layer protocol designed within the framework of the Internet Protocol Suite. Its definition presumes an underlying and reliable transport layer protocol,[2] and Transmission Control Protocol (TCP) predominates for this purpose. However HTTP can use unreliable protocols such as the User Datagram Protocol (UDP), for example in Simple Service Discovery Protocol (SSDP).
+HTTP resources are identified and located on the network by Uniform Resource Identifiers (URIs)or, more specifically, Uniform Resource Locators (URLs)using the http or https URI schemes. URIs and hyperlinks in Hypertext Markup Language (HTML) documents form webs of inter-linked hypertext documents. On the Internet the World Wide Web was established in 1990 by English computer scientist and innovator Tim Berners-Lee.
+HTTP/1.1 is a revision of the original HTTP (HTTP/1.0). In HTTP/1.0 a separate connection to the same server is made for every resource request. HTTP/1.1 can reuse a connection multiple times to download images, scripts, stylesheets et cetera after the page has been delivered. HTTP/1.1 communications therefore experience less latency as the establishment of TCP connections presents considerable overhead.
+[edit] History
+
+
+
+
+Tim Berners-Lee
+
+
+The term HyperText was coined by Ted Nelson who in turn was inspired by Vannevar Bush's microfilm-based "memex". Tim Berners-Lee first proposed the "WorldWideWeb" project now known as the World Wide Web. Berners-Lee and his team are credited with inventing the original HTTP along with HTML and the associated technology for a web server and a text-based web browser. The first version of the protocol had only one method, namely GET, which would request a page from a server.[3] The response from the server was always an HTML page.[4]
+The first documented version of HTTP was HTTP V0.9 (1991). Dave Raggett led the HTTP Working Group (HTTP WG) in 1995 and wanted to expand the protocol with extended operations, extended negotiation, richer meta-information, tied with a security protocol which became more efficient by adding additional methods and header fields.[5][6] RFC 1945 officially introduced and recognized HTTP V1.0 in 1996.
+The HTTP WG planned to publish new standards in December 1995[7] and the support for pre-standard HTTP/1.1 based on the then developing RFC 2068 (called HTTP-NG) was rapidly adopted by the major browser developers in early 1996. By March 1996, pre-standard HTTP/1.1 was supported in Arena,[8] Netscape 2.0,[8] Netscape Navigator Gold 2.01,[8] Mosaic 2.7,[citation needed] Lynx 2.5[citation needed], and in Internet Explorer 2.0[citation needed]. End-user adoption of the new browsers was rapid. In March 1996, one web hosting company reported that over 40% of browsers in use on the Internet were HTTP 1.1 compliant.[citation needed] That same web hosting company reported that by June 1996, 65% of all browsers accessing their servers were HTTP/1.1 compliant.[9] The HTTP/1.1 standard as defined in RFC 2068 was officially released in January 1997. Improvements and updates to the HTTP/1.1 standard were released under RFC 2616 in June 1999.
+[edit] HTTP session
+An HTTP session is a sequence of network request-response transactions. An HTTP client initiates a request by establishing a Transmission Control Protocol (TCP) connection to a particular port on a server (typically port 80; see List of TCP and UDP port numbers). An HTTP server listening on that port waits for a client's request message. Upon receiving the request, the server sends back a status line, such as "HTTP/1.1 200 OK", and a message of its own. The body of this message is typically the requested resource, although an error message or other information may also be returned.[1]
+[edit] Request methods
+
+
+
+
+An HTTP request made using telnet. The request, response headers and response body are highlighted.
+
+
+HTTP defines methods (sometimes referred to as verbs) to indicate the desired action to be performed on the identified resource. What this resource represents, whether pre-existing data or data that is generated dynamically, depends on the implementation of the server. Often, the resource corresponds to a file or the output of an executable residing on the server.
+The HTTP/1.0 specification[10]:section 8 defined the GET, POST and HEAD methods and the HTTP/1.1 specification[1]:section 9 added 5 new methods: OPTIONS, PUT, DELETE, TRACE and CONNECT. By being specified in these documents their semantics are well known and can be depended upon. Any client can use any method and the server can be configured to support any combination of methods. If a method is unknown to an intermediate it will be treated as an unsafe and non-idempotent method. There is no limit to the number of methods that can be defined and this allows for future methods to be specified without breaking existing infrastructure. For example WebDAV defined 7 new methods and RFC5789 specified the PATCH method.
+
+GET
+Requests a representation of the specified resource. Requests using GET should only retrieve data and should have no other effect. (This is also true of some other HTTP methods.)[1] The W3C has published guidance principles on this distinction, saying, "Web application design should be informed by the above principles, but also by the relevant limitations."[11] See safe methods below.
+HEAD
+Asks for the response identical to the one that would correspond to a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content.
+POST
+Requests that the server accept the entity enclosed in the request as a new subordinate of the resource identified by the URI. The data POSTed might be, as examples, an annotation for existing resources; a message for a bulletin board, newsgroup, mailing list, or comment thread; a block of data that is the result of submitting a web form to a data-handling process; or an item to add to a database.[12]
+PUT
+Requests that the enclosed entity be stored under the supplied URI. If the URI refers to an already existing resource, it is modified; if the URI does not point to an existing resource, then the server can create the resource with that URI.[13]
+DELETE
+Deletes the specified resource.
+TRACE
+Echoes back the received request so that a client can see what (if any) changes or additions have been made by intermediate servers.
+OPTIONS
+Returns the HTTP methods that the server supports for specified URL. This can be used to check the functionality of a web server by requesting '*' instead of a specific resource.
+CONNECT
+Converts the request connection to a transparent TCP/IP tunnel, usually to facilitate SSL-encrypted communication (HTTPS) through an unencrypted HTTP proxy.[14]
+PATCH
+Is used to apply partial modifications to a resource.[15]
+
+HTTP servers are required to implement at least the GET and HEAD methods[16] and, whenever possible, also the OPTIONS method.[citation needed]
+[edit] Safe methods
+Some methods (for example, HEAD, GET, OPTIONS and TRACE) are defined as safe, which means they are intended only for information retrieval and should not change the state of the server. In other words, they should not have side effects, beyond relatively harmless effects such as logging, caching, the serving of banner advertisements or incrementing a web counter. Making arbitrary GET requests without regard to the context of the application's state should therefore be considered safe.
+By contrast, methods such as POST, PUT and DELETE are intended for actions that may cause side effects either on the server, or external side effects such as financial transactions or transmission of email. Such methods are therefore not usually used by conforming web robots or web crawlers; some that do not conform tend to make requests without regard to context or consequences.
+Despite the prescribed safety of GET requests, in practice their handling by the server is not technically limited in any way. Therefore, careless or deliberate programming can cause non-trivial changes on the server. This is discouraged, because it can cause problems for Web caching, search engines and other automated agents, which can make unintended changes on the server.
+[edit] Idempotent methods and web applications
+Methods PUT and DELETE are defined to be idempotent, meaning that multiple identical requests should have the same effect as a single request (Note that idempotence refers to the state of the system after the request has completed, so while the action the server takes (e.g. deleting a record) or the response code it returns may be different on subsequent requests, the system state will be the same every time). Methods GET, HEAD, OPTIONS and TRACE, being prescribed as safe, should also be idempotent, as HTTP is a stateless protocol.[1]
+In contrast, the POST method is not necessarily idempotent, and therefore sending an identical POST request multiple times may further affect state or cause further side effects (such as financial transactions). In some cases this may be desirable, but in other cases this could be due to an accident, such as when a user does not realize that their action will result in sending another request, or they did not receive adequate feedback that their first request was successful. While web browsers may show alert dialog boxes to warn users in some cases where reloading a page may re-submit a POST request, it is generally up to the web application to handle cases where a POST request should not be submitted more than once.
+Note that whether a method is idempotent is not enforced by the protocol or web server. It is perfectly possible to write a web application in which (for example) a database insert or other non-idempotent action is triggered by a GET or other request. Ignoring this recommendation, however, may result in undesirable consequences, if a user agent assumes that repeating the same request is safe when it isn't.
+[edit] Security
+Implementing methods such as TRACE, TRACK and DEBUG is considered potentially insecure by some security professionals because attackers can use them to gather information or bypass security controls during attacks. Security software tools such as Tenable Nessus and Microsoft UrlScan Security Tool report on the presence of these methods as being security issues.[17]
+[edit] Status codes
+See also: List of HTTP status codes
+In HTTP/1.0 and since, the first line of the HTTP response is called the status line and includes a numeric status code (such as "404") and a textual reason phrase (such as "Not Found"). The way the user agent handles the response primarily depends on the code and secondarily on the response headers. Custom status codes can be used since, if the user agent encounters a code it does not recognize, it can use the first digit of the code to determine the general class of the response.[18]
+Also, the standard reason phrases are only recommendations and can be replaced with "local equivalents" at the web developer's discretion. If the status code indicated a problem, the user agent might display the reason phrase to the user to provide further information about the nature of the problem. The standard also allows the user agent to attempt to interpret the reason phrase, though this might be unwise since the standard explicitly specifies that status codes are machine-readable and reason phrases are human-readable.
+[edit] Persistent connections
+Main article: HTTP persistent connection
+In HTTP/0.9 and 1.0, the connection is closed after a single request/response pair. In HTTP/1.1 a keep-alive-mechanism was introduced, where a connection could be reused for more than one request. Such persistent connections reduce request latency perceptibly, because the client does not need to re-negotiate the TCP connection after the first request has been sent. Another positive side effect is that in general the connection becomes faster with time due to TCP's slow-start-mechanism.
+Version 1.1 of the protocol also made bandwidth optimization improvements to HTTP/1.0. For example, HTTP/1.1 introduced chunked transfer encoding to allow content on persistent connections to be streamed rather than buffered. HTTP pipelining further reduces lag time, allowing clients to send multiple requests before waiting for each response. Another improvement to the protocol was byte serving, where a server transmits just the portion of a resource explicitly requested by a client.
+[edit] HTTP session state
+HTTP is a stateless protocol. A stateless protocol does not require the HTTP server to retain information or status about each user for the duration of multiple requests. However, some web applications implement states or server side sessions using one or more of the following methods:
+
+HTTP cookies.
+Query string parameters, for example, /index.php?session_id=some_unique_session_code.
+Hidden variables within web forms.
+
+[edit] Secure HTTP
+There are three methods of establishing a secure HTTP connection: HTTP Secure, Secure Hypertext Transfer Protocol and the HTTP/1.1 Upgrade header. Browser support for the latter two is, however, nearly non-existent,[citation needed] so HTTP Secure is the dominant method of establishing a secure HTTP connection.
+[edit] Request message
+The request message consists of the following:
+
+A request line, for example GET /images/logo.png HTTP/1.1, which requests a resource called /images/logo.png from the server.
+Headers, such as Accept-Language: en
+An empty line.
+An optional message body.
+
+The request line and headers must all end with <CR><LF> (that is, a carriage return character followed by a line feed character). The empty line must consist of only <CR><LF> and no other whitespace.[19] In the HTTP/1.1 protocol, all headers except Host are optional.
+A request line containing only the path name is accepted by servers to maintain compatibility with HTTP clients before the HTTP/1.0 specification in RFC 1945.[20]
+[edit] Response message
+See also: HTTP response
+The response message consists of the following:
+
+A Status-Line (for example HTTP/1.1 200 OK, which indicates that the client's request succeeded)
+Headers, such as Content-Type: text/html
+An empty line
+An optional message body
+
+The Status-Line and headers must all end with <CR><LF> (a carriage return followed by a line feed). The empty line must consist of only <CR><LF> and no other whitespace.[19]
+[edit] Example session
+Below is a sample conversation between an HTTP client and an HTTP server running on www.example.com, port 80.
+[edit] Client request
+
+ GET /index.html HTTP/1.1
+ Host: www.example.com
+
+A client request (consisting in this case of the request line and only one header) is followed by a blank line, so that the request ends with a double newline, each in the form of a carriage return followed by a line feed. The "Host" header distinguishes between various DNS names sharing a single IP address, allowing name-based virtual hosting. While optional in HTTP/1.0, it is mandatory in HTTP/1.1.
+[edit] Server response
+
+ HTTP/1.1 200 OK
+ Date: Mon, 23 May 2005 22:38:34 GMT
+ Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)
+ Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
+ Etag: "3f80f-1b6-3e1cb03b"
+ Accept-Ranges:  none
+ Content-Length: 438
+ Connection: close
+ Content-Type: text/html; charset=UTF-8
+
+The ETag (entity tag) header is used to determine if a cached version of the requested resource is identical to the current version of the resource on the server. Content-Type specifies the Internet media type of the data conveyed by the HTTP message, while Content-Length indicates its length in bytes. The HTTP/1.1 webserver publishes its ability to respond to requests for certain byte ranges of the document by setting the header Accept-Ranges: bytes. This is useful, if the client needs to have only certain portions[21] of a resource sent by the server, which is called byte serving. When Connection: close is sent in a header, it means that the web server will close the TCP connection immediately after the transfer of this response.
+Most of the header lines are optional. When Content-Length is missing the length is determined in other ways. Chunked transfer encoding uses a chunk size of 0 to mark the end of the content. Identity encoding without Content-Length reads content until the socket is closed.
+A Content-Encoding like gzip can be used to compress the transmitted data.
+[edit] See also
+[edit] HTTP replacements or enhancements
+
+Representational State Transfer (REST)
+SPDY - A HTTP enhancement proposed by Google
+WebSocket
+Waka (protocol) - A HTTP replacement proposed by Roy Fielding
+HTTP-MPLEX - A backwards compatible enhancement to HTTP to improve page and web object retrieval time in congested networks proposed by Robert Mattson
+HTTP 2.0 - currently being worked on by the IETF's Hypertext Transfer Protocol Bis (httpbis) working group.[22]
+Constrained Application Protocol - A semantically similar protocol to HTTP but used UDP or UDP-like messages targeted for devices with limited processing capability. Re-uses HTTP and other internet concepts like Internet media type and web linking (RFC 5988).
+
+[edit] Further information
+
+Basic access authentication
+Content negotiation
+HTTP compression
+Hxxp
+
+[edit] Related topics and technologies
+
+Curl-loader - HTTP/S loading and testing open-source software
+Digest access authentication
+List of file transfer protocols
+List of HTTP header fields
+List of HTTP status codes
+Web cache
+WebDAV
+
+[edit] Notes
+
+
+^ a b c d e Fielding, Roy T.; Gettys, James; Mogul, Jeffrey C.; Nielsen, Henrik Frystyk; Masinter, Larry; Leach, Paul J.; Berners-Lee (June 1999). "RFC 2616: Hypertext Transfer Protocol -- HTTP/1.1". http://tools.ietf.org/html/rfc2616.
+^ Fielding, et al. Internet RFC 2616.", section 1.4. Retrieved on January 21, 2009.
+^ Berners-Lee, Tim. "HyperText Transfer Protocol". World Wide Web Consortium. http://www.w3.org/History/19921103-hypertext/hypertext/WWW/Protocols/HTTP.html. Retrieved 31 August 2010.
+^ Tim Berners-Lee. "The Original HTTP as defined in 1991". World Wide Web Consortium. http://www.w3.org/Protocols/HTTP/AsImplemented.html. Retrieved 24 July 2010.
+^ Raggett, Dave. "Dave Raggett's Bio". World Wide Web Consortium. http://www.w3.org/People/Raggett/profile.html. Retrieved 11 June 2010.
+^ Raggett, Dave; Berners-Lee, Tim. "Hypertext Transfer Protocol Working Group". World Wide Web Consortium. http://www.w3.org/Arena/webworld/httpwgcharter.html. Retrieved 29 September 2010.
+^ Raggett, Dave. "HTTP WG Plans". World Wide Web Consortium. http://www.w3.org/Arena/webworld/httpwgplans.html. Retrieved 29 September 2010.
+^ a b c Simon Spero. "Progress on HTTP-NG". World Wide Web Consortium. http://www.w3.org/Protocols/HTTP-NG/http-ng-status.html. Retrieved 11 June 2010.
+^ "HTTP/1.1". Webcom.com Glossary entry. http://www.webcom.com/glossary/http1.1.shtml. Retrieved 2009-05-29.
+^ Berners-Lee, Tim; Fielding, Roy T.; Nielsen, Henrik Frystyk. RFC 1945: Hypertext Transfer Protocol -- HTTP/1.0. http://tools.ietf.org/html/rfc1945.
+^ Jacobs, Ian (2004). "URIs, Addressability, and the use of HTTP GET and POST". Technical Architecture Group finding. W3C. http://www.w3.org/2001/tag/doc/whenToUseGet.html#checklist. Retrieved 26 September 2010.
+^ "RFC 2616: Hypertext Transfer Protocol -- HTTP/1.1 -- Section 9.5 POST". http://tools.ietf.org/html/rfc2616#section-9.5.
+^ "RFC 2616: Hypertext Transfer Protocol -- HTTP/1.1 -- Section 9.6 PUT". http://tools.ietf.org/html/rfc2616#section-9.6.
+^ "Vulnerability Note VU#150227: HTTP proxy default configurations allow arbitrary TCP connections". US-CERT. 2002-05-17. http://www.kb.cert.org/vuls/id/150227. Retrieved 2007-05-10.
+^ Dusseault, Lisa; Snell, James M.. "RFC 5789: PATCH Method for HTTP". http://tools.ietf.org/html/rfc5789.
+^ "HTTP 1.1 Section 5.1.1". Tools.ietf.org. http://tools.ietf.org/html/rfc2616#section-5.1.1. Retrieved 2010-08-01.
+^ "UrlScan Security Tool". Security TechCenter. Microsoft. http://technet.microsoft.com/en-us/security/cc242650.aspx. Retrieved 15 Jul 2012.
+^ "6.1 Status-Line". W3.org. http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1. Retrieved 2010-08-01.
+^ a b Fielding (June 1999). "HTTP/1.1". IETF. http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html. Retrieved 19 January 2012.
+^ "Apache Week. HTTP/1.1". http://www.apacheweek.com/features/http11. 090502 apacheweek.com
+^ Tools.ietf.org, Byte Range Retrieval Extension to HTTP
+^ "Hypertext Transfer Protocol Bis (httpbis) - Charter". IETF. 2012. https://datatracker.ietf.org/wg/httpbis/charter/.
+
+
+[edit] References
+
+HTTP 0.9 - As Implemented in 1991
+
+[edit] External links
+
+
+
+Wikimedia Commons has media related to: HTTP
+
+
+
+"Change History for HTTP". W3.org. http://www.w3.org/Protocols/History.html. Retrieved 2010-08-01. A detailed technical history of HTTP.
+"Design Issues for HTTP". W3.org. http://www.w3.org/Protocols/DesignIssues.html. Retrieved 2010-08-01. Design Issues by Berners-Lee when he was designing the protocol.
+"Classic HTTP Documents". W3.org. 1998-05-14. http://www.w3.org/Protocols/Classic.html. Retrieved 2010-08-01. list of other classic documents recounting the early protocol history
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Comparison of web server software
+
+
+
+
+
+
+ASP.NET
+
+
+
+IIS
+IIS Express
+
+
+
+
+
+
+
+
+C
+
+
+
+Apache
+Boa
+Cherokee
+Hiawatha
+Lighttpd
+Nginx
+Zeus
+
+
+
+
+
+
+
+
+Erlang
+
+
+
+Yaws
+
+
+
+
+
+
+
+
+Java
+
+
+
+GlassFish
+IBM WebSphere Application Server
+JBoss
+Jetty
+JOnAS
+Resin
+Tomcat
+
+
+
+
+
+
+
+
+Pike
+
+
+
+Caudium
+Roxen
+
+
+
+
+
+
+
+
+Python
+
+
+
+Zope
+
+
+
+
+
+
+
+
+Ruby
+
+
+
+Mongrel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Semantic Web
+
+
+
+
+
+
+Background
+
+
+
+Databases
+Hypertext
+Internet
+Ontologies
+Semantic networks
+World Wide Web
+
+
+
+
+
+
+
+
+Sub-topics
+
+
+
+Data Web
+Dataspaces
+Dereferenceable URIs
+Hyperdata
+Linked data
+Rule-based systems
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Semantic advertising
+Semantic analytics
+Semantic broker
+Semantic computing
+Semantic mapper
+Semantic matching
+Semantic publishing
+Semantic reasoner
+Semantic search
+Semantic service-oriented architecture
+Semantic wiki
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Collective intelligence
+Description logic
+Folksonomy
+Geotagging
+Information architecture
+Knowledge extraction
+Knowledge management
+Library 2.0
+Metadata
+Mind mapping
+ODBC
+References
+Topic Maps
+Web 2.0
+Web Science Trust
+
+
+
+
+
+
+
+
+Standards
+
+
+
+
+
+Syntax and supporting technologies
+
+
+
+
+HTTP
+RDF
+
+RDF/XML
+Notation3
+Turtle
+N-Triples
+
+
+SPARQL
+URI
+XML
+
+
+
+
+
+
+
+
+
+Schemas, ontologies and rules
+
+
+
+
+Common logic
+OWL
+RDFS
+Rule Interchange Format
+Semantic Web Rule Language
+
+
+
+
+
+
+
+
+
+Semantic annotation
+
+
+
+
+eRDF
+GRDDL
+Microformats
+RDFa
+SAWSDL
+
+
+
+
+
+
+
+
+
+Common vocabularies
+
+
+
+
+Dublin Core
+FOAF
+SIOC
+SKOS
+UMBEL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+URI scheme
+
+
+
+
+
+
+Official
+
+
+
+aaa
+aaas
+about
+acap
+cap
+cid
+crid
+data
+dav
+dict
+dns
+fax
+file
+ftp
+geo
+go
+gopher
+h323
+http
+https
+iax
+im
+imap
+info
+ldap
+mailto
+mid
+news
+nfs
+nntp
+pop
+rsync
+pres
+rtsp
+sip
+sips
+snmp
+tag
+tel
+telnet
+tftp
+urn
+view-source
+wais
+ws
+wss
+xmpp
+
+
+
+
+
+
+
+
+Unofficial
+
+
+
+afp
+aim
+apt
+bolo
+bzr
+callto
+coffee
+cvs
+daap
+dsnp
+ed2k
+feed
+fish
+gg
+git
+gizmoproject
+irc
+ircs
+itms
+javascript
+ldaps
+magnet
+mms
+msnim
+postal2
+secondlife
+skype
+spotify
+ssh
+svn
+sftp
+smb
+sms
+steam
+webcal
+winamp
+wyciwyg
+xfire
+ymsgr
+
+
+
+
+
+
+
+
+
+Protocol list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Web browsers
+
+
+
+
+
+
+
+
+
+Comparison
+History
+List (for Unix)
+Timeline
+Usage share
+
+
+
+
+
+
+
+
+
+
+
+
+
+Features
+
+
+
+
+Ad filtering
+Augmented browsing
+Download manager
+Cookies
+Favicon
+Incremental search
+Bookmarks (Bookmarklet
+Live bookmark
+Smart Bookmark)
+Browser security
+Privacy mode
+Browser synchronizer (comparison)
+Tabbed browsing
+Universal Edit Button
+Plugin
+Extension
+
+
+
+
+
+
+
+
+
+Web standards
+
+
+
+
+Acid tests
+Cascading Style Sheets
+HTML
+HTML5
+OCSP
+SVG
+XHTML
+WebGL
+JavaScript
+MathML
+
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+
+World Wide Web
+Widget
+Rich Internet application
+Site-specific browser
+Internet suite
+Mobile Web
+Offline reader
+BrowserChoice.eu
+Pwn2Own
+iLoo
+Man-in-the-browser
+WPAD
+PAC
+SPDY
+HTTP
+HTTPS
+SSL/TLS
+WebSocket
+XML
+CRL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Desktop
+
+
+
+
+
+
+
+
+
+
+
+Gecko-based
+
+
+
+
+AT&T Pogo
+Avant
+Camino
+Firefox (Epic
+Conkeror
+GNU IceCat
+Pale Moon
+Pentadactyl
+Timberwolf
+Swiftfox
+Swiftweasel
+TenFourFox
+Vimperator
+xB Browser)
+Galeon
+Ghostzilla
+K-Meleon
+Kazehakase
+Kirix Strata
+Lotus Symphony
+Lunascape
+Mozilla (Beonex Communicator
+Classilla
+Netscape
+SeaMonkey)
+
+
+
+
+
+
+
+
+
+WebKit-based
+
+
+
+
+Arora
+Avant
+Chromium (Chrome
+Dragon
+RockMelt
+SRWare Iron
+Yandex.Browser)
+Dooble
+Flock
+Fluid
+iCab
+Konqueror
+Lunascape
+Maxthon
+Midori
+OmniWeb
+Origyn Web Browser
+QupZilla
+rekonq
+Safari
+Shiira
+Sleipnir
+Uzbl
+Web
+WebPositive
+xombrero
+
+
+
+
+
+
+
+
+
+Presto-based
+
+
+
+
+Opera
+
+
+
+
+
+
+
+
+
+Trident-based
+
+
+
+
+AOL Explorer
+Avant
+Deepnet Explorer
+GreenBrowser
+Lunascape
+Maxthon
+MenuBox
+NeoPlanet
+NetCaptor
+Internet Explorer
+MediaBrowser
+Sleipnir
+SlimBrowser
+SpaceTime
+UltraBrowser
+WebbIE
+ZAC Browser
+
+
+
+
+
+
+
+
+
+Text-based
+
+
+
+
+ELinks
+Emacs/W3
+Line Mode Browser
+Links
+Lynx
+Net-Tamer
+w3m
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+abaco
+Amaya
+Arachne
+Arena
+Charon
+Dillo
+Gazelle
+IBM Home Page Reader
+IBrowse
+KidZui
+Mosaic
+Mothra
+NetPositive
+NetSurf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mobile
+
+
+
+
+
+
+
+
+
+
+
+Gecko-based
+
+
+
+
+Firefox for mobile
+MicroB
+Minimo
+
+
+
+
+
+
+
+
+
+Presto-based
+
+
+
+
+Nintendo DS & DSi Browser
+Opera Mini
+Opera Mobile
+
+
+
+
+
+
+
+
+
+WebKit-based
+
+
+
+
+Android Browser
+Chrome
+Dolphin Browser
+S60 web browser
+Safari
+Silk
+Nintendo 3DS Internet Browser
+Steel
+BOLT
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Blazer
+Deepfish
+Galio
+ibisBrowser
+Internet Explorer Mobile
+Iris Browser
+Konqueror Embedded
+NetFront
+Obigo Browser
+Skweezer
+Skyfire
+Teashark
+ThunderHawk
+UC Browser
+uZard Web
+Vision
+WinWAP
+BlackBerry Browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Television and video game console
+
+
+
+
+
+
+
+
+
+
+
+Gecko-based
+
+
+
+
+Kylo
+
+
+
+
+
+
+
+
+
+Presto-based
+
+
+
+
+Internet Channel
+
+
+
+
+
+
+
+
+
+WebKit-based
+
+
+
+
+Google TV
+NetFront
+Steam overlay
+Wii U Internet Browser
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Galio
+MSN TV (WebTV)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Software no longer in development shown in italics
+
+
+ Category
+Commons
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 22001/1000000
+Preprocessor generated node count: 64853/1500000
+Post-expand include size: 324064/2048000 bytes
+Template argument size: 182570/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 7/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:13443-0!*!0!!en!4!* and timestamp 20121224082912 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Hypertext_Transfer_Protocol&oldid=528832043"				
+ /printfooter 
+ catlinks 
+Categories: HTTPApplication layer protocolsOpen formatsWeb browsersWorld Wide WebWorld Wide Web Consortium standardsHidden categories: All articles with unsourced statementsArticles with unsourced statements from September 2010Articles with unsourced statements from August 2010Articles with unsourced statements from August 2008Articles with unsourced statements from July 2011Article Feedback 5 Additional Articles  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

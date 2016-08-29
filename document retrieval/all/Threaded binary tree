@@ -1,0 +1,204 @@
+
+Threaded binary tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article may need to be rewritten entirely to comply with Wikipedia's quality standards. You can help. The discussion page may contain suggestions. (October 2011) 
+
+
+
+
+
+
+A threaded tree, with the special threading links shown by dashed arrows
+
+
+A threaded binary tree defined as follows:
+
+"A binary tree is threaded by making all right child pointers that would normally be null point to the inorder successor of the node, and all left child pointers that would normally be null point to the inorder predecessor of the node."[1]
+
+A threaded binary tree makes it possible to traverse the values in the binary tree via a linear traversal that is more rapid than a recursive in-order traversal. It is also possible to discover the parent of a node from a threaded binary tree, without explicit use of parent pointers or a stack, albeit slowly. This can be useful where stack space is limited, or where a stack of parent pointers is unavailable (for finding the parent pointer via DFS).
+To see how this is possible, consider a node k that has a right child r. Then the left pointer of r must be either a child or a thread back to k. In the case that r has a left child, that left child must in turn have either a left child of its own or a thread back to k, and so on for all successive left children. So by following the chain of left pointers from r, we will eventually find a thread pointing back to k. The situation is symmetrically similar when q is the left child of pwe can follow q's right children to a thread pointing ahead to p.
+
+
+
+
+Contents
+
+
+1 Types of binary trees
+2 The array of Inorder traversal
+3 Example
+4 Null link
+5 Non recursive Inorder traversal for a Threaded Binary Tree
+
+5.1 Algorithm
+
+
+6 References
+7 External links
+
+
+
+
+[edit] Types of binary trees
+
+Single Threaded: each node is threaded towards either the inorder predecessor or successor.
+Double threaded: each node is threaded towards both the inorder predecessor and successor.
+
+In Python:
+
+
+
+def parent(node):
+    if node is node.tree.root:
+        return None
+    else:
+        x = node
+        y = node
+        while True:
+            if is_thread(y.right):
+                p = y.right
+                if p is None or p.left is not node:
+                    p = x
+                    while not is_thread(p.left):
+                        p = p.left
+                    p = p.left
+                return p
+            elif is_thread(x.left):
+                p = x.left
+                if p is None or p.right is not node:
+                    p = y
+                    while not is_thread(p.right):
+                        p = p.right
+                    p = p.right
+                return p
+            x = x.left
+            y = y.right
+
+
+[edit] The array of Inorder traversal
+Threads are reference to the predecessors and successors of the node according to an inorder traversal.
+Inorder of the threaded tree is ABCDEFGHI, the predecessor of E is D, the successor of E is F.
+
+[edit] Example
+
+Let's make the Threaded Binary tree out of a normal binary tree...
+
+The INORDER traversal for the above tree isD B A E C. So, the respective Threaded Binary tree will be --
+
+[edit] Null link
+An m-way threaded binary tree, there are n*m - (n-1) links are void in a tree with n nodes.
+[edit] Non recursive Inorder traversal for a Threaded Binary Tree
+As this is a non-recursive method for traversal, it has to be an iterative procedure; meaning, all the steps for the traversal of a node have to be under a loop so that the same can be applied to all the nodes in the tree. We will consider the INORDER traversal again. Here, for every node, we'll visit the left sub-tree (if it exists) first (if and only if we haven't visited it earlier); then we visit (i.e. print its value, in our case) the node itself and then the right sub-tree (if it exists). If the right sub-tree is not there, we check for the threaded link and make the threaded node the current node in consideration. Please, follow the example given below.
+
+[edit] Algorithm
+Step-1: For the current node check whether it has a left child which is not there in the visited list. If it has then go to step-2 or else step-3.
+Step-2: Put that left child in the list of visited nodes and make it your current node in consideration. Go to step-6.
+Step-3: For the current node check whether it has a right child. If it has then go to step-4 else go to step-5
+Step-4: Make that right child as your current node in consideration. Go to step-6.
+Step-5: Check for the threaded node and if its there make it your current node.
+Step-6: Go to step-1 if all the nodes are not over otherwise quit
+
+
+
+
+Li
+
+
+step-1
+'A' has a left child i.e. B, which has not been visited.So, we put B in our "list of visited nodes" and B becomes our current node in consideration.
+B
+
+
+
+
+step-2
+'B' also has a left child, 'D', which is not there in our list of visited nodes. So, we put 'D' in that list and make it our current node in consideration.
+B D
+
+
+
+
+step-3
+'D' has no left child, so we print 'D'. Then we check for its right child. 'D' has no right child and thus we check for its thread-link. It has a thread going till node 'B'. So, we make 'B' as our current node in consideration.
+B D
+D
+
+
+step-4
+'B' certainly has a left child but its already in our list of visited nodes. So, we print 'B'. Then we check for its right child but it doesn't exist. So, we make its threaded node (i.e. 'A') as our current node in consideration.
+B D
+D B
+
+
+step-5
+'A' has a left child, 'B', but its already there in the list of visited nodes. So, we print 'A'. Then we check for its right child. 'A' has a right child, 'C' and it's not there in our list of visited nodes. So, we add it to that list and we make it our current node in consideration.
+B D C
+D B A
+
+
+step-6
+'C' has 'E' as the left child and it's not there in our list of visited nodes even. So, we add it to that list and make it our current node in consideration.
+B D C E
+D B A
+
+
+step-7
+
+and finally.....
+D B A E C
+
+
+[edit] References
+
+
+^ Van Wyk, Christopher J. Data Structures and C Programs, Addison-Wesley, 1988, p. 175. ISBN 978-0-201-16116-8.
+
+
+[edit] External links
+
+Tutorial on threaded binary trees
+GNU libavl 2.0.2, Section on threaded binary search trees
+
+ 
+NewPP limit report
+Preprocessor visited node count: 444/1000000
+Preprocessor generated node count: 4605/1500000
+Post-expand include size: 3624/2048000 bytes
+Template argument size: 1348/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:4262609-0!*!0!!en!4!* and timestamp 20130122175510 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Threaded_binary_tree&oldid=528746728"				
+ /printfooter 
+ catlinks 
+Categories: Binary treesHidden categories: Wikipedia articles needing rewrite from October 2011Articles with example Python code  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

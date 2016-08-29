@@ -1,0 +1,77 @@
+
+Soft heap
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+For the Canterbury scene band, see Soft Heap.
+In computer science, a soft heap is a variant on the simple heap data structure that has constant amortized time for 5 types of operations. This is achieved by carefully "corrupting" (increasing) the keys of at most a certain fixed percentage of values in the heap. The constant time operations are:
+
+create(S): Create a new soft heap
+insert(S, x): Insert an element into a soft heap
+meld(S, S' ): Combine the contents of two soft heaps into one, destroying both
+delete(S, x): Delete an element from a soft heap
+findmin(S): Get the element with minimum key in the soft heap
+
+It was designed by Bernard Chazelle in 2000. The term "corruption" in the structure is the result of what Chazelle called "carpooling" in a soft heap. Each node in the soft heap contains a linked-list of keys and one common key. The common key is an upper bound on the values of the keys in the linked-list. Once a key is added to the linked-list, it is considered corrupted because its value is never again relevant in any of the soft heap operations: only the common keys are compared. It is unpredictable which keys will be corrupted in this manner; it is only known that at most a fixed percentage will be corrupted. This is what makes soft heaps "soft"; you can't be sure whether or not any particular value you put into it will be corrupted. The purpose of these corruptions is effectively to lower the information entropy of the data, enabling the data structure to break through information-theoretic barriers regarding heaps.
+Other heaps such as Fibonacci heaps achieve most of these bounds without any corruption, but cannot provide a constant-time bound on the critical delete operation. The percentage of values which are corrupted can be chosen freely, but the lower this is set, the more time insertions require (O(log 1/) for an error rate of ).
+[edit] Applications
+Surprisingly, soft heaps are useful in the design of deterministic algorithms, despite their unpredictable nature. They were used to achieve the best complexity to date for finding a minimum spanning tree. They can also be used to easily build an optimal selection algorithm, as well as near-sorting algorithms, which are algorithms that place every element near its final position, a situation in which insertion sort is fast.
+One of the simplest examples is the selection algorithm. Say we want to find the kth largest of a group of n numbers. First, we choose an error rate of 1/3; that is, at most 33% of the keys we insert will be corrupted. Now, we insert all n elements into the heap  at this point, at most n/3 keys are corrupted. Next, we delete the minimum element from the heap about n/3 times. Because this is decreasing the size of the heap, it cannot increase the number of corrupted elements. Thus there are still at most n/3 keys that are corrupted.
+Now at least 2n/3  n/3 = n/3 of the remaining keys are not corrupted, so each must be larger than every element we removed. Let L be the element that we have removed with the largest (actual) value, which is not necessarily the last element that we removed (because the last element we removed could have had its key corrupted, or increased, to a value larger than another element that we have already removed). L is larger than all the other n/3 elements that we removed and smaller than the remaining n/3 uncorrupted elements in the soft heap. Therefore, L divides the elements somewhere between 33%/66% and 66%/33%. We then partition the set about L using the partition algorithm from quicksort and apply the same algorithm again to either the set of numbers less than L or the set of numbers greater than L, neither of which can exceed 2n/3 elements. Since each insertion and deletion requires O(1) amortized time, the total deterministic time is T(n) = T(2n/3) + O(n). Using case 3 of the master theorem (with =1 and c=2/3), we know that T(n) = (n).
+The final algorithm looks like this:
+
+ function softHeapSelect(a[1..n], k)
+     if k = 1 then return minimum(a[1..n])
+     create(S)
+     for i from 1 to n
+         insert(S, a[i])
+     for i from 1 to n/3
+         x := findmin(S)
+         delete(S, x)
+     xIndex := partition(a, x)  // Returns new index of pivot x
+     if k < xIndex
+         softHeapSelect(a[1..xIndex-1], k)
+     else
+         softHeapSelect(a[xIndex..n], k-xIndex+1)
+
+[edit] References
+
+Chazelle, B. 2000. The soft heap: an approximate priority queue with optimal error rate. J. ACM 47, 6 (Nov. 2000), 1012-1027.
+Kaplan, H. and Zwick, U. 2009. A simpler implementation and analysis of Chazelle's soft heaps. In Proceedings of the Nineteenth Annual ACM -SIAM Symposium on Discrete Algorithms (New York, New York, January 46, 2009). Symposium on Discrete Algorithms. Society for Industrial and Applied Mathematics, Philadelphia, PA, 477-485.
+
+ 
+NewPP limit report
+Preprocessor visited node count: 24/1000000
+Preprocessor generated node count: 187/1500000
+Post-expand include size: 191/2048000 bytes
+Template argument size: 121/2048000 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:546678-0!*!0!!*!*!* and timestamp 20130122175514 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Soft_heap&oldid=471785392"				
+ /printfooter 
+ catlinks 
+Categories: Heaps (data structures)  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

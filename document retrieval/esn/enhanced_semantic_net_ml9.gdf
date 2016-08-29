@@ -1,0 +1,62 @@
+nodedef> name,label
+v0,benuve random variables
+v1,bias
+v2,bias variance trade-off
+v3,bias variance tradeoff
+v4,empirical risk minimization
+v5,epsilon hat
+v6,generalization error
+v7,learning theory
+v8,training error
+v9,variance
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,23.2826086957,true
+v0,v4,false,178.5,true
+v0,v5,false,9.5652173913,true
+v0,v6,false,4.6811594203,true
+v0,v7,false,134.869565217,true
+v1,v0,false,23.2826086957,true
+v1,v2,false,0.0,true
+v1,v3,false,1.23913043478,true
+v1,v6,false,51.5869565217,true
+v1,v7,false,158.869565217,true
+v1,v8,false,62.1739130435,true
+v1,v9,false,6.41304347826,true
+v2,v1,false,0.0,true
+v2,v9,false,0.95652173913,true
+v3,v1,false,1.23913043478,true
+v3,v6,false,13.8695652174,true
+v3,v8,false,10.2028985507,true
+v4,v0,false,178.5,true
+v4,v5,false,21.0434782609,true
+v4,v6,false,5.74879227053,true
+v4,v7,false,237.217391304,true
+v4,v8,false,3.2885375494,true
+v5,v0,false,1.59420289855,true
+v5,v4,false,21.0434782609,true
+v5,v6,false,15.3540372671,true
+v5,v8,false,2.74396135266,true
+v6,v0,false,14.0434782609,true
+v6,v1,false,51.5869565217,true
+v6,v3,false,27.7391304348,true
+v6,v4,false,17.2463768116,true
+v6,v5,false,30.7080745342,true
+v6,v7,false,14.347826087,true
+v6,v8,false,0.0,true
+v6,v9,false,73.9130434783,true
+v7,v0,false,134.869565217,true
+v7,v1,false,158.869565217,true
+v7,v4,false,237.217391304,true
+v7,v6,false,4.78260869567,true
+v7,v9,false,44.0,true
+v8,v1,false,62.1739130435,true
+v8,v3,false,30.6086956522,true
+v8,v4,false,19.7312252964,true
+v8,v5,false,8.23188405797,true
+v8,v6,false,0.0,true
+v8,v9,false,121.47826087,true
+v9,v1,false,1.06884057971,true
+v9,v2,false,0.95652173913,true
+v9,v6,false,73.9130434783,true
+v9,v7,false,44.0,true
+v9,v8,false,121.47826087,true

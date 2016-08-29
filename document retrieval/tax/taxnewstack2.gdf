@@ -1,0 +1,21 @@
+nodedef> name,label
+v0,computer science
+v1,data structure
+v2,function call
+v3,last in first out
+v4,linked list
+v5,non recursive algorithm
+v6,pop
+v7,push
+v8,recursive function
+v9,stack
+v10,top
+edgedef>node1,node2,directed,weight,labelvisible
+v1,v10,false,2.70833333333,true
+v3,v3,false,0,true
+v4,v10,false,9.04166666666,true
+v5,v10,false,16.2797619048,true
+v6,v6,false,0,true
+v7,v7,false,0,true
+v8,v10,false,9.95238095238,true
+v10,v9,false,0.0,true

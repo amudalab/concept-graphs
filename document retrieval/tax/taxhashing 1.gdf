@@ -1,0 +1,141 @@
+nodedef> name,label
+v0,2 choice hash
+v1,amortized time
+v2,array
+v3,array hash table
+v4,array resizing
+v5,associative array
+v6,average cost
+v7,b-tree
+v8,balanced search tree
+v9,binary search time
+v10,bit masking
+v11,bucket
+v12,cache
+v13,cache efficiency
+v14,cache line
+v15,cache miss
+v16,cache performance
+v17,chaining
+v18,chaining hash table
+v19,closed hash
+v20,clustering
+v21,coalesced hash
+v22,collision resolution
+v23,consistent hash
+v24,cpu caching
+v25,cryptographic hash function
+v26,cuckoo hash
+v27,data structure
+v28,database indexing
+v29,delete
+v30,disk based
+v31,disk based hashes
+v32,distributed hashes
+v33,double hash
+v34,dynamic array
+v35,dynamic perfect hash
+v36,dynamic resizing
+v37,empty bucket
+v38,external robin hash
+v39,finite automata
+v40,geometric resizing
+v41,hash bucket
+v42,hash collision
+v43,hash computation
+v44,hash consing
+v45,hash distribution
+v46,hash function
+v47,hash map
+v48,hash table
+v49,hash value
+v50,hopscotch hash
+v51,incremental resizing
+v52,insert
+v53,interpreted programming language
+v54,judy array
+v55,key
+v56,key value pair
+v57,linear probing
+v58,linked list
+v59,lisp interpreter
+v60,list
+v61,load factor
+v62,lookup
+v63,memory
+v64,memory allocator
+v65,memory fragmentation
+v66,memory usage
+v67,modulo reduction
+v68,multiplicative hash
+v69,open addressing
+v70,open hash
+v71,operating system
+v72,ordered list
+v73,perfect hash function
+v74,perfect hash table
+v75,perl
+v76,php
+v77,pointer
+v78,probe sequence
+v79,processor cache
+v80,python
+v81,quadratic probing
+v82,ruby
+v83,searching
+v84,self balancing tree
+v85,separate chaining
+v86,translation look aside buffer
+v87,unordered list
+v88,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v11,false,2.91666666667,true
+v1,v52,false,2.75,true
+v3,v3,false,0,true
+v5,v2,false,0.666666666667,true
+v6,v62,false,4.58333333333,true
+v7,v7,false,0,true
+v9,v9,false,0,true
+v10,v46,false,11.0,true
+v12,v13,false,0.0,true
+v13,v13,false,0,true
+v16,v13,false,0.0,true
+v18,v18,false,0,true
+v20,v49,false,1.83333333333,true
+v21,v17,false,4.58333333333,true
+v22,v63,false,0.916666666667,true
+v23,v27,false,6.41666666666,true
+v25,v25,false,0,true
+v26,v69,false,3.33333333333,true
+v28,v55,false,0.916666666667,true
+v29,v62,false,1.25,true
+v30,v27,false,1.83333333333,true
+v33,v42,false,0.916666666667,true
+v34,v2,false,2.32142857143,true
+v35,v35,false,0,true
+v36,v69,false,5.5,true
+v37,v11,false,0.833333333333,true
+v38,v38,false,0,true
+v40,v40,false,0,true
+v41,v41,false,0,true
+v45,v61,false,10.0833333333,true
+v47,v47,false,0,true
+v48,v46,false,0.0,true
+v50,v46,false,2.75,true
+v51,v51,false,0,true
+v56,v55,false,0.0,true
+v57,v17,false,5.5,true
+v58,v60,false,0.916666666667,true
+v64,v64,false,0,true
+v67,v67,false,0,true
+v72,v72,false,0,true
+v74,v46,false,0.833333333333,true
+v75,v46,false,2.75,true
+v77,v61,false,2.75,true
+v78,v17,false,2.75,true
+v79,v79,false,0,true
+v82,v46,false,1.83333333333,true
+v83,v11,false,1.83333333333,true
+v84,v84,false,0,true
+v85,v17,false,0.121212121212,true
+v88,v17,false,4.16666666667,true

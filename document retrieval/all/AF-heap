@@ -1,0 +1,79 @@
+
+AF-heap
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+In computer science, the AF-heap is a type of priority queue for integer data, an extension of the fusion tree using an atomic heap proposed by M. L. Fredman and D. E. Willard.[1]
+Using an AF-heap, it is possible to perform m insert or decrease-key operations and n delete-min operations on machine-integer keys in time O(m + n log n / log log n). This allows Dijkstra's algorithm to be performed in the same O(m + n log n / log log n) time bound on graphs with n edges and m vertices, and leads to a linear time algorithm for minimum spanning trees, with the assumption for both problems that the edge weights of the input graph are machine integers in the transdichotomous model.
+[edit] See Also
+
+Fusion tree
+
+[edit] References
+
+^ M. L. Fredman and D. E. Willard. Trans-dichotomous algorithms for minimum spanning trees and shortest paths. Journal of Computer and System Sciences 48, 533-551 (1994)
+
+
+
+
+This algorithms or data structures-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+This combinatorics-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 441/1000000
+Preprocessor generated node count: 1574/1500000
+Post-expand include size: 7590/2048000 bytes
+Template argument size: 1124/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:1857196-0!*!0!!*!4!* and timestamp 20130123084815 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=AF-heap&oldid=492491393"				
+ /printfooter 
+ catlinks 
+Categories: Heaps (data structures)Priority queuesAlgorithms and data structures stubsCombinatorics stubsHidden categories: WikiProject Computer science stubs  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

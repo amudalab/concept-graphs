@@ -1,0 +1,19 @@
+nodedef> name,label
+v0,array
+v1,binary search
+v2,data structure
+v3,data type
+v4,hash function
+v5,hash table
+v6,hashing
+v7,integer
+v8,level
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v0,false,0,true
+v2,v3,false,7.5,true
+v3,v0,false,3.0,true
+v4,v3,false,11.0,true
+v5,v3,false,7.5,true
+v6,v3,false,11.0,true
+v7,v3,false,0.0,true
+v8,v8,false,0,true

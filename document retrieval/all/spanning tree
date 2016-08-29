@@ -1,0 +1,105 @@
+
+Spanning tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+For the protocol used to prevent forwarding loops on a LAN, see Spanning Tree Protocol.
+
+
+
+
+A spanning tree (blue heavy edges) of a grid graph
+
+
+In the mathematical field of graph theory, a spanning tree T of a connected, undirected graph G is a tree composed of all the vertices and some (or perhaps all) of the edges of G. Informally, a spanning tree of G is a selection of edges of G that form a tree spanning every vertex. That is, every vertex lies in the tree, but no cycles (or loops) are formed. On the other hand, every bridge of G must belong to T.
+A spanning tree of a connected graph G can also be defined as a maximal set of edges of G that contains no cycle, or as a minimal set of edges that connect all vertices.
+In certain fields of graph theory it is often useful to find a minimum spanning tree of a weighted graph. Other optimization problems on spanning trees have also been studied, including the maximum spanning tree, the minimum tree that spans at least k vertices, the minimum spanning tree with at most k edges per vertex degree-constrained spanning tree, the spanning tree with the largest number of leaves (closely related to the smallest connected dominating set), the spanning tree with the fewest leaves (closely related to the Hamiltonian path problem), the minimum diameter spanning tree, and the minimum dilation spanning tree.
+
+
+
+
+Contents
+
+
+1 Fundamental cycles
+2 Spanning forests
+3 Counting spanning trees
+4 Uniform spanning trees
+5 Algorithms
+6 See also
+7 References
+
+
+
+
+[edit] Fundamental cycles
+Adding just one edge to a spanning tree will create a cycle; such a cycle is called a fundamental cycle. There is a distinct fundamental cycle for each edge; thus, there is a one-to-one correspondence between fundamental cycles and edges not in the spanning tree. For a connected graph with V vertices, any spanning tree will have V-1 edges, and thus, a graph of E edges will have E-V+1 fundamental cycles. For any given spanning tree these cycles form a basis for the cycle space.
+Dual to the notion of a fundamental cycle is the notion of a fundamental cutset. By deleting just one edge of the spanning tree, the vertices are partitioned into two disjoint sets. The fundamental cutset is defined as the set of edges that must be removed from the graph G to accomplish the same partition. Thus, there are precisely V-1 fundamental cutsets for the graph, one for each edge of the spanning tree.
+The duality between fundamental cutsets and fundamental cycles is established by noting that cycle edges not in the spanning tree can only appear in the cutsets of the other edges in the cycle; and vice versa: edges in a cutset can only appear in those cycles containing the edge corresponding to the cutset.
+[edit] Spanning forests
+A spanning forest is a type of subgraph that generalises the concept of a spanning tree. However, there are two definitions in common use. One is that a spanning forest is a subgraph that consists of a spanning tree in each connected component of a graph. (Equivalently, it is a maximal cycle-free subgraph.) This definition is common in computer science and optimization. It is also the definition used when discussing minimum spanning forests, the generalization to disconnected graphs of minimum spanning trees. Another definition, common in graph theory, is that a spanning forest is any subgraph that is both a forest (contains no cycles) and spanning (includes every vertex).
+[edit] Counting spanning trees
+
+
+
+
+Cayley's formula counts the number of spanning trees on a complete graph. There are  trees in ,  trees in , and  trees in .
+
+
+The number t(G) of spanning trees of a connected graph is a well-studied invariant. In some cases, it is easy to calculate t(G) directly. For example, if G is itself a tree, then t(G)=1, while if G is the cycle graph  with n vertices, then t(G)=n. For any graph G, the number t(G) can be calculated using Kirchhoff's matrix-tree theorem (follow the link for an explicit example using the theorem).
+Cayley's formula is a formula for the number of spanning trees in the complete graph  with n vertices. The formula states that . Another way of stating Cayley's formula is that there are exactly  labelled trees with n vertices. Cayley's formula can be proved using Kirchhoff's matrix-tree theorem or via the Prfer code.
+If G is the complete bipartite graph , then , while if G is the n-dimensional hypercube graph , then . These formulae are also consequences of the matrix-tree theorem.
+If G is a multigraph and e is an edge of G, then the number t(G) of spanning trees of G satisfies the deletion-contraction recurrence t(G)=t(G-e)+t(G/e), where G-e is the multigraph obtained by deleting e and G/e is the contraction of G by e, where multiple edges arising from this contraction are not deleted.
+[edit] Uniform spanning trees
+A spanning tree chosen randomly from among all the spanning trees with equal probability is called a uniform spanning tree (UST). This model has been extensively researched in probability and mathematical physics.
+[edit] Algorithms
+The classic spanning tree algorithm, depth-first search (DFS), is due to Robert Tarjan. Another important algorithm is based on breadth-first search (BFS).
+Parallel algorithms typically take different approaches than BFS or DFS. Halperin and Zwick designed an optimal randomized parallel algorithm that runs in O(log n) time with high probability on EREW PRAM.[1] The Shiloach-Vishkin algorithm, due to Yossi Shiloach and Uzi Vishkin, is the basis for many parallel implementations.[2] Bader and Cong's algorithm is shown to run fast in practice on a variety of graphs.[3]
+The most common distributed algorithm is the Spanning Tree Protocol, used by OSI link layer devices to create a spanning tree using the existing links as the source graph in order to avoid broadcast storms.
+[edit] See also
+
+Minimum Spanning Tree
+
+[edit] References
+
+Eppstein, David (1999). "Spanning trees and spanners". Handbook of Computational Geometry. Elsevier. pp.425461. http://www.ics.uci.edu/~eppstein/pubs/Epp-TR-96-16.pdf.
+Garey, Michael R.; Johnson, David S. (1979). Computers and Intractability: A Guide to the Theory of NP-Completeness. W.H. Freeman. ISBN0-7167-1045-5. A2.1: ND2, pg.206.
+Wu, Bang Ye; Chao, Kun-Mao (2004). Spanning Trees and Optimization Problems. CRC Press. ISBN1-58488-436-3.
+Gabow, Harold N.; Myers, Eugene W. (1978). "Finding All Spanning Trees of Directed and Undirected Graphs". SIAM J. Comput. 7 (280). http://link.aip.org/link/?SMJCAT/7/280/1.
+
+ 
+NewPP limit report
+Preprocessor visited node count: 2212/1000000
+Preprocessor generated node count: 18724/1500000
+Post-expand include size: 8873/2048000 bytes
+Template argument size: 4013/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:455770-0!0!0!!en!4!* and timestamp 20130112105207 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Spanning_tree&oldid=527756935"				
+ /printfooter 
+ catlinks 
+Categories: Spanning treeComputational problems in graph theory  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

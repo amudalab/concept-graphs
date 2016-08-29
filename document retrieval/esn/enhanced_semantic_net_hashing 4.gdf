@@ -1,0 +1,441 @@
+nodedef> name,label
+v0,algorithms
+v1,amortized analysis
+v2,arrays
+v3,associative arrays
+v4,avalanche effect
+v5,bit masking
+v6,bits
+v7,bloom filter
+v8,bucket
+v9,caches
+v10,chaining
+v11,chaining hash table
+v12,chaining implementations
+v13,chaining tables
+v14,chains
+v15,chi-squared test
+v16,clustering
+v17,coalesced hashing
+v18,collision rates
+v19,collision resolution
+v20,complexity
+v21,computer programming
+v22,consistent hashing
+v23,cryptographic hash function
+v24,cuckoo hashing
+v25,data compression
+v26,data structure
+v27,database
+v28,delete
+v29,disk based hashes
+v30,distributed hashes
+v31,double hashing
+v32,dynamic arrays
+v33,dynamic perfect hashing
+v34,external storage
+v35,graph
+v36,hash bucket
+v37,hash function
+v38,hash implementation
+v39,hash map
+v40,hash table
+v41,hash values
+v42,incremental doubling
+v43,index
+v44,internal storage
+v45,keys
+v46,last-come-first-served hashing
+v47,linear probing
+v48,linearly probed hash tables
+v49,linked list
+v50,load factors
+v51,memory
+v52,open addressed hash tables
+v53,open addressing
+v54,perfect hash table
+v55,perfect hashing
+v56,probabilistic hashing
+v57,probing
+v58,quadratic probing
+v59,searching
+v60,self balancing binary search trees
+v61,self balancing tree
+v62,sets
+v63,single-slot stepping
+v64,time-critical operations
+v65,universal hash function
+v66,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v10,false,15.0119047619,true
+v0,v17,false,9.28571428571,true
+v0,v23,false,32.5,true
+v0,v26,false,1.85714285714,true
+v0,v27,false,3.85714285714,true
+v0,v37,false,8.90476190476,true
+v0,v40,false,1.85714285714,true
+v0,v43,false,4.64285714286,true
+v0,v51,false,84.8571428571,true
+v0,v57,false,0.928571428571,true
+v1,v40,false,20.5714285714,true
+v2,v3,false,0.928571428571,true
+v2,v9,false,1.85714285714,true
+v2,v10,false,2.78571428572,true
+v2,v26,false,3.71428571429,true
+v2,v32,false,0.928571428571,true
+v2,v40,false,0.928571428571,true
+v2,v45,false,13.9285714286,true
+v2,v62,false,0.928571428571,true
+v3,v2,false,0.154761904762,true
+v3,v26,false,1.85714285714,true
+v3,v40,false,7.28571428571,true
+v4,v6,false,18.5714285714,true
+v4,v37,false,3.71428571429,true
+v5,v6,false,6.5,true
+v5,v40,false,6.5,true
+v6,v4,false,18.5714285714,true
+v6,v5,false,6.5,true
+v6,v8,false,2.78571428571,true
+v6,v37,false,113.142857143,true
+v6,v40,false,57.5714285714,true
+v6,v41,false,12.9523809524,true
+v6,v45,false,286.928571429,true
+v6,v56,false,81.7142857143,true
+v7,v37,false,6.5,true
+v7,v40,false,7.42857142857,true
+v8,v6,false,2.78571428571,true
+v8,v36,false,0.928571428571,true
+v8,v37,false,10.2142857143,true
+v8,v38,false,22.2857142857,true
+v8,v40,false,2.78571428571,true
+v8,v43,false,0.857142857143,true
+v8,v45,false,4.71428571429,true
+v8,v65,false,5.57142857143,true
+v9,v2,false,0.619047619047,true
+v9,v62,false,1.85714285714,true
+v10,v0,false,90.0714285714,true
+v10,v2,false,16.7142857143,true
+v10,v11,false,0.0974025974026,true
+v10,v12,false,0.0,true
+v10,v13,false,0.0,true
+v10,v16,false,8.57142857143,true
+v10,v17,false,4.64285714286,true
+v10,v19,false,7.42857142857,true
+v10,v34,false,6.5,true
+v10,v35,false,13.9285714286,true
+v10,v40,false,0.0,true
+v10,v41,false,180.142857143,true
+v10,v47,false,1.85714285714,true
+v10,v50,false,3.71428571429,true
+v10,v51,false,2.57142857143,true
+v10,v53,false,2.34126984127,true
+v10,v55,false,8.35714285714,true
+v10,v57,false,11.1428571429,true
+v10,v66,false,6.5,true
+v11,v10,false,0.0162337662338,true
+v11,v14,false,7.42857142857,true
+v11,v37,false,1.85714285714,true
+v11,v40,false,20.9523809524,true
+v11,v49,false,3.71428571429,true
+v11,v50,false,11.1428571429,true
+v12,v10,false,0.0,true
+v12,v13,false,25.0714285714,true
+v13,v10,false,0.0,true
+v13,v12,false,25.0714285714,true
+v14,v11,false,7.42857142857,true
+v14,v16,false,8.35714285714,true
+v14,v17,false,3.71428571429,true
+v14,v26,false,5.57142857143,true
+v14,v49,false,2.78571428571,true
+v14,v53,false,7.42857142857,true
+v15,v40,false,9.28571428571,true
+v15,v41,false,1.39285714286,true
+v16,v10,false,1.42857142857,true
+v16,v14,false,8.35714285714,true
+v16,v21,false,7.42857142857,true
+v16,v31,false,5.5,true
+v16,v37,false,4.09523809524,true
+v16,v40,false,5.57142857143,true
+v16,v45,false,4.64285714286,true
+v16,v50,false,4.64285714286,true
+v16,v53,false,5.57142857143,true
+v16,v57,false,10.2142857143,true
+v17,v0,false,9.28571428571,true
+v17,v10,false,1.54761904762,true
+v17,v14,false,3.71428571429,true
+v17,v53,false,0.309523809523,true
+v18,v32,false,10.2142857143,true
+v18,v40,false,13.0,true
+v19,v10,false,7.42857142857,true
+v19,v37,false,24.8571428571,true
+v19,v40,false,22.2857142857,true
+v19,v41,false,30.6428571429,true
+v19,v43,false,48.2857142857,true
+v19,v45,false,0.619047619048,true
+v19,v50,false,21.3571428571,true
+v20,v23,false,7.42857142857,true
+v20,v40,false,3.03571428571,true
+v20,v66,false,15.7857142857,true
+v21,v16,false,7.42857142857,true
+v21,v37,false,29.7142857143,true
+v22,v29,false,4.64285714286,true
+v22,v37,false,21.3571428571,true
+v23,v0,false,32.5,true
+v23,v20,false,7.42857142857,true
+v23,v37,false,0.857142857143,true
+v24,v45,false,3.71428571429,true
+v24,v46,false,5.57142857143,true
+v24,v56,false,1.85714285714,true
+v24,v66,false,0.928571428572,true
+v25,v40,false,5.57142857143,true
+v25,v59,false,4.64285714286,true
+v26,v0,false,1.85714285714,true
+v26,v2,false,3.71428571429,true
+v26,v3,false,1.85714285714,true
+v26,v14,false,5.57142857143,true
+v26,v27,false,3.42857142857,true
+v26,v37,false,9.42857142857,true
+v26,v39,false,3.71428571429,true
+v26,v40,false,4.01785714286,true
+v26,v45,false,3.71428571429,true
+v26,v49,false,6.5,true
+v26,v51,false,0.928571428571,true
+v26,v53,false,11.1428571429,true
+v26,v60,false,3.71428571429,true
+v26,v66,false,14.5714285714,true
+v27,v0,false,3.85714285714,true
+v27,v26,false,0.571428571428,true
+v27,v40,false,78.9285714286,true
+v27,v43,false,9.28571428571,true
+v28,v49,false,4.64285714286,true
+v28,v53,false,7.42857142857,true
+v28,v59,false,0.309523809523,true
+v28,v63,false,18.5714285714,true
+v29,v22,false,4.64285714286,true
+v29,v30,false,3.71428571429,true
+v30,v29,false,0.619047619048,true
+v30,v40,false,9.28571428571,true
+v31,v16,false,0.916666666667,true
+v31,v37,false,16.7142857143,true
+v31,v57,false,12.8571428571,true
+v32,v2,false,0.154761904762,true
+v32,v18,false,10.2142857143,true
+v33,v45,false,2.78571428571,true
+v33,v55,false,0.928571428571,true
+v34,v10,false,2.16666666667,true
+v34,v35,false,2.78571428571,true
+v34,v47,false,10.2142857143,true
+v34,v53,false,8.64285714286,true
+v35,v10,false,6.9642857143,true
+v35,v34,false,0.464285714285,true
+v36,v8,false,0.928571428571,true
+v36,v45,false,4.64285714286,true
+v37,v0,false,8.90476190476,true
+v37,v4,false,3.71428571429,true
+v37,v6,false,113.142857143,true
+v37,v7,false,6.5,true
+v37,v8,false,10.2142857143,true
+v37,v11,false,1.85714285714,true
+v37,v16,false,4.09523809524,true
+v37,v19,false,24.8571428571,true
+v37,v21,false,29.7142857143,true
+v37,v22,false,21.3571428571,true
+v37,v23,false,0.857142857143,true
+v37,v26,false,9.42857142857,true
+v37,v31,false,16.7142857143,true
+v37,v40,false,0.0,true
+v37,v41,false,31.25,true
+v37,v45,false,23.0476190476,true
+v37,v47,false,9.28571428571,true
+v37,v50,false,5.5,true
+v37,v51,false,11.1428571429,true
+v37,v53,false,12.4285714286,true
+v37,v60,false,26.0,true
+v37,v65,false,0.928571428571,true
+v37,v66,false,12.0714285714,true
+v38,v8,false,22.2857142857,true
+v38,v45,false,15.7857142857,true
+v39,v26,false,3.71428571429,true
+v39,v40,false,3.71428571429,true
+v40,v0,false,1.85714285714,true
+v40,v1,false,20.5714285714,true
+v40,v2,false,0.928571428571,true
+v40,v3,false,7.28571428571,true
+v40,v5,false,6.5,true
+v40,v6,false,57.5714285714,true
+v40,v7,false,7.42857142857,true
+v40,v8,false,2.78571428571,true
+v40,v10,false,0.0,true
+v40,v11,false,20.9523809524,true
+v40,v15,false,9.28571428571,true
+v40,v16,false,5.57142857143,true
+v40,v18,false,13.0,true
+v40,v19,false,22.2857142857,true
+v40,v20,false,3.03571428571,true
+v40,v25,false,5.57142857143,true
+v40,v26,false,4.01785714286,true
+v40,v27,false,78.9285714286,true
+v40,v30,false,9.28571428571,true
+v40,v37,false,0.0,true
+v40,v39,false,3.71428571429,true
+v40,v42,false,6.5,true
+v40,v43,false,3.0,true
+v40,v44,false,11.1428571429,true
+v40,v45,false,12.3095238095,true
+v40,v48,false,1.85714285714,true
+v40,v49,false,6.42857142857,true
+v40,v50,false,25.2857142857,true
+v40,v51,false,6.17142857143,true
+v40,v52,false,2.35714285714,true
+v40,v53,false,3.57142857143,true
+v40,v54,false,0.928571428571,true
+v40,v55,false,4.11428571429,true
+v40,v57,false,14.8571428571,true
+v40,v59,false,7.42857142857,true
+v40,v60,false,9.16666666667,true
+v40,v63,false,2.78571428571,true
+v40,v64,false,8.35714285714,true
+v40,v66,false,8.21428571429,true
+v41,v6,false,12.9523809524,true
+v41,v10,false,30.0238095238,true
+v41,v15,false,8.35714285714,true
+v41,v19,false,30.6428571429,true
+v41,v37,false,31.25,true
+v41,v42,false,11.1428571429,true
+v41,v43,false,2.78571428571,true
+v41,v45,false,46.4285714286,true
+v42,v40,false,6.5,true
+v42,v41,false,11.1428571429,true
+v43,v0,false,4.64285714286,true
+v43,v8,false,0.857142857143,true
+v43,v19,false,48.2857142857,true
+v43,v27,false,9.28571428571,true
+v43,v40,false,3.0,true
+v43,v41,false,2.78571428571,true
+v43,v45,false,19.7142857143,true
+v44,v40,false,11.1428571429,true
+v44,v50,false,26.9285714286,true
+v44,v51,false,4.64285714286,true
+v44,v53,false,0.309523809523,true
+v45,v2,false,13.9285714286,true
+v45,v6,false,286.928571429,true
+v45,v8,false,4.71428571429,true
+v45,v16,false,4.64285714286,true
+v45,v19,false,3.71428571429,true
+v45,v24,false,3.71428571429,true
+v45,v26,false,3.71428571429,true
+v45,v33,false,2.78571428571,true
+v45,v36,false,4.64285714286,true
+v45,v37,false,23.0476190476,true
+v45,v38,false,15.7857142857,true
+v45,v40,false,12.3095238095,true
+v45,v41,false,46.4285714286,true
+v45,v43,false,19.7142857143,true
+v45,v55,false,5.57142857143,true
+v45,v57,false,21.3571428571,true
+v46,v24,false,0.928571428572,true
+v46,v53,false,4.64285714286,true
+v47,v10,false,0.309523809523,true
+v47,v34,false,10.2142857143,true
+v47,v37,false,9.28571428571,true
+v47,v53,false,5.57142857143,true
+v47,v57,false,0.642857142857,true
+v47,v59,false,37.1428571429,true
+v48,v40,false,1.85714285714,true
+v48,v50,false,68.7142857143,true
+v49,v11,false,3.71428571429,true
+v49,v14,false,2.78571428571,true
+v49,v26,false,6.5,true
+v49,v28,false,4.64285714286,true
+v49,v40,false,6.42857142857,true
+v49,v51,false,13.9285714286,true
+v49,v59,false,1.85714285714,true
+v49,v61,false,4.64285714286,true
+v50,v10,false,0.619047619048,true
+v50,v11,false,11.1428571429,true
+v50,v16,false,4.64285714286,true
+v50,v19,false,21.3571428571,true
+v50,v37,false,5.5,true
+v50,v40,false,25.2857142857,true
+v50,v44,false,26.9285714286,true
+v50,v48,false,68.7142857143,true
+v50,v51,false,28.7857142857,true
+v50,v53,false,20.4285714286,true
+v50,v57,false,25.0714285714,true
+v51,v0,false,84.8571428571,true
+v51,v10,false,0.428571428572,true
+v51,v26,false,0.928571428571,true
+v51,v37,false,11.1428571429,true
+v51,v40,false,6.17142857143,true
+v51,v44,false,4.64285714286,true
+v51,v49,false,13.9285714286,true
+v51,v50,false,28.7857142857,true
+v51,v53,false,1.71428571429,true
+v51,v64,false,30.6428571429,true
+v52,v40,false,2.35714285714,true
+v52,v60,false,5.57142857143,true
+v53,v10,false,0.390211640212,true
+v53,v14,false,7.42857142857,true
+v53,v16,false,5.57142857143,true
+v53,v17,false,1.85714285714,true
+v53,v26,false,11.1428571429,true
+v53,v28,false,7.42857142857,true
+v53,v34,false,8.64285714286,true
+v53,v37,false,12.4285714286,true
+v53,v40,false,3.57142857143,true
+v53,v44,false,1.85714285714,true
+v53,v46,false,4.64285714286,true
+v53,v47,false,5.57142857143,true
+v53,v50,false,20.4285714286,true
+v53,v51,false,1.71428571429,true
+v53,v57,false,7.32142857143,true
+v54,v40,false,0.928571428571,true
+v54,v55,false,7.42857142857,true
+v55,v10,false,8.35714285714,true
+v55,v33,false,0.928571428571,true
+v55,v40,false,4.11428571429,true
+v55,v45,false,0.928571428572,true
+v55,v54,false,7.42857142857,true
+v55,v66,false,7.42857142857,true
+v56,v6,false,81.7142857143,true
+v56,v24,false,1.85714285714,true
+v57,v0,false,0.928571428571,true
+v57,v10,false,1.85714285715,true
+v57,v16,false,10.2142857143,true
+v57,v31,false,12.8571428571,true
+v57,v40,false,14.8571428571,true
+v57,v45,false,21.3571428571,true
+v57,v47,false,0.642857142857,true
+v57,v50,false,25.0714285714,true
+v57,v53,false,7.32142857143,true
+v57,v58,false,5.57142857143,true
+v57,v59,false,1.85714285714,true
+v58,v57,false,0.928571428572,true
+v59,v25,false,4.64285714286,true
+v59,v28,false,1.85714285714,true
+v59,v40,false,7.42857142857,true
+v59,v47,false,37.1428571429,true
+v59,v49,false,1.85714285714,true
+v59,v57,false,1.85714285714,true
+v60,v26,false,0.619047619048,true
+v60,v37,false,26.0,true
+v60,v40,false,9.16666666667,true
+v60,v52,false,5.57142857143,true
+v61,v49,false,4.64285714286,true
+v61,v66,false,6.5,true
+v62,v2,false,0.309523809524,true
+v62,v9,false,1.85714285714,true
+v63,v28,false,18.5714285714,true
+v63,v40,false,2.78571428571,true
+v64,v40,false,8.35714285714,true
+v64,v51,false,30.6428571429,true
+v65,v8,false,5.57142857143,true
+v65,v37,false,0.928571428571,true
+v66,v10,false,1.08333333333,true
+v66,v20,false,15.7857142857,true
+v66,v24,false,5.57142857143,true
+v66,v26,false,14.5714285714,true
+v66,v37,false,12.0714285714,true
+v66,v40,false,8.21428571429,true
+v66,v55,false,7.42857142857,true
+v66,v61,false,6.5,true

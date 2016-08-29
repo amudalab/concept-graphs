@@ -1,0 +1,471 @@
+nodedef> name,label
+v0,2 choice hash
+v1,abstract data type
+v2,abstract model
+v3,algorithms
+v4,amortized analysis
+v5,amortized time
+v6,ancestor
+v7,arithmetic expression
+v8,array
+v9,array based stack
+v10,array hash table
+v11,array implementation
+v12,array resizing
+v13,associative array
+v14,avalanche effect
+v15,average cost
+v16,b-tree
+v17,balanced binary tree
+v18,balanced search tree
+v19,big oh notation
+v20,binary heap
+v21,binary search
+v22,binary search time
+v23,binary search tree
+v24,binary tree
+v25,bit masking
+v26,bits
+v27,bloom filter
+v28,breadth-first search
+v29,bucket
+v30,cache
+v31,cache efficiency
+v32,cache line
+v33,cache miss
+v34,cache performance
+v35,catch block
+v36,chaining
+v37,chaining hash table
+v38,chaining implementations
+v39,chaining tables
+v40,chains
+v41,chi-squared test
+v42,children
+v43,closed hash
+v44,closed hashing
+v45,clustering
+v46,coalesced hash
+v47,coalesced hashing
+v48,collision rates
+v49,collision resolution
+v50,complete binary tree
+v51,complexity
+v52,compression map
+v53,computer programming
+v54,computer science
+v55,consistent hash
+v56,consistent hashing
+v57,constructor method
+v58,cpu caching
+v59,cryptographic hash function
+v60,cuckoo hash
+v61,cuckoo hashing
+v62,data compression
+v63,data structure
+v64,data type
+v65,database
+v66,database indexing
+v67,decision tree
+v68,degree
+v69,delete
+v70,deletion
+v71,depth
+v72,dictionary
+v73,dictionary abstract data type
+v74,directed graph
+v75,disk based
+v76,disk based hashes
+v77,distributed hashes
+v78,divide and conquer
+v79,double hash
+v80,double hashing
+v81,dynamic array
+v82,dynamic perfect hash
+v83,dynamic perfect hashing
+v84,dynamic resizing
+v85,edge
+v86,empty bucket
+v87,euler walk
+v88,eulers rule
+v89,exception
+v90,extended binary tree
+v91,external node
+v92,external robin hash
+v93,external storage
+v94,fibonacci hashing
+v95,find
+v96,finite automata
+v97,full binary tree
+v98,function call
+v99,generic method
+v100,generic type
+v101,geometric resizing
+v102,graph
+v103,growth strategy
+v104,hash bucket
+v105,hash code map
+v106,hash collision
+v107,hash computation
+v108,hash consing
+v109,hash distribution
+v110,hash function
+v111,hash implementation
+v112,hash map
+v113,hash table
+v114,hash value
+v115,hashing
+v116,height
+v117,hierarchy
+v118,hopscotch hash
+v119,incremental doubling
+v120,incremental resizing
+v121,index
+v122,inorder traversal
+v123,insert
+v124,insertion
+v125,integer
+v126,internal node
+v127,internal storage
+v128,interpreted programming language
+v129,iterative procedure
+v130,java
+v131,java virtual machine
+v132,judy array
+v133,k-ary tree
+v134,key
+v135,key element pair
+v136,key value pair
+v137,last in first out
+v138,last-come-first-served hashing
+v139,leaf
+v140,left child
+v141,left subtree
+v142,level
+v143,level-order traversal
+v144,linear
+v145,linear congruential
+v146,linear congruential generator
+v147,linear hashing
+v148,linear probing
+v149,linearly probed hash tables
+v150,linked list
+v151,linked stacks
+v152,lisp interpreter
+v153,list
+v154,load factor
+v155,logarithmic time
+v156,lookup
+v157,memory
+v158,memory allocation
+v159,memory allocator
+v160,memory fragmentation
+v161,memory usage
+v162,modulo reduction
+v163,multiplicative hash
+v164,node
+v165,non recursive algorithm
+v166,object
+v167,open addressed hash tables
+v168,open addressing
+v169,open hash
+v170,open hashing
+v171,operating system
+v172,ordered dictionaries
+v173,ordered list
+v174,ordered tree
+v175,ordering relation
+v176,parent
+v177,parent class
+v178,perfect binary tree
+v179,perfect hash function
+v180,perfect hash table
+v181,perfect hashing
+v182,perl
+v183,php
+v184,pointer
+v185,polynomial accumulation
+v186,pop
+v187,postorder traversal
+v188,preorder traversal
+v189,probabilistic hashing
+v190,probe sequence
+v191,probing
+v192,processor cache
+v193,programming
+v194,push
+v195,python
+v196,quadratic probing
+v197,random number generator
+v198,recursive definition
+v199,recursive function
+v200,recursive procedure
+v201,regular push
+v202,rehash strategy
+v203,right child
+v204,right subtree
+v205,root
+v206,rooted binary tree
+v207,rooted tree
+v208,ruby
+v209,running time
+v210,search
+v211,search time
+v212,searching
+v213,self balancing binary search trees
+v214,self balancing tree
+v215,separate chaining
+v216,sets
+v217,sibling
+v218,simple uniform function
+v219,single-slot stepping
+v220,size
+v221,sorting
+v222,special push
+v223,stack
+v224,stack empty exception
+v225,stack full exception
+v226,stack implementation
+v227,stack interface
+v228,subtrees
+v229,super class
+v230,tight strategy
+v231,time-critical operations
+v232,top
+v233,total order
+v234,translation look aside buffer
+v235,tree
+v236,tree traversal
+v237,try block
+v238,unbounded tree
+v239,universal hash function
+v240,universal hashing
+v241,unordered list
+v242,vertex
+v243,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v86,false,4.45054945055,true
+v1,v223,false,3.60622710623,true
+v2,v147,false,48.4835164835,true
+v3,v63,false,1.98901098901,true
+v4,v180,false,24.7197802198,true
+v5,v69,false,5.46153846154,true
+v6,v176,false,18.0311355311,true
+v7,v164,false,15.9120879121,true
+v9,v1,false,5.58424908425,true
+v10,v13,false,0.972527472527,true
+v11,v1,false,36.4249084249,true
+v12,v10,false,0.0,true
+v13,v8,false,0.972527472527,true
+v14,v59,false,4.96153846154,true
+v15,v156,false,5.43956043956,true
+v16,v215,false,9.94505494505,true
+v17,v50,false,1.7967032967,true
+v18,v159,false,4.97252747252,true
+v19,v37,false,36.7326007326,true
+v20,v63,false,3.97802197802,true
+v22,v55,false,13.9230769231,true
+v23,v24,false,6.88461538462,true
+v25,v29,false,9.94505494506,true
+v26,v29,false,2.98351648352,true
+v27,v59,false,7.94505494506,true
+v28,v228,false,10.9395604396,true
+v30,v33,false,0.0,true
+v31,v215,false,1.98901098901,true
+v32,v31,false,1.31135531136,true
+v33,v31,false,0.0,true
+v34,v215,false,1.98901098901,true
+v35,v89,false,16.3996003996,true
+v37,v36,false,0.32967032967,true
+v38,v37,false,0.32967032967,true
+v39,v37,false,0.32967032967,true
+v40,v150,false,2.98351648352,true
+v41,v114,false,8.95054945055,true
+v42,v24,false,5.42307692308,true
+v43,v104,false,11.9230769231,true
+v44,v150,false,2.98351648352,true
+v45,v110,false,3.96703296704,true
+v46,v36,false,4.97252747253,true
+v47,v40,false,3.97802197802,true
+v48,v81,false,10.9395604396,true
+v49,v157,false,0.994505494505,true
+v50,v24,false,0.802197802198,true
+v51,v113,false,4.15659340659,true
+v52,v113,false,35.2054945055,true
+v53,v45,false,7.95604395604,true
+v54,v24,false,6.92307692308,true
+v55,v63,false,6.96153846154,true
+v56,v159,false,7.95604395604,true
+v57,v223,false,11.8681318681,true
+v58,v159,false,15.9120879121,true
+v59,v110,false,0.983516483516,true
+v60,v168,false,3.95604395604,true
+v61,v134,false,3.97802197802,true
+v62,v212,false,4.97252747253,true
+v64,v153,false,14.7967032967,true
+v65,v63,false,3.95604395604,true
+v66,v13,false,1.98901098901,true
+v67,v50,false,10.3095238095,true
+v68,v70,false,9.05128205128,true
+v69,v156,false,1.48351648352,true
+v70,v164,false,2.62271062271,true
+v71,v24,false,1.98901098901,true
+v73,v80,false,5.94505494506,true
+v74,v50,false,6.76923076923,true
+v75,v63,false,1.98901098901,true
+v76,v159,false,2.98351648352,true
+v77,v63,false,5.94505494505,true
+v78,v38,false,27.2637362638,true
+v79,v36,false,1.98901098901,true
+v80,v115,false,0.972527472527,true
+v81,v113,false,3.97802197802,true
+v82,v86,false,6.95604395604,true
+v83,v181,false,0.994505494505,true
+v84,v168,false,5.96703296703,true
+v85,v178,false,9.41758241758,true
+v86,v29,false,0.989010989011,true
+v87,v7,false,13.8461538462,true
+v88,v70,false,7.59523809524,true
+v89,v223,false,6.69047619048,true
+v90,v50,false,3.05860805861,true
+v91,v42,false,0.994505494505,true
+v92,v86,false,29.8296703297,true
+v93,v37,false,7.29120879121,true
+v94,v147,false,1.98901098901,true
+v95,v156,false,3.47252747253,true
+v96,v10,false,3.97802197802,true
+v97,v24,false,0.972527472527,true
+v98,v9,false,8.9010989011,true
+v99,v24,false,2.98351648352,true
+v100,v130,false,2.98351648352,true
+v101,v13,false,1.96703296703,true
+v102,v37,false,10.2747252747,true
+v103,v1,false,11.5622710623,true
+v104,v86,false,1.97802197802,true
+v105,v110,false,14.9175824176,true
+v106,v36,false,0.994505494505,true
+v107,v38,false,3.97802197802,true
+v108,v180,false,23.8571428571,true
+v109,v184,false,13.9230769231,true
+v111,v13,false,19.8901098901,true
+v112,v13,false,4.93406593406,true
+v114,v29,false,3.97252747253,true
+v116,v24,false,4.35294117647,true
+v117,v70,false,30.9304029304,true
+v118,v113,false,2.98351648352,true
+v119,v13,false,8.92857142857,true
+v120,v69,false,0.994505494505,true
+v121,v29,false,0.989010989011,true
+v122,v24,false,5.96703296703,true
+v123,v168,false,0.994505494505,true
+v124,v24,false,0.989010989011,true
+v125,v8,false,5.96703296703,true
+v126,v24,false,2.97802197802,true
+v127,v106,false,4.95604395604,true
+v128,v195,false,4.97252747252,true
+v129,v200,false,10.163003663,true
+v130,v223,false,9.57326007326,true
+v131,v100,false,2.98351648352,true
+v132,v10,false,0.994505494505,true
+v133,v50,false,4.73626373627,true
+v135,v147,false,19.8021978022,true
+v136,v13,false,2.98351648352,true
+v137,v186,false,5.96703296703,true
+v138,v47,false,6.96153846154,true
+v139,v24,false,4.97252747253,true
+v140,v164,false,2.96703296703,true
+v141,v24,false,2.98351648352,true
+v142,v164,false,4.22087912088,true
+v143,v178,false,5.77472527472,true
+v144,v184,false,4.97252747253,true
+v145,v197,false,6.96153846154,true
+v146,v197,false,6.96153846154,true
+v147,v80,false,1.96703296703,true
+v148,v157,false,2.98351648352,true
+v149,v13,false,3.95604395604,true
+v151,v1,false,14.5457875458,true
+v152,v180,false,18.8846153846,true
+v155,v178,false,12.8791208791,true
+v158,v159,false,7.95604395604,true
+v159,v49,false,0.994505494505,true
+v160,v159,false,0.0,true
+v161,v159,false,0.0,true
+v162,v25,false,3.97802197802,true
+v163,v45,false,8.95054945055,true
+v165,v31,false,11.8901098901,true
+v166,v9,false,12.3626373626,true
+v167,v13,false,4.91758241758,true
+v169,v38,false,9.32267732267,true
+v170,v80,false,3.69560439561,true
+v171,v159,false,3.97802197802,true
+v172,v23,false,11.9340659341,true
+v173,v86,false,6.95604395604,true
+v174,v50,false,6.95204795205,true
+v175,v147,false,47.4945054945,true
+v176,v24,false,2.98351648352,true
+v177,v224,false,22.7637362637,true
+v178,v50,false,1.79120879121,true
+v179,v239,false,4.66208791209,true
+v180,v13,false,2.95054945055,true
+v181,v134,false,3.97802197802,true
+v182,v113,false,2.98351648352,true
+v183,v195,false,1.98901098901,true
+v184,v154,false,2.98351648352,true
+v185,v113,false,161.507692308,true
+v186,v153,false,1.98901098901,true
+v187,v24,false,12.4285714286,true
+v188,v24,false,3.46153846154,true
+v189,v136,false,5.96703296703,true
+v190,v148,false,2.98351648352,true
+v191,v63,false,2.98351648352,true
+v192,v215,false,2.98351648352,true
+v193,v1,false,14.5347985348,true
+v194,v153,false,6.1717032967,true
+v195,v182,false,0.994505494505,true
+v196,v159,false,10.3846153846,true
+v197,v115,false,82.184065934,true
+v198,v97,false,2.98351648352,true
+v199,v31,false,8.92307692307,true
+v200,v21,false,4.94505494505,true
+v201,v194,false,5.78571428571,true
+v202,v147,false,3.97802197802,true
+v203,v24,false,5.96153846154,true
+v204,v122,false,2.98351648352,true
+v205,v24,false,2.98351648352,true
+v206,v50,false,1.79120879121,true
+v207,v42,false,1.98901098901,true
+v208,v113,false,1.98901098901,true
+v209,v178,false,21.6606334842,true
+v210,v36,false,11.9340659341,true
+v211,v136,false,7.41758241758,true
+v212,v29,false,1.98901098901,true
+v213,v63,false,3.97802197802,true
+v214,v212,false,6.96153846154,true
+v215,v36,false,1.36663336663,true
+v216,v13,false,1.96703296703,true
+v217,v24,false,9.9065934066,true
+v218,v184,false,21.8791208791,true
+v219,v13,false,4.95054945055,true
+v220,v232,false,1.98901098901,true
+v221,v104,false,4.96703296703,true
+v222,v194,false,4.86263736264,true
+v224,v89,false,2.98351648352,true
+v225,v1,false,9.62637362638,true
+v226,v1,false,7.57326007326,true
+v227,v1,false,6.02380952381,true
+v228,v205,false,2.98351648352,true
+v229,v89,false,17.9010989011,true
+v230,v223,false,10.9395604396,true
+v231,v13,false,10.9175824176,true
+v232,v153,false,5.84615384615,true
+v233,v72,false,45.9032967033,true
+v234,v159,false,11.9340659341,true
+v235,v24,false,0.0,true
+v236,v24,false,8.31318681319,true
+v237,v57,false,18.8956043956,true
+v238,v70,false,8.58974358974,true
+v239,v59,false,1.97802197802,true
+v240,v115,false,6.60164835165,true
+v241,v31,false,9.21245421246,true
+v242,v24,false,3.97802197802,true
+v243,v36,false,5.57326007326,true

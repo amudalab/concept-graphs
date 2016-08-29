@@ -1,0 +1,289 @@
+
+SPQR tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from SPQR-tree)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+A graph and its SPQR tree.
+
+
+In graph theory, a branch of mathematics, the triconnected components of a biconnected graph are a system of smaller graphs that describe all of the 2-vertex cuts in the graph. An SPQR tree is a tree data structure used in computer science, and more specifically graph algorithms, to represent the triconnected components of a graph. The SPQR tree of a graph may be constructed in linear time[1] and has several applications in dynamic graph algorithms and graph drawing.
+The basic structures underlying the SPQR tree, the triconnected components of a graph, and the connection between this decomposition and the planar embeddings of a planar graph, were first investigated by Saunders Mac Lane(1937); these structures were used in efficient algorithms by several other researchers[2] prior to their formalization as the SPQR tree by Di Battista and Tamassia(1989, 1990, 1996).
+
+
+
+
+Contents
+
+
+1 Structure
+2 Finding 2-vertex cuts
+3 Embeddings of planar graphs
+4 See also
+5 Notes
+6 References
+7 External links
+
+
+
+
+[edit] Structure
+An SPQR tree takes the form of an unrooted tree in which for each node x there is associated an undirected graph or multigraph Gx. The node, and the graph associated with it, may have one of four types, given the initials SPQR:
+
+In an S node, the associated graph is a cycle graph with three or more vertices and edges. This case is analogous to series composition in series-parallel graphs; the S stands for "series".[3]
+In a P node, the associated graph is a dipole graph, a multigraph with two vertices and three or more edges, the planar dual to a cycle graph. This case is analogous to parallel composition in series-parallel graphs; the P stands for "parallel".[3]
+In a Q node, the associated graph has a single edge. This trivial case is necessary to handle the graph that has only one edge, but does not appear in the SPQR trees of more complex graphs.
+In an R node, the associated graph is a 3-connected graph that is not a cycle or dipole. The R stands for "rigid": in the application of SPQR trees in planar graph embedding, the associated graph of an R node has a unique planar embedding.[3]
+
+Each edge xy between two nodes of the SPQR tree is associated with two directed virtual edges, one of which is an edge in Gx and the other of which is an edge in Gy. Each edge in a graph Gx may be a virtual edge for at most one SPQR tree edge.
+An SPQR tree T represents a 2-connected graph GT, formed as follows. Whenever SPQR tree edge xy associates the virtual edge ab of Gx with the virtual edge cd of Gy, form a single larger graph by merging a and c into a single supervertex, merging b and d into another single supervertex, and deleting the two virtual edges. That is, the larger graph is the 2-clique-sum of Gx and Gy. Performing this gluing step on each edge of the SPQR tree produces the graph GT; the order of performing the gluing steps does not affect the result. Each vertex in one of the graphs Gx may be associated in this way with a unique vertex in GT, the supervertex into which it was merged.
+Typically, it is not allowed within an SPQR tree for two S nodes to be adjacent, nor for two P nodes to be adjacent, because if such an adjacency occurred the two nodes could be merged into a single larger node. With this assumption, the SPQR tree is uniquely determined from its graph. When a graph G is represented by an SPQR tree with no adjacent P nodes and no adjacent S nodes, then the graphs Gx associated with the nodes of the SPQR tree are known as the triconnected components of G.
+[edit] Finding 2-vertex cuts
+With the SPQR tree of a graph G (without Q nodes) it is straightforward to find every pair of vertices u and v in G such that removing u and v from G leaves a disconnected graph, and the connected components of the remaining graphs:
+
+The two vertices u and v may be the two endpoints of a virtual edge in the graph associated with an R node, in which case the two components are represented by the two subtrees of the SPQR tree formed by removing the corresponding SPQR tree edge.
+The two vertices u and v may be the two vertices in the graph associated with a P node that has two or more virtual edges. In this case the components formed by the removal of u and v are the represented by subtrees of the SPQR tree, one for each virtual edge in the node.
+The two vertices u and v may be two vertices in the graph associated with an S node such that either u and v are not adjacent, or the edge uv is virtual. If the edge is virtual, then the pair (u,v) also belongs to a node of type P and R and the components are as described above. If the two vertices are not adjacent then the two components are represented by two paths of the cycle graph associated with the S node and with the SPQR tree nodes attached to those two paths.
+
+[edit] Embeddings of planar graphs
+If a planar graph is 3-connected, it has a unique planar embedding up to the choice of which face is the outer face and of orientation of the embedding: the faces of the embedding are exactly the nonseparating cycles of the graph. However, for a planar graph (with labeled vertices and edges) that is 2-connected but not 3-connected, there may be greater freedom in finding a planar embedding. Specifically, whenever two nodes in the SPQR tree of the graph are connected by a pair of virtual edges, it is possible to flip the orientation of one of the nodes relative to the other one. Additionally, in a P node of the SPQR tree, the different parts of the graph connected to virtual edges of the P node may be arbitrarily permuted. All planar representations may be described in this way.
+[edit] See also
+
+GomoryHu tree, a different tree structure that characterizes the edge connectivity of a graph
+
+[edit] Notes
+
+
+^ Hopcroft & Tarjan (1973); Gutwenger & Mutzel (2001).
+^ E.g., Hopcroft & Tarjan (1973) and Bienstock & Monma (1988), both of which are cited as precedents by Di Battista and Tamassia.
+^ a b c Di Battista & Tamassia (1989).
+
+
+[edit] References
+
+Bienstock, Daniel; Monma, Clyde L. (1988), "On the complexity of covering vertices by faces in a planar graph", SIAM Journal on Computing 17 (1): 5376, doi:10.1137/0217004.
+Di Battista, Giuseppe; Tamassia, Roberto (1989), "Incremental planarity testing", Proc. 30th Annual Symposium on Foundations of Computer Science, pp.436441, doi:10.1109/SFCS.1989.63515.
+Di Battista, Giuseppe; Tamassia, Roberto (1990), "On-line graph algorithms with SPQR-trees", Proc. 17th International Colloquium on Automata, Languages and Programming, Lecture Notes in Computer Science, 443, Springer-Verlag, pp.598611, doi:10.1007/BFb0032061.
+Di Battista, Giuseppe; Tamassia, Roberto (1996), "On-line planarity testing", SIAM Journal on Computing 25 (5): 956997, doi:10.1137/S0097539794280736, http://cs.brown.edu/research/pubs/pdfs/1996/DiBattista-1996-OPT.pdf.
+Gutwenger, Carsten; Mutzel, Petra (2001), "A linear time implementation of SPQR-trees", Proc. 8th International Symposium on Graph Drawing (GD 2000), Lecture Notes in Computer Science, 1984, Springer-Verlag, pp.7790, doi:10.1007/3-540-44541-2_8.
+Hopcroft, John; Tarjan, Robert (1973), "Dividing a graph into triconnected components", SIAM Journal on Computing 2 (3): 135158, doi:10.1137/0202012.
+Mac Lane, Saunders (1937), "A structural characterization of planar combinatorial graphs", Duke Mathematical Journal 3 (3): 460472, doi:10.1215/S0012-7094-37-00336-3.
+
+[edit] External links
+
+SQPR tree implementation in the Open Graph Drawing Framework.
+The tree of the triconnected components Java implementation in the jBPT library (see TCTree class).
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 6120/1000000
+Preprocessor generated node count: 28722/1500000
+Post-expand include size: 50051/2048000 bytes
+Template argument size: 13012/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:11220797-0!*!0!!en!4!* and timestamp 20130122175507 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=SPQR_tree&oldid=532446851"				
+ /printfooter 
+ catlinks 
+Categories: Trees (data structures)Graph connectivityGraph data structures  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

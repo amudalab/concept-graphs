@@ -1,0 +1,29 @@
+nodedef> name,label
+v0,bosk constraint
+v1,box constraint
+v2,coordinate assent
+v3,galcean kernel
+v4,idea of kernels
+v5,kernel
+v6,kernel function
+v7,l1 norm soft margin svm
+v8,mercer kernels
+v9,optimization problem
+v10,smo algorithm
+v11,support vector machine
+v12,svm optimization problem
+v13,valid kernel
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v12,false,88.8888888889,true
+v1,v10,false,58.7407407407,true
+v2,v10,false,81.4814814815,true
+v3,v11,false,30.054466231,true
+v4,v5,false,51.4036725802,true
+v6,v11,false,19.2592592593,true
+v7,v11,false,66.5925925925,true
+v8,v11,false,33.6470588236,true
+v9,v5,false,79.6840958606,true
+v10,v5,false,64.8851540617,true
+v11,v5,false,26.5359477125,true
+v12,v11,false,54.074074074,true
+v13,v11,false,26.5359477125,true

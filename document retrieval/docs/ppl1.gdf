@@ -1,0 +1,126 @@
+nodedef> name,label
+v0,accurate succinct finitary representation
+v1,algorithm
+v2,assembly language
+v3,compilation
+v4,computational process
+v5,data structure
+v6,distributed language
+v7,finitary representation
+v8,finitary specification
+v9,first order logic
+v10,functional language
+v11,history of programming language
+v12,imperative language
+v13,infinitary object
+v14,machine
+v15,machine language
+v16,object oriented language
+v17,parallel language
+v18,programming language
+v19,propositional logic
+v20,sequential language
+v21,stored program concept
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v7,false,1.81818181818,true
+v0,v13,false,95.4545454545,true
+v1,v4,false,33.9545454545,true
+v1,v8,false,14.5454545455,true
+v1,v9,false,61.3636363636,true
+v1,v13,false,27.2045454545,true
+v1,v14,false,10.9090909091,true
+v1,v15,false,86.3636363636,true
+v1,v18,false,22.3484848485,true
+v1,v19,false,27.2727272727,true
+v2,v12,false,47.2727272727,true
+v2,v14,false,2.04545454545,true
+v2,v18,false,8.18181818182,true
+v3,v4,false,120.0,true
+v3,v16,false,10.0,true
+v4,v1,false,33.9545454545,true
+v4,v3,false,120.0,true
+v4,v6,false,9.09090909091,true
+v4,v9,false,60.9090909091,true
+v4,v13,false,12.2727272727,true
+v4,v14,false,33.9545454545,true
+v4,v15,false,60.9090909091,true
+v4,v18,false,18.8181818182,true
+v5,v14,false,18.1818181818,true
+v5,v18,false,10.0,true
+v6,v4,false,9.09090909091,true
+v6,v17,false,25.7727272727,true
+v6,v20,false,20.0,true
+v7,v0,false,1.81818181818,true
+v7,v9,false,28.6363636364,true
+v7,v13,false,4.09090909091,true
+v7,v14,false,23.6363636364,true
+v7,v18,false,4.5,true
+v8,v1,false,14.5454545455,true
+v8,v9,false,17.696969697,true
+v8,v13,false,13.9090909091,true
+v8,v18,false,62.5227272727,true
+v9,v1,false,61.3636363636,true
+v9,v4,false,60.9090909091,true
+v9,v7,false,28.6363636364,true
+v9,v8,false,17.696969697,true
+v9,v13,false,81.8181818182,true
+v9,v14,false,175.454545455,true
+v9,v18,false,32.7272727273,true
+v10,v12,false,4.77272727273,true
+v10,v16,false,105.454545455,true
+v10,v18,false,22.7272727273,true
+v10,v20,false,87.2727272727,true
+v11,v16,false,54.5454545455,true
+v11,v18,false,1.81818181818,true
+v12,v2,false,47.2727272727,true
+v12,v10,false,4.77272727273,true
+v12,v18,false,21.8181818182,true
+v13,v0,false,95.4545454545,true
+v13,v1,false,27.2045454545,true
+v13,v4,false,12.2727272727,true
+v13,v7,false,4.09090909091,true
+v13,v8,false,13.9090909091,true
+v13,v9,false,81.8181818182,true
+v13,v14,false,39.2727272727,true
+v13,v18,false,32.7272727273,true
+v13,v19,false,11.8181818182,true
+v14,v1,false,10.9090909091,true
+v14,v2,false,2.04545454545,true
+v14,v4,false,33.9545454545,true
+v14,v5,false,18.1818181818,true
+v14,v7,false,23.6363636364,true
+v14,v9,false,175.454545455,true
+v14,v13,false,39.2727272727,true
+v14,v15,false,0.0,true
+v14,v18,false,3.20909090909,true
+v14,v21,false,34.7727272727,true
+v15,v1,false,86.3636363636,true
+v15,v4,false,60.9090909091,true
+v15,v14,false,0.0,true
+v15,v18,false,8.18181818182,true
+v16,v3,false,10.0,true
+v16,v10,false,105.454545455,true
+v16,v11,false,54.5454545455,true
+v16,v18,false,164.545454545,true
+v17,v6,false,25.7727272727,true
+v17,v20,false,19.6363636364,true
+v18,v1,false,22.3484848485,true
+v18,v2,false,8.18181818182,true
+v18,v4,false,18.8181818182,true
+v18,v5,false,10.0,true
+v18,v7,false,4.5,true
+v18,v8,false,62.5227272727,true
+v18,v9,false,32.7272727273,true
+v18,v10,false,22.7272727273,true
+v18,v11,false,1.81818181818,true
+v18,v12,false,21.8181818182,true
+v18,v13,false,32.7272727273,true
+v18,v14,false,3.20909090909,true
+v18,v15,false,8.18181818182,true
+v18,v16,false,164.545454545,true
+v19,v1,false,27.2727272727,true
+v19,v13,false,11.8181818182,true
+v20,v6,false,20.0,true
+v20,v10,false,87.2727272727,true
+v20,v17,false,19.6363636364,true
+v21,v14,false,34.7727272727,true

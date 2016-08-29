@@ -1,0 +1,662 @@
+Conceptual Design
+
+hello um in today secession we would be looking at an important concept in the design of databases namely what is called as the conceptual design of databases using model called the entity relationship or the ER model 
+
+now you might have heard somewhere that databases today are based around the relational model rate where the the fundamental aspect of the building block of a database or tables
+
+so where does this ER model coming to the picture and what is its relevants and why do we need um something like an ER modeling for databases
+
+so in order to answer that question let us begin with looking at a small um [noise] description of what a typical database design process looks like 
+
+um this is just a simplified representation of what a database um design process looks like um 
+
+
+however um this this captures the gist of most database design process 
+
+whenever we talk about databases we should always remember that databases are always um embedded within some kind of an application context and this is called the information system within which the database is embedded ok
+
+so a databases could be embedded within um um for example for a banking solution the databases could could be embedded within railway reservation solution there could be a embedded within a university setup a company whatever ok
+
+now whatever this this setup is it this context or the information system context is what is called as a UoD or or the universe of discourse 
+
+the universe of discourse basically tells us what are the building block that make up this context within which this database is going to be run ok 
+
+now generally when we talk about designing a database system we first talk about um looking in to the Uo UoD and collecting requirements from the UoD
+
+we have to make an analysis of the UoD saying for example suppose you want to build databases for for a bank we have to first identify or we have to first understand how does the bank conduct its operations what kinds of  um operations do they have and what are their rules what are their norms and um what identifies a correct operations from an incorrect operation and so on ok 
+
+and that is going to give us two kinds of um requirements the the first is what is called as database requirements or you might also term it as data requirements and the second is what is called as a functional requirements  
+
+now as you might have imagine that database requirements are handled by DBMS or the database management system ok
+
+however a DBMS by itself is not a complete solution 
+
+to give you an analogy DBMS is something like an engine ok 
+
+now we can’t just have an engine we have to build a car around it or we have to build a bus or whatever it is around it ok
+
+so this this layering around the database system is what is called as the application programming or or the information system
+
+so the functional requirements go to go into designing the application program or the larger information system with in which the database is going to be ok 
+
+now [noise] continuing with this process um we take the database requirements and come out with a first level or or what we called as a high-level conceptual design 
+
+we have to first understand how the how this database requirements look like what are the different data elements and how are they related 
+ 
+we need to first understand in a way or rather represent it in a way that is that is understandable by human beings rather than computers 
+
+we have to first understand the solution problems first before we um give it to the computer right 
+
+so um so database requirements um go into what is called as the conceptual design and the the output of the conceptual design is what is called as the conceptual schema ok
+
+now this conceptual schema is what we are going to be taking up today in more um in more detail ok
+
+but um going on with the process itself let us take let us see what happens with the functional requirements ok 
+
+so functional requirements also go through a similar um [noise] similar process where you do functional analysis you analyze what are the different functions
+
+if it is a bank um [noise] what are the different functions opening an account is a function [noise] or or making a bank transfer is a function 
+
+now what are the constrains that that holdup these functions what is a correct function what is an incorrect function and so on ok
+
+so once this functional analysis are made we get what are called as high-level transaction specifications
+
+infact we will be revisiting this topic called transactions as a separate module where um we will see that um um [noise] many times we need to club different operations of the database into one logical unit or what we called as a transaction ok
+
+now transactions are what are going are the building blocks of the functional requirements or the or or the functional ana analysis of the information system 
+
+now you can also see down here that all of these until now all of these are DBMS independent process ok 
+
+so what is meant by DBMS independent process it means that doesn’t matter whether you are using an oracle database or an IBM db two database or a MYSQL or postgres or whatever it is you will have to look at the UoD you you will have to understand your UoD you have to come out with a conceptual design which has a which has no way relevant to the actual implementation which the which the DBMS does and you have you have to do a functional analysis ok which is completely independent of the DBMS that we are using [noise]
+
+next comes um the DBMS dependent um processes ok 
+
+so we ended up with the conceptual schema previously in the in the database stream you can say that there are two different streams of a process is happening one is the database stream and the the other is the functional stream or the application stream ok 
+
+
+
+so in the database stream we had ended up with the conceptual schema 
+
+now the conceptual schema in turn is um should be transferred in to what is called as a physical design ok
+
+now what is physical design the physical design actually um tells you how the the how the data itself resides on the database on the computer ok 
+
+so obviously this is a DBMS dependent process ok 
+
+so the way even though there are many standards um that that exists now 
+
+the way that let us say oracle stores its um data would be different from the way db two stores its data ok
+
+even though there the due to some standards there there are going to be slight variations ok
+
+so this physical design results in what is called as an internal schema or or the the schema which actually should goes into the DBMS ok
+
+and similarly the the high-level transactions specifications that we are talked about are also going to impact the physical design of the database 
+
+i mean um um um suppose certain kinds of operation have to be performed together it makes sense to design them near to one another so to say 
+
+let me just use the word in um slightly lose fashion here to one another so that um it becomes easier to handle transactions on ok
+
+so you get inputs both from the conceptual schema and from the high-level transaction specs in order to make your physical design of the database 
+
+similarly the the um application stream goes of in to into application program design and transaction implementation finally the application software ok
+
+so um under from all this now we are going concern hassles in this section with just one aspect of this entire process that we looked at namely the the conceptual schema ok
+
+now what is a conceptual schema and why is it important for database design [noise] ok
+
+
+
+so let us um have some observations about what is a conceptual schema 
+
+we just know saw that the conceptual schema is a is an outcome of the high-level conceptual design of a database ok
+
+so this is one of the first things we are going to do we are going to understand or UoD or the or the universe of discourse 
+
+it tells us what kinds of data that the the UoD is going to handle and based on this we are going to come out with a high-level design ok
+
+so it’s a very concise description of the data requirements what kinds of um requirements to to [noise] do users need and how are the data related between one another and so on 
+
+again let me take a brief examples suppose you are building banking solution ok um one of the first things that you are going to note is that in a bank there should be accounts there should be customers there should be um um customers or account holders or whatever you called them ok
+
+and um there should be of course monitory transactions and there should be some kinds of logs and ledgers and account books and so on ok
+
+so all of these represents some kinds of data elements ok 
+
+and a a very high-level conceptual [noise] design would identify each of these um data elements and and say this is how they are related ok
+
+so it it includes the description of what you called as entity types 
+
+these are the entities that makeup the the UoD ok um in a bank the the customer is an entity an account is an entity a ledger is an entity um [noise]
+
+similarly there in any other um UoDs there would be several different entities like that whether it is a railway reservation system or a university or whatever there there going to be different kinds of entity types ok um and there are relationships across the entity types ok 
+
+so customer holds an account an account transfers to another account and so on and so far ok
+
+so there are relationships between different entity types and there may also be certain constraints that that are imposed either by physics or um or by the UoD itself ok
+
+in a bank for example um um one might say that in in a SBI account balance may not go below fifty rupees or whatever that’s a constraints that is imposed by the UoD 
+
+that that says you can not have less than fifty rupees in your account in order to make a term in in order to make a term working ok 
+
+on the other hand there could be other constraints that are imposed by physics itself the the physical reality 
+
+for example if you are um if you are modeling a railway reservation you can’t obviously have two trains starting at the same time from the same place from the same platform so it is ok um simply because these these two those those two can not exit ok at at at the same time ok
+
+so there are different kinds of constraints that exist among data elements and um this is what we are going to capture during the conceptual design 
+
+and um another thing to note here is at a conceptual design um has no implementation details 
+
+here note that it um earlier we had noted that a conceptual design is a DBMS independent process ok 
+
+so that means [noise] we are not really worried here about how um this conceptual schema is going to be implemented within a database systems 
+
+and the main idea of a conceptual schema is ease of understanding 
+
+we should be able to say to your end user this is what we have understood from your description this is what we have understood of your needs ok
+
+and is and and your end user should be able to um understand your understanding so to say ok 
+
+so he should be able to understand your understanding even though um your the the end user may may be a non-technical user ok
+
+so the main idea for behind the conceptual schema is ease of understanding and it is used mainly for communication with end users who or who or of and non-technical nature [noise] ok 
+
+
+
+so um here is a small example um an example company database ok
+
+so suppose we look at a company um what are some of the first things that we can identify 
+
+first some of the first things we identify [noise] a company of course has employees we can see them ok 
+
+um then um company has departments each employee works in different departments and so on 
+
+then once we starts speak to employees we find that there are also different projects and each department has some one or more projects and a project may span different departments and so on ok
+
+and once we start to the HR talk to the HR department we note that um each employee also has some dependence and um and there there are also covered in someway or supported in someway from the company and so on ok
+
+now if you look at this slide carefully here we see that there are two different kinds of things that that we are noting here 
+
+all these things before the colon we see the things like departments projects employee dependence and so on 
+
+and after the colon you you have a terms like name department id manager or name project id location or name pan pan number address and so on ok 
+
+so what this says is that all this names before the colon like departments projects or entity types ok 
+
+they are different entities say department is an entity project is an entity employee is an entity and so on 
+
+but the once after the colon like name or manager or location and so on are what are called as attributes of this entity ok that means they belong to this entity 
+
+for example the name occurring after department here belongs to this department the department id belongs to this department 
+
+similarly the the project id belongs to project and address belongs to employee date of birth belongs to employee and so on ok 
+
+so um it not also not only belongs to employee it also tells us or it it describes something about the employee ok 
+
+so if there is an employee an employee has a name an employee has a pan number um if he is paying income taxes regularly that is he has an address um he he has a salary he has um well he or she has a has a has a gender and [noise] date of birth and so on right 
+
+so all of these attributes define what is an en entity type and what are the characteristics of that entity type ok 
+
+so let us formulates things a little bit now 
+
+um um in the ER model or or the entity relationship model we have standards notation of representing entity types and um and their attributes 
+
+as you can see in the slide here um um entity types are represented by rectangles ok so so department is an entity and attributes of the department like department name department identifier manager of the department and so on are are represented in the form of ovals or something like balloons handy hanging over this entity types ok 
+
+so um there are some definition here so um so if you review this an entity represents an object of the real world that has an independent ex existence note that term independent existence 
+
+that is you should be able to identify the the an entity independent of every every other entity in the in the system ok 
+
+um address is not an entity because address belongs to some entity called employee ok or department of whatever ok
+
+however the employee itself is an entity because it is an independent um independently occurring object in the UoD ok
+
+and an entity has entity has attributes or which are properties that describe the characteristic of this entity ok 
+
+now what are the kinds of attributes um or what are the different kinds of attributes that could exist we saw name and age and date of birth and so on 
+
+but can we classify this attributes into different kinds of attributes and it can tell us some thing about characteristic of the entities ok 
+
+so there are several different classifications of attributes we are going to look at um um small number of such classification 
+
+one of the first classifications of attributes is simple verses composite ok 
+
+so um um what is a simple attribute um a simple attribute is um let us say something like age ok you are thirty years old thirty age equal to thirty ok so so that’s a simple attribute that is that is just one value associated with an attribute um 
+
+so when you say age you you get back one value called thirty on the other hand suppose you say name um in some countries ok we say name is name you you you just talk about one name for for an employee 
+
+but in several different places we have um when you talk about name you you have to specify a first name and middle name and last name and title and um nick names or whatever so 
+
+so so basically a a name is composed of several other attributes within it so that is what is called as a composite attribute versus a simple attribute which which has just one value ok
+
+and there could be a um something like a single-valued attribute or a multi-valued attribute ok
+
+now what is a single-valued attribute again age is a [noise] single-valued attribute ok at any point in time atleast you have just one age right
+
+that is at at this point in time let us say you are thirty years old or thirty five years old or whatever ok 
+
+on the other hand at any given point in time an attribute may actually have multiple values ok
+
+now take the color of a peacock for example ok no matter when you are going to measure this no matter at what time you are going to take a snap shot of a peacock you are always going to find many colors ok
+
+so um um so so so so this is a multi-valued attribute that is the attribute itself is defined by multiple values how is this different from a composite attribute 
+
+let me pass here for a for a little while so that you can ask this question to you to yourself again um how is a multi-valued attribute different from a composite attribute
+
+now composite attribute if you um if you saw if you notice closely is made up of different sub attributes 
+
+for example name is made up of  first name middle name last name and so on ok and initials for example or title and so on ok
+
+all of these need not be of the same type um i can say title can be either mister doctor misses whatever and so on ok only these three um um types 
+
+on the other hand name could be any thing any string and so on ok
+
+on the other hand when we look at multi-valued attributes all the different values that it takes color of a peacock for example it might have different um um different attributes many attributes but all of them denote color ok
+
+blue green red white whatever all of them are color all of all of them are the same types ok 
+
+so multi-valued attribute are um um different values of the same attribute type but a composite is a collection of different smaller attributes in itself ok  [noise]
+
+and then their what are called as stored attributes versus derived attributes ok 
+
+now stored attributes is something which you just store in the database your date of birth for example ok
+
+so um um when when you ask what is your date of birth you you just give some date and then store it in the database ok
+
+however suppose you are to asked what is the age of an employee ok now suppose you know today's date and you know the date of birth of the employee you can always derive the age of the employee [noise] right 
+
+so so so age in in a sense is a derived attribute a good database design would um would put age as a derived attribute 
+
+because a database hopefully is going to be used for a long time right its its not just today today an employee might be thirty years old but five years later he wo he still wont be thirty years old he would be thirty five years old right 
+
+so um so its its always best to have age as a derived attribute because um you you always know what is the current date you always know the the stored attribute called the date of the birth ok
+
+um similarly there are um um what are called as null attributes or or null values for for attributes 
+
+sometimes an attribute may not have any associated value um um um for a particular case ok and let let me give an example 
+
+suppose a student um can take um at most two elective courses in in a semester ok and at least one elective course and at most two elective courses ok
+
+now let us say there is a student who has taken just one elective course ok 
+
+now because he can take at most two elective courses there are four differents um um there are two different slots ok elective one and elective two ok 
+
+now let us say after at the end of the course is give a a grade for for each of the courses that each of the courses has taken up ok
+
+now he gets a grade for the first course but he doesn’t get a grade for the second course because he didn’t take the second course at all elective two has no grade 
+
+but this grade is not um um we can’t say that he has scored zero in in elective two ok
+
+so a null value is different from zero or unknown or missing value ok this is not a missing value this is not a this not zero or this is not an unknown value this is a null value [noise]
+
+that means that something like when you say n a when you write in [noise] application forms this is a null attribute ok [noise]
+
+so so let us come back to entities and define a few more terms here with with respect to entity types ok
+
+so we saw that an entity type ok have been using the word entity type but have never never really um formally defined this term right 
+
+so an entity type is is a definition or or defines a collection of different entities of the same type ok
+
+for example um um in this slide we we give this example of department ok so a company could have different departments 
+
+but when you say an entity type department it means that it represents all departments in in the company ok 
+
+so it it is it is a definition of a real world um um object type ok so its not this department or that department it is just department it is it it is a type that that the entity is going to define ok 
+
+now any specific collection of entities of a particular type is what is called as an entity set 
+
+for example if you take supplies departments plus accounting department ok 
+
+now suppose we we take both of them in some collection we we call this as an entity set these these are two different departments of the same entity type ok 
+
+so um so we we also say that an en an entity type as oppose to an entity set ok 
+
+so an entity type is set to describe the schema or or the intension of an entity set 
+
+what is that mean it it basically says that how should the structure of this entity or entities of this type look like ok
+
+so suppose we say that department should contain a department id it should have an address it should have a manager um it should have several other attributes that means that no matter whether it is the supplies department or the accounting department or or the systems programming department or whichever [noise] department it is they should be defined by these attributes 
+
+that is they should have a department identifier they should have a clearly defined address they should have one percent designated as manager and so on ok [noise]
+
+so um um so an entity type describes wh what is called as an intension or or the schema for an entity set ok or or different entities of the same type [noise]
+
+so um here are again a review of the representations entities types are defined by um boxes and attributes are defined by ovals and different kinds of attributes have different um kinds of ovals um may be its not completely visible here 
+
+the multi-valued attributes are defined by um an oval having a double line ok 
+
+and similarly derived attributes derived attributes are are those which can be derived from other um um um other attributes are defined by a dotted line instead of a solid line [noise] ok
+
+and um we now come to another um key issue when we are talking about entity types and namely this is um um about key attributes ok
+
+now um what is a key attribute now if you notice carefully when you said that each department has to have a department identifier and a and manager and address and so on ok 
+
+now why do why do we need a department identifier for for each department this is to to be able to identify each department uniquely ok
+
+now if i say department number ten it means just one department no matter what what its name is ok 
+
+department name could be ambiguous it could it could means supplies and accounts and um suppose we we might have a department called administration it might mean both supplies and accounts or whatever so or name could be ambiguous 
+
+but when we say an id or an identifier it’s a something like what you have a pin code in post letters it uniquely identifies each entity of of this entity set [noise] ok 
+
+so [noise] the department id attribute is unique for each department that belonging to this entity set ok 
+
+so such attributes which can uniquely identify um entities or what are called as key attributes or keys ok 
+
+so um the key attribute as you can see here is specified by an underlined um definition ok 
+
+so so the department id is is is is underlined here to denote that it is a key attribute 
+
+now in some cases [noise] it need not it need not always be just one and that is the key attribute ok
+
+there could be more than one attributes um which are key attributes in which case all attributes which form part of the key are all are all showed underlined ok
+
+now what is meant by a key attribute [noise] so an attribute or a set of attributes that uniquely identify entities in an entity set so is what is called as a key attribute
+
+now um [noise] like i said it need not be just one attribute that that is a key attribute there could be more than one [noise] um um attributes which which is a key ok 
+
+so in which  case the key attribute is called a composite key ok so it’s the key is made by combining um um [noise] two or more attributes together 
+
+a a composite key should be minimal what is it mean to say a composite key is minimal ok 
+
+um let let me first give you the definition of what is mean by minimal and then we can see an example ok
+
+so no subset of a composite key should be a key itself ok 
+
+for example um let me take the attributes departments id and department name is it key attribute of course its a key attribute ok 
+
+because if i take department id department number ten supplies it uniquely identifies one particular department ok
+
+however the um the second attribute here the the name called supplies is redundant 
+
+we don’t need we don’t need to um have this um um um attribute here in order to uniquely identify a department its um um sufficient enough if you say department number ten ok [noise] 
+
+so so so that’s what is meant by a composite key that is um um department id and name is not a composite key because it is not minimal in nature [noise]
+
+no subset of a key attribute should be a key attribute in itself in which case this is not the not so ok 
+
+so key attributes are shown underlined in the ER diagram [noise]
+
+there also certain other properties of of  keys which we are going to revisit again when we are um going to look into the enhanced ER model ok um 
+
+what is called as um [noise] the the retention of key attributes in all extensions ok 
+
+so um so let me not take this property right now and we will come back to this again that the key attribute should be retained for all extensions of a particular entity type ok 
+
+now it may so happen that um um a key attribute should uniquely identify an element ok but an element need not have just one key attribute 
+
+of course i can have two keys to my house right key from the front door and the key from the back door ok
+
+now it it is fine but but the only thing is this key should open only um only my house door not not somebody else’s house door ok 
+
+so so that’s the idea that is a key should uniquely identify a house but um but a house could be identified by more than one keys you could either enter through the front door or the back door ok
+
+similarly um um i can have a a let let us say on on a on a computer network you can uniquely identify a machine by its ip address or or so to say an Ethernet address on on a lan and so on 
+
+but a machine could have more that one Ethernet connects in which case both of them uniquely identify the um identify the machine ok 
+
+so um so so there is no restriction on how many keys that you are going to have but usually we are going to use one key so what is called as a default key 
+
+usually we are going to enter through the front door ok not always through the back door right 
+
+so usually we are going to use just one key um but you may have more than one keys that define a particular entity type 
+
+and there are there could be some entity types which have no key attributes ok 
+
+we are going to take a look at one such example little later on and um um it may not be possible to define um any kind of a key attribute for um for such entity types and um such entity types are called weak entity types or entities of such type are called weak entities ok
+
+so they have to um what we called as totally participate in in some relationship in order to define um themselves ok
+
+now we come to the next definition of definition in the ER model what is called as a domain ok what is meant by domain of attributes ok 
+
+now a domain to put it in a very informal fashion is is going to show you the space in which an attribute is going to be defined ok
+
+
+
+for example if i say age of an employee ok and there are some set of rules that you can not have employees lesser than eighteen years and greater than sixty five years the domain is basically the a number between eighteen and sixty five ok 
+
+obviously it can be um um um there are there are also some physical limitations in the sense that the the domain of an age can never be negative ok so so that’s the nature imposed restriction 
+
+but there could be other restrictions and the which which basically defines the space within which any value of this [noise] attribute can reside ok 
+
+now if a composite attribute has um um different sub attributes or like we like we saw um name has different sub attributes first name middle name last name and so on ok
+
+so um and each of them have the room domains let us say D one D two D n 
+
+so so we see that the domain of the composite attribute is Cartesian product of the domains of individual attributes 
+
+so the first attribute can take a value between eighteen and sixty five and the second attribute can take a value between zero and ten and so on ok
+
+so so the domain of the entire attribute is just a Cartesian product of all of these terms ok [noise]
+
+ so let us briefly come back to this um company example and see likewise what whatever we have um seen until now 
+
+so we we could we can think of different kinds of um entity types like department project employee and so on 
+
+and um there are different kinds of attributes for each kind um each of these entity types and there are certain key attributes here which are underline
+
+and then there are certain um um composite attributes which are shown like this name is composed of first name middle name last name and so on and like that 
+
+so um and several other entity types that we can identify during our analysis ok
+
+the next um concept that important concept that we are going to be looking at in ER modeling  is the notion of relationships like the um um modeling itself says its about entities and relationships ok 
+
+so we just until now we looked into what are called as entity types ok so we we defined as an entity type an entity set attributes different kinds of attributes and keys and domains and and so on ok
+
+now let us see how how can we relate entities of different types ok [noise] 
+
+so a relationship are to be precise relationship type um defines a relationship between two or more entity types ok
+
+so the slide here shows a relationship type ok between um um an entity type department and an entity type employee ok and and it says managed by ok
+
+so it basically says um a relationship type specifies that any department or any entity of type department should be managed by some employee or some entity of type employee ok 
+
+so so let us go further and make some definitions ok 
+
+first of all let us let us first defined what is meant by relationship type ok
+
+so relationship type R is an association ok is an association among different entity types it need not be just two entities it can be any number of entities ok 
+
+so um so there could be n number of entities and defines it it basically defines a set of associations ok what is called as a relationship types ok 
+
+so if you if you look at it a little bit carefully a relationship type is just a subset of the Cartesian product of all of the entity types ok 
+
+so that means um um [noise] an um an entity instance or entity or entity of this type could be related to some entity of this type and some other entity of the next type and some other of the next type and so on and all of this define one instance of this relationship ok [noise]
+
+so so let us delve deeper into what are meant by relationships and what are some of um the the characteristics that that defined relationships ok firstly the the notion of the degree of a relationship type ok 
+
+so what is a degree of a relationship type its simply the number of entities or um that that are involved in this relation it is how many between how many relations is this relationship going to establishes an association
+
+we saw earlier um a re a relationship type of degree two that is a department is managed by an employee ok 
+
+so so there are two entities that that that participate in its in this managed by relationship ok such kinds of relationships are called binary relation relationship binary basically because there are two entity types involved ok 
+
+similarly there could be unary relationships there could be ternary relationships and so on and there could be n array relationships n different types of relationships ok [noise]
+
+now um we come to kind of a tricky problem here now have a look at this slide carefully 
+
+the first um um picture above shows the relationship type ok it shows employee work for department 
+
+and the second relationship and the second picture below shows employee as an entity and department in which the employee works in as an attribute of um um of employee ok 
+
+so which is correct um is is department and attribute of employee that is does the department in which an employee works in describe the characteristics of an employee or is it that departments and employees have separate existences or seperate [noise] entities and there is a relationship type between them ok
+
+so um let me confuse this problem you and further [noise] take a look at this slide here ok
+
+so um in the earlier slide you could have probably said that no no department can not be an attribute because department has an independent existence 
+
+we we already saw that each entity type should have an independent existence right 
+
+so because departments have an independent existence they can't be [noise] they can't be an attribute ok
+
+but have a look at this slide here ok the first picture shows employee works for department as a as a relation and then department has a department id as one of its attributes ok 
+
+now i am going to take this department id attribute and put it in to employee and says employee works in this department ok
+
+so this employee is associated with this department id 
+
+so now which is correct or or which is wrong ok 
+
+so is is the first one correct or or the second correct um 
+
+well the answer to this um obviously is it depends ok [noise] it depends on the the particular situation in which you you are you are looking into ok 
+
+now um the first one um where where we show that employee works for department as a separate relation depicts the the relationship between employee and department ok 
+
+and the second one just depicts what are all the different characteristic that describe [noise] or what are the different attributes that describe the characteristics of employee ok 
+
+that means if i am talking about an employee entity ok and if i say that an employee is or in or in some sense or an employee is um very closely tight to his department ok so he has no identity without his department id in which case you have to say department id is part of the attribute or or is one of the attributes of the employee entity type ok [noise]
+
+so relationships versus attributes its it’s a slightly a tricky problem always so in order to determine whether a particular thing is is actually a relationship or is it is it an attributes ok
+
+and um um in some kinds of data models like what are called as functional data models or or in object databases um um um relationships are um are almost always refer to as um in in the form of attributes ok
+
+for example in object databases you talk about relationship by um storing an object reference 
+
+let us say you have a relationship between um employee and department so so there is a reference to a department object within the entity object and vise versa in um [noise] um a and a reference to an emply employee object in the department object and so on ok 
+
+similarly in relational databases which we are going to study much deeper 
+
+we see that relationships are established by what are called as foreign keys ok
+
+that is there is one table that describes one kind of an entity and a relationship between this table and the other table is is described by a by a for foreign key attribute which says that um this entity of this type is is related to some other entity of of of the other type ok [noise] 
+
+ now um [noise] we come to an other important issue in the in the um when you are talking about relationship this is the notion of constraints ok
+
+
+
+so what is um um when we talk about relationships almost always relationships are defined by certain kinds of constraints 
+
+take the examples of um employee managing a department ok 
+
+um um one of the most simplest constraints that we can think of is department should be managed by at most just one employee ok 
+
+we can't have two mangers or two heads of um heads of a department we should have a just one head of a department ok
+
+and you might also establish a constraint that one person can manage at most one department at a time 
+
+in some cases there could be um um they could be allow to manage more than one department at the same time ok
+
+so that means in that case there is no constraints from employee to department but there is a constrain from department to employee ok 
+
+so um when you are talking about constraints and relationship types we are um mainly concerned with two kinds of constraints what you call as cardinality ratios and participation constraints ok 
+
+so what what are these cardinality ratios and participation constraints lets have look at them ok 
+
+so um take a look at this um um relationship again here now i have replaced this managed by with another relationship called works for ok
+
+now works for is is slightly more general than managed by ok a in in which ways it more general then managed by a department can have many employees working for it ok 
+
+however we might have to sometimes we might have to mandate a requirement that an employees can work for only one department not for multiple departments ok 
+
+so so so this is shown by these shown in one of two two different ways either like this that is N is to one which says that N employees to one department or or something like this ok
+
+so which says it could be N employees at um working in one department and so on ok
+
+so um [noise] so on the other hand what happens if this were to be M is to N ok something like four is to three or or two is to one or two is to five or something like that ok 
+
+so so that means that let us say four is to three ok so that means that a department can have at most four employees and an employee can work in at most three departments and so on 
+
+so so basically you can you can represent a cardinality constraint or cardinality ratios in in this case that says um participations in this constraint [noise] is defined or constrained in this by this cardinality so or number of entity types [noise] ok
+
+the second kind of constraints that um [noise] that’s important important is um what are called as participation constraints what is a participation constraint [noise]
+
+take a look at this um um slide here now um um this slide shows another relationship type which says department and handles project ok 
+
+now a department um may handle several different project suppose there is a restriction that a project has no existence unless it is associated with a department ok
+
+now suppose i have a project for um um for for develop developing some kind of software now this project does not exist if it is not associated with some department if there is no if there is no department which is in charge of this project ok 
+
+basically what this says is that if every project has to be associated with a department then the very existence of project depart depends on this relation
+
+so only if an instance of this relationship um exist only can only then can a project entity type exist ok or such kinds of constraints are what are called as participation constraints ok 
+
+they are defined by a double line here um may be its not fully visible but it is a double line here ok so that means that the very existence self  project is dependent upon the existence of a relationship of this of this kind ok 
+
+the going on further in to participation constraints we say that um the  the entity type in this case project is said to totally participate in to in this relationship because if it doesn’t participate it doesn’t exist anymore ok 
+
+so um um a participation constraint in which an entity types existence is dependent upon the the existence of this entity type of this relationship type is called as total participation 
+
+that is the the the entity type or um participates completely or totally in this [noise] relationship ok
+
+we can also think about um attributes for relationships and not for entities themselves ok just like we saw um attributes could be associated with entities we could also also allocate attributes for relationships 
+
+have a look at this um um figure here it shows department as an entity type um and and says that department handles certain projects ok so and and project totally participated in this relationship and then um um an attribute called budget is placed for this relationship ok 
+
+so what is this mean it basically means that this budget or or the budget that is specified here is allocated for this project associated with this department or is specifically allocated for this relationship type ok 
+
+
+
+
+
+so um um in cases where let us the project is handled by more than one department ok that means that this budget is not allocated to the project ok this is allocated only for this project for working on this department and and so on ok
+
+it is not allocated to the department as well that means the department cannot use this budget for anything else it has to use it for this project only ok
+
+so um um so so this budget actually is um is is a constraint on the relationship type ok [noise]
+
+so it belongs neither to department [noise] nor to the project in its entirety 
+
+however there is certain kinds of relationships where we can actually move the attributes from the relationship type to one of the entities ok 
+
+what are those kinds of um um um what are those kinds of relationships take a look at this slide here 
+
+the first figure shows a one is to N relationship that is a project can be associated with at most one department ok
+
+and there is a um um there there is an attribute called budget that is allocated to this relationship 
+
+now um if you see carefully um um we do we do not do correctness if we move this budget attribute from the relationship to the project site ok 
+
+so if i say that this budget is allocated to this project it does not lose any semantics because a project can be associated with just one department in in the previous slide a project could be associated with M different departments that is [noise] it could be associated with many departments ok 
+
+so here since project can be associated with only one department it can not it does not lose semantics if um um if the budget is allocated to the project itself ok
+
+so um one of the last things that definitions that we are be looking at today are are is what is called as a identifying relationships ok
+
+have a look at this slide here this slide here shows a figure where an employee is identified by pan number ok
+
+so assuming that every employees um is is a is a tax payer and has and has received pan number from the government um an employee is is uniquely identified by his pan number ok
+
+now let us say we prepare the the the company prepare some kind of an insurance record for each employee ok
+
+now um um let us say um this this this entity called insurance record which which contains certain parameters or whatever ok is an entity by itself right because it has an independent existence ok 
+
+you can see an insurance record and and note that its its an entity by itself 
+
+however um you see that an insurance record has no existence has no meaning unless it is associated with somebody unless it is associated with with some employee or some department you want or whatever ok
+
+so this is an example of um um of an entity type which is a weak entity type that means it has no keys ok 
+
+the key for the insurance record is of course the pan number itself or pan number of the employee ok
+
+so so so the key of the employee um which defines an insurance record is um um um forms the key for the insurance record as well ok 
+
+and the relationship that defines this such a kind of association is what is called as an identifying relationship ok
+
+so this relationship here in this um slide which which which is called as insurance details identifies insurance record with an employee 
+
+it it basically ties in insurance records with with employee so that an insurance record also gets independent existence by themselves ok
+
+so as you can see um insurance record totally participates in the in this relationship obviously it has to totally participate in this relationship 
+
+but on the other hand um um not every total participation may need an identifying relationship we we actually saw an example earlier where we saw um um um um two different entity types department and project in participation but which is not a weak entity type ok
+
+so identifying relationships are again defined by double lines on the relationship types itself ok
+
+so um so let us briefly pursue a summary of the different notations we saw  
+
+the the first thing that we saw was um an entity type and um defined by um a box and a weak entity type which is defined by a dotted line which which is not clearly visible here ok
+
+then relationships types are defined by um um rhombus and the identifying relationship types are defined by double lines ok
+
+similarly um attributes are defined in in different ways that is normal attribute is an oval a key attribute has an underline underline there and a multi-valued attribute has um um double line and and a derived attribute has a dotted line ok
+
+so um so with this we come to the end of this this session where we had a brief look at what is meant by conceptual um [noise] design of of a database ok
+
+so to briefly summarize that a conceptual design of a database is meant for non-technical users its it’s a high-level design and um um mainly composed of diagrammatic notations like entities and attributes and so on 
+
+and within this um um diagrammatic notations we saw that there are several um different characteristic there there could be entities entity type entity sets attributes multi-valued attributes and key attributes and and relationships an identifying relationships and weak entity types and so on ok 
+
+so one of the first step that that we do in um in database design is is to be able to identify this entity types and and relationships and to be able to build this ER schema ok
+
+so um that brings to the end of this this first secession on um um conceptual modeling of database systems thank you 

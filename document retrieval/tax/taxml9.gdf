@@ -1,0 +1,20 @@
+nodedef> name,label
+v0,benuve random variables
+v1,bias
+v2,bias variance trade-off
+v3,bias variance tradeoff
+v4,empirical risk minimization
+v5,epsilon hat
+v6,generalization error
+v7,learning theory
+v8,training error
+v9,variance
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v8,false,14.0434782609,true
+v2,v0,false,23.2826086957,true
+v3,v0,false,24.5217391305,true
+v4,v8,false,17.2463768116,true
+v5,v0,false,9.5652173913,true
+v7,v8,false,14.347826087,true
+v8,v6,false,0.0,true
+v9,v1,false,0.95652173913,true

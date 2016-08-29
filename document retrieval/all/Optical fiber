@@ -1,0 +1,1463 @@
+
+Optical fiber
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article's lead section may not adequately summarize key points of its contents. Please consider expanding the lead to provide an accessible overview of all important aspects of the article. (November 2012) 
+
+
+
+
+
+
+A bundle of optical fibers
+
+
+
+
+
+
+A TOSLINK fiber optic audio cable being illuminated at one end
+
+
+
+
+
+
+An optical fiber junction box. The yellow cables are single mode fibers; the orange and blue cables are multi-mode fibers: 50/125 m OM2 and 50/125 m OM3 fibers respectively.
+
+
+An optical fiber (or optical fibre) is a flexible, transparent fiber made of glass (silica) or plastic, slightly thicker than a human hair. It functions as a waveguide, or light pipe,[1] to transmit light between the two ends of the fiber.[2] The field of applied science and engineering concerned with the design and application of optical fibers is known as fiber optics. Optical fibers are widely used in fiber-optic communications, which permits transmission over longer distances and at higher bandwidths (data rates) than other forms of communication. Fibers are used instead of metal wires because signals travel along them with less loss and are also immune to electromagnetic interference. Fibers are also used for illumination, and are wrapped in bundles so that they may be used to carry images, thus allowing viewing in confined spaces. Specially designed fibers are used for a variety of other applications, including sensors and fiber lasers.
+Optical fibers typically include a transparent core surrounded by a transparent cladding material with a lower index of refraction. Light is kept in the core by total internal reflection. This causes the fiber to act as a waveguide. Fibers that support many propagation paths or transverse modes are called multi-mode fibers (MMF), while those that only support a single mode are called single-mode fibers (SMF). Multi-mode fibers generally have a wider core diameter, and are used for short-distance communication links and for applications where high power must be transmitted. Single-mode fibers are used for most communication links longer than 1,050 meters (3,440ft).
+Joining lengths of optical fiber is more complex than joining electrical wire or cable. The ends of the fibers must be carefully cleaved, and then spliced together, either mechanically or by fusing them with heat. Special optical fiber connectors for removable connections are also available.
+
+
+
+
+Contents
+
+
+1 History
+2 Applications
+
+2.1 Optical fiber communication
+2.2 Fiber optic sensors
+2.3 Other uses of optical fibers
+
+
+3 Principle of operation
+
+3.1 Index of refraction
+3.2 Total internal reflection
+3.3 Multi-mode fiber
+3.4 Single-mode fiber
+3.5 Special-purpose fiber
+
+
+4 Mechanisms of attenuation
+
+4.1 Light scattering
+4.2 UV-Vis-IR absorption
+
+
+5 Manufacturing
+
+5.1 Materials
+
+5.1.1 Silica
+5.1.2 Fluorides
+5.1.3 Phosphates
+5.1.4 Chalcogenides
+
+
+5.2 Process
+5.3 Coatings
+
+
+6 Practical issues
+
+6.1 Optical fiber cables
+6.2 Termination and splicing
+6.3 Free-space coupling
+6.4 Fiber fuse
+
+
+7 Example
+8 Power transmission
+9 Preform
+10 See also
+11 References
+12 Further reading
+13 External links
+
+
+
+
+[edit] History
+
+
+
+
+Daniel Colladon first described this light fountain or light pipe in an 1842 article entitled On the reflections of a ray of light inside a parabolic liquid stream. This particular illustration comes from a later article by Colladon, in 1884.
+
+
+Fiber optics, though used extensively in the modern world, is a fairly simple, and relatively old, technology. Guiding of light by refraction, the principle that makes fiber optics possible, was first demonstrated by Daniel Colladon and Jacques Babinet in Paris in the early 1840s. John Tyndall included a demonstration of it in his public lectures in London, 12 years later.[3] Tyndall also wrote about the property of total internal reflection in an introductory book about the nature of light in 1870: "When the light passes from air into water, the refracted ray is bent towards the perpendicular... When the ray passes from water to air it is bent from the perpendicular... If the angle which the ray in water encloses with the perpendicular to the surface be greater than 48 degrees, the ray will not quit the water at all: it will be totally reflected at the surface.... The angle which marks the limit where total reflection begins is called the limiting angle of the medium. For water this angle is 4827', for flint glass it is 3841', while for diamond it is 2342'."[4][5] Unpigmented human hairs have also been shown to act as an optical fiber.[6]
+Practical applications, such as close internal illumination during dentistry, appeared early in the twentieth century. Image transmission through tubes was demonstrated independently by the radio experimenter Clarence Hansell and the television pioneer John Logie Baird in the 1920s. The principle was first used for internal medical examinations by Heinrich Lamm in the following decade. Modern optical fibers, where the glass fiber is coated with a transparent cladding to offer a more suitable refractive index, appeared later in the decade.[3] Development then focused on fiber bundles for image transmission. Harold Hopkins and Narinder Singh Kapany at Imperial College in London achieved low-loss light transmission through a 75cm long bundle which combined several thousand fibers. Their article titled "A flexible fibrescope, using static scanning" was published in the journal Nature in 1954.[7][8] The first fiber optic semi-flexible gastroscope was patented by Basil Hirschowitz, C. Wilbur Peters, and Lawrence E. Curtiss, researchers at the University of Michigan, in 1956. In the process of developing the gastroscope, Curtiss produced the first glass-clad fibers; previous optical fibers had relied on air or impractical oils and waxes as the low-index cladding material.
+A variety of other image transmission applications soon followed.
+In 1880 Alexander Graham Bell and Sumner Tainter invented the 'Photophone' at the Volta Laboratory in Washington, D.C., to transmit voice signals over an optical beam.[9] It was an advanced form of telecommunications, but subject to atmospheric interferences and impractical until the secure transport of light that would be offered by fiber-optical systems. In the late 19th and early 20th centuries, light was guided through bent glass rods to illuminate body cavities.[10] Jun-ichi Nishizawa, a Japanese scientist at Tohoku University, also proposed the use of optical fibers for communications in 1963, as stated in his book published in 2004 in India.[11] Nishizawa invented other technologies that contributed to the development of optical fiber communications, such as the graded-index optical fiber as a channel for transmitting light from semiconductor lasers.[12][13] The first working fiber-optical data transmission system was demonstrated by German physicist Manfred Brner at Telefunken Research Labs in Ulm in 1965, which was followed by the first patent application for this technology in 1966.[14][15] Charles K. Kao and George A. Hockham of the British company Standard Telephones and Cables (STC) were the first to promote the idea that the attenuation in optical fibers could be reduced below 20 decibels per kilometer (dB/km), making fibers a practical communication medium.[16] They proposed that the attenuation in fibers available at the time was caused by impurities that could be removed, rather than by fundamental physical effects such as scattering. They correctly and systematically theorized the light-loss properties for optical fiber, and pointed out the right material to use for such fibers silica glass with high purity. This discovery earned Kao the Nobel Prize in Physics in 2009.[17]
+NASA used fiber optics in the television cameras that were sent to the moon. At the time, the use in the cameras was classified confidential, and only those with the right security clearance or those accompanied by someone with the right security clearance were permitted to handle the cameras.[18]
+The crucial attenuation limit of 20dB/km was first achieved in 1970, by researchers Robert D. Maurer, Donald Keck, Peter C. Schultz, and Frank Zimar working for American glass maker Corning Glass Works, now Corning Incorporated. They demonstrated a fiber with 17dB/km attenuation by doping silica glass with titanium. A few years later they produced a fiber with only 4dB/km attenuation using germanium dioxide as the core dopant. Such low attenuation ushered in optical fiber telecommunication. In 1981, General Electric produced fused quartz ingots that could be drawn into fiber optic strands 25 miles (40km) long.[19]
+Attenuation in modern optical cables is far less than in electrical copper cables, leading to long-haul fiber connections with repeater distances of 70150 kilometers (4393 mi). The erbium-doped fiber amplifier, which reduced the cost of long-distance fiber systems by reducing or eliminating optical-electrical-optical repeaters, was co-developed by teams led by David N. Payne of the University of Southampton and Emmanuel Desurvire at Bell Labs in 1986. Robust modern optical fiber uses glass for both core and sheath, and is therefore less prone to aging. It was invented by Gerhard Bernsee of Schott Glass in Germany in 1973.[20]
+The emerging field of photonic crystals led to the development in 1991 of photonic-crystal fiber,[21] which guides light by diffraction from a periodic structure, rather than by total internal reflection. The first photonic crystal fibers became commercially available in 2000.[22] Photonic crystal fibers can carry higher power than conventional fibers and their wavelength-dependent properties can be manipulated to improve performance.
+[edit] Applications
+[edit] Optical fiber communication
+Main article: Fiber-optic communication
+Optical fiber can be used as a medium for telecommunication and computer networking because it is flexible and can be bundled as cables. It is especially advantageous for long-distance communications, because light propagates through the fiber with little attenuation compared to electrical cables. This allows long distances to be spanned with few repeaters. Additionally, the per-channel light signals propagating in the fiber have been modulated at rates as high as 111 gigabits per second by NTT,[23][24] although 10 or 40Gbit/s is typical in deployed systems.[25][26] Each fiber can carry many independent channels, each using a different wavelength of light (wavelength-division multiplexing (WDM)). The net data rate (data rate without overhead bytes) per fiber is the per-channel data rate reduced by the FEC overhead, multiplied by the number of channels (usually up to eighty in commercial dense WDM systems as of 2008[update]). The current laboratory fiber optic data rate record, held by Alcatel-Lucent in Villarceaux, France, is multiplexing 155 channels, each carrying 100 Gbit/s over a 7000km fiber.[27] Nippon Telegraph and Telephone Corporation has also managed 69.1 Tbit/s over a single 240km fiber (multiplexing 432 channels, equating to 171 Gbit/s per channel).[28] Bell Labs also broke a 100 Petabit per second kilometer barrier (15.5 Tbit/s over a single 7000km fiber).[29]
+For short distance applications, such as a network in an office building, fiber-optic cabling can save space in cable ducts. This is because a single fiber can carry much more data than electrical cables such as standard category 5 Ethernet cabling, which typically runs at 100 Mbit/s or 1 Gbit/s speeds. Fiber is also immune to electrical interference; there is no cross-talk between signals in different cables, and no pickup of environmental noise. Non-armored fiber cables do not conduct electricity, which makes fiber a good solution for protecting communications equipment in high voltage environments, such as power generation facilities, or metal communication structures prone to lightning strikes. They can also be used in environments where explosive fumes are present, without danger of ignition. Wiretapping (in this case, fiber tapping) is more difficult compared to electrical connections, and there are concentric dual core fibers that are said to be tap-proof.[30]
+[edit] Fiber optic sensors
+Main article: Fiber optic sensor
+Fibers have many uses in remote sensing. In some applications, the sensor is itself an optical fiber. In other cases, fiber is used to connect a non-fiberoptic sensor to a measurement system. Depending on the application, fiber may be used because of its small size, or the fact that no electrical power is needed at the remote location, or because many sensors can be multiplexed along the length of a fiber by using different wavelengths of light for each sensor, or by sensing the time delay as light passes along the fiber through each sensor. Time delay can be determined using a device such as an optical time-domain reflectometer.
+Optical fibers can be used as sensors to measure strain, temperature, pressure and other quantities by modifying a fiber so that the property to measure modulates the intensity, phase, polarization, wavelength, or transit time of light in the fiber. Sensors that vary the intensity of light are the simplest, since only a simple source and detector are required. A particularly useful feature of such fiber optic sensors is that they can, if required, provide distributed sensing over distances of up to one meter.
+Extrinsic fiber optic sensors use an optical fiber cable, normally a multi-mode one, to transmit modulated light from either a non-fiber optical sensoror an electronic sensor connected to an optical transmitter. A major benefit of extrinsic sensors is their ability to reach otherwise inaccessible places. An example is the measurement of temperature inside aircraft jet engines by using a fiber to transmit radiation into a radiation pyrometer outside the engine. Extrinsic sensors can be used in the same way to measure the internal temperature of electrical transformers, where the extreme electromagnetic fields present make other measurement techniques impossible. Extrinsic sensors measure vibration, rotation, displacement, velocity, acceleration, torque, and twisting. A solid state version of the gyroscope, using the interference of light, has been developed. The fiber optic gyroscope (FOG) has no moving parts, and exploits the Sagnac effect to detect mechanical rotation.
+Common uses for fiber optic sensors includes advanced intrusion detection security systems. The light is transmitted along a fiber optic sensor cable placed on a fence, pipeline, or communication cabling, and the returned signal is monitored and analysed for disturbances. This return signal is digitally processed to detect disturbances and trip an alarm if an intrusion has occurred.
+[edit] Other uses of optical fibers
+
+
+
+
+A frisbee illuminated by fiber optics
+
+
+
+
+
+
+Light reflected from optical fiber illuminates exhibited model
+
+
+Fibers are widely used in illumination applications. They are used as light guides in medical and other applications where bright light needs to be shone on a target without a clear line-of-sight path. In some buildings, optical fibers route sunlight from the roof to other parts of the building (see nonimaging optics). Optical fiber illumination is also used for decorative applications, including signs, art, toys and artificial Christmas trees. Swarovski boutiques use optical fibers to illuminate their crystal showcases from many different angles while only employing one light source. Optical fiber is an intrinsic part of the light-transmitting concrete building product, LiTraCon.
+Optical fiber is also used in imaging optics. A coherent bundle of fibers is used, sometimes along with lenses, for a long, thin imaging device called an endoscope, which is used to view objects through a small hole. Medical endoscopes are used for minimally invasive exploratory or surgical procedures. Industrial endoscopes (see fiberscope or borescope) are used for inspecting anything hard to reach, such as jet engine interiors. Many microscopes use fiber-optic light sources to provide intense illumination of samples being studied.
+In spectroscopy, optical fiber bundles transmit light from a spectrometer to a substance that cannot be placed inside the spectrometer itself, in order to analyze its composition. A spectrometer analyzes substances by bouncing light off of and through them. By using fibers, a spectrometer can be used to study objects remotely.[31][32][33]
+An optical fiber doped with certain rare earth elements such as erbium can be used as the gain medium of a laser or optical amplifier. Rare-earth doped optical fibers can be used to provide signal amplification by splicing a short section of doped fiber into a regular (undoped) optical fiber line. The doped fiber is optically pumped with a second laser wavelength that is coupled into the line in addition to the signal wave. Both wavelengths of light are transmitted through the doped fiber, which transfers energy from the second pump wavelength to the signal wave. The process that causes the amplification is stimulated emission.
+Optical fibers doped with a wavelength shifter collect scintillation light in physics experiments.
+Optical fiber can be used to supply a low level of power (around one watt)[citation needed] to electronics situated in a difficult electrical environment. Examples of this are electronics in high-powered antenna elements and measurement devices used in high voltage transmission equipment.
+The iron sights for handguns, rifles, and shotguns may use short pieces of optical fiber for contrast enhancement.
+[edit] Principle of operation
+
+
+Sorry, your browser either has JavaScript disabled or does not have any supported player.
+You can download the clip or download a player to play the clip in your browser.
+
+
+An overview of the operating principles of the optical fiber
+
+
+An optical fiber is a cylindrical dielectric waveguide (nonconducting waveguide) that transmits light along its axis, by the process of total internal reflection. The fiber consists of a core surrounded by a cladding layer, both of which are made of dielectric materials. To confine the optical signal in the core, the refractive index of the core must be greater than that of the cladding. The boundary between the core and cladding may either be abrupt, in step-index fiber, or gradual, in graded-index fiber.
+[edit] Index of refraction
+Main article: Refractive index
+The index of refraction is a way of measuring the speed of light in a material. Light travels fastest in a vacuum, such as outer space. The speed of light in a vacuum is about 300,000 kilometers (186,000 miles) per second. Index of refraction is calculated by dividing the speed of light in a vacuum by the speed of light in some other medium. The index of refraction of a vacuum is therefore 1, by definition. The typical value for the cladding of an optical fiber is 1.52.[34] The core value is typically 1.62.[34] The larger the index of refraction, the slower light travels in that medium. From this information, a good rule of thumb is that signal using optical fiber for communication will travel at around 200,000 kilometers per second. Or to put it another way, to travel 1000 kilometers in fiber, the signal will take 5 milliseconds to propagate. Thus a phone call carried by fiber between Sydney and New York, a 12,000-kilometer distance, means that there is an absolute minimum delay of 60 milliseconds (or around 1/16 of a second) between when one caller speaks to when the other hears. (Of course the fiber in this case will probably travel a longer route, and there will be additional delays due to communication equipment switching and the process of encoding and decoding the voice onto the fiber).
+[edit] Total internal reflection
+Main article: Total internal reflection
+When light traveling in an optically dense medium hits a boundary at a steep angle (larger than the critical angle for the boundary), the light will be completely reflected. This is called total internal reflection. This effect is used in optical fibers to confine light in the core. Light travels through the fiber core, bouncing back and forth off the boundary between the core and cladding. Because the light must strike the boundary with an angle greater than the critical angle, only light that enters the fiber within a certain range of angles can travel down the fiber without leaking out. This range of angles is called the acceptance cone of the fiber. The size of this acceptance cone is a function of the refractive index difference between the fiber's core and cladding.
+In simpler terms, there is a maximum angle from the fiber axis at which light may enter the fiber so that it will propagate, or travel, in the core of the fiber. The sine of this maximum angle is the numerical aperture (NA) of the fiber. Fiber with a larger NA requires less precision to splice and work with than fiber with a smaller NA. Single-mode fiber has a small NA.
+[edit] Multi-mode fiber
+
+
+
+
+The propagation of light through a multi-mode optical fiber.
+
+
+
+
+
+
+A laser bouncing down an acrylic rod, illustrating the total internal reflection of light in a multi-mode optical fiber.
+
+
+Main article: Multi-mode optical fiber
+Fiber with large core diameter (greater than 10micrometers) may be analyzed by geometrical optics. Such fiber is called multi-mode fiber, from the electromagnetic analysis (see below). In a step-index multi-mode fiber, rays of light are guided along the fiber core by total internal reflection. Rays that meet the core-cladding boundary at a high angle (measured relative to a line normal to the boundary), greater than the critical angle for this boundary, are completely reflected. The critical angle (minimum angle for total internal reflection) is determined by the difference in index of refraction between the core and cladding materials. Rays that meet the boundary at a low angle are refracted from the core into the cladding, and do not convey light and hence information along the fiber. The critical angle determines the acceptance angle of the fiber, often reported as a numerical aperture. A high numerical aperture allows light to propagate down the fiber in rays both close to the axis and at various angles, allowing efficient coupling of light into the fiber. However, this high numerical aperture increases the amount of dispersion as rays at different angles have different path lengths and therefore take different times to traverse the fiber.
+
+
+
+
+Optical fiber types.
+
+
+In graded-index fiber, the index of refraction in the core decreases continuously between the axis and the cladding. This causes light rays to bend smoothly as they approach the cladding, rather than reflecting abruptly from the core-cladding boundary. The resulting curved paths reduce multi-path dispersion because high angle rays pass more through the lower-index periphery of the core, rather than the high-index center. The index profile is chosen to minimize the difference in axial propagation speeds of the various rays in the fiber. This ideal index profile is very close to a parabolic relationship between the index and the distance from the axis.
+[edit] Single-mode fiber
+
+
+
+
+The structure of a typical single-mode fiber.
+1. Core: 8m diameter
+2. Cladding: 125m dia.
+3. Buffer: 250m dia.
+4. Jacket: 400m dia.
+
+
+Main article: Single-mode optical fiber
+Fiber with a core diameter less than about ten times the wavelength of the propagating light cannot be modeled using geometric optics. Instead, it must be analyzed as an electromagnetic structure, by solution of Maxwell's equations as reduced to the electromagnetic wave equation. The electromagnetic analysis may also be required to understand behaviors such as speckle that occur when coherent light propagates in multi-mode fiber. As an optical waveguide, the fiber supports one or more confined transverse modes by which light can propagate along the fiber. Fiber supporting only one mode is called single-mode or mono-mode fiber. The behavior of larger-core multi-mode fiber can also be modeled using the wave equation, which shows that such fiber supports more than one mode of propagation (hence the name). The results of such modeling of multi-mode fiber approximately agree with the predictions of geometric optics, if the fiber core is large enough to support more than a few modes.
+The waveguide analysis shows that the light energy in the fiber is not completely confined in the core. Instead, especially in single-mode fibers, a significant fraction of the energy in the bound mode travels in the cladding as an evanescent wave.
+The most common type of single-mode fiber has a core diameter of 810 micrometers and is designed for use in the near infrared. The mode structure depends on the wavelength of the light used, so that this fiber actually supports a small number of additional modes at visible wavelengths. Multi-mode fiber, by comparison, is manufactured with core diameters as small as 50 micrometers and as large as hundreds of micrometers. The normalized frequency V for this fiber should be less than the first zero of the Bessel function J0 (approximately 2.405).
+[edit] Special-purpose fiber
+Some special-purpose optical fiber is constructed with a non-cylindrical core and/or cladding layer, usually with an elliptical or rectangular cross-section. These include polarization-maintaining fiber and fiber designed to suppress whispering gallery mode propagation. Polarization-maintaining fibers are unique type of fibers that is commonly used in fiber optic sensors due to its ability to maintain the polarization of the light inserted in it.
+Photonic-crystal fiber is made with a regular pattern of index variation (often in the form of cylindrical holes that run along the length of the fiber). Such fiber uses diffraction effects instead of or in addition to total internal reflection, to confine light to the fiber's core. The properties of the fiber can be tailored to a wide variety of applications.
+[edit] Mechanisms of attenuation
+
+
+
+
+Light attenuation by ZBLAN and silica fibers
+
+
+Main article: Transparent materials
+Attenuation in fiber optics, also known as transmission loss, is the reduction in intensity of the light beam (or signal) as it travels through the transmission medium. Attenuation coefficients in fiber optics usually use units of dB/km through the medium due to the relatively high quality of transparency of modern optical transmission media. The medium is usually a fiber of silica glass that confines the incident light beam to the inside. Attenuation is an important factor limiting the transmission of a digital signal across large distances. Thus, much research has gone into both limiting the attenuation and maximizing the amplification of the optical signal. Empirical research has shown that attenuation in optical fiber is caused primarily by both scattering and absorption.
+[edit] Light scattering
+
+
+
+
+Specular reflection
+
+
+
+
+
+
+Diffuse reflection
+
+
+The propagation of light through the core of an optical fiber is based on total internal reflection of the lightwave. Rough and irregular surfaces, even at the molecular level, can cause light rays to be reflected in random directions. This is called diffuse reflection or scattering, and it is typically characterized by wide variety of reflection angles.
+Light scattering depends on the wavelength of the light being scattered. Thus, limits to spatial scales of visibility arise, depending on the frequency of the incident light-wave and the physical dimension (or spatial scale) of the scattering center, which is typically in the form of some specific micro-structural feature. Since visible light has a wavelength of the order of one micrometer (one millionth of a meter) scattering centers will have dimensions on a similar spatial scale.
+Thus, attenuation results from the incoherent scattering of light at internal surfaces and interfaces. In (poly)crystalline materials such as metals and ceramics, in addition to pores, most of the internal surfaces or interfaces are in the form of grain boundaries that separate tiny regions of crystalline order. It has recently been shown that when the size of the scattering center (or grain boundary) is reduced below the size of the wavelength of the light being scattered, the scattering no longer occurs to any significant extent. This phenomenon has given rise to the production of transparent ceramic materials.
+Similarly, the scattering of light in optical quality glass fiber is caused by molecular level irregularities (compositional fluctuations) in the glass structure. Indeed, one emerging school of thought is that a glass is simply the limiting case of a polycrystalline solid. Within this framework, "domains" exhibiting various degrees of short-range order become the building blocks of both metals and alloys, as well as glasses and ceramics. Distributed both between and within these domains are micro-structural defects that provide the most ideal locations for light scattering. This same phenomenon is seen as one of the limiting factors in the transparency of IR missile domes.[35]
+At high optical powers, scattering can also be caused by nonlinear optical processes in the fiber.[36][37]
+[edit] UV-Vis-IR absorption
+In addition to light scattering, attenuation or signal loss can also occur due to selective absorption of specific wavelengths, in a manner similar to that responsible for the appearance of color. Primary material considerations include both electrons and molecules as follows:
+1) At the electronic level, it depends on whether the electron orbitals are spaced (or "quantized") such that they can absorb a quantum of light (or photon) of a specific wavelength or frequency in the ultraviolet (UV) or visible ranges. This is what gives rise to color.
+2) At the atomic or molecular level, it depends on the frequencies of atomic or molecular vibrations or chemical bonds, how close-packed its atoms or molecules are, and whether or not the atoms or molecules exhibit long-range order. These factors will determine the capacity of the material transmitting longer wavelengths in the infrared (IR), far IR, radio and microwave ranges.
+The design of any optically transparent device requires the selection of materials based upon knowledge of its properties and limitations. The Lattice absorption characteristics observed at the lower frequency regions (mid IR to far-infrared wavelength range) define the long-wavelength transparency limit of the material. They are the result of the interactive coupling between the motions of thermally induced vibrations of the constituent atoms and molecules of the solid lattice and the incident light wave radiation. Hence, all materials are bounded by limiting regions of absorption caused by atomic and molecular vibrations (bond-stretching)in the far-infrared (>10m).
+Thus, multi-phonon absorption occurs when two or more phonons simultaneously interact to produce electric dipole moments with which the incident radiation may couple. These dipoles can absorb energy from the incident radiation, reaching a maximum coupling with the radiation when the frequency is equal to the fundamental vibrational mode of the molecular dipole (e.g. Si-O bond) in the far-infrared, or one of its harmonics.
+The selective absorption of infrared (IR) light by a particular material occurs because the selected frequency of the light wave matches the frequency (or an integer multiple of the frequency) at which the particles of that material vibrate. Since different atoms and molecules have different natural frequencies of vibration, they will selectively absorb different frequencies (or portions of the spectrum) of infrared (IR) light.
+Reflection and transmission of light waves occur because the frequencies of the light waves do not match the natural resonant frequencies of vibration of the objects. When IR light of these frequencies strikes an object, the energy is either reflected or transmitted.
+[edit] Manufacturing
+[edit] Materials
+Glass optical fibers are almost always made from silica, but some other materials, such as fluorozirconate, fluoroaluminate, and chalcogenide glasses as well as crystalline materials like sapphire, are used for longer-wavelength infrared or other specialized applications. Silica and fluoride glasses usually have refractive indices of about 1.5, but some materials such as the chalcogenides can have indices as high as 3. Typically the index difference between core and cladding is less than one percent.
+Plastic optical fibers (POF) are commonly step-index multi-mode fibers with a core diameter of 0.5 millimeters or larger. POF typically have higher attenuation coefficients than glass fibers, 1dB/m or higher, and this high attenuation limits the range of POF-based systems.
+[edit] Silica
+Silica exhibits fairly good optical transmission over a wide range of wavelengths. In the near-infrared (near IR) portion of the spectrum, particularly around 1.5 m, silica can have extremely low absorption and scattering losses of the order of 0.2 dB/km. Such remarkably low losses are possible only because ultra-pure silicon is available, it being essential for manufacturing integrated circuits and discrete transistors. A high transparency in the 1.4-m region is achieved by maintaining a low concentration of hydroxyl groups (OH). Alternatively, a high OH concentration is better for transmission in the ultraviolet (UV) region.
+Silica can be drawn into fibers at reasonably high temperatures, and has a fairly broad glass transformation range. One other advantage is that fusion splicing and cleaving of silica fibers is relatively effective. Silica fiber also has high mechanical strength against both pulling and even bending, provided that the fiber is not too thick and that the surfaces have been well prepared during processing. Even simple cleaving (breaking) of the ends of the fiber can provide nicely flat surfaces with acceptable optical quality. Silica is also relatively chemically inert. In particular, it is not hygroscopic (does not absorb water).
+Silica glass can be doped with various materials. One purpose of doping is to raise the refractive index (e.g. with Germanium dioxide (GeO2) or Aluminium oxide (Al2O3)) or to lower it (e.g. with fluorine or Boron trioxide (B2O3)). Doping is also possible with laser-active ions (for example, rare earth-doped fibers) in order to obtain active fibers to be used, for example, in fiber amplifiers or laser applications. Both the fiber core and cladding are typically doped, so that the entire assembly (core and cladding) is effectively the same compound (e.g. an aluminosilicate, germanosilicate, phosphosilicate or borosilicate glass).
+Particularly for active fibers, pure silica is usually not a very suitable host glass, because it exhibits a low solubility for rare earth ions. This can lead to quenching effects due to clustering of dopant ions. Aluminosilicates are much more effective in this respect.
+Silica fiber also exhibits a high threshold for optical damage. This property ensures a low tendency for laser-induced breakdown. This is important for fiber amplifiers when utilized for the amplification of short pulses.
+Because of these properties silica fibers are the material of choice in many optical applications, such as communications (except for very short distances with plastic optical fiber), fiber lasers, fiber amplifiers, and fiber-optic sensors. Large efforts put forth in the development of various types of silica fibers have further increased the performance of such fibers over other materials.[38][39][40][41][42][43][44][45]
+[edit] Fluorides
+Fluoride glass is a class of non-oxide optical quality glasses composed of fluorides of various metals. Because of their low viscosity, it is very difficult to completely avoid crystallization while processing it through the glass transition (or drawing the fiber from the melt). Thus, although heavy metal fluoride glasses (HMFG) exhibit very low optical attenuation, they are not only difficult to manufacture, but are quite fragile, and have poor resistance to moisture and other environmental attacks. Their best attribute is that they lack the absorption band associated with the hydroxyl (OH) group (32003600cm1), which is present in nearly all oxide-based glasses.
+An example of a heavy metal fluoride glass is the ZBLAN glass group, composed of zirconium, barium, lanthanum, aluminium, and sodium fluorides. Their main technological application is as optical waveguides in both planar and fiber form. They are advantageous especially in the mid-infrared (20005000nm) range.
+HMFGs were initially slated for optical fiber applications, because the intrinsic losses of a mid-IR fiber could in principle be lower than those of silica fibers, which are transparent only up to about 2 m. However, such low losses were never realized in practice, and the fragility and high cost of fluoride fibers made them less than ideal as primary candidates. Later, the utility of fluoride fibers for various other applications was discovered. These include mid-IR spectroscopy, fiber optic sensors, thermometry, and imaging. Also, fluoride fibers can be used for guided lightwave transmission in media such as YAG (yttria-alumina garnet) lasers at 2.9 m, as required for medical applications (e.g. ophthalmology and dentistry).[46][47]
+[edit] Phosphates
+
+
+
+
+The P4O10 cagelike structurethe basic building block for phosphate glass.
+
+
+Phosphate glass constitutes a class of optical glasses composed of metaphosphates of various metals. Instead of the SiO4 tetrahedra observed in silicate glasses, the building block for this glass former is Phosphorus pentoxide (P2O5), which crystallizes in at least four different forms. The most familiar polymorph (see figure) comprises molecules of P4O10.
+Phosphate glasses can be advantageous over silica glasses for optical fibers with a high concentration of doping rare earth ions. A mix of fluoride glass and phosphate glass is fluorophosphate glass.[48][49]
+[edit] Chalcogenides
+The chalcogensthe elements in group 16 of the periodic tableparticularly sulfur (S), selenium (Se) and tellurium (Te)react with more electropositive elements, such as silver, to form chalcogenides. These are extremely versatile compounds, in that they can be crystalline or amorphous, metallic or semiconducting, and conductors of ions or electrons. Chalcogenides fibers are useful for far infrared transmission but are hard to produce.
+[edit] Process
+
+
+
+
+Illustration of the modified chemical vapor deposition (inside) process
+
+
+Standard optical fibers are made by first constructing a large-diameter "preform", with a carefully controlled refractive index profile, and then "pulling" the preform to form the long, thin optical fiber. The preform is commonly made by three chemical vapor deposition methods: inside vapor deposition, outside vapor deposition, and vapor axial deposition.[50]
+With inside vapor deposition, the preform starts as a hollow glass tube approximately 40 centimeters (16in) long, which is placed horizontally and rotated slowly on a lathe. Gases such as silicon tetrachloride (SiCl4) or germanium tetrachloride (GeCl4) are injected with oxygen in the end of the tube. The gases are then heated by means of an external hydrogen burner, bringing the temperature of the gas up to 1900K (1600C, 3000F), where the tetrachlorides react with oxygen to produce silica or germania (germanium dioxide) particles. When the reaction conditions are chosen to allow this reaction to occur in the gas phase throughout the tube volume, in contrast to earlier techniques where the reaction occurred only on the glass surface, this technique is called modified chemical vapor deposition (MCVD).
+The oxide particles then agglomerate to form large particle chains, which subsequently deposit on the walls of the tube as soot. The deposition is due to the large difference in temperature between the gas core and the wall causing the gas to push the particles outwards (this is known as thermophoresis). The torch is then traversed up and down the length of the tube to deposit the material evenly. After the torch has reached the end of the tube, it is then brought back to the beginning of the tube and the deposited particles are then melted to form a solid layer. This process is repeated until a sufficient amount of material has been deposited. For each layer the composition can be modified by varying the gas composition, resulting in precise control of the finished fiber's optical properties.
+In outside vapor deposition or vapor axial deposition, the glass is formed by flame hydrolysis, a reaction in which silicon tetrachloride and germanium tetrachloride are oxidized by reaction with water (H2O) in an oxyhydrogen flame. In outside vapor deposition the glass is deposited onto a solid rod, which is removed before further processing. In vapor axial deposition, a short seed rod is used, and a porous preform, whose length is not limited by the size of the source rod, is built up on its end. The porous preform is consolidated into a transparent, solid preform by heating to about 1800K (1500C, 2800F).
+The preform, however constructed, is then placed in a device known as a drawing tower, where the preform tip is heated and the optical fiber is pulled out as a string. By measuring the resultant fiber width, the tension on the fiber can be controlled to maintain the fiber thickness.
+[edit] Coatings
+The light is "guided" down the core of the fiber by an optical "cladding" with a lower refractive index that traps light in the core through "total internal reflection."
+The cladding is coated by a "buffer" that protects it from moisture and physical damage. The buffer is what gets stripped off the fiber for termination or splicing. These coatings are UV-cured urethane acrylate composite materials applied to the outside of the fiber during the drawing process. The coatings protect the very delicate strands of glass fiberabout the size of a human hairand allow it to survive the rigors of manufacturing, proof testing, cabling and installation.
+Todays glass optical fiber draw processes employ a dual-layer coating approach. An inner primary coating is designed to act as a shock absorber to minimize attenuation caused by microbending. An outer secondary coating protects the primary coating against mechanical damage and acts as a barrier to lateral forces. Sometimes a metallic armor layer is added to provide extra protection.
+These fiber optic coating layers are applied during the fiber draw, at speeds approaching 100 kilometers per hour (60mph). Fiber optic coatings are applied using one of two methods: wet-on-dry and wet-on-wet. In wet-on-dry, the fiber passes through a primary coating application, which is then UV curedthen through the secondary coating application, which is subsequently cured. In wet-on-wet, the fiber passes through both the primary and secondary coating applications, then goes to UV curing.
+Fiber optic coatings are applied in concentric layers to prevent damage to the fiber during the drawing application and to maximize fiber strength and microbend resistance. Unevenly coated fiber will experience non-uniform forces when the coating expands or contracts, and is susceptible to greater signal attenuation. Under proper drawing and coating processes, the coatings are concentric around the fiber, continuous over the length of the application and have constant thickness.
+Fiber optic coatings protect the glass fibers from scratches that could lead to strength degradation. The combination of moisture and scratches accelerates the aging and deterioration of fiber strength. When fiber is subjected to low stresses over a long period, fiber fatigue can occur. Over time or in extreme conditions, these factors combine to cause microscopic flaws in the glass fiber to propagate, which can ultimately result in fiber failure.
+Three key characteristics of fiber optic waveguides can be affected by environmental conditions: strength, attenuation and resistance to losses caused by microbending. External fiber optic coatings protect glass optical fiber from environmental conditions that can affect the fibers performance and long-term durability. On the inside, coatings ensure the reliability of the signal being carried and help minimize attenuation due to microbending.
+[edit] Practical issues
+[edit] Optical fiber cables
+
+
+
+
+An optical fiber cable
+
+
+Main article: Optical fiber cable
+In practical fibers, the cladding is usually coated with a tough resin buffer layer, which may be further surrounded by a jacket layer, usually glass. These layers add strength to the fiber but do not contribute to its optical wave guide properties. Rigid fiber assemblies sometimes put light-absorbing ("dark") glass between the fibers, to prevent light that leaks out of one fiber from entering another. This reduces cross-talk between the fibers, or reduces flare in fiber bundle imaging applications.[51][52]
+Modern cables come in a wide variety of sheathings and armor, designed for applications such as direct burial in trenches, high voltage isolation, dual use as power lines,[53][not in citation given] installation in conduit, lashing to aerial telephone poles, submarine installation, and insertion in paved streets. The cost of small fiber-count pole-mounted cables has greatly decreased due to the high demand for fiber to the home (FTTH) installations in Japan and South Korea.
+Fiber cable can be very flexible, but traditional fiber's loss increases greatly if the fiber is bent with a radius smaller than around 30mm. This creates a problem when the cable is bent around corners or wound around a spool, making FTTX installations more complicated. "Bendable fibers", targeted towards easier installation in home environments, have been standardized as ITU-T G.657. This type of fiber can be bent with a radius as low as 7.5mm without adverse impact. Even more bendable fibers have been developed.[54] Bendable fiber may also be resistant to fiber hacking, in which the signal in a fiber is surreptitiously monitored by bending the fiber and detecting the leakage.[55]
+Another important feature of cable is cable's ability to withstand horizontally applied force. It is technically called max tensile strength defining how much force can applied to the cable during the installation period.
+Some fiber optic cable versions are reinforced with aramid yarns or glass yarns as intermediary strength member. In commercial terms, usage of the glass yarns are more cost effective while no loss in mechanical durability of the cable. Glass yarns also protect the cable core against rodents and termites.
+[edit] Termination and splicing
+
+
+
+
+ST connectors on multi-mode fiber.
+
+
+Optical fibers are connected to terminal equipment by optical fiber connectors. These connectors are usually of a standard type such as FC, SC, ST, LC, MTRJ, or SMA, which is designated for higher power transmission.
+Optical fibers may be connected to each other by connectors or by splicing, that is, joining two fibers together to form a continuous optical waveguide. The generally accepted splicing method is arc fusion splicing, which melts the fiber ends together with an electric arc. For quicker fastening jobs, a mechanical splice is used.
+Fusion splicing is done with a specialized instrument that typically operates as follows: The two cable ends are fastened inside a splice enclosure that will protect the splices, and the fiber ends are stripped of their protective polymer coating (as well as the more sturdy outer jacket, if present). The ends are cleaved (cut) with a precision cleaver to make them perpendicular, and are placed into special holders in the splicer. The splice is usually inspected via a magnified viewing screen to check the cleaves before and after the splice. The splicer uses small motors to align the end faces together, and emits a small spark between electrodes at the gap to burn off dust and moisture. Then the splicer generates a larger spark that raises the temperature above the melting point of the glass, fusing the ends together permanently. The location and energy of the spark is carefully controlled so that the molten core and cladding do not mix, and this minimizes optical loss. A splice loss estimate is measured by the splicer, by directing light through the cladding on one side and measuring the light leaking from the cladding on the other side. A splice loss under 0.1dB is typical. The complexity of this process makes fiber splicing much more difficult than splicing copper wire.
+Mechanical fiber splices are designed to be quicker and easier to install, but there is still the need for stripping, careful cleaning and precision cleaving. The fiber ends are aligned and held together by a precision-made sleeve, often using a clear index-matching gel that enhances the transmission of light across the joint. Such joints typically have higher optical loss and are less robust than fusion splices, especially if the gel is used. All splicing techniques involve installing an enclosure that protects the splice.
+Fibers are terminated in connectors that hold the fiber end precisely and securely. A fiber-optic connector is basically a rigid cylindrical barrel surrounded by a sleeve that holds the barrel in its mating socket. The mating mechanism can be push and click, turn and latch (bayonet), or screw-in (threaded). A typical connector is installed by preparing the fiber end and inserting it into the rear of the connector body. Quick-set adhesive is usually used to hold the fiber securely, and a strain relief is secured to the rear. Once the adhesive sets, the fiber's end is polished to a mirror finish. Various polish profiles are used, depending on the type of fiber and the application. For single-mode fiber, fiber ends are typically polished with a slight curvature that makes the mated connectors touch only at their cores. This is called a physical contact (PC) polish. The curved surface may be polished at an angle, to make an angled physical contact (APC) connection. Such connections have higher loss than PC connections, but greatly reduced back reflection, because light that reflects from the angled surface leaks out of the fiber core. The resulting signal strength loss is called gap loss. APC fiber ends have low back reflection even when disconnected.
+In the 1990s, terminating fiber optic cables was labor intensive. The number of parts per connector, polishing of the fibers, and the need to oven-bake the epoxy in each connector made terminating fiber optic cables difficult. Today, many connectors types are on the market that offer easier, less labor intensive ways of terminating cables. Some of the most popular connectors are pre-polished at the factory, and include a gel inside the connector. Those two steps help save money on labor, especially on large projects. A cleave is made at a required length, to get as close to the polished piece already inside the connector. The gel surrounds the point where the two pieces meet inside the connector for very little light loss.[citation needed]
+[edit] Free-space coupling
+It is often necessary to align an optical fiber with another optical fiber, or with an optoelectronic device such as a light-emitting diode, a laser diode, or a modulator. This can involve either carefully aligning the fiber and placing it in contact with the device, or can use a lens to allow coupling over an air gap. In some cases the end of the fiber is polished into a curved form that makes it act as a lens. Some companies can even shape the fiber into lenses by cutting them with lasers.[56]
+In a laboratory environment, a bare fiber end is coupled using a fiber launch system, which uses a microscope objective lens to focus the light down to a fine point. A precision translation stage (micro-positioning table) is used to move the lens, fiber, or device to allow the coupling efficiency to be optimized. Fibers with a connector on the end make this process much simpler: the connector is simply plugged into a pre-aligned fiberoptic collimator, which contains a lens that is either accurately positioned with respect to the fiber, or is adjustable. To achieve the best injection efficiency into single-mode fiber, the direction, position, size and divergence of the beam must all be optimized. With good beams, 70 to 90% coupling efficiency can be achieved.
+With properly polished single-mode fibers, the emitted beam has an almost perfect Gaussian shapeeven in the far fieldif a good lens is used. The lens needs to be large enough to support the full numerical aperture of the fiber, and must not introduce aberrations in the beam. Aspheric lenses are typically used.
+[edit] Fiber fuse
+At high optical intensities, above 2 megawatts per square centimeter, when a fiber is subjected to a shock or is otherwise suddenly damaged, a fiber fuse can occur. The reflection from the damage vaporizes the fiber immediately before the break, and this new defect remains reflective so that the damage propagates back toward the transmitter at 13 meters per second (411km/h, 28mph).[57][58] The open fiber control system, which ensures laser eye safety in the event of a broken fiber, can also effectively halt propagation of the fiber fuse.[59] In situations, such as undersea cables, where high power levels might be used without the need for open fiber control, a "fiber fuse" protection device at the transmitter can break the circuit to keep damage to a minimum.
+[edit] Example
+Fiber connections can be used for various types of connections. For example, most high definition televisions offer a digital audio optical connection. This allows the streaming of audio over light, using the TOSLink protocol.
+[edit] Power transmission
+Optical fiber can be used to transmit power using a photovoltaic cell to convert the light into electricity.[60] While this method of power transmission is not as efficient as conventional ones, it is especially useful in situations where it is desirable not to have a metallic conductor as in the case of use near MRI machines, which produce strong magnetic fields.[61]
+[edit] Preform
+
+
+
+
+Cross-section of a fiber drawn from a D-shaped preform
+
+
+A preform is a piece of glass used to draw an optical fiber. The preform may consist of several pieces of a glass with different refractive indices, to provide the core and cladding of the fiber. The shape of the preform may be circular, although for some applications such as double-clad fibers another form is preferred.[62] In fiber lasers based on double-clad fiber, an asymmetric shape improves the filling factor for laser pumping.
+Because of the surface tension, the shape is smoothed during the drawing process, and the shape of the resulting fiber does not reproduce the sharp edges of the preform. Nevertheless, the careful polishing of the preform is important, any defects of the preform surface affect the optical and mechanical properties of the resulting fiber. In particular, the preform for the test-fiber shown in the figure was not polished well, and the cracks are seen with confocal optical microscope.
+[edit] See also
+
+
+
+
+Electronics  portal
+
+
+
+
+
+Cable jetting
+Data cable
+Distributed acoustic sensing
+Fiber Bragg grating
+Fibre Channel
+Fiber pigtail
+Fiber laser
+Gradient-index optics
+Interconnect bottleneck
+Leaky mode
+Light Peak
+Modal bandwidth
+Optical cable
+Optical communication
+Optical fiber connector
+Optical interconnect
+Optical mesh network
+Optical power meter
+Optical time-domain reflectometer
+Optoelectronics
+Parallel optical interface
+Photonic-crystal fiber
+Small form-factor pluggable transceiver
+Soliton, Vector soliton
+Submarine communications cables
+Surround Optical Fiber Immunoassay (SOFIA)
+XENPAK
+
+
+[edit] References
+
+
+^ Light Pipe entry at the Jargon File
+^ K. Thyagarajan; Ajoy K. Ghatak (10 September 2007). Fiber Optic Essentials. Wiley-Interscience. pp.34. ISBN978-0-470-09742-7. http://books.google.com/books?id=k83sN7SJLVgC&pg=PA34. Retrieved 1 May 2012.
+^ a b Bates, Regis J (2001). Optical Switching and Networking Handbook. New York: McGraw-Hill. p.10. ISBN0-07-137356-X.
+^ Tyndall, John (1870). "Total Reflexion". Notes about Light. http://www.archive.org/details/notesofcourseofn00tyndrich.
+^ Tyndall, John (1873). "Six Lectures on Light". http://www.archive.org/details/sixlecturesonlig00tynduoft.
+^ Wells, J. (1989). "Hair light guide". Nature 338 (6210): 23. Bibcode 1989Natur.338...23W. doi:10.1038/338023b0. PMID2918918.
+^ H. H. Hopkins and N. S. Kapany (1954). "A flexible fibrescope, using static scanning". Nature 173 (4392): 39. Bibcode 1954Natur.173...39H. doi:10.1038/173039b0.
+^ Two Revolutionary Optical Technologies. Scientific Background on the Nobel Prize in Physics 2009. Nobelprize.org. 6 October 2009
+^ Jones, Newell. First 'Radio' Built by San Diego Resident Partner of Inventor of Telephone: Keeps Notebook of Experiences With Bell, San Diego Evening Tribune, July 31, 1937. Retrieved from the University of San Diego History Department website, November 26, 2009.
+^ The Birth of Fiber Optics
+^ Nishizawa, Jun-ichi and Suto, Ken (2004). "Terahertz wave generation and light amplification using Raman effect". In Bhat, K. N. and DasGupta, Amitava. Physics of semiconductor devices. New Delhi, India: Narosa Publishing House. p.27. ISBN81-7319-567-6. http://books.google.com/?id=2NTpSnfhResC&pg=PA27.
+^ "Optical Fiber". Sendai New. http://www.city.sendai.jp/soumu/kouhou/s-new-e6/page01.html. Retrieved April 5, 2009.
+^ "New Medal Honors Japanese Microelectrics Industry Leader". Institute of Electrical and Electronics Engineers. http://www.ieee.org/portal/site/tionline/menuitem.130a3558587d56e8fb2275875bac26c8/index.jsp?&pName=institute_level1_article&TheCat=1003&article=tionline/legacy/inst2003/jun03/6w.nishizawa.xml&.
+^ DE patent 1254513, Dr. Manfred Brner, "Mehrstufiges bertragungssystem fr Pulscodemodulation dargestellte Nachrichten.", issued 1967-11-16,  assigned to Telefunken Patentverwertungsgesellschaft m.b.H.
+^ US patent 3845293, Manfred Brner, "Electro-optical transmission system utilizing lasers"
+^ Hecht, Jeff (1999). City of Light, The Story of Fiber Optics. New York: Oxford University Press. p.114. ISBN0-19-510818-3. http://books.google.com/?id=4oMu7RbGpqUC&pg=PA114.
+^ "Press Release Nobel Prize in Physics 2009". The Nobel Foundation. http://nobelprize.org/nobel_prizes/physics/laureates/2009/press.html. Retrieved 2009-10-07.
+^ Lunar Television Camera. Pre-installation Acceptance Test Plan. NASA. 12 March 1968
+^ "19711985 Continuing the Tradition". GE Innovation Timeline. General Electric Company. http://www.ge.com/innovation/timeline/eras/continuing_tradition.html. Retrieved 2012-09-28.
+^ U.S. Patent 3,966,300 "Light conducting fibers of quartz glass"
+^ Russell, Philip (2003). "Photonic Crystal Fibers". Science 299 (5605): 35862. Bibcode 2003Sci...299..358R. doi:10.1126/science.1079280. PMID12532007.
+^ "The History of Crystal fiber A/S". Crystal Fiber A/S. http://www.crystal-fiber.com/. Retrieved 2008-10-22.
+^ 14 Tbps over a Single Optical Fiber: Successful Demonstration of World's Largest Capacity  145 digital high-definition movies transmitted in one second. NTT Press Release. September 29, 2006.
+^ M. S. Alfiad, et al. (2008). "111 Gb/s POLMUX-RZ-DQPSK Transmission over 1140 km of SSMF with 10.7 Gb/s NRZ-OOK Neighbours". Proceedings ECOC 2008: pp.Mo.4.E.2.
+^ S. Yao, Polarization in Fiber Systems: Squeezing Out More Bandwidth, The Photonics Handbook, Laurin Publishing, 2003, p. 1.
+^ Ciena, JANET Delivers Europes First 40 Gbps Wavelength Service 07/09/2007. Retrieved 29 Oct 2009.
+^ !!!x-in-lab/ Alcatel Boosts Fiber Speed to 100 Petabits in Lab, Stacey Higginbotham, Sep. 28, 2009
+^ World Record 69-Terabit Capacity for Optical Transmission over a Single Optical Fiber. NTT.co.jp. March 25, 2010
+^ Bell Labs breaks optical transmission record, 100 Petabit per second kilometer barrier. Physorg. September 29, 2009
+^ Siemen's claim to a fiber optic line that can not be tapped. Retrieved 18 Dec 2009.
+^ Al Mosheky, Zaid; Melling, Peter J.; Thomson, Mary A. (June 2001). "In situ real-time monitoring of a fermentation reaction using a fiber-optic FT-IR probe" (PDF). Spectroscopy. http://www.remspec.com/pdfs/SP5619.pdf.
+^ Melling, Peter; Thomson, Mary (October 2002). "Reaction monitoring in small reactors and tight spaces" (PDF). American Laboratory News. http://www.remspec.com/pdfs/amlab1002.pdf.
+^ Melling, Peter J.; Thomson, Mary (2002). "Fiber-optic probes for mid-infrared spectrometry". In Chalmers, John M.; Griffiths, Peter R. (eds.) (PDF). Handbook of Vibrational Spectroscopy. Wiley. http://www.remspec.com/pdfs/2703_o.pdf.
+^ a b Eugene Hecht. Optics, 4th ed. San Francisco, USA: Pearson Education inc. 2002.
+^ Archibald, P.S. and Bennett, H.E. (1978). "Scattering from infrared missile domes". Opt. Engr. 17: 647.
+^ Smith, R. G. (1972). "Optical Power Handling Capacity of Low Loss Optical Fibers as Determined by Stimulated Raman and Brillouin Scattering". Applied Optics 11 (11): 248994. Bibcode 1972ApOpt..11.2489S. doi:10.1364/AO.11.002489. PMID20119362.
+^ Paschotta, Rdiger. "Brillouin Scattering". Encyclopedia of Laser Physics and Technology. RP Photonics. http://www.rp-photonics.com/brillouin_scattering.html.
+^ Glasesmenn, G. S. (1999). "Advancements in Mechanical Strength and Reliability of Optical Fibers". Proc. SPIE CR73: 1. http://www.corning.com/WorkArea/downloadasset.aspx?id=7783.
+^ Kurkjian, Charles R.; Simpkins, Peter G.; Inniss, Daryl (1993). "Strength, Degradation, and Coating of Silica Lightguides". Journal of the American Ceramic Society 76 (5): 1106. doi:10.1111/j.1151-2916.1993.tb03727.x.
+^ Kurkjian, C (1988). "Mechanical stability of oxide glasses". Journal of Non-Crystalline Solids 102: 71. Bibcode 1988JNCS..102...71K. doi:10.1016/0022-3093(88)90114-7.
+^ Kurkjian, C.R.; Krause, J.T.; Matthewson, M.J. (1989). "Strength and fatigue of silica optical fibers". Journal of Lightwave Technology 7 (9): 1360. Bibcode 1989JLwT....7.1360K. doi:10.1109/50.50715.
+^ Kurkjian, Charles R. (1999). "Strength variations in silica fibers". Proceedings of SPIE. 3848. p.77. doi:10.1117/12.372757.
+^ Skontorp, Arne (2000). "Nonlinear mechanical properties of silica-based optical fibers". Proceedings of SPIE. 4073. p.278. doi:10.1117/12.396408.
+^ Proctor, B. A.; Whitney, I.; Johnson, J. W. (1967). "The Strength of Fused Silica". Proceedings of the Royal Society of London. Series A, Mathematical and Physical Sciences (19341990) 297 (1451): 534. Bibcode 1967RSPSA.297..534P. doi:10.1098/rspa.1967.0085.
+^ Bartenev, G (1968). "The structure and strength of glass fibers". Journal of Non-Crystalline Solids 1: 69. Bibcode 1968JNCS....1...69B. doi:10.1016/0022-3093(68)90007-0.
+^ Tran, D., et al. (1984). "Heavy metal fluoride glasses and fibers: A review". J. Lightwave Technology 2 (5): 566. Bibcode 1984JLwT....2..566T. doi:10.1109/JLT.1984.1073661. http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1073661.
+^ Nee, Soe-Mie F. (2000). "Optical and surface properties of oxyfluoride glass". Proceedings of SPIE. 4102. p.122. doi:10.1117/12.405276.
+^ Karabulut, M (2001). "Mechanical and structural properties of phosphate glasses". Journal of Non-Crystalline Solids 288: 8. Bibcode 2001JNCS..288....8K. doi:10.1016/S0022-3093(01)00615-9.
+^ Kurkjian, C (2000). "Mechanical properties of phosphate glasses". Journal of Non-Crystalline Solids 263264: 207. Bibcode 2000JNCS..263..207K. doi:10.1016/S0022-3093(99)00637-7.
+^ Gowar, John (1993) (2d ed.). Hempstead, UK: Prentice-Hall. p.209. ISBN0-13-638727-6.
+^ "Light collection and propagation". National Instruments' Developer Zone. National Instruments Corporation. http://zone.ni.com/devzone/cda/ph/p/id/129#toc2. Retrieved 2007-03-19.
+^ Hecht, Jeff (2002). Understanding Fiber Optics (4th ed.). Prentice Hall. ISBN0-13-027828-9.
+^ "Screening report for Alaska rural energy plan" (PDF). Alaska Division of Community and Regional Affairs. Archived from the original on May 8, 2006. http://web.archive.org/web/20060508191931/http://www.dced.state.ak.us/dca/AEIS/PDF_Files/AIDEA_Energy_Screening.pdf. Retrieved April 11, 2006.
+^ "Corning announces breakthrough optical fiber technology" (Press release). Corning Incorporated. 2007-07-23. http://www.corning.com/media_center/press_releases/2007/2007072301.aspx. Retrieved 2007-12-09.
+^ Olzak, Tom (2007-05-03). "Protect your network against fiber hacks". Techrepublic. CNET. http://blogs.techrepublic.com.com/security/?p=222. Retrieved 2007-12-10.
+^ "OpTek Systems Inc.". http://www.opteksystems.com/laser-lens.
+^ Atkins, R. M.; Simpkins, P. G.; Yablon, A. D. (2003). "Track of a fiber fuse: a Rayleigh instability in optical waveguides". Optics Letters 28 (12): 974976. Bibcode 2003OptL...28..974A. doi:10.1364/OL.28.000974. PMID12836750. http://ol.osa.org/abstract.cfm?id=72607.
+^ Hitz, Breck (August 2003). "Origin of 'fiber fuse' is revealed". Photonics Spectra. http://www.photonics.com/Article.aspx?AID=16745. Retrieved 2011-01-23.
+^ Seo, Koji; et al. (October 2003). "Evaluation of high-power endurance in optical fiber links". Furukawa Review (24): 1722. ISSN1348-1797. http://www.furukawa.co.jp/review/fr024/fr24_04.pdf. Retrieved 2008-07-05.
+^ IEEE Spectrum: Electricity Over Glass. IEEE Spectrum. October 2005
+^ Photovoltaic feat advances power over optical fiber  Electronic Products. 06/01/2006
+^ Kouznetsov, D.; Moloney, J.V. (2003). "Highly efficient, high-gain, short-length, and power-scalable incoherent diode slab-pumped fiber amplifier/laser". IEEE Journal of Quantum Electronics 39 (11): 14521461. Bibcode 2003IJQE...39.1452K. doi:10.1109/JQE.2003.818311. http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?tp=&arnumber=1242365&isnumber=27838.
+
+
+[edit] Further reading
+
+
+Agrawal, Govind (2010). Fiber-Optic Communication Systems (4 ed.). Wiley. ISBN9780470505113. http://onlinelibrary.wiley.com/book/10.1002/9780470918524.
+Gambling, W. A., "The Rise and Rise of Optical Fibers", IEEE Journal on Selected Topics in Quantum Electronics, Vol. 6, No. 6, pp.10841093, Nov./Dec. 2000.
+Hecht, Jeff, Understanding Fiber Optics, 4th ed., Prentice-Hall, Upper Saddle River, NJ, USA 2002 (ISBN 0-13-027828-9).
+Mirabito, Michael M.A; and Morgenstern, Barbara L., The New Communications Technologies: Applications, Policy, and Impact, 5th. Edition. Focal Press, 2004. (ISBN 0-24-080586-0).
+Nagel S. R., MacChesney J. B., Walker K. L., "An Overview of the Modified Chemical Vapor Deposition (MCVD) Process and Performance", IEEE Journal of Quantum Electronics, Vol. QE-18, No. 4, p.459, April 1982.
+Ramaswami, R., Sivarajan, K. N., Optical Networks: A Practical Perspective, Morgan Kaufmann Publishers, San Francisco, 1998 (ISBN 1-55860-445-6).
+VDV Works LLC Lennie Lightwave's Guide To Fiber Optics, http://www.vdvworks.com/LennieLw/  2002-6.
+Friedman, Thomas L. (2007). The World is Flat. Picador. ISBN978-0-312-42507-4. The book discusses how fiberoptics has contributed to globalization, and has revolutionized communications, business, and even the distribution of capital among countries.
+GR-771, Generic Requirements for Fiber Optic Splice Closures, Telcordia Technologies, Issue 2, July 2008. Discusses fiber optic splice closures and the associated hardware intended to restore the mechanical and environmental integrity of one or more fiber cables entering the enclosure.
+
+
+[edit] External links
+
+
+
+Wikimedia Commons has media related to: Optical fibers
+
+
+
+The Fiber Optic Association
+FOA color code for connectors
+Lennie Lightwave's Guide To Fiber Optics
+"Fibers", article in RP Photonics' Encyclopedia of Laser Physics and Technology
+How Fiber Optics are made In video
+"Fibre optic technologies", Mercury Communications Ltd, August 1992.
+"Photonics & the future of fibre", Mercury Communications Ltd, March 1993.
+"Fiber Optic Tutorial" Educational site from Arc Electronics
+"Plastic Optical Fiber", Technologies and competitive advantages of POF  Plastic Optical Fiber
+MIT Video Lecture: Understanding Lasers and Fiberoptics
+Fundamentals of Photonics: Module on Optical Waveguides and Fibers
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Optical communication
+
+
+
+
+
+
+
+
+
+Fiber-optic communication
+Free-space optical communication
+Optical wireless
+Optical fiber
+
+cable
+connector
+
+
+Optical Carrier
+Intensity modulation
+Modulating retro-reflector
+Optical Transport Network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Glass science topics
+
+
+
+
+
+
+Basics
+
+
+
+Glass
+Glass transition
+Supercooling
+
+
+
+
+
+
+
+
+Glass formulation
+
+
+
+AgInSbTe
+Bioglass
+Borophosphosilicate glass
+Borosilicate glass
+Ceramic glaze
+Chalcogenide glass
+Cobalt glass
+Cranberry glass
+Crown glass
+Flint glass
+Fluorosilicate glass
+Fused quartz
+GeSbTe
+Gold ruby glass
+Lead glass
+Milk glass
+Phosphosilicate glass
+Photochromic lens glass
+Silicate glass
+Soda-lime glass
+Sodium hexametaphosphate
+Soluble glass
+Tellurite glass
+Ultra low expansion glass
+Uranium glass
+Vitreous enamel
+Wood's glass
+ZBLAN
+
+
+
+
+
+
+
+
+Glass-ceramics
+
+
+
+Bioactive glass
+CorningWare
+Glass-ceramic-to-metal seals
+Macor
+Zerodur
+
+
+
+
+
+
+
+
+Glass preparation
+
+
+
+Annealing
+Chemical vapor deposition
+Glass batch calculation
+Glass forming
+Glass melting
+Glass modeling
+Ion implantation
+Liquidus temperature
+Sol-gel technique
+Viscosity
+Vitrification
+
+
+
+
+
+
+
+
+Optics
+
+
+
+Achromat
+Dispersion
+Gradient-index optics
+Hydrogen darkening
+Optical amplifier
+Optical fiber
+Optical lens design
+Photochromic lens
+Photosensitive glass
+Refraction
+Transparent materials
+
+
+
+
+
+
+
+
+Surface modification
+
+
+
+Anti-reflective coating
+Chemically strengthened glass
+Corrosion
+Dealkalization
+DNA microarray
+Hydrogen darkening
+Insulated glazing
+Porous glass
+Self-cleaning glass
+Sol-gel technique
+Toughened glass
+
+
+
+
+
+
+
+
+Diverse topics
+
+
+
+Glass-coated wire
+Glass databases
+Glass electrode
+Glass fiber reinforced concrete
+Glass ionomer cement
+Glass microspheres
+Glass-reinforced plastic
+Glass science institutes
+Glass-to-metal seal
+Porous glass
+Prince Rupert's Drops
+Radioactive waste vitrification
+Windshield
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications
+
+
+
+
+
+
+History
+
+
+
+Beacons
+Broadcasting
+Communications satellites
+Computer networks
+Drums
+Electrical telegraphs
+Fax
+Heliographs
+Hydraulic telegraphs
+Internet
+Mass media
+Mobile phones
+Optical telegraphy
+Photophones
+Radio
+Radiotelephones
+Smoke signals
+Telegraphy
+Telephones
+The Telephone Cases
+Television
+Undersea telegraph lines
+Videotelephony
+
+
+
+
+
+
+
+
+
+
+
+Pioneers
+
+
+
+Edwin Howard Armstrong
+John Logie Baird
+Alexander Graham Bell
+Tim Berners-Lee
+Jagadish Chandra Bose
+Vint Cerf
+Claude Chappe
+Lee De Forest
+Philo Farnsworth
+Reginald Fessenden
+Elisha Gray
+Guglielmo Marconi
+Alexander Stepanovich Popov
+Johann Philipp Reis
+Nikola Tesla
+Camille Papin Tissot
+Alfred Vail
+Charles Wheatstone
+Vladimir K. Zworykin
+
+
+
+
+
+
+
+
+Transmission media
+
+
+
+Coaxial cable
+Free-space optical
+Optical fiber
+Radio waves
+Telephone lines
+Terrestrial microwave
+
+
+
+
+
+
+
+
+Networks
+
+
+
+ARPANET
+BITNET
+Ethernet
+FidoNet
+Internet
+ISDN
+LAN
+Mobile
+NGN
+Packet switched
+Public Switched Telephone
+Radio
+Telecommunications equipment
+Television
+Telex
+WAN
+Wireless
+World Wide Web
+
+
+
+
+
+
+
+
+Geographic
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Africa
+
+
+
+
+
+
+Sovereign states
+
+
+
+Algeria
+Angola
+Benin
+Botswana
+Burkina Faso
+Burundi
+Cameroon
+Cape Verde
+Central African Republic
+Chad
+Comoros
+Democratic Republic of the Congo
+Republic of the Congo
+Djibouti
+Egypt
+Equatorial Guinea
+Eritrea
+Ethiopia
+Gabon
+The Gambia
+Ghana
+Guinea
+Guinea-Bissau
+Ivory Coast (Cte d'Ivoire)
+Kenya
+Lesotho
+Liberia
+Libya
+Madagascar
+Malawi
+Mali
+Mauritania
+Mauritius
+Morocco
+Mozambique
+Namibia
+Niger
+Nigeria
+Rwanda
+So Tom and Prncipe
+Senegal
+Seychelles
+Sierra Leone
+Somalia
+South Africa
+South Sudan
+Sudan
+Swaziland
+Tanzania
+Togo
+Tunisia
+Uganda
+Zambia
+Zimbabwe
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Sahrawi Arab Democratic Republic
+Somaliland
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Canary Islands/ Ceuta/ Melilla/ Plazas de soberana(Spain)
+Madeira(Portugal)
+Mayotte/ Runion(France)
+Saint Helena/ Ascension Island/ Tristan da Cunha(United Kingdom)
+Western Sahara
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Asia
+
+
+
+
+
+
+Sovereign
+states
+
+
+
+Afghanistan
+Armenia
+Azerbaijan
+Bahrain
+Bangladesh
+Bhutan
+Brunei
+Burma (Myanmar)
+Cambodia
+People's Republic of China
+Cyprus
+East Timor (Timor-Leste)
+Egypt
+Georgia
+India
+Indonesia
+Iran
+Iraq
+Israel
+Japan
+Jordan
+Kazakhstan
+North Korea
+South Korea
+Kuwait
+Kyrgyzstan
+Laos
+Lebanon
+Malaysia
+Maldives
+Mongolia
+Nepal
+Oman
+Pakistan
+Philippines
+Qatar
+Russia
+Saudi Arabia
+Singapore
+Sri Lanka
+Syria
+Tajikistan
+Thailand
+Turkey
+Turkmenistan
+United Arab Emirates
+Uzbekistan
+Vietnam
+Yemen
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Abkhazia
+Nagorno-Karabakh
+Northern Cyprus
+Palestine
+South Ossetia
+Taiwan
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+British Indian Ocean Territory
+Christmas Island
+Cocos (Keeling) Islands
+Hong Kong
+Macau
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Europe
+
+
+
+
+
+
+Sovereign states
+
+
+
+Albania
+Andorra
+Armenia
+Austria
+Azerbaijan
+Belarus
+Belgium
+Bosnia and Herzegovina
+Bulgaria
+Croatia
+Cyprus
+Czech Republic
+Denmark
+Estonia
+Finland
+France
+Georgia
+Germany
+Greece
+Hungary
+Iceland
+Ireland
+Italy
+Kazakhstan
+Latvia
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Malta
+Moldova
+Monaco
+Montenegro
+Netherlands
+Norway
+Poland
+Portugal
+Romania
+Russia
+San Marino
+Serbia
+Slovakia
+Slovenia
+Spain
+Sweden
+Switzerland
+Turkey
+Ukraine
+United Kingdom
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Abkhazia
+Kosovo
+Nagorno-Karabakh
+Northern Cyprus
+South Ossetia
+Transnistria
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+land
+Faroe Islands
+Gibraltar
+Guernsey
+Jersey
+Isle of Man
+Svalbard
+
+
+
+
+
+
+
+
+Other entities
+
+
+
+European Union
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in North America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Antigua and Barbuda
+Bahamas
+Barbados
+Belize
+Canada
+Costa Rica
+Cuba
+Dominica
+Dominican Republic
+El Salvador
+Grenada
+Guatemala
+Haiti
+Honduras
+Jamaica
+Mexico
+Nicaragua
+Panama
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Trinidad and Tobago
+United States
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Anguilla
+Aruba
+Bermuda
+Bonaire
+British Virgin Islands
+Cayman Islands
+Curaao
+Greenland
+Guadeloupe
+Martinique
+Montserrat
+Navassa Island
+Puerto Rico
+Saint Barthlemy
+Saint Martin
+Saint Pierre and Miquelon
+Saba
+Sint Eustatius
+Sint Maarten
+Turks and Caicos Islands
+United States Virgin Islands
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Oceania
+
+
+
+
+
+
+Sovereign states
+
+
+
+Australia
+East Timor (Timor-Leste)
+Fiji
+Indonesia
+Kiribati
+Marshall Islands
+Federated States of Micronesia
+Nauru
+New Zealand
+Palau
+Papua New Guinea
+Samoa
+Solomon Islands
+Tonga
+Tuvalu
+Vanuatu
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+American Samoa
+Christmas Island
+Cocos (Keeling) Islands
+Cook Islands
+Easter Island
+French Polynesia
+Guam
+Hawaii
+New Caledonia
+Niue
+Norfolk Island
+Northern Mariana Islands
+Pitcairn Islands
+Tokelau
+Wallis and Futuna
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in South America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Aruba
+Bonaire
+Curaao
+Falkland Islands
+French Guiana
+South Georgia and the South Sandwich Islands
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 47082/1000000
+Preprocessor generated node count: 82904/1500000
+Post-expand include size: 407122/2048000 bytes
+Template argument size: 219339/2048000 bytes
+Highest expansion depth: 31/40
+Expensive parser function count: 19/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:3372377-0!*!0!!en!4!* and timestamp 20121225011117 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Optical_fiber&oldid=528278032"				
+ /printfooter 
+ catlinks 
+Categories: Optical fiberFiber opticsTelecommunications equipmentGlass formingGlass engineering and scienceHidden categories: Wikipedia introduction cleanup from November 2012All pages needing cleanupArticles covered by WikiProject Wikify from November 2012All articles covered by WikiProject WikifyArticles containing potentially dated statements from 2008All articles containing potentially dated statementsAll articles with unsourced statementsArticles with unsourced statements from May 2011Articles with unsourced statements from November 2008Articles with unsourced statements from May 2010  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

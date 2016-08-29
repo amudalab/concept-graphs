@@ -1,0 +1,172 @@
+A hash table, or a hash map, is a data structure that associates keys with values. The primary operation it supports efficiently is a lookup: given a key (e.g. a person's name), find the corresponding value (e.g. that person's telephone number). It works by transforming the key using a hash function into a hash, a number that the hash table uses to locate the desired value.
+
+
+A small phone book as a hash table.
+Time complexity and common uses of hash tables
+Hash tables are often used to implement associative arrays, sets and caches. Like arrays, hash tables provide constant-time O(1) lookup on average, regardless of the number of items in the table. The (hopefully rare) worst case lookup time in most hash table schemes is O(n).[1] Compared to other associative array data structures, hash tables are most useful when large numbers of records of data are to be stored.
+
+Hash tables may be used as in-memory data structures. Hash tables may also be adopted for use with persistent data structures; database indexes commonly use disk based data structures based on hash tables.
+
+Hash tables are used to speed-up string searching in many implementations of data compression.
+
+In computer chess, a hash table is generally used to implement the transposition table.
+
+Choosing a good hash function
+A good hash function is essential for good hash table performance. A poor choice of hash function is likely to lead to clustering, in which probability of keys mapping to the same hash bucket (i.e. a collision) is significantly greater than would be expected from a random function. Nonzero probability of collisions is inevitable in any hash implementation, but usually the number of operations to resolve collisions scales linearly with the number of keys mapping to the same bucket, so excess collisions will degrade performance significantly. In addition, some hash functions are computationally expensive, so the amount of time (and, in some cases, memory) taken to compute the hash may be burdensome.
+
+Choosing a good hash function is tricky. The literature is replete with poor choices, at least when measured by modern standards. For example, the very popular multiplicative hash advocated by Knuth in The Art of Computer Programming (see reference below) has particularly poor clustering behavior. However, since poor hashing merely degrades hash table performance for particular input key distributions, such problems commonly go undetected.
+
+The literature is similarly sparse on the criteria for choosing a hash function. Unlike most other fundamental algorithms and data structures, there is no universal consensus on what makes a "good" hash function. The remainder of this section is organized by three criteria: simplicity, speed, and strength, and will survey algorithms known to perform well by these criteria.
+
+Simplicity and speed are readily measured objectively (by number of lines of code and CPU benchmarks, for example), but strength is a more slippery concept. Obviously, a cryptographic hash function such as SHA-1 would satisfy the relatively lax strength requirements needed for hash tables, but their slowness and complexity makes them unappealing. In fact, even a cryptographic hash function does not provide protection against an adversary who wishes to degrade hash table performance by choosing keys all hashing to the same bucket. For these specialized cases, a universal hash function should be used instead of any one static hash, no matter how sophisticated.
+
+In the absence of a standard measure for hash function strength, the current state of the art is to employ a battery of statistical tests to measure whether the hash function can be readily distinguished from a random function. Arguably the most important such test is to determine whether the hash function displays the avalanche effect, which essentially states that any single-bit change in the input key should affect on average half the bits in the output. Bret Mulvey advocates testing the strict avalanche condition in particular, which states that, for any single-bit change, each of the output bits should change with probability one-half, independent of the other bits in the key. Purely additive hash functions such as CRC fail this stronger condition miserably.
+
+Clearly, a strong hash function should have a uniform distribution of hash values. Bret Mulvey proposes the use of a chi-squared test for uniformity, based on power of two hash table sizes ranging from 21 to 216. This test is considerably more sensitive than many others proposed for measuring hash functions, and finds problems in many popular hash functions.
+One desirable property of a hash function is that conversion from the hash value (typically 32 bits) to an bucket index for a particular-size hash table can be done simply by bit masking, preserving only the lower k bits for a table of size 2k (an operation equivalent to computing the hash value modulo the table size). This property enables the technique of incremental doubling of the size of the hash table - each bucket in the old table maps to only two in the new table. Because of its use of XOR-folding, the FNV hash does not have this property. Some older hashes are even worse, requiring table sizes to be a prime number rather than a power of two, again computing the bucket index as the hash value modulo the table size. In general, such a requirement is a sign of a fundamentally weak function; using a prime table size is a poor substitute for using a stronger function.
+
+Collision resolution
+If two keys hash to the same index, the corresponding records cannot be stored in the same location. So, if it's already occupied, we must find another location to store the new record, and do it so that we can find it when we look it up later on.
+
+To give an idea of the importance of a good collision resolution strategy, consider the following result, derived using the birthday paradox. Even if we assume that our hash function outputs random indices uniformly distributed over the array, and even for an array with 1 million entries, there is a 95% chance of at least one collision occurring before it contains 2500 records.
+
+There are a number of collision resolution techniques, but the most popular are chaining and open addressing.
+
+Chaining
+
+Hash collision resolved by chaining.
+In the simplest chaining hash table technique, each slot in the array references a linked list of inserted records that collide to the same slot. insert requires finding the correct slot, and appending to either end of the linked list in that slot; delete requires searching the linked list and removal.
+
+chaining hash tables have advantages over open addressed hash tables in that the removal operation is simple and resizing the table can be postponed for a much longer time because performance degrades more gracefully even when every slot is used. Indeed, many chaining hash tables may not require resizing at all since performance degradation is linear as the table fills. For example, a chaining hash table containing twice its recommended capacity of data would only be about twice as slow on average as the same table at its recommended capacity.
+
+chaining hash tables inherit the disadvantages of linked lists. When storing small records, the overhead of the linked list can be significant. An additional disadvantage is that traversing a linked list has poor cache performance.
+
+Alternative data structures can be used for chains instead of linked lists. By using a self balancing tree, for example, the theoretical worst case time of a hash table can be brought down to O(log n) rather than O(n). However, since each linked list is intended to be short, this approach is usually inefficient unless the hash table is designed to run at full capacity or there are unusually high collision rates, as might occur in input designed to cause collisions. Dynamic arrays can also be used to decrease space overhead and improve cache performance when records are small.
+
+Some chaining implementations use an optimization where the first record of each chain is stored in the table. Although this can increase performance, it is generally not recommended: chaining tables with reasonable load factors contain a large proportion of empty slots, and the larger slot size causes them to waste large amounts of space.
+
+Open addressing
+
+Hash collision resolved by linear probing (interval=1).
+Open addressing hash tables can store the records directly within the array. A hash collision is resolved by probing, or searching through alternate locations in the array (the probe sequence) until either the target record is found, or an unused array slot is found, which indicates that there is no such key in the table. Well known probe sequences include:
+
+linear probing 
+in which the interval between probes is fixed—often at 1,
+quadratic probing 
+in which the interval between probes increases linearly (hence, the indices are described by a quadratic function), and
+double hashing 
+in which the interval between probes is fixed for each record but is computed by another hash function.
+The main tradeoffs between these methods are that linear probing has the best cache performance but is most sensitive to clustering, while double hashing has poor cache performance but exhibits virtually no clustering; quadratic hashing falls in-between in both areas. Double hashing can also require more computation than other forms of probing. Some open addressing methods, such as last-come-first-served hashing and cuckoo hashing move existing keys around in the array to make room for the new key. This gives better maximum search times than the methods based on probing.
+
+A critical influence on performance of an open addressing hash table is the load factor; that is, the proportion of the slots in the array that are used.
+Another technique for removal is simply to mark the slot as deleted. However this eventually requires rebuilding the table simply to remove deleted records. The methods above provide O(1) updating and removal of existing records, with occasional rebuilding if the high water mark of the table size grows.
+
+The O(1) remove method above is only possible in linearly probed hash tables with single-slot stepping. In the case where many records are to be deleted in one operation, marking the slots for delete and later rebuilding may be more efficient.
+
+Open addressing versus chaining
+chaining hash tables have the following benefits over open addressing:
+
+They are simple to implement effectively and only require basic data structures.
+From the point of view of writing suitable hash functions, chaining hash tables are insensitive to clustering, only requiring minimization of collisions. Open addressing depends upon better hash functions to avoid clustering. This is particularly important if novice programmers can add their own hash functions, but even experienced programmers can be caught out by unexpected clustering effects.
+They degrade in performance more gracefully. Although chains grow longer as the table fills, a chaining hash table cannot "fill up" and does not exhibit the sudden increases in lookup times that occur in a near-full table with open addressing. (see right)
+If the hash table stores large records, about 5 or more words per record, chaining uses less memory than open addressing.
+If the hash table is sparse (that is, it has a big array with many free array slots), chaining uses less memory than open addressing even for small records of 2 to 4 words per record due to its external storage.
+
+This graph compares the average number of cache misses required to lookup elements in tables with chaining and linear probing. As the table passes the 80%-full mark, linear probing's performance drastically degrades.
+For small record sizes (a few words or less) the benefits of in-place open addressing compared to chaining are:
+
+They can be more space-efficient than chaining since they don't need to store any pointers or allocate any additional space outside the hash table. Simple linked lists require a word of overhead per element.
+inserts avoid the time overhead of memory allocation, and can even be implemented in the absence of a memory allocator.
+Because it uses internal storage, open addressing avoids the extra indirection required for chaining's external storage. It also has better locality of reference, particularly with linear probing. With small record sizes, these factors can yield better performance than chaining, particularly for lookups.
+They can be easier to serialize, because they don't use pointers.
+On the other hand, normal open addressing is a poor choice for large elements, since these elements fill entire cache lines (negating the cache advantage), and a large amount of space is wasted on large empty table slots. If the open addressing table only stores references to elements (external storage), it uses space comparable to chaining even for large records but loses its speed advantage.
+
+Generally speaking, open addressing is better used for hash tables with small records that can be stored within the table (internal storage) and fit in a cache line. They are particularly suitable for elements of one word or less. In cases where the tables are expected to have high load factors, the records are large, or the data is variable-sized, chaining hash tables often perform as well or better.
+
+Ultimately, used sensibly any kind of hash table algorithm is usually fast enough; and the percentage of a calculation spent in hash table code is low. Memory usage is rarely considered excessive. Therefore, in most cases the differences between these algorithms is marginal, and other considerations typically come into play.
+
+Coalesced hashing
+Main page: Coalesced hashing
+A hybrid of chaining and open addressing, coalesced hashing links together chains of nodes within the table itself. Like open addressing, it achieves space usage and (somewhat diminished) cache advantages over chaining. Like chaining, it does not exhibit clustering effects; in fact, the table can be efficiently filled to a high density. Unlike chaining, it cannot have more elements than table slots.
+
+Perfect hashing
+Main page: Perfect hashing
+If all of the keys that will be used are known ahead of time, and there are no more keys that can fit the hash table, perfect hashing can be used to create a perfect hash table, in which there will be no collisions. If minimal perfect hashing is used, every location in the hash table can be used as well.
+
+Perfect hashing gives a hash table where the time to make a lookup is constant in the worst case. This is in contrast to chaining and open addressing methods, where the time for lookup is low on average, but may be arbitrarily large. There exist methods for maintaining a perfect hash function under inserts of keys, known as dynamic perfect hashing. A simpler alternative, that also gives worst case constant lookup time, is cuckoo hashing.
+
+Probabilistic hashing
+Perhaps the simplest solution to a collision is to replace the value that is already in the slot with the new value, or slightly less commonly, drop the record that is to be inserted. In later searches, this may result in a search not finding a record which has been inserted. This technique is particularly useful for implementing caching.
+
+An even more space-efficient solution which is similar to this is use a bit array (an array of one-bit fields) for our table. Initially all bits are set to zero, and when we insert a key, we set the corresponding bit to one. False negatives cannot occur, but false positives can, since if the search finds a 1 bit, it will claim that the value was found, even if it was just another value that hashed into the same array slot by coincidence. In reality, such a hash table is merely a specific type of Bloom filter.
+
+Table resizing
+With a good hash function, a hash table can typically contain about 70%–80% as many elements as it does table slots and still perform well. Depending on the collision resolution mechanism, performance can begin to suffer either gradually or dramatically as more elements are added. To deal with this, when the load factor exceeds some threshold, we allocate a new, larger table, and add all the contents of the original table to this new table. In Java's HashMap class, for example, the default load factor threshold is 0.75.
+
+This can be a very expensive operation, and the necessity for it is one of the hash table's disadvantages. In fact, some naive methods for doing this, such as enlarging the table by one each time you add a new element, reduce performance so drastically as to make the hash table useless. However, if we enlarge the table by some fixed percent, such as 10% or 100%, it can be shown using amortized analysis that these resizings are so infrequent that the average time per lookup remains constant-time. To see why this is true, suppose a hash table using chaining begins at the minimum size of 1 and is doubled each time it fills above 100%. If in the end it contains n elements, then the total add operations performed for all the resizings is:
+
+1 + 2 + 4 + ... + n = 2n - 1.
+Because the costs of the resizings form a geometric series, the total cost is O(n). But we also perform n operations to add the n elements in the first place, so the total time to add n elements with resizing is O(n), an amortized time of O(1) per element.
+
+On the other hand, some hash table implementations, notably in real-time systems, cannot pay the price of enlarging the hash table all at once, because it may interrupt time-critical operations. One simple approach is to initially allocate the table with enough space for the expected number of elements and forbid the addition of too many elements. Another useful but more memory-intensive technique is to perform the resizing gradually:
+
+Allocate the new hash table, but leave the old hash table and check both tables during lookups.
+Each time an insert is performed, add that element to the new table and also move k elements from the old table to the new table.
+When all elements are removed from the old table, deallocate it.
+To ensure that the old table will be completely copied over before the new table itself needs to be enlarged, it's necessary to increase the size of the table by a factor of at least (k + 1)/k during the resizing.
+
+Linear hashing is a hash table algorithm that permits incremental hash table expansion. It is implemented using a single hash table, but with two possible look-up functions.
+
+Another way to decrease the cost of table resizing is to choose a hash function in such a way that the hashes of most values do not change when the table is resized. This approach, called consistent hashing, is prevalent in disk based hashes and distributed hashes, where resizing is prohibitively costly.
+
+Ordered retrieval issue
+Hash tables store data in pseudo-random locations, so accessing the data in a sorted manner is a very time consuming operation. Other data structures such as self balancing binary search trees generally operate more slowly (since their lookup time is O(log n)) and are rather more complex to implement than hash tables but maintain a sorted data structure at all times. See a comparison of hash tables and self balancing binary search trees.
+
+Problems with hash tables
+Although hash table lookups use constant time on average, the time spent can be significant. Evaluating a good hash function can be a slow operation. In particular, if simple array indexing can be used instead, this is usually faster.
+
+Hash tables in general exhibit poor locality of reference—that is, the data to be accessed is distributed seemingly at random in memory. Because hash tables cause access patterns that jump around, this can trigger microprocessor cache misses that cause long delays. Compact data structures such as arrays, searched with linear search, may be faster if the table is relatively small and keys are cheap to compare, such as with simple integer keys. According to Moore's Law, cache sizes are growing exponentially and so what is considered "small" may be increasing. The optimal performance point varies from system to system; for example, a trial on Parrot shows that its hash tables outperform linear search in all but the most trivial cases (one to three entries).
+
+More significantly, hash tables are more difficult and error-prone to write and use. Hash tables require the design of an effective hash function for each key type, which in many situations is more difficult and time-consuming to design and debug than the mere comparison function required for a self balancing binary search tree. In open-addressed hash tables it's even easier to create a poor hash function.
+
+Additionally, in some applications, a black hat with knowledge of the hash function may be able to supply information to a hash which creates worst case behavior by causing excessive collisions, resulting in very poor performance (i.e., a denial of service attack). In critical applications, either universal hashing can be used or a data structure with better worst case guarantees may be preferable. For details, see Crosby and Wallach's Denial of Service via Algorithmic Complexity Attacks.
+
+Other hash table algorithms
+Extendible hashing and linear hashing are hash algorithms that are used in the context of database algorithms used for instance in index file structures, and even primary file organization for a database. Generally, in order to make search scalable for large databases, the search time should be proportional log N or near constant, where N is the number of records to search. Log N searches can be implemented with tree structures, because the degree of fan out and the shortness of the tree relates to the number of steps needed to find a record, so the height of the tree is the maximum number of disc accesses it takes to find where a record is. However, hash tables are also used, because the cost of a disk access can be counted in units of disc accesses, and often that unit is a block of data. Since a hash table can, in the best case, find a key with one or two accesses, a hash table index is regarded as generally faster when retrieving a collection of records during a join operation e.g.
+
+SELECT * from customer, orders where customer.cust_id = orders.cust_id and cust_id = X
+i.e. If orders has a hash index on cust_id, then it takes constant time to locate the block that contains record locations for orders matching cust_id = X. (although, it would be better if the value type of orders was a list of order ids, so that hash keys are just one unique cust_id for each batch of orders, to avoid unnecessary collisions).
+
+Extendible hashing and linear hashing have certain similarities: collisions are accepted as inevitable and are part of the algorithm where blocks or buckets of collision space is added ; traditional good hash function ranges are required, but the hash value is transformed by a dynamic address function : in extendible hashing, a bit mask is used to mask out unwanted bits, but this mask length increases by one periodically, doubling the available addressing space ; also in extendible hashing, there is an indirection with a directory address space, the directory entries being paired with another address (a pointer ) to the actual block containing the key-value pairs; the entries in the directory correspond to the bit masked hash value (so that the number of entries is equal to maximum bit mask value + 1 e.g. a bit mask of 2 bits, can address a directory of 00 01 10 11, or 3 + 1 = 4).
+
+In linear hashing, the traditional hash value is also masked with a bit mask, but if the resultant smaller hash value falls below a 'split' variable, the original hash value is masked with a bit mask of one bit greater length, making the resultant hash value address recently added blocks. The split variable ranges incrementally between 0 and the maximum current bit mask value e.g. a bit mask of 2, or in the terminology of linear hashing, a "level" of 2, the split variable will range between 0 to 3. When the split variable reaches 4, the level increases by 1, so in the next round of the split variable, it will range between 0 to 7, and reset again when it reaches 8.
+
+The split variable incrementally allows increased addressing space, as new blocks are added; the decision to add a new block occurs whenever a key-and=value is being inserted, and overflows the particular block the key-and-value's key hashes into. This overflow location may be completely unrelated to the block going to be split pointed to by the split variable. However, over time, it is expected that given a good random hash function that distributes entries fairly evenly amongst all addressable blocks, the blocks that actually require splitting because they have overflowed get their turn in round-robin fashion as the split value ranges between 0 - N where N has a factor of 2 to the power of Level, level being the variable incremented whenever the split variable hits N.
+
+New blocks are added one at a time with both extendible hashing, and with linear hashing.
+
+In extendible hashing, a block overflow ( a new key-value colliding with B other key-values, where B is the size of a block) is handled by checking the size of the bit mask "locally", called the "local depth", an attribute which must be stored with the block. The directory structure, also has a depth, the "global depth". If the local depth is less than the global depth, then the local depth is incremented, and all the key values are rehashed and passed through a bit mask which is one bit longer now, placing them either in the current block, or in another block. If the other block happens to be the same block when looked up in the directory, a new block is added, and the directory entry for the other block is made to point to the new block. Why does the directory have entries where two entries point to the same block ? This is because if the local depth is equal to the global depth of the directory, this means the bit mask of the directory does not have enough bits to deal with an increment in the bit mask length of the block, and so the directory must have its bit mask length incremented, but this means the directory now doubles the number of addressable entries. Since half the entries addressable don't exist, the directory simply copies the pointers over to the new entries e.g. if the directory had entries for 00, 01, 10, 11, or a 2 bit mask, and it becomes a 3 bit mask, then 000 001 010 011 100 101 110 111 become the new entries, and 00's block address go to 000 and 001 ; 01's pointer goes to 010 and 011, 10 goes to 100 and 101 and so on. And so this creates the situation where two directory entries point to the same block. Although the block that was going to overflow, now can add a new block by redirecting the second pointer to a newly appended block, the other original blocks will have two pointers to them. When it is their turn to split, the algorithm will check local vs global depth and this time find that the local depth is less, and hence no directory splitting is required, only a new block be appended, and the second directory pointer moved from addressing the previous block to addressing the new block.
+
+In linear hashing, adding a similarly hashed block does not occurs immediately when a block overflows, and therefore an overflow block is created to be attached to the overflowing block. However, a block overflow is a signal that more space will be required, and this happens by splitting the block pointed to by the "split" variable, which is initially zero, and hence initially points to block zero. The splitting is done by taking all the key-value pairs in the splitting block, and its overflow block(s), hashing the keys again, but with a bit mask of length current level + 1. This will result in two block addresses, some will be the old block number, and others will be
+
+a2 = old block number + ( N times 2 ^ (level) )
+Rationale
+Let m = N times 2 ^ level ; if h is the original hash value, and old block number = h mod m, and now the new block number is h mod ( m * 2 ), because m * 2 = N times 2 ^ (level+1), then the new block number is either h mod m if (h / m) is even so dividing h/m by 2 leaves a zero remainder and therefore doesn't change the remainder, or the new block number is ( h mod m ) + m because h / m is an odd number, and dividing h / m by 2 will leave an excess remainder of m, + the original remainder. ( The same rationale applies to extendible hashing depth incrementing ).
+
+As above, a new block is created with a number a2, which will usually occur at +1 the previous a2 value. Once this is done, the split variable is incremented, so that the next a2 value will be again old a2 + 1. In this way, each block is covered by the split variable eventually, so each block is preemptively rehashed into extra space, and new blocks are added incrementally. Overflow blocks that are no longer needed are discarded, for later garbage collection if needed, or put on an available free block list by chaining.
+
+When the split variable reaches ( N times 2 ^ level ), level is incremented and split variable is reset to zero. In this next round, the split variable will now traverse from zero to ( N times 2 ^ (old_level + 1 ) ), which is exactly the number of blocks at the start of the previous round, but including all the blocks created by the previous round.
+
+A simple inference on file storage mapping of linear hashing and extendible hashing
+As can be seen, extendible hashing requires space to store a directory which can double in size.
+
+Since the space of both algorithms increase by one block at a time, if blocks have a known maximum size or fixed size, then it is straight forward to map the blocks as blocks sequentially appended to a file.
+
+In extendible hashing, it would be logical to store the directory as a separate file, as doubling can be accommodated by adding to the end of the directory file. The separate block file would not have to change, other than have blocks appended to its end.
+
+Header information for linear hashing doesn't increase in size : basically just the values for N, level, and split need to be recorded, so these can be incorporated as a header into a fixed block size linear hash storage file.
+
+However, linear hashing requires space for overflow blocks, and this might best be stored in another file, otherwise addressing blocks in the linear hash file is not as straight forward as multiplying the block number by the block size and adding the space for N,level, and split.
+
+
+In the next section, a complete example of linear hashing in Java is given, using a in memory implementation of linear hashing, and code to manage blocks as files in a file directory, the whole contents of the file directory representing the persistent linear hashing structure As the load factor increases towards 100%, the number of probes that may be required to find or insert a given key rises dramatically. Once the table becomes full, probing algorithms may even fail to terminate. Even with good hash functions, load factors are normally limited to 80%. A poor hash function can exhibit poor performance even at very low load factors by generating significant clustering. What causes hash functions to cluster is not well understood, and it is easy to unintentionally write a hash function which causes severe clustering.

@@ -1,0 +1,307 @@
+
+Database storage structures
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from Database storage)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+Database tables and indexes are typically stored on hard disk in one of many forms, ordered/unordered flat files, ISAM, heaps, hash buckets or B+ trees. These have various advantages and disadvantages. The most commonly used are B+ trees and ISAM.
+
+
+
+
+Contents
+
+
+1 Unordered
+2 Ordered
+3 Structured files
+
+3.1 Heap files
+3.2 Hash buckets
+3.3 B+ trees
+3.4 ISAM
+
+
+
+
+
+
+[edit] Unordered
+
+
+
+This section requires expansion. (June 2008)
+
+
+Unordered storage typically stores the records in the order they are inserted. While having good insertion efficiency (), it may seem that it would have inefficient retrieval times (), but this is usually never the case as most databases use indexes on the primary keys, resulting in  or  for keys that are the same as database row offsets within the database file storage system, efficient retrieval times.
+[edit] Ordered
+
+
+
+This section requires expansion. (June 2008)
+
+
+Ordered storage typically stores the records in order and may have to rearrange or increase the file size in the case a record is inserted, this is very inefficient. However is better for retrieval as the records are pre-sorted, leading to a complexity of .
+[edit] Structured files
+[edit] Heap files
+
+simplest and most basic method
+
+insert efficient, records added at end of file  chronological order
+retrieval inefficient as searching has to be linear
+deletion  deleted records marked
+
+
+
+requires periodic reorganization if file is very volatile[clarify]
+
+advantages
+
+good for bulk loading data
+good for relatively small relations as indexing overheads are avoided
+good when retrievals involve large proportion of records
+
+
+disadvantages
+
+not efficient for selective retrieval using key values, especially if large
+sorting may be time-consuming
+
+
+not suitable for volatile[clarify] tables
+
+Heap files are lists of unordered records of variable size. Although sharing a similar name, heap files are widely different from in-memory heaps.[further explanation needed]
+[edit] Hash buckets
+Main article: Hash table
+
+Hash functions calculate the address of the page in which the record is to be stored based on one or more fields in the record
+
+Hashing functions chosen to ensure that addresses are spread evenly across the address space
+occupancy is generally 40%  60% of total file size
+unique address not guaranteed so collision detection and collision resolution mechanisms are required
+
+
+open addressing
+chained/unchained overflow
+pros and cons
+
+efficient for exact matches on key field
+not suitable for range retrieval, which requires sequential storage
+calculates where the record is stored based on fields in the record
+hash functions ensure even spread of data
+collisions are possible, so collision detection and restoration is required
+
+
+
+[edit] B+ trees
+Main article: B+ tree
+These are the most used in practice.
+
+the time taken to access any tuple is the same because same number of nodes searched
+index is a full index so data file does not have to be ordered
+Pros and cons
+
+versatile data structure  sequential as well as random access
+access is fast
+supports exact, range, part key and pattern matches efficiently
+volatile files are handled efficiently because index is dynamic  expands and contracts as table grows and shrinks
+less well suited to relatively stable files  in this case, ISAM is more efficient
+
+
+
+[edit] ISAM
+Main article: ISAM
+
+
+
+This section requires expansion. (June 2008)
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Database management systems
+
+
+
+
+
+
+
+
+
+Database models
+Database normalization
+Database storage
+Distributed DBMS
+Federated database system
+Referential integrity
+Relational algebra
+Relational calculus
+Relational database
+Relational DBMS
+Relational model
+Object-relational database
+Transaction processing
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Database
+ACID
+CRUD
+Null
+Candidate key
+Foreign key
+Primary key
+Superkey
+Surrogate key
+Armstrong's axioms
+NoSQL
+
+
+
+
+
+
+
+
+Objects
+
+
+
+Relation
+
+table
+column
+row
+
+
+View
+Transaction
+Log
+Trigger
+Index
+Stored procedure
+Cursor
+Partition
+
+
+
+
+
+
+
+
+Components
+
+
+
+Concurrency control
+Data dictionary
+JDBC
+XQJ
+ODBC
+Query language
+Query optimizer
+Query plan
+
+
+
+
+
+
+
+
+Functions
+
+
+
+Administration and automation
+Query optimization
+Replication
+
+
+
+
+
+
+
+
+
+
+
+Database products
+Object-oriented
+
+comparison
+
+
+Relational
+
+comparison
+
+
+Document-oriented
+NewSQL
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 2493/1000000
+Preprocessor generated node count: 14221/1500000
+Post-expand include size: 33895/2048000 bytes
+Template argument size: 14246/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 6/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:10983365-0!0!0!!en!4!* and timestamp 20121215120443 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Database_storage_structures&oldid=525685316"				
+ /printfooter 
+ catlinks 
+Categories: Database management systemsDatabasesDatabase theoryHidden categories: Articles to be expanded from June 2008All articles to be expandedAll pages needing cleanupWikipedia articles needing clarification from September 2012  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

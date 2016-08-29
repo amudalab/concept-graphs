@@ -1,0 +1,68 @@
+nodedef> name,label
+v0,bosk constraint
+v1,box constraint
+v2,coordinate assent
+v3,galcean kernel
+v4,idea of kernels
+v5,kernel
+v6,kernel function
+v7,l1 norm soft margin svm
+v8,mercer kernels
+v9,optimization problem
+v10,smo algorithm
+v11,support vector machine
+v12,svm optimization problem
+v13,valid kernel
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v9,false,87.962962963,true
+v1,v9,false,7.7037037037,true
+v1,v10,false,58.7407407407,true
+v2,v9,false,30.462962963,true
+v2,v10,false,81.4814814815,true
+v2,v12,false,30.8148148148,true
+v3,v5,false,3.51851851852,true
+v3,v11,false,35.1851851852,true
+v4,v5,false,53.9259259259,true
+v4,v9,false,120.37037037,true
+v4,v10,false,13.4814814815,true
+v4,v11,false,24.8677248677,true
+v5,v3,false,3.51851851852,true
+v5,v4,false,53.9259259259,true
+v5,v6,false,7.27668845316,true
+v5,v8,false,7.11111111111,true
+v5,v10,false,300.444444444,true
+v5,v11,false,53.3796296296,true
+v5,v13,false,0.0,true
+v6,v5,false,7.27668845316,true
+v6,v11,false,19.2592592593,true
+v6,v13,false,134.259259259,true
+v7,v9,false,37.037037037,true
+v7,v11,false,89.5555555556,true
+v7,v12,false,12.5185185185,true
+v8,v5,false,7.11111111111,true
+v8,v13,false,12.5185185185,true
+v9,v0,false,87.962962963,true
+v9,v1,false,7.7037037037,true
+v9,v2,false,30.462962963,true
+v9,v4,false,120.37037037,true
+v9,v7,false,37.037037037,true
+v9,v10,false,142.259259259,true
+v9,v11,false,53.1481481481,true
+v9,v12,false,0.925925925926,true
+v10,v1,false,58.7407407407,true
+v10,v2,false,81.4814814815,true
+v10,v4,false,13.4814814815,true
+v10,v5,false,300.444444444,true
+v10,v9,false,142.259259259,true
+v11,v3,false,35.1851851852,true
+v11,v4,false,24.8677248677,true
+v11,v5,false,53.3796296296,true
+v11,v6,false,19.2592592593,true
+v11,v7,false,89.5555555556,true
+v11,v9,false,53.1481481481,true
+v12,v2,false,30.8148148148,true
+v12,v7,false,12.5185185185,true
+v12,v9,false,0.925925925926,true
+v13,v5,false,0.0,true
+v13,v6,false,134.259259259,true
+v13,v8,false,12.5185185185,true

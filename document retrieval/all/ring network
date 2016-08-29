@@ -1,0 +1,114 @@
+
+Ring network
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2007) 
+
+
+
+
+
+
+Image showing ring network layout
+
+
+A ring network is a network topology in which each node connects to exactly two other nodes, forming a single continuous pathway for signals through each node - a ring. Data travels from node to node, with each node along the way handling every packet.
+Because a ring topology provides only one pathway between any two nodes, ring networks may be disrupted by the failure of a single link.[1] A node failure or cable break might isolate every node attached to the ring.
+FDDI networks overcome this vulnerability by sending data on a clockwise and a counterclockwise ring: in the event of a break data is wrapped back onto the complementary ring before it reaches the end of the cable, maintaining a path to every node along the resulting "C-Ring".
+Many ring networks add a "counter-rotating ring" to form a redundant topology. Such "dual ring" networks include Spatial Reuse Protocol, Fiber Distributed Data Interface (FDDI), and Resilient Packet Ring.
+802.5 networks -- also known as IBM Token Ring networksavoid the weakness of a ring topology altogether: they actually use a star topology at the physical layer and a Multistation Access Unit (MAU) to imitate a ring at the datalink layer.
+
+
+
+
+Contents
+
+
+1 Advantages
+2 Disadvantages
+3 Misconceptions
+4 Other topologies
+5 References
+
+
+
+
+[edit] Advantages
+See also: Ring Protection
+
+Very orderly network where every device has access to the token and the opportunity to transmit
+Performs better than a bus topology under heavy network load
+Does not require a central node to manage the connectivity between the computers
+Due to the point to point line configuration of devices with a device on either side (each device is connected to its immediate neighbour), it is quite easy to install and reconfigure since adding or removing a device requires moving just two connections.
+Point to point line configuration makes it easy to identify and isolate faults.
+
+[edit] Disadvantages
+
+One malfunctioning workstation can create problems for the entire network. This can be solved by using a dual ring or a switch that closes off the break.
+Moving, adding and changing the devices can affect the network
+Communication delay is directly proportional to number of nodes in the network
+Bandwidth is shared on all links between devices
+More difficult to configure than a Star: node adjunction  Ring shutdown and reconfiguration
+
+[edit] Misconceptions
+
+"Token Ring is an example of a ring topology." 802.5 (Token Ring) networks do not use a ring topology at layer 1. As explained above, IBM Token Ring (802.5) networks imitate a ring at layer 2 but use a physical star at layer 1.
+"Rings prevent collisions." The term "ring" only refers to the layout of the cables. It is true that there are no collisions on an IBM Token Ring, but this is because of the layer 2 Media Access Control method, not the physical topology (which again is a star, not a ring.) Token passing, not rings, prevent collisions.
+"Token passing happens on rings." Token passing is a way of managing access to the cable, implemented at the MAC sublayer of layer 2. Ring topology is the cable layout at layer one. It is possible to do token passing on a bus (802.4) a star (802.5) or a ring (FDDI). Token passing is not restricted to rings.
+
+[edit] Other topologies
+
+Star network
+Bus network
+Mesh network
+Tree network
+Hypertree network
+
+[edit] References
+
+
+^ Bradley Mitchell "Network Topologies" [1], About.com Guide, retrieved May 24, 2010
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 523/1000000
+Preprocessor generated node count: 6335/1500000
+Post-expand include size: 5168/2048000 bytes
+Template argument size: 2285/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:957001-0!*!0!!en!4!* and timestamp 20121217063016 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Ring_network&oldid=527332142"				
+ /printfooter 
+ catlinks 
+Categories: Network topologyHidden categories: Articles needing additional references from December 2007All articles needing additional references  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

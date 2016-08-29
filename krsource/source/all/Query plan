@@ -1,0 +1,279 @@
+
+Query plan
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+A query plan (or query execution plan) is an ordered set of steps used to access or modify information in a SQL relational database management system. This is a specific case of the relational model concept of access plans.
+Since SQL is declarative, there are typically a large number of alternative ways to execute a given query, with widely varying performance. When a query is submitted to the database, the query optimizer evaluates some of the different, correct possible plans for executing the query and returns what it considers the best alternative. Because query optimizers are imperfect, database users and administrators sometimes need to manually examine and tune the plans produced by the optimizer to get better performance.
+
+
+
+
+Contents
+
+
+1 Generating query plans
+
+1.1 Graphical plans
+1.2 Textual plans
+
+
+2 Database tuning
+3 Query tuning
+
+
+
+
+[edit] Generating query plans
+A given database management system may offer one or more mechanisms for returning the plan for a given query. Some packages feature tools which will generate a graphical representation of a query plan. Other tools allow a special mode to be set on the connection to cause the DBMS to return a textual description of the query plan. Another mechanism for retrieving the query plan involves querying a virtual database table after executing the query to be examined. In Oracle, for instance, this can be achieved using the EXPLAIN PLAN statement.
+[edit] Graphical plans
+
+
+
+The SQL Server Management Studio tool which ships with Microsoft SQL Server, for example, shows this graphical plan when executing this two-table join against a sample database:
+
+
+
+SELECT *
+FROM HumanResources.Employee AS e
+    INNER JOIN Person.Contact AS c
+    ON e.ContactID = c.ContactID
+ORDER BY c.LastName
+
+
+The UI allows exploration of various attributes of the operators involved in the query plan, including the operator type, the number of rows each operator consumes or produces, and the expected cost of each operator's work.
+
+
+
+
+
+
+Microsoft SQL Server Management Studio displaying a sample query plan.
+
+
+
+
+
+[edit] Textual plans
+The textual plan given for the same query in the screenshot is shown here:
+
+StmtText
+----
+  |--Sort(ORDER BY:([c].[LastName] ASC))
+       |--Nested Loops(Inner Join, OUTER REFERENCES:([e].[ContactID], [Expr1004]) WITH UNORDERED PREFETCH)
+            |--Clustered Index Scan(OBJECT:([AdventureWorks].[HumanResources].[Employee].[PK_Employee_EmployeeID] AS [e]))
+            |--Clustered Index Seek(OBJECT:([AdventureWorks].[Person].[Contact].[PK_Contact_ContactID] AS [c]),
+               SEEK:([c].[ContactID]=[AdventureWorks].[HumanResources].[Employee].[ContactID] as [e].[ContactID]) ORDERED FORWARD)
+
+It indicates that the query engine will do a scan over the primary key index on the Employee table and a matching seek through the primary key index (the ContactID column) on the Contact table to find matching rows. The resulting rows from each side will be shown to a nested loops join operator, sorted, then returned as the result set to the connection.
+In order to tune the query, the user must understand the different operators that the database may use, and which ones might be more efficient than others while still providing semantically correct query results.
+[edit] Database tuning
+Main article: Database tuning
+Reviewing the query plan can present opportunities for new indexes or changes to existing indexes. It can also show that the database is not properly taking advantage of existing indexes (see query optimizer).
+[edit] Query tuning
+Main article: Query optimizer
+The query optimizer will not always choose the best query plan for a given query. In some databases the query plan can be reviewed, problems found, and then the query optimizer given hints on how to improve it. In other databases alternatives to express the same query (other queries that return the same results) can be tried. Some query tools can generate embedded hints in the query, for use by the optimizer.
+Some databases like Oracle provide a Plan table for query tuning. This plan table will return the cost and time for executing a Query. In Oracle there are 2 optimization techniques:
+
+CBO or Cost Based Optimization
+RBO or Rule Based Optimization
+
+The RBO is slowly being deprecated. For CBO to be used, all the tables referenced by the query must be analyzed. To analyze a table, a package DBMS_STATS can be made use of.
+The others methods for query optimization include:
+
+SQL Trace
+Oracle Trace
+TKPROF
+
+
+Video tutorial on how to perform SQL performance tuning with reference to Oracle
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Database management systems
+
+
+
+
+
+
+
+
+
+Database models
+Database normalization
+Database storage
+Distributed DBMS
+Federated database system
+Referential integrity
+Relational algebra
+Relational calculus
+Relational database
+Relational DBMS
+Relational model
+Object-relational database
+Transaction processing
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Database
+ACID
+CRUD
+Null
+Candidate key
+Foreign key
+Primary key
+Superkey
+Surrogate key
+Armstrong's axioms
+NoSQL
+
+
+
+
+
+
+
+
+Objects
+
+
+
+Relation
+
+table
+column
+row
+
+
+View
+Transaction
+Log
+Trigger
+Index
+Stored procedure
+Cursor
+Partition
+
+
+
+
+
+
+
+
+Components
+
+
+
+Concurrency control
+Data dictionary
+JDBC
+XQJ
+ODBC
+Query language
+Query optimizer
+Query plan
+
+
+
+
+
+
+
+
+Functions
+
+
+
+Administration and automation
+Query optimization
+Replication
+
+
+
+
+
+
+
+
+
+
+
+Database products
+Object-oriented
+
+comparison
+
+
+Relational
+
+comparison
+
+
+Document-oriented
+NewSQL
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 594/1000000
+Preprocessor generated node count: 8541/1500000
+Post-expand include size: 16027/2048000 bytes
+Template argument size: 7823/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:1710792-0!*!0!!en!4!* and timestamp 20121214080633 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Query_plan&oldid=517494428"				
+ /printfooter 
+ catlinks 
+Categories: Database management systemsSQL  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

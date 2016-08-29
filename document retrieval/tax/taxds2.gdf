@@ -1,0 +1,55 @@
+nodedef> name,label
+v0,abstract data type
+v1,array implementation
+v2,catch block
+v3,constructor method
+v4,data structure
+v5,data type
+v6,exception
+v7,generic type
+v8,growth strategy
+v9,java
+v10,java virtual machine
+v11,parent class
+v12,pop
+v13,programming
+v14,push
+v15,regular push
+v16,special push
+v17,stack
+v18,stack empty exception
+v19,stack full exception
+v20,stack implementation
+v21,stack interface
+v22,super class
+v23,tight strategy
+v24,top
+v25,try block
+v26,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v17,false,3.82222222222,true
+v1,v24,false,32.2666666667,true
+v2,v25,false,3.11111111111,true
+v3,v17,false,11.4666666667,true
+v4,v24,false,0.977777777778,true
+v5,v17,false,8.8,true
+v6,v17,false,5.28888888889,true
+v7,v9,false,2.93333333333,true
+v8,v24,false,7.82222222222,true
+v9,v17,false,9.68888888889,true
+v10,v7,false,2.93333333333,true
+v11,v18,false,22.0444444444,true
+v12,v24,false,4.21388888889,true
+v13,v24,false,16.8,true
+v14,v17,false,5.48282828283,true
+v15,v14,false,4.43076923077,true
+v16,v14,false,4.44444444444,true
+v18,v6,false,2.93333333333,true
+v19,v24,false,5.06666666667,true
+v20,v24,false,9.95555555556,true
+v21,v24,false,2.16666666667,true
+v22,v6,false,17.6,true
+v23,v24,false,10.7555555556,true
+v24,v17,false,0.0,true
+v25,v6,false,16.298989899,true
+v26,v14,false,43.0222222222,true

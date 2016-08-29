@@ -1,0 +1,190 @@
+nodedef> name,label
+v0,application programming
+v1,attributes
+v2,binary relation
+v3,cardinality ratios
+v4,composite attribute
+v5,composite key
+v6,conceptual schema
+v7,database
+v8,database management system
+v9,dbms
+v10,default key
+v11,entity
+v12,entity relationship
+v13,entity set
+v14,entity types
+v15,er model
+v16,foreign keys
+v17,identifying relationship
+v18,information system
+v19,key attribute
+v20,multi-valued attribute
+v21,null attributes
+v22,one is to n relationship
+v23,participation constraints
+v24,relational model
+v25,relationship type
+v26,simple attribute
+v27,single-valued attribute
+v28,table
+v29,transactions
+v30,unary relationship
+v31,universe of discourse
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v7,false,7.90476190476,true
+v0,v18,false,4.94047619048,true
+v1,v4,false,27.255952381,true
+v1,v5,false,11.8928571429,true
+v1,v7,false,16.5952380952,true
+v1,v11,false,19.4177018634,true
+v1,v13,false,9.28571428571,true
+v1,v14,false,19.9380952381,true
+v1,v15,false,23.9166666667,true
+v1,v17,false,4.94047619048,true
+v1,v19,false,6.10606060606,true
+v1,v20,false,17.755952381,true
+v1,v21,false,120.55952381,true
+v1,v25,false,18.0952380952,true
+v1,v26,false,56.619047619,true
+v2,v11,false,8.89285714286,true
+v2,v25,false,38.5357142857,true
+v3,v11,false,26.6785714286,true
+v3,v23,false,61.1904761905,true
+v3,v25,false,15.8095238095,true
+v4,v1,false,27.255952381,true
+v4,v20,false,17.0357142857,true
+v4,v26,false,3.95238095238,true
+v5,v1,false,11.8928571429,true
+v5,v19,false,32.1428571429,true
+v6,v7,false,17.5714285714,true
+v6,v9,false,14.1547619048,true
+v6,v29,false,73.7023809524,true
+v7,v0,false,7.90476190476,true
+v7,v1,false,16.5952380952,true
+v7,v6,false,17.5714285714,true
+v7,v8,false,0.0,true
+v7,v9,false,19.6547619048,true
+v7,v11,false,113.238095238,true
+v7,v14,false,25.380952381,true
+v7,v15,false,25.869047619,true
+v7,v18,false,22.380952381,true
+v7,v20,false,49.4047619048,true
+v7,v21,false,93.869047619,true
+v7,v24,false,13.8333333333,true
+v7,v29,false,25.4761904762,true
+v7,v31,false,21.9642857143,true
+v8,v7,false,0.0,true
+v8,v9,false,5.92857142857,true
+v9,v6,false,14.1547619048,true
+v9,v7,false,19.6547619048,true
+v9,v8,false,5.92857142857,true
+v9,v14,false,219.357142857,true
+v9,v18,false,18.7738095238,true
+v9,v29,false,7.90476190476,true
+v10,v11,false,42.4880952381,true
+v10,v19,false,194.654761905,true
+v11,v1,false,19.4177018634,true
+v11,v2,false,8.89285714286,true
+v11,v3,false,26.6785714286,true
+v11,v7,false,113.238095238,true
+v11,v10,false,42.4880952381,true
+v11,v12,false,2.89285714286,true
+v11,v13,false,4.49047619048,true
+v11,v14,false,0.0,true
+v11,v15,false,4.94047619048,true
+v11,v16,false,48.4166666667,true
+v11,v17,false,36.3214285714,true
+v11,v19,false,39.2857142857,true
+v11,v21,false,22.7261904762,true
+v11,v23,false,6.34523809524,true
+v11,v25,false,38.5119047619,true
+v11,v28,false,6.34523809524,true
+v11,v29,false,66.2023809524,true
+v12,v11,false,2.89285714286,true
+v12,v15,false,3.95238095238,true
+v13,v1,false,9.28571428571,true
+v13,v11,false,4.49047619048,true
+v13,v19,false,8.89285714286,true
+v14,v1,false,19.9380952381,true
+v14,v7,false,25.380952381,true
+v14,v9,false,219.357142857,true
+v14,v11,false,0.0,true
+v14,v15,false,29.7738095238,true
+v14,v17,false,34.0714285714,true
+v14,v19,false,7.61904761905,true
+v14,v23,false,21.8571428571,true
+v14,v25,false,26.7095238095,true
+v14,v30,false,7.90476190476,true
+v15,v1,false,23.9166666667,true
+v15,v7,false,25.869047619,true
+v15,v11,false,4.94047619048,true
+v15,v12,false,3.95238095238,true
+v15,v14,false,29.7738095238,true
+v15,v19,false,13.8333333333,true
+v15,v24,false,14.8214285714,true
+v16,v11,false,48.4166666667,true
+v16,v19,false,0.988095238095,true
+v16,v28,false,8.29761904762,true
+v17,v1,false,4.94047619048,true
+v17,v11,false,36.3214285714,true
+v17,v14,false,34.0714285714,true
+v17,v22,false,172.916666667,true
+v17,v25,false,5.36904761905,true
+v18,v0,false,4.94047619048,true
+v18,v7,false,22.380952381,true
+v18,v9,false,18.7738095238,true
+v18,v29,false,22.7261904762,true
+v18,v31,false,12.8452380952,true
+v19,v1,false,6.10606060606,true
+v19,v5,false,32.1428571429,true
+v19,v10,false,194.654761905,true
+v19,v11,false,39.2857142857,true
+v19,v13,false,8.89285714286,true
+v19,v14,false,7.61904761905,true
+v19,v15,false,13.8333333333,true
+v19,v16,false,0.988095238095,true
+v19,v20,false,8.89285714286,true
+v20,v1,false,17.755952381,true
+v20,v4,false,17.0357142857,true
+v20,v7,false,49.4047619048,true
+v20,v19,false,8.89285714286,true
+v20,v27,false,40.1785714286,true
+v21,v1,false,120.55952381,true
+v21,v7,false,93.869047619,true
+v21,v11,false,22.7261904762,true
+v22,v17,false,172.916666667,true
+v22,v25,false,33.5952380952,true
+v23,v3,false,61.1904761905,true
+v23,v11,false,6.34523809524,true
+v23,v14,false,21.8571428571,true
+v23,v25,false,18.7738095238,true
+v24,v7,false,13.8333333333,true
+v24,v15,false,14.8214285714,true
+v25,v1,false,18.0952380952,true
+v25,v2,false,38.5357142857,true
+v25,v3,false,15.8095238095,true
+v25,v11,false,38.5119047619,true
+v25,v14,false,26.7095238095,true
+v25,v17,false,5.36904761905,true
+v25,v22,false,33.5952380952,true
+v25,v23,false,18.7738095238,true
+v25,v30,false,50.3928571429,true
+v26,v1,false,56.619047619,true
+v26,v4,false,3.95238095238,true
+v26,v27,false,17.7857142857,true
+v27,v20,false,40.1785714286,true
+v27,v26,false,17.7857142857,true
+v28,v11,false,6.34523809524,true
+v28,v16,false,8.29761904762,true
+v29,v6,false,73.7023809524,true
+v29,v7,false,25.4761904762,true
+v29,v9,false,7.90476190476,true
+v29,v11,false,66.2023809524,true
+v29,v18,false,22.7261904762,true
+v29,v31,false,128.452380952,true
+v30,v14,false,7.90476190476,true
+v30,v25,false,50.3928571429,true
+v31,v7,false,21.9642857143,true
+v31,v18,false,12.8452380952,true
+v31,v29,false,128.452380952,true

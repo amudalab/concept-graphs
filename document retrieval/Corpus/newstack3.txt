@@ -1,0 +1,38 @@
+The stack is a list-like structure in which elements may be inserted or removed
+from only one end. While this restriction makes stacks less flexible than lists, it
+also makes stacks both efficient (for those operations they can do) and easy to implement. Many applications require only the limited form of insert and remove
+operations that stacks provide. In such cases, it is more efficient to use the simpler stack data structure rather than the generic list. For example, the freelist of Section 4.1.2 is really a stack.
+Despite their restrictions, stacks have many uses. Thus, a special vocabulary
+for stacks has developed. Accountants used stacks long before the invention of the
+computer. They called the stack a "LIFO" list, which stands for "last in first out." Note that one implication of the  policy is that stacks remove elements in reverse order of their arrival.
+It is traditional to call the accessible element of the stack the top
+element. Elements are not said to be inserted; instead they are pushed onto the stack. When removed, an element is said to be popped
+from the stack. Figure 4.17 shows a
+sample stack abstract data type.
+As with lists, there are many variations on stack implementation. The two approaches presented here are
+array-based and
+linked stacks, which are analogous
+to array-based and linked lists, respectively.
+
+array based stacks
+Figure 4.18 shows a complete implementation for the array based stack class. As
+with the array based list implementation,
+listArray
+must be declared of fixed
+size when the stack is created. In the stack constructor,
+size
+serves to indicate
+this size. Method
+top
+acts somewhat like a current position value (because the
+"current" position is always at the top of the stack), as well as indicating the number
+of elements currently in the stack.
+The array based stack implementation is essentially a simplified version of the
+array based list. The only important design decision to be made is which end of the array should represent the top of the stack. One choice is to make the top be at position 0 in the array. In terms of list functions, all insert and
+remove operations would then be on the element in position 0. This implementation is inefficient, because now every push or pop
+operation will require that all elements currently in the stack be shifted one position in the array, for a cost of
+?(n)if there are
+n elements. The other choice is have the top element be at position n?1 when there are n elements in the stack. In other words, as elements are pushed onto
+the stack, they are appended to the tail of the list. Method pop
+removes the tail element. In this case, the cost for each
+push or pop operation is only ?(1).

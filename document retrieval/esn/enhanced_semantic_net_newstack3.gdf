@@ -1,0 +1,51 @@
+nodedef> name,label
+v0,array based stack
+v1,data structure
+v2,last in first out
+v3,linked stacks
+v4,list
+v5,pop
+v6,push
+v7,size
+v8,stack
+v9,stack implementation
+v10,top
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v3,false,10.2857142857,true
+v0,v8,false,0.47619047619,true
+v0,v9,false,1.71428571429,true
+v1,v4,false,0.857142857143,true
+v1,v8,false,0.285714285714,true
+v2,v4,false,1.14285714286,true
+v2,v8,false,13.7142857143,true
+v3,v0,false,10.2857142857,true
+v3,v8,false,4.71428571429,true
+v4,v1,false,5.14285714286,true
+v4,v2,false,3.42857142857,true
+v4,v5,false,1.71428571429,true
+v4,v6,false,19.7142857143,true
+v4,v7,false,6.85714285714,true
+v4,v8,false,0.0,true
+v4,v10,false,10.3571428571,true
+v5,v4,false,0.285714285715,true
+v5,v6,false,3.04761904762,true
+v5,v8,false,2.85714285714,true
+v6,v4,false,6.57142857143,true
+v6,v5,false,0.507936507937,true
+v7,v4,false,1.14285714286,true
+v7,v8,false,0.595238095237,true
+v7,v10,false,1.71428571429,true
+v8,v0,false,1.42857142857,true
+v8,v1,false,0.857142857143,true
+v8,v2,false,27.4285714286,true
+v8,v3,false,9.42857142857,true
+v8,v4,false,0.0,true
+v8,v5,false,8.57142857143,true
+v8,v7,false,1.78571428571,true
+v8,v9,false,2.28571428571,true
+v8,v10,false,0.0,true
+v9,v0,false,1.71428571429,true
+v9,v8,false,0.761904761903,true
+v10,v4,false,1.72619047618,true
+v10,v7,false,1.71428571429,true
+v10,v8,false,0.0,true

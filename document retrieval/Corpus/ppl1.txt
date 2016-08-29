@@ -1,0 +1,220 @@
+﻿so welcome to programming languages today we will just do a few elementary concepts broad classification of programming languages um without going in to too much detail um 
+so this is the first lecture and so lets let us just look at the notion of a program or a programming language 
+so um you are all familiar with the notion of a machine a computer and it has what upon would call a bare machine has just a piece of hardware it is usually in binary um well you can just think of it as a whole lot of switches connected with complicated circuitry um the memory the arithmetic unit all of them consists of switches activated one way or the other and even in a and you can see it is going to be a big problem operating those millions and millions of switches you know 
+so what you have is a language it just consists of binary strings so in a bare machine what you would just have is a language consisting of binary strings 
+so these binary strings um in what is known as the phenomenon architecture um which is called the stored program concept alright both data and instructions have the same format and um everything is a binary string and depending upon how you look at it 
+it is either a data item or an instruction to execute something right so 
+so that is a phenomenon concept so which means that programming such a machine um basically requires you to be able to um interpret certain sequences of bits either as data or as instructions
+and if they are instructions to i don’t know manipulate some registers may be load into memory store um load from memory store into memory or perform some arithmetic operation or some logical operation and so on and so forth right
+so in general even that language what we might call the machine language can be called the programming language 
+thus let us take a very general view um 
+what is [03:15] a programming language 
+a programming language is just some notation for describing algorithms and data so in general we could consider a programming language to give you a means of representing algorithms and data structures and when you have a representation of algorithms and data structures presumably you are able to perform your manipulations here
+so the first the first thing about the bare machine is that if you are going to use the machine language itself then there is really no fundamental difference between the algorithm and the data which means a sequence of instructions could just as well as regarded as data items 
+a sequence of data items provided they have some circuitry could also be executed as an algorithm 
+
+
+
+i mean GOD forbid what might actually happen but i mean in principle you  could execute even a sequence of data item as instructions by interpreting it suitably [noise] 
+so the first distinction we would like to draw is between what constitutes the data item and what constitutes a part an instruction ok
+so there are various um so lets um but let us take a much more high level view i mean right now we are no longer in the fifties when the early machines came in and you have to program in machine language or assembly language 
+so we will just look upon a programming language as just a notation for describing algorithms and data 
+
+and we [05:05] could look at a program as just a sentence in this language right i mean this so its it is a language like any other language and it has certain rules and you have certain what might be called well formed sentences and a program is  just some sentence of a programming language
+a program is not necessarily an algorithm um well simply because i mean you might have a well formed sentence which is which is not very meaning full ok
+for example it could the program could be a non terminating program in which case it is no longer a algorithm ok um and so um important thing to realize is that an algorithm is a very abstract object it doesn’t have any concrete um form 
+what is concrete is whatever is put down as a program so the only concrete object that you can have is a program 
+
+
+
+so the notion of an algorithm itself is an abstract object um is an abstract entity which requires a concrete representation in the form of the program and if a program is a sentence of a programming language then what you require really is a pro is a programming language
+
+
+and another [06:50] another alternative way of looking at the notion of a program these are the programming language is a as you might think of a program as a specification of a computation 
+
+
+
+
+you might think of a program as a specification of a computation which means we have some notion of  a what constitutes a primitive step of the computation and the program gives you a finite representation of possibly an infinite  sequence of steps in a computation process yeah
+so the emphasis in all these cases is in the nature of a finitary specification ok i mean you should have a program is should be finite object by itself um 
+a programming language itself is not a finite object because there are a infinite number of programs that are possible but each program itself is a finite object because it is just a sentence of the programming language yeah
+and then we might think of  a programming language if you look upon a computation and the steps in the computation as the most basic feature then you might think of a programming language just as some notation for writing programs and in all this case we should emphasis the fact that this notation is important because um
+our notation is to give you a finitary specification finitary specification of possibly an infinite object right so we might emphasis that this is actually a finitary specification yeah and these programs themselves as concrete objects are finitary but their effects could be infinitary right 
+so so the moment you are trying to represent any infinitary object in a finite manner you require some you and it has to be machine understandable you require certain rules ok 
+so um well so let us so let us look at this process of a of essentially giving a finitary representation to what you might consider infinitary objects ok
+so what kinds of infinitary objects are we normally concerned with where in the most general case an algorithm is what you want to represent in a program and an algorithm really in the most general case is a function from some domain to some codomain and a function need not necessarily be finitary because the domain could be infinite the codomain could be infinite 
+and so we might think of an algorithm in general as computing either a function or a relation a method for computing some mathematical function or relation and these functions and relations could be infinitary yeah 
+so and so let us so we are looking at infinitary objects basically mathematical functions relations can also be considered functions ok
+all relations could be considered functions so in general we will concentrate on trying to get finitary representations of infinitary objects and these infinitary objects are really functions 
+so so you can think of the whole study of programming or computation as trying to compute or trying to give finite specifications of computation steps of abstract mathematical functions yeah 
+so so however when you look at so so um so if you look at mathematics itself it has a fairly rigorous notation so you could think of mathematics itself as a sort of programming language except that it has one important drawback that is that it does not specify what are the primitive computation that are possible within the mathematical language ok
+so when you normally um when you when you are talking about an algorithm to compute some function what you have implicitly defined is a set of primitive functions or primitive computation steps in terms of which you are going to express this algorithm ok
+so one obvious case in which a lot of mathematics is not is does not fit into the um fit into the general framework of a programming language is this um 
+for example the representation of infinite sets ok so if you look at i mean what ever you must have studied in school and so on 
+if you look at infinite sets um well the standard thing in school is to say that you can either represent a set in a roaster form or in set builder form is that clear 
+so roaster form just means enumerating a list of elements and a set builder form essentially means um giving an abstract giving a predicate which the elements of the set should satisfy ok
+so the main difference between the roaster form and the set builder form um the the the um the set builder form is also called a definition by abstraction ok
+so the main difference between the two really comes up for infinite sets so in the case of in finite sets what you normally do is um
+supposing you want to specify the set of even numbers so you open braces you write may be zero or if you don’t include zero then you write two comma four comma six coma and then dot dot dot i mean that is 
+so that is where the inadequacy of mathematical notation comes ok simply because you are not interested really in any underlying computation process 
+as far as mathematics is concerned a large part of it is just the existence is more important than um than a computational method ok um 
+and whereas the set builder notation or the definition by abstraction gives you a finitary specification so you can represent the set of even numbers through a notation which consists of  braces which consists of a bound variable ok
+a definition a bound variable and a predicate in terms of the bound variable so um so a typical definition of let us say even numbers would would look like something like this [14:38]
+
+you would [19:25] say it is two x where x let us say belongs to the natural numbers right 
+so here um if you look at x 
+x is like a locally declared variable ok in fact this is a sort of declaration of x and this two x is a property that the element of this set should satisfy 
+now here is a case of our finitary specification as of oppose to this infinitary specification right yeah
+in fact this is a finitary specification in more ways than one firstly this represents a logical predicate expressed in first order logic in a finite sentence of the first order logic ok 
+and this you might consider this as a succinct finitary specification of essentially an infinitary object 
+the even numbers whereas this is really open to many this is this is really ambiguous in the sense that it is not at all clear from this enumeration what should be the next one  i mean you are using you are implicitly using human intelligence and human understanding to um or the human um human ability to perform induction to claim that the next number would be eight but i am not all sure that the next number should be eight there might be other patterns for example ok
+it might satisfy other predicates whereas this is what one might call an accurate succinct finitary representation using just the language of first order logic built up on a single predicate a single binary predicate on sets right
+this the binary predicate is this belongs to um yeah ok [noise]
+
+
+
+
+
+so so a lot of so what are um a lot of what we are going to do is also going to be related to the language of logic in some ways 
+you will see the analogies between programming languages and logic as we go along the main motivations of logic were are are really of a slightly more abstract nature but programming language derive mainly from logic yeah 
+in the sense that a language like first order logic does not allow you the freedom to write these dots and there is no such thing ok you have a method of construction of predicates which is always finitary 
+you have rules of inferenceing  logic which are always finitary or they might be infinitary like if you have like axiom schemas if you have rules like modese responds they are finitary representations again of infinitary objects ok
+further in a logical language with rule with axioms rules of inference there is implicitly understood that those rules and axioms those axioms and rules of inference are such that there exists an algorithm which given any instance of the hypothesis of this rules should be able to tell you whether the conclusion of the rule is a valid inference yeah 
+so if you were to take a simple logical rule like [19:25]
+
+let us [39:20]  take more respondents what you have is a i will write this 
+so you have a predicate X you have a predicate X arrow Y and you have Y ok so this X and Y are 
+so this rule actually specifies a three tube um a pair of this form right where X and Y are belong to i don’t know let us say the language of first order logic which i will write L one um as suppose to proposition logic which i will write L not ok 
+so L one is let us say first order logic so what you are saying is you take two sentences of first order logic and if they have this pattern that call one sentence X and the other sentence has the pattern X conditional Y then you are able to infer Y and you cannot have all rules of inferencing logic are finitary 
+
+
+
+
+there are also finitary specification yeah and something that is absolutely essential is that it is decidable by an algorithm whether a certain a step in the proof of a logical statement was derived by an application of a rule of influence on some preceding steps ok
+so which means that if you claim that you have some predicates um um you you have some predicates of the form um 
+let us say A arrow B arrow not c where let me put brackets here and you have something like A arrow B and then you drive from these from these premises if you were to claim that by the use of more respondents you are
+you can infer not C then there has to be an algorithm which given these two as input will be able to tell you whether this is an instance of an application in this two definitions ok
+in this case the algorithm should actually tell you that it is not an application in this rule of inference ok
+in other case so it should be able to give you 
+yes and no answers infinite time ok so all most programming languages that we will study will have will have a lot of their motivations actually derived from logic 
+a large part of logic was actually concerned with the notion of how much you have mathematics is actually do able by a machine 
+how many what kinds of proofs in what kinds of theorems in mathematics can be actually proved by algorithms by a machine whose basic primitive um by a machine whose primitive operations are that they are able to do pattern matching and substitution ok 
+so this is an instance of doing pattern matching and substitution an inference rule is really an infinite object 
+it is a relation of this kind is a finite representation a proof is a finite object a theorem is a finite a theorem it self is a finite is a sentence of logical language and it is a finite object representing possibly an infinite number of instances ok
+so the finitary nature of all these will actually influence the nature of our logic so for example you cannot give axioms and rules of inference which are infinitary in a logical language ok um
+so um so everything should that is infinitary  should have a finite representation there are of course infinitary objects which will have no finite representation 
+they are clearly not gonna be part of our computational process ok
+so for example generating an infinite sequence of random numbers i am by random numbers i don’t mean pseudo random numbers 
+i mean pure random numbers is well it is not a computational process period we are so we are interested in those kinds of infinitary objects which some how have finitary representations yeah
+so like may be infinite sets represented as predicates um urinary binary ternary but some finitary with a finitary representation 
+we are interested in infinitary computational processes which have finitary representations 
+we are interested in programming languages which allow for finitary representation of inherently infinite objects infinitary objects yeah
+so um so so lets let us go ahead with i mean this much of philosophy is perhaps sufficient for the moment but it is important to realize that right from nineteen hundred when the mathematician david Hilbert post this problem to the congress in mathematics the main emphasis of logicians and computer scientists has rather computer scientists came very late in the game but logicians mainly has been to tried to find to define the notion of an algorithm to define the notion of the computational process to be able to exactly define what is possible by a computational process
+what is not possible by a computational process every thing that is possible by a computational process should have finite representation and anything that is infinitary is not part of the computational process with some restrictions yeah 
+so so if you so if you just come down from logic a bit then what we are looking at then we can look at a logical language itself as a mathematical object for example there exist only a finite number of rules for generating an infinite number of sentences of that language ok
+so you take take a language like first order logic you have only a finite set of formation rules which allow you to generate an infinite number of logical sentences ok not only and that finitary nature of  the rules also gives you an algorithm to check
+given a string of symbols whether the um whether the string of symbols is a syntactically valid sentence of the logical language yeah
+so an important element of that logical language is that the generation process should be finite should be finitary 
+there should be only a finite set of rules and there should be an algorithm which will check which can give which can clearly tell you whether a given sentence is a well formed sentence of the language alright
+and if you look at propositional logic it it it does not allow you to specify for example infinitary objects like for which we require i mean like i mean if you were to actually apply proportional logic to some some area of mathematics like say theory or number theory 
+what what you see is that it allows you um it does not allow you to specify infinite sets easily ok or certain properties of infinite sets 
+so very often so an extension of proportional logic which allows you to do this in a finitary way is the use of quantifiers and the extension of proportional logic to first order logic ok
+so you can for example specify the whole of set theory in first order logic the axioms of set theory the 
+the predicates that are valid for all possible sets which do not i mean by set theory i mean by axiomatic set theory in the sense that we don’t assume number or we don’t assume any predefined set of objects 
+the only notion is the notion of a set ok you generate all sets you generate numbers everything from the notion of an empty set and a single predicate binary predicate called belong stood yeah 
+so and they have this formation rules and so on and so forth um so any way so we are interested essentially in capturing infinitary a processes within finitary languages yeah so
+so we might so lets so and the main way so the main difference between um
+so you can see a progression of ideas firstly there is pure mathematics which is platonic in nature in the sense that the notion of a computation itself is not important is not an important element of the formal discipline of mathematics then you have logic which actually gives you a loose notion of what is possible by a machine and what is not possible and allows you to specify infinitary objects in some finitary ways and lastly we have programming languages which specify with a great deal of accuracy exactly the primitive computational processes that you are allowed to use ok
+and so a programming language is also also has to satisfy all the constraints of logical language and in addition it should be consistent with what might be called the primitive computational processes ok
+for example one primitive computational process that you must all have studied in school is that of ruler and complex constructions yeah ruler and complex constructions ok yeah so one so there are only two computational primitive computational steps 
+you are able to um draw lines with the ruler mark off segments you are able to use a compass to draw certain angles or to draw arbitrary angles ok 
+so one impossible computation in this case is is there a algorithm using only this primitive concepts to trisect an arbitrary angle ok 
+for example you are not allowed to use a protractors and so on you are not allowed to measure the angle you can only prove that an angle is of a certain measure for example if you draw a line perpendicular to another line um by with a construction proof it shows that it is perpendicular and then you bisect that then you can claim that the bisected angle is let us say forty five degrees but given just an arbitrary angle to raise from a point um
+to be able to trisect it with just these primitive tools 
+for example is an impossible one um task ok 
+so you might think of the algorithms of ruler and complex constructions um i mean the very the algorithms are i mean it is not it is a programming language with in which you know you have only these two computation processes if you like 
+it is not it is not machine readable it is meant to be human readable so well so you write in a loose fashion but essentially you use only those computations which are possible within the domain of euclidean geometry which means you are not allowed to measure out angles yourself 
+you are only allowed to prove there is certain angle has a certain measure you are not allowed to measure out lengths in terms of centimeters or meters or what ever 
+you are only allowed to measure out an arbitrary unit and take multiples of that arbitrary unit
+you could bisect that arbitrary unit you could trisect that arbitrary unit of length measure ok and therefore calim that it is that that one that is actually one third of the unit you took but for example you cant claim that you have constructed one by pi of a unit of length unless you can prove that just by this process 
+you are going to get something that is one by pi of a unit yeah 
+anyway so um so let us so let us so our programming language has in grained in it a um a normal computational process is that we associate with a digital computer 
+i mean that is not that is not the last word when you could have other computational process such as the ruler and compass constructions um you could have analog computers so on and so forth 
+but we are interested [noise] excuse me we are interested primarily in the computational processes associated with um digital computers yeah
+so what we have our so our so as i said we could um we could look at um the we could look at even the machine language as a programming language but we are not really interested in machine language because it has it is a very simple sort of a language very difficult to get any program right i agree but it is the language itself is a very simple language ok and probably that is why it makes it so difficult to program and 
+what we are interested in primarily are what are known as high level languages where you where the primitives of the computational process 
+the primitives of computation or what you might say is the the machine that is made available 
+so once you have implemented a language on a machine you could think of the mach you could think of that as a machine of that language 
+supposing you have implemented it most of have done some programming in pascal so at that point when you are doing pascal programming 
+you you are not really worried about the underlying machine language the underlying architecture you are not worried about anything 
+as far as you are concerned what you have is a pascal machine ok so there is a level of abstraction at which you can consider that you have built
+to you it makes really no difference whether that pascal machine whether pascal is the hard ware machine language of that machine or is it or it is just some software language
+as far as you are concerned it is a pascal machine ok 
+so it is important to realize that you you can actually take some bear machine and cover it up with layers and layers of software and think of just one abstract machine which gives you certain capabilities 
+so so if you looked at the so if you look at the bear machine it gives you only the capabilities to manipulate switches to write programs in binary and so on
+if you look at a pascal machine it gives you no no extra computational power but it gives you the ability to look upon the whole thing as a single machine which allows let us say construction of complicated structured programs 
+it allows various kinds of abstraction mechanisms procedures functions and it allows you to um to express um in term i mean it allows you express things differently ok from what the bare machine would have given you right so
+so let us look at why we should study programming languages because all the time we are looking at the construction of some virtual machine and what facilities we are not really interested in the facilities that the machine gives us 
+we are interested in um [noise] we are interested in various um in what kinds of features are there in that machine in the case of a bare machine you are interested in its architecture 
+now if you have a pascal machine its architecture is really the features of pascal ok if you have a list machine it’s architecture is really the features of list right 
+
+so we [39:20] will our study of programming languages is mainly to for example if you want to understand why certain features have been  included in the programming language 
+you want to understand for example how best those features could be used ok you this and if you you also want to understand how that language is implemented ok 
+so that presumably you would be able to with all this understanding presumably you will be able to learn new languages easily may be
+
+
+
+you could design new languages that is more important and perhaps you would also be able to if you understand the underlying implementations may be you would be able incorporate new features in a programming language yeah 
+
+so so [40:20] let us just look at languages we sort of classify what kinds of languages there are firstly we have this low level and low level languages some machine and 
+
+
+
+assembly language which are not interest which are not of our interest 
+i mean you will learn about them in some course on architecture or organization but what we are interested primarily are these high level languages ok of which we can think of three broad classifications 
+one is a class of imperative languages in which most of our most of the last forty years is gone in since the first digital computers has gone in the design of the imperative languages 
+then there are what are known as functional or applicative languages and then it is possible to use logic itself as a programming language yeah and then what you can do is you can actually mix up all these things and for example you can have impure functional languages ok um
+so an imperative language means that it it uses the notion of the command it uses the notion of the state to change a state 
+so the commands change states that is what an imperative language would be ok 
+so a functional language is one which allows you to program in something that is as close to um mathematics as possible um ok
+we will get into these notions um a bit more in detail later ok so so a broad classification of languages is just in terms of high level languages imperative functional logic um 
+
+you could [42:27] also classify languages by features and by features in the sense that what is the most glaring feature in the language well 
+so a large part of our languages are really what are what might be called sequential languages yeah
+so most of the languages that you have programmed in are purely sequential languages  
+then you have what are these parallel languages which are very often languages meant for certain specialized architectures like um 
+
+
+
+you um like you have a single instruction multiple data you execute things in parallel  and there is a there are implicit methods to do things in a parallel fashion 
+you have what are known as distributed languages in which they are not so in the case of a parallel language you assume that there is a [noise] 
+you assume that there are so many processors which will all execute the same instructions in a synchronous lock step fashion ok
+so most of the vectors processors actually have a sequential languages vectorized or made parallel like in the case fortan ninety vector processing fortan and so on and so forth yeah
+distributed languages are those in which you actually assume that the different units of a program are going to lye geographically distributed across let us say a network and they have to some how co operate to achieve may be some common task right
+then you have this in both this cases in both we might we might loosely assume in both the in both parallel and distributed languages that the notion of a process of a computational process into which a program is split is inherently or intimately related to really the computational power to the number of units of computation that number of units of let us say cpus that you have 
+so the notion of a process and a processor are really the same you are writing you are riding one process per processor in both these cases yeah
+in the case of concurrent languages what you are 
+you are basically taking the notion of the process to be an loose entity completely different from does not necessarily have to be mapped on to the existing processes 
+the notion of the process gets delinked from the notion of the processor then you have other kinds of languages those whose primary feature is that of modules separate compilation and more recently you have what 
+what might be called object oriented languages these these add extra features on top of the existing languages usually 
+but there is something fundamental about the new feature that they introduce yeah so um
+
+so when [46:48] we look at so lets so lets just quickly go through for example some of these languages so you would if you were to take the history of programming languages 
+
+
+
+you would find that there is a certain chronological dependence right 
+so the first high level languages so to speak were fortan which is mainly meant for scientific computation and then cobol which is meant for business 
+it was more verbose it actually used full English sentences to represent computations it made the first division distinction between data and program and was meant to use a large amount of data and do very low processing and it was io bound programs whereas fortan was meant for minimal io and maximum computation yeah and these languages gave rise to one important class of languages called the algol like languages which came from the report
+the algol sixty report fortan also had its offshoots in basic then there were these among the algol like languages among the algol like languages you have pascal PL one simula 
+PL one  was an attempt at a unified language for both scientific and business commercial processing and from pascal you get extra features some thing like modula and Ada from simula you have got these object oriented languages starting from small talk eighty ok and all these and somewhere in a parallel stream which is marked by this orange you have BCPL and C actually BCPL went was a transformation of a language called B which itself was a transformation of a language called A and the C was derived from BCPL by modification yeah and then one small talk eighty came up and c was there an object oriented ness became a bigbuzz word you had C plus plus yeah which is not here ok um 
+so so so that is briefly what we are um you might say our pedigree of languages is mainly oh we also have this functional languages right 
+
+so let [48:53] us let us look at functional languages so you have in in apart from this imperative languages you had basically the first functional language was LISP from 
+
+
+
+which we derived various versions MacLisp Scheme CommonLisp um 
+MacLisp can um MacLisp and CommonLisp are really impure versions of LISP when we understand functionality i will we will come to what they mean impure versions but many of you have probably studied Scheme ok
+it is a cleaned up version of LISP and those imparrallel with LISP which is meant for LISP processing it was also a language designed in the sixties called the snobol which was meant for string processing which allowed efficient pattern matching constructs to be programmed and these have actually yielded along with the emphasis on tied checking to a language called ML which came up in the eighties and actually all these languages LISP and ML were all inspired by the what is known as lambda calculus which we will study which is the basis of all functional languages ok
+

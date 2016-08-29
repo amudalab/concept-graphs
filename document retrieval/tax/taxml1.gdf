@@ -1,0 +1,19 @@
+nodedef> name,label
+v0,learning algorithm
+v1,learning theory
+v2,machine learning
+v3,machine learning algorithm
+v4,reinforcement learning
+v5,supervised learning
+v6,unsupervised
+v7,unsupervised learning
+v8,unsupervised learning algorithm
+edgedef>node1,node2,directed,weight,labelvisible
+v1,v4,false,45.5190615836,true
+v2,v0,false,0.0,true
+v3,v4,false,82.9706744868,true
+v4,v6,false,16.4516129032,true
+v5,v1,false,13.5483870968,true
+v6,v0,false,14.4201228878,true
+v7,v4,false,18.1413210445,true
+v8,v4,false,20.3374689826,true

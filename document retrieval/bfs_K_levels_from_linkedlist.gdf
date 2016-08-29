@@ -1,0 +1,229 @@
+nodedef> name,label
+v0,abstract data
+v1,accumulator
+v2,algorithm
+v3,arbitrary binary tree
+v4,arithmetic expression
+v5,array
+v6,array implementation
+v7,array stack
+v8,asymptotic analysis
+v9,avl trees
+v10,big oh notation
+v11,big omega notation
+v12,big theta notation
+v13,binary search
+v14,binary search property
+v15,binary search tree
+v16,binary tree
+v17,catch block
+v18,chaining
+v19,circular list
+v20,collision resolution
+v21,complete binary tree
+v22,compression map
+v23,data structure
+v24,data type
+v25,decision tree
+v26,deletion
+v27,dequeue
+v28,dictionaries
+v29,dictionary
+v30,divide and conquer
+v31,double ended queue
+v32,double hashing
+v33,double rotation
+v34,doubly linked
+v35,doubly linked list
+v36,dynamic array
+v37,efficient algorithm
+v38,empty
+v39,enqueue
+v40,exception
+v41,external node
+v42,fast data structure
+v43,fibonacci hashing
+v44,first in first out
+v45,generic tree traversal
+v46,golden ratio
+v47,growth strategy
+v48,hash code map
+v49,hash function
+v50,hash table
+v51,hashing
+v52,height balance
+v53,height balance property
+v54,height balanced tree
+v55,height of node
+v56,height of the tree
+v57,induction hypothesis
+v58,inorder traversal
+v59,insertion
+v60,insertion process
+v61,insertion sort
+v62,integer array stack
+v63,internal node
+v64,internal storage
+v65,iterative procedure
+v66,kind of search
+v67,left child
+v68,left sub tree
+v69,level
+v70,linear algorithm
+v71,linear congruential generator
+v72,linear probing
+v73,linked list
+v74,list
+v75,load factor
+v76,local reorganization
+v77,location on the stack
+v78,median element
+v79,method of collision
+v80,multi way search tree
+v81,node
+v82,node structure
+v83,non integer key
+v84,null pointer
+v85,number of nodes
+v86,open addressing
+v87,ordered dictionaries
+v88,ordered tree
+v89,ordering relation
+v90,parent node
+v91,partition procedure
+v92,partitioning
+v93,pivot element
+v94,polynomial accumulation
+v95,pop
+v96,postorder traversal
+v97,predecessor
+v98,preorder traversal
+v99,primitive operation
+v100,programming construct
+v101,pseudo random number
+v102,push
+v103,query method
+v104,queue
+v105,queue full exception
+v106,quick sort
+v107,quick sort procedure
+v108,random number
+v109,random number generator
+v110,randomized partition
+v111,randomized quick sort
+v112,rank
+v113,rear element
+v114,recurrence relation
+v115,recursive procedure
+v116,red black tree
+v117,right child
+v118,right sub tree
+v119,root node
+v120,rotation
+v121,rotation operation
+v122,running time
+v123,running time of procedure
+v124,search procedure
+v125,search property
+v126,search tree
+v127,single rotation
+v128,singly linked
+v129,singly linked list
+v130,sorted order
+v131,sorting technique
+v132,stack
+v133,stack empty exception
+v134,stack implementation
+v135,stack interface
+v136,stack pointer
+v137,sub tree
+v138,successful search
+v139,tight strategy
+v140,top
+v141,total order
+v142,tree height
+v143,tree walk
+v144,try block
+v145,two four tree
+v146,unbalanced node
+v147,universal hashing
+v148,unsuccessful search
+
+edgedef>node1,node2,directed,weight,labelvisible
+v73,v128,false,2.95737704918,true
+v73,v129,false,25.6393442623,true
+v73,v132,false,11.2131147541,true
+v73,v7,false,46.2295081967,true
+v73,v16,false,14.7540983607,true
+v73,v23,false,7.88561847988,true
+v73,v24,false,14.25,true
+v73,v29,false,22.0046838407,true
+v73,v31,false,8.85245901639,true
+v73,v34,false,1.31533269045,true
+v73,v35,false,6.97923497268,true
+v73,v36,false,6.88524590164,true
+v73,v50,false,36.9141755063,true
+v73,v64,false,8.90573770492,true
+v73,v67,false,31.4754098361,true
+v73,v74,false,0.536962573461,true
+v73,v75,false,131.053278689,true
+v73,v81,false,28.5,true
+v73,v102,false,5.90163934426,true
+v73,v104,false,20.5639344262,true
+v73,v112,false,11.1229508197,true
+v73,v117,false,18.3770491803,true
+v67,v88,false,7.86885245902,true
+v132,v0,false,28.5635245902,true
+v132,v133,false,3.45628415301,true
+v132,v38,false,4.50819672131,true
+v132,v135,false,3.03512880562,true
+v132,v40,false,9.494391717,true
+v132,v139,false,10.8196721311,true
+v132,v140,false,4.79074252652,true
+v132,v77,false,12.1721311475,true
+v132,v47,false,7.86885245902,true
+v132,v136,false,1.59983186213,true
+v132,v95,false,7.562529274,true
+v132,v134,false,46.0204918033,true
+v132,v5,false,32.0717213115,true
+v7,v62,false,8.70491803279,true
+v74,v19,false,8.40983606557,true
+v74,v6,false,22.6229508197,true
+v75,v49,false,18.6885245902,true
+v75,v138,false,916.721311475,true
+v75,v51,false,8.85245901639,true
+v75,v148,false,63.9344262295,true
+v75,v18,false,241.967213115,true
+v16,v68,false,9.67213114754,true
+v16,v96,false,34.9426229508,true
+v16,v98,false,13.0737704918,true
+v16,v4,false,37.5683060109,true
+v16,v69,false,9.1131147541,true
+v16,v103,false,301.967213115,true
+v16,v137,false,16.7213114754,true
+v16,v45,false,3.93442622951,true
+v16,v15,false,4.91803278689,true
+v16,v82,false,3.93442622951,true
+v16,v21,false,1.24143070045,true
+v16,v118,false,7.86885245902,true
+v16,v41,false,109.180327869,true
+v16,v56,false,29.7923497268,true
+v16,v25,false,15.6516393443,true
+v16,v58,false,25.5588673621,true
+v16,v143,false,30.4918032787,true
+v16,v125,false,10.2819672131,true
+v16,v85,false,8.1762295082,true
+v16,v63,false,10.2996357013,true
+v81,v119,false,3.36680327869,true
+v23,v2,false,61.4863387978,true
+v29,v10,false,161.040983607,true
+v29,v13,false,139.770491803,true
+v31,v27,false,12.7868852459,true
+v104,v39,false,7.15456674473,true
+v104,v105,false,78.3442622951,true
+v104,v44,false,7.25409836066,true
+v104,v113,false,15.6284153005,true
+v50,v22,false,43.2786885246,true
+v50,v109,false,108.196721311,true
+v50,v48,false,34.8196721311,true
+v50,v86,false,7.86885245902,true

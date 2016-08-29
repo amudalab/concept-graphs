@@ -1,0 +1,643 @@
+nodedef> name,label
+v0,2 choice hash
+v1,amortized time
+v2,array
+v3,array hash table
+v4,array resizing
+v5,associative array
+v6,average cost
+v7,b-tree
+v8,balanced search tree
+v9,binary search time
+v10,bit masking
+v11,bucket
+v12,cache
+v13,cache efficiency
+v14,cache line
+v15,cache miss
+v16,cache performance
+v17,chaining
+v18,chaining hash table
+v19,closed hash
+v20,clustering
+v21,coalesced hash
+v22,collision resolution
+v23,consistent hash
+v24,cpu caching
+v25,cryptographic hash function
+v26,cuckoo hash
+v27,data structure
+v28,database indexing
+v29,delete
+v30,disk based
+v31,disk based hashes
+v32,distributed hashes
+v33,double hash
+v34,dynamic array
+v35,dynamic perfect hash
+v36,dynamic resizing
+v37,empty bucket
+v38,external robin hash
+v39,finite automata
+v40,geometric resizing
+v41,hash bucket
+v42,hash collision
+v43,hash computation
+v44,hash consing
+v45,hash distribution
+v46,hash function
+v47,hash map
+v48,hash table
+v49,hash value
+v50,hopscotch hash
+v51,incremental resizing
+v52,insert
+v53,interpreted programming language
+v54,judy array
+v55,key
+v56,key value pair
+v57,linear probing
+v58,linked list
+v59,lisp interpreter
+v60,list
+v61,load factor
+v62,lookup
+v63,memory
+v64,memory allocator
+v65,memory fragmentation
+v66,memory usage
+v67,modulo reduction
+v68,multiplicative hash
+v69,open addressing
+v70,open hash
+v71,operating system
+v72,ordered list
+v73,perfect hash function
+v74,perfect hash table
+v75,perl
+v76,php
+v77,pointer
+v78,probe sequence
+v79,processor cache
+v80,python
+v81,quadratic probing
+v82,ruby
+v83,searching
+v84,self balancing tree
+v85,separate chaining
+v86,translation look aside buffer
+v87,unordered list
+v88,worst case
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v11,false,2.91666666667,true
+v0,v36,false,11.9166666667,true
+v0,v46,false,5.5,true
+v1,v46,false,10.0833333333,true
+v1,v52,false,2.75,true
+v1,v62,false,3.66666666667,true
+v1,v88,false,3.66666666667,true
+v2,v3,false,0.0,true
+v2,v4,false,0.0,true
+v2,v5,false,0.666666666667,true
+v2,v10,false,11.9166666667,true
+v2,v11,false,0.666666666667,true
+v2,v17,false,5.83333333333,true
+v2,v34,false,2.32142857143,true
+v2,v40,false,0.916666666667,true
+v2,v42,false,2.75,true
+v2,v46,false,5.83333333333,true
+v2,v48,false,11.25,true
+v2,v52,false,9.16666666667,true
+v2,v54,false,0.916666666667,true
+v2,v55,false,3.66666666667,true
+v2,v56,false,4.58333333333,true
+v2,v58,false,6.41666666667,true
+v2,v61,false,11.9166666667,true
+v2,v77,false,5.5,true
+v2,v78,false,22.0,true
+v2,v83,false,20.1666666667,true
+v3,v2,false,0.0,true
+v3,v48,false,0.916666666667,true
+v4,v2,false,0.0,true
+v4,v71,false,6.41666666667,true
+v5,v2,false,0.666666666667,true
+v5,v27,false,5.5,true
+v5,v28,false,1.83333333333,true
+v5,v29,false,5.5,true
+v5,v42,false,11.6666666667,true
+v5,v48,false,1.83333333333,true
+v5,v53,false,12.8333333333,true
+v5,v55,false,5.5,true
+v5,v62,false,15.5833333333,true
+v5,v88,false,7.33333333333,true
+v6,v46,false,24.75,true
+v6,v48,false,8.75,true
+v6,v55,false,7.08333333333,true
+v6,v56,false,6.41666666667,true
+v6,v62,false,4.58333333333,true
+v6,v87,false,7.33333333333,true
+v7,v12,false,7.33333333333,true
+v7,v27,false,9.16666666667,true
+v8,v27,false,3.66666666667,true
+v8,v61,false,8.25,true
+v9,v23,false,12.8333333333,true
+v9,v60,false,42.1666666667,true
+v10,v2,false,11.9166666667,true
+v10,v46,false,11.0,true
+v10,v48,false,33.9166666667,true
+v10,v67,false,3.66666666667,true
+v11,v0,false,2.91666666667,true
+v11,v2,false,0.666666666667,true
+v11,v15,false,12.8333333333,true
+v11,v17,false,3.33333333333,true
+v11,v26,false,16.5,true
+v11,v27,false,2.5,true
+v11,v34,false,17.4166666667,true
+v11,v35,false,5.5,true
+v11,v37,false,0.833333333333,true
+v11,v38,false,26.5833333333,true
+v11,v41,false,0.916666666667,true
+v11,v46,false,3.86111111111,true
+v11,v48,false,3.91666666667,true
+v11,v50,false,7.33333333333,true
+v11,v55,false,2.75,true
+v11,v57,false,8.75,true
+v11,v60,false,7.08333333333,true
+v11,v61,false,11.9166666667,true
+v11,v62,false,26.5833333333,true
+v11,v63,false,6.41666666667,true
+v11,v64,false,14.6666666667,true
+v11,v69,false,11.25,true
+v11,v72,false,5.5,true
+v11,v74,false,8.25,true
+v11,v83,false,1.83333333333,true
+v11,v85,false,21.0833333333,true
+v11,v88,false,13.0,true
+v12,v7,false,7.33333333333,true
+v12,v13,false,0.0,true
+v12,v14,false,1.0,true
+v12,v15,false,0.0,true
+v12,v16,false,0.0,true
+v12,v17,false,5.41666666667,true
+v12,v27,false,6.41666666667,true
+v12,v28,false,1.83333333333,true
+v12,v42,false,22.0,true
+v12,v48,false,6.33333333333,true
+v12,v52,false,41.25,true
+v12,v55,false,11.0,true
+v12,v60,false,2.75,true
+v12,v66,false,6.41666666667,true
+v12,v69,false,10.0,true
+v12,v77,false,12.8333333333,true
+v12,v79,false,0.916666666667,true
+v12,v85,false,1.83333333333,true
+v12,v88,false,13.75,true
+v13,v12,false,0.0,true
+v13,v48,false,2.75,true
+v14,v12,false,1.0,true
+v14,v61,false,20.1666666667,true
+v15,v11,false,12.8333333333,true
+v15,v12,false,0.0,true
+v16,v12,false,0.0,true
+v16,v79,false,3.66666666667,true
+v17,v2,false,5.83333333333,true
+v17,v11,false,3.33333333333,true
+v17,v12,false,5.41666666667,true
+v17,v18,false,0.0,true
+v17,v20,false,8.33333333333,true
+v17,v21,false,4.58333333333,true
+v17,v26,false,8.25,true
+v17,v40,false,43.0833333333,true
+v17,v42,false,0.916666666667,true
+v17,v46,false,20.1666666667,true
+v17,v48,false,11.25,true
+v17,v49,false,11.9166666667,true
+v17,v57,false,6.25,true
+v17,v58,false,1.83333333333,true
+v17,v60,false,3.75,true
+v17,v61,false,7.08333333333,true
+v17,v62,false,9.75,true
+v17,v69,false,3.85,true
+v17,v78,false,2.75,true
+v17,v85,false,0.121212121212,true
+v17,v88,false,4.16666666667,true
+v18,v17,false,0.0,true
+v18,v48,false,0.75,true
+v19,v49,false,6.41666666667,true
+v19,v70,false,7.33333333333,true
+v20,v17,false,8.33333333333,true
+v20,v25,false,2.75,true
+v20,v46,false,9.16666666667,true
+v20,v49,false,1.83333333333,true
+v20,v62,false,3.66666666667,true
+v20,v68,false,8.25,true
+v21,v17,false,4.58333333333,true
+v21,v66,false,23.8333333333,true
+v21,v69,false,6.25,true
+v22,v42,false,1.25,true
+v22,v48,false,4.58333333333,true
+v22,v55,false,12.8333333333,true
+v22,v63,false,0.916666666667,true
+v22,v85,false,31.1666666667,true
+v23,v9,false,12.8333333333,true
+v23,v30,false,4.58333333333,true
+v23,v46,false,21.0833333333,true
+v23,v48,false,15.5833333333,true
+v23,v55,false,11.0,true
+v23,v60,false,7.33333333333,true
+v24,v52,false,13.75,true
+v24,v86,false,3.66666666667,true
+v25,v20,false,2.75,true
+v25,v46,false,0.916666666667,true
+v26,v11,false,16.5,true
+v26,v17,false,8.25,true
+v26,v33,false,79.75,true
+v26,v50,false,7.33333333333,true
+v26,v57,false,2.75,true
+v26,v62,false,4.58333333333,true
+v26,v69,false,3.33333333333,true
+v27,v5,false,5.5,true
+v27,v7,false,9.16666666667,true
+v27,v8,false,3.66666666667,true
+v27,v11,false,2.5,true
+v27,v12,false,6.41666666667,true
+v27,v30,false,1.83333333333,true
+v27,v46,false,8.33333333333,true
+v27,v47,false,3.66666666667,true
+v27,v48,false,12.5,true
+v27,v55,false,7.33333333333,true
+v27,v58,false,8.25,true
+v27,v60,false,6.5,true
+v27,v84,false,11.0,true
+v27,v88,false,13.75,true
+v28,v5,false,1.83333333333,true
+v28,v12,false,1.83333333333,true
+v28,v48,false,1.83333333333,true
+v28,v55,false,0.916666666667,true
+v29,v5,false,5.5,true
+v29,v48,false,14.1666666667,true
+v29,v51,false,0.916666666667,true
+v29,v52,false,1.66666666667,true
+v29,v62,false,1.25,true
+v30,v23,false,4.58333333333,true
+v30,v27,false,1.83333333333,true
+v30,v31,false,0.0,true
+v30,v48,false,6.41666666667,true
+v31,v30,false,0.0,true
+v31,v32,false,3.66666666667,true
+v32,v31,false,3.66666666667,true
+v32,v46,false,12.8333333333,true
+v33,v26,false,79.75,true
+v33,v42,false,0.916666666667,true
+v33,v43,false,1.83333333333,true
+v33,v46,false,11.0,true
+v34,v2,false,2.32142857143,true
+v34,v11,false,17.4166666667,true
+v34,v37,false,31.1666666667,true
+v34,v48,false,3.66666666667,true
+v34,v61,false,14.25,true
+v34,v62,false,10.0833333333,true
+v35,v11,false,5.5,true
+v35,v63,false,14.6666666667,true
+v36,v0,false,11.9166666667,true
+v36,v46,false,12.8333333333,true
+v36,v48,false,7.0,true
+v36,v49,false,60.5,true
+v36,v52,false,19.0,true
+v36,v61,false,15.5833333333,true
+v36,v69,false,5.5,true
+v37,v11,false,0.833333333333,true
+v37,v34,false,31.1666666667,true
+v37,v48,false,7.33333333333,true
+v37,v57,false,6.41666666667,true
+v37,v63,false,3.66666666667,true
+v38,v11,false,26.5833333333,true
+v38,v88,false,34.8333333333,true
+v39,v48,false,7.33333333333,true
+v39,v54,false,2.75,true
+v40,v2,false,0.916666666667,true
+v40,v17,false,43.0833333333,true
+v41,v11,false,0.916666666667,true
+v41,v50,false,11.9166666667,true
+v42,v2,false,2.75,true
+v42,v5,false,11.6666666667,true
+v42,v12,false,22.0,true
+v42,v17,false,0.916666666667,true
+v42,v22,false,1.25,true
+v42,v33,false,0.916666666667,true
+v42,v48,false,56.8333333333,true
+v42,v49,false,37.5833333333,true
+v42,v60,false,2.75,true
+v42,v69,false,2.5,true
+v42,v76,false,10.0833333333,true
+v42,v85,false,2.91666666667,true
+v43,v33,false,1.83333333333,true
+v43,v81,false,24.75,true
+v44,v59,false,4.58333333333,true
+v45,v46,false,14.6666666667,true
+v45,v48,false,11.9166666667,true
+v45,v61,false,10.0833333333,true
+v45,v88,false,17.4166666667,true
+v46,v0,false,5.5,true
+v46,v1,false,10.0833333333,true
+v46,v2,false,5.83333333333,true
+v46,v6,false,24.75,true
+v46,v10,false,11.0,true
+v46,v11,false,3.86111111111,true
+v46,v17,false,20.1666666667,true
+v46,v20,false,9.16666666667,true
+v46,v23,false,21.0833333333,true
+v46,v25,false,0.916666666667,true
+v46,v27,false,8.33333333333,true
+v46,v32,false,12.8333333333,true
+v46,v33,false,11.0,true
+v46,v36,false,12.8333333333,true
+v46,v45,false,14.6666666667,true
+v46,v48,false,0.0,true
+v46,v49,false,7.33333333333,true
+v46,v52,false,6.25,true
+v46,v55,false,3.20833333333,true
+v46,v61,false,7.33333333333,true
+v46,v62,false,4.55,true
+v46,v67,false,8.25,true
+v46,v69,false,7.23333333333,true
+v46,v73,false,2.5,true
+v46,v74,false,7.33333333333,true
+v46,v88,false,10.4166666667,true
+v47,v27,false,3.66666666667,true
+v47,v48,false,1.83333333333,true
+v48,v2,false,11.25,true
+v48,v3,false,0.916666666667,true
+v48,v5,false,1.83333333333,true
+v48,v6,false,8.75,true
+v48,v10,false,33.9166666667,true
+v48,v11,false,3.91666666667,true
+v48,v12,false,6.33333333333,true
+v48,v13,false,2.75,true
+v48,v17,false,11.25,true
+v48,v18,false,0.75,true
+v48,v22,false,4.58333333333,true
+v48,v23,false,15.5833333333,true
+v48,v27,false,12.5,true
+v48,v28,false,1.83333333333,true
+v48,v29,false,14.1666666667,true
+v48,v30,false,6.41666666667,true
+v48,v34,false,3.66666666667,true
+v48,v36,false,7.0,true
+v48,v37,false,7.33333333333,true
+v48,v39,false,7.33333333333,true
+v48,v42,false,56.8333333333,true
+v48,v45,false,11.9166666667,true
+v48,v46,false,0.0,true
+v48,v47,false,1.83333333333,true
+v48,v49,false,20.1666666667,true
+v48,v50,false,2.75,true
+v48,v51,false,2.75,true
+v48,v52,false,5.0,true
+v48,v55,false,2.55555555556,true
+v48,v58,false,3.25,true
+v48,v59,false,16.5,true
+v48,v60,false,5.0,true
+v48,v61,false,1.91666666667,true
+v48,v62,false,7.16666666667,true
+v48,v63,false,5.5,true
+v48,v69,false,12.0,true
+v48,v74,false,0.833333333333,true
+v48,v82,false,1.83333333333,true
+v48,v83,false,9.16666666667,true
+v48,v85,false,18.3333333333,true
+v48,v88,false,8.25,true
+v49,v17,false,11.9166666667,true
+v49,v19,false,6.41666666667,true
+v49,v20,false,1.83333333333,true
+v49,v36,false,60.5,true
+v49,v42,false,37.5833333333,true
+v49,v46,false,7.33333333333,true
+v49,v48,false,20.1666666667,true
+v49,v55,false,6.66666666667,true
+v49,v69,false,12.0833333333,true
+v49,v85,false,9.16666666667,true
+v50,v11,false,7.33333333333,true
+v50,v26,false,7.33333333333,true
+v50,v41,false,11.9166666667,true
+v50,v48,false,2.75,true
+v50,v69,false,3.33333333333,true
+v51,v29,false,0.916666666667,true
+v51,v48,false,2.75,true
+v52,v1,false,2.75,true
+v52,v2,false,9.16666666667,true
+v52,v12,false,41.25,true
+v52,v24,false,13.75,true
+v52,v29,false,1.66666666667,true
+v52,v36,false,19.0,true
+v52,v46,false,6.25,true
+v52,v48,false,5.0,true
+v52,v55,false,19.75,true
+v52,v62,false,4.58333333333,true
+v52,v69,false,0.916666666667,true
+v53,v5,false,12.8333333333,true
+v53,v75,false,3.66666666667,true
+v54,v2,false,0.916666666667,true
+v54,v39,false,2.75,true
+v55,v2,false,3.66666666667,true
+v55,v5,false,5.5,true
+v55,v6,false,7.08333333333,true
+v55,v11,false,2.75,true
+v55,v12,false,11.0,true
+v55,v22,false,12.8333333333,true
+v55,v23,false,11.0,true
+v55,v27,false,7.33333333333,true
+v55,v28,false,0.916666666667,true
+v55,v46,false,3.20833333333,true
+v55,v48,false,2.55555555556,true
+v55,v49,false,6.66666666667,true
+v55,v52,false,19.75,true
+v55,v56,false,0.0,true
+v55,v60,false,5.5,true
+v55,v62,false,21.25,true
+v55,v63,false,52.25,true
+v55,v69,false,6.41666666667,true
+v55,v72,false,4.58333333333,true
+v55,v75,false,43.0833333333,true
+v55,v88,false,11.6666666667,true
+v56,v2,false,4.58333333333,true
+v56,v6,false,6.41666666667,true
+v56,v55,false,0.0,true
+v56,v62,false,13.75,true
+v57,v11,false,8.75,true
+v57,v17,false,6.25,true
+v57,v26,false,2.75,true
+v57,v37,false,6.41666666667,true
+v57,v61,false,16.5,true
+v57,v69,false,11.75,true
+v57,v78,false,2.75,true
+v57,v81,false,11.0,true
+v58,v2,false,6.41666666667,true
+v58,v17,false,1.83333333333,true
+v58,v27,false,8.25,true
+v58,v48,false,3.25,true
+v58,v60,false,0.916666666667,true
+v58,v63,false,11.9166666667,true
+v58,v77,false,12.0833333333,true
+v59,v44,false,4.58333333333,true
+v59,v48,false,16.5,true
+v60,v9,false,42.1666666667,true
+v60,v11,false,7.08333333333,true
+v60,v12,false,2.75,true
+v60,v17,false,3.75,true
+v60,v23,false,7.33333333333,true
+v60,v27,false,6.5,true
+v60,v42,false,2.75,true
+v60,v48,false,5.0,true
+v60,v55,false,5.5,true
+v60,v58,false,0.916666666667,true
+v60,v61,false,11.0,true
+v60,v62,false,4.25,true
+v60,v85,false,1.83333333333,true
+v60,v87,false,4.75,true
+v61,v2,false,11.9166666667,true
+v61,v8,false,8.25,true
+v61,v11,false,11.9166666667,true
+v61,v14,false,20.1666666667,true
+v61,v17,false,7.08333333333,true
+v61,v34,false,14.25,true
+v61,v36,false,15.5833333333,true
+v61,v45,false,10.0833333333,true
+v61,v46,false,7.33333333333,true
+v61,v48,false,1.91666666667,true
+v61,v57,false,16.5,true
+v61,v60,false,11.0,true
+v61,v62,false,10.75,true
+v61,v68,false,9.16666666667,true
+v61,v69,false,14.6666666667,true
+v61,v77,false,2.75,true
+v62,v1,false,3.66666666667,true
+v62,v5,false,15.5833333333,true
+v62,v6,false,4.58333333333,true
+v62,v11,false,26.5833333333,true
+v62,v17,false,9.75,true
+v62,v20,false,3.66666666667,true
+v62,v26,false,4.58333333333,true
+v62,v29,false,1.25,true
+v62,v34,false,10.0833333333,true
+v62,v46,false,4.55,true
+v62,v48,false,7.16666666667,true
+v62,v52,false,4.58333333333,true
+v62,v55,false,21.25,true
+v62,v56,false,13.75,true
+v62,v60,false,4.25,true
+v62,v61,false,10.75,true
+v62,v63,false,21.0833333333,true
+v62,v69,false,6.16666666667,true
+v62,v88,false,4.25,true
+v63,v11,false,6.41666666667,true
+v63,v22,false,0.916666666667,true
+v63,v35,false,14.6666666667,true
+v63,v37,false,3.66666666667,true
+v63,v48,false,5.5,true
+v63,v55,false,52.25,true
+v63,v58,false,11.9166666667,true
+v63,v62,false,21.0833333333,true
+v63,v64,false,0.0,true
+v63,v65,false,0.0,true
+v63,v66,false,0.0,true
+v63,v69,false,10.8333333333,true
+v63,v77,false,12.8333333333,true
+v63,v86,false,11.0,true
+v63,v88,false,7.33333333333,true
+v64,v11,false,14.6666666667,true
+v64,v63,false,0.0,true
+v65,v63,false,0.0,true
+v65,v71,false,3.66666666667,true
+v66,v12,false,6.41666666667,true
+v66,v21,false,23.8333333333,true
+v66,v63,false,0.0,true
+v67,v10,false,3.66666666667,true
+v67,v46,false,8.25,true
+v68,v20,false,8.25,true
+v68,v61,false,9.16666666667,true
+v69,v11,false,11.25,true
+v69,v12,false,10.0,true
+v69,v17,false,3.85,true
+v69,v21,false,6.25,true
+v69,v26,false,3.33333333333,true
+v69,v36,false,5.5,true
+v69,v42,false,2.5,true
+v69,v46,false,7.23333333333,true
+v69,v48,false,12.0,true
+v69,v49,false,12.0833333333,true
+v69,v50,false,3.33333333333,true
+v69,v52,false,0.916666666667,true
+v69,v55,false,6.41666666667,true
+v69,v57,false,11.75,true
+v69,v61,false,14.6666666667,true
+v69,v62,false,6.16666666667,true
+v69,v63,false,10.8333333333,true
+v70,v19,false,7.33333333333,true
+v70,v85,false,7.33333333333,true
+v71,v4,false,6.41666666667,true
+v71,v65,false,3.66666666667,true
+v72,v11,false,5.5,true
+v72,v55,false,4.58333333333,true
+v73,v46,false,2.5,true
+v74,v11,false,8.25,true
+v74,v46,false,7.33333333333,true
+v74,v48,false,0.833333333333,true
+v75,v53,false,3.66666666667,true
+v75,v55,false,43.0833333333,true
+v75,v80,false,0.916666666667,true
+v75,v82,false,0.916666666667,true
+v76,v42,false,10.0833333333,true
+v76,v80,false,1.83333333333,true
+v77,v2,false,5.5,true
+v77,v12,false,12.8333333333,true
+v77,v58,false,12.0833333333,true
+v77,v61,false,2.75,true
+v77,v63,false,12.8333333333,true
+v78,v2,false,22.0,true
+v78,v17,false,2.75,true
+v78,v57,false,2.75,true
+v78,v83,false,8.25,true
+v79,v12,false,0.916666666667,true
+v79,v16,false,3.66666666667,true
+v80,v75,false,0.916666666667,true
+v80,v76,false,1.83333333333,true
+v80,v82,false,1.66666666667,true
+v81,v43,false,24.75,true
+v81,v57,false,11.0,true
+v82,v48,false,1.83333333333,true
+v82,v75,false,0.916666666667,true
+v82,v80,false,1.66666666667,true
+v83,v2,false,20.1666666667,true
+v83,v11,false,1.83333333333,true
+v83,v48,false,9.16666666667,true
+v83,v78,false,8.25,true
+v84,v27,false,11.0,true
+v84,v88,false,4.58333333333,true
+v85,v11,false,21.0833333333,true
+v85,v12,false,1.83333333333,true
+v85,v17,false,0.121212121212,true
+v85,v22,false,31.1666666667,true
+v85,v42,false,2.91666666667,true
+v85,v48,false,18.3333333333,true
+v85,v49,false,9.16666666667,true
+v85,v60,false,1.83333333333,true
+v85,v70,false,7.33333333333,true
+v86,v24,false,3.66666666667,true
+v86,v63,false,11.0,true
+v87,v6,false,7.33333333333,true
+v87,v60,false,4.75,true
+v88,v1,false,3.66666666667,true
+v88,v5,false,7.33333333333,true
+v88,v11,false,13.0,true
+v88,v12,false,13.75,true
+v88,v17,false,4.16666666667,true
+v88,v27,false,13.75,true
+v88,v38,false,34.8333333333,true
+v88,v45,false,17.4166666667,true
+v88,v46,false,10.4166666667,true
+v88,v48,false,8.25,true
+v88,v55,false,11.6666666667,true
+v88,v62,false,4.25,true
+v88,v63,false,7.33333333333,true
+v88,v84,false,4.58333333333,true

@@ -1,0 +1,402 @@
+
+AVL tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+AVL tree
+
+
+Type
+Tree
+
+
+Invented
+1962
+
+
+Invented by
+G.M.Adelson-Velskii and E.M.Landis
+
+
+Time complexity
+in big O notation
+
+
+
+Average
+Worst case
+
+
+Space
+O(n)
+O(n)
+
+
+Search
+O(log n)
+O(log n)
+
+
+Insert
+O(log n)
+O(log n)
+
+
+Delete
+O(log n)
+O(log n)
+
+
+In computer science, an AVL tree is a self-balancing binary search tree, and it was the first such data structure to be invented.[1] In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation. Insertions and deletions may require the tree to be rebalanced by one or more tree rotations.
+The AVL tree is named after its two Soviet inventors, G.M.Adelson-Velskii and E.M.Landis, who published it in their 1962 paper "An algorithm for the organization of information".[2]
+AVL trees are often compared with red-black trees because they support the same set of operations and because red-black trees also take O(log n) time for the basic operations. Because AVL trees are more rigidly balanced, they are faster than red-black trees for lookup-intensive applications.[3][citation needed] Similar to red-black trees, AVL trees are height-balanced, but in general not weight-balanced nor -balanced;[4] that is, sibling nodes can have hugely differing numbers of descendants.
+
+
+
+
+Contents
+
+
+1 Operations
+
+1.1 Searching
+1.2 Insertion
+1.3 Deletion
+
+
+2 Comparison to other structures
+3 See also
+4 References
+5 Further reading
+6 External links
+
+
+
+
+[edit] Operations
+
+
+
+
+Tree rotations
+
+
+Basic operations of an AVL tree involve carrying out the same actions as would be carried out on an unbalanced binary search tree, but modifications are preceded or followed by one or more operations called tree rotations, which help to restore the height balance of the subtrees.
+[edit] Searching
+Lookup in an AVL tree is performed exactly like in any unbalanced binary search tree. Because of the height-balancing of the tree, a lookup takes O(log n) time. No special actions need to be taken, and the tree's structure is not modified by lookups. (This is in contrast to splay tree lookups, which do modify their tree's structure.)
+If each node additionally records the size of its subtree (including itself and its descendants), then the nodes can be retrieved by index in O(log n) time as well.
+Once a node has been found in a balanced tree, the next or previous nodes can be explored in amortized constant time. Some instances of exploring these "nearby" nodes require traversing up to 2log(n) links (particularly when moving from the rightmost leaf of the root's left subtree to the leftmost leaf of the root's right subtree). However, exploring all n nodes of the tree in this manner would use each link exactly twice: one traversal to enter the subtree rooted at that node, and another to leave that node's subtree after having explored it. And since there are n1 links in any tree, the amortized cost is found to be 2(n1)/n, or approximately 2.
+[edit] Insertion
+
+
+
+
+Pictorial description of how rotations cause rebalancing tree, and then retracing one's steps toward the root updating the balance factor of the nodes. The numbered circles represent the nodes being balanced. The lettered triangles represent subtrees which are themselves balanced BSTs
+
+
+After inserting a node, it is necessary to check each of the node's ancestors for consistency with the rules of AVL. The balance factor is calculated as follows: balanceFactor = height(left-subtree) - height(right-subtree). For each node checked, if the balance factor remains 1, 0, or +1 then no rotations are necessary. However, if balance factor becomes less than -1 or greater than +1, the subtree rooted at this node is unbalanced. If insertions are performed serially, after each insertion, at most one of the following cases needs to be resolved to restore the entire tree to the rules of AVL.
+There are four cases which need to be considered, of which two are symmetric to the other two. Let P be the root of the unbalanced subtree, with R and L denoting the right and left children of P respectively.
+Right-Right case and Right-Left case:
+
+If the balance factor of P is -2 then the right subtree outweighs the left subtree of the given node, and the balance factor of the right child (R) must be checked. The left rotation with P as the root is necessary.
+
+If the balance factor of R is -1 (or in case of deletion also 0), a single left rotation (with P as the root) is needed (Right-Right case).
+If the balance factor of R is +1, two different rotations are needed. The first rotation is a right rotation with R as the root. The second is a left rotation with P as the root (Right-Left case).
+
+
+
+Left-Left case and Left-Right case:
+
+If the balance factor of P is 2, then the left subtree outweighs the right subtree of the given node, and the balance factor of the left child (L) must be checked. The right rotation with P as the root is necessary.
+
+If the balance factor of L is +1 (or in case of deletion also 0), a single right rotation (with P as the root) is needed (Left-Left case).
+If the balance factor of L is -1, two different rotations are needed. The first rotation is a left rotation with L as the root. The second is a right rotation with P as the root (Left-Right case).
+
+
+
+[edit] Deletion
+If the node is a leaf or has only one child, remove it. Otherwise, replace it with either the largest in its left sub tree (in order predecessor) or the smallest in its right sub tree (in order successor), and remove that node. The node that was found as a replacement has at most one sub tree. After deletion, retrace the path back up the tree (parent of the replacement) to the root, adjusting the balance factors as needed.
+As with all binary trees, a node's in-order successor is the left-most child of its right subtree, and a node's in-order predecessor is the right-most child of its left subtree. In either case, this node will have zero or one children. Delete it according to one of the two simpler cases above.
+
+In addition to the balancing described above for insertions, if the balance factor for the tree is 2 and that of the left subtree is 0, a right rotation must be performed on P. The mirror of this case is also necessary.
+The retracing can stop if the balance factor becomes 1 or +1 indicating that the height of that subtree has remained unchanged. If the balance factor becomes 0 then the height of the subtree has decreased by one and the retracing needs to continue. If the balance factor becomes 2 or +2 then the subtree is unbalanced and needs to be rotated to fix it. If the rotation leaves the subtree's balance factor at 0 then the retracing towards the root must continue since the height of this subtree has decreased by one. This is in contrast to an insertion where a rotation resulting in a balance factor of 0 indicated that the subtree's height has remained unchanged.
+The time required is O(log n) for lookup, plus a maximum of O(log n) rotations on the way back to the root, so the operation can be completed in O(log n) time.
+[edit] Comparison to other structures
+Both AVL trees and red-black trees are self-balancing binary search trees, so they are very similar mathematically. The operations to balance the trees are different, but both occur on the average in O(1) with maximum in O(log n). The real difference between the two is the limiting height. For a tree of size :
+
+An AVL tree's height is strictly less than:[5][6]
+
+
+
+
+where  is the golden ratio.
+
+A red-black tree's height is at most [7]
+
+AVL trees are more rigidly balanced than red-black trees, leading to slower insertion and removal but faster retrieval.
+[edit] See also
+
+Trees
+Tree rotation
+Splay tree
+Scapegoat tree
+B-tree
+T-tree
+List of data structures
+
+[edit] References
+
+^ Robert Sedgewick, Algorithms, Addison-Wesley, 1983, ISBN 0-201-06672-6, page 199, chapter 15: Balanced Trees.
+^ Adelson-Velskii, G.; E. M. Landis (1962). "An algorithm for the organization of information". Proceedings of the USSR Academy of Sciences 146: 263266. (Russian) English translation by Myron J. Ricci in Soviet Math. Doklady, 3:12591263, 1962.
+^ Pfaff, Ben (June 2004). "Performance Analysis of BSTs in System Software" (PDF). Stanford University. http://www.stanford.edu/~blp/papers/libavl.pdf.
+^ AVL trees are not weight-balanced?
+Thereby: A Binary Tree is called -balanced, with , if for every node , the inequality
+
+
+
+holds and  is minimal with this property.  is the number of nodes under the tree with  as root (including the root) and  is the left sub-tree of .
+^ Burkhard, Walt (Spring 2012). "AVL Dictionary Data Type Implementation". Advanced Data Structures. La Jolla: A.S. Soft Reserves, UC San Diego. p.103. http://ieng6.ucsd.edu/~cs100s/public/Notes/CS100s12.pdf.
+^ Knuth, Donald E. (2000). Sorting and searching (2. ed., 6. printing, newly updated and rev. ed.). Boston [u.a.]: Addison-Wesley. pp.460. ISBN0-201-89685-0.
+^ Proof of asymptotic bounds
+
+[edit] Further reading
+
+Donald Knuth. The Art of Computer Programming, Volume 3: Sorting and Searching, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89685-0. Pages 458475 of section 6.2.3: Balanced Trees.
+
+[edit] External links
+
+
+
+The Wikibook Algorithm Implementation has a page on the topic of: AVL tree
+
+
+
+
+
+Wikimedia Commons has media related to: AVL-trees
+
+
+
+xdg library by Dmitriy Vilkov: Serializable straight C-implementation could easily be taken from this library under GNU-LGPL and AFL v2.0 licenses.
+Description from the Dictionary of Algorithms and Data Structures
+Python Implementation
+Single C header file by Ian Piumarta
+AVL Tree Demonstration
+AVL tree applet  all the operations
+Fast and efficient implementation of AVL Trees
+PHP Implementation
+C++ implementation which can be used as an array
+Self balancing AVL tree with Concat and Split operations
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 3685/1000000
+Preprocessor generated node count: 32061/1500000
+Post-expand include size: 33929/2048000 bytes
+Template argument size: 10237/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 2/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:2118-0!0!0!!en!4!* and timestamp 20130121213817 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=AVL_tree&oldid=530596073"				
+ /printfooter 
+ catlinks 
+Categories: 1962 in computer scienceBinary treesHidden categories: Articles with Russian language external linksAll articles with unsourced statementsArticles with unsourced statements from July 2011  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

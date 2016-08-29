@@ -1,0 +1,272 @@
+AVL Trees 
+
+In this class we are going to be talking about AVL trees in the last class we have seen binary search trees data structure now one problem with the binary search tree
+
+if you recall is that the operations of insertion deletion search all of them take time proportional to the height of the tree height of the tree can be very bad ya we saw in the example with the height of the tree could be as bad as order end or n minus one 
+
+so we want to some how created tree which doesn’t have to bad a height and that’s what we are going to do today we are going to look at the data structure call AVL trees okay what is an AVL tree  AVL tress are what are also called height balanced trees okay now ignore this white spots that are showing here they should not have shown here 
+
+this is the binary search tree these are the keys inside the nodes of the keys right everything to the left of the root is everything which is less than to the root is left of the root is everything which is more than the root is to the right of it now what have also written next to each node is the height of a node now what will we call the height of a node we will not define this turn end we will just say the height of a node is the height of the sub tree rooted at that node ya
+
+so for instance if i look at this node this is the sub tree rooted at this node right what is the sub tree rooted at that node is a just set of descendents
+
+so i am looking at this tree now now in this previous classes we have define the height of such a tree as two and not three because we had said that this has this is level zero this is level one this is level two and so we had call this is height of the tree as two 
+now we will just modify this we will say that if it is the single turn node just one node it is a height one instead of height zero as we will be calling it this sub tree has height two so level numbers are not beginning let say with one okay 
+
+so this has height two this has height this sub tree has height three and this entire tree has height four okay ya so we are going to call this as height of the tree for let us say the purpose of the AVL tree 
+
+so with every node i put down height of that node so what is the height of the node it is just height of the sub tree rooted at that node ya so this is height one because that is nothing below it this is height one this is all the leaves will have height one the parents of the leaves will have height two and so on ya now such a trees called AVL tree if it is height balanced what is height balanced means if i look at any node and i look at it children than the difference in their height is at most one there might be no difference in their heights as in the case with this node its two children have the same height this node has the difference the left sub tree has more  height than the right sub tree 
+
+the left sub tree has the height two and the right sub tree has height one this also has a difference of one the right sub tree has height three now and the left sub tree has height two ya
+
+but the differences is no more than a one right so this is the AVL tree this is what our definition of an AVL tree would be yes it is true for every node of the tree is there is a binary search tree so there are two properties it has to be a binary search tree and if a every internal node of the tree the heights of the children differ by at most one by away said internal well for a leaf node it has no children it doesn’t make any incidence to call to talk up the height of the tree right so for this node the right sub tree has height one and sis the left sub tree is missing we call it height zero so now you understand why i had made this change today right absence of the tree i will note i will call it height zero ya 
+
+and now single node will become height one and what ever right so that’s why i shift the definition everyone okay with this ya let see what is not a tree what is not an AVL tree [noise]
+
+once again that we just okay let me just switch over to the thing um so recall that one of our binary tree is which was very bad was which had a huge height was the tree like this yes right 
+
+this is a binary search tree i kept put some keys so that it looks like a binary search tree and this has height equal to n minus one if there were n nodes yes is this an AVL tree no is this node height balanced yes it is a leaf node write is this node height balanced this is also height balanced is this node height balanced no because the right sub tree has height two and the left sub tree has height zero so this has height two and this has height zero so this has height balanced properties violated here its also violated here and its also violated here 
+
+so we will never have such kind of trees as AVL trees (Refer slide time 07:24) ok good so lets trying figure outs since we since we said that we are not going to have such kind of trees as AVL trees lets trying the figure out how bad the height of an AVL trees can be ya [noise]
+
+
+so let say i have an AVL tree of n nodes ya if its height can still we as bad as n minus one i am not gain anything so i am not gained anything so i would like to say  something like its height is no more than log n or something we will figure that out so that’s what we are going to say this is what we are going to prove in lets say in the next few minutes the height of the AVL tree t which has n nodes in it is only order log in okay let see why this two 
+
+so i am not going to prove this claim directly i am going to make a small slightly different argument right i am going to say let us take an AVL tree of height h amongst all possible of AVL tree of height h 
+
+let me see the one which has the smallest number of nodes so define the quantities n of h here as the minimum number of nodes in an AVL trees of height h and lets us figure out what is the quantity and than we will see how this implies this proportion here okay so you don’t know understand what i am saying 
+
+so given an AVL tree of heritage we want to find out what is the smallest number of nodes it has can it have only h nodes than we will be in trouble we want to say many many  many more nodes right if you recall a binary search tree on h nodes  of height h can we have only h plus one nodes right this example that i showed you which was applied but a good tree which is like a complete binary tree of a height h will have two to the h nodes right what would you really like that is of AVL tree which was of height h have a large number of nodes not just h but more like two to the h something like that ya and that’s what we are going to prove (refer slide time:11:31)
+
+
+Okay so what let us understand what is the quantity so it’s the minimum number of nodes in an AVL tree of height h so if i take an AVL tree of height one what is an AVL tree of height one just a single ten node nothing else okay it has only one node in it if an AVL tree of height two rooted one node but it can also to be rooted two children right so why i have written two here and not three minimum i am counting minimum right so that’s why end end two equals two the minimum number of nodes will be just two in an AVL tree of height two 
+
+so suppose i have an AVL tree of height three or more so it will contain one root node so suppose AVL tree of height h it will contain one root node it will have an AVL tree of height h minus one on one side and an AVL tree of height h minus two on the other side why h minus one and why h minus two okay some one tell me well it has height h so its children its children can have height only h minus one not more than h minus one right 
+
+so they can have a difference of at most one so if one of them is h minus one the other one can only be h minus two or h minus one right so one of the sub trees has height h minus one and other sub tree has height h minus one or h minus two but what will be the pick we would like to the other sub tree have height h minus two why minimum number of nodes so at tree which has smaller height will also have smaller number of nodes so we would like that the other sub tree have h minus two height ya 
+
+so if n of h was the number of nodes in the tree of height h than what is the number of nodes n of h equal to it is the number of nodes in a tree of height h minus one the smallest possible because we would like that the left sub tree which is of lets of height h minus one in the right sub tree which is of height h minus two the h minus one sub tree have as small as little number of nodes as possible and the h minus two sub tree also as little number of nodes as possible
+
+so the number of nodes sorry the number of nodes in the left sub tree is n of h minus one the number of nodes in the right sub tree n of h minus two there is one root node so this is what the recurrence relationship look like right 
+once again we have seen the recurrence relation every one satisfied with this ya  so this is what we have to solve today ya and what are the base condition we know its  n of one is one and n of two is two right with that you can figure out what a n of three would be n of three would be one plus one one plus two four ya and so on and all but you would like a close form expression to be able to do this so we will solve this recurrence okay
+
+so we are not going to be solving this recurrence exactly okay we are going to run approximately so first we use the fact that  n of h minus one is only going to be a larger than n of h minus two right because as the height of the tree grows the number of nodes cannot reduce right it will only be more right so n of h minus one is atleast as largest as h minus two and than this implies that what we had written earlier n of h equal to n of h minus one plus n of h minus two plus one this quantity is at least as largest two times n of h minus two strictly large because i also drop the one ya
+i will place this n of h minus one by n of h minus two and this is what i get ya now this is becomes the simple thing to solve n of h is more than two times n of h minus two 
+
+this is what i solved so n of h is more than two times n of h minus two ya and now n of h minus two is more than two time two times n of h minus four so this implies this entire thing is more than four times n of h minus four which implies that the entire thing is more than eight times n of h minus six ya you understand how this comes n of h minus four is more than two times n of h minus six and so on and on which will eventually take as to something like two to the i after i steps n of  h minus two i ya great
+
+okay so suppose i pick i equals h by two minus one i am going to assume for now that this quantity is an integer ya so let as assume h was even to begin with so this is an integer and for this value i will get two to the h by two minus one n of h is more than more than two to the h minus one times n of so i am replacing i by h by two minus one so i get a two here yes so its n of two 
+
+n of two recall was two so it becomes two times two to the h by two every one is be  so what is this say we just argued that if your AVL tree has height h than it has atleast two to the h by two nodes at least so many nodes right what is the maximum number of nodes it can have two to the h something like two to the h either two to the h or two to the h plus one one of those ya because it can be a complete binary tree ya
+
+so now suppose i would have to take algorithms what would i get i would get that h is less than two times log of n yes right so if i have in AVL tree on n nodes so right so n of h is actually less than or n right
+
+because i have an AVL tree whose height is let say h and it has n nodes so suppose i had an AVL tree of height h and n nodes than it will also satisfy this relation yes it will satisfy the relation because n is only going to be larger than n of h n of h what was n of h h was minimum possible number of nodes ya so any AVL tree on n nodes and height on n nodes has height at most login two login from this example from this argument
+
+ is it something you did not follow are you confused about this n of h right so this is what we argued after taking algorithms now let me take a tree of height h and n nodes ya so n is going to be larger than n of h because n of h is the smallest possible is the minimum number of nodes that are possible in a tree of height h n of h is that quantity [noise] this is just a function don’t confused this n with the number of nodes you can replace this n with something else 
+[student:noise] 
+staff: n of h is the minimum number of nodes in a tree of height h  [student:noise] 
+okay if you are getting confused lets let me just clarify this [noise] so what we argued here was that h is less than [Refer slide time 18:47] two times log of n of h ya okay 
+
+
+now take an AVL tree of height h and let say let me not call it m let me call it m nodes ya
+so its height is h it has m nodes in it so what does this implies m is greater than n of h this follows from our definition of n of h m is more than and we know that h is less than two times log of n of h which is then less than two times log of m this implies h equals big o log of m ya 
+
+the height so what was this this was height this was number of number of nodes the height of an AVL tree on m nodes is less than two times the two times log of the number of nodes is this clear now 
+so the m and n confusion is (now) great so that’s what being said here any question to this point 
+
+ya so we shown that such a tree will have height no more than two log n the best possible tree can could have height only log n right if it were like a complete binary tree very dense and every thing 
+
+but this has this has more height but not two much more just a factor two more much better than having a height of an n great 
+
+so lets try and solve this recurrence slightly better this is more of an exercise also to to show you how recurrence is solved right
+
+so we did fairly crude analysis here right we replace this with this n of h minus two and then we did this and we got this this trying get something better right just as just as an exercise
+
+so we will show how to get a sharper bound on the height of an AVL tree [noise hindi 20:07] the bound we right now two times log of n let see if we can get something better than that 
+
+so we were use an induction and we are going to do a tight analysis of the same thing we are going to show that the minimum number of nodes in an AVL tree of height h which was n of h is at least c times h now we are going to show it at least c times h 
+
+were c will be some constant more than one what did we shown in the previous slide it was atleast n of h was at least [noise] two to the h by two two to the h by two so what was the c root two two to the half to the h right so there we showed a c of root two 
+
+let see if we can get a bias c right larger c more than root two right and what would be the way of such a thing 
+so we will assume that n of h is atleast as larger c to the h let see what we can argue where okay 
+and we are going to be prove this by induction and we will figure out what the  c is later 
+so i am we have proving a certain statement without actually knowing exactly what the statement is because i am not telling what the c is but you will see what the c has to be for the statement to be true right what is the base case h equals one h equals one pay n of h is one we want that 
+
+so so this statement would be true this statement is true at h is equal to one right no just once again what we have said we have said the number of nodes is going to be at least as large as [noise] okay let us come back to this in the minute
+
+so i assume to i made a mistake let us come back this base case again let we will have to perhaps redefine the height of a tree here okay 
+
+let i thing may we should we should have c of h minus one or some such thing okay we come back to this 
+
+suppose the claim is true for all h less than k and lets try and prove it for h equals k not 
+
+so far we have to prove that n of k is greater than or equal to c to the k okay
+we come back to this base case in a minute okay so the recall  this was our recurrence relation n of k equals n of k minus one plus n of k minus two plus one and induction hypothesis says that n of k minus one is at least c to the k minus one n of k minus two is at least c to is strictly larger right i just ignore this plus one again okay
+
+
+
+now i have to show that n of k is larger than c to the k i can show that n of k is larger than c to the k if i can show that this quantity is larger than c to the k ya 
+
+so this is what i have to show i have to show that c to the k minus one plus c to the k minus two is lager than c to the k yes right okay good
+
+so what should cb so that this is true well i just cancel out terms appropriately and i get c square minus c minus one should be less than or equal to zero if c satisfy this then this will also be true yes why because i just multiply both side by c to the k minus two and i would get exactly that and if this is true then n to the k which is larger than this would also be larger than c to the k right i just have to pick a c which satisfy this right and you can you all know how to figure out c which satisfy this right 
+
+so we will just solve this quadratic equation this has roots right one minus root five by two and one plus root five by two right this is negative
+
+so anything in between would keep this less than zero right 
+but i wont as large as c as possible so i will take one plus root five by two which is roughly one point six three and this quantity is also known as the golden ratio okay so we will we will see this more often perhaps
+[noise] we can solve what exactly [student:noise]
+no no this is not a fibonacci relation [noise] if you add one to both sides right okay good 
+okay good okay okay
+so you will get n of k would be with the fibonacci number minus one good ya you can also do that right so we get bound of roughly one point six three c as one point six three right so what is the mistake we have made so one thing is a base case have not worked out right so i guess this was the wrong thing to pick it should not be c to the h but may be c to the h minus one right
+
+so induction hypothesis should be c to the h minus one (refer slide time 26:28)[noise] right so let us take c to the h minus one we will not make a different right so we take c to the h minus one you will not make a difference right so we take the c to the h minus one so precisely i am dividing out by c then the base would have also be satisfied if h equals one you would have more than one which is a case ya and so sorry about this and for the other two also it will be okay ya because h equals to two 
+n of two is two and this would become c to the two minus one which is c c is less than two because we just argue it is one point six three (refer slide time 28:05) okay 
+
+
+so please make that correction [noise] we really require that the induction hypothesis is h minus one 
+
+it will not make any difference on this how ever [noise:hindi] k minus one if this become h minus one this will become k minus one right this would this continue as it is right this will become k minus two plus ck minus three we have to prove this is greater than equal to c k minus one every where there will be a minus one so that you will still get the same quadratic in equality ya so the value of the c would still turn out to be same [noise:student]  
+
+one point six three to the power k minus one h minus one n of h minus one ya so please make that small correction okay and so you will have that the AVL tree on n nodes has height now log of n to the base one point six three this quantity okay 
+
+because what are we said we have that if i take a tree on n nodes the same argument is before so we just see do the same argument as before we have i take a tree of height h and n nodes ya so we have just seen that n of h is greater than or equal to one point six three to the h let say minus one that’s what we saw just now this is the tree with smallest possible number of nodes so n is going to be only larger than this let us take log of both sides
+
+
+so we get log base one point six three n equals h minus one i am just using the definition of log i am taking log to the base one point six three ya so i will get this this implies h equals log of one point six three n plus one it will okay right
+
+so we have been able to prove this kind of a sharper bound ya [noise:student] this equation does not satisfy n equals two it does okay great it also works for n equals two right so that was our base case 
+
+so every one agreed okay great so lets continue so i have shown you two ways of solving this same recurrence right one was the much simpler way actually both are very simple right 
+
+so the second technique is is also used quite often you make a guess on what you think it should be derived value should be right and then essentially verified that to be said suppose to be right value that some c to the h and then you figure out what you see should be and you get something better right so earlier we had root two one point four one four  and we could [ ] one point six three by using this [ ] technique
+
+okay so lets look at the structure of an AVL tree in a little bit more detail (refer slide time 31:20) right 
+
+
+so i once again have an AVL tree on n nodes okay 
+
+now let me take the leaf that leaf of this tree which is closest to the root which means at it whose level number is as small as possible the smallest among to all the leaves suppose this leaf is at level k okay
+
+we can show that the height of the tree is at most two k minus one is this clear no this requires the proof and lets do that [noise] okay
+
+so whatever said i have an AVL tree (Refer slide time 35:45)which has n nodes in it although this is not going to be a particularly important the number of nodes in that tree so this is some tree okay i took that leaf of the tree which is closest to the root right suppose its this leaf here which is closest to the root and we said its at level k right so the other leafs could be at this level or could be below [noise:student]
+
+
+
+no in this class for AVL tree lets say we work with level starting one doesn’t make a big difference lets say we start with level one we are going to prove that the height of this tree is at most  two k minus one so height of this tree is less than or equal to two k minus one that’s what we will prove let see why 
+
+so i will draw this picture again here okay so this is the leaf i will let me color it red which is at level k and which is the one which is the closest to the root right from this node there will be some sub tree hanging out from this node ya from this node also they will be some sub tree hanging out and so on 
+
+this is my root level zero level one sorry [noise] um now lets look at this node first which is at level k minus one what is the height of this node 
+
+what can be the height well it has one child this child has height one this has height one so the heights are in blue ya so this means that this sub tree can have height at most two right 
+
+so we want to get as large height as possible for this tree right so whenever we say at most two will just take the largest value right
+
+so this can have height two so if this has height two what is the height of this node this sub tree will then have this sub tree will then have height three ya this sub tree will have height three
+ if this sub tree has height three what is the largest height that this sub tree can have four so what is the height of this node five 
+
+so what is the maximum height this sub tree can have know six and so this would be seven and nine and so on right so what will the root have height now no in general given that this was k ya 
+
+so well right if ya just figure it out it should be two k minus one right if if it was just still up till here its basically k two height three so when k if k were two this was the picture then the height was three if k was three this was the picture height was 
+five if k was four height was seven and so if for arbitrary k this is two k minus one ya very simple argument 
+
+so which means that this entire tree can be no taller than two k minus one if the closest leaf was at level k this is the property of AVL tree is not a property of any arbitrary binary tree yes you understand that right in an arbitrary binary tree you might have leafs at any level (Refer slide time 37:03) 
+
+
+
+but the height of the tree could be as bad as you want it here is a leaf at level one but this height [noise:hindi] but for an AVL tree if there is a leaf at level k that height of the tree can not be more than two k right
+
+so an any AVL tree is basically if there is a leaf at this height if there is basically all over leafs now will be in this part only this band whose width is as larger this roughly right this was k and this was also k k k minus one i mean during that
+
+ya i will come to back to this in a minute okay so we just argued that if the closest leaf is at the level k then the height of the tree is no more than two k minus one that is the largest possible height the tree can have okay now lets make another claim 
+
+if the closet leaf is at level k then all nodes at level one through k minus two have two children ( )
+
+every node on this first k minus two levels have to have two children right and why away said k minus two and not k minus one [noise: student]
+so lets prove this by contradiction so what do we want to do contradict so lets take some node at level k minus two  which has only one child right 
+
+this is the picture i have node u level k minus two it has only one child which is at level k minus one right i have shown know node at level k minus two but the same argument would applied to any node at one through k minus two ya so v is at level k minus one so it cannot be a leaf because the closest leaf for that level k right good ya
+
+so it has to have another child i have shown only one but it can also have two children no right
+
+but this guy u has only one child so sub tree rooted at v has height at least two yes because this has have two this has to have one child it cannot be a leaf so it has height at least two while the the right sub tree here has height zero because there is nothing there
+
+so we have a height imbalance at this problem at this node so the height balance property is violated at u 
+
+yes so every node on this levels one through k minus two have to have two children at level k minus one how ever there can be nodes only one child that you understand right everyone understands that [noise]
+
+this is level k of course the tree extends this is the level at which the closest leaf is at level k minus one i can have a node with only one child and that child is this lets see here right 
+
+this is okay provided this guide is not have any more descendants and need not have because it can be a leaf right 
+
+so this is completely okay but if it have more descendants then we would again have a problem height balance property ya
+
+so this is okay so which means that this guy can have only one child but everything here has to have at least two children okay great so so we said every node at level k minus two has to have two children so which means levels one through k minus one are full full means they have as many nodes as a possible on level on that level in a binary tree this will after all a binary tree okay so they are full 
+
+so what is that mean that means the tree has at least two to the k minus one node ya we also argued we recall that height of the tree is at most two k minus one 
+so if the height of the tree is two k minus one then it has at most two to the power of two k minus one nodes ya
+ 
+this implies the number of nodes in the tree which was n is between two to the k minus one and two to the two k minus one ya
+
+everyone agree so suppose since we have been using h for the height right lets substitute h for two k minus one lets see what the equation is look like this becomes two the h and this becomes two to the h minus one by two this is the same thing i am showing you over and over again what is the thing if you have a tree of height h an AVL tree of height h than it has at least two to the h by two nodes we had shown earlier right 
+
+so now we are showing the two to the h minus two just roughly the same thing square root two to the h nodes all though we proved the sharper bound i am coming back to the older bound the point is it has an exponential number of nodes it has number of nodes which is some constant c to the h an exponential right because that’s was give as the logarithmic height property right 
+
+so this is actually a third way of proving that the height of the tree is only login right you can also use this as a proof right
+
+so this did not require solving the recurrence relation that the two method we solving the recurrence relation the shop is long we were see so far is c to the h one point six to the h 
+
+so lets summarize(Refer slide time 45:31) what we have seen as the structure of an AVL tree is concerned if the height of an AVL tree is h then the closest leaf can be at level h plus one by two right 
+
+
+
+i have just change things around when i said when the closest was k than the height was two k minus one so i just change that around as if the height is h so suppose i give you an AVL tree and n nodes of height h then the leaf which is closest to the root is actually pretty far from the root its atleast half the height away is at least h plus one by two away ya
+
+it doesn’t require a proof its just i am just rewording what i have said earlier we also saw that on the first h minus one by two levels the AVL tree is it complete binary tree lets this what an AVL looks like essentially 
+
+for the first half of half levels its complete very dense ya and then its starts thinking out right as its stars so it turn the tree around so with the root at the bottom so initially its dense
+
+and then it kind of things to the full height okay but this part the fact that it is very dense for the first edge by two levels means at it has a lot of nodes it is a complete binary tree so it has two to the edge by two nodes straight away ya and that means that the height can not be too large if i had had n nodes the height can not be more than log n two log n right 
+so once again i have said that if number of nodes in the AVL tree is atleast just on this fact since it is a complete binary tree on h minus one by two levels it has atleast two to the h minus one by two and at most two h nodes because that is the height of the tree 
+this is the useful structural fact to keep in mind about AVL trees although we will not use it for any of our algorithms 
+but it just gives you some intuition of what the tree is in wise it that this tree has only a logarithmic depth 
+ya so now we looked at this height balance property right we said you know if this height balance property is there then then its nice the height of the tree is only lgorithmic 
+and so now we want to say that all our operations are only logarithmic because we still want to say that you know you can do a search in certainty in log n time 
+so search is easy there is no problem with search right because after its a binary search tree right forget the height balance property its just a binary  search tree so you just do search as you do in a binary search tree how much time will you take proportional to the height order it height is log n so you will take it only log n time ya great thats the best you can do in some sense ok
+now suppose you have to try an insert right suppose when so you work when you are going to do an insert what what can go wrong so recall that we we call this height balanced that treat to be height balanced 
+
+if the difference in the heights of its children is at most a one 
+so when i insert a node it can change the height of some nodes ya and as a consequence the height balanced property may get violated ok
+so when i insert so insert will be the same the first step of insertion would be the same as we did in the case of a binary search tree ya 
+how did we insert in a binary search tree can someone tell me 
+first you find the position how do you find that element will you just search for that element that you are trying to insert that will tell you where the position is and just put the node there put the node there and then you start marching up back to the route by following the parent pointers ok
+and assume march up you keep updating the heights of the various nodes you encountered because these are the only nodes whose heights could have changed no one else yes
+so these are the only nodes whose height we will look at this again in more detail perhaps in the next class i am just giving you the flavor of what needs to be done when we are doing an insertion so these are the nodes at whose height will going to change 
+so we will going to the first place where  height change appears where height imbalance happens 
+we are going to only start from the node where we inserted and move up the tree towards the route so basically keep going parent parent parent parent parent tell we hit the route and on this path that we follow we find the first node whose which has the height imbalance property right
+so suppose that node is called z and its grandchild is called x ok
+let me skip this part and wise up node in which 
+so let i think its best of  show your picture and that will give you an idea 
+
+so suppose this was my tree right forget this empty node for now this was my tree originally right 
+if this will my original tree is that in AVL tree height balance is satisfied here because this is one this is one this is not there this forget this type of node right
+this is also height balanced because this is two and this is one this is also height balance this is one and this is zero this is height balance because this is two and this is three initially 
+but now suppose i went an certain a node lets say fifty four which came in here ya fifty four would come here i go right here left here right here and left here now the height balance property is violated so what i am going to do this i am going up the tree towards the route is the height balance property violated here no its not right 
+so this is one this is zero is it violated here no one two this is height two this is height one is not violated here is it violated here yes because this is now three and this is one so these numbers are the new heights right this is three 
+so this is the first node at which the height balance properties we call this nodes  its child will be y and its grand child will be x we wonder which child of this node will be y will the child on the path that we taken 
+and now we need to do something to this tree to make it height balanced again this is not height balanced tree right all the things we said about log n and all we go out of the window if you leave the tree like this right
+so what we are going to do is we are going to rotate do a kind of rotation operation and this will become my new tree ok so in some sense what i have done is a kind of move this up move this down and this fifty was here right 
+it looks a bit mysterious here so that’s what we are going to do in the next class right understand how this rotation operation is done so i can see now the height balance property is not violated at any node 
+ya so its not clearly here its not here its not here both of them are height two this also this is height two this is height three and this is height two so its not violated
+
+ this is still a binary search tree with the same keys as before we will not change the keys right there are other ways also right but this is you know you want a an automated way of doing it right you should not have to look at the you know you don’t have to draw the picture and then figure out what rotation have to be done right so you will be able to do this program
+so this is what we are going to do in the next class look at insertion look at how to do this rotations so that the height balance property is retained even after insertion so look at both insertion and deletion in the next class 
+so in todays class we looked at
+AVL trees we saw what how AVL trees are defined and crucially we saw that the height of an AVL tree is no more than actually we proved a bound of log n to the base one point six three today right
+we spend a lot of time figuring out how to solve that recurrence relations so we saw two ways solving that recurrence relation we also look as some structural property of the tree which also proved a similar bound and the height of the tree ya so we that will end today’s class  
+
+

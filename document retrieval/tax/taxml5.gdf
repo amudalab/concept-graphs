@@ -1,0 +1,31 @@
+nodedef> name,label
+v0,bayes rule
+v1,discriminative learning algorithms
+v2,gaussian discriminant analysis
+v3,gaussian discriminant analysis model
+v4,generative learning algorithms
+v5,generative model
+v6,laplace smoothing
+v7,likelihood estimation
+v8,maximum likelihood estimate
+v9,modeling assumptions
+v10,multivariate gaussian
+v11,naive bayes
+v12,naive bayes algorithm
+v13,naive bayes assumption
+v14,regenerative learning algorithms
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v4,false,45.6,true
+v1,v4,false,12.8,true
+v3,v4,false,23.9,true
+v4,v2,false,23.9,true
+v5,v4,false,17.2,true
+v6,v4,false,8.1,true
+v7,v8,false,12.4,true
+v8,v2,false,25.9,true
+v9,v11,false,13.5,true
+v10,v3,false,235.6,true
+v11,v2,false,32.1666666667,true
+v12,v11,false,22.8,true
+v13,v11,false,40.95,true
+v14,v3,false,26.1,true

@@ -1,0 +1,166 @@
+
+Sorted array
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+Sorted array
+
+
+Type
+Array
+
+
+Invented
+1945
+
+
+Invented by
+John von Neumann
+
+
+Time complexity
+in big O notation
+
+
+
+Average
+Worst case
+
+
+Space
+O(n)
+O(n)
+
+
+Search
+O(log n)
+O(log n)
+
+
+Insert
+O(n)
+O(n)
+
+
+Delete
+O(n)
+O(n)
+
+
+A sorted array is an array data structure in which each element is sorted in numerical, alphabetical, or some other order, and placed at equally spaced addresses in computer memory. It is typically used in computer science to implement static lookup tables to hold multiple values which have the same data type. Sorting an array is useful in organising data in ordered form and recovering them rapidly.
+
+
+
+
+Contents
+
+
+1 Methods
+2 Overview
+3 History
+4 Applications of sorted arrays
+5 See Also
+6 References
+
+
+
+
+[edit] Methods
+There are many well-known methods by which an array can be sorted. Some of them are selection sort, bubble sort, insertion sort, merge sort, quicksort, heapsort, and counting sort.[citation needed] These sorting techniques have different algorithms. Hence there are different advantages of each method.
+[edit] Overview
+Sorted arrays are the most space-efficient data structure with the best locality of reference for sequentially stored data.[citation needed]
+Elements within a sorted array are found using a binary search, in O(log n); thus sorted arrays are suited for cases when one needs to be able to look up elements quickly, e.g. as a set or multiset data structure. This complexity for lookups is the same as for self-balancing binary search trees.
+In some data structures, an array of structures is used. In such cases, the same sorting methods can be used to sort the structures according to some key as a structure element; for example, sorting records of students according to roll numbers or names or grades.
+If one is using a sorted dynamic array, then it is possible to insert and delete elements. The insertion and deletion of elements in a sorted array executes at O(n), due to the need to shift all the elements following the element to be inserted or deleted; in comparison a self-balancing binary search tree inserts and deletes at O(log n). In the case where elements are deleted or inserted at the end, a sorted dynamic array can do this in amortized O(1) time while a self-balancing binary search tree always operates at O(log n).
+Elements in a sorted array can be looked up by their index (random access) at O(1) time, an operation taking O(log n) or O(n) time for more complex data structures.
+[edit] History
+John von Neumann wrote the first array sorting program (merge sort) in 1945, when the first stored-program computer was still being built.[1]
+[edit] Applications of sorted arrays
+1) Commercial Computing:[2]
+Government organisations, private companies and many web based applications has to deal with huge amount of data. This data is stored by sorting it using different sorting algorithms. This can be used in quick and easy recovery of data.
+2) In discrete mathematics: Sorted arrays can be used to implement Dijkstra's algorithm or Prim's algorithm. Also, algorithms like Kruskal's Algorithm for finding minimal spanning trees.
+3) In priority scheduling: At the operating system level many processes are pending at a time, but CPU can handle only one process at single instance of time. Therefore, priorities are associated to each process.Then the processes are sent to CPU according to the highest priority by using sorted array of process ID's. Here, processes got sorted depending upon their priorities and then CPU is allocated to them. The process having the highest priority takes first position in sorted array. Hence priority-wise system processes scheduling is done.[3]
+4) In Shortest-Job-First Scheduling: This is the special case of priority scheduling. Here, Processes get sorted according to burst time of the processes. The process requiring the shortest time will be allocated CPU first. Hence, Processes are being sent to CPU according to their burst time.
+
+
+
+Process
+Burst time
+
+
+P1
+3
+
+
+P2
+4
+
+
+P3
+1
+
+
+P4
+8
+
+
+P5
+6
+
+
+[edit] See Also
+
+array data structure
+insertion sort
+sorting algorithm
+binary search algorithm
+bubble sort
+Kruskal's Algorithm
+Prim's algorithm.
+
+[edit] References
+
+
+^ Donald Knuth, The Art of Computer Programming, vol. 3. Addison-Wesley
+^ http://algs4.cs.princeton.edu/25applications/
+^ Operating System Concepts by Peter B. Galvin. WILEY-INDIA Pvt. limited. ISBN978-81-265-2051-0.
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 1562/1000000
+Preprocessor generated node count: 16545/1500000
+Post-expand include size: 9616/2048000 bytes
+Template argument size: 3692/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 2/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:15844857-0!*!0!!en!4!* and timestamp 20121211145449 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Sorted_array&oldid=520084627"				
+ /printfooter 
+ catlinks 
+Categories: Data structuresHidden categories: All articles with unsourced statementsArticles with unsourced statements from November 2011  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

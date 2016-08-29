@@ -1,0 +1,41 @@
+nodedef> name,label
+v0,binary tree
+v1,children
+v2,data structure
+v3,inorder traversal
+v4,leaf
+v5,left child
+v6,left subtree
+v7,level
+v8,linear
+v9,linked list
+v10,node
+v11,parent
+v12,pointer
+v13,postorder traversal
+v14,preorder traversal
+v15,right child
+v16,right subtree
+v17,root
+v18,siblings
+v19,tree
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v10,false,2.78571428571,true
+v1,v10,false,2.5,true
+v2,v9,false,4.64285714285,true
+v3,v17,false,2.78571428571,true
+v4,v9,false,9.0,true
+v5,v7,false,9.07142857143,true
+v6,v0,false,2.78571428571,true
+v7,v11,false,2.57142857143,true
+v8,v0,false,5.7619047619,true
+v9,v0,false,1.85714285714,true
+v11,v10,false,3.0,true
+v12,v8,false,4.64285714286,true
+v13,v17,false,5.57142857142,true
+v14,v0,false,4.64285714286,true
+v15,v9,false,8.35714285714,true
+v16,v17,false,3.71428571429,true
+v17,v10,false,3.92857142857,true
+v18,v9,false,9.92857142857,true
+v19,v10,false,2.78571428571,true

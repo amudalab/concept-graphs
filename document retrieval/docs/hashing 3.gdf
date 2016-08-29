@@ -1,0 +1,92 @@
+nodedef> name,label
+v0,array
+v1,closed hashing
+v2,collision resolution
+v3,data structure
+v4,delete
+v5,find
+v6,hash function
+v7,hash table
+v8,hashing
+v9,index
+v10,insert
+v11,key
+v12,linear hashing
+v13,linked list
+v14,memory allocation
+v15,open addressing
+v16,open hashing
+v17,rehash strategy
+v18,search time
+v19,separate chaining
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v5,false,8.75,true
+v0,v9,false,2.625,true
+v1,v6,false,11.25,true
+v1,v8,false,0.0,true
+v1,v13,false,2.625,true
+v1,v19,false,2.625,true
+v2,v6,false,8.75,true
+v2,v8,false,2.625,true
+v3,v6,false,3.5,true
+v3,v7,false,7.875,true
+v3,v8,false,8.75,true
+v3,v14,false,6.125,true
+v4,v5,false,1.75,true
+v4,v10,false,0.875,true
+v5,v0,false,8.75,true
+v5,v4,false,1.75,true
+v5,v10,false,52.5,true
+v5,v17,false,12.25,true
+v6,v1,false,11.25,true
+v6,v2,false,8.75,true
+v6,v3,false,3.5,true
+v6,v7,false,1.75,true
+v6,v8,false,12.0,true
+v6,v11,false,3.95833333333,true
+v7,v3,false,7.875,true
+v7,v6,false,1.75,true
+v7,v9,false,3.5,true
+v7,v11,false,4.375,true
+v8,v1,false,0.0,true
+v8,v2,false,2.625,true
+v8,v3,false,8.75,true
+v8,v6,false,12.0,true
+v8,v10,false,11.375,true
+v8,v11,false,10.5,true
+v8,v12,false,0.875,true
+v8,v13,false,10.5,true
+v8,v15,false,3.5,true
+v8,v16,false,1.05,true
+v8,v17,false,2.625,true
+v8,v19,false,3.5,true
+v9,v0,false,2.625,true
+v9,v7,false,3.5,true
+v9,v11,false,1.125,true
+v10,v4,false,0.875,true
+v10,v5,false,52.5,true
+v10,v8,false,11.375,true
+v10,v12,false,5.25,true
+v11,v6,false,3.95833333333,true
+v11,v7,false,4.375,true
+v11,v8,false,10.5,true
+v11,v9,false,1.125,true
+v11,v16,false,12.25,true
+v11,v18,false,5.625,true
+v12,v8,false,0.875,true
+v12,v10,false,5.25,true
+v13,v1,false,2.625,true
+v13,v8,false,10.5,true
+v13,v16,false,5.25,true
+v14,v3,false,6.125,true
+v15,v8,false,3.5,true
+v15,v16,false,7.875,true
+v16,v8,false,1.05,true
+v16,v11,false,12.25,true
+v16,v13,false,5.25,true
+v16,v15,false,7.875,true
+v17,v5,false,12.25,true
+v17,v8,false,2.625,true
+v18,v11,false,5.625,true
+v19,v1,false,2.625,true
+v19,v8,false,3.5,true

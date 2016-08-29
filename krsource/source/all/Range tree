@@ -1,0 +1,281 @@
+
+Range tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+In computer science, a range tree is an ordered tree data structure to hold a list of points. It allows all points within a given range to be reported efficiently, and is typically used in two or higher dimensions. Range trees were introduced by Jon Louis Bentley in 1979.[1] Similar data structures were discovered independently by Lueker,[2] Lee and Wong,[3] and Willard.[4] The range tree is an alternative to the k-d tree. Compared to k-d trees, range trees offer faster query times of O(logd n + k) but worse storage of O(n logd1 n), where n is the number of points stored in the tree, d is the dimension of each point and k is the number of points reported by a given query.
+
+
+
+
+Contents
+
+
+1 Description
+2 Operations
+
+2.1 Construction
+2.2 Range queries
+
+
+3 See also
+4 References
+5 External links
+
+
+
+
+[edit] Description
+
+
+
+
+An example of a 1-dimensional range tree.
+
+
+A range tree on a set of 1-dimensional points is a balanced binary search tree on those points. The points stored in the tree are stored in the leaves of the tree; each internal node stores the largest value contained in its left subtree. A range tree on a set of points in d-dimensions is a recursively defined multi-level binary search tree. Each level of the data structure is a binary search tree on one of the d-dimensions. The first level is a binary search tree on the first of the d-coordinates. Each vertex v of this tree contains an associated structure that is a (d1)-dimensional range tree on the last (d1)-coordinates of the points stored in the subtree of v.
+[edit] Operations
+[edit] Construction
+A 1-dimensional range tree on a set of n points is a binary search tree, which can be constructed in O(n log n) time. Range trees in higher dimensions are constructed recursively by constructing a balanced binary search tree on the first coordinate of the points, and then, for each vertex v in this tree, constructing a (d1)-dimensional range tree on the points contained in the subtree of v. Constructing a range tree this way would require O(n logdn) time.
+This can be improved by noticing that a range tree on a set 2-dimensional points can be constructed in O(n log n) time.[5] Let S be a set of n 2-dimensional points. If S contains only one point, return a leaf containing that point. Otherwise, construct the associated structure of S, a 1-dimensional range tree on the y-coordinates of the points in S. Let xm be the median x-coordinate of the points. Let SL be the set of points with x-coordinate less than or equal to xm and let SR be the set of points with x-coordinate greater than xm. Recursively construct vL, a 2-dimensional range tree on SL, and vR, a 2-dimensional range tree on SR. Create a vertex v with left-child vL and right-child vR. If we sort the points by their y-coordinates at the start of the algorithm, and maintain this ordering when splitting the points by their x-coordinate, we can construct the associated structures of each subtree in linear time. This reduces the time to construct a 2-dimensional range tree to O(n log n), which also reduces the time to construct a d-dimensional range tree to O(n logd1n).
+[edit] Range queries
+
+
+
+
+A 1-dimensional range query [x1, x2]. Points stored in the subtrees shaded in gray will be reported. find(x1) and find(x2) will be reported if they are inside the query interval.
+
+
+Range trees can be used to find the set of points that lie inside a given interval. To report the points that lie in the interval [x1, x2], we start by searching for x1 and x2. At some vertex in the tree, the search paths to x1 and x2 will diverge. Let vsplit be the last vertex that these two search paths have in common. Continue searching for x1 in the range tree. For every vertex v in the search path from vsplit to x1, if the value stored at v is greater than x1, report every point in the right-subtree of v. If v is a leaf, report the value stored at v if it is inside the query interval. Similarly, reporting all of the points stored in the left-subtrees of the vertices with values less than x2 along the search path from vsplit to x2, and report the leaf of this path if it lies within the query interval.
+Since the range tree is a balanced binary tree, the search paths to x1 and x2 have length O(log n). Reporting all of the points stored in the subtree of a vertex can be done in linear time using any tree traversal algorithm. It follows that the time to perform a range query is O(log n + k), where k is the number of points in the query interval.
+Range queries in d-dimensions are similar. Instead of reporting all of the points stored in the subtrees of the search paths, perform a (d1)-dimensional range query on the associated structure of each subtree. Eventually, a 1-dimensional range query will be performed and the correct points will be reported. Since a d-dimensional query consists of O(log n) (d1)-dimensional range queries, it follows that the time required to perform a d-dimensional range query is O(logdn + k), where k is the number of points in the query interval. This can be reduced to O(logd1n + k) using the technique of fractional cascading.[2][4][5]
+[edit] See also
+
+k-d tree
+Segment tree
+
+[edit] References
+
+
+^ Bentley, J. L. (1979). "Decomposable searching problems". Information Processing Letters 8 (5): 244201. doi:10.1016/0020-0190(79)90117-0. edit
+^ a b Lueker, G. S. (1978). "A data structure for orthogonal range queries". 19th Annual Symposium on Foundations of Computer Science (sfcs 1978). pp.2821. doi:10.1109/SFCS.1978.1. edit
+^ Lee, D. T.; Wong, C. K. (1980). "Quintary trees: A file structure for multidimensional datbase sytems". ACM Transactions on Database Systems 5 (3): 339. doi:10.1145/320613.320618. edit
+^ a b Willard, Dan E.. The super-b-tree algorithm (Technical report TR-03-79). Cambridge, MA: Aiken Computer Lab, Harvard University.
+^ a b de Berg, Mark; Cheong, Otfried; van Kreveld, Marc; Overmars, Mark (2008). Computational Geometry. doi:10.1007/978-3-540-77974-2. ISBN978-3-540-77973-5. edit
+
+
+[edit] External links
+
+Range and Segment Trees in CGAL, the Computational Geometry Algorithms Library.
+Lecture 8: Range Trees, Marc van Kreveld.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 3785/1000000
+Preprocessor generated node count: 27189/1500000
+Post-expand include size: 46183/2048000 bytes
+Template argument size: 8508/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 4/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:14514547-0!*!0!!en!4!* and timestamp 20130122175507 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Range_tree&oldid=533480727"				
+ /printfooter 
+ catlinks 
+Categories: Trees (data structures)Geometric data structures  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

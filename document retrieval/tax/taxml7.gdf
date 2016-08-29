@@ -1,0 +1,33 @@
+nodedef> name,label
+v0,active constraint
+v1,convex optimization
+v2,duo optimization problem
+v3,duo problem
+v4,gamma hat
+v5,geometric margin
+v6,kkt conditions
+v7,lagrange multipliers
+v8,method of lagrange multipliers
+v9,optimal margin classifier
+v10,optimization problems
+v11,primal and duo optimization problem
+v12,primal optimization problem
+v13,primal problem
+v14,prime optimization problem
+v15,support vector machines
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v9,false,42.8977272727,true
+v1,v9,false,8.89772727273,true
+v2,v9,false,5.625,true
+v3,v10,false,16.3636363636,true
+v4,v9,false,19.3295454545,true
+v5,v2,false,11.7171717172,true
+v6,v12,false,10.0,true
+v7,v10,false,10.4444444444,true
+v8,v2,false,9.81818181818,true
+v9,v10,false,5.625,true
+v11,v2,false,1.63636363636,true
+v12,v9,false,6.35227272727,true
+v13,v3,false,11.6727272727,true
+v14,v2,false,18.6666666667,true
+v15,v10,false,10.0795454546,true

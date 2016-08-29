@@ -1,0 +1,110 @@
+nodedef> name,label
+v0,binary tree
+v1,children
+v2,data structure
+v3,inorder traversal
+v4,leaf
+v5,left child
+v6,left subtree
+v7,level
+v8,linear
+v9,linked list
+v10,node
+v11,parent
+v12,pointer
+v13,postorder traversal
+v14,preorder traversal
+v15,right child
+v16,right subtree
+v17,root
+v18,siblings
+v19,tree
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v6,false,2.78571428571,true
+v0,v9,false,1.85714285714,true
+v0,v10,false,2.78571428571,true
+v0,v11,false,2.78571428571,true
+v0,v13,false,10.2142857143,true
+v0,v17,false,3.0,true
+v0,v19,false,0.0,true
+v1,v4,false,3.71428571429,true
+v1,v10,false,2.5,true
+v1,v11,false,3.71428571429,true
+v1,v17,false,6.5,true
+v1,v18,false,4.64285714286,true
+v1,v19,false,6.85714285714,true
+v2,v9,false,11.1428571429,true
+v2,v19,false,2.78571428571,true
+v3,v13,false,2.78571428571,true
+v3,v14,false,2.78571428571,true
+v3,v16,false,2.78571428571,true
+v3,v17,false,2.78571428571,true
+v4,v1,false,3.71428571429,true
+v4,v18,false,4.64285714286,true
+v5,v11,false,6.5,true
+v5,v15,false,2.78571428571,true
+v6,v0,false,2.78571428571,true
+v6,v10,false,4.64285714286,true
+v6,v16,false,2.61904761905,true
+v6,v17,false,2.78571428571,true
+v7,v10,false,3.0,true
+v7,v11,false,2.57142857143,true
+v7,v19,false,3.42857142857,true
+v8,v9,false,13.9285714286,true
+v8,v10,false,3.71428571429,true
+v8,v12,false,4.64285714286,true
+v8,v19,false,5.7619047619,true
+v9,v0,false,1.85714285714,true
+v9,v2,false,11.1428571429,true
+v9,v8,false,13.9285714286,true
+v9,v10,false,2.78571428571,true
+v10,v0,false,2.78571428571,true
+v10,v1,false,2.5,true
+v10,v6,false,4.64285714286,true
+v10,v7,false,3.0,true
+v10,v8,false,3.71428571429,true
+v10,v9,false,2.78571428571,true
+v10,v11,false,3.0,true
+v10,v12,false,2.78571428571,true
+v10,v14,false,3.0,true
+v10,v15,false,5.57142857143,true
+v10,v17,false,3.92857142857,true
+v10,v19,false,2.82857142857,true
+v11,v0,false,2.78571428571,true
+v11,v1,false,3.71428571429,true
+v11,v5,false,6.5,true
+v11,v7,false,2.57142857143,true
+v11,v10,false,3.0,true
+v11,v16,false,5.57142857143,true
+v12,v8,false,4.64285714286,true
+v12,v10,false,2.78571428571,true
+v13,v0,false,10.2142857143,true
+v13,v3,false,2.78571428571,true
+v13,v17,false,8.57142857143,true
+v14,v3,false,2.78571428571,true
+v14,v10,false,3.0,true
+v14,v19,false,4.64285714286,true
+v15,v5,false,2.78571428571,true
+v15,v10,false,5.57142857143,true
+v16,v3,false,2.78571428571,true
+v16,v6,false,2.61904761905,true
+v16,v11,false,5.57142857143,true
+v16,v17,false,3.71428571429,true
+v17,v0,false,3.0,true
+v17,v1,false,6.5,true
+v17,v3,false,2.78571428571,true
+v17,v6,false,2.78571428571,true
+v17,v10,false,3.92857142857,true
+v17,v13,false,8.57142857143,true
+v17,v16,false,3.71428571429,true
+v17,v19,false,2.05714285714,true
+v18,v1,false,4.64285714286,true
+v18,v4,false,4.64285714286,true
+v19,v0,false,0.0,true
+v19,v1,false,6.85714285714,true
+v19,v2,false,2.78571428571,true
+v19,v7,false,3.42857142857,true
+v19,v8,false,5.7619047619,true
+v19,v10,false,2.82857142857,true
+v19,v14,false,4.64285714286,true
+v19,v17,false,2.05714285714,true

@@ -1,0 +1,73 @@
+
+Graph-structured stack
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article does not cite any references or sources. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2009) 
+
+
+In computer science, a graph-structured stack is a directed acyclic graph where each directed path represents a stack. The graph-structured stack is an essential part of Tomita's algorithm, where it replaces the usual stack of a pushdown automaton. This allows the algorithm to encode the nondeterministic choices in parsing an ambiguous grammar, sometimes with greater efficiency.
+In the following diagram, there are four stacks: {7,3,1,0}, {7,4,1,0}, {7,5,2,0}, and {8,6,2,0}.
+
+
+
+Another way to simulate nondeterminism would be to duplicate the stack as needed. The duplication would be less efficient since vertices would not be shared. For this example, 16 vertices would be needed instead of 9.
+
+
+
+
+
+
+
+This computer science article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 528/1000000
+Preprocessor generated node count: 5567/1500000
+Post-expand include size: 9781/2048000 bytes
+Template argument size: 3186/2048000 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:672499-0!*!0!*!*!4!* and timestamp 20130122175515 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Graph-structured_stack&oldid=399640593"				
+ /printfooter 
+ catlinks 
+Categories: Graph data structuresComputer science stubsHidden categories: Articles lacking sources from December 2009All articles lacking sourcesWikiProject Computer science stubs  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

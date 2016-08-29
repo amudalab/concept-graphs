@@ -1,0 +1,162 @@
+nodedef> name,label
+v0,abstract data type
+v1,array implementation
+v2,arrays
+v3,circularly linked list
+v4,data structure
+v5,data type
+v6,dequeue
+v7,double ended queue
+v8,doubly linked list
+v9,element rank
+v10,enqueue
+v11,first in first out principle
+v12,front element
+v13,last in first out principle
+v14,linked list
+v15,list abstract data type
+v16,list data type
+v17,queue
+v18,queue full exception
+v19,rear element
+v20,running time
+v21,sequence data type
+v22,singly linked list
+v23,stack
+v24,vector
+v25,vector abstract data type
+v26,vector data type
+v27,worst case
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v5,false,2.11324786325,true
+v0,v14,false,27.8055555556,true
+v0,v15,false,0.944444444444,true
+v0,v17,false,3.88888888889,true
+v0,v25,false,0.944444444444,true
+v0,v27,false,10.6944444444,true
+v1,v8,false,70.0,true
+v1,v20,false,11.6666666667,true
+v2,v4,false,7.77777777778,true
+v2,v5,false,5.83333333333,true
+v2,v9,false,48.6111111111,true
+v2,v14,false,1.94444444444,true
+v3,v4,false,2.91666666667,true
+v3,v14,false,0.972222222222,true
+v4,v2,false,7.77777777778,true
+v4,v3,false,2.91666666667,true
+v4,v5,false,11.7777777778,true
+v4,v7,false,53.4722222222,true
+v4,v8,false,107.916666667,true
+v4,v14,false,34.4722222222,true
+v4,v21,false,6.80555555556,true
+v4,v23,false,9.77777777778,true
+v5,v0,false,2.11324786325,true
+v5,v2,false,5.83333333333,true
+v5,v4,false,11.7777777778,true
+v5,v7,false,10.6944444444,true
+v5,v8,false,59.5,true
+v5,v9,false,108.888888889,true
+v5,v14,false,24.7222222222,true
+v5,v15,false,2.91666666667,true
+v5,v16,false,5.33333333333,true
+v5,v17,false,4.88888888889,true
+v5,v21,false,1.22222222222,true
+v5,v24,false,8.36111111111,true
+v5,v26,false,0.888888888889,true
+v6,v7,false,12.6388888889,true
+v6,v10,false,7.55555555556,true
+v6,v12,false,29.0277777778,true
+v6,v17,false,6.26111111111,true
+v6,v23,false,9.72222222222,true
+v7,v4,false,53.4722222222,true
+v7,v5,false,10.6944444444,true
+v7,v6,false,12.6388888889,true
+v7,v8,false,7.77777777778,true
+v7,v12,false,3.88888888889,true
+v7,v14,false,23.130952381,true
+v7,v17,false,0.0,true
+v7,v20,false,8.75,true
+v7,v23,false,3.66666666667,true
+v8,v1,false,70.0,true
+v8,v4,false,107.916666667,true
+v8,v5,false,59.5,true
+v8,v7,false,7.77777777778,true
+v8,v14,false,4.19444444444,true
+v8,v17,false,69.8888888889,true
+v8,v27,false,25.9722222222,true
+v9,v2,false,48.6111111111,true
+v9,v5,false,108.888888889,true
+v9,v14,false,375.416666667,true
+v9,v24,false,54.25,true
+v9,v27,false,61.25,true
+v10,v6,false,7.55555555556,true
+v10,v17,false,5.6746031746,true
+v11,v17,false,7.08333333333,true
+v12,v6,false,29.0277777778,true
+v12,v7,false,3.88888888889,true
+v12,v17,false,6.24019607843,true
+v12,v19,false,5.83333333333,true
+v13,v23,false,8.5,true
+v14,v0,false,27.8055555556,true
+v14,v2,false,1.94444444444,true
+v14,v3,false,0.972222222222,true
+v14,v4,false,34.4722222222,true
+v14,v5,false,24.7222222222,true
+v14,v7,false,23.130952381,true
+v14,v8,false,4.19444444444,true
+v14,v9,false,375.416666667,true
+v14,v17,false,20.1666666667,true
+v14,v22,false,9.59595959596,true
+v14,v24,false,1.94444444444,true
+v14,v27,false,9.44444444444,true
+v15,v0,false,0.944444444444,true
+v15,v5,false,2.91666666667,true
+v15,v24,false,1.94444444444,true
+v16,v5,false,5.33333333333,true
+v17,v0,false,3.88888888889,true
+v17,v5,false,4.88888888889,true
+v17,v6,false,6.26111111111,true
+v17,v7,false,0.0,true
+v17,v8,false,69.8888888889,true
+v17,v10,false,5.6746031746,true
+v17,v11,false,7.08333333333,true
+v17,v12,false,6.24019607843,true
+v17,v14,false,20.1666666667,true
+v17,v18,false,76.5,true
+v17,v19,false,14.1222222222,true
+v17,v20,false,41.8055555556,true
+v17,v22,false,14.5833333333,true
+v17,v23,false,8.40384615385,true
+v18,v17,false,76.5,true
+v19,v12,false,5.83333333333,true
+v19,v17,false,14.1222222222,true
+v20,v1,false,11.6666666667,true
+v20,v7,false,8.75,true
+v20,v17,false,41.8055555556,true
+v20,v27,false,2.91666666667,true
+v21,v4,false,6.80555555556,true
+v21,v5,false,1.22222222222,true
+v22,v14,false,9.59595959596,true
+v22,v17,false,14.5833333333,true
+v23,v4,false,9.77777777778,true
+v23,v6,false,9.72222222222,true
+v23,v7,false,3.66666666667,true
+v23,v13,false,8.5,true
+v23,v17,false,8.40384615385,true
+v24,v5,false,8.36111111111,true
+v24,v9,false,54.25,true
+v24,v14,false,1.94444444444,true
+v24,v15,false,1.94444444444,true
+v24,v25,false,0.0,true
+v24,v26,false,0.0,true
+v24,v27,false,369.444444444,true
+v25,v0,false,0.944444444444,true
+v25,v24,false,0.0,true
+v26,v5,false,0.888888888889,true
+v26,v24,false,0.0,true
+v27,v0,false,10.6944444444,true
+v27,v8,false,25.9722222222,true
+v27,v9,false,61.25,true
+v27,v14,false,9.44444444444,true
+v27,v20,false,2.91666666667,true
+v27,v24,false,369.444444444,true

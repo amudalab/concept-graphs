@@ -1,0 +1,73 @@
+nodedef> name,label
+v0,algorithms
+v1,arithmetic operations
+v2,array
+v3,asymptotic analysis
+v4,asymptotic running time
+v5,average case
+v6,best case
+v7,big oh notation
+v8,big omega
+v9,big omega notation
+v10,big theta notation
+v11,boolean expression
+v12,control statement
+v13,data structure
+v14,efficient algorithm
+v15,exponential
+v16,insertion sort
+v17,linear algorithm
+v18,linear time algorithm
+v19,list
+v20,little oh notation
+v21,little omega notation
+v22,logarithmic
+v23,logical operation
+v24,memory
+v25,non linear function
+v26,primitive operation
+v27,program
+v28,programming construct
+v29,programming language
+v30,pseudo code
+v31,quadratic
+v32,running time
+v33,sorting
+v34,sorting technique
+v35,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v32,false,0.0,true
+v1,v26,false,8.88888888889,true
+v2,v32,false,24.4444444445,true
+v3,v30,false,5.33333333333,true
+v4,v31,false,8.19444444444,true
+v5,v6,false,1.94444444444,true
+v6,v35,false,1.94444444444,true
+v7,v32,false,17.0,true
+v8,v32,false,23.2222222223,true
+v9,v8,false,0.0,true
+v10,v9,false,3.55555555556,true
+v11,v3,false,14.2222222222,true
+v12,v26,false,18.6666666667,true
+v13,v32,false,21.7777777778,true
+v14,v31,false,23.0833333333,true
+v15,v32,false,3.55555555556,true
+v16,v3,false,20.8888888889,true
+v17,v31,false,12.6388888889,true
+v18,v35,false,31.1111111111,true
+v19,v28,false,19.5555555556,true
+v20,v8,false,27.5555555555,true
+v21,v8,false,20.4444444444,true
+v22,v0,false,7.97222222222,true
+v23,v26,false,6.22222222222,true
+v24,v0,false,19.0555555556,true
+v25,v31,false,20.4166666667,true
+v26,v32,false,5.33333333333,true
+v27,v32,false,17.8888888889,true
+v28,v30,false,11.5555555556,true
+v29,v9,false,21.5555555556,true
+v30,v32,false,7.33333333333,true
+v31,v0,false,7.08333333333,true
+v33,v32,false,10.6666666667,true
+v34,v6,false,17.0555555555,true
+v35,v32,false,6.22222222222,true

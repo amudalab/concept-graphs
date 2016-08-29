@@ -1,0 +1,27 @@
+nodedef> name,label
+v0,classification
+v1,error
+v2,fitting
+v3,gaussian
+v4,linear regression
+v5,locally weighted regression
+v6,log likelihood
+v7,non-parametric learning algorithm
+v8,overfitting
+v9,perceptron
+v10,probabilistic interpretation
+v11,regression
+v12,underfitting
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v8,false,20.088691796,true
+v1,v8,false,40.1707317073,true
+v2,v11,false,19.512195122,true
+v3,v11,false,54.2195121951,true
+v4,v11,false,0.0,true
+v5,v11,false,10.7817073171,true
+v6,v3,false,77.6048780488,true
+v7,v8,false,35.2573170732,true
+v8,v4,false,8.78048780488,true
+v9,v8,false,37.2292682927,true
+v10,v8,false,11.7073170732,true
+v12,v8,false,19.0243902439,true

@@ -1,0 +1,36 @@
+nodedef> name,label
+v0,array
+v1,average time
+v2,divide and conquer
+v3,expected time
+v4,insertion sort
+v5,linear time
+v6,median element
+v7,partition procedure
+v8,partitioning
+v9,pivot
+v10,pivot element
+v11,quick sort
+v12,random element
+v13,randomized algorithm
+v14,randomized partition
+v15,randomized quick sort
+v16,running time
+v17,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v9,false,0.0,true
+v1,v3,false,9.23076923077,true
+v2,v15,false,48.8076923077,true
+v3,v8,false,8.79807692307,true
+v4,v17,false,9.86538461538,true
+v5,v15,false,10.8076923077,true
+v6,v16,false,13.8461538462,true
+v7,v15,false,13.6282051282,true
+v8,v11,false,4.61538461538,true
+v10,v15,false,10.793006993,true
+v12,v16,false,7.38461538462,true
+v13,v15,false,19.4930069931,true
+v14,v15,false,10.0384615385,true
+v15,v8,false,5.42307692307,true
+v16,v9,false,7.09615384615,true
+v17,v16,false,1.69230769231,true

@@ -1,0 +1,313 @@
+
+Suffix array
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+Suffix array
+
+
+Type
+Array
+
+
+Invented by
+Manber & Myers (1990)
+
+
+Time complexity
+in big O notation
+
+
+
+Average
+Worst case
+
+
+Space
+
+
+
+
+Construction
+
+
+
+
+
+In computer science, a suffix array is a sorted array of all suffixes of a string. It is a simple, yet powerful data structure which is used, among others, in full text indices, data compression algorithms and within the field of bioinformatics[1].
+Suffix arrays were introduced by Manber & Myers (1990) as a simple, space efficient alternative to suffix trees. They have independently been discovered by Gonnet, Baeza-Yates & Snider (1992) under the name PAT array.
+
+
+
+
+Contents
+
+
+1 Definition
+2 Example
+3 Correspondence to Suffix Trees
+4 Space Efficiency
+5 Construction Algorithms
+6 Applications
+7 Notes
+8 References
+9 External links
+
+
+
+
+[edit] Definition
+Let  be a string and let  denote the substring of  ranging from  to .
+The suffix array  of  is now defined to be an array of integers providing the starting positions of suffixes of  in lexicographical order. This means, an entry  contains the starting position of the -th smallest suffix in  and thus for all : .
+[edit] Example
+Consider the text  to be indexed:
+
+
+i
+1
+2
+3
+4
+5
+6
+7
+
+
+S[i]
+b
+a
+n
+a
+n
+a
+$
+
+
+The text ends with the special sentinel letter $ that is unique and lexicographically smaller than any other character. The text has the following suffixes:
+
+
+Suffix
+i
+
+
+banana$
+1
+
+
+anana$
+2
+
+
+nana$
+3
+
+
+ana$
+4
+
+
+na$
+5
+
+
+a$
+6
+
+
+$
+7
+
+
+These suffixes can be sorted:
+
+
+Suffix
+i
+
+
+$
+7
+
+
+a$
+6
+
+
+ana$
+4
+
+
+anana$
+2
+
+
+banana$
+1
+
+
+na$
+5
+
+
+nana$
+3
+
+
+The suffix array  contains the starting positions of these sorted suffixes:
+
+
+i
+1
+2
+3
+4
+5
+6
+7
+
+
+A[i]
+7
+6
+4
+2
+1
+5
+3
+
+
+So for example,  contains the value  and therefore refers to the suffix starting at position  within , which is the suffix .
+[edit] Correspondence to Suffix Trees
+Suffix arrays are closely related to suffix trees:
+
+Suffix arrays can be constructed by performing a depth-first traversal of a suffix tree. The suffix array corresponds to the leaf-labels given in the order in which these are visited during the traversal, if edges are visited in the lexicographical order of their first character.
+A suffix tree can be constructed in linear time by using a combination of suffix and LCP array. For a description of the algorithm, see the corresponding section in the LCP array article.
+
+It has been shown that every suffix tree algorithm can be systematically replaced with an algorithm that uses a suffix array enhanced with additional information (such as the LCP array) and solves the same problem in the same time complexity.[2] Advantages of suffix arrays over suffix trees include improved space requirements, simpler linear time construction algorithms (e.g., compared to Ukkonen's algorithm) and improved cache locality.[1]
+[edit] Space Efficiency
+Suffix arrays were introduced by Manber & Myers (1990) in order to improve over the space requirements of suffix trees: Suffix arrays store  integers. Assuming an integer requires  bytes, a suffix array requires  bytes in total. This is significantly less than the  bytes which are required by a careful suffix tree implementation.[3]
+However, in certain applications, the space requirements of suffix arrays may still be prohibitive. Analyzed in bits, a suffix array requires  space, whereas the original text over an alphabet of size  does only require  bits. For a human genome with  and  the suffix array would therefore occupy about 16 times more memory than the genome itself.
+Such discrepancies motivated a trend towards compressed suffix arrays and BWT-based compressed full-text indices such as the FM-index. These data structures require only space within the size of the text or even less.
+[edit] Construction Algorithms
+A naive approach to construct a suffix array is to use a comparison-based sorting algorithm. These algorithms require  suffix comparisons, but a suffix comparison runs in  time, so the overall runtime of this approach is .
+More advanced algorithms take advantage of the fact that the suffixes to be sorted are not arbitrary strings but related to each other. These algorithms strive to achieve the following goals:[4]
+
+minimal asymptotic complexity 
+lightweight in space, meaning little or no working memory beside the text and the suffix array itself is needed
+fast in practice
+
+One of the first algorithms to achieve all goals is the SA-IS algorithm of Nong, Zhang & Chan (2009). The algorithm is also rather simple (< 100 LOC) and can be enhanced to simultaneously construct the LCP array.[5] The SA-IS algorithm is one of the fastest known suffix array construction algorithms. A careful implementation by Yuta Mori outperforms most other linear or super-linear construction approaches.
+Beside time and space requirements, suffix array construction algorithms are also differentiated by their supported alphabet: constant alphabets where the alphabet size is bound by a constant, integer alphabets where characters are integers in a range depending on  and general alphabets where only character comparisons are allowed.[6]
+Most suffix array construction algorithms are based on one of the following approaches:[4]
+
+Prefix doubling algorithms are based on a strategy of Karp, Miller & Rosenberg (1972). The idea is to find prefixes that honor the lexicographic ordering of suffixes. The assessed prefix length doubles in each iteration of the algorithm until a prefix is unique and provides the rank of the associated suffix.
+Recursive algorithms follow the approach of the suffix tree construction algorithm by Farach (1997) to recursively sort a subset of suffixes. This subset is then used to infer a suffix array of the remaining suffixes. Both of these suffix arrays are then merged to compute the final suffix array.
+Induced copying algorithms are similar to recursive algorithms in the sense that they use an already sorted subset to induce a fast sort of the remaining suffixes. The difference is that these algorithms favor iteration over recursion to sort the selected suffix subset. A survey of this diverse group of algorithms has been put together by Puglisi, Smyth & Turpin (2007).
+
+A well-known recursive algorithm for integer alphabets is the DC3 / skew algorithm of Krkkinen & Sanders (2003). It runs in linear time and has successfully been used as the basis for parallel[7] and external memory[8] suffix array construction algorithms.
+Recent work by Salson et al. (2009) proposes an algorithm for updating the suffix array of a text that has been edited instead of rebuilding a new suffix array from scratch. Even if the theoretical worst-case time complexity is , it appears to perform well in practice: experimental results from the authors showed that their implementation of dynamic suffix arrays is generally more efficient than rebuilding when considering the insertion of a reasonable number of letters in the original text.
+[edit] Applications
+The suffix array of a string can be used as an index to quickly locate every occurrence of a substring pattern  within the string . Finding every occurrence of the pattern is equivalent to finding every suffix that begins with the substring. Thanks to the lexicographical ordering, these suffixes will be grouped together in the suffix array and can be found efficiently with two binary searches. The first search locates the starting position of the interval, and the second one determines the end position:
+
+
+
+    def search(P):
+        l = 1; r = n + 1
+        while l < r:
+            mid = (l+r) / 2
+            if P > suffixAt(A[mid]):
+                l = mid + 1
+            else:
+                r = mid
+        s = l; r = n + 1
+        while l < r:
+            mid = (l+r) / 2
+            if P == suffixAt(A[mid]):
+                l = mid
+            else:
+                r = mid - 1
+        return (s, r)
+
+
+Finding the substring pattern  of length  in the string  of length  takes  time, given that a single suffix comparison needs to compare  characters. Manber & Myers (1990) describe how this bound can be improved to  time using LCP information. The idea is that a pattern comparison does not need to re-compare certain characters, when it is already known that these are part of the longest common prefix of the pattern and the current search interval. Abouelhoda, Kurtz & Ohlebusch (2004) improve the bound even further and achieve a search time of  as known from suffix trees.
+Suffix sorting algorithms can be used to compute the BurrowsWheeler transform (BWT). The BWT requires sorting of all cyclic permutations of a string. If this string ends in a special end-of-string character that is lexicographically smaller than all other character (i.e., $), then the order of the sorted rotated BWT matrix corresponds to the order of suffixes in a suffix array. The BWT can therefore be computed in linear time by first constructing a suffix array of the text and then deducing the BWT string: .
+Suffix arrays can also be used to look up substrings in Example-Based Machine Translation, demanding much less storage than a full phrase table as used in Statistical machine translation.
+Many additional applications of the suffix array require the LCP array. Some of these are detailed in the application section of the latter.
+[edit] Notes
+
+
+^ a b Abouelhoda, Kurtz & Ohlebusch 2002.
+^ Abouelhoda, Kurtz & Ohlebusch 2004.
+^ Kurtz 1999.
+^ a b Puglisi, Smyth & Turpin 2007.
+^ Fischer 2011.
+^ Burkhardt & Krkkinen 2003.
+^ Kulla & Sanders 2007.
+^ Dementiev et al. 2008.
+
+
+[edit] References
+
+Abouelhoda, Mohamed Ibrahim; Kurtz, Stefan; Ohlebusch, Enno (2004). "Replacing suffix trees with enhanced suffix arrays". Journal of Discrete Algorithms 2: 53. doi:10.1016/S1570-8667(03)00065-0.
+Manber, Udi; Myers, Gene (1990). "Suffix arrays: a new method for on-line string searches". In Proceedings of the first annual ACM-SIAM symposium on Discrete algorithms 90 (319): 327.
+Gonnet, G.H; Baeza-Yates, R.A; Snider, T (1992). "New indices for text: PAT trees and PAT arrays". Information retrieval: data structures and algorithms.
+Kurtz, S (1999). "Reducing the space requirement of suffix trees". Software-Practice and Experience 29 (13): 1149. doi:10.1002/(SICI)1097-024X(199911)29:13<1149::AID-SPE274>3.0.CO;2-O.
+Abouelhoda, Mohamed Ibrahim; Kurtz, Stefan; Ohlebusch, Enno (2002). "The Enhanced Suffix Array and Its Applications to Genome Analysis". Algorithms in Bioinformatics. Lecture Notes in Computer Science. 2452. pp.449. doi:10.1007/3-540-45784-4_35. ISBN978-3-540-44211-0.
+Puglisi, Simon J.; Smyth, W. F.; Turpin, Andrew H. (2007). "A taxonomy of suffix array construction algorithms". ACM Computing Surveys 39 (2): 4. doi:10.1145/1242471.1242472.
+Nong, Ge; Zhang, Sen; Chan, Wai Hong (2009). "Linear Suffix Array Construction by Almost Pure Induced-Sorting". 2009 Data Compression Conference. pp.193. doi:10.1109/DCC.2009.42. ISBN978-0-7695-3592-0.
+Fischer, Johannes (2011). "Inducing the LCP-Array". Algorithms and Data Structures. Lecture Notes in Computer Science. 6844. pp.374. doi:10.1007/978-3-642-22300-6_32. ISBN978-3-642-22299-3.
+Salson, M.; Lecroq, T.; Lonard, M.; Mouchard, L. (2010). "Dynamic extended suffix arrays". Journal of Discrete Algorithms 8 (2): 241. doi:10.1016/j.jda.2009.02.007.
+Burkhardt, Stefan; Krkkinen, Juha (2003). "Fast Lightweight Suffix Array Construction and Checking". Combinatorial Pattern Matching. Lecture Notes in Computer Science. 2676. pp.55. doi:10.1007/3-540-44888-8_5. ISBN978-3-540-40311-1.
+Karp, Richard M.; Miller, Raymond E.; Rosenberg, Arnold L. (1972). "Rapid identification of repeated patterns in strings, trees and arrays". Proceedings of the fourth annual ACM symposium on Theory of computing - STOC '72. pp.125. doi:10.1145/800152.804905.
+Farach, M. (1997). "Optimal suffix tree construction with large alphabets". Proceedings 38th Annual Symposium on Foundations of Computer Science. pp.137. doi:10.1109/SFCS.1997.646102. ISBN0-8186-8197-7.
+Krkkinen, Juha; Sanders, Peter (2003). "Simple Linear Work Suffix Array Construction". Automata, Languages and Programming. Lecture Notes in Computer Science. 2719. pp.943. doi:10.1007/3-540-45061-0_73. ISBN978-3-540-40493-4.
+Dementiev, Roman; Krkkinen, Juha; Mehnert, Jens; Sanders, Peter (2008). "Better external memory suffix array construction". Journal of Experimental Algorithmics 12: 1. doi:10.1145/1227161.1402296.
+Kulla, Fabian; Sanders, Peter (2007). "Scalable parallel suffix array construction". Parallel Computing 33 (9): 605. doi:10.1016/j.parco.2007.06.004.
+
+[edit] External links
+
+Suffix sorting module for BWT in C code
+Suffix Array Implementation in Ruby
+Suffix array library and tools
+Project containing various Suffix Array c/c++ Implementations with a unified interface
+A fast, lightweight, and robust C API library to construct the suffix array
+Suffix Array implementation in Python
+
+ 
+NewPP limit report
+Preprocessor visited node count: 12712/1000000
+Preprocessor generated node count: 18954/1500000
+Post-expand include size: 59752/2048000 bytes
+Template argument size: 19588/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:1303494-0!0!0!!en!*!* and timestamp 20130122174959 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Suffix_array&oldid=534035045"				
+ /printfooter 
+ catlinks 
+Categories: ArraysSubstring indicesString data structures  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

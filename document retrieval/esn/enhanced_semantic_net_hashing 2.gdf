@@ -1,0 +1,35 @@
+nodedef> name,label
+v0,array
+v1,binary search
+v2,data structure
+v3,data type
+v4,hash function
+v5,hash table
+v6,hashing
+v7,integer
+v8,level
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v5,false,4.5,true
+v0,v7,false,3.0,true
+v1,v6,false,14.5,true
+v1,v8,false,4.5,true
+v2,v4,false,4.5,true
+v2,v5,false,0.0,true
+v2,v6,false,3.5,true
+v3,v7,false,0.0,true
+v4,v2,false,4.5,true
+v4,v6,false,0.0,true
+v4,v7,false,14.0,true
+v5,v0,false,1.5,true
+v5,v2,false,0.0,true
+v5,v7,false,9.0,true
+v6,v1,false,14.5,true
+v6,v2,false,3.5,true
+v6,v4,false,0.0,true
+v6,v8,false,3.0,true
+v7,v0,false,1.0,true
+v7,v3,false,0.0,true
+v7,v4,false,14.0,true
+v7,v5,false,9.0,true
+v8,v1,false,4.5,true
+v8,v6,false,3.0,true

@@ -1,0 +1,41 @@
+nodedef> name,label
+v0,array
+v1,closed hashing
+v2,collision resolution
+v3,data structure
+v4,delete
+v5,find
+v6,hash function
+v7,hash table
+v8,hashing
+v9,index
+v10,insert
+v11,key
+v12,linear hashing
+v13,linked list
+v14,memory allocation
+v15,open addressing
+v16,open hashing
+v17,rehash strategy
+v18,search time
+v19,separate chaining
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v4,false,10.5,true
+v1,v8,false,0.0,true
+v2,v1,false,2.625,true
+v3,v8,false,8.75,true
+v4,v10,false,0.875,true
+v5,v8,false,8.75,true
+v6,v8,false,11.25,true
+v7,v8,false,13.0,true
+v9,v12,false,12.5,true
+v10,v8,false,6.125,true
+v11,v8,false,10.5,true
+v12,v1,false,0.875,true
+v13,v1,false,2.625,true
+v14,v12,false,15.75,true
+v15,v1,false,3.5,true
+v16,v8,false,1.05,true
+v17,v12,false,3.5,true
+v18,v12,false,17.0,true
+v19,v1,false,2.625,true

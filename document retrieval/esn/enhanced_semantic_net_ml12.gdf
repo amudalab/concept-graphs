@@ -1,0 +1,48 @@
+nodedef> name,label
+v0,cluster centroids
+v1,clustering
+v2,distribution
+v3,em algorithm
+v4,expectation maximization algorithm
+v5,gaussian
+v6,gaussian discriminant analysis algorithm
+v7,gaussian distribution
+v8,k-means algorithm
+v9,law of likelihood
+v10,number of clusters
+v11,unsupervised learning
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,23.1944444444,true
+v0,v8,false,14.55,true
+v1,v0,false,69.5833333333,true
+v1,v2,false,145.25,true
+v1,v4,false,8.75,true
+v1,v10,false,18.0,true
+v1,v11,false,15.75,true
+v2,v1,false,145.25,true
+v2,v3,false,167.291666667,true
+v2,v5,false,8.70833333333,true
+v2,v7,false,0.875,true
+v2,v9,false,30.625,true
+v3,v2,false,27.8819444445,true
+v3,v5,false,0.0,true
+v3,v9,false,9.73214285714,true
+v4,v1,false,1.45833333333,true
+v4,v11,false,76.125,true
+v5,v2,false,8.70833333333,true
+v5,v3,false,0.0,true
+v5,v6,false,12.75,true
+v5,v7,false,3.95833333333,true
+v5,v9,false,38.25,true
+v6,v5,false,12.75,true
+v7,v2,false,0.145833333333,true
+v7,v5,false,3.95833333333,true
+v8,v0,false,14.55,true
+v8,v11,false,3.0625,true
+v9,v2,false,5.10416666667,true
+v9,v3,false,9.73214285714,true
+v9,v5,false,38.25,true
+v10,v1,false,6.0,true
+v11,v1,false,2.625,true
+v11,v4,false,76.125,true
+v11,v8,false,18.375,true

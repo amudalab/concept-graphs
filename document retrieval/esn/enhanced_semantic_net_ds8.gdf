@@ -1,0 +1,63 @@
+nodedef> name,label
+v0,array
+v1,binary search
+v2,binary search tree
+v3,data structure
+v4,deletion
+v5,dictionary
+v6,height
+v7,insertion
+v8,key element pair
+v9,logarithmic time
+v10,ordered dictionaries
+v11,ordering relation
+v12,recursive procedure
+v13,running time
+v14,total order
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,2.56018518518,true
+v0,v7,false,28.4444444444,true
+v1,v0,false,15.3611111111,true
+v1,v2,false,0.0,true
+v1,v4,false,32.1111111111,true
+v1,v5,false,123.888888889,true
+v1,v7,false,3.77777777778,true
+v1,v9,false,6.22222222222,true
+v1,v10,false,13.2222222222,true
+v1,v12,false,5.66666666667,true
+v1,v14,false,146.666666667,true
+v2,v1,false,0.0,true
+v2,v6,false,39.6666666667,true
+v2,v10,false,11.3333333333,true
+v3,v4,false,60.4444444444,true
+v3,v5,false,2.0462962963,true
+v4,v1,false,5.35185185185,true
+v4,v3,false,60.4444444444,true
+v4,v5,false,32.8888888889,true
+v4,v7,false,9.13888888889,true
+v5,v1,false,123.888888889,true
+v5,v3,false,12.2777777778,true
+v5,v4,false,32.8888888889,true
+v5,v8,false,14.2222222222,true
+v5,v10,false,9.44444444444,true
+v5,v11,false,39.1111111111,true
+v5,v14,false,34.0888888889,true
+v6,v2,false,6.61111111112,true
+v6,v12,false,689.444444444,true
+v6,v13,false,14.6666666667,true
+v7,v0,false,28.4444444444,true
+v7,v1,false,0.62962962963,true
+v7,v4,false,9.13888888889,true
+v7,v14,false,161.5,true
+v8,v5,false,14.2222222222,true
+v9,v1,false,3.11111111111,true
+v10,v1,false,13.2222222222,true
+v10,v2,false,11.3333333333,true
+v10,v5,false,1.57407407407,true
+v11,v5,false,39.1111111111,true
+v12,v1,false,1.88888888889,true
+v12,v6,false,689.444444444,true
+v13,v6,false,2.44444444445,true
+v14,v1,false,146.666666667,true
+v14,v5,false,5.68148148148,true
+v14,v7,false,161.5,true

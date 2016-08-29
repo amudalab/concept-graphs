@@ -1,0 +1,308 @@
+
+Superkey
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+This article is about the programming term.  For the keyboard button, see Super key (keyboard button).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2012) 
+
+
+A superkey is defined in the relational model of database organization as a set of attributes of a relation variable for which it holds that in all relations assigned to that variable, there are no two distinct tuples (rows) that have the same values for the attributes in this set.[1] Equivalently a superkey can also be defined as a set of attributes of a relation schema upon which all attributes of the schema are functionally dependent.
+Note that the set of all attributes is a trivial superkey.
+Also note that if attribute set K is a superkey of relvar R, then at all times it is the case that the projection of R over K has the same cardinality as R itself.
+Informally, a superkey is a set of attributes within a table whose values can be used to uniquely identify a tuple. A candidate key is a minimal set of attributes necessary to identify a tuple, this is also called a minimal superkey. For example, given an employee schema, consisting of the attributes employeeID, name, job, and departmentID, we could use the employeeID in combination with any or all other attributes of this table to uniquely identify a tuple in the table. Examples of superkeys in this schema would be {employeeID, Name}, {employeeID, Name, job}, and {employeeID, Name, job, departmentID} which is the trivial superkey.
+In a real database we do not need values for all of those attributes to identify a tuple. We only need, per our example, the set {employeeID}. This is a minimal superkey that is, a minimal set of attributes that can be used to identify a single tuple. So, employeeID is a candidate key.
+
+
+
+
+Contents
+
+
+1 Example
+2 See also
+3 References
+4 External links
+
+
+
+
+[edit] Example
+
+English Monarchs
+
+Monarch Name
+Monarch Number
+Royal House
+
+
+Edward
+II
+Plantagenet
+
+
+Edward
+III
+Plantagenet
+
+
+Richard
+III
+Plantagenet
+
+
+Henry
+IV
+Lancaster
+
+
+First, list out all the (non-empty) sets of attributes:
+
+ {Monarch Name} 
+ {Monarch Number} 
+ {Royal House}
+ {Monarch Name, Monarch Number}
+ {Monarch Name, Royal House}
+ {Monarch Number, Royal House}
+ {Monarch Name, Monarch Number, Royal House}
+
+Second, eliminate all the sets which do not meet superkey's requirement. For example, {Monarch Name, Royal House} cannot be a superkey because for the same attribute values (Edward, Plantagenet), there are two distinct tuples:
+
+(Edward, II, Plantagenet)
+(Edward, III, Plantagenet)
+
+Finally, after elimination, the remaining sets of attributes are the only possible superkeys in this example:
+
+{Monarch Name, Monarch Number} (Candidate Key)
+{Monarch Name, Monarch Number, Royal House}
+
+In real situations, however, superkeys are normally not determined by this method, which is very tedious and time-consuming, but by analyzing functional dependencies (FD).
+[edit] See also
+
+Alternate key
+Compound key
+Foreign key
+Primary key
+
+[edit] References
+
+Silberschatz, Abraham (2011). Database System Concepts (6th ed.). McGraw-Hill. pp.4546. ISBN978-0-07-352332-3.
+
+
+
+^ Introduction to Database Management Systems. Tata McGraw-Hill. p.77. ISBN9780070591196. "no two tuples in any legal relation"
+
+
+[edit] External links
+
+Relation Database terms of reference, Keys: An overview of the different types of keys in an RDBMS
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Database management systems
+
+
+
+
+
+
+
+
+
+Database models
+Database normalization
+Database storage
+Distributed DBMS
+Federated database system
+Referential integrity
+Relational algebra
+Relational calculus
+Relational database
+Relational DBMS
+Relational model
+Object-relational database
+Transaction processing
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Database
+ACID
+CRUD
+Null
+Candidate key
+Foreign key
+Primary key
+Superkey
+Surrogate key
+Armstrong's axioms
+NoSQL
+
+
+
+
+
+
+
+
+Objects
+
+
+
+Relation
+
+table
+column
+row
+
+
+View
+Transaction
+Log
+Trigger
+Index
+Stored procedure
+Cursor
+Partition
+
+
+
+
+
+
+
+
+Components
+
+
+
+Concurrency control
+Data dictionary
+JDBC
+XQJ
+ODBC
+Query language
+Query optimizer
+Query plan
+
+
+
+
+
+
+
+
+Functions
+
+
+
+Administration and automation
+Query optimization
+Replication
+
+
+
+
+
+
+
+
+
+
+
+Database products
+Object-oriented
+
+comparison
+
+
+Relational
+
+comparison
+
+
+Document-oriented
+NewSQL
+
+
+
+
+
+
+
+
+
+
+
+
+This database-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 2142/1000000
+Preprocessor generated node count: 26224/1500000
+Post-expand include size: 27796/2048000 bytes
+Template argument size: 11849/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:1137952-0!*!0!!en!4!* and timestamp 20121216072421 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Superkey&oldid=525520480"				
+ /printfooter 
+ catlinks 
+Categories: Database management systemsData modelingDatabase stubsHidden categories: Articles needing additional references from October 2012All articles needing additional referencesWikiProject Computer science stubs  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

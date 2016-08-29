@@ -1,0 +1,35 @@
+nodedef> name,label
+v0,gradient descent
+v1,history of neural networks
+v2,hyper plane
+v3,multinomial event model
+v4,multivariate bernoulli event model
+v5,neural networks
+v6,non-linear classifier
+v7,non-linear division boundaries
+v8,support vector machines
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v5,false,49.625,true
+v1,v5,false,11.9166666667,true
+v2,v8,false,75.0,true
+v3,v4,false,59.5,true
+v3,v6,false,115.5,true
+v4,v3,false,59.5,true
+v4,v8,false,818.125,true
+v5,v0,false,49.625,true
+v5,v1,false,11.9166666667,true
+v5,v6,false,11.375,true
+v5,v7,false,14.625,true
+v5,v8,false,0.0,true
+v6,v3,false,115.5,true
+v6,v5,false,11.375,true
+v6,v7,false,35.25,true
+v6,v8,false,66.25,true
+v7,v5,false,14.625,true
+v7,v6,false,35.25,true
+v7,v8,false,265.125,true
+v8,v2,false,75.0,true
+v8,v4,false,818.125,true
+v8,v5,false,0.0,true
+v8,v6,false,66.25,true
+v8,v7,false,265.125,true

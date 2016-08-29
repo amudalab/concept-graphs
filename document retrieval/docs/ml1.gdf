@@ -1,0 +1,47 @@
+nodedef> name,label
+v0,learning algorithm
+v1,learning theory
+v2,machine learning
+v3,machine learning algorithm
+v4,reinforcement learning
+v5,supervised learning
+v6,unsupervised
+v7,unsupervised learning
+v8,unsupervised learning algorithm
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v1,false,22.0092165899,true
+v0,v2,false,0.0,true
+v0,v3,false,79.9838709677,true
+v0,v4,false,28.6803519062,true
+v0,v5,false,130.64516129,true
+v0,v7,false,12.7304147465,true
+v0,v8,false,55.1814516129,true
+v1,v0,false,22.0092165899,true
+v1,v2,false,16.8387096774,true
+v1,v5,false,13.5483870968,true
+v2,v0,false,0.0,true
+v2,v1,false,16.8387096774,true
+v2,v3,false,54.2903225806,true
+v2,v5,false,107.112903226,true
+v3,v0,false,79.9838709677,true
+v3,v2,false,54.2903225806,true
+v4,v0,false,28.6803519062,true
+v4,v5,false,35.0806451613,true
+v4,v6,false,16.4516129032,true
+v5,v0,false,130.64516129,true
+v5,v1,false,13.5483870968,true
+v5,v2,false,107.112903226,true
+v5,v4,false,35.0806451613,true
+v5,v6,false,43.5483870968,true
+v5,v7,false,54.1935483871,true
+v5,v8,false,30.9677419355,true
+v6,v4,false,16.4516129032,true
+v6,v5,false,43.5483870968,true
+v6,v7,false,1.68970814132,true
+v6,v8,false,3.8858560794,true
+v7,v0,false,12.7304147465,true
+v7,v5,false,54.1935483871,true
+v7,v6,false,1.68970814132,true
+v8,v0,false,55.1814516129,true
+v8,v5,false,30.9677419355,true
+v8,v6,false,3.8858560794,true

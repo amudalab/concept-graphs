@@ -1,0 +1,64 @@
+
+Referential integrity
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+An example of a database that has not enforced referential integrity. In this example, there is a foreign key (artist_id) value in the album table that references a non-existent artist  in other words there is a foreign key value with no corresponding primary key value in the referenced table. What happened here was that there was an artist called "Aerosmith", with an artist_id of 4, which was deleted from the artist table. However, the album "Eat the Rich" referred to this artist. With referential integrity enforced, this would not have been possible.
+
+
+Referential integrity is a property of data which, when satisfied, requires every value of one attribute (column) of a relation (table) to exist as a value of another attribute in a different (or the same) relation (table).[1]
+For referential integrity to hold in a relational database, any field in a table that is declared a foreign key can contain only values from a parent table's primary key or a candidate key. For instance, deleting a record that contains a value referred to by a foreign key in another table would break referential integrity. Some relational database management systems (RDBMS) can enforce referential integrity, normally either by deleting the foreign key rows as well to maintain integrity, or by returning an error and not performing the delete. Which method is used may be determined by a referential integrity constraint defined in a data dictionary.
+[edit] References
+
+
+^ Mike Chapple. "Referential Integrity". http://databases.about.com/: About.com. http://databases.about.com/cs/administration/g/refintegrity.htm. Retrieved 2011-03-17. "Definition: Referential integrity is a database concept that ensures that relationships between tables remain consistent. When one table has a foreign key to another table, the concept of referential integrity states that you may not add a record to the table that contains the foreign key unless there is a corresponding record in the linked table."
+
+
+[edit] See also
+
+Dangling pointer
+Declarative Referential Integrity
+Domain/key normal form
+Entity integrity
+Propagation constraint
+
+ 
+NewPP limit report
+Preprocessor visited node count: 551/1000000
+Preprocessor generated node count: 10721/1500000
+Post-expand include size: 3169/2048000 bytes
+Template argument size: 2393/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:445718-0!*!0!!*!4!* and timestamp 20121205030905 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Referential_integrity&oldid=518672692"				
+ /printfooter 
+ catlinks 
+Categories: Database management systemsData quality  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

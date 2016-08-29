@@ -1,0 +1,76 @@
+nodedef> name,label
+v0,arithmetic expression
+v1,binary tree
+v2,children
+v3,euler walk
+v4,eulers rule
+v5,inorder traversal
+v6,node
+v7,ordered trees
+v8,postorder traversal
+v9,preorder traversal
+v10,recursive procedure
+v11,tree traversal
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v1,false,38.2365591398,true
+v0,v3,false,13.0967741935,true
+v0,v4,false,10.6451612903,true
+v0,v6,false,23.1827956989,true
+v0,v8,false,40.9462365591,true
+v0,v11,false,22.4516129032,true
+v1,v0,false,38.2365591398,true
+v1,v2,false,7.83870967742,true
+v1,v5,false,9.67741935484,true
+v1,v6,false,16.3049853372,true
+v1,v7,false,78.3870967742,true
+v1,v8,false,10.2857142857,true
+v1,v9,false,10.1720430108,true
+v1,v11,false,7.40322580645,true
+v2,v1,false,7.83870967742,true
+v2,v6,false,0.320430107527,true
+v2,v8,false,38.3548387097,true
+v2,v9,false,30.2338709677,true
+v3,v0,false,13.0967741935,true
+v3,v6,false,68.7096774194,true
+v3,v11,false,13.5483870968,true
+v4,v0,false,10.6451612903,true
+v4,v5,false,15.9032258065,true
+v4,v6,false,4.83870967742,true
+v5,v1,false,9.67741935484,true
+v5,v4,false,15.9032258065,true
+v5,v6,false,11.9078341014,true
+v5,v8,false,18.1382488479,true
+v5,v9,false,4.97715053763,true
+v5,v11,false,12.5806451613,true
+v6,v0,false,23.1827956989,true
+v6,v1,false,16.3049853372,true
+v6,v2,false,0.320430107527,true
+v6,v3,false,68.7096774194,true
+v6,v4,false,4.83870967742,true
+v6,v5,false,11.9078341014,true
+v6,v8,false,9.18475073314,true
+v6,v9,false,13.7609108159,true
+v6,v11,false,133.075268817,true
+v7,v1,false,78.3870967742,true
+v7,v8,false,26.1290322581,true
+v8,v0,false,40.9462365591,true
+v8,v1,false,10.2857142857,true
+v8,v2,false,38.3548387097,true
+v8,v5,false,18.1382488479,true
+v8,v6,false,9.18475073314,true
+v8,v7,false,26.1290322581,true
+v8,v9,false,0.0,true
+v9,v1,false,10.1720430108,true
+v9,v2,false,30.2338709677,true
+v9,v5,false,4.97715053763,true
+v9,v6,false,13.7609108159,true
+v9,v8,false,0.0,true
+v9,v10,false,19.6451612903,true
+v9,v11,false,24.688172043,true
+v10,v9,false,19.6451612903,true
+v11,v0,false,22.4516129032,true
+v11,v1,false,7.40322580645,true
+v11,v3,false,13.5483870968,true
+v11,v5,false,12.5806451613,true
+v11,v6,false,133.075268817,true
+v11,v9,false,24.688172043,true

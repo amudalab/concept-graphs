@@ -1,0 +1,25 @@
+nodedef> name,label
+v0,cluster centroids
+v1,clustering
+v2,distribution
+v3,em algorithm
+v4,expectation maximization algorithm
+v5,gaussian
+v6,gaussian discriminant analysis algorithm
+v7,gaussian distribution
+v8,k-means algorithm
+v9,law of likelihood
+v10,number of clusters
+v11,unsupervised learning
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v11,false,32.925,true
+v1,v1,false,0,true
+v2,v2,false,0,true
+v3,v2,false,4.83333333333,true
+v4,v1,false,8.75,true
+v6,v3,false,12.75,true
+v7,v2,false,0.875,true
+v8,v11,false,18.375,true
+v9,v2,false,14.5654761905,true
+v10,v4,false,26.75,true
+v11,v1,false,15.75,true

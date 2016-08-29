@@ -1,0 +1,127 @@
+
+Abstract syntax tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+For the trees used in linguistics, see Concrete syntax tree.
+
+
+
+
+An abstract syntax tree for the following code for the Euclidean algorithm:
+
+while b  0
+
+if a > b
+
+a:= a  b
+
+
+else
+
+b:= b  a
+
+
+
+
+return a
+
+
+
+
+In computer science, an abstract syntax tree (AST), or just syntax tree, is a tree representation of the abstract syntactic structure of source code written in a programming language. Each node of the tree denotes a construct occurring in the source code. The syntax is 'abstract' in not representing every detail appearing in the real syntax. For instance, grouping parentheses are implicit in the tree structure, and a syntactic construct like an if-condition-then expression may be denoted by means of a single node with two branches.
+This distinguishes abstract syntax trees from concrete syntax trees, traditionally designated parse trees, which are often built by a parser during the source code translation and compiling process. Once built, additional information is added to the AST by means of subsequent processing, e.g., contextual analysis.
+Abstract syntax trees are also used in program analysis and program transformation systems.
+[edit] See also
+
+Abstract semantic graph (ASG)
+Composite pattern
+Document Object Model (DOM)
+Extended BackusNaur Form
+Lisp, a family of languages written in trees, with macros to manipulate code trees at compile time
+Semantic resolution tree (RST)
+Shunting yard algorithm
+Symbol table
+TreeDL
+
+[edit] References
+
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.
+
+[edit] External links
+
+AST View: an Eclipse plugin to visualize a Java abstract syntax tree
+Good information about the Eclipse AST and Java Code Manipulation
+PMD on SourceForge.net: uses AST representation to control code source quality
+CAST representation
+eli project: Abstract Syntax Tree Unparsing
+
+
+Papers
+
+
+Jones, Joel. Abstract Syntax Tree Implementation Idioms. http://www.hillside.net/plop/plop2003/Papers/Jones-ImplementingASTs.pdf. (overview of AST implementation in various language families)
+Howarth, Nicola. Abstract Syntax Tree Design. http://www.ansa.co.uk/ANSATech/95/Primary/155101.pdf. (note that this merely presents the design of one particular project's AST, and is not generally informative)
+Neamtiu, Iulian; Foster, Jeffrey S.; Hicks, Michael. Understanding source code evolution using abstract syntax tree matching. CiteSeerX: 10.1.1.88.5815.
+Baxter, Ira D.; et al.. Clone Detection Using Abstract Syntax Trees. http://www.semanticdesigns.com/Company/Publications/ICSM98.pdf.
+Fluri, Beat; Wrsch, Michael; Pinzger, Martin; Gall, Harald C.. Change Distilling: Tree Differencing for Fine-Grained Source Code Change Extraction. http://seal.ifi.uzh.ch/fileadmin/User_Filemount/Publications/fluri-changedistilling.pdf.
+Wrsch, Michael. Improving Abstract Syntax Tree based Source Code Change Detection (Diploma thesis). http://seal.ifi.unizh.ch/137/.
+Lucas, Jason. "Thoughts on the Visual C++ Abstract Syntax Tree (AST)". http://blogs.msdn.com/vcblog/archive/2006/08/16/702823.aspx.
+
+
+Tutorial
+
+
+"Abstract Syntax Tree Metamodel Standard". http://www.omg.org/news/meetings/workshops/ADM_2005_Proceedings_FINAL/T-3_Newcomb.pdf.
+
+
+
+
+
+This computer science article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 4272/1000000
+Preprocessor generated node count: 22090/1500000
+Post-expand include size: 22977/2048000 bytes
+Template argument size: 8790/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:75629-0!*!0!!*!4!* and timestamp 20130113181448 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Abstract_syntax_tree&oldid=531981628"				
+ /printfooter 
+ catlinks 
+Categories: Trees (data structures)Formal languagesComputer science stubsHidden categories: WikiProject Computer science stubs  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

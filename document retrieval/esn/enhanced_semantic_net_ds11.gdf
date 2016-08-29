@@ -1,0 +1,107 @@
+nodedef> name,label
+v0,avl tree
+v1,binary search trees
+v2,complete binary tree
+v3,data structure
+v4,height balance property
+v5,height balanced
+v6,height balanced trees
+v7,height imbalance
+v8,height of a node
+v9,induction hypothesis
+v10,insertion
+v11,logarithmic height property
+v12,node
+v13,recurrence
+v14,recurrence relation
+v15,root
+v16,rotation
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v1,false,23.1323529412,true
+v0,v2,false,21.3088235294,true
+v0,v3,false,2.82352941176,true
+v0,v4,false,40.4705882353,true
+v0,v5,false,12.7941176471,true
+v0,v6,false,8.47058823529,true
+v0,v9,false,126.117647059,true
+v0,v10,false,13.1764705882,true
+v0,v12,false,0.0,true
+v0,v13,false,143.955882353,true
+v0,v14,false,32.9411764706,true
+v0,v15,false,11.5462184874,true
+v1,v0,false,3.85539215687,true
+v1,v2,false,32.9411764706,true
+v1,v3,false,4.41176470588,true
+v1,v4,false,21.4117647059,true
+v1,v5,false,42.3529411765,true
+v1,v10,false,10.5882352941,true
+v1,v12,false,19.3088235294,true
+v1,v15,false,18.8235294118,true
+v1,v16,false,56.4705882353,true
+v2,v0,false,3.55147058823,true
+v2,v1,false,32.9411764706,true
+v2,v13,false,38.5882352941,true
+v2,v15,false,39.2647058824,true
+v3,v0,false,0.941176470587,true
+v3,v1,false,4.41176470588,true
+v3,v10,false,74.3529411765,true
+v4,v0,false,40.4705882353,true
+v4,v1,false,21.4117647059,true
+v4,v10,false,1.32352941177,true
+v4,v12,false,17.2268907563,true
+v4,v16,false,9.41176470588,true
+v5,v0,false,2.13235294118,true
+v5,v1,false,42.3529411765,true
+v5,v6,false,1.64705882353,true
+v5,v10,false,19.7647058824,true
+v5,v12,false,4.23529411765,true
+v5,v16,false,42.3529411765,true
+v6,v0,false,2.82352941176,true
+v6,v5,false,0.274509803922,true
+v7,v10,false,24.4705882353,true
+v7,v12,false,20.6117647059,true
+v8,v12,false,3.45098039216,true
+v9,v0,false,42.0392156863,true
+v9,v13,false,3.13725490197,true
+v9,v15,false,177.794117647,true
+v10,v0,false,13.1764705882,true
+v10,v1,false,10.5882352941,true
+v10,v3,false,74.3529411765,true
+v10,v4,false,7.94117647059,true
+v10,v5,false,19.7647058824,true
+v10,v7,false,24.4705882353,true
+v10,v12,false,82.8235294118,true
+v10,v16,false,28.2352941176,true
+v11,v14,false,6.11764705882,true
+v11,v15,false,50.8235294118,true
+v12,v0,false,0.0,true
+v12,v1,false,19.3088235294,true
+v12,v4,false,17.2268907563,true
+v12,v5,false,4.23529411765,true
+v12,v7,false,20.6117647059,true
+v12,v8,false,3.45098039216,true
+v12,v10,false,82.8235294118,true
+v12,v13,false,5.64705882353,true
+v12,v15,false,5.42647058824,true
+v13,v0,false,23.9926470588,true
+v13,v2,false,38.5882352941,true
+v13,v9,false,18.8235294118,true
+v13,v12,false,5.64705882353,true
+v13,v14,false,1.51633986928,true
+v13,v15,false,74.3529411765,true
+v14,v0,false,5.49019607843,true
+v14,v11,false,36.7058823529,true
+v14,v13,false,1.51633986928,true
+v14,v15,false,270.117647059,true
+v15,v0,false,1.9243697479,true
+v15,v1,false,18.8235294118,true
+v15,v2,false,39.2647058824,true
+v15,v9,false,177.794117647,true
+v15,v11,false,50.8235294118,true
+v15,v12,false,5.42647058824,true
+v15,v13,false,74.3529411765,true
+v15,v14,false,270.117647059,true
+v16,v1,false,56.4705882353,true
+v16,v4,false,9.41176470588,true
+v16,v5,false,42.3529411765,true
+v16,v10,false,4.70588235293,true

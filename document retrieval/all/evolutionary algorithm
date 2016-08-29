@@ -1,0 +1,159 @@
+
+Evolutionary algorithm
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+In artificial intelligence, an evolutionary algorithm (EA) is a subset of evolutionary computation, a generic population-based metaheuristic optimization algorithm. An EA uses mechanisms inspired by biological evolution, such as reproduction, mutation, recombination, and selection. Candidate solutions to the optimization problem play the role of individuals in a population, and the fitness function determines the environment within which the solutions "live" (see also cost function). Evolution of the population then takes place after the repeated application of the above operators. Artificial evolution (AE) describes a process involving individual evolutionary algorithms; EAs are individual components that participate in an AE.
+Evolutionary algorithms often perform well approximating solutions to all types of problems because they ideally do not make any assumption about the underlying fitness landscape; this generality is shown by successes in fields as diverse as engineering, art, biology, economics, marketing, genetics, operations research, robotics, social sciences, physics, politics and chemistry[citation needed].
+Techniques from evolutionary algorithms applied to the modeling of biological evolution are generally limited to explorations of microevolutionary processes. The computer simulations Tierra and Avida attempt to model macroevolutionary dynamics.
+In most real applications of EAs, computational complexity is a prohibiting factor. In fact, this computational complexity is due to fitness function evaluation. Fitness approximation is one of the solutions to overcome this difficulty. However, seemingly simple EA can solve often complex problems; therefore, there may be no direct link between algorithm complexity and problem complexity.
+A possible limitation of many evolutionary algorithms is their lack of a clear genotype-phenotype distinction. In nature, the fertilized egg cell undergoes a complex process known as embryogenesis to become a mature phenotype. This indirect encoding is believed to make the genetic search more robust (i.e. reduce the probability of fatal mutations), and also may improve the evolvability of the organism.[1][2] Such indirect (aka generative or developmental) encodings also enable evolution to exploit the regularity in the environment.[3] Recent work in the field of artificial embryogeny, or artificial developmental systems, seeks to address these concerns. And gene expression programming successfully explores a genotype-phenotype system, where the genotype consists of linear multigenic chromosomes of fixed length and the phenotype consists of multiple expression trees or computer programs of different sizes and shapes.[4]
+
+
+
+
+Contents
+
+
+1 Implementation of biological processes
+2 Evolutionary algorithm techniques
+3 Related techniques
+4 See also
+5 References
+6 Bibliography
+7 External links
+
+
+
+
+[edit] Implementation of biological processes
+
+Generate the initial population of individuals randomly - first Generation
+Evaluate the fitness of each individual in that population
+Repeat on this generation until termination (time limit, sufficient fitness achieved, etc.):
+
+Select the best-fit individuals for reproduction - parents
+Breed new individuals through crossover and mutation operations to give birth to offspring
+Evaluate the individual fitness of new individuals
+Replace least-fit population with new individuals
+
+
+
+[edit] Evolutionary algorithm techniques
+Similar techniques differ in the implementation details and the nature of the particular applied problem.
+
+Genetic algorithm - This is the most popular type of EA. One seeks the solution of a problem in the form of strings of numbers (traditionally binary, although the best representations are usually those that reflect something about the problem being solved), by applying operators such as recombination and mutation (sometimes one, sometimes both). This type of EA is often used in optimization problems.
+Genetic programming - Here the solutions are in the form of computer programs, and their fitness is determined by their ability to solve a computational problem.
+Evolutionary programming - Similar to genetic programming, but the structure of the program is fixed and its numerical parameters are allowed to evolve.
+Gene expression programming - Like genetic programming, GEP also evolves computer programs but it explores a genotype-phenotype system, where computer programs of different sizes are encoded in linear chromosomes of fixed length.
+Evolution strategy - Works with vectors of real numbers as representations of solutions, and typically uses self-adaptive mutation rates.
+Memetic algorithm - It is the hybrid form of population based methods. Inspired by the both Darwinian principles of natural evolution and Dawkins notion of a meme and viewed as a form of population-based algorithm coupled with individual learning procedures capable of performing local refinements. The focus of the research study is thus to balance been exploration and exploitation in the search.
+Differential evolution - Based on vector differences and is therefore primarily suited for numerical optimization problems.
+Neuroevolution - Similar to genetic programming but the genomes represent artificial neural networks by describing structure and connection weights. The genome encoding can be direct or indirect.
+Learning classifier system
+
+[edit] Related techniques
+Swarm algorithms, including:
+
+Ant colony optimization - Based on the ideas of ant foraging by pheromone communication to form paths. Primarily suited for combinatorial optimization and graph problems.
+Bees algorithm is based on the foraging behaviour of honey bees. It has been applied in many applications such as routing and scheduling.
+Cuckoo search is inspired by the brooding parasitism of the cuckoo species. It also uses Lvy flights, and thus it suits for global optimization problems.
+Differential search algorithm is based on the artificial-migration strategies of superorganisms. Please see http://www.pinarcivicioglu.com/ds.html for matlab code of DS.
+Particle swarm optimization - Based on the ideas of animal flocking behaviour. Also primarily suited for numerical optimization problems.
+
+Other population-based metaheuristic methods:
+
+Firefly algorithm is inspired by the behavior of fireflies, attracting each other by flashing light. This is especially useful for multimodal optimization.
+Invasive weed optimization algorithm - Based on the ideas of weed colony behavior in searching and finding a suitable place for growth and reproduction.
+Harmony search - Based on the ideas of musicians' behavior in searching for better harmonies. This algorithm is suitable for combinatorial optimization as well as parameter optimization.
+Gaussian adaptation - Based on information theory. Used for maximization of manufacturing yield, mean fitness or average information. See for instance Entropy in thermodynamics and information theory.
+
+[edit] See also
+
+
+
+
+Artificial intelligence  portal
+
+
+
+
+Artificial development
+Developmental biology
+Evolutionary computation
+Evolutionary robotics
+Fitness function
+Fitness landscape
+Fitness approximation
+Genetic operators
+Interactive evolutionary computation
+No free lunch in search and optimization
+Program synthesis
+Digital organism
+List of digital organism simulators
+
+[edit] References
+
+^ G.S. Hornby and J.B. Pollack. Creating high-level components with a generative representation for body-brain evolution. Artificial Life, 8(3):223246, 2002.
+^ Jeff Clune, Benjamin Beckmann, Charles Ofria, and Robert Pennock. "Evolving Coordinated Quadruped Gaits with the HyperNEAT Generative Encoding". Proceedings of the IEEE Congress on Evolutionary Computing Special Section on Evolutionary Robotics, 2009. Trondheim, Norway.
+^ J. Clune, C. Ofria, and R. T. Pennock, How a generative encoding fares as problem-regularity decreases, in PPSN (G. Rudolph, T. Jansen, S. M. Lucas, C. Poloni, and N. Beume, eds.), vol. 5199 of Lecture Notes in Computer Science, pp. 358367, Springer, 2008.
+^ Ferreira, C., 2001. Gene Expression Programming: A New Adaptive Algorithm for Solving Problems. Complex Systems, Vol. 13, issue 2: 87-129.
+
+[edit] Bibliography
+
+Ashlock, D. (2006), Evolutionary Computation for Modeling and Optimization, Springer, ISBN 0-387-22196-4.
+Bck, T. (1996), Evolutionary Algorithms in Theory and Practice: Evolution Strategies, Evolutionary Programming, Genetic Algorithms, Oxford Univ. Press.
+Bck, T., Fogel, D., Michalewicz, Z. (1997), Handbook of Evolutionary Computation, Oxford Univ. Press.
+Banzhaf, W., Nordin, P., Keller, R., Francone, F. (1998), Genetic Programming - An Introduction, Morgan Kaufmann, San Francisco
+Eiben, A.E., Smith, J.E. (2003), Introduction to Evolutionary Computing, Springer.
+Holland, J. H. (1975), Adaptation in Natural and Artificial Systems, The University of Michigan Press, Ann Arbor
+Poli, R., Langdon, W. B., McPhee, N. F. (2008). A Field Guide to Genetic Programming. Lulu.com, freely available from the internet. ISBN978-1-4092-0073-4. http://cswww.essex.ac.uk/staff/rpoli/gp-field-guide/.
+Ingo Rechenberg (1971): Evolutionsstrategie - Optimierung technischer Systeme nach Prinzipien der biologischen Evolution (PhD thesis). Reprinted by Fromman-Holzboog (1973).
+Hans-Paul Schwefel (1974): Numerische Optimierung von Computer-Modellen (PhD thesis). Reprinted by Birkhuser (1977).
+Michalewicz Z., Fogel D.B. (2004). How To Solve It: Modern Heuristics, Springer.
+Price, K., Storn, R.M., Lampinen, J.A., (2005). "Differential Evolution: A Practical Approach to Global Optimization", Springer.
+Yang X.-S., (2010), "Nature-Inspired Metaheuristic Algorithms", 2nd Edition, Luniver Press.
+
+[edit] External links
+
+Evolutionary Algorithms SYstem
+Evolutionary Computation Repository
+Genetic Algorithms and Evolutionary Computation
+An online interactive Evolutionary Algorithm demonstrator to practise or learn how exactly an EA works. Learn step by step or watch global convergence in batch, change population size, crossover rate, mutation rate and selection mechanism, and add constraints.
+
+ 
+NewPP limit report
+Preprocessor visited node count: 1175/1000000
+Preprocessor generated node count: 17005/1500000
+Post-expand include size: 7627/2048000 bytes
+Template argument size: 2860/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 2/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:190837-0!*!0!!en!4!* and timestamp 20121214190625 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Evolutionary_algorithm&oldid=527843344"				
+ /printfooter 
+ catlinks 
+Categories: CyberneticsEvolutionEvolutionary algorithmsOptimization algorithms and methodsHidden categories: All articles with unsourced statementsArticles with unsourced statements from September 2008  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

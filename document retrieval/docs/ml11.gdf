@@ -1,0 +1,95 @@
+nodedef> name,label
+v0,ablative analysis
+v1,accuracy
+v2,bayesian regularization
+v3,bayesian statistics and regularization
+v4,cost function
+v5,debugging
+v6,error analysis
+v7,high bias
+v8,high variance
+v9,machine learning problem
+v10,machine learning system
+v11,mail delivery robot
+v12,online learning
+v13,optimization objective
+v14,premature statistical optimization
+v15,square error
+v16,test error
+v17,total online error
+v18,training error
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v1,false,104.5,true
+v0,v5,false,11.0769230769,true
+v0,v6,false,20.3076923077,true
+v0,v9,false,16.6153846154,true
+v0,v14,false,960.923076923,true
+v1,v0,false,104.5,true
+v1,v4,false,185.538461538,true
+v1,v6,false,51.6153846154,true
+v1,v13,false,0.0,true
+v2,v3,false,1413.23076923,true
+v2,v12,false,70.1538461538,true
+v3,v2,false,1413.23076923,true
+v3,v12,false,27.5,true
+v4,v1,false,185.538461538,true
+v4,v9,false,335.076923077,true
+v4,v13,false,101.961538462,true
+v4,v15,false,56.4230769231,true
+v5,v0,false,11.0769230769,true
+v5,v10,false,38.5,true
+v5,v16,false,73.8461538462,true
+v6,v0,false,20.3076923077,true
+v6,v1,false,51.6153846154,true
+v6,v9,false,342.461538462,true
+v6,v10,false,142.153846154,true
+v7,v8,false,3.04273504274,true
+v7,v9,false,39.7692307692,true
+v7,v10,false,114.461538462,true
+v7,v16,false,16.6153846154,true
+v7,v18,false,12.2692307692,true
+v8,v7,false,3.04273504274,true
+v8,v9,false,73.8461538462,true
+v8,v10,false,49.8461538462,true
+v8,v16,false,19.2115384615,true
+v8,v18,false,30.5230769231,true
+v9,v0,false,16.6153846154,true
+v9,v4,false,335.076923077,true
+v9,v6,false,342.461538462,true
+v9,v7,false,39.7692307692,true
+v9,v8,false,73.8461538462,true
+v9,v10,false,154.153846154,true
+v9,v16,false,55.3846153846,true
+v10,v5,false,38.5,true
+v10,v6,false,142.153846154,true
+v10,v7,false,114.461538462,true
+v10,v8,false,49.8461538462,true
+v10,v9,false,154.153846154,true
+v10,v11,false,49.8461538462,true
+v10,v12,false,385.846153846,true
+v10,v14,false,12.0512820513,true
+v10,v16,false,275.846153846,true
+v11,v10,false,49.8461538462,true
+v11,v14,false,439.384615385,true
+v12,v2,false,70.1538461538,true
+v12,v3,false,27.5,true
+v12,v10,false,385.846153846,true
+v12,v17,false,192.076923077,true
+v13,v1,false,0.0,true
+v13,v4,false,101.961538462,true
+v13,v16,false,324.923076923,true
+v14,v0,false,960.923076923,true
+v14,v10,false,12.0512820513,true
+v14,v11,false,439.384615385,true
+v15,v4,false,56.4230769231,true
+v16,v5,false,73.8461538462,true
+v16,v7,false,16.6153846154,true
+v16,v8,false,19.2115384615,true
+v16,v9,false,55.3846153846,true
+v16,v10,false,275.846153846,true
+v16,v13,false,324.923076923,true
+v16,v18,false,20.2564102564,true
+v17,v12,false,192.076923077,true
+v18,v7,false,12.2692307692,true
+v18,v8,false,30.5230769231,true
+v18,v16,false,20.2564102564,true

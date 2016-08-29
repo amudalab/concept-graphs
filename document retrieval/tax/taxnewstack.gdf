@@ -1,0 +1,19 @@
+nodedef> name,label
+v0,abstract data type
+v1,data structure
+v2,last in first out
+v3,object
+v4,pop
+v5,push
+v6,size
+v7,stack
+v8,top
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v8,false,2.66666666667,true
+v1,v7,false,3.55555555556,true
+v2,v4,false,11.8888888889,true
+v3,v4,false,9.94444444445,true
+v4,v8,false,1.77777777778,true
+v5,v7,false,5.44444444444,true
+v6,v4,false,9.16666666667,true
+v8,v7,false,0.0,true

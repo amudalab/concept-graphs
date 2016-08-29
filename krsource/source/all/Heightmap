@@ -1,0 +1,146 @@
+
+Heightmap
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+This article is about modifying the geometry of surfaces - or the illusion of this - in computer graphics.  For techniques which relate to recording distances from a viewpoint, see depth map.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2009) 
+
+
+
+
+
+
+A heightmap created with Terragen
+
+
+
+
+
+
+The same heightmap converted to a 3D mesh and rendered with Anim8or
+
+
+In computer graphics, a heightmap or heightfield is a raster image used to store values, such as surface elevation data, for display in 3D computer graphics. A heightmap can be used in bump mapping to calculate where this 3D data would create shadow in a material, in displacement mapping to displace the actual geometric position of points over the textured surface, or for terrain where the heightmap is converted into a 3D mesh.
+A heightmap contains one channel interpreted as a distance of displacement or height from the floor of a surface and sometimes visualized as luma of a grayscale image, with black representing minimum height and white representing maximum height. When the map is rendered, the designer can specify the amount of displacement for each unit of the height channel, which corresponds to the contrast of the image. Heightmaps can be stored by themselves in existing grayscale image formats, with or without specialized metadata, or in specialized file formats such as Daylon Leveller, GenesisIV and Terragen documents.
+One may also exploit the use of individual color channels to increase detail. For example, a standard RGB 8-bit image can only show 256 values of grey and hence only 256 heights. By using colors, a greater number of heights can be stored (for an 8-bit image, 2563 = 16,777,216 heights can be represented (2564 = 4,294,967,296 if the alpha channel is also used)). This technique is especially useful where height varies slightly over a large area. Using only grey values, because the heights must be mapped to only 256 values, the rendered terrain appears flat, with "steps" in certain places.
+
+
+
+
+Heightmap of Earth's surface (including water and ice) in equirectangular projection, normalized as 8-bit grayscale
+
+
+Heightmaps are commonly used in geographic information systems, where they are called digital elevation models.
+
+
+
+
+Contents
+
+
+1 Creating of heightmaps
+2 Programs that use heightmaps
+
+2.1 Rendering software
+2.2 Generating software
+
+
+3 See also
+4 References
+5 External links
+
+
+
+
+[edit] Creating of heightmaps
+Heightmaps can be created by hand with a classical paint program or a special terrain editor. These editors visualise the terrain in 3D and allow the user to modify the surface. Normally there are tools to raise, lower, smooth or erode the terrain. Another way to create a terrain is to use a terrain generation algorithm. This can be for example a 2D Perlin noise function.[1] Another method is to use real world data for example from satellites.
+[edit] Programs that use heightmaps
+Heightmaps are widely used in terrain rendering software and modern video games. Heightmaps are an ideal way to store digital terrain elevations; compared to a regular polygonal mesh, they require substantially less memory for a given level of detail.
+In the earliest games using software rendering, the elements often represented heights of columns of voxels rendered with ray casting. In most newer games, the elements represent the height coordinate of polygons in a mesh.
+[edit] Rendering software
+
+Terragen  terrain renderer
+Picogen  terrain renderer and heightmap creation tool
+
+[edit] Generating software
+Many 3D video games use heightmaps to store and generate terrain data. Benefits of such a system include ease of implementation as well as modding. Players can easily generate their own heightmaps for use within the game using widely available software. Heightmaps are usually complemented by texture maps that are then applied to the terrain in-game for extra detail and realism.
+
+AC3D
+Artifex Terra 3D[2]  Advanced freeware 3D terrain editor and painter based on the Ogre3D engine, brush-centric editing, triplanar texturing, can import and export heightmaps.
+Battlefield 1942 and Battlefield 2 use heightmaps generated using Terragen and modified in the respective editors.
+Crashday  Uses Heightmaps in its Track Editor. Custom maps can also be imported by copying them into the heightmap folder.
+CryENGINE 2's Sandbox editor
+Earthsculptor - Edit/Create a terrain then generate a heightmap.
+Far Cry level editor  level editor that imports heightmaps.
+Grome  Advanced outdoor editor that uses multiple layers, brushes and procedural generation (fractals, erosion) to operate on terrain heightmaps.
+L3DT - Has tools to create a terrain, then generates a heightmap from the designed terrain.
+Myth
+Neverwinter Nights 2  The Electron toolset can be used to create heightmaps, while the Electron engine is used to traverse them.
+NovaLogic's Comanche series  first popular computer game to use heightmap terrain, advertised as a Voxel Space engine.
+OpenTTD scenario editor
+Outcast
+Quake3 and a host of subsequent or derivative games, use the GtkRadiant level editor to prepare the [mapname].map level files. This editor in its many bespoke formats, comes with a plugin "gensurf" that uses a greyscale bitmap to preview and generate terrain polygons for use in the map.
+Savage 2  Uses height maps for terrain generation. Additional objects can be added in the editor.
+SimCity Societies  Uses height maps for terrain generation.
+Star Wars Rogue Squadron II: Rogue Leader and Star Wars Rogue Squadron III: Rebel Strike - Uses height maps for planetary surfaces.
+Skyrim
+Spring  Open source 3D RTS engine
+Terra Nova: Strike Force Centauri
+Unreal Development Kit - Uses Heightmaps to create terrain as of its June 2011 build
+
+[edit] See also
+
+3D scanner
+Range imaging
+
+[edit] References
+
+^ Artificial Terrain Generation
+^ Artifex Terra 3D's homepage
+
+[edit] External links
+
+POV-Ray: Documentation: 2.4.1.5 Height Field
+
+ 
+NewPP limit report
+Preprocessor visited node count: 548/1000000
+Preprocessor generated node count: 5543/1500000
+Post-expand include size: 5071/2048000 bytes
+Template argument size: 2935/2048000 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:3371612-0!*!0!!en!4!* and timestamp 20130122191519 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Heightmap&oldid=517719815"				
+ /printfooter 
+ catlinks 
+Categories: Computer graphics data structuresHidden categories: Articles needing additional references from December 2009All articles needing additional references  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

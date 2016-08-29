@@ -1,0 +1,193 @@
+
+Virtual LAN
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from VLAN)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+"VLAN" redirects here. For the multimedia player, see VLC media player.
+In computer networking, virtual local area network, virtual LAN or VLAN is a concept of partitioning a physical network, so that distinct broadcast domains are created. This is usually achieved on switch or router devices. Simpler devices only support partitioning on a port level (if at all), so sharing VLANs across devices requires running dedicated cabling for each VLAN. More sophisticated devices can mark packets through tagging, so that a single interconnect (trunk) may be used to transport data for various VLANs.
+Grouping hosts with a common set of requirements regardless of their physical location by VLAN can greatly simplify network design. A VLAN has the same attributes as a physical local area network (LAN), but it allows for end stations to be grouped together more easily even if they are not on the same network switch. VLAN membership can be configured through software instead of physically relocating devices or connections. Most enterprise-level networks today use the concept of virtual LANs. Without VLANs, a switch considers all interfaces on the switch to be in the same broadcast domain.
+To physically replicate the functions of a VLAN would require a separate, parallel collection of network cables and equipment separate from the primary network. However, unlike physically separate networks, VLANs share bandwidth, so VLAN trunks may require aggregated links and/or quality of service priorization.
+
+
+
+
+Contents
+
+
+1 Uses
+2 History
+3 Implementation
+4 Motivation
+5 Protocols and design
+
+5.1 Cisco VLAN Trunking Protocol (VTP)
+
+
+6 Establishing VLAN memberships
+7 Protocol-Based VLANs
+8 VLAN Cross Connect
+9 See also
+10 References
+11 External links
+
+
+
+
+[edit] Uses
+Network architects set up VLANs to provide the segmentation services traditionally provided by routers in LAN configurations. VLANs address issues such as scalability, security, and network management. Routers in VLAN topologies provide broadcast filtering, security, address summarization, and traffic-flow management. By definition, switches may not bridge IP traffic between VLANs as doing so would violate the integrity of the VLAN broadcast domain.
+VLANs can also help create multiple layer 3 networks on the same layer 2 switch. For example, if a DHCP server is plugged into a switch it will serve any host on that switch that is configured to get its IP from a DHCP server. By using VLANs you can easily split the network up so some hosts won't use that DHCP server and will obtain link-local addresses, or obtain an address from a different DHCP server. Hosts may also use a DNS server if a DHCP is not available.
+VLANs are layer 2 constructs, compared with IP subnets, which are layer 3 constructs. In an environment employing VLANs, a one-to-one relationship often exists between VLANs and IP subnets, although it is possible to have multiple subnets on one VLAN. VLANs and IP subnets provide independent layer 2 and layer 3 constructs that map to one another and this correspondence is useful during the network design process.
+By using VLANs, one can control traffic patterns and react quickly to relocations. VLANs provide the flexibility to adapt to changes in network requirements and allow for simplified administration.
+VLANs could also be used in a school or work environment to provide easier access to local networks, to allow for easy administration, and to prevent from disruption on the network.
+In cloud computing VLANs, IP addresses, and MAC addresses on them are resources which end users can manage. Placing cloud-based virtual machines on VLANs may be preferable to directly on the Internet to avoid security issues.[1]
+[edit] History
+After successful experiments with Voice over Ethernet from 1981 to 1984, Dr. W. David Sincoskie joined Bellcore and began addressing the problem of scaling up Ethernet networks. At 10Mbit/s, Ethernet was faster than most alternatives of the time; however, Ethernet was a broadcast network and there was no good way of connecting multiple Ethernet networks together. This limited the total bandwidth of an Ethernet network to 10Mbit/s and the maximum distance between any two nodes to a few hundred feet.
+By contrast, although the existing telephone network's peak speed for individual connections was limited to 56kbit/s (less than one hundredth of Ethernet's speed), the total bandwidth of that network was estimated at 1Tbit/s, capable of moving over a hundred thousand times more information in a given timescale.
+Although it was possible to use IP routing to connect multiple Ethernet networks together, the VAX-11/780 computers commonly used as routers cost $400,000 each at that time, and their total throughput was significantly less than Ethernet speeds. Sincoskie started looking for alternatives that required less processing per packet. In the process he independently reinvented the self-learning ethernet switch.[2]
+However, using switches to connect multiple Ethernet networks in a fault-tolerant fashion requires redundant paths through that network, which in turn requires a spanning tree configuration. This ensures that there is only one active path from any source node to any destination on the network. This causes centrally located switches to become bottlenecks, which limits scalability as more networks are interconnected.
+To help alleviate this problem, Sincoskie invented VLANs by adding a tag to each Ethernet packet. These tags could be thought of as colors, say red, green, or blue. Then each switch could be assigned to handle packets of a single color, and ignore the rest. The networks could be interconnected with three different spanning trees: a red spanning tree, a green spanning tree, and a blue spanning tree. By sending a mix of different packet colors, the aggregate bandwidth could be improved. Sincoskie referred to this as a multitree bridge. He and Chase Cotton created and refined the algorithms (called the Extended Bridge Algorithms for Large Networks) necessary to make the system feasible.[3]
+This "color" is what is now known in the Ethernet frame as the 802.1Q header, or the VLAN tag. While VLANs are commonly used in modern Ethernet networks, using them for the original purpose would be rather unusual.
+[edit] Implementation
+A basic switch not configured for VLANs has VLAN functionality disabled or permanently enabled with a default VLAN that contains all ports on the device as members. Every device connected to one of its ports can send packets to any of the others. Separating ports by VLAN groups separates their traffic very much like connecting the devices to another, distinct switch of their own.
+Configuration of the first custom VLAN port group usually involves removing ports from the default VLAN, such that the first custom group of VLAN ports is actually the second VLAN on the device, in addition to the default VLAN. The default VLAN typically has an ID of 1.
+If a VLAN port group were to exist only on one device, no ports that are members of the VLAN group need be tagged. These ports would hence be considered "untagged". It is only when the VLAN port group is to extend to another device that tagging is used. Since communications between ports on two different switches travel via the uplink ports of each switch involved, every VLAN containing such ports must also contain the uplink port of each switch involved, and these ports must be tagged. This also applies to the default VLAN.
+Some switches either allow or require a name be created for the VLAN, but it is only the VLAN group number that is important from one switch to the next.
+Where a VLAN group is to simply pass through an intermediate switch via two pass-through ports, only the two ports must be a member of the VLAN, and are tagged to pass both the required VLAN and the default VLAN on the intermediate switch.
+Management of the switch requires that the administrative functions be associated with one of the configured VLANs. If the default VLAN were deleted or renumbered without first moving the management connection to a different VLAN, it is possible for the technician to be locked out of the switch configuration, requiring a forced clearing of the device configuration (possibly to the factory default) to regain access.
+Switches typically have no built-in method to indicate VLAN port members to someone working in a wiring closet. It is necessary for a technician to either have administrative access to the device to view its configuration, or for VLAN port assignment charts or diagrams to be kept next to the switches in each wiring closet. These charts must be manually updated by the technical staff whenever port membership changes are made to the VLANs.
+Remote configuration of VLANs presents several opportunities for a technician to cut off communications accidentally and lose connectivity to the devices they are attempting to configure. Actions such as subdividing the default VLAN by splitting off the switch uplink ports into a separate new VLAN can suddenly terminate all remote connectivity, requiring the device to be physically accessed at the distant location to continue the configuration process.
+[edit] Motivation
+In a legacy network, users were assigned to networks based on geography and were limited by physical topologies and distances. VLANs can logically group networks so that the network location of users is no longer so tightly coupled to their physical location. Technologies able to implement VLANs are:
+
+Asynchronous Transfer Mode (ATM)
+Fiber Distributed Data Interface (FDDI)
+Ethernet
+HiperSockets
+InfiniBand
+
+[edit] Protocols and design
+The protocol most commonly used today in configuring VLANs is IEEE 802.1Q. The IEEE committee defined this method of multiplexing VLANs in an effort to provide multivendor VLAN support. Prior to the introduction of the 802.1Q standard, several proprietary protocols existed, such as Cisco's ISL (Inter-Switch Link) and 3Com's VLT (Virtual LAN Trunk). Cisco also implemented VLANs over FDDI by carrying VLAN information in an IEEE 802.10 frame header, contrary to the purpose of the IEEE 802.10 standard.
+Both ISL and IEEE 802.1Q tagging perform "explicit tagging" - the frame itself is tagged with VLAN information. ISL uses an external tagging process that does not modify the existing Ethernet frame, while 802.1Q uses a frame-internal field for tagging, and so does modify the Ethernet frame. This internal tagging is what allows IEEE 802.1Q to work on both access and trunk links: frames are standard Ethernet, and so can be handled by commodity hardware.
+Under IEEE 802.1Q, the maximum number of VLANs on a given Ethernet network is 4,096. This does not impose the same limit on the number of IP subnets in such a network, since a single VLAN can contain multiple IP subnets. The VLAN limit is expanded to 16 million with Shortest Path Bridging.
+Inter-Switch Link (ISL) is a Cisco proprietary protocol used to interconnect multiple switches and maintain VLAN information as traffic travels between switches on trunk links. This technology provides one method for multiplexing bridge groups (VLANs) over a high-speed backbone. It is defined for Fast Ethernet and Gigabit Ethernet, as is IEEE 802.1Q. ISL has been available on Cisco routers since Cisco IOS Software Release 11.1.
+With ISL, an Ethernet frame is encapsulated with a header that transports VLAN IDs between switches and routers. ISL does add overhead to the packet as a 26-byte header containing a 10-bit VLAN ID. In addition, a 4-byte CRC is appended to the end of each frame. This CRC is in addition to any frame checking that the Ethernet frame requires. The fields in an ISL header identify the frame as belonging to a particular VLAN.
+A VLAN ID is added only if the frame is forwarded out a port configured as a trunk link. If the frame is to be forwarded out a port configured as an access link, the ISL encapsulation is removed.
+Early network designers often configured VLANs with the aim of reducing the size of the collision domain in a large single Ethernet segment and thus improving performance. When Ethernet switches made this a non-issue (because each switch port is a collision domain), attention turned to reducing the size of the broadcast domain at the MAC layer. A VLAN can also serve to restrict access to network resources without regard to physical topology of the network, although the strength of this method remains debatable as VLAN Hopping [4] is a common means of bypassing such security measures.
+VLANs operate at Layer 2 (the data link layer) of the OSI model. Administrators often configure a VLAN to map directly to an IP network, or subnet, which gives the appearance of involving Layer 3 (the network layer). In the context of VLANs, the term "trunk" denotes a network link carrying multiple VLANs, which are identified by labels (or "tags") inserted into their packets. Such trunks must run between "tagged ports" of VLAN-aware devices, so they are often switch-to-switch or switch-to-router links rather than links to hosts. (Note that the term 'trunk' is also used for what Cisco calls "channels": Link Aggregation or Port Trunking). A router (Layer 3 device) serves as the backbone for network traffic going across different VLANs.
+[edit] Cisco VLAN Trunking Protocol (VTP)
+Main article: VLAN Trunking Protocol
+On Cisco Devices, VTP (VLAN Trunking Protocol) maintains VLAN configuration consistency across the entire network. VTP uses Layer 2 trunk frames to manage the addition, deletion, and renaming of VLANs on a network-wide basis from a centralized switch in the VTP server mode. VTP is responsible for synchronizing VLAN information within a VTP domain and reduces the need to configure the same VLAN information on each switch.
+VTP minimizes the possible configuration inconsistencies that arise when changes are made. These inconsistencies can result in security violations, because VLANs can cross connect when duplicate names are used. They also could become internally disconnected when they are mapped from one LAN type to another, for example, Ethernet to ATM LANE ELANs or FDDI 802.10 VLANs. VTP provides a mapping scheme that enables seamless trunking within a network employing mixed-media technologies.
+VTP provides the following benefits:
+
+VLAN configuration consistency across the network
+Mapping scheme that allows a VLAN to be trunked over mixed media
+Accurate tracking and monitoring of VLANs
+Dynamic reporting of added VLANs across the network
+Plug-and-play configuration when adding new VLANs
+
+As beneficial as VTP can be, it does have disadvantages that are normally related to the spanning tree protocol (STP) as a bridging loop propagating throughout the network can occur. Cisco switches run an instance of STP for each VLAN, and since VTP propagates VLANs across the campus LAN, VTP effectively creates more opportunities for a bridging loop to occur.
+Before creating VLANs on the switch that will propagate via VTP, a VTP domain must first be set up. A VTP domain for a network is a set of all contiguously trunked switches with the same VTP domain name. All switches in the same management domain share their VLAN information with each other, and a switch can participate in only one VTP management domain. Switches in different domains do not share VTP information.
+Using VTP, each Catalyst Family Switch advertises the following on its trunk ports:
+
+Management domain
+Configuration revision number
+Known VLANs and their specific parameters
+
+[edit] Establishing VLAN memberships
+The two common approaches to assigning VLAN membership are as follows:
+
+Static VLANs
+Dynamic VLANs
+
+Static VLANs are also referred to as port-based VLANs. Static VLAN assignments are created by assigning ports to a VLAN. As a device enters the network, the device automatically assumes the VLAN of the port. If the user changes ports and needs access to the same VLAN, the network administrator must manually make a port-to-VLAN assignment for the new connection.
+Dynamic VLANs are created through the use of software. With a VLAN Management Policy Server (VMPS), an administrator can assign switch ports to VLANs dynamically based on information such as the source MAC address of the device connected to the port or the username used to log onto that device. As a device enters the network, the switch queries a database for the VLAN membership of the port that device is connected to.
+[edit] Protocol-Based VLANs
+In a switch that supports protocol-based VLANs, traffic is handled on the basis of its protocol. Essentially, this segregates or forwards traffic from a port depending on the particular protocol of that traffic; traffic of any other protocol is not forwarded on the port.
+For example, it is possible to connect to a given switch the following:
+
+a host generating ARP traffic to port 10
+a network with IPX traffic to port 20
+a router forwarding IP traffic to port 30
+
+If a protocol-based VLAN is created that supports IP and contains all three ports, this prevents IPX traffic from being forwarded to ports 10 and 30, and ARP traffic from being forwarded to ports 20 and 30, while still allowing IP traffic to be forwarded on all three ports.
+[edit] VLAN Cross Connect
+VLAN Cross Connect (CC) is a mechanism used to create Switched VLANs, VLAN CC uses IEEE 802.1ad frames where the S Tag is used as a Label as in MPLS. IEEE approves the use of such a mechanism in par 6.11 of IEEE 802.1ad-2005.
+[edit] See also
+
+IEEE 802.1Q
+MVRP Multiple VLAN Registration Protocol (formerly GVRP GARP VLAN Registration Protocol)
+Private VLAN (PVLAN)
+Virtual network
+VLAN access control list
+VoIP recording
+VPLS Virtual Private LAN Service
+VPN Virtual private network
+SVI Switch virtual interface
+WAN Wide Area Network
+
+[edit] References
+
+
+^ Amies A, Wu C F, Wang G C, Criveti M (2012). Networking on the cloud IBM developerWorks, June 21.
+^ Sincoskie, WD (2002) "Broadband packet switching: a personal perspective." IEEE Commun 40: 54-66
+^ W. D. Sincoskie and C. J. Cotton, "Extended Bridge Algorithms for Large Networks" IEEE Network, Jan. 1988.
+^ VLAN Insecurity - Rik Farrow
+
+
+
+Andrew S. Tanenbaum, 2003, "Computer Networks", Pearson Education International, New Jersey.
+
+[edit] External links
+
+IEEE's 802.1Q standard 1998 version (2003 version)(2005 version)
+Cisco Systems
+
+Cisco home page for Virtual LANs/VLAN Trunking Protocol (VLANs/VTP) (discusses DSL, DTP, GVRP, ISL, VTP, 802.1Q)
+Cisco's Overview of Routing between VLANs
+Cisco's Bridging Between IEEE 802.1Q VLANs white paper
+
+
+University of California's VLAN Information
+OpenWRT guide to VLANs: Provides a beginners' guide to VLANs
+Study of VLAN usage in Purdue University's Campus Network
+Towards Systematic Design of Enterprise Networks: Demonstrates how to systematically produce a VLAN design
+Some FAQ about VLANs
+Interactive VLAN Basics Simulation
+
+ 
+NewPP limit report
+Preprocessor visited node count: 253/1000000
+Preprocessor generated node count: 2131/1500000
+Post-expand include size: 808/2048000 bytes
+Template argument size: 356/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:101416-0!*!0!!en!*!* and timestamp 20121217191425 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Virtual_LAN&oldid=528513359"				
+ /printfooter 
+ catlinks 
+Categories: Local area networks  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

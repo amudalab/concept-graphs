@@ -1,0 +1,397 @@
+
+R-tree
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+This article is about the data structure.  For the type of metric space, see Real tree.
+
+
+
+
+Simple example of an R-tree for 2D rectangles
+
+
+
+
+
+
+Visualization of an R*-tree for 3D cubes using ELKI
+
+
+R-trees are tree data structures used for spatial access methods, i.e., for indexing multi-dimensional information such as geographical coordinates, rectangles or polygons. The R-tree was proposed by Antonin Guttman in 1984[1] and has found significant use in both theoretical and applied contexts.[2] A common real-world usage for an R-tree might be to store spatial objects such as restaurant locations or the polygons that typical maps are made of: streets, buildings, outlines of lakes, coastlines, etc. and then find answers quickly to queries such as "Find all museums within 2 km of my current location", "retrieve all road segments within 2 km of my location" (to display them in a navigation system) or "find the nearest gas station" (although not taking roads into account).
+
+
+
+
+Contents
+
+
+1 R-tree idea
+2 Variants
+3 Algorithm
+
+3.1 Data layout
+3.2 Search
+3.3 Insertion
+
+3.3.1 Choosing the insertion subtree
+3.3.2 Splitting an overflowing node
+
+
+3.4 Deletion
+3.5 Bulk-loading
+
+
+4 See also
+5 References
+6 External links
+
+
+
+
+[edit] R-tree idea
+The key idea of the data structure is to group nearby objects and represent them with their minimum bounding rectangle in the next higher level of the tree; the "R" in R-tree is for rectangle. Since all objects lie within this bounding rectangle, a query that does not intersect the bounding rectangle also cannot intersect any of the contained objects. At the leaf level, each rectangle describes a single object; at higher levels the aggregation of an increasing number of objects. This can also be seen as an increasingly coarse approximation of the data set.
+Similar to the B-tree, the R-tree is also a balanced search tree (so all leaf nodes are at the same height), organizes the data in pages, and is designed for storage on disk (as used in databases). Each page can contain a maximum number of entries, often denoted as . It also guarantees a minimum fill (except for the root node), however best performance has been experienced with a minimum fill of 30%40% of the maximum number of entries (B-trees guarantee 50% page fill, and B*-trees even 66%). The reason for this is the more complex balancing required for spatial data as opposed to linear data stored in B-trees.
+As with most trees, the searching algorithms (e.g., intersection, containment, nearest neighbor search) are rather simple. The key idea is to use the bounding boxes to decide whether or not to search inside a subtree. In this way, most of the nodes in the tree are never read during a search. Like B-trees, this makes R-trees suitable for large data sets and databases, where nodes can be paged to memory when needed, and the whole tree cannot be kept in main memory.
+The key difficulty of R-trees is to build an efficient tree that on one hand is balanced (so the leaf nodes are at the same height) on the other hand the rectangles do not cover too much empty space and do not overlap too much (so that during search, fewer subtrees need to be processed). For example, the original idea for inserting elements to obtain an efficient tree is to always insert into the subtree that requires least enlargement of its bounding box. Once that page is full, the data is split into two sets that should cover the minimal area each. Most of the research and improvements for R-trees aims at improving the way the tree is built and can be grouped into two objectives: building an efficient tree from scratch (known as bulk-loading) and performing changes on an existing tree (insertion and deletion).
+R-trees do not historically guarantee[clarification needed] good worst-case performance, but generally perform well with real-world data.[3] While more of theoretical interest, the (bulk-loaded) Priority R-tree variant of the R-tree is also worst-case optimal,[4] but due to the increased complexity, has not received much attention in practical applications so far.
+When data is organized in an R-tree, the k nearest neighbors (for any Lp-Norm) of all points can efficiently be computed using a spatial join.[5] This is beneficial for many algorithms based on the k nearest neighbors, for example the Local Outlier Factor. DeLi-Clu,[6] Density-Link-Clustering is a cluster analysis algorithm that uses the R-tree structure for a similar kind of spatial join to efficiently compute an OPTICS clustering.
+[edit] Variants
+
+R* tree
+R+ tree
+Hilbert R-tree
+X-tree
+
+[edit] Algorithm
+[edit] Data layout
+Data in R-trees is organized in pages, that can have a variable number of entries (up to some pre-defined maximum, and usually above a minimum fill). Each entry within a non-leaf node stores two pieces of data: a way of identifying a child node, and the bounding box of all entries within this child node. Leaf nodes store the data required for each child, often a point or bounding box representing the child and an external identifier for the child. For point data, the leaf entries can be just the points themselves. For polygon data (that often requires the storage of large polygons) the common setup is to store only the MBR (minimum bounding rectangle) of the polygon along with a unique identifier in the tree.
+[edit] Search
+The input is a search rectangle (Query box). Searching is quite similar to searching in a B+ tree. The search starts from the root node of the tree. Every internal node contains a set of rectangles and pointers to the corresponding child node and every leaf node contains the rectangles of spatial objects (the pointer to some spatial object can be there). For every rectangle in a node, it has to be decided if it overlaps the search rectangle or not. If yes, the corresponding child node has to be searched also. Searching is done like this in a recursive manner until all overlapping nodes have been traversed. When a leaf node is reached, the contained bounding boxes (rectangles) are tested against the search rectangle and their objects (if there are any) are put into the result set if they lie within the search rectangle.
+[edit] Insertion
+To insert an object, the tree is traversed recursively from the root node. At each step, all rectangles in the current directory node are examined, and a candidate is chosen using a heuristic such as choosing the rectangle which requires least enlargement. The search then descends into this page, until reaching a leaf node. If the leaf node is full, it must be split before the insertion is made. Again, since an exhaustive search is too expensive, an heuristic is employed to split the node into two. Adding the newly created node to the previous level, this level can again overflow, and these overflows can propagate up to the root node; when this node also overflows, a new root node is created and the tree has increased in height.
+[edit] Choosing the insertion subtree
+At each level, the algorithm needs to decide in which subtree to insert the new data object. When a data object is fully contained in a single rectangle, the choice is clear. When there are multiple options or rectangles in need of enlargement, the choice can have a significant impact on the performance of the said tree.
+In the classic R-tree, objects are inserted into the subtree that needs the least enlargement. In the more advanced R*-tree, a mixed heuristic is employed. At leaf level, it tries to minimize the overlap (in case of ties, prefer least enlargement and then least area); at the higher levels, it behaves similar to the R-tree, but on ties again preferring the subtree with smaller area. The decreased overlap of rectangles in the R*-tree is one of the key benefits over the traditional R-tree (this is also a consequence of the other heuristics used, not only the subtree choosing).
+[edit] Splitting an overflowing node
+Since redistributing all objects of a node into two nodes has an exponential number of options, an heuristic needs to be employed to find the best split. In the classic R-tree, Guttman proposed two such heuristics, called QuadraticSplit and LinearSplit. In quadratic split, the algorithm searches the pair of rectangles that is the worst combination to have in the same node, and puts them as initial objects into the two new groups. It then searches the entry which has the strongest preference for one of the groups (in terms of area increase) and assigns the object to this group until all objects are assigned (satisfying the minimum fill).
+There are other splitting strategies such as Greene's Split,[7] the R*-tree splitting heuristic[8] (which again tries to minimize overlap, but also prefers quadratic pages) or the linear split algorithm proposed by Ang and Tan[9] (which however can produce very unregular rectangles, which are less performant for many real world range and window queries). In addition to having a more advanced splitting heuristic, the R*-tree also tries to avoid splitting a node by reinserting some of the node members, which is similar to the way a B-tree balances overflowing nodes. This was shown to also reduce overlap and thus tree performance.
+Finally, the X-tree[10] can be seen as a R*-tree variant that can also decide to not split a node, but construct a so-called super-node containing all the extra entries, when it doesn't find a good split (in particular for high-dimensional data).
+
+
+Effect of different splitting heuristics on a database with Germany postal districts
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guttman quadratic split.[1]
+There are many pages that extend from east to west all over Germany, and pages overlap a lot. This is not beneficial for most applications as many only need a small rectangular area that intersects with many slices. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ang-Tan linear split.[9]
+While the slices do not extend as far as with Guttman, the slicing problem affects almost every leaf page. Leaf pages overlap little, but directory pages do. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+R* tree topological split.[8]
+The pages overlap very little since the R*-tree tries to minimize page overlap, and the reinsertions further optimized the tree. The split strategy also does not prefer slices, the resulting pages are much more useful for common map applications. 
+
+
+
+
+
+
+[edit] Deletion
+Deleting an entry from a page may require updating the bounding rectangles of parent pages. However, when a page is underfull, it will not be balanced with its neighbors. Instead, the page will be dissolved and all its children (which may be subtrees, not only leaf objects) will be reinserted. If during this process the root node has a single element, the tree height can decrease.
+
+
+
+This section requires expansion. (October 2011)
+
+
+[edit] Bulk-loading
+
+Nearest-X - Objects are sorted by their first coordinate ("X") and then split into pages of the desired size.
+Packed Hilbert R-tree - variation of Nearest-X, but sorting using the Hilbert value of the center of a rectangle instead of using the X coordinate. There is no guarantee the pages will not overlap.
+Sort-Tile-Recursive (STR)[11]: Another variation of Nearest-X, that estimates the total number of leaves required as , the required split factor in each dimension to achieve this as , then repeatedly splits each dimensions successively into  equal sized partitions using 1-dimensional sorting. The resulting pages, if they occupy more than one page, are again bulk-loaded using the same algorithm. For point data, the leaf nodes will not overlap, and "tile" the data space into approximately equal sized pages.
+Priority R-tree
+
+
+
+
+This section requires expansion. (June 2008)
+
+
+[edit] See also
+
+Segment tree
+Interval tree - A degenerate R-tree for one dimension (usually time).
+Bounding volume hierarchy
+Spatial index
+GiST
+
+[edit] References
+
+^ a b Guttman, A. (1984). "R-Trees: A Dynamic Index Structure for Spatial Searching". Proceedings of the 1984 ACM SIGMOD international conference on Management of data - SIGMOD '84. pp.47. doi:10.1145/602259.602266. ISBN0897911288. http://www-db.deis.unibo.it/courses/SI-LS/papers/Gut84.pdf. edit
+^ Y. Manolopoulos; A. Nanopoulos; Y. Theodoridis (2006). R-Trees: Theory and Applications. Springer. ISBN978-1-85233-977-7. http://books.google.com/books?id=1mu099DN9UwC&pg=PR5. Retrieved 8 October 2011.
+^ Hwang, S.; Kwon, K.; Cha, S. K.; Lee, B. S. (2003). "Performance Evaluation of Main-Memory R-tree Variants". Advances in Spatial and Temporal Databases. Lecture Notes in Computer Science. 2750. pp.10. doi:10.1007/978-3-540-45072-6_2. ISBN978-3-540-40535-1. edit
+^ Arge, L.; De Berg, M.; Haverkort, H. J.; Yi, K. (2004). "The Priority R-tree". Proceedings of the 2004 ACM SIGMOD international conference on Management of data - SIGMOD '04. pp.347. doi:10.1145/1007568.1007608. ISBN1581138598. http://www.win.tue.nl/~mdberg/Papers/prtree.pdf. edit
+^ Brinkhoff, T.; Kriegel, H. P.; Seeger, B. (1993). "Efficient processing of spatial joins using R-trees". ACM SIGMOD Record 22 (2): 237. doi:10.1145/170036.170075. edit
+^ Achtert, E.; Bhm, C.; Krger, P. (2006). "DeLi-Clu: Boosting Robustness, Completeness, Usability, and Efficiency of Hierarchical Clustering by a Closest Pair Ranking". LNCS: Advances in Knowledge Discovery and Data Mining. Lecture Notes in Computer Science 3918: 119128. doi:10.1007/11731139_16. ISBN978-3-540-33206-0. edit
+^ Greene, D. (1989). "An implementation and performance analysis of spatial data access methods". [1989] Proceedings. Fifth International Conference on Data Engineering. pp.606615. doi:10.1109/ICDE.1989.47268. ISBN0-8186-1915-5. edit
+^ a b Beckmann, N.; Kriegel, H. P.; Schneider, R.; Seeger, B. (1990). "The R*-tree: an efficient and robust access method for points and rectangles". Proceedings of the 1990 ACM SIGMOD international conference on Management of data - SIGMOD '90. pp.322. doi:10.1145/93597.98741. ISBN0897913655. http://dbs.mathematik.uni-marburg.de/publications/myPapers/1990/BKSS90.pdf. edit
+^ a b Ang, C. H.; Tan, T. C. (1997). "New linear node splitting algorithm for R-trees". In Scholl, Michel; Voisard, Agns. Proceedings of the 5th International Symposium on Advances in Spatial Databases (SSD '97), Berlin, Germany, July 1518, 1997. Lecture Notes in Computer Science. 1262. Springer. pp.337349. doi:10.1007/3-540-63238-7_38. edit
+^ Berchtold, Stefan; Keim, Daniel A.; Kriegel, Hans-Peter (1996). "The X-Tree: An Index Structure for High-Dimensional Data". Proceedings of the 22nd VLDB Conference (Mumbai, India): 2839. http://www.dbs.ifi.lmu.de/Publikationen/Papers/x-tree.ps.
+^ Leutenegger, Scott T.; Edgington, Jeffrey M.; Lopez, Mario A. (February 1997). STR: A Simple and Efficient Algorithm for R-Tree Packing. http://archive.org/details/nasa_techdoc_19970016975.
+
+[edit] External links
+
+
+
+Wikimedia Commons has media related to: R-tree
+
+
+
+R-tree portal
+R-tree implementations: C & C++, Java applet, Common Lisp, Python, Javascript.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Trees in computer science
+
+
+
+
+
+
+Binary trees
+
+
+
+Binary search tree (BST)
+Cartesian tree
+MVP Tree
+Top tree
+T-tree
+
+
+
+
+
+
+
+
+Self-balancing binary search trees
+
+
+
+AA tree
+AVL tree
+LLRB tree
+Redblack tree
+Scapegoat tree
+Splay tree
+Treap
+
+
+
+
+
+
+
+
+B-trees
+
+
+
+B+ tree
+B*-tree
+Bx-tree
+UB-tree
+2-3 tree
+2-3-4 tree
+(a,b)-tree
+Dancing tree
+Htree
+
+
+
+
+
+
+
+
+Tries
+
+
+
+Suffix tree
+Radix tree
+Ternary search tree
+X-fast trie
+Y-fast trie
+
+
+
+
+
+
+
+
+Binary space partitioning (BSP) trees
+
+
+
+Quadtree
+Octree
+k-d tree
+Implicit k-d tree
+VP tree
+
+
+
+
+
+
+
+
+Non-binary trees
+
+
+
+Exponential tree
+Fusion tree
+Interval tree
+PQ tree
+Range tree
+SPQR tree
+Van Emde Boas tree
+
+
+
+
+
+
+
+
+Spatial data partitioning trees
+
+
+
+R-tree
+R+ tree
+R* tree
+X-tree
+M-tree
+Segment tree
+Hilbert R-tree
+Priority R-tree
+
+
+
+
+
+
+
+
+Other trees
+
+
+
+Heap
+Hash calendar
+Hash tree
+Finger tree
+Order statistic tree
+Metric tree
+Cover tree
+BK-tree
+Doubly chained tree
+iDistance
+Link-cut tree
+Fenwick tree
+
+
+
+
+
+
+
+
+ 
+NewPP limit report
+Preprocessor visited node count: 10292/1000000
+Preprocessor generated node count: 68795/1500000
+Post-expand include size: 120116/2048000 bytes
+Template argument size: 29019/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 11/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:865249-0!0!0!!en!4!* and timestamp 20130122102249 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=R-tree&oldid=528724945"				
+ /printfooter 
+ catlinks 
+Categories: R-treeHidden categories: Wikipedia articles needing clarification from March 2012Articles to be expanded from October 2011All articles to be expandedArticles to be expanded from June 2008Commons category template with no category set  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

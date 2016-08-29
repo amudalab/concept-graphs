@@ -1,0 +1,795 @@
+today we are going to continue our discussion hashing in the last class we saw what hash table was what the concept of hashing is we shown and we also saw how to resolve collision in hashing using linked list 
+so that method of hashing is also called  that method of collision is also called chaining 
+so today we are going to look at 
+two other method of collision resolution linear probing and double hashing we are also going to spend some more time discussing what hash functions what good hash function should look likeso what is the good hash function the function which can be computed quickly 
+it should be quick to compute and it should as we said in the previous class it should distribute the keys uniformly over the hash table 
+right it should not 
+happen all the keys get mapped to the same location because then the performance of hashing would become as worse that of a linked list 
+good hash function are very rare 
+and there is a famous paradox called birthday paradox right there would be about thirty five students here or thirty five students more sitting in this class and there is very high probability 
+you can actually compute that probability the two of would have same birthdays right
+so although you would think that there are three sixty five days in the year and if each one of them were each one of you have one of these days birthday then there is very small  probability that two would have the same 
+but that?s not the case 
+even with just thirty five people close to that you know you would have fairly high probability that two people would have same birthdays 
+and the same kind of thing is happening 
+here right 
+your days of the year correspond to your slots in the hash table and even if i were to take a key and put at randomly one of those slots there is very high probability that two keys were end up in the same slot birthday paradox 
+no matter what kind of hash function you use your going to have collisions right 
+there is no getting around that 
+and then there is also this notion this problem of how to deal with non integer keys 
+in fact we saw one example in the last class 
+where the keys were telephone numbers we had return the telephone numbers this manner and how did we treated as an integer 
+we doesn?t drop this hyphen in between then we thought as an integer 
+your going to see some more techniques of converting non integers keys in to integer ones 
+the other example that taken in the last class were your entry numbers 
+were again the key was a non integer key 
+because it had c s y or whatever c is u or c is z coming in their yeah 
+so we have to convert in to integers and what we did in the last class was said okay
+those keys we are just going to take the last two digits as the hash function value 
+we are going to see some more techniques of converting non integer keys into integer ones 
+so hash function can actually be thought of as being in two parts 
+there is a hash code map and there is a compression map these together make a hash function 
+so recall a hash function its basically a mapping of keys this is of a hash table 
+your hash code map maps the key to integer if your keys already an integer there is no need for this thing yeah 
+but when your keys are not integer keys then you will have to first convert them in to integer keys um right 
+but this integer could be from an arbitrary range 
+now it need to 
+bring it to the range of our to the size of our hash table 
+if n is my hash table then i need to bring this integer to the range zero through n minus one right 
+so that it can mapped to an index of my table 
+
+so that part you will call compression map 
+we will see what kind of functions are used what kind for these two things 
+one other requirement of hash function is that should map if one key 
+gets map to an certain index then the next time i want to map an key it should get map to the same index location 
+it should be that the next time its gets mapped to the some other index location 
+you understand what mean by this 
+so um in the last class we took an example of key which was let say two thousand four c as one zero one one zero 
+and we mapped to location ten 
+if you recall right 
+now i cannot have a hash function which sometimes maps it location ten and sometime its mapped to location thirteen right 
+there could not be any kind of randomization happening there why is that because you know when i insert may be mapped to location ten 
+but when i am trying to retrieve it trying to search for it if it gets mapped to location thirteen 
+then i do not know where the keys right 
+so it should map 
+equal keys to the same indices and of course and we try and minimize the probability of collisions 
+so lets look at what are the different what are the popular hash code maps 
+recall the hash code map the part which converts your key to an integer 
+so one thing is that you just take whatever is bit pat and interpret it has an integer 
+right so that would be 
+if you have numeric type thirty two bits or less we can interpret the bits as an integer  as an number yeah 
+if you have lets say your key which has more than thirty two bits in it it say up to real numbers a longer double real number which takes more than four bytes then you can add you can take eighteen chunks of thirty two bits
+and add them up 
+so take the first four bytes and add to it next four bytes so on and on to get eventually some thirty two bit that could be integer you are working 
+
+so such a kind of tree it could also be used to compute the hash code map of a string 
+suppose i was using the key as your name right 
+so 
+even in a particular name lets say ankur i want to compute the value of the i want to compute converted to an integer 
+so one possibility would be that i would lets say take the ascii code of a take the ascii  code of n of k of u of r add them up right and that that interpreted as an integer okay 
+you understand what i am trying to say now 
+why this is a bad  strategy [noise] why would the number of collisions would be high  [noise] why would the sum of two different names  be the same [student:order is different]  only if the order is different right and that happens for making many many different words okay not may be for names so much but many words in the English dictionary would be you know would would obtain from the same letters [noise] and if two of the if you have two words such that the letters was same g o d d o g right then just because just summing up the ascii value we are always going to the same location so such kind of things will definitely have to try and avoid 
+[student: sir even if the words are not same like you a instead of a there is b instead of c there is b again they will add up to same ] yeah 
+so what you are saying is even if the words were not the same but a was replaced by b and n was replaced by [noise] m then even then we end up with the same that?s right 
+so again now these are all reasons why this is perhaps not a great strategy right 
+specially when you are trying to converts strings character strings in to an integer 
+so one technique used in such settings whats called polynomial accumulation 
+
+so your going to suppose you have the ascii you have a certain string and may a not is the ascii code for the [noise] first character of the string and a one is the ascii code for the second character and so on and on right 
+now you are going to think of it as a polynomial whose coefficient things are a not a one up to a minus one right 
+this is your polynomial a not plus a one x and now you going to evaluate this polynomial at a certain value of  x right 
+and that evaluation that value is going to be the integer corresponding to this string right 
+that integer might from our large range then we will use the compression map to map it to the table 
+but first we are looking at the hash code map weren?t we trying to convert a string or a non integer data in to an integer 
+we are looking at the setting were the the string we have this and we are trying to converted to an integer right 
+so evaluate this polynomial at some integer value and it has been this is you know experimental stuff 
+so people have looked at and found that if you work with x as thirty three thirty seven thirty nine or forty one with these values and if you take lets say English dictionary with about fifty thousand words in it and use this technique to convert 
+your words in to integer then you will get not too many collisions that at a particular you will have at most  six collisions right 
+this is there is no query behind it 
+this has been observed experimental right 
+so this kind of is an is some experimental study 
+in favour of this kind of a hash code map 
+lets now look at some compression map 
+given an integer now you have to map it to the small range of your table yeah 
+
+so one natural thing would be that this k is your integer and your table as of your size lets say little m 
+so just do k mod m 
+k mod m will give you some integer in the range zero through m minus one yeah k is the key m is the size of the table 
+now suppose you were to choose your m to be two to the something lets say your table is of course size thousand twenty four and you choose your right 
+so m is basically two to the ten 
+now what would that imply when i am taking some integer mod two to the ten then essentially that means that i am taking the the last ten bits of that integer 
+yes or no yeah
+so think of write the integer in in its binary representation and then when i am taking mod two would what that mean taking the last bit of the integer 
+if it is zero then i get zero always if its one i get one 
+if i am taking mod four i am getting the last two bits so if i am taking lets say mod two to the ten then i am getting the last ten bits [noise] 
+and so all integers which have the same last ten bits i would going to get map to the same location 
+this is bad because what we are doing is we are forgetting the other bits of the integer we just taking some small set of a bits the last ten bits basing our um basing the hash function on that right one should not do such a thing 
+you should not take your m 
+in this case if your using this kind of compression map this simple compression map right 
+then you should not pick up the size of your hash table to be some thing like a to be some power of two in fact it helps it should take the size of the hash table to be prime number to give an example  
+suppose i had two thousand strings that i was trying to put in hash table 
+so i will try to pick the size of my hash table lets say seven hundred and one which is the prime number right 
+this will assure that if things went of well then 
+on an average i would see only three strings seven o one in to threes roughly 
+
+thousand i would see only three strings per location 
+in my chaining then i have the linked list i would have linked list only
+only length roughly three right and one important thing is also is that 
+
+you know its also observed that one should not pick up your size of hash table close  to a power of two because the same kind of effect its start happening has when happen you have the size of the hash table 
+ to be exactly of two right 
+
+so if you are going to be using that kind of a compression map which is just key mod m then keep in mind that m should be something which should definitely not be a power of two 
+or even close to a power of two and it should preferably a prime number  [noise] that should also work there is no [noise] you know as far as whether its work or not the problem is that you know when when do things dont work 
+you see a lot of collisions happening right 
+and lot of it as i said it depends upon the data that you have depends upon the keys you are trying to insert in to your hash table 
+so these are  generic principles right which you follow perhaps improve  performance right
+but there is nothing here say that this will not work at all 
+[noise]  yeah so there are they have been an instances um we did some experiment for where if it was sometime better to take a number which was not necessarily prime 
+okay what are other kinds of compression maps you can use 
+
+so there is other compression map you can use 
+so essentially first read out 
+the second part what you do is suppose your key is are in the range zero through k max 
+so recall now assuming that our keys are integers because we first use the hash code map to convert anything that was non integral in to an integer right 
+keys are in the range zero through max 
+so first covert them from this range in to a range through k max time A 
+so essentially multiply each key with A 
+A is some number between zero and one right 
+first we converted to this range 
+now we take the fractional part of the each key 
+so that corresponds to K A mod one 
+so we take the fractional part of the each key right 
+as a consequence we get a number between zero and one 
+because we took the fractional part and now we but we have to map it in to the range zero through n minus one 
+so what can i do i can just multiply that number i get between zero and one by n [noise] 
+this number was between zero and one so when i multiply  by n  i get fractional number 
+so that?s why took the this is the floor function which means the round down 
+so i round it that number down to the nearest integer okay 
+ill repeat this you first took a key multiplied by A where A is some number between zero and one okay then what what you got took the fractional part of that number which is again something between zero and one and then you round it down 
+this is this is another popular compression map 
+there are you could have done something different also
+you could have for instance okay this gives me i could just take this and map it to m zero through n minus one directly 
+although its not clear how will you do how you do it perhaps divide by n [noise] some such thing  right  
+so this is one popular way of one doing such things and 
+
+here choice of n is not critical [noise]
+even even m is power of two now 
+the same kind of thing that was happening before would not happen right 
+because we have done lot of jugglery taken that number 
+first you multiply by A 
+which was some small fraction  and then we took the smaller fraction part and then [doubt]  to the range zero through n right 
+so here its not critical that m be a m not be a power of two 
+
+we could use m as two to the p yeah 
+and some some evident some evident if we use let say A as something like root five minus one by two then it turns out to be good right 
+if we use this this is called Fibonacci hashing 
+okay much of this experimental [noise] without significant theory behind it 
+so might want to read about more hash function there is a nice book by Donald Knuth on sorting and searching which covers hash functions in more detail 
+
+there is another technique for a compression map its called the multiply add and divide which basically means which says the following 
+take your key multiplied by ak and add right what are a and b a and b are two fixed numbers and then compute modulo N 
+N here is size of your hash table right 
+so sometimes used m and sometimes used N that?s the size of your hash table right 
+its not so the first technique was just k mod N 
+but now we are doing something different 
+we are multiplying by ak and adding b okay
+here a should not be a multiple of N 
+if a were multiple of N what kind of problem you would have [noise] a a mod N would be zero 
+so ak mod N is zero this any key you will always get mapped to same location b right 
+in fact a and N should not even have should be co prime if possible yeah 
+to avoid any kind of  patterns happening 
+and such a technique is used in your random number generator also 
+
+so you might used the function random right as part of your programming 
+and what random does is gives your random number 
+so if you specify the range it gives your random number in that range
+how does it come up with random number right
+so many of the random number random number generator use a technique called linear congruential um are based on the technique linear congruential generators what they do is start with an certain seed 
+seed is an starting value which could be obtain 
+let us say by taking which could be user defined you could provide what the seed is [noise] or it could for instance your random number generator could just take  this system time that point 
+or some other information and use that as a seed and that seed becomes the 
+
+initial k value [noise] and compute this quantity 
+ax plus b mod N right
+and whatever is the value that becomes your random number 
+this will give random number in the range zero through n minus one 
+and then for the next random number your going to use k which is the last value you return right
+whichever last random number generator you will use that value of k once again compute ak plus b mod N 
+and then whatever value you get you use it for next time so on and on right
+this is how you generate random number 
+so such numbers actually called pseudo random number because they are not truly random 
+once you know the seed you can actually figure out all the numbers you get   
+
+there is another technique called universal hashing which i am not going 
+to go in to much detail ill just briefly tell you what the idea is so in all of [noise] these so any kind of hash function function you will use so i suppose pick up a hash function and i tell you what the hash function is 
+you  can always come up with set of keys such that all those keys will get mapped to using my hash function get mapped to few locations right 
+so i think of you as an adverse 
+
+
+whose trying to whose trying to make life difficult for me 
+lets  say by picking key which all get mapped to very few locations in the hash table
+that i have to spend a lot of time doing insert delete searching right 
+so what once solution i can imply is that i don?t even tell you what hash function i am going to use which means that i say i am going to have
+bunch of hash function lets say fifteen different hash function and i am going to before the process start i am going to randomly pick one hash function out of these and then the keys that you give me i am going to use this hash function to put the keys in to table right 
+of course i have to use this same hash function for inserting all my keys for doing the search for doing the relation and so on right 
+so for fro run of hash table implementation i have to use the same hash function 
+i cant change the hash function midway right
+but next time i invoke this program i could perhaps use different hash function because that i picked up randomly my set of hash function right 
+so that you as an adverse [doubt] never come up with a set of 
+so even if you came up with the bad set of keys for one of my hash function right 
+may be that is the hash function i did not pick up at all 
+when i was doing my implementation this time around okay so they are some results 
+
+say that you can pick up a correction of hash function and such a collection of hash functions this called universal such that for any two keys the probability that they get mapped to the same location is no more than one by m right 
+so as i said this just a brief idea of what universal hashing is i am not go in to detail when you do your next course 
+on algorithms third year you will see more of universal hashing [noise]
+so that is the far as the hash function is concerned right 
+we said you have you use hashing you will get collision there is no way around it and [noise] we one technique we saw in the last class to resolve collisions 
+
+was called chaining right
+if many keys go to the same location you just put a you just chain them up you just put a linked list there 
+and then you can still do 
+insert search and delete by doing that operation in the in that linked list 
+
+your going to see two other techniques today which fall under the general class of open addressing one of these these called linear probing the other is called double hashing and you will see what these are 
+any questions till this point 
+so open addressing differs from chaining in the following key fact 
+in open addressing so recalling that chaining none of these elements actually stored in the table 
+they were all stored outside the table 
+in the table all we had verse a reference to the starting element of the linked list right 
+the table was only storing the pointers or they reference to the first element of the linked list 
+but now we are going to is we are going to put all the elements in to the table right 
+and we will see how 
+so as i said hashing could map elements to the same location in the table 
+so we cannot put both of the elements to the same location 
+we still want to put all the elements i the table
+so we will have to find some other locations for the element 
+so clearly if all elements have to reside in that table then the number of elements that we are trying to put n has to be less than the size of the table which is m 
+
+so i am going to work with m is the size of my table and n is the number of elements that i am trying to put right 
+this was not requirement for my chaining technique 
+i could have the number of elements as larger than the size of the table 
+because they elements were not residing in the table 
+they were residing in the nodes which were connected which was part of linked list 
+
+[noise] each entry of table is now either going to contain an element or its going to be null right 
+its going to be null which means that doesn?t have any element in it 
+and when we are searching or inserting or deleting we have to probe the elements of the table in a suitable manner 
+ill come to what this means in a second 
+
+right now we are going to think of it as if we are modifying the hash function little bit  right
+this U is the universe from which the key are bit
+so have hash function in mapping the keys  earlier there was not this  this part was not there 
+we were mapping the keys to one of zero through n minus one [noise] right and that would tell us where this keys set 
+for instance the case of chaining right
+now we are going to say well 
+we are going to have a second parameter which specifies key which probe this is 
+when i when i when i am trying to insert a key i am going to this that will be my first probe when i am trying to insert the key 
+
+right i will compute the value of this hash function for that key key k comma lets say zeroth probe k k comma zero this is the value of the hash function   obtain
+i will look at this location in the table 
+if this location is occupied then i have to look look again and when i look up again the next time  i will have a value of one 
+as the second parameter the first parameter is still the key 
+
+k so ill now compute the value of the hash function for k  comma one and this gives me some other location hash table and so on and on 
+so i am going to go to different location in the hash table till i find a empty location if the operation was [noise] one of insert right 
+at depending upon 
+
+how this hash function decide will give us many different technique(doubt)  
+so the hash function h is really determining sequence of slots which are examined for a certain 
+any question on this [noise] U yes U was the range  of the keys 
+use the set specify us collections of keys that we have [student: we have m less than n ] 
+here we also require do the number of keys have to be less than the size of the table 
+why is that important because we said all the all the element not number of keys soory i should correct myself not the number of keys is less than the hash table 
+the number of elements we are trying to insert in to the hash table should be less than the size of the hash table right 
+if i i am try to insert all the hundred elements hundred students of this class to a hash table that i create clearly the size of the hash table has to be more than the hundred because each of this student has to go one location of hash table 
+
+okay so the first technique under open addressing is called linear probing
+so what we do very simple 
+i have the key k which let say i am try to insert 
+i compute i have a hash function h 
+i compute h of k 
+this is the first place of the hash table that i look at 
+if this place that is table this place is occupied 
+there is some  element sitting here 
+then what do i do 
+i just go to the next location 
+so probe is incremented by one 
+and then i once again check if it is occupied 
+if it is occupied then i increment again
+and i go on and on till i find an empty location 
+at that point i will put the element here right
+so this is the guiding principle 
+the current location just go to the next location 
+what is mod m doing here 
+to do rap around to reach end of the table then you start the beginning
+
+[noise] so when we the question is what happens when we retrieve the keys and we ill come to what happens when we retrieve the keys in a short while right
+but understand this insert first you are trying to insert 
+you compute value of hash function 
+you go to a specific location as specified by the hash function for that key 
+and in that location that location is occupied there is an element already sitting there all you do is go to next location if that is occupied go to next location if that is occupied go to next location so till you find the empty location right
+
+so one advantage is [noise] this has chaining is that uses less memory why is that 
+in chaining you have to keep track of references and all right
+each of your nodes has to have place for the element 
+that it is storing but it also has to have place for the 	 next reference to the next node   so that kind of 
+
+spaces wasted all that 
+but this technique might slightly slower than chaining 
+we will see why this happens 
+so let me show you an example first
+and then that will be clear 
+what we are trying to do 
+so my hash function is k mod thirteen 
+very simple hash function 
+my keys k are integers 
+i am trying to insert these keys in to the table	 right 
+thirteen is my size of the table location zero to twelve 
+eighteen what is eighteen mod thirteen [noise] five 
+so eighteen goes to location five 
+right no problem 
+at that point the table was empty 
+so it can come here 
+no problem 
+forty one forty one mod thirteen is two 
+so forty one goes to location two absolutely no problem 
+twenty two 
+twenty two mod thirteen is nine 
+so twenty two goes to location nine 
+there is no problem at all 
+forty four 
+forty four mod thirteen is five
+so we want to put forty four this location 
+but this location already occupied by eighteen 
+so forty four will have to now search for the next location 
+this location is empty 
+so we put forty four  here 
+ yeah
+fifty nine
+fifty nine mod thirteen is seven 
+so seven we come to this location it was empty 
+so we put fifty nine here 
+thirty two
+thirty two mod thirteen is six 
+six [HINDI] forty four [HINDI] 
+forty four is sitting in six 
+so we go to the next location 
+fifty nine is sitting at this location 
+so we go to the next location 
+and so we put thirty two here 
+this location is empty
+so we put thirty two here 
+thirty one 
+thirty one mod thirteen is five 
+so we should have put thirteen here
+but this location is occupied with eighteen 
+so we go to the next location 
+which is occupied by forty four
+so we go to the next location which is occupied by fifty nine 
+so we go to the next location which is occupied by thirty two already 
+so go to the next location 
+which is already occupied by twenty two 
+so we go to the next location which is empty and we put thirty one 
+seventy three 
+seventy three mod thirteen is eight 
+so we check for seventy three here 
+this is occupied 
+this location occupied 
+this location is occupied and so we have to put seventy three here at this location 
+right very simple idea 
+all the elements are sitting in the table 
+so this is the so now if you just forget the part here 
+so this is the position of the elements 
+forty one is at location two 
+eighteen at location five 
+forty four at location six and so on and on right 
+now this also shows you one problem with this technique 
+what is happening is that the elements 
+tend to aggregate from clusters right 
+and so you might have to go through many locations while searching for an element 
+[noise] yes okay 
+so how would one search lets see one would search 
+
+so this is the hash 
+this is our hash table after we inserted those elements 
+suppose when we are searching for key k 
+so what we are going to do 
+we are going to compute k mod thirteen because that was our hash function and then 
+this is the first location we go to and after that if we don?t find the element what we do don?t say the element was not in the table 
+yes we go to the next location 
+if at the next location 
+there is some element present then we go to the location following it and so on and on till we either find the element or [noise] we reach a [noise] an empty location 
+if we reach an empty location then means that element is not their in the table because if the element had been their in the table it would have been inserted one of the locations that i checked right 
+lets see 
+
+suppose  i am searching for thirty one 
+thirty one mod thirteen is five 
+so i come here 
+thirtyone is not here 
+so i go to the next location 
+its not either 
+i go to the next location 
+not here either 
+not here either 
+not here either 
+and i found it when i did not find it here i cant say its their in the location in the table
+it could be their 
+in fact it is 
+right
+find it here 
+suppose i am searching for thirty three
+thirty three mod thirteen is seven 
+i would start here 
+then i come here 
+its not here
+i come here 
+its not here 
+come here 
+not here 
+come here its not here 
+i come here i find this location  is empty 
+this means thirty three could not be their at all in this table 
+because if thirty three there in the table 
+then it would have been no 
+it would have definitely  been inserted by this time till this position 
+because this is an empty location 
+everyone with me 
+so that?s an unsuccessful search 
+an unsuccessful search this is what happens 
+
+the search terminates when you reach a empty location 
+in a successful search search will terminate find the element okay 
+so that?s how you will search [noise] 
+how do you delete
+suppose this was this was my picture from the previous slide and now i want to delete thirty two 
+so first i have to search for thirty two right 
+thirty two mod twenty two is six 
+
+so i come here 
+its not here 
+so i come here 
+its not here 
+i come here 
+i find thirty two 
+so what should i do 
+[noise] remove thirty two from here 	 
+shall i remove thirty two 
+thirty two found in location eight 
+suppose i removed it by setting an location null 
+i remove thirty two from here 
+is this is a good idea [noise] 
+no why not why not this is a good idea [noise] right 
+
+suppose now you search for thirty one whats going to happen 
+thirtyone mod thirteen is five 
+so we come here 
+we didn?t find here 
+we come here 
+we didn?t find here 
+we come here 
+we find it here
+we reach here  
+this is an empty location 
+so we will say thirty one is not their 
+well thirty one is their 
+why is a problem coming in 
+because when thirty one was insert this was the full location right
+so that?s why thirty one was inserted later in this thing 
+but once if you delete this then you have the problem right
+so some how we have to do something differently here 
+we cant just said this location to null 
+we cant mark this location empty 
+[noise] yeah so look up will declare the thirty one is not in the not present which is wrong [noise] 
+every one with me 
+so how do we delete now 
+instead of setting this location to null 
+we will praise a tombstone 
+actually an x 
+right 
+so tombstone is just an marker any marker you could set up bit at that location which specifies that this location was occupied by some one right [noise] 
+and it was not it was not always the case that this was an empty location 
+at some point this was occupied by some one yeah 
+how this will help us 
+when we are doing a look up and we encounter a tombstone we don?t declare that the search is ended is not present 
+we continue 
+so as before if i searching for 
+
+thirty one i would come to location thirty one mod thirteen is five 
+i would come to this location 
+go here 
+go here 
+see an x here and not null 
+see a tombstone here continue till till i find either a null location 
+or thirty one so i found thirty one so i declare thirty one is their 
+
+so when a look up encounter a tombstone it ignores it continues 
+when an insert encounters a tombstone what does it do [noise]
+it will put the element at that position yeah 
+you know we have kind of reclaim this space 
+know one problem with this tombstone is that 
+if there are too many tombstones right then what happens 
+you are don?t have elements in the table those actually empty locations 
+but in your search all you still go beyond on then right 
+so your search the performance of your search degrades 
+so what should you do have a lot of tombstones you should perhaps just  rehash 
+you know just remove all the elements 
+put them back again okay 
+this same kind of technique you do when you have to grow the table 
+so now you are not growing the table you have too many these markers in the table so just do a rehash and that will create empty slots without the tombstones and you will be performance will increase again 
+any questions still this point 
+ill now come to the other open addressing techniques 
+we looked at linear probing 
+linear probing 
+we go to 
+we compute the hash function we look at the function next location and so on and on 
+in double hashing what we do is
+
+we have two hash functions 
+h one and h two
+h one the value of h one gives me the first position were i am going to look for the key k okay 
+and then h two of k will tell me the offset from the first position were i am going to look again for the key k [noise] okay 
+lets look at the piece of code 
+so probe is set to h one of k 
+so that?s the first position i am look at and offset is set to h two of k 
+first ill just check for look at the probe 
+the locations specified by probe and the table 
+if it is occupied then the next location ill look at a probe plus offset 
+probe is set to probe plus offset which means this is a next location i look at right 
+if this is also occupied then the next location ill look at is probe plus offset plus offset whatever probe plus offset right
+so which means that i am offset is determining key with how much distance i am going to advance 
+every time i don?t see the element   
+that i am searching for right
+so if you look at linear probing 
+for linear probing 
+
+your offset is always a one right
+you were always just going to the next location 
+so that corresponds to an offset of a one
+if i went instead to the next location
+
+i went to always jump one location ahead as in jump two locations
+so then offset would have been two and so on 
+so offset and this offset 
+
+this case  is  determined by [noise] this hash function h two 
+so this offset could be different for different keys 
+yeah 
+okay 
+we will look at a 
+we will see soon an example of how double hashing works 
+
+if m is the prime then this technique will ensure that we will look at all the locations of the table 
+so in linear probing because the offset is one 
+we would look at all the [noise] at all the locations in the table 
+if there was an empty location 
+you would always be able to insert the element right 
+now we would not like that the following happen they are empty locations in the 
+table 
+but you start from a certain location and then you go 
+lets say three units offset is three so you go three units ahead  then you do three units ahead you go three units ahead and you keep finding everything is full and then you come back to the starting location because then you will not going to able to insert the element at all 
+because may be all of these elements that you looked at all full but the other element is in the table the other locations is in table where empty 
+so you some how want that you don?t cycle back but when you will cycle back [noise] when your offset divides the size of the table 
+so if your size of the table was a prime number then your offset never divided and so you this kind of a thing  would never happen 
+in fact you would look at all the [noise] elements of the table then 
+so this is the small  fact you can go back at the proof that if m is prime then i  given you the rough arguments various cases but you can also prove formally 
+
+this has some of the same advantages disadvantages linear probing one it it distributes keys more uniformly 
+because now you don?t found clusters any more 
+this clusters were getting from because you know you are just going one step one step at a time 
+no if for some key your are going may be seven steps ahead and for some other key your going thirteen steps ahead some other key you are going two steps ahead then these clusters are not getting any more right and that makes the performs better
+
+so we will see an example okay [noise]
+i have two hash functions h one and h two 
+h one is same as the before k mod thirteen 
+the elements also same as before we have a table size twelve size thirteen 
+h two k is my second hash function and is eight minus k mod  eight yeah 
+so it will always be an number between  one and [noise] 
+between no it cannot be zero because k mod eight 
+
+[noise] lies between zero and seven so it is between one and eight 
+zero does not make any sense right
+if it is zero then we are in trouble 
+if h two is k zero for some k 
+then that means you are continuing looking at the same place and if that place were occupied then you cant insert the element at all okay 
+so lets insert the first element eighteen 
+eighteen mod thirteen is 
+
+five so it will go to location five yeah 
+forty one mod thirteen is two 
+so it goes location two 
+[noise] twenty two mod thirteen is nine goes to location nine 
+forty four mod thirteen is four five 
+so it tries to go location five 
+but location five  is already occupied yeah 
+so now we have to compute h two of forty four what is h two of forty four 
+eight minus forty four mod eight
+forty four mod eight is four 
+so eight minus four is four 
+so i have to go four steps ahead 
+so ill go to location nine yeah 
+but also occupied so ill go to location zero that?s empty so forty four will go to location zero 
+fifty nine mod thirteen is seven 
+so fifty nine will go to location seven [noise] 
+thirty two mod thirteen is  six 
+so thirty two go to location six 
+thirty one mod thirteen is five 
+so we go to location five 
+that?s occupied 
+so i compute h two of thirty one
+h two of thirty one is thirty one mod eight is seven 
+eight minus seven is one 
+
+so thirty one will now go to will check six 
+six is also occupied 
+so we have to go to seven seven is also occupied go to eight and this is not occupied thirty one goes eight 
+seventy three mod thirteen is eight so it will try to eight that?s occupied 
+so we compute h two of seventy three [noise]
+seventy three mod eight is one 
+so h two of seventy three is seven 
+so we will go to eight plus seven fifteen 
+fifteen is  two mod thirteen 
+we go to location two that?s occupied 
+so two plus seven nine that?s also occupied 
+nine plus seven 
+sixteen 
+sixteen mod thirteen is three 
+so it goes to the location which is occupied 
+this is how elements would be distributed in the table 
+is this clear to every one 
+so now we ill do some analysis of this technique of double hashing 
+so recall assume that i am assuming the load factor is less than one 
+what was the load factor 
+the number of elements divided by the size of the hash table m by n that is less than one 
+i need to will less than one 
+otherwise more than does not make any sense we are talking of a scheme were all the elements have to sit inside the hash table okay
+and now we are also going to assume so this is similar to the assumptions you made in the last class that 
+
+everytime a probe i actually look up at a look at a random element the hash table uniformly random 
+so the first time probe i will take a random element random location in the hash table sorry and put the table their 
+try to put the element their 
+if it is occupied then what do i do once again ill pick a random location in hash table try to  put it their 
+and if that is also occupied once again i pick a random location in the hash table try to put the element their 
+and lets see how this performs because we will only be analyze such a scheme 
+because the other schemes are too depend upon the hash function that we are using right
+and we might not be able to analyze 
+so alpha is a load factor of the table 
+alpha is the load factor then that means that one minus alpha fraction of table is empty
+
+right
+if alpha is half that means the number of elements divided by the size of the table is half which means only half of the table is occupied 
+so half the table is empty 
+if one minus alpha fraction of the table is empty then 
+suppose my search was an unsuccessful search what does an unsuccessful search  means that the elements is not in the table when does an unsuccessful search  stop when i get an empty location 
+so before how many probes will be required before get to an empty location right
+so one minus alpha fraction of table is empty 
+though let say one tenth of table is empty yeah ninety percent of the table is full 
+one tenth of its ten percent of its empty 
+so expected number of probes required before i hit one of those ten location one tenth one tenth fraction of the table which is empty would be roughly ten 
+yeah 
+because the first time i may be with nine tenths probability i will get to an occupied location and so on and on 
+so roughly after ten trails ill hit a empty location because only one tenth of the table is empty 
+
+so if one minus alpha fraction of table is empty 
+then roughly one over one on in an excepted sense one over alpha minus probe probes are required before hit an empty location and declared to be an unsuccessful search 
+yeah
+this is the excepted numbers of probes required for unsuccessful search 
+
+lets look at a successful search 
+ now here i am going to talk about the average number of probes required for a successful search not for one particular search 
+but if i were to look at all these successful search
+so what are  successful searches 
+successful search is corresponding to the elements in the table yeah 
+i have some number of elements in the table 
+lets say i search one of the first element 
+then how many probes are required 
+suppose i search for the second element 
+how many probes are required so on and on 
+and ill take the average 
+right 
+lets me try and compute this quantity 
+
+
+so if you recall from last class the average number of probes required for a successful search is the is the average number of probes required to insert those elements right 
+because at when we are inserting those elements we are doing a essentially the same thing yeah
+if the same as average number of probes required insert all the elements and this is the quantity i am going to compute 
+what is the average number of probes required to insert all elements that i have  in the table 
+so lets see 
+when i am inserting an element i need to find an empty location again yeah
+now suppose might table is i begin with an empty table and i am looking at the number of probes required to insert the first  m by two elements right 
+size of the table is m 
+first m lets say assume m is hundred 
+i am talking of inserting the first fifty elements right 
+suppose i have already inserted forty eight forty nine elements 
+when i am trying to insert fifty?th element 
+what is the excepted number of probes required right 
+half of the table is empty
+so when i try once ill maybe hit a full location may be when i try again on expectation ill just need two probes   to be able to insert this fiftieth element 
+for the other first forty nine element i might on an average 
+
+even required less but all i can say for sure that the average number of probes required for inserting these elements is less than less than or equal to two 
+and how many elements i am inserting m by two elements 
+so that total number of probes required is less than or equal to m for these on average 
+for these m by two element okay 
+when i show the rest you will understand  why i am doing at this way
+now lets look at suppose i have already inserted m by two element in to my table 
+i am now trying to insert the next m by four element in to my table right
+when i am trying to insert the next m by four element just assume that i am i have already inserted m by four minus one and i am now try to insert this last element 56.00
+
+when i am try to insert this last element how much of the table is already full 
+three fourth  of table roughly already full 
+yeah only a quarter of table is empty 
+only one fourth of table is empty 
+so an average i am going to require about four probes before i get to one of the empty location after all i am searching for an empty location to put this element in it right 
+so i need roughly four probes 
+so in fact 
+so i am just praises an upper bound i need at most  four probes to insert all of these m by four elements and so the total numbers required 
+
+to insert these m by four element m by four times four which is no more than m 
+right 
+similarly for these  next n by eight elements when i am trying to insert this last of these m by eight element only one eight table is empty yeah
+and so on average require about eight probes before i get to one of those empty locations and so for these 
+
+m by eight elements i would not have required for any of them not have required more than eight probes 
+i would have required between four and eight probes these m by eight elements right 
+because when i was inserting the first of the these n by eight elements only three quarters of the table was full 
+one quarter of it was empty yeah 
+but i am just upper bound 
+i am just saying that no more than eight okay 
+so just lets see what this mean 
+so total number of  probes required to insert m by two plus m by four plus m by eight plus so on up to m by two to the i 
+what is the total number of probes required 
+for this recall from previous slide as i said m
+for this also i said m 
+for this also i said m
+so what i9s the total require of these guys [noise]
+m in to i because this is two to the i 
+this is two to the three two to the two right
+each one of them is n so its m m times i 
+and the total number of  probes required to insert after i inserted all  of these elements 
+how many how many locations i have empty in the table [noise]
+what is the total number of elements in the table now okay
+after i inserted m by two element what part of the table is empty 
+ what fraction of the table was empty [noise] half 
+after inserted m by two plus  m by four how much of the table was empty 
+[noise] one by four 
+so its really this last number here 
+after i inserted this much how much was empty one by eight 
+so after inserted all of this how much is empty 
+one by two to the i which is two to the minus i fraction that was empty 
+yeah okay 
+so after inserted all of these   fractions i have only two to the one two to the i fraction was the table empty and the total number of probes required to insert the elements n times i
+so number of probes required now what do we want we wanted we have load factor of alpha 
+we already   inserted enough element so that the load factor is alpha 
+when the load factor is alpha one minus alpha fraction of the table table is empty yeah if i have one minus alpha fraction of table empty 
+then how many probes are required 
+if i have to two to the minus i fraction of the probes  of the table empty then i required m in to i probe 
+what is i 
+i is basically log of this quantity minus minus log of this quantity 
+if i need one minus alpha fraction empty
+so i just need minus log of one minus alpha   times m  
+these are the numbers of probes required yeah 
+ill just this i have just gone form here to here 
+if i have two two to the minus i fraction empty 
+two to the i is minus i is the number smaller than one 
+so if this fraction is empty 
+then to get to the to this point were only two to the minus i fraction was empty are required m in to i probes
+so to get to a point one minus alpha fraction was empty 
+i need so many probes 
+yeah so the average numbers of required so this was the total number of probes required average was divided by n m by n was alpha 
+m by n was one by alpha 
+m by n was alpha this quantity 
+so we will now be able to capture it to a table right
+
+so for an unsuccessful and successful probes 
+when we had chaining it was one plus alpha recall  right 
+probing for an unsuccessful search it was one over one plus alpha and for a successful search what i just showed you it is one by alpha times of log one power one minus alpha yeah 
+and okay so that we will stop the discussion on hashing 
+there is lat slide which shows how this performances is as alpha changes 
+yeah okay 
+
+
+
+
+

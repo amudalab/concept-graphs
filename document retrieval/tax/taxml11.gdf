@@ -1,0 +1,38 @@
+nodedef> name,label
+v0,ablative analysis
+v1,accuracy
+v2,bayesian regularization
+v3,bayesian statistics and regularization
+v4,cost function
+v5,debugging
+v6,error analysis
+v7,high bias
+v8,high variance
+v9,machine learning problem
+v10,machine learning system
+v11,mail delivery robot
+v12,online learning
+v13,optimization objective
+v14,premature statistical optimization
+v15,square error
+v16,test error
+v17,total online error
+v18,training error
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v5,false,11.0769230769,true
+v1,v9,false,88.5384615385,true
+v2,v12,false,70.1538461538,true
+v3,v12,false,27.5,true
+v4,v1,false,101.961538462,true
+v5,v9,false,27.6923076923,true
+v6,v9,false,36.9230769231,true
+v7,v16,false,16.6153846154,true
+v8,v16,false,19.2115384615,true
+v10,v11,false,49.8461538462,true
+v11,v14,false,61.8974358975,true
+v12,v5,false,424.346153846,true
+v13,v9,false,88.5384615385,true
+v14,v5,false,50.5512820513,true
+v15,v1,false,158.384615385,true
+v17,v5,false,616.423076923,true
+v18,v16,false,20.2564102564,true

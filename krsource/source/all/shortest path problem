@@ -1,0 +1,333 @@
+
+Shortest path problem
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (June 2009) 
+
+
+
+
+
+
+
+This article's use of external links may not follow Wikipedia's policies or guidelines. Please improve this article by removing excessive or inappropriate external links, and converting useful links where appropriate into footnote references. (April 2012) 
+
+
+
+
+
+
+
+This article needs attention from an expert in graph theory. The specific problem is: large chunk of scaffolding needs filling in. WikiProject Graph theory may be able to help recruit an expert. (April 2012) 
+
+
+
+
+
+
+
+
+
+(6, 4, 5, 1) and (6, 4, 3, 2, 1) are both paths between vertices 6 and 1.
+
+
+In graph theory, the shortest path problem is the problem of finding a path between two vertices (or nodes) in a graph such that the sum of the weights of its constituent edges is minimized.
+This is analogous to the problem of finding the shortest path between two intersections on a road map: the graph's vertices correspond to intersections and the edges correspond to road segments, each weighted by the length of its road segment.
+
+
+
+
+Contents
+
+
+1 Definition
+2 Algorithms
+3 Roadnetworks
+
+3.1 Single-source shortest paths
+
+3.1.1 Directed unweighted graphs
+3.1.2 Directed acyclic graphs
+3.1.3 Directed graphs with nonnegative weights
+3.1.4 Planar directed graphs with nonnegative weights
+3.1.5 Directed graphs with arbitrary weights
+3.1.6 Planar directed graphs with arbitrary weights
+
+
+3.2 All-pairs shortest paths
+
+3.2.1 Directed graphs with unit weights
+3.2.2 Undirected graphs with unit weights
+3.2.3 Directed graphs with nonnegative weights
+3.2.4 Planar directed graphs with nonnegative weights
+3.2.5 Directed graphs with arbitrary weights
+3.2.6 Planar directed graphs with arbitrary weights
+
+
+
+
+4 Applications
+5 Related problems
+6 Linear programming formulation
+7 See also
+8 References
+9 Further reading
+
+
+
+
+[edit] Definition
+The shortest path problem can be defined for graphs whether undirected, directed, or mixed. It is defined here for undirected graphs; for directed graphs the definition of path requires that consecutive vertices be connected by an appropriate directed edge.
+Two vertices are adjacent when they are both incident to a common edge. A path in an undirected graph is a sequence of vertices  such that  is adjacent to  for . Such a path  is called a path of length  from  to . (The  are variables; their numbering here relates to their position in the sequence and needs not to relate to any canonical labeling of the vertices.)
+Let  be the edge incident to both  and . Given a real-valued weight function , and an undirected (simple) graph , the shortest path from  to  is the path  (where  and ) that over all possible  minimizes the sum  When the graph is unweighted or , this is equivalent to finding the path with fewest edges.
+The problem is also sometimes called the single-pair shortest path problem, to distinguish it from the following variations:
+
+The single-source shortest path problem, in which we have to find shortest paths from a source vertex v to all other vertices in the graph.
+The single-destination shortest path problem, in which we have to find shortest paths from all vertices in the directed graph to a single destination vertex v. This can be reduced to the single-source shortest path problem by reversing the arcs in the directed graph.
+The all-pairs shortest path problem, in which we have to find shortest paths between every pair of vertices v, v' in the graph.
+
+These generalizations have significantly more efficient algorithms than the simplistic approach of running a single-pair shortest path algorithm on all relevant pairs of vertices.
+[edit] Algorithms
+The most important algorithms for solving this problem are:
+
+Dijkstra's algorithm solves the single-source shortest path problems.
+BellmanFord algorithm solves the single-source problem if edge weights may be negative.
+A* search algorithm solves for single pair shortest path using heuristics to try to speed up the search.
+FloydWarshall algorithm solves all pairs shortest paths.
+Johnson's algorithm solves all pairs shortest paths, and may be faster than FloydWarshall on sparse graphs.
+Perturbation theory finds (at worst) the locally shortest path.[citation needed]
+
+Additional algorithms and associated evaluations may be found in Cherkassky et al.[1]
+[edit] Roadnetworks
+A roadnetwork can be considered as a graph with positive weights. The nodes represent road junctions and each edge of the graph is associated with a road segment between two junctions. The weight of an edge may correspond to the length of the associated road segment, the time needed to traverse the segment or the cost of traversing the segment. Using directed edges it is also possible to model one-way streets. Such graphs are special in the sense that some edges are more important than others for long distance travel (i.e. highways). This property has been formalized using the notion of highway dimension. (research.microsoft.com/pubs/115272/soda10.pdf) There are a great number of algorithms that exploit this property and are therefore able to compute the shortest path a lot quicker than would be possible on general graphs.
+All of these algorithms work in two phases. In the first phase, the graph is preprocessed without knowing the source or target node. This phase may take several days for realistic data and some techniques. The second phase is the query phase. In this phase, source and target node are known. The running time of the second phase is generally less than a second. The idea is that the road network is static, so the preprocessing phase can be done once and used for a large number of queries on the same road network.
+The algorithm with the fastest known query time is called hub labeling and is able to compute shortest path on the road networks of Europe or the USA in a fraction of a microsecond. (research.microsoft.com/pubs/142356/HL-TR.pdf). Other techniques that have been used are:
+
+ALT
+Arc Flags
+Contraction Hierarchies (http://www.springerlink.com/index/j062316602803057.pdf)
+Transit Node Routing
+Reach based Pruning
+Labeling
+
+[edit] Single-source shortest paths
+[edit] Directed unweighted graphs
+
+
+Algorithm
+Time complexity
+Author
+
+
+Breadth-first search
+O(E)
+
+
+
+
+
+This list is incomplete; you can help by expanding it.
+
+
+[edit] Directed acyclic graphs
+[edit] Directed graphs with nonnegative weights
+
+
+Algorithm
+Time complexity
+Author
+
+
+
+O(V4)
+Shimbel 1955
+
+
+
+O(V2EL)
+Ford 1956
+
+
+BellmanFord algorithm
+O(VE)
+Bellman 1958, Moore 1959
+
+
+
+O(V2logV)
+Dantzig 1958, Dantzig 1960, Minty (cf. Pollack & Wiebenson 1960), Whiting & Hillier 1960
+
+
+Dijkstra's algorithm with list
+O(V2)
+Leyzorek et al. 1957, Dijkstra 1959
+
+
+Dijkstra's algorithm with modified binary heap
+O((E+V)logV)
+
+
+
+. . .
+. . .
+. . .
+
+
+Dijkstra's algorithm with Fibonacci heap
+O(E+VlogV)
+Fredman & Tarjan 1984, Fredman & Tarjan 1987
+
+
+
+O(EloglogL)
+Johnson 1982, Karlsson & Poblete 1983
+
+
+Gabow's algorithm
+O(ElogE/VL)
+Gabow 1983b, Gabow 1985b
+
+
+
+O(E+VlogL)
+Ahuja et al. 1990
+
+
+
+
+This list is incomplete; you can help by expanding it.
+
+
+[edit] Planar directed graphs with nonnegative weights
+[edit] Directed graphs with arbitrary weights
+
+
+Algorithm
+Time complexity
+Author
+
+
+BellmanFord algorithm
+O(VE)
+Bellman 1958, Moore 1959
+
+
+
+
+This list is incomplete; you can help by expanding it.
+
+
+[edit] Planar directed graphs with arbitrary weights
+[edit] All-pairs shortest paths
+FloydWarshall algorithm
+[edit] Directed graphs with unit weights
+[edit] Undirected graphs with unit weights
+[edit] Directed graphs with nonnegative weights
+[edit] Planar directed graphs with nonnegative weights
+[edit] Directed graphs with arbitrary weights
+[edit] Planar directed graphs with arbitrary weights
+[edit] Applications
+Shortest path algorithms are applied to automatically find directions between physical locations, such as driving directions on web mapping websites like Mapquest or Google Maps. For this application fast specialized algorithms are available.[2]
+If one represents a nondeterministic abstract machine as a graph where vertices describe states and edges describe possible transitions, shortest path algorithms can be used to find an optimal sequence of choices to reach a certain goal state, or to establish lower bounds on the time needed to reach a given state. For example, if vertices represents the states of a puzzle like a Rubik's Cube and each directed edge corresponds to a single move or turn, shortest path algorithms can be used to find a solution that uses the minimum possible number of moves.
+In a networking or telecommunications mindset, this shortest path problem is sometimes called the min-delay path problem and usually tied with a widest path problem. For example, the algorithm may seek the shortest (min-delay) widest path, or widest shortest (min-delay) path.
+A more lighthearted application is the games of "six degrees of separation" that try to find the shortest path in graphs like movie stars appearing in the same film.
+Other applications, often studied in operations research, include plant and facility layout, robotics, transportation, and VLSI design".[3]
+[edit] Related problems
+For shortest path problems in computational geometry, see Euclidean shortest path.
+The travelling salesman problem is the problem of finding the shortest path that goes through every vertex exactly once, and returns to the start. Unlike the shortest path problem, which can be solved in polynomial time in graphs without negative cycles, the travelling salesman problem is NP-complete and, as such, is believed not to be efficiently solvable (see P = NP problem). The problem of finding the longest path in a graph is also NP-complete.
+The Canadian traveller problem and the stochastic shortest path problem are generalizations where either the graph isn't completely known to the mover, changes over time, or where actions (traversals) are probabilistic.
+The shortest multiple disconnected path [4] is a representation of the primitive path network within the framework of Reptation theory.
+The problems of recalculation of shortest paths arises if some graph transformations (e.g., shrinkage of nodes) are made with a graph.[5]
+The widest path problem seeks a path so that the minimum label of any edge is as large as possible.
+[edit] Linear programming formulation
+There is a natural linear programming formulation for the shortest path problem, given below. It is very trivial compared to most other uses of linear programs in discrete optimization, however it illustrates connections to other concepts.
+Given a directed graph (V, A) with source node s, target node t, and cost wij for each arc (i, j) in A, consider the program with variables xij
+
+minimize  subject to  and for all i, 
+
+This LP, which is common fodder for operations research courses, has the special property that it is integral; more specifically, every basic optimal solution (when one exists) has all variables equal to 0 or 1, and the set of edges whose variables equal 1 form an s-t dipath. See Ahuja et al.[6] for one proof, although the origin of this approach dates back to mid-20th century.
+The dual for this linear program is
+
+maximize yt  ys subject to for all ij, yj  yi  wij
+
+and feasible duals correspond to the concept of a consistent heuristic for the A* algorithm for shortest paths. For any feasible dual y the reduced costs  are nonnegative and A* essentially runs Dijkstra's algorithm on these reduced costs.
+[edit] See also
+
+Flow network
+Shortest path tree
+Euclidean shortest path
+Min-plus matrix multiplication
+Bidirectional search, an algorithm that finds the shortest path between two vertices on a directed graph
+
+[edit] References
+
+
+^ Cherkassky, Boris V.; Goldberg, Andrew V.; Radzik, Tomasz (1996). "Shortest paths algorithms: theory and experimental evaluation". Mathematical Programming. Ser. A 73 (2): 129174. doi:10.1016/0025-5610(95)00021-6. MR1392160. http://ftp.cs.stanford.edu/cs/theory/pub/goldberg/sp-alg.ps.Z.
+^ Sanders, Peter (March 23, 2009). Fast route planning. Google Tech Talk. http://www.youtube.com/watch?v=-0ErpE8tQbw.
+^ Chen, Danny Z. (December 1996). "Developing algorithms and software for geometric path planning problems". ACM Computing Surveys 28 (4es): 18. doi:10.1145/242224.242246.
+^ Kroger, Martin (2005). "Shortest multiple disconnected path for the analysis of entanglements in two- and three-dimensional polymeric systems". Computer Physics Communications 168 (168): 209232. doi:10.1016/j.cpc.2005.01.020.
+^ Ladyzhensky Y., Popoff Y. Algorithm to define the shortest paths between all nodes in a graph after compressing of two nodes. Proceedings of Donetsk national technical university, Computing and automation. Vol.107. Donetsk, 2006, pp. 6875.[verification needed]
+^ Ravindra K. Ahuja, Thomas L. Magnanti, and James B. Orlin (1993). Network Flows: Theory, Algorithms and Applications. Prentice Hall. ISBN0-13-617549-X.
+
+
+
+Bellman, Richard (1958). "On a routing problem". Quarterly of Applied Mathematics 16: 8790. MR0102435.
+Cormen, Thomas H.; Leiserson, Charles E., Rivest, Ronald L., Stein, Clifford (2001) [1990]. "Single-Source Shortest Paths and All-Pairs Shortest Paths". Introduction to Algorithms (2nd ed.). MIT Press and McGraw-Hill. pp.580642. ISBN0-262-03293-7.
+Dijkstra, E. W. (1959). "A note on two problems in connexion with graphs". Numerische Mathematik 1: 269271. doi:10.1007/BF01386390. http://www-m3.ma.tum.de/twiki/pub/MN0506/WebHome/dijkstra.pdf.
+Fredman, Michael Lawrence; Tarjan, Robert E. (1984). "Fibonacci heaps and their uses in improved network optimization algorithms". 25th Annual Symposium on Foundations of Computer Science (IEEE): 338346. doi:10.1109/SFCS.1984.715934. ISBN0-8186-0591-X. http://www.computer.org/portal/web/csdl/doi/10.1109/SFCS.1984.715934.
+Fredman, Michael Lawrence; Tarjan, Robert E. (1987). "Fibonacci heaps and their uses in improved network optimization algorithms". Journal of the Association for Computing Machinery 34 (3): 596615. doi:10.1145/28869.28874. http://portal.acm.org/citation.cfm?id=28874.
+Leyzorek, M.; Gray, R. S.; Johnson, A. A.; Ladew, W. C.; Meaker, S. R., Jr.; Petry, R. M.; Seitz, R. N. (1957). Investigation of Model Techniques  First Annual Report  6 June 1956  1 July 1957  A Study of Model Techniques for Communication Systems. Cleveland, Ohio: Case Institute of Technology.
+Moore, E. F. (1959). "The shortest path through a maze". Proceedings of an International Symposium on the Theory of Switching (Cambridge, Massachusetts, 25 April 1957). Cambridge: Harvard University Press. pp.285292.
+
+[edit] Further reading
+
+D. Frigioni; A. Marchetti-Spaccamela and U. Nanni (1998). "Fully dynamic output bounded single source shortest path problem". Proc. 7th Annu. ACM-SIAM Symp. Discrete Algorithms. Atlanta, GA. pp.212221. http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.32.9856.
+
+ 
+NewPP limit report
+Preprocessor visited node count: 13004/1000000
+Preprocessor generated node count: 37280/1500000
+Post-expand include size: 82944/2048000 bytes
+Template argument size: 36455/2048000 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 11/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:41985-0!0!0!!en!4!* and timestamp 20130114103437 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Shortest_path_problem&oldid=531756935"				
+ /printfooter 
+ catlinks 
+Categories: Network theoryPolynomial-time problemsGraph algorithmsComputational problems in graph theoryHidden categories: Articles with inconsistent citation formatsAll pages needing factual verificationWikipedia articles needing factual verification from June 2009Articles lacking in-text citations from June 2009All articles lacking in-text citationsWikipedia external links cleanup from April 2012Wikipedia spam cleanup from April 2012Miscellaneous articles needing expert attentionArticles needing expert attention from April 2012All articles needing expert attentionAll articles with unsourced statementsArticles with unsourced statements from January 2013Incomplete lists from December 2012Incomplete lists from February 2011  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

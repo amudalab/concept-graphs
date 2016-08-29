@@ -1,0 +1,34 @@
+nodedef> name,label
+v0,avl tree
+v1,binary search trees
+v2,complete binary tree
+v3,data structure
+v4,height balance property
+v5,height balanced
+v6,height balanced trees
+v7,height imbalance
+v8,height of a node
+v9,induction hypothesis
+v10,insertion
+v11,logarithmic height property
+v12,node
+v13,recurrence
+v14,recurrence relation
+v15,root
+v16,rotation
+edgedef>node1,node2,directed,weight,labelvisible
+v1,v0,false,7.23529411764,true
+v2,v0,false,21.3088235294,true
+v3,v5,false,7.05882352941,true
+v4,v10,false,7.94117647059,true
+v5,v0,false,4.23529411765,true
+v6,v5,false,1.64705882353,true
+v7,v5,false,24.8470588236,true
+v8,v3,false,6.27450980392,true
+v9,v13,false,18.8235294118,true
+v11,v14,false,36.7058823529,true
+v12,v0,false,0.0,true
+v13,v0,false,5.64705882353,true
+v14,v0,false,7.16339869281,true
+v15,v0,false,5.42647058824,true
+v16,v10,false,17.3529411765,true

@@ -1,0 +1,238 @@
+
+Sparse matrix
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+
+
+
+
+A sparse matrix obtained when solving a finite element problem in two dimensions. The non-zero elements are shown in black.
+
+
+In the subfield of numerical analysis, a sparse matrix is a matrix populated primarily with zeros (Stoer & Bulirsch 2002, p.619) as elements of the table. The term itself was coined by Harry M. Markowitz. If the majority of elements differ from zero, then it is common to refer to the matrix as a dense matrix.
+
+
+
+Example of sparse matrix
+ [ 11 22 0 0 0 0 0 ]
+ [ 0 33 44 0 0 0 0 ]
+ [ 0 0 55 66 77 0 0 ]
+ [ 0 0 0 0 0 88 0 ]
+ [ 0 0 0 0 0 0 99 ]
+
+
+
+
+The above sparse matrix contains
+only 9 nonzero elements of the 35,
+with26 of those elements as zero.
+
+
+
+Conceptually, sparsity corresponds to systems which are loosely coupled. Consider a line of balls connected by springs from one to the next; this is a sparse system. By contrast, if the same line of balls had springs connecting each ball to all other balls, the system would be represented by a dense matrix. The concept of sparsity is useful in combinatorics and application areas such as network theory, which have a low density of significant data or connections.
+Huge sparse matrices often appear in science or engineering when solving partial differential equations.
+When storing and manipulating sparse matrices on a computer, it is beneficial and often necessary to use specialized algorithms and data structures that take advantage of the sparse structure of the matrix. Operations using standard dense-matrix structures and algorithms are relatively slow and consume large amounts of memory when applied to large sparse matrices. Sparse data is by nature easily compressed, and this compression almost always results in significantly less computer data storage usage. Indeed, some very large sparse matrices are infeasible to manipulate using standard dense algorithms.
+
+
+
+
+Contents
+
+
+1 Storing a sparse matrix
+
+1.1 Dictionary of keys (DOK)
+1.2 List of lists (LIL)
+1.3 Coordinate list (COO)
+1.4 Yale format
+1.5 Compressed sparse row (CSR or CRS)
+1.6 Compressed sparse column (CSC or CCS)
+
+
+2 Band matrix
+
+2.1 Diagonal matrix
+
+
+3 Reducing fill-in
+4 Solving sparse matrix equations
+5 See also
+6 References
+7 Further reading
+8 External links
+
+
+
+
+[edit] Storing a sparse matrix
+The native data structure for a matrix is a two-dimensional array. Each entry in the array represents an element ai,j of the matrix and can be accessed by the two indices i and j. Traditionally, i indicates the row number (top-to-bottom), while j indicates the column number (left-to-right) of each element in the table. For an mn matrix, enough memory to store up to (mn) entries to represent the matrix is needed.
+Substantial memory requirement reductions can be realized by storing only the non-zero entries. Depending on the number and distribution of the non-zero entries, different data structures can be used and yield huge savings in memory when compared to a native approach.
+Formats can be divided into two groups: (1) those that support efficient modification, and (2) those that support efficient matrix operations. The efficient modification group includes DOK (Dictionary of keys), LIL (List of lists), and COO (Coordinate list) and is typically used to construct the matrix. Once the matrix is constructed, it is typically converted to a format, such as CSR (Compressed Sparse Row) or CSC (Compressed Sparse Column), which is more efficient for matrix operations.
+[edit] Dictionary of keys (DOK)
+DOK represents non-zero values as a dictionary mapping (row, column)-tuples to values. This format is good for incrementally constructing a sparse array, but poor for iterating over non-zero values in sorted order. One typically creates the matrix with this format, then converts to another format for processing
+[edit] List of lists (LIL)
+LIL stores one list per row, where each entry stores a column index and value. Typically, these entries are kept sorted by column index for faster lookup. This is another format which is good for incremental matrix construction. See scipy.sparse.lil_matrix.
+[edit] Coordinate list (COO)
+COO stores a list of (row, column, value) tuples. Ideally, the entries are sorted (by row index, then column index) to improve random access times. This is another format which is good for incremental matrix construction. See scipy.sparse.coo_matrix.
+[edit] Yale format
+The Yale Sparse Matrix Format stores an initial sparse mn matrix, M, in row form using three one-dimensional arrays. Let NNZ denote the number of nonzero entries of M. The first array is A, which is of length NNZ, and holds all nonzero entries of M in left-to-right top-to-bottom (row-major) order. The second array is IA, which is of length  (i.e., one entry per row, plus one). IA(i) contains the index in A of the first nonzero element of row i. Row i of the original matrix extends from A(IA(i)) to A(IA(i+1)-1), i.e. from the start of one row to the last index before the start of the next. The third array, JA, contains the column index (zero-based) of each element of A, so it also is of length NNZ. For example, the matrix
+
+
+
+
+
+[ 1 2 0 0 ]
+[ 0 3 9 0 ]
+[ 0 1 4 0 ]
+
+
+
+
+
+is a three-by-four matrix with six nonzero elements, so
+
+
+
+
+
+A = [ 1 2 3 9 1 4 ]  (array of non-zero element values)
+IA = [ 0 2 4 6 ]  (array of index of first nonzero element of row i)
+JA = [ 0 1 1 2 1 2 ]  (array of column index of each A element)
+
+
+
+
+
+So, in array JA, the element "1" from A has column index 0, "2" and "3" have index 1, "9" has index 2, the second element "1" has column index 1, and element "4" has index 2. Typically, mathematicians would number the columns 1-4, while some computer systems use index 0-3.
+In this case the Yale representation contains 16 entries, compared to only 12 in the original matrix. The Yale format saves on memory only when .
+Another example, the matrix
+
+        [ 10 20  0  0  0  0 ]
+        [  0 30  0 40  0  0 ]
+        [  0  0 50 60 70  0 ]
+        [  0  0  0  0  0 80 ]
+
+is a four-by-six matrix (24 entries) with eight nonzero elements, so (spacing elements to be aligned with concerned data)
+
+        A  = [ 10 20 30 40 50 60 70 80 ]
+        IA = [  0     2     4        7  8 ]
+        JA = [  0  1  1  3  2  3  4  5 ]
+
+The whole is stored as 21 entries.
+
+
+
+IA splits the array A into rows: (10,20)(30,40)(50,60,70)(80);
+JA aligns values in columns: (10,20,...)(0,30,0,40,...)(0,0,50,60,70,0)(0,0,0,0,0,80).
+
+
+
+(Note that in this format, the first value of IA will always be zero and the last will always be NNZ: these two cells may not be useful.)
+[edit] Compressed sparse row (CSR or CRS)
+CSR is effectively identical to the Yale Sparse Matrix format, except that the column array is normally stored ahead of the row index array. I.e. CSR is (val, col_ind, row_ptr), where val is an array of the (left-to-right, then top-to-bottom) non-zero values of the matrix; col_ind is the column indices corresponding to the values; and, row_ptr is the list of value indexes where each row starts. The name is based on the fact that row index information is compressed relative to the COO format. One typically uses another format (LIL, DOK, COO) for construction. This format is efficient for arithmetic operations, row slicing, and matrix-vector products. See scipy.sparse.csr_matrix.
+[edit] Compressed sparse column (CSC or CCS)
+CSC is similar to CSR except that values are read first by column, a row index is stored for each value, and column pointers are stored. I.e. CSC is (val, row_ind, col_ptr), where val is an array of the (top-to-bottom, then left-to-right-bottom) non-zero values of the matrix; row_ind is the row indices corresponding to the values; and, col_ptr is the list of val indexes where each column starts. The name is based on the fact that column index information is compressed relative to the COO format. One typically uses another format (LIL, DOK, COO) for construction. This format is efficient for arithmetic operations, column slicing, and matrix-vector products. See scipy.sparse.csc_matrix. This is the traditional format for specifying a sparse matrix in MATLAB (via the sparse function).
+[edit] Band matrix
+Main article: Band matrix
+An important special type of sparse matrices is band matrix, defined as follows. The lower bandwidth of a matrix A is the smallest number p such that the entry aij vanishes whenever i > j + p. Similarly, the upper bandwidth is the smallest p such that aij = 0 whenever i < j  p (Golub & Van Loan 1996, 1.2.1). For example, a tridiagonal matrix has lower bandwidth 1 and upper bandwidth 1. As another example, the following sparse matrix has lower and upper bandwidth both equal to 3. Notice that zeros are represented with dots.
+
+
+
+
+
+
+
+Matrices with reasonably small upper and lower bandwidth are known as band matrices and often lend themselves to simpler algorithms than general sparse matrices; or one can sometimes apply dense matrix algorithms and gain efficiency simply by looping over a reduced number of indices.
+By rearranging the rows and columns of a matrix A it may be possible to obtain a matrix A with a lower bandwidth. A number of algorithms are designed for bandwidth minimization.
+[edit] Diagonal matrix
+A very efficient structure for an extreme case of band matrices, the diagonal matrix, is to store just the entries in the main diagonal as a one-dimensional array, so a diagonal nn matrix requires only n entries.
+[edit] Reducing fill-in
+The fill-in of a matrix are those entries which change from an initial zero to a non-zero value during the execution of an algorithm. To reduce the memory requirements and the number of arithmetic operations used during an algorithm it is useful to minimize the fill-in by switching rows and columns in the matrix. The symbolic Cholesky decomposition can be used to calculate the worst possible fill-in before doing the actual Cholesky decomposition.
+There are other methods than the Cholesky decomposition in use. Orthogonalization methods (such as QR factorization) are common, for example, when solving problems by least squares methods. While the theoretical fill-in is still the same, in practical terms the "false non-zeros" can be different for different methods. And symbolic versions of those algorithms can be used in the same manner as the symbolic Cholesky to compute worst case fill-in.
+[edit] Solving sparse matrix equations
+Both iterative and direct methods exist for sparse matrix solving.
+Iterative methods, such as conjugate gradient method and GMRES utilize fast computations of matrix-vector products , where matrix  is sparse. The use of preconditioners can significantly accelerate convergence of such iterative methods.
+[edit] See also
+
+
+
+
+Matrix representation
+Pareto principle
+Ragged matrix
+
+
+
+
+Skyline matrix
+Sparse array
+Sparse graph code
+
+
+
+
+Sparse file
+Harwell-Boeing file format
+Matrix Market exchange formats
+
+
+
+
+[edit] References
+
+Golub, Gene H.; Van Loan, Charles F. (1996). Matrix Computations (3rd ed.). Baltimore: Johns Hopkins. ISBN978-0-8018-5414-9.
+Stoer, Josef; Bulirsch, Roland (2002). Introduction to Numerical Analysis (3rd ed.). Berlin, New York: Springer-Verlag. ISBN978-0-387-95452-3.
+Tewarson, Reginald P. (May 1973). Sparse Matrices (Part of the Mathematics in Science & Engineering series). Academic Press Inc.. (This book, by a professor at the State University of New York at Stony Book, was the first book exclusively dedicated to Sparse Matrices. Graduate courses using this as a textbook were offered at that University in the early 1980s).
+Bank, Randolph E.; Douglas, Craig C.. "Sparse Matrix Multiplication Package". http://www.mgnet.org/~douglas/Preprints/pub0034.pdf.
+Pissanetzky, Sergio (1984). Sparse Matrix Technology. Academic Press.
+Snay, Richard A. (1976). "Reducing the profile of sparse symmetric matrices". Bulletin Godsique 50 (4): 341. doi:10.1007/BF02521587. Also NOAA Technical Memorandum NOS NGS-4, National Geodetic Survey, Rockville, MD.
+
+[edit] Further reading
+
+Gibbs, Norman E.; Poole, William G.; Stockmeyer, Paul K. (1976). "A comparison of several bandwidth and profile reduction algorithms". ACM Transactions on Mathematical Software 2 (4): 322330. doi:10.1145/355705.355707. http://portal.acm.org/citation.cfm?id=355707.
+Gilbert, John R.; Moler, Cleve; Schreiber, Robert (1992). "Sparse matrices in MATLAB: Design and Implementation". SIAM Journal on Matrix Analysis and Applications 13 (1): 333356. doi:10.1137/0613024. http://citeseer.ist.psu.edu/gilbert91sparse.html.
+Sparse Matrix Algorithms Research at the University of Florida, containing the UF sparse matrix collection.
+SMALL project A EU-funded project on sparse models, algorithms and dictionary learning for large-scale data.
+
+[edit] External links
+
+Equations Solver Online
+Oral history interview with Harry M. Markowitz, Charles Babbage Institute, University of Minnesota. Markowitz discusses his development of portfolio theory (for which he received a Nobel Prize in Economics), sparse matrix methods, and his work at the RAND Corporation and elsewhere on simulation software development (including computer language SIMSCRIPT), modeling, and operations research.
+
+ 
+NewPP limit report
+Preprocessor visited node count: 4857/1000000
+Preprocessor generated node count: 21089/1500000
+Post-expand include size: 21186/2048000 bytes
+Template argument size: 7437/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:341015-0!0!0!!en!4!* and timestamp 20130116234709 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Sparse_matrix&oldid=533047700"				
+ /printfooter 
+ catlinks 
+Categories: Sparse matrices  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

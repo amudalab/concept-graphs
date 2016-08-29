@@ -1,0 +1,45 @@
+nodedef> name,label
+v0,accurate succinct finitary representation
+v1,algorithm
+v2,assembly language
+v3,compilation
+v4,computational process
+v5,data structure
+v6,distributed language
+v7,finitary representation
+v8,finitary specification
+v9,first order logic
+v10,functional language
+v11,history of programming language
+v12,imperative language
+v13,infinitary object
+v14,machine
+v15,machine language
+v16,object oriented language
+v17,parallel language
+v18,programming language
+v19,propositional logic
+v20,sequential language
+v21,stored program concept
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v13,false,5.90909090909,true
+v1,v18,false,14.1181818182,true
+v2,v14,false,2.04545454545,true
+v3,v11,false,64.5454545455,true
+v4,v18,false,18.8181818182,true
+v5,v14,false,13.2090909091,true
+v6,v7,false,25.4545454545,true
+v7,v13,false,4.09090909091,true
+v8,v13,false,13.9090909091,true
+v9,v18,false,32.7272727273,true
+v10,v12,false,4.77272727273,true
+v11,v14,false,5.02727272727,true
+v12,v14,false,25.0272727273,true
+v13,v18,false,8.59090909091,true
+v14,v18,false,3.20909090909,true
+v15,v14,false,0.0,true
+v16,v11,false,54.5454545455,true
+v17,v4,false,34.8636363636,true
+v19,v13,false,11.8181818182,true
+v20,v17,false,19.6363636364,true
+v21,v15,false,34.7727272727,true

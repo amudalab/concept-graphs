@@ -1,0 +1,264 @@
+
+Flowchart
+ /firstHeading 
+ bodyContent 
+
+ tagline 
+From Wikipedia, the free encyclopedia
+ /tagline 
+ subtitle 
+(Redirected from Flowcharts)
+ /subtitle 
+ jumpto 
+
+					Jump to:					navigation, 					search
+
+ /jumpto 
+ bodycontent 
+This article is about the diagram type.  For the poetical writing "Flow Chart", see John Ashbery.
+
+
+
+
+A simple flowchart representing a process for dealing with a non-functioning lamp.
+
+
+A flowchart is a type of diagram that represents an algorithm or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation can give a step-by-step solution to a given problem. Process operations are represented in these boxes, and arrows connecting them represent flow of control. Data flows are not typically represented in a flowchart, in contrast with data flow diagrams; rather, they are implied by the sequencing of operations. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.[1]
+
+
+
+
+Contents
+
+
+1 Overview
+2 History
+3 Flowchart building blocks
+
+3.1 Examples
+3.2 Symbols
+3.3 Data-flow extensions
+
+
+4 Types of flowchart
+5 Software
+6 See also
+7 Notes
+8 Further reading
+9 External links
+
+
+
+
+[edit] Overview
+Flowcharts are used in designing and documenting complex processes or programs. Like other types of diagram, they help visualize what is going on and thereby help the viewer to understand a process, and perhaps also find flaws, bottlenecks, and other less-obvious features within it. There are many different types of flowcharts, and each type has its own repertoire of boxes and notational conventions. The two most common types of boxes in a flowchart are:
+
+a processing step, usually called activity, and denoted as a rectangular box
+a decision, usually denoted as a diamond.
+
+A flowchart is described as "cross-functional" when the page is divided into different swimlanes describing the control of different organizational units. A symbol appearing in a particular "lane" is within the control of that organizational unit. This technique allows the author to locate the responsibility for performing an action or making a decision correctly, showing the responsibility of each organizational unit for different parts of a single process.
+Flowcharts depict certain aspects of processes and they are usually complemented by other types of diagram. For instance, Kaoru Ishikawa defined the flowchart as one of the seven basic tools of quality control, next to the histogram, Pareto chart, check sheet, control chart, cause-and-effect diagram, and the scatter diagram. Similarly, in UML, a standard concept-modeling notation used in software development, the activity diagram, which is a type of flowchart, is just one of many different diagram types.
+Nassi-Shneiderman diagrams are an alternative notation for process flow.
+Common alternate names include: flowchart, process flowchart, functional flowchart, process map, process chart, functional process chart, business process model, process model, process flow diagram, work flow diagram, business flow diagram. The terms "flowchart" and "flow chart" are used interchangeably.
+[edit] History
+
+
+
+
+Template for drawing flowcharts (late 1970s) showing the different symbols.
+
+
+The first structured method for documenting process flow, the "flow process chart", was introduced by Frank Gilbreth to members of the American Society of Mechanical Engineers (ASME) in 1921 in the presentation Process ChartsFirst Steps in Finding the One Best Way.[2] Gilbreth's tools quickly found their way into industrial engineering curricula. In the early 1930s, an industrial engineer, Allan H. Mogensen began training business people in the use of some of the tools of industrial engineering at his Work Simplification Conferences in Lake Placid, New York.
+A 1944 graduate of Mogensen's class, Art Spinanger, took the tools back to Procter and Gamble where he developed their Deliberate Methods Change Program. Another 1944 graduate, Ben S. Graham, Director of Formcraft Engineering at Standard Register Industrial, adapted the flow process chart to information processing with his development of the multi-flow process chart to display multiple documents and their relationships.[3] In 1947, ASME adopted a symbol set derived from Gilbreth's original work as the ASME Standard for Process Charts.
+Douglas Hartree explains that Herman Goldstine and John von Neumann developed a flowchart (originally, diagram) to plan computer programs.[4] His contemporary account is endorsed by IBM engineers[5] and by Goldstine's personal recollections.[6] The original programming flowcharts of Goldstine and von Neumann can be seen in their unpublished report, "Planning and coding of problems for an electronic computing instrument, Part II, Volume 1" (1947), which is reproduced in von Neumann's collected works.[7]
+Flowcharts used to be a popular means for describing computer algorithms and are still used for this purpose.[8] Modern techniques such as UML activity diagrams can be considered to be extensions of the flowchart. In the 1970s the popularity of flowcharts as an own method decreased when interactive computer terminals and third-generation programming languages became the common tools of the trade, since algorithms can be expressed much more concisely as source code in such a language, and also because designing algorithms using flowcharts was more likely to result in spaghetti code because of the need for gotos to describe arbitrary jumps in control flow. Often pseudo-code is used, which uses the common idioms of such languages without strictly adhering to the details of a particular one.
+[edit] Flowchart building blocks
+[edit] Examples
+
+
+
+
+A simple flowchart for computing factorial N (N!)
+
+
+
+
+
+
+Stencil for flow-chart with the symbols.
+
+
+A flowchart for computing the factorial of N  written N! and equal to 1  2  3  ...  N.
+[edit] Symbols
+A typical flowchart from older basic computer science textbooks may have the following kinds of symbols:
+
+Start and end symbols
+Represented as circles, ovals or rounded (fillet) rectangles, usually containing the word "Start" or "End", or another phrase signaling the start or end of a process, such as "submit inquiry" or "receive product".
+
+
+Arrows
+Showing "flow of control". An arrow coming from one symbol and ending at another symbol represents that control passes to the symbol the arrow points to. The line for the arrow can be solid or dashed. The meaning of the arrow with dashed line may differ from one flowchart to another and can be defined in the legend.
+
+
+Generic processing steps
+Represented as rectangles. Examples: "Add 1 to X"; "replace identified part"; "save changes" or similar.
+
+
+Subroutines
+Represented as rectangles with double-struck vertical edges; these are used to show complex processing steps which may be detailed in a separate flowchart. Example: PROCESS-FILES. One subroutine may have multiple distinct entry points or exit flows (see coroutine); if so, these are shown as labeled 'wells' in the rectangle, and control arrows connect to these 'wells'.
+
+
+Input/Output
+Represented as a parallelogram. Examples: Get X from the user; display X.
+
+
+Prepare conditional
+Represented as a hexagon. Shows operations which have no effect other than preparing a value for a subsequent conditional or decision step (see below).
+
+
+Conditional or decision
+Represented as a diamond (rhombus) showing where a decision is necessary, commonly a Yes/No question or True/False test. The conditional symbol is peculiar in that it has two arrows coming out of it, usually from the bottom point and right point, one corresponding to Yes or True, and one corresponding to No or False. (The arrows should always be labeled.) More than two arrows can be used, but this is normally a clear indicator that a complex decision is being taken, in which case it may need to be broken-down further or replaced with the "pre-defined process" symbol.
+
+
+Junction symbol
+Generally represented with a black blob, showing where multiple control flows converge in a single exit flow. A junction symbol will have more than one arrow coming into it, but only one going out.
+In simple cases, one may simply have an arrow point to another arrow instead. These are useful to represent an iterative process (what in Computer Science is called a loop). A loop may, for example, consist of a connector where control first enters, processing steps, a conditional with one arrow exiting the loop, and one going back to the connector.
+For additional clarity, wherever two lines accidentally cross in the drawing, one of them may be drawn with a small semicircle over the other, showing that no junction is intended.
+
+
+Labeled connectors
+Represented by an identifying label inside a circle. Labeled connectors are used in complex or multi-sheet diagrams to substitute for arrows. For each label, the "outflow" connector must always be unique, but there may be any number of "inflow" connectors. In this case, a junction in control flow is implied.
+
+
+Concurrency symbol
+Represented by a double transverse line with any number of entry and exit arrows. These symbols are used whenever two or more control flows must operate simultaneously. The exit flows are activated concurrently when all of the entry flows have reached the concurrency symbol. A concurrency symbol with a single entry flow is a fork; one with a single exit flow is a join.
+
+It is important to remember to keep these connections logical in order. All processes should flow from top to bottom and left to right.
+[edit] Data-flow extensions
+A number of symbols have been standardized for data flow diagrams to represent data flow, rather than control flow. These symbols may also be used in control flowcharts (e.g. to substitute for the parallelogram symbol).
+
+A Document represented as a rectangle with a wavy base;
+A Manual input represented by quadrilateral, with the top irregularly sloping up from left to right. An example would be to signify data-entry from a form;
+A Manual operation represented by a trapezoid with the longest parallel side at the top, to represent an operation or adjustment to process that can only be made manually.
+A Data File represented by a cylinder.
+
+[edit] Types of flowchart
+Sterneckert (2003) suggested that flowcharts can be modeled from the perspective of different user groups (such as managers, system analysts and clerks) and that there are four general types:[9]
+
+Document flowcharts, showing controls over a document-flow through a system
+Data flowcharts, showing controls over a data-flow in a system
+System flowcharts showing controls at a physical or resource level
+Program flowchart, showing the controls in a program within a system
+
+Notice that every type of flowchart focuses on some kind of control, rather than on the particular flow itself.[9]
+However there are several of these classifications. For example Andrew Veronis (1978) named three basic types of flowcharts: the system flowchart, the general flowchart, and the detailed flowchart.[10] That same year Marilyn Bohl (1978) stated "in practice, two kinds of flowcharts are used in solution planning: system flowcharts and program flowcharts...".[11] More recently Mark A. Fryman (2001) stated that there are more differences: "Decision flowcharts, logic flowcharts, systems flowcharts, product flowcharts, and process flowcharts are just a few of the different types of flowcharts that are used in business and government".[12]
+In addition, many diagram techniques exist that are similar to flowcharts but carry a different name, such as UML activity diagrams.
+[edit] Software
+Any drawing program can be used to create flowchart diagrams, but these will have no underlying data model to share data with databases or other programs such as project management systems or spreadsheets. Some tools offer special support for flowchart drawing. Many software packages[examples needed] exist that can create flowcharts automatically, either directly from source code, or from a flowchart description language. On-line Web-based versions of such programs are available.
+[edit] See also
+
+
+
+
+
+
+Related diagrams
+
+
+Control flow diagram
+Control flow graph
+Activity diagram
+Data flow diagram
+Deployment flowchart
+Flow map
+Functional flow block diagram
+NassiShneiderman diagram
+N2 Chart
+Petri nets
+Sankey diagram
+State diagram
+Warnier/Orr diagram
+
+
+
+
+
+
+Related subjects
+
+
+Augmented transition network
+Business process illustration
+Business process mapping
+Diagramming software
+Interactive EasyFlow
+Process architecture
+Pseudocode
+Recursive transition network
+Unified Modeling Language (UML)
+Logic gate
+
+
+
+
+
+
+[edit] Notes
+
+
+^ SEVOCAB: Software and Systems Engineering Vocabulary. Term: Flow chart. Retrieved 31 July 2008.
+^ Frank Bunker Gilbreth, Lillian Moller Gilbreth (1921) Process Charts. American Society of Mechanical Engineers.
+^ Graham, Jr., Ben S. (10 June 1996). "People come first". Keynote Address at Workflow Canada. http://www.worksimp.com/articles/keynoteworkflowcanada.htm.
+^ Hartree, Douglas (1949). Calculating Instruments and Machines. The University of Illinois Press. p.112.
+^ Bashe, Charles (1986). IBM's Early Computers. The MIT Press. p.327.
+^ Goldstine, Herman (1972). The Computer from Pascal to Von Neumann. Princeton University Press. pp.266267. ISBN0-691-08104-2.
+^ Taub, Abraham (1963). John von Neumann Collected Works. 5. Macmillan. pp.80151.
+^ Bohl, Rynn: "Tools for Structured and Object-Oriented Design", Prentice Hall, 2007.
+^ a b Alan B. Sterneckert (2003)Critical Incident Management. p. 126
+^ Andrew Veronis (1978) Microprocessors: Design and Applications. p. 111
+^ Marilyn Bohl (1978) A Guide for Programmers. p. 65.
+^ Mark A. Fryman (2001) Quality and Process Improvement. p. 169.
+
+
+[edit] Further reading
+
+ISO (1985). Information processing -- Documentation symbols and conventions for data, program and system flowcharts, program network charts and system resources charts. International Organization for Standardization. ISO 5807:1985. http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=11955.
+ISO 10628: Flow Diagrams For Process Plants - General Rules
+ECMA 4: Flowcharts (withdrawn - list of withdrawn standards)
+
+[edit] External links
+
+
+
+Wikimedia Commons has media related to: Flow chart
+
+
+
+Short video demonstrating flowcharts in action
+Flowcharting Techniques An IBM manual from 1969 (5MB PDF format)
+Advanced Flowchart - Why and how to create advanced flowchart
+
+ 
+NewPP limit report
+Preprocessor visited node count: 3922/1000000
+Preprocessor generated node count: 21927/1500000
+Post-expand include size: 17076/2048000 bytes
+Template argument size: 6649/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 1/500
+
+ Saved in parser cache with key enwiki:pcache:idhash:527453-0!*!0!!en!4!* and timestamp 20130117235812 
+  /bodycontent 
+ printfooter 
+
+				Retrieved from "http://en.wikipedia.org/w/index.php?title=Flowchart&oldid=533608811"				
+ /printfooter 
+ catlinks 
+Categories: Quality control toolsDiagramsTechnical communicationComputer programmingAmerican inventionsAlgorithm description languagesHidden categories: Wikipedia articles needing clarification from January 2013Articles with example code  /catlinks 
+
+ debughtml 
+ /debughtml 
+
+ /bodyContent 
+
+ 

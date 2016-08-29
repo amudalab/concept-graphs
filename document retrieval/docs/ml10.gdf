@@ -1,0 +1,87 @@
+nodedef> name,label
+v0,cross validation
+v1,empirical risk minimization
+v2,empty heart problem
+v3,feature selection
+v4,feature selection algorithm
+v5,forward selection algorithm
+v6,forward selections
+v7,generalization error
+v8,k-fold cross validation
+v9,k-l divergence
+v10,learning theory
+v11,model selection
+v12,mutual information
+v13,vc dimension
+v14,wrapper feature selection
+v15,wrapper model feature selection
+v16,wrapper model feature selection algorithms
+edgedef> node1,node2,directed,weight,labelvisible
+v0,v6,false,25.6136363636,true
+v0,v7,false,174.545454545,true
+v0,v8,false,0.0,true
+v0,v10,false,61.8181818182,true
+v0,v11,false,23.3454545455,true
+v0,v12,false,15.2727272727,true
+v0,v13,false,49.696969697,true
+v1,v2,false,165.272727273,true
+v1,v7,false,70.5818181818,true
+v1,v11,false,68.3181818182,true
+v1,v13,false,59.7818181818,true
+v2,v1,false,165.272727273,true
+v2,v3,false,9.09090909091,true
+v2,v6,false,11.8181818182,true
+v3,v2,false,9.09090909091,true
+v3,v4,false,11.0181818182,true
+v3,v5,false,62.7272727273,true
+v3,v6,false,40.4848484848,true
+v3,v7,false,22.7272727273,true
+v3,v9,false,320.909090909,true
+v3,v11,false,3.63636363636,true
+v3,v14,false,0.818181818182,true
+v3,v15,false,1.81818181818,true
+v4,v3,false,11.0181818182,true
+v4,v16,false,1.81818181818,true
+v5,v3,false,62.7272727273,true
+v5,v6,false,0.0,true
+v6,v0,false,25.6136363636,true
+v6,v2,false,11.8181818182,true
+v6,v3,false,40.4848484848,true
+v6,v5,false,0.0,true
+v6,v7,false,27.2727272727,true
+v6,v14,false,23.3181818182,true
+v6,v15,false,14.7272727273,true
+v7,v0,false,174.545454545,true
+v7,v1,false,70.5818181818,true
+v7,v3,false,22.7272727273,true
+v7,v6,false,27.2727272727,true
+v7,v8,false,10.9090909091,true
+v7,v10,false,186.363636364,true
+v7,v11,false,18.8181818182,true
+v7,v13,false,84.2727272727,true
+v8,v0,false,0.0,true
+v8,v7,false,10.9090909091,true
+v9,v3,false,320.909090909,true
+v9,v12,false,12.2181818182,true
+v10,v0,false,61.8181818182,true
+v10,v7,false,186.363636364,true
+v10,v13,false,75.1636363636,true
+v11,v0,false,23.3454545455,true
+v11,v1,false,68.3181818182,true
+v11,v3,false,3.63636363636,true
+v11,v7,false,18.8181818182,true
+v11,v13,false,46.303030303,true
+v12,v0,false,15.2727272727,true
+v12,v9,false,12.2181818182,true
+v13,v0,false,49.696969697,true
+v13,v1,false,59.7818181818,true
+v13,v7,false,84.2727272727,true
+v13,v10,false,75.1636363636,true
+v13,v11,false,46.303030303,true
+v14,v3,false,0.818181818182,true
+v14,v6,false,23.3181818182,true
+v15,v3,false,1.81818181818,true
+v15,v6,false,14.7272727273,true
+v15,v16,false,0.0,true
+v16,v4,false,1.81818181818,true
+v16,v15,false,0.0,true

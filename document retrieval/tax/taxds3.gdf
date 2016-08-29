@@ -1,0 +1,55 @@
+nodedef> name,label
+v0,abstract data type
+v1,array implementation
+v2,arrays
+v3,circularly linked list
+v4,data structure
+v5,data type
+v6,dequeue
+v7,double ended queue
+v8,doubly linked list
+v9,element rank
+v10,enqueue
+v11,first in first out principle
+v12,front element
+v13,last in first out principle
+v14,linked list
+v15,list abstract data type
+v16,list data type
+v17,queue
+v18,queue full exception
+v19,rear element
+v20,running time
+v21,sequence data type
+v22,singly linked list
+v23,stack
+v24,vector
+v25,vector abstract data type
+v26,vector data type
+v27,worst case
+edgedef>node1,node2,directed,weight,labelvisible
+v0,v5,false,1.83333333333,true
+v1,v20,false,11.6666666667,true
+v2,v24,false,3.88888888888,true
+v3,v24,false,2.91666666666,true
+v4,v14,false,3.88888888889,true
+v6,v23,false,9.72222222222,true
+v8,v14,false,4.19444444444,true
+v9,v14,false,50.5555555555,true
+v10,v23,false,9.34126984127,true
+v11,v12,false,10.9722222222,true
+v12,v23,false,7.55555555556,true
+v13,v12,false,16.0555555556,true
+v15,v0,false,0.944444444444,true
+v16,v26,false,6.22222222222,true
+v17,v7,false,0.0,true
+v18,v12,false,80.3888888889,true
+v19,v23,false,13.3888888889,true
+v20,v27,false,2.91666666667,true
+v21,v24,false,2.11111111111,true
+v22,v24,false,11.5404040404,true
+v23,v7,false,3.66666666667,true
+v24,v5,false,0.888888888889,true
+v25,v26,false,0.0,true
+v26,v24,false,0.0,true
+v27,v14,false,9.44444444444,true
