@@ -1,0 +1,1213 @@
+system which handles::system which handles
+handles or manages::handles or manages
+manages primary memory::manages primary memory
+primary memory memory::primary memory memory
+memory memory management::memory memory management
+management keeps track::management keeps track
+free it checks::free it checks
+allocated to processes::allocated to processes
+processes it decides::processes it decides
+decides which process::decides which process
+memory gets freed::memory gets freed
+freed or unallocated::freed or unallocated
+correspondingly it updates::correspondingly it updates
+updates the status::updates the status
+status memory management::status memory management
+management provides protection::management provides protection
+register the base::register the base
+base register holds::base register holds
+holds the smallest::holds the smallest
+smallest legal physical::smallest legal physical
+legal physical memory::legal physical memory
+physical memory address::physical memory address
+limit register specifies::limit register specifies
+specifies the size::specifies the size
+access all addresses::access all addresses
+memory management instructions::memory management instructions
+instructions and data::instructions and data
+data to memory::data to memory
+process will reside::process will reside
+compile time binding::compile time binding
+generate the absolute::generate the absolute
+absolute code load::absolute code load
+reside in memory::reside in memory
+compiler generates re-locatable::compiler generates re-locatable
+generates re-locatable code::generates re-locatable code
+re-locatable code execution::re-locatable code execution
+done at run::done at run
+run time dynamic::run time dynamic
+loading in dynamic::loading in dynamic
+program all routines::program all routines
+re-locatable load format::re-locatable load format
+format the main::format the main
+program is loaded::program is loaded
+loaded into memory::loaded into memory
+executed other routines::executed other routines
+methods or modules::methods or modules
+modules are loaded::modules are loaded
+loaded on request::loaded on request
+request dynamic loading::request dynamic loading
+dynamic loading makes::dynamic loading makes
+makes better memory::makes better memory
+memory space utilization::memory space utilization
+utilization and unused::utilization and unused
+loaded dynamic linking::loaded dynamic linking
+dynamic linking linking::dynamic linking linking
+process of collecting::process of collecting
+collecting and combining::collecting and combining
+combining various modules::combining various modules
+modules of code::modules of code
+code and data::code and data
+memory and executed::memory and executed
+executed operating system::executed operating system
+system can link::system can link
+link system level::link system level
+system level libraries::system level libraries
+combines the libraries::combines the libraries
+libraries at load::libraries at load
+linking is done::linking is done
+linking in static::linking in static
+linked at compile::linked at compile
+program code size::program code size
+size becomes bigger::size becomes bigger
+dynamic linking libraries::dynamic linking libraries
+linking libraries linked::linking libraries linked
+linked at execution::linked at execution
+code size remains::code size remains
+size remains smaller::size remains smaller
+remains smaller logical::remains smaller logical
+smaller logical versus::smaller logical versus
+logical versus physical::logical versus physical
+versus physical address::versus physical address
+physical address space::physical address space
+space an address::space an address
+address whereas address::address whereas address
+physical address logical::physical address logical
+address logical address::address logical address
+virtual address virtual::virtual address virtual
+virtual and physical::virtual and physical
+compile-time and load-time::compile-time and load-time
+load-time address-binding schemes::load-time address-binding schemes
+address-binding schemes virtual::address-binding schemes virtual
+physical addresses differ::physical addresses differ
+differ in execution-time::differ in execution-time
+execution-time address-binding scheme::execution-time address-binding scheme
+scheme the set::scheme the set
+logical addresses generated::logical addresses generated
+program is referred::program is referred
+logical address space::logical address space
+space the set::space the set
+addresses is referred::addresses is referred
+space the run-time::space the run-time
+mapping from virtual::mapping from virtual
+virtual to physical::virtual to physical
+address is done::address is done
+memory management unit::memory management unit
+hardware device mmu::hardware device mmu
+mechanism to convert::mechanism to convert
+convert virtual address::convert virtual address
+address to physical::address to physical
+address the value::address the value
+register is added::register is added
+treated as offset::treated as offset
+base register value::base register value
+reallocated to location::reallocated to location
+user program deals::user program deals
+deals with virtual::deals with virtual
+sees the real::sees the real
+real physical addresses::real physical addresses
+physical addresses swapping::physical addresses swapping
+addresses swapping swapping::addresses swapping swapping
+out of main::out of main
+back into memory::back into memory
+memory for continued::memory for continued
+continued execution backing::continued execution backing
+execution backing store::execution backing store
+hard disk drive::hard disk drive
+fast in access::fast in access
+access and large::access and large
+capable of providing::capable of providing
+providing direct access::providing direct access
+memory images major::memory images major
+major time consuming::major time consuming
+part of swapping::part of swapping
+swapping is transfer::swapping is transfer
+transfer time total::transfer time total
+amount of memory::amount of memory
+standard hard disk::standard hard disk
+disk with transfer::disk with transfer
+milliseconds process swapping::milliseconds process swapping
+process swapping memory::process swapping memory
+swapping memory allocation::swapping memory allocation
+memory allocation main::memory allocation main
+allocation main memory::allocation main memory
+two partitions low::two partitions low
+partitions low memory::partitions low memory
+operating system resides::operating system resides
+memory high memory::memory high memory
+processes then held::processes then held
+held in high::held in high
+high memory operating::high memory operating
+memory operating system::memory operating system
+memory allocation mechanism::memory allocation mechanism
+allocation mechanism s.n::allocation mechanism s.n
+mechanism s.n memory::mechanism s.n memory
+s.n memory allocation::s.n memory allocation
+memory allocation description::memory allocation description
+type of allocation::type of allocation
+protect user processes::protect user processes
+changing operating-system code::changing operating-system code
+data relocation register::data relocation register
+register contains value::register contains value
+value of smallest::value of smallest
+smallest physical address::smallest physical address
+address whereas limit::address whereas limit
+register contains range::register contains range
+range of logical::range of logical
+addresses each logical::addresses each logical
+memory is divided::memory is divided
+number of fixed-sized::number of fixed-sized
+partition is free::partition is free
+process is selected::process is selected
+fragmentation as processes::fragmentation as processes
+processes are loaded::processes are loaded
+loaded and removed::loaded and removed
+removed from memory::removed from memory
+free memory space::free memory space
+space is broken::space is broken
+allocated to memory::allocated to memory
+size and memory::size and memory
+memory blocks remains::memory blocks remains
+blocks remains unused::blocks remains unused
+unused this problem::unused this problem
+two types s.n::two types s.n
+types s.n fragmentation::types s.n fragmentation
+s.n fragmentation description::s.n fragmentation description
+external fragmentation total::external fragmentation total
+fragmentation total memory::fragmentation total memory
+total memory space::total memory space
+satisfy a request::satisfy a request
+reside a process::reside a process
+internal fragmentation memory::internal fragmentation memory
+fragmentation memory block::fragmentation memory block
+memory block assigned::memory block assigned
+assigned to process::assigned to process
+process is bigger::process is bigger
+bigger some portion::bigger some portion
+portion of memory::portion of memory
+memory is left::memory is left
+process external fragmentation::process external fragmentation
+reduced by compaction::reduced by compaction
+compaction or shuffle::compaction or shuffle
+shuffle memory contents::shuffle memory contents
+contents to place::contents to place
+place all free::place all free
+block to make::block to make
+make compaction feasible::make compaction feasible
+dynamic paging external::dynamic paging external
+paging external fragmentation::paging external fragmentation
+fragmentation is avoided::fragmentation is avoided
+paging technique paging::paging technique paging
+memory is broken::memory is broken
+broken into blocks::broken into blocks
+size called pages::size called pages
+size is power::size is power
+pages are loaded::pages are loaded
+memory frames logical::memory frames logical
+frames logical address::frames logical address
+process is allocated::process is allocated
+allocated physical memory::allocated physical memory
+free memory frame::free memory frame
+system keeps track::system keeps track
+free frames operating::free frames operating
+frames operating system::frames operating system
+frames to run::frames to run
+run a program::run a program
+program of size::program of size
+size n pages::size n pages
+pages address generated::pages address generated
+generated by cpu::generated by cpu
+cpu is divided::cpu is divided
+divided into page::divided into page
+page in physical::page in physical
+physical memory page::physical memory page
+memory page offset::memory page offset
+offset is combined::offset is combined
+combined with base::combined with base
+address to define::address to define
+define the physical::define the physical
+memory address paging::memory address paging
+paging following figure::paging following figure
+show the paging::show the paging
+paging table architecture::paging table architecture
+table architecture paging::table architecture paging
+paging example segmentation::paging example segmentation
+technique to break::technique to break
+memory into logical::memory into logical
+represents a group::represents a group
+group of related::group of related
+segments or code::segments or code
+segment for operating::segment for operating
+paging unlike paging::paging unlike paging
+eliminates internal fragmentation::eliminates internal fragmentation
+internal fragmentation external::internal fragmentation external
+fragmentation external fragmentation::fragmentation external fragmentation
+fragmentation still exists::fragmentation still exists
+lesser extent logical::lesser extent logical
+extent logical address::extent logical address
+address space address::address space address
+space address generated::space address generated
+divided into segment::divided into segment
+segment in physical::segment in physical
+limit of segment::limit of segment
+segment segment offset::segment segment offset
+offset is first::offset is first
+checked against limit::checked against limit
+memory address virtual::memory address virtual
+address virtual memory::address virtual memory
+execution of processes::execution of processes
+memory the main::memory the main
+main visible advantage::main visible advantage
+larger than physical::larger than physical
+physical memory virtual::physical memory virtual
+memory virtual memory::memory virtual memory
+separation of user::separation of user
+user logical memory::user logical memory
+memory from physical::memory from physical
+memory this separation::memory this separation
+extremely large virtual::extremely large virtual
+large virtual memory::large virtual memory
+provided for programmers::provided for programmers
+smaller physical memory::smaller physical memory
+fully in main::fully in main
+main memory user::main memory user
+memory user written::memory user written
+user written error::user written error
+written error handling::written error handling
+error handling routines::error handling routines
+data or computation::data or computation
+computation certain options::computation certain options
+options and features::options and features
+rarely many tables::rarely many tables
+tables are assigned::tables are assigned
+assigned a fixed::assigned a fixed
+amount of address::amount of address
+ability to execute::ability to execute
+execute a program::execute a program
+partially in memory::partially in memory
+memory would counter::memory would counter
+counter many benefits::counter many benefits
+benefits less number::benefits less number
+needed to load::needed to load
+load or swap::load or swap
+swap each user::swap each user
+program into memory::program into memory
+memory a program::memory a program
+longer be constrained::longer be constrained
+amount of physical::amount of physical
+increase in cpu::increase in cpu
+utilization and throughput::utilization and throughput
+throughput virtual memory::throughput virtual memory
+virtual memory virtual::virtual memory virtual
+implemented by demand::implemented by demand
+segmentation system demand::segmentation system demand
+system demand segmentation::system demand segmentation
+provide virtual memory::provide virtual memory
+virtual memory demand::virtual memory demand
+memory demand paging::memory demand paging
+paging a demand::paging a demand
+demand paging system::demand paging system
+system with swapping::system with swapping
+execute a process::execute a process
+swapping the entire::swapping the entire
+process into memory::process into memory
+swapper called pager::swapper called pager
+guesses which pages::guesses which pages
+process is swapped::process is swapped
+pages into memory::pages into memory
+reading into memory::reading into memory
+decreasing the swap::decreasing the swap
+physical memory needed::physical memory needed
+memory needed hardware::memory needed hardware
+needed hardware support::needed hardware support
+support is required::support is required
+required to distinguish::required to distinguish
+valid-invalid bit scheme::valid-invalid bit scheme
+scheme where valid::scheme where valid
+valid and invalid::valid and invalid
+checked by checking::checked by checking
+checking the bit::checking the bit
+marking a page::marking a page
+process never attempts::process never attempts
+attempts to access::attempts to access
+access the page::access the page
+executes and accesses::executes and accesses
+proceeds normally demand::proceeds normally demand
+demand paging access::demand paging access
+page marked invalid::page marked invalid
+trap this trap::trap this trap
+system s failure::system s failure
+failure to bring::failure to bring
+bring the desired::bring the desired
+page into memory::page into memory
+memory but page::memory but page
+page fault step::page fault step
+fault step description::fault step description
+step description step::step description step
+check an internal::check an internal
+invalid memory access::invalid memory access
+memory access step::memory access step
+reference was invalid::reference was invalid
+terminate the process::terminate the process
+find a free::find a free
+free frame step::free frame step
+schedule a disk::schedule a disk
+operation to read::operation to read
+read the desired::read the desired
+newly allocated frame::newly allocated frame
+allocated frame step::allocated frame step
+read is complete::read is complete
+modify the internal::modify the internal
+restart the instruction::restart the instruction
+illegal address trap::illegal address trap
+trap the process::trap the process
+operating system reads::operating system reads
+reads the desired::reads the desired
+memory and restarts::memory and restarts
+restarts the process::restarts the process
+advantages of demand::advantages of demand
+demand paging large::demand paging large
+paging large virtual::paging large virtual
+memory more efficient::memory more efficient
+memory unconstrained multiprogramming::memory unconstrained multiprogramming
+limit on degree::limit on degree
+degree of multiprogramming::degree of multiprogramming
+disadvantages of demand::disadvantages of demand
+demand paging number::demand paging number
+number of tables::number of tables
+tables and amount::tables and amount
+amount of processor::amount of processor
+overhead for handling::overhead for handling
+handling page interrupts::handling page interrupts
+interrupts are greater::interrupts are greater
+simple paged management::simple paged management
+paged management techniques::paged management techniques
+management techniques due::management techniques due
+jobs address space::jobs address space
+address space size::address space size
+space size page::space size page
+size page replacement::size page replacement
+page replacement algorithm::page replacement algorithm
+replacement algorithm page::replacement algorithm page
+algorithm page replacement::algorithm page replacement
+page replacement algorithms::page replacement algorithms
+operating system decides::operating system decides
+decides which memory::decides which memory
+pages to swap::pages to swap
+write to disk::write to disk
+page of memory::page of memory
+page fault occurs::page fault occurs
+allocation purpose accounting::allocation purpose accounting
+accounting to reason::accounting to reason
+reason that pages::reason that pages
+number of free::number of free
+pages is lower::pages is lower
+lower than required::lower than required
+selected for replacement::selected for replacement
+completion this process::completion this process
+determines the quality::determines the quality
+waiting for page-ins::waiting for page-ins
+algorithm a page::algorithm a page
+information about accessing::information about accessing
+accessing the pages::accessing the pages
+provided by hardware::provided by hardware
+select which pages::select which pages
+replaced to minimize::replaced to minimize
+minimize the total::minimize the total
+number of page::number of page
+costs of primary::costs of primary
+storage and processor::storage and processor
+algorithms we evaluate::algorithms we evaluate
+evaluate an algorithm::evaluate an algorithm
+algorithm by running::algorithm by running
+string of memory::string of memory
+reference and computing::reference and computing
+computing the number::computing the number
+page faults reference::page faults reference
+faults reference string::faults reference string
+string the string::string the string
+reference string reference::reference string reference
+string reference strings::string reference strings
+strings are generated::strings are generated
+system and recording::system and recording
+recording the address::recording the address
+produces a large::produces a large
+number of data::number of data
+note two things::note two things
+immediately following references::immediately following references
+references to page::references to page
+page fault page::page fault page
+sequence of addresses::sequence of addresses
+123,215,600,1234,76,96 if page::123,215,600,1234,76,96 if page
+first in first::first in first
+algorithm oldest page::algorithm oldest page
+page in main::page in main
+easy to implement::easy to implement
+tail and add::tail and add
+add new pages::add new pages
+first out optimal::first out optimal
+out optimal page::out optimal page
+optimal page algorithm::optimal page algorithm
+algorithm an optimal::algorithm an optimal
+optimal page-replacement algorithm::optimal page-replacement algorithm
+lowest page-fault rate::lowest page-fault rate
+algorithms an optimal::algorithms an optimal
+page-replacement algorithm exists::page-replacement algorithm exists
+opt or min::opt or min
+replace the page::replace the page
+optimal page replacement::optimal page replacement
+recently used page::recently used page
+page buffering algorithm::page buffering algorithm
+pool of free::pool of free
+frames on page::frames on page
+select a page::select a page
+write new page::write new page
+frame of free::frame of free
+mark the page::mark the page
+table and restart::table and restart
+restart the process::restart the process
+process now write::process now write
+write the dirty::write the dirty
+out of disk::out of disk
+disk and place::disk and place
+place the frame::place the frame
+frame holding replaced::frame holding replaced
+holding replaced page::holding replaced page
+page in free::page in free
+replacement this algorithm::replacement this algorithm
+algorithm this algorithm::algorithm this algorithm
+algorithm is based::algorithm is based
+memory management::memory management
+operating system::operating system
+primary memory::primary memory
+memory memory::memory memory
+memory location::memory location
+status memory::status memory
+base register::base register
+limit register::limit register
+register holds::register holds
+smallest legal::smallest legal
+legal physical::legal physical
+physical memory::physical memory
+memory address::memory address
+register specifies::register specifies
+legally access::legally access
+management instructions::management instructions
+memory addresses::memory addresses
+absolute code::absolute code
+code load::code load
+compiler generates::compiler generates
+re-locatable code::re-locatable code
+code execution::code execution
+memory segment::memory segment
+dynamic loading::dynamic loading
+re-locatable load::re-locatable load
+load format::load format
+main program::main program
+routines methods::routines methods
+loading makes::loading makes
+memory space::memory space
+space utilization::space utilization
+unused routines::unused routines
+dynamic linking::dynamic linking
+linking linking::linking linking
+executable file::executable file
+executed operating::executed operating
+link system::link system
+system level::system level
+level libraries::level libraries
+static linking::static linking
+libraries linked::libraries linked
+program code::program code
+code size::code size
+linking libraries::linking libraries
+size remains::size remains
+remains smaller::remains smaller
+logical versus::logical versus
+physical address::physical address
+address space::address space
+address generated::address generated
+logical address::logical address
+memory unit::memory unit
+virtual address::virtual address
+physical addresses::physical addresses
+load-time address-binding::load-time address-binding
+address-binding schemes::address-binding schemes
+addresses differ::addresses differ
+execution-time address-binding::execution-time address-binding
+address-binding scheme::address-binding scheme
+logical addresses::logical addresses
+addresses generated::addresses generated
+run-time mapping::run-time mapping
+management unit::management unit
+hardware device::hardware device
+device mmu::device mmu
+user process::user process
+register value::register value
+address location::address location
+user program::user program
+program deals::program deals
+virtual addresses::virtual addresses
+real physical::real physical
+addresses swapping::addresses swapping
+swapping swapping::swapping swapping
+main memory::main memory
+backing store::backing store
+continued execution::continued execution
+execution backing::execution backing
+hard disk::hard disk
+secondary storage::secondary storage
+accommodate copies::accommodate copies
+memory images::memory images
+direct access::direct access
+consuming part::consuming part
+total transfer::total transfer
+memory swapped::memory swapped
+standard hard::standard hard
+transfer rate::transfer rate
+actual transfer::actual transfer
+milliseconds process::milliseconds process
+process swapping::process swapping
+swapping memory::swapping memory
+memory allocation::memory allocation
+allocation main::allocation main
+low memory::low memory
+system resides::system resides
+memory high::memory high
+high memory::high memory
+user processes::user processes
+memory operating::memory operating
+allocation mechanism::allocation mechanism
+mechanism s.n::mechanism s.n
+s.n memory::s.n memory
+allocation description::allocation description
+single-partition allocation::single-partition allocation
+relocation-register scheme::relocation-register scheme
+protect user::protect user
+operating-system code::operating-system code
+data relocation::data relocation
+relocation register::relocation register
+smallest physical::smallest physical
+multiple-partition allocation::multiple-partition allocation
+fixed-sized partitions::fixed-sized partitions
+input queue::input queue
+free partition::free partition
+process terminates::process terminates
+process fragmentation::process fragmentation
+free memory::free memory
+memory blocks::memory blocks
+small size::small size
+blocks remains::blocks remains
+remains unused::remains unused
+fragmentation fragmentation::fragmentation fragmentation
+types s.n::types s.n
+s.n fragmentation::s.n fragmentation
+fragmentation description::fragmentation description
+external fragmentation::external fragmentation
+fragmentation total::fragmentation total
+total memory::total memory
+internal fragmentation::internal fragmentation
+fragmentation memory::fragmentation memory
+memory block::memory block
+block assigned::block assigned
+shuffle memory::shuffle memory
+memory contents::memory contents
+large block::large block
+make compaction::make compaction
+dynamic paging::dynamic paging
+paging technique::paging technique
+technique paging::technique paging
+memory frames::memory frames
+memory frame::memory frame
+free frames::free frames
+frames operating::frames operating
+pages address::pages address
+page number::page number
+page table::page table
+base address::base address
+memory page::memory page
+page offset::page offset
+address paging::address paging
+figure show::figure show
+paging table::paging table
+table architecture::table architecture
+architecture paging::architecture paging
+segmentation segmentation::segmentation segmentation
+break memory::break memory
+logical pieces::logical pieces
+piece represents::piece represents
+related information::related information
+code segment::code segment
+data segment::data segment
+varying sizes::varying sizes
+lesser extent::lesser extent
+space address::space address
+segment number::segment number
+segment table::segment table
+segment segment::segment segment
+segment offset::segment offset
+virtual memory::virtual memory
+main visible::main visible
+visible advantage::visible advantage
+logical memory::logical memory
+large virtual::large virtual
+smaller physical::smaller physical
+entire program::entire program
+memory user::memory user
+user written::user written
+written error::written error
+error handling::error handling
+handling routines::handling routines
+error occured::error occured
+fixed amount::fixed amount
+small amount::small amount
+cpu utilization::cpu utilization
+demand paging::demand paging
+segmentation system::segmentation system
+system demand::system demand
+demand segmentation::demand segmentation
+memory demand::memory demand
+paging system::paging system
+entire process::entire process
+lazy swapper::lazy swapper
+pager guesses::pager guesses
+pager brings::pager brings
+memory pages::memory pages
+memory needed::memory needed
+needed hardware::needed hardware
+hardware support::hardware support
+valid-invalid bit::valid-invalid bit
+bit scheme::bit scheme
+invalid pages::invalid pages
+bit marking::bit marking
+process executes::process executes
+accesses pages::accesses pages
+memory resident::memory resident
+execution proceeds::execution proceeds
+paging access::paging access
+page marked::page marked
+page-fault trap::page-fault trap
+desired page::desired page
+page fault::page fault
+fault step::fault step
+step description::step description
+description step::description step
+internal table::internal table
+invalid memory::invalid memory
+memory access::memory access
+access step::access step
+free frame::free frame
+frame step::frame step
+disk operation::disk operation
+allocated frame::allocated frame
+disk read::disk read
+memory step::memory step
+illegal address::illegal address
+address trap::address trap
+system reads::system reads
+memory advantages::memory advantages
+memory unconstrained::memory unconstrained
+unconstrained multiprogramming::unconstrained multiprogramming
+multiprogramming disadvantages::multiprogramming disadvantages
+paging number::paging number
+processor overhead::processor overhead
+handling page::handling page
+page interrupts::page interrupts
+simple paged::simple paged
+paged management::paged management
+management techniques::management techniques
+explicit constraints::explicit constraints
+jobs address::jobs address
+space size::space size
+size page::size page
+page replacement::page replacement
+replacement algorithm::replacement algorithm
+algorithm page::algorithm page
+replacement algorithms::replacement algorithms
+system decides::system decides
+allocated paging::allocated paging
+fault occurs::fault occurs
+free page::free page
+allocation purpose::allocation purpose
+purpose accounting::purpose accounting
+free pages::free pages
+required pages::required pages
+process determines::process determines
+limited information::limited information
+pages provided::pages provided
+total number::total number
+page misses::page misses
+primary storage::primary storage
+memory reference::memory reference
+page faults::page faults
+faults reference::faults reference
+reference string::reference string
+memory references::memory references
+string reference::string reference
+reference strings::reference strings
+choice produces::choice produces
+large number::large number
+page size::page size
+entire address::entire address
+fault page::fault page
+first reference::first reference
+oldest page::oldest page
+replace pages::replace pages
+optimal page::optimal page
+page algorithm::page algorithm
+optimal page-replacement::optimal page-replacement
+page-replacement algorithm::page-replacement algorithm
+lowest page-fault::lowest page-fault
+page-fault rate::page-fault rate
+algorithm exists::algorithm exists
+min replace::min replace
+longest period::longest period
+page buffering::page buffering
+buffering algorithm::buffering algorithm
+process start::process start
+replaced write::replaced write
+free pool::free pool
+dirty page::dirty page
+frame holding::frame holding
+replaced page::replaced page
+smallest count::smallest count
+algorithm suffers::algorithm suffers
+initial phase::initial phase
+memory::memory
+management::management
+functionality::functionality
+operating::operating
+system::system
+handles::handles
+manages::manages
+primary::primary
+track::track
+location::location
+allocated::allocated
+process::process
+free::free
+checks::checks
+processes::processes
+decides::decides
+tracks::tracks
+freed::freed
+unallocated::unallocated
+correspondingly::correspondingly
+updates::updates
+status::status
+protection::protection
+two::two
+registers::registers
+base::base
+register::register
+limit::limit
+holds::holds
+smallest::smallest
+legal::legal
+physical::physical
+address::address
+specifies::specifies
+size::size
+range::range
+program::program
+legally::legally
+access::access
+addresses::addresses
+instructions::instructions
+data::data
+done::done
+ways::ways
+compile::compile
+reside::reside
+binding::binding
+generate::generate
+absolute::absolute
+code::code
+load::load
+compiler::compiler
+generates::generates
+re-locatable::re-locatable
+execution::execution
+moved::moved
+segment::segment
+delayed::delayed
+run::run
+dynamic::dynamic
+loading::loading
+routine::routine
+loaded::loaded
+routines::routines
+disk::disk
+format::format
+main::main
+executed::executed
+methods::methods
+modules::modules
+request::request
+makes::makes
+space::space
+utilization::utilization
+unused::unused
+linking::linking
+collecting::collecting
+combining::combining
+executable::executable
+file::file
+link::link
+level::level
+libraries::libraries
+combines::combines
+static::static
+linked::linked
+bigger::bigger
+remains::remains
+smaller::smaller
+logical::logical
+versus::versus
+generated::generated
+cpu::cpu
+unit::unit
+virtual::virtual
+compile-time::compile-time
+load-time::load-time
+address-binding::address-binding
+schemes::schemes
+differ::differ
+execution-time::execution-time
+scheme::scheme
+set::set
+referred::referred
+run-time::run-time
+mapping::mapping
+mmu::mmu
+hardware::hardware
+device::device
+mechanism::mechanism
+convert::convert
+value::value
+added::added
+user::user
+treated::treated
+offset::offset
+attempt::attempt
+dynamically::dynamically
+reallocated::reallocated
+deals::deals
+sees::sees
+real::real
+swapping::swapping
+swapped::swapped
+temporarily::temporarily
+out::out
+backing::backing
+store::store
+brought::brought
+back::back
+continued::continued
+hard::hard
+drive::drive
+secondary::secondary
+storage::storage
+fast::fast
+large::large
+accommodate::accommodate
+copies::copies
+images::images
+users::users
+capable::capable
+providing::providing
+direct::direct
+major::major
+consuming::consuming
+part::part
+transfer::transfer
+total::total
+directly::directly
+proportional::proportional
+amount::amount
+assume::assume
+100kb::100kb
+standard::standard
+rate::rate
+actual::actual
+100k::100k
+1000kb::1000kb
+milliseconds::milliseconds
+allocation::allocation
+partitions::partitions
+low::low
+resides::resides
+high::high
+held::held
+s.n::s.n
+description::description
+single-partition::single-partition
+type::type
+relocation-register::relocation-register
+protect::protect
+changing::changing
+operating-system::operating-system
+relocation::relocation
+multiple-partition::multiple-partition
+divided::divided
+number::number
+fixed-sized::fixed-sized
+partition::partition
+selected::selected
+input::input
+queue::queue
+terminates::terminates
+fragmentation::fragmentation
+removed::removed
+broken::broken
+pieces::pieces
+blocks::blocks
+small::small
+problem::problem
+types::types
+external::external
+satisfy::satisfy
+contiguous::contiguous
+internal::internal
+block::block
+assigned::assigned
+portion::portion
+left::left
+reduced::reduced
+compaction::compaction
+shuffle::shuffle
+contents::contents
+place::place
+make::make
+feasible::feasible
+paging::paging
+avoided::avoided
+technique::technique
+pages::pages
+power::power
+bytes::bytes
+frames::frames
+non-contiguous::non-contiguous
+frame::frame
+page::page
+index::index
+table::table
+combined::combined
+define::define
+figure::figure
+show::show
+architecture::architecture
+segmentation::segmentation
+break::break
+piece::piece
+represents::represents
+group::group
+related::related
+information::information
+,data::,data
+segments::segments
+implemented::implemented
+unlike::unlike
+varying::varying
+sizes::sizes
+eliminates::eliminates
+exists::exists
+lesser::lesser
+extent::extent
+first::first
+checked::checked
+completely::completely
+visible::visible
+advantage::advantage
+programs::programs
+larger::larger
+separation::separation
+extremely::extremely
+provided::provided
+programmers::programmers
+situations::situations
+entire::entire
+required::required
+fully::fully
+written::written
+error::error
+handling::handling
+occured::occured
+computation::computation
+options::options
+features::features
+rarely::rarely
+tables::tables
+fixed::fixed
+ability::ability
+execute::execute
+partially::partially
+counter::counter
+benefits::benefits
+i::NNP
+needed::needed
+swap::swap
+longer::longer
+constrained::constrained
+increase::increase
+throughput::throughput
+commonly::commonly
+demand::demand
+provide::provide
+similar::similar
+lazy::lazy
+swapper::swapper
+pager::pager
+guesses::guesses
+brings::brings
+avoids::avoids
+reading::reading
+decreasing::decreasing
+support::support
+distinguish::distinguish
+valid-invalid::valid-invalid
+bit::bit
+valid::valid
+invalid::invalid
+checking::checking
+marking::marking
+effect::effect
+attempts::attempts
+executes::executes
+accesses::accesses
+resident::resident
+proceeds::proceeds
+marked::marked
+page-fault::page-fault
+trap::trap
+result::result
+failure::failure
+bring::bring
+desired::desired
+fault::fault
+handled::handled
+step::step
+check::check
+determine::determine
+reference::reference
+terminate::terminate
+find::find
+schedule::schedule
+operation::operation
+read::read
+newly::newly
+complete::complete
+modify::modify
+restart::restart
+instruction::instruction
+interrupted::interrupted
+illegal::illegal
+reads::reads
+restarts::restarts
+advantages::advantages
+efficient::efficient
+unconstrained::unconstrained
+multiprogramming::multiprogramming
+degree::degree
+disadvantages::disadvantages
+processor::processor
+overhead::overhead
+interrupts::interrupts
+greater::greater
+case::case
+simple::simple
+paged::paged
+techniques::techniques
+due::due
+lack::lack
+explicit::explicit
+constraints::constraints
+jobs::jobs
+replacement::replacement
+algorithm::algorithm
+algorithms::algorithms
+write::write
+occurs::occurs
+purpose::purpose
+accounting::accounting
+reason::reason
+lower::lower
+referenced::referenced
+requires::requires
+completion::completion
+determines::determines
+quality::quality
+waiting::waiting
+page-ins::page-ins
+limited::limited
+accessing::accessing
+select::select
+replaced::replaced
+minimize::minimize
+misses::misses
+balancing::balancing
+costs::costs
+evaluate::evaluate
+running::running
+string::string
+computing::computing
+faults::faults
+references::references
+strings::strings
+artificially::artificially
+tracing::tracing
+recording::recording
+choice::choice
+produces::produces
+note::note
+things::things
+immediately::immediately
+sequence::sequence
+123,215,600,1234,76,96::123,215,600,1234,76,96
+1,2,6,12,0,0::1,2,6,12,0,0
+fifo::fifo
+oldest::oldest
+easy::easy
+implement::implement
+list::list
+replace::replace
+tail::tail
+add::add
+head::head
+optimal::optimal
+page-replacement::page-replacement
+lowest::lowest
+opt::opt
+min::min
+longest::longest
+period::period
+recently::recently
+lru::lru
+buffering::buffering
+start::start
+quickly::quickly
+pool::pool
+mark::mark
+dirty::dirty
+holding::holding
+frequently::frequently
+lfu::lfu
+count::count
+suffers::suffers
+situation::situation
+heavily::heavily
+initial::initial
+phase::phase
+mfu::mfu
+based::based
+argument::argument

@@ -1,0 +1,716 @@
+
+Lecture - 6
+                         Systems analysis and Design
+                              Prof.V.Rajaraman
+              Department of Super computer education & Research
+                Indian Institute of Science (IISc), Bangalore
+
+last time we  were  comparing  on  line  transaction  processing  and  batch
+processing
+and we said what what situations we use  batch  processing  and  under  what
+situations we use on line processing
+the major difference  between  on  line  transaction  processing  and  batch
+processing as i pointed out in on line transaction  processing  we  have  to
+emphasize response type
+while the person is being waiting some person is being serviced
+so the response must be very fast
+whereas in batch  processing  because  it  is  done  periodically  the  more
+important criterion from the point of view of the  person  who  is  managing
+the server is to get throughput
+that is as many programs as possible in the given unit of  time  one  should
+able to run
+and this effectively reduces the ideal time of the computer
+and reduce ideal time is what effectively  gives  you  might  say  the  best
+performance for the cost of the machine which has been investing
+there is lot of confusion in general in people's mind  between  what  is  on
+line transaction processing and what is real time processing
+it is in fact very often used synonymously
+but it is not correct
+you use real time processing and on line processing are synonymous
+because in real time processing the primary aim is to  be  able  to  meet  a
+certain dead line in finishing a particular task
+if the dead line is missed then the task has to be aborted
+that means it doesn't work properly
+to give a simple example if you are actually controlling  the  motion  of  a
+space vehicle you got to be able to give commands to space vehicle  in  real
+time while it is moving
+similarly if you are having a system to control the landing of an air  craft
+the landing of air craft now a  days  in  fact  controlled  by  a  on  board
+computer
+and landing is a short period because of plane is  coming  at  a  very  fast
+rate
+so you have to be able to give correct commands  in  terms  of  height  what
+height it should come what speed it should have for him to land correctly
+if there is an error or if there is a delay particularly  if  a  delay  then
+there could be a air crash
+so in real time processing not building  the  dead  line  then  meaning  the
+difference between  the life and death
+so the actual constraints are requirements on  real  time  systems  is  much
+more severe than on on line systems
+on line systems doesn't really matters if the customer has to wait  for  one
+extra minute
+only thing is the customer will become little impatience
+but doesn't really mean any life of  that kind of a problem
+so online processing is some what similar than real time processing
+another point one should realize is with the coming  of  personal  computers
+in large numbers and with the coming of networks both both with  local  area
+networks within organizations  and the internet  connecting  networks  local
+networks world wide network of computers
+such a system were more or less connected to every thing else  most  of  the
+systems are really on line systems
+primarily because the connection is available and on line system has  become
+more or less very common and batch is used only  when  you  have  a  lot  of
+[6.22...] for once in a while processing
+for instance all enquiry systems are on line
+if you want to do  any enquiry on your bank account or if you want  to  make
+an enquiry about ticket status in a train or a bus all these things  are  on
+line
+not real time processing and whereas batch system always periodic
+unless re emphasizing  the point that it is  periodic  the  periodicity  may
+vary from depending upon that occasion
+it can be once a month like pay roll it can be once a year like in c e t  or
+it can be once a day at the end of a day  you try to find out  how  much  of
+goods are sold say in a retail shop or how much of money  was  collected  at
+the end of the day
+so these are periodic
+so periodicity depends upon the application [refer slide time 7.28]
+
+[pic]
+
+now  we  have  been  talking  about  the  three  broad  classifications   of
+information systems
+we said that the routine data processing system is the  one  which  is  very
+commonly used
+and  then  management  information  systems  are  the  ones  which  pay  for
+themselves in other words they  are  the  ones  which  leads  to  profit  in
+organizations and decision support systems which are used by top  management
+for strategic decision making
+so the operational information comes from the data processing
+tactical information comes from m i s or management information  system  and
+strategic information comes from decision support systems
+now if you look at um the m i s the input for m i s is always the output  of
+the routine data processing
+in other words routine data processing is necessary in order to be  able  to
+do anything further with management information system
+in the earlier days of computers when computer is slow and computer is  also
+restricted to in terms of memory and so on  many  organizations  start  data
+processing only with routine data processing
+because the machines are not powerful enough to run  more  complex  programs
+because of lot of memory and so on
+and also data collection and data storage in the sixties and seventies  were
+quite small
+because the steric devices which are available in fact the  maximum  size  i
+remember
+[refer slide time 9.43]
+[pic]
+
+in the early seventies was only two megabytes
+today no body talks about less than eighty giga bytes on a p c
+so storage size have increased considerably now the cost is not gone up
+and this is made it much more important to emphasize m i s  because  passing
+power is no more a constraint
+the only constraint is your own method of imagining coming up with a  proper
+idea of working
+the operational information as i said leads to the  raw  material  on  which
+you can work to get the m i s or tactical decisions
+let me take a very simple example
+some years ago i was consulting for a truck company and  the  truck  company
+they are proposing a lot of trucks as you know
+that is what they do
+and um they were actually also  keeping  records  of  how  many  trucks  are
+produced every day and after the trucks are produced they also produce  some
+spare parts for the trucks
+because unless there are spare  parts  available  like  for  instance  shock
+absorbers springs pistons and so on
+spare parts become an essential part of the sale of a truck
+if a truck company has a reputation that their  spare  parts  are  available
+with no difficulty at all then the sales of the truck will increase
+therefore they are all the fine that you bought a truck and you can't get  a
+spare part easily then naturally the  people  prefer  the  truck  which  the
+spare parts as well as the service centres are available in plenty
+so in fact the most of the current companies have realized  that  and  there
+are um um both workshops for repairing your cars trucks and so on
+as well as the workshop stock a lot of spare parts
+so the company found that  spare parts what some what they innovative had  a
+idea of how much of spare parts are being consumed
+the production was in a different time and is costing more money to produce
+further apart from that in most of these areas  whether  it  be  motor  cars
+trucks or even computers when you buy the product like computer or truck  or
+motor car they try to sell you and keep the car very competitive  with   all
+the competitors
+but when it comes to spare parts there is where they make the money
+the spare parts are the ones which are expensive and so  that  profitability
+of spare parts is normally higher to the profitability of truck itself
+so in that based on their operation data you are computing  the  probability
+of spare parts versus profitability of trucks
+they found that for the same amount of money invested spare parts is  giving
+more profit
+than trucks
+so the question which immediately arose is that in order to make  sure  that
+i don't run up with spare parts
+if i run out of spare parts when it is  needed  by  workshop  then  spurious
+spare parts will come into the market and  not  only  you  will  loose  your
+money
+but you will also loose your reputation
+because various spare parts will not have the same strength or same  quality
+of spare parts you produce
+so one of the important things company have to do was a predict
+and the prediction is based on what the past
+[14.17...]  consumption  over  over  a  period  of  time  in   the   project
+consumption
+and say what the consumption will be at different periodic intervals
+so they use an operation research technique which is primarily a  method  of
+using mathematics do thins like prediction statistical study and so on
+so they have a predict prediction on these  things  and  then  they  decided
+that there is no point in having a separate time for making spare parts  why
+not combine making the spare parts along with the making of  the  parts  for
+the assembly line
+in other words they effectively try to make some of  this  parts  which  are
+made in in the company need those parts as  an  extra  set  along  with  the
+production of the regular items which going to truck
+so there is no separate requirement of schedule and so on
+same schedule is used but you have larger number coming out
+some of it goes to truck some of it goes to the spare parts
+so this way they are able to optimize the  production  of  spare  parts  and
+also not to overstock or under stock
+let the correct level
+so the probability of not having a spare part is made  low  and  effectively
+the profitability really went up  is also calculated
+what the profitability will be with [16.08..]
+so to convince the management this is the right method of doing things  they
+have to one all the simulations on the computer with  the  operational  data
+real operational data you have collected over a  period  of  time  and  show
+graphs and curves and so on to the managers to convince them
+so that is a good policy
+the policy changes in a company take place because  of  the  fact  that  the
+operational information has  used  effectively  to  improve  the  method  of
+working of the company is one example
+many many such example
+one more example i would  um take is that of inventory
+inventory control is one of major applications of  m  i  s   where  the  two
+basic ideas in inventory control is you should be able to keep like  if  you
+are running say a if you are running a store  of  a  food  mart  or  even  a
+medical shop it is important to be able to not loose  to  customize  because
+you didn't stock that item and you should not over stock
+the over stock of course things are lost
+things are in the shelf without making any money
+that means you are loosing money on whatever you invested
+so it's very important to be able to decide  or  the  volume  of  particular
+product at which time you got to reorder
+so when you go go that is called reorder point
+that is you go on finding out the current stock position of some  particular
+item and stock position is getting to a limit you reorder
+and the amount of quantity you reordered depends very much on the as i  said
+the the time taken to get the goods into a shop
+other unforcing reasons and so on
+and again o r or operation research techniques  are  used  based  on  passed
+data to able to come up with a reasonable  reorder  point  and  the  reorder
+quantity
+so that over all the particular shop does not run out of  the  item  neither
+to the over stock
+so this is the primary aim
+so these are the some typical examples of  the use of m i s
+i think go on and on with examples but i made the point namely that the  raw
+material is input
+in input you have to correct the right input
+you will correct the right input unless you know what where you looking  for
+
+so it's all more to be important to  be  able  to  look  at  what  the  item
+objectives are trying to get necessary data and operational sys  operational
+information system
+but m i s by in large is an very  important area of of application
+and there are other decision support system is  one  level  beyond  that  is
+done by the decision of top management and it is very  unstructured  and  it
+is very difficult to obtain precise information because the fact that  as  i
+said earlier many of these decisions are based  on  your  general  knowledge
+and knowledge of the field what is going on and things like  that  and  also
+depends upon the what kind of a stra strategy you want to take and you  have
+to again use analytical and simulation models to be able to come up  with  a
+reasonable decision support system [refer slide time 20.48]
+
+[pic]
+
+
+
+actually there are many aids which are used in decision support  systems  to
+conceptualize the problem say graphs animations etcetera to understand  what
+it is
+and you  also  use  archival  data  to  infer  trends  and  there  are  some
+artificial intelligence tools also we use what i mean  is  certain  kind  of
+heuristic rules  are use which you work on based  on  your  assumption  that
+this may take place
+let me give a example of a what what this implies
+very often in decision support systems you use a what if question
+what is meant by what if question is suppose you have a choice [refer  slide
+time 21.47]
+
+[pic]
+
+you are running a running a retail shop and you want to find out whether  it
+is worth wise starting a another shop in a new area and  you  want  to  find
+out what investment will be on that and what you expect to be  on return  of
+investments whether starting this is going to be profitable or not
+so what if question is if i start if i did not  start  it  will  some  other
+competitors come there and start and i loose my potential customers
+do start am  i going to profitable  right away or am i going  to  profitable
+little later
+is it better to prevent and do it earlier than your competitor does
+so these are questions which are what are known as what if questions
+and what if questions in fact regain by the use of very common tool  by  the
+Microsoft office namely spread sheet
+in spread sheet you have a number of rows and columns you  can  put  as  you
+know formally we can change values around percentages around and so  on  and
+instantly you find the effect of that
+in other words you can use spread sheets to ask questions like if the  sales
+goes up by this amount how much will be the profitability give up
+or if you are warning the pricing policy pricing policy  is  very  important
+like for instance book publisher publishes a book
+at what price should he sell it [refer slide time 23.44]
+
+[pic]
+
+if he sells if he sells at a high cost may be the number of people  who  buy
+may be small
+but profitability will be quite large
+but if it is a huge sales because  the  cost  is  reasonably  low  then  the
+profit total amount of profit i have made because of the volume may be  very
+high
+so the pricing decisions of most products is crucial
+in fact it is very interesting area and many companies  intentionally  price
+their products very high  to  give  the  feeling  among  people  that  their
+product is superior
+it may not be at all
+but then there is a certain small volume in thinking that I  bought  a  very
+very expensive piece of an item
+it may not have all that high quality
+but it's again they are [24.48...] to a certain segment of  a  market  which
+has money to throw away
+so these are pricing decisions which the decision support system allows  you
+to take in terms of getting a strategical idea of  what  is  the  population
+which you are catering to
+is there a population which is got disposal income high  income  which  they
+can essentially spend on expensive items and so on
+in fact one of the reasons why many of the  multi  national  comp  companies
+sell multiple products likes shoes and bags are coming to india is  that  we
+have now fairly large middle class of almost two hundred million people  who
+have reasonably good disposal income  and  so  there  is  a  possibility  of
+making some profit on this income
+so that is another reason why they do that
+another kind of a important tool used in decision support systems  and  also
+in m i s is called data mining
+what is data mining [refer slide time 26.19]
+ [pic]
+
+
+
+see we collect data over a large period of time routine data
+now huge disc are available tera bytes worth of are disc available
+so huge amount of data can be collected and stored and organized and  so  on
+and
+previously all that  so  called  archival  data  was  just  kept  for  legal
+purposes
+that means  over period  of  time  audit  will  come  and  check  your  what
+happened to your company and they may try to look at the archival data
+so it is primarily used as a  historical data
+used only when some auditors come around and so on
+that reason was in the earlier days many tapes are  available  for  archival
+and tapes are painfully difficult to process because  sequentially  data  is
+stored
+whereas now terabytes can be stored on disc
+that are so called disc network of storage devices giving you tera bytes  of
+data [refer slide time 27.42]
+
+[pic]
+
+for disc you can access data in a much more easy way  through  indexing  and
+so on
+searching a disc and getting some actual processing based on the search  use
+becomes feasible which is not feasible earlier
+the data mining is coming coming in its own because of  this  huge  increase
+in disc sizes
+so you create some hypothetical use to guess  some  hypothetical  rules  and
+try to see whether the rules are really valid or invalid
+for instance a manager or a of a railway  system  may  know  too  experience
+over years that the traffic on the certain routes is very high and there  is
+also seasonal change in traffic pattern
+if there is in some where the traffic goes up very much
+in deepavali time it goes up in dussera time it goes up and so on
+but to actually verify the operational data can be  found  out  to  see  how
+much how many people are there  there in the waiting list
+the huge waiting list that means always people wanted to go but they  didn't
+go they couldn't go because non availability  of  seats  and  so  they  took
+alternate transport
+may be a bus they went  by or  if they are richer they went by by plane
+so you have lost your [29.37...]
+but this is when you hunch
+so based on data mining they can  formulate  rules  saying  that  over  this
+period the traffic is expected to this much and  compare  their  rules  with
+the real fact based on data which is being collected and  the  rules  adhere
+in fact kind of match then you know the rules can be used and you  can  take
+an action like for an increase in number of sleeper  coaches  at  that  time
+and so on
+or you also can take other kind of decisions like recently what is  happened
+is that many budget airlines has come  and  they  reduce  the  cost  of  air
+tickets
+they are trying to almost compete with the second a c two tier with trains
+so railways got a little jerky saying that our  client   is  being  lost  to
+compete in career
+so two ways of solving this problem
+one way of solving this problem is of course to reduce you a c  compartments
+then you make a lot of profit on those
+so there is no point in reducing
+otherwise reduce the price
+you have to some extend reduce the price
+you try to make more people come and sometimes they find that in spite    of
+reducing reduction of price based on  data  collected  in  with  operational
+operational information system which is as  in  the  reservation  data  that
+lots of berths are empty in second a c but there are big  waiting  list  for
+sleeper
+so what minister said as a strategic decision is that we upgrade the  people
+who are kind of frequent traveler by train i would like  to  give  a  little
+bonus and instead of that those going empty i upgrade  him  sending  him  to
+the second a c and the empty seats in the sleeper can be  used  by  the  peo
+people in the waiting list
+so those empty means no money
+but going with some costless means some some profit
+so it also gives some good  feelings  among  travelers  that  is  frequently
+traveled by train they get some bonus
+so this kind of a strategic decision is taken based  on  data  collected  in
+the recent past
+if the same thing same question you ask to the railways five years ago  they
+would say what what non sense you are talking off  because  every  thing  is
+going full
+only when the planes came and started competing then this problem arose
+so the point is that strategic decisions improve the  profitability  and  it
+is actually comes out of data mining and  some  of  tactical  decision  also
+come out of data mining looking at what happened like the spare parts  as  i
+pointed out inventory and so on and lot of  things  are  come  out  of  data
+mining
+so lot of what if questions what if the data is correct what if the data  is
+lie [refer slide time 33.30]
+
+[pic]
+
+and and that can be kind of predicting
+so this is about waiting list and  increasing  sleeper  i  gave  an  example
+which is essentially [33.47...] transparency [refer slide time 33.49]
+
+[pic]
+
+the most interesting point is sometimes unexpected  results  come  out  from
+the analysis of orthogonal data
+something which comes out unexpected  that is  lot   more  valuable  because
+you never have guessed  it
+but it gave valuable information to you
+so very often unexpected results do do lead to new marketing strategies  and
+
+one interesting example of this is in  terms  of  the  data  marketing  data
+which people collected over a period of time about the  demand  for  certain
+types of consumer items in rural and semi urban areas where  people  do  not
+have that much of disposable income
+but they still as per to buy some of  these  new  items  like  shampoo  like
+tooth paste and stuff like that
+so the strategy taken was that make small sackets of shampoo or small  tubes
+of tooth paste so that the one time expense is quite low  and  people  start
+buying
+once they buy if the volume is very high  the  profitability  will  go  very
+high
+this is an unexpected thing
+in other words people are ignoring so called poor people
+but the poor people have a lot of money to spend also
+where if  given the opportunity to spend it
+so this is the kind of unexpected result which  comes  out  of  analysis  of
+archival data and also lot of marketing things as well as certain amount  of
+strategic ideas
+so in this module you have laid  the  ground  work  for  [refer  slide  time
+36.02]
+
+[pic]
+
+
+the design of generally information systems for used by organizations
+and i talked about various types of information  systems  and  functions  of
+various   various   organi   functional   point   functional   division   of
+organizations
+so we have some kind of an overview now of what organizations are  like  how
+do they function what kind of information are they looking for
+in what what types of information can lead to  good  operation  as  well  as
+good profit for the company
+so these are very very important parts when you think about an  overview  of
+the design
+these transparencies are also available in  the  website  which  goes  along
+with this course
+so you don't have to really copy down these things
+that is there in the website for you
+and over and above this support material for this course  and  also  lot  of
+examples  exercises  solved  examples  some  notes  some   multiple   choice
+questions and so on and i will urge you go and look at the  website  and  go
+through this material in the website preferably as you are listening to  the
+lecture
+but at least if not at the same time at least revise or go  later  and  look
+at it so that you know you understand better lecture
+or in fact it is preferable to kind of really before a before  you  come  to
+the lecture
+but i could say that no body does it
+i mean no body would really ahead of time
+they even reading after after they event is um  is  is  important  but  many
+students do not do that because they only study at the end of  the  semester
+exam time
+but then if you want to really learn this subject you got continuously  also
+look at the web try to solve the problems and and so on
+that way you learn the subject
+learning is lot more important than passing the examination okay any have
+so the haven't finish the this module i am going on to the  next  module  as
+the next module is about how to get into  the  methodology  of  designing  a
+system
+analyzing and designing a system
+this is the core of this course
+so the core core itself core itself named system analysis and design
+so the core of the subject you are really starting now and  system  analysis
+and design we are going to look at number of issues
+first i will talk about so called steps in  the  life  cycle  of  a  systems
+analysis and design
+now the question is what what i really mean by life cycle
+life cycle is a um a common terminology which is  used  in  books  and  soft
+ware engineering as well as system analysis and design and m  i  s  and  all
+that
+all the books use this
+and you may  you may wonder what is this terminology is  used
+actually terminology is borrowed from in fact the  life  cycle  of  a  human
+being
+every every human being has certain stages in his life
+there is a infancy there is a little there is a child hood part then you  go
+to school then you go to high school and plus two
+then you go to college
+then you go to work and then you retire inevitably also you  will  also  die
+okay
+there are stages in the life of any person
+similarly there are stages in a design of a system
+there is also stages in the life of a system
+no system is going to be alive for an indefinite period
+just like human beings are mortal computer based systems are also mortal
+the reason why computer based systems are mortal that means  what  is  meant
+by mortal in this case is that working system which  is  being  working  for
+some years they may decide to throw it away and to remove a system
+and say the whole system is died
+whole system will die when people find that its usefulness is no more there
+and it may arise because of many  reasons  like  system  may  be  reasonably
+alright
+but to be implemented in computers which are completely  absolutes  and  you
+can't get any replacement spare parts for it
+so you are perforce required to up  date  your  computer  system  to  a  new
+system and conconiquently [42.35..] also come up with a new system  analysis
+cycle which is appropriate for  the  new  environment  hearing  by  the  new
+system
+i know many companies which  you  don't   want  to  do  this  change  namely
+because of it is very expensive to change and also it's painful because  you
+go again through all the bucks all the difficulties and so on
+in fact one of my cousin who is working in america  she said that well i  am
+working in a banking system they are still using p d p eleven
+p d p eleven was machine which is build in  nineteen  may  be  late  sixties
+early seventies is not made any more
+then i asked why are why is the banks trying to use the same system
+she said well top managers are quite comfortable with it  and  programs  are
+running and you gain more  or work done any how
+so the question they ask is if i am trying to invest more money am  i  going
+to get some return and i have to go through a lot of pain in this changing
+is it worth it
+so these are points which one has to consider in the long run
+by in large it turns out that the managers are conservative they say let  if
+the thigs are working let it work
+why not this why this term
+and why why as i say why um wake up a sleeping dog okay
+that is a little just go on routinely and unfortunately some of  the  things
+which are routinely going on will not lead to a certain profitability
+they be forced to change only when they certainly find that the  competition
+is come up with better information system and they are able to carry out  to
+the customers better making profit
+so then they will be broken up from their slumber or you  know  their  sleep
+and then it will come to their attention that is necessary  to  change  even
+it is painful
+the point is life cycle is a number of stages and each stage  certain  tasks
+are performed as a system analyst [refer slide time 45.31]
+[pic]
+
+
+
+ the  reason  why  we  talk  about  the  life  cycle  is  because  designing
+information system of an organization is a very complex job
+it requires a lot of conversation with people determining  the  requirements
+and so on
+it's a very long run out job and very often it takes a  very  long  time  to
+cover with a good system
+so when ever you have a very complex  system  you  you  should  be  able  to
+divide the complex system into smaller parts and designing parts  some  what
+separately
+in programming they call it modular designing
+in other words you some people also use the term divide and  conquer  for  a
+very complex problem is there divide it
+divide it by smaller parts each one becomes simpler to solve
+so i will be able to look at the smaller part and solve it better
+so [46.55...] conquer or model a design you also should know what  to  break
+it up
+you can arbitrarily break it up
+so the logical decisions hadn't looked at each step  when  you  divide  this
+complex part the smaller parts must have a logical  beginning   and  logical
+end and
+so you should be able to say when the tape  has  been  started  when  it  is
+ended and  [refer slide time 47.27]
+
+[pic]
+
+apart from the fact that the end the time at ends you have  to  be  able  to
+say that whether it successfully ended and at the end of each step you  have
+to access progress
+that is in other words you gave a certain  amount  of  time  for  the  whole
+project
+you may given some thing like say four months to finish a project
+and if you are [47.59...] you may given some earlier  some  time  chart  for
+each each part and as soon as you finish that part you compare the time  you
+have taken with the projected time and if the projected time is  much  lower
+than the time you actually took that means a slippage in  the  schedule  you
+have delayed some way you have to makeup
+to be able to meet the ultimate dead line
+so i may have to put more people on it or have to follow a different path
+so in other words it is important to be able to asses progress periodically
+otherwise you end up in a situation where dead lines are slipped every  body
+becomes unhappy
+they work a long hours  without really being very  productive  [refer  slide
+time 48.56]
+[pic]
+
+so these things have to be prevented
+and um the method which one has to follow also that when you use divide  and
+conquer or divide a particular long process into small  processes  you  have
+to assign people with special competence in that area
+if it is a design stage where you are going to  design  people  have  design
+competence in that area for instance if  you   are  doing  for  a  insurance
+company if  the designer has done it for  other  insurance  companies  which
+are similar then you assign that person to this
+because he will take lesser time
+his learning time will be lower
+so he may be you have to assign correct people to the correct job  and  also
+at the right time
+in allocate of proper financial resources for each steps
+so these steps are necessary to allocate resources that human and  financial
+[refer slide time
+[pic]
+
+
+
+so we are going to look at nine different steps  in  in  this  analysis  and
+these nine steps which i am going to use are not secret
+what i mean by its not secret not every author will use nine steps
+some use seven steps or even less
+but in my  view  nine  steps  are  required  and  each  step  is  some  what
+independent to the other step
+when you design a system step by  step  and  go  along  some  of  soft  ware
+engineering books called this kind of a design where you  step  by  step  by
+step as a water fall model
+it is not [51.08...] i mean what it really means is that you  have  step  by
+step by step solution
+if you finish one step then you go to next step
+it is called water falls model because water falls  in  a  step  by  step  i
+would say okay
+whatever it is
+that terminology has stuck
+first time some time first when i first heard  the  term   turn  water  fall
+model i don't know what it was
+then i have to ask what it is and the guy said step by step
+then why do you use the term water fall
+that is essentially make simply superior because i have to ask coordinators
+so it turns out to many other organ terms in computing are  invented  for  a
+particular purpose and very often when these terms  are  used  [refer  slide
+time 52.08]
+[pic]
+
+lay people or even the people who are new to the  field  you  suddenly  feel
+you don't know it
+but actually the concepts are actually simple
+now the fashionable thing they say your water fall model is  not  the  right
+model
+you need to have a spiral model
+now what is it spiral model and how is it different  from  so  called  water
+model
+the whole idea is that if you go step by  step  and  don't  review  progress
+[52.44...] step at the end if you come up with a mistake then  you  have  to
+replace everything
+so instead of that common sense dictates that as soon as i finish some  part
+and second part i revisit the first part
+i just don't go with  the third part
+reusing the first part and see any modifications are required  in  part  one
+or step one having done step two in order  to  be  able  to  do  step  three
+better
+so you asses progress you modify and you proceed
+there is a certain certain kind of feed back at every step you are going  to
+use and the feed backs essentially are you might say spiraling the one  step
+to the other
+of course you should not spiral for ever
+you should you should kind of design when the spiral ends and go  from  step
+to step
+but by in large these are all organ people but generally the the  ideas  are
+fairly simple in terms of what it really means
+and so the if you look at this so called nine  steps  in  the  analysis  and
+task perform in each step
+the steps are requirement determination
+i first talk about first three steps
+i will go on to other steps in the following talks
+once first type is called requirement determination
+what is what is meant by requirement determination is that  when  i  when  a
+company wants to have information system to improve their  operations  there
+could be two types of situations on the en counted
+one situation is en counted is that there is a new nursing  home  which  has
+started and this nursing  home  wants  to  use  computer  to  improve  their
+operations [refer slide time 55.12]
+[pic]
+
+
+
+so start from scratch then you can go and talk to people over there and  try
+to find out what their requirements are
+and before that requiring determination means what what is it  they  require
+it for
+do they require it  for  admitting  patients  allocating  beds  or  do  they
+require it for diagnosis okay
+or do you require it for  to teaching  give give some kind of  the   lessons
+of um the doctors who come there to up date them
+so the requirements may vary
+is it only allocation of beds or also you want to look at  the  pricing  how
+should be charged
+creating a bill billing customers things like that
+so there are number of possible requirements among these you  have  to  find
+out what is the important requirement which you have to determine
+i will take an example i mean day to day example okay
+you want to you suddenly if your family says let us go  and  build  a  house
+okay
+let us build a house because i have a plot some where
+now the requirement determination is means [56.49..] build a house
+should i really build a house of this type even though  i  have  a  plot  or
+should i continue with where i am
+because i am quite comfortable where i am
+it may be in centre of town where my  plot may be way out somewhere
+there is no transportation available
+so the requirement determination face decide whether  to build the house  or
+not the house or to build the house at the later stage
+postponed the issue
+so this kind of a thing company has also to take
+that is why do just now why a computer based system for a  nursing  home  or
+my operations are large enough to make it necessary to have machines  and  i
+don't want to make the investment at this time okay
+so the decision is that time is either to go with it or not with it
+even if i go with it what aspect of it i go with it
+that is the deterination
+specification only after i determine
+so i talk about specifications next time and talk about detail
+specifications are extremely important in many if you have   to  any  design
+particularly of information system
+and so requirements specifications is still an art [refer slide time 58.25]
+[pic]
+
+and we need to discuss it at fair length which i will do next time
+
+
+
+
+
+

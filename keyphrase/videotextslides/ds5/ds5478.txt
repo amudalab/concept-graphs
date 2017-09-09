@@ -1,0 +1,8 @@
+Row 1::Height 2::deletion in linear probing
+Row 4::Height 1::to delete key 32 we first search for key 32
+Row 5::Height 1::32 is found in location 8. suppose we set this
+Row 6::Height 1::location to null
+Row 7::Height 1::now if we search for 31 we will encounter a null
+Row 8::Height 1::location before seeing 31
+Row 9::Height 1::lookup procedure would declare that 31 is not
+Row 100::Height 1::present

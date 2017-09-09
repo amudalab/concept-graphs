@@ -1,0 +1,6000 @@
+program that manages
+manages the computer
+basis for application
+programs and acts
+hardware an amazing
+aspect of operating
+accomplishing these tasks
+tasks mainframe operating
+mainframe operating systems
+systems are designed
+primarily to optimize
+utilization of hardware
+hardware personal computer
+operating systems support
+systems support complex
+support complex games
+systems for handheld
+computers are designed
+designed to provide
+provide an environment
+computer to execute
+explore the details
+details of computer
+computer system operation
+structure we begin
+begin by discussing
+discussing the basic
+functions of system
+describe the basic
+basic computer architecture
+architecture that makes
+write a functional
+functional operating system
+system is large
+large and complex
+piece by piece
+carefully defined inputs
+provide a general
+operating system objectives
+objectives to provide
+provide a grand
+major operating systems
+operating systems components
+components to provide
+coverage of basic
+basic computer system
+computer system organization
+begin our discussion
+system s role
+system a computer
+system the hardware
+hardware the central
+central processing unit
+basic computing resources
+system the application
+web browsers define
+define the ways
+users  computing
+problems the operating
+operating system controls
+controls and coordinates
+view a computer
+system as consisting
+consisting of hardware
+data the operating
+means for proper
+system an operating
+system is similar
+work to understand
+fully the operating
+explore operating systems
+system 1.1.1 user
+1.1.1 user view
+view the user
+user s view
+computer users sit
+sit in front
+system is designed
+user to monopolize
+monopolize its resources
+resources the goal
+maximize the work
+user is performing
+paid to performance
+paid to resource
+hardware and software
+resources are shared
+systems are optimized
+mainframe or minicomputer
+minicomputer other users
+users are accessing
+terminals these users
+users share resources
+information the operating
+cases is designed
+designed to maximize
+maximize resource utilization
+utilization to assure
+individual user takes
+sit at workstations
+connected to networks
+workstations and servers
+servers these users
+users have dedicated
+networking and servers
+designed to compromise
+compromise between individual
+usability and resource
+varieties of handheld
+devices are standalone
+units for individual
+directly by wire
+modems and networking
+operations their operating
+performance per amount
+amount of battery
+life is important
+computers in home
+devices and automobiles
+turn indicator lights
+primarily to run
+run without user
+intervention 1.1.2 system
+1.1.2 system view
+computer s point
+point of view
+view an operating
+allocator a computer
+required to solve
+solve a problem
+operating system acts
+resources facing numerous
+possibly conflicting requests
+requests for resources
+system must decide
+programs and users
+operate the computer
+efficiently and fairly
+slightly different view
+operating system emphasizes
+devices and user
+programs an operating
+program a control
+control program manages
+manages the execution
+execution of user
+programs to prevent
+errors and improper
+operation and control
+devices 1.1.3 defining
+1.1.3 defining operating
+defining operating systems
+completely adequate definition
+operating system operating
+system operating systems
+operating systems exist
+offer a reasonable
+solve the problem
+problem of creating
+creating a usable
+usable computing system
+system the fundamental
+goal of computer
+execute user programs
+make solving user
+solving user problems
+user problems easier
+hardware is constructed
+constructed since bare
+programs are developed
+developed these programs
+require certain common
+devices the common
+functions of controlling
+controlling and allocating
+piece of software
+system in addition
+universally accepted definition
+system a simple
+greatly across systems
+systems some systems
+megabyte of space
+space and lack
+gigabytes of space
+based on graphical
+graphical windowing systems
+l,0243 bytes computer
+bytes computer manufacturers
+manufacturers often round
+programs and application
+programs this last
+follow the matter
+constitutes an operating
+united states department
+department of justice
+justice filed suit
+suit against microsoft
+claiming that microsoft
+prevented application vendors
+vendors from competing
+microsoft was found
+monopoly to limit
+computer systems operate
+structure to round
+out our background
+knowledge the section
+concerned with computer-system
+skim or skip
+understand the concepts
+concepts 1.2.1 computer-system
+1.2.1 computer-system operation
+operation a modern
+modern general-purpose computer
+general-purpose computer system
+computer system consists
+number of device
+device controllers connected
+access to shared
+type of device
+controllers can execute
+competing for memory
+cycles to ensure
+ensure orderly access
+controller is provided
+provided whose function
+computer to start
+running for instance
+program to run
+run this initial
+stored in read-only
+electrically erasable programmable
+erasable programmable read-only
+programmable read-only memory
+general term firmware
+hardware it initializes
+initializes all aspects
+registers to device
+controllers to memory
+contents the bootstrap
+load the operating
+system to accomplish
+accomplish this goal
+program must locate
+locate and load
+load into memory
+memory the operatingsystem
+kernel the operating
+system then starts
+executing the first
+event to occur
+occur the occurrence
+hardware may trigger
+trigger an interrupt
+sending a signal
+system bus software
+software may trigger
+interrupt by executing
+executing a special
+cpu is interrupted
+immediately transfers execution
+location the fixed
+interrupt is located
+located the interrupt
+interrupt service routine
+service routine executes
+resumes the interrupted
+operation is shown
+architecture each computer
+functions are common
+common the interrupt
+interrupt must transfer
+routine the straightforward
+method for handling
+handling this transfer
+invoke a generic
+routine to examine
+examine the interrupt
+call the interrupt-specific
+number of interrupts
+table of pointers
+pointers to interrupt
+speed the interrupt
+intermediate routine needed
+pointers is stored
+stored in low
+hold the addresses
+interrupt service routines
+devices this array
+unique device number
+provide the address
+interrupting device operating
+device operating systems
+unix dispatch interrupts
+manner the interrupt
+save the address
+designs simply stored
+stored the interrupt
+number more recent
+recent architectures store
+store the return
+modify the processor
+state for instance
+modifying register values
+save the current
+restore that state
+state before returning
+interrupt is serviced
+saved return address
+address is loaded
+interrupted computation resumes
+occurred 1.2.2 storage
+1.2.2 storage structure
+storage structure computer
+structure computer programs
+memory or ram
+executed main memory
+large storage area
+millions to billions
+billions of bytes
+processor can access
+commonly is implemented
+technology called dynamic
+dynamic random-access memory
+forms an array
+array of memory
+words each word
+interaction is achieved
+sequence of load
+load or store
+instructions to specific
+specific memory addresses
+addresses the load
+load instruction moves
+moves a word
+word from main
+store instruction moves
+moves the content
+register to main
+loads and stores
+cpu automatically loads
+automatically loads instructions
+instructions from main
+memory for execution
+execution a typical
+typical instruction-execution cycle
+von neumann architecture
+fetches an instruction
+instruction from memory
+memory and stores
+stores that instruction
+register the instruction
+fetched from memory
+memory and stored
+back in memory
+memory unit sees
+stream of memory
+instructions or data
+hoio a memory
+address is generated
+sequence of memory
+memory addresses generated
+programs and data
+data to reside
+reside in main
+main memory permanently
+permanently this arrangement
+small to store
+store all needed
+volatile storage device
+device that loses
+loses its contents
+contents when power
+power is turned
+computer systems provide
+systems provide secondary
+provide secondary storage
+extension of main
+memory the main
+requirement for secondary
+hold large quantities
+quantities of data
+common secondary-storage device
+data most programs
+loaded into memory
+memory many programs
+management of disk
+consisting of registers
+systems others include
+include cache memory
+functions of storing
+storing a datum
+holding that datum
+storage systems lie
+lie in speed
+volatility the wide
+variety of storage
+speed and cost
+cost the higher
+levels are expensive
+cost per bit
+increases this trade-off
+trade-off is reasonable
+memory in fact
+early storage devices
+including paper tape
+tape and core
+relegated to museums
+tape and semiconductor
+faster and cheaper
+cheaper the top
+top four levels
+levels of memory
+constructed using semiconductor
+memory in addition
+addition to differing
+differing in speed
+volatile or nonvolatile
+nonvolatile as mentioned
+volatile storage loses
+device is removed
+absence of expensive
+battery and generator
+generator backup systems
+written to nonvolatile
+storage for safekeeping
+disk are volatile
+nonvolatile an electronic
+nonvolatile during normal
+electronic disk stores
+disk stores data
+large dram array
+hidden magnetic hard
+magnetic hard disk
+battery for backup
+power if external
+power is interrupted
+electronic-disk controller copies
+copies the data
+data from ram
+disk when external
+power is restored
+ram another form
+form of electronic
+disk is flash
+popular in cameras
+cameras and personal
+personal digital assistants
+increasingly as removable
+storage on general-purpose
+general-purpose computers flash
+computers flash memory
+memory is slower
+slower than dram
+power to retain
+retain its contents
+contents another form
+form of nonvolatile
+storage is nvram
+dram with battery
+battery backup power
+power this memory
+fast as dram
+nonvolatile the design
+complete memory system
+system must balance
+factors just discussed
+installed to improve
+access-time or transfer-rate
+transfer-rate disparity exists
+1.2.3 i structure
+i structure storage
+computer a large
+portion of operating
+operating system code
+code is dedicated
+dedicated to managing
+reliability and performance
+provide an overview
+i a general-purpose
+consists of cpus
+cpus and multiple
+multiple device controllers
+bus each device
+device for instance
+small computer-systems interface
+controller a device
+device controller maintains
+maintains some local
+local buffer storage
+set of special-purpose
+registers the device
+controller is responsible
+responsible for moving
+moving the data
+controller this device
+thread of execution
+instruction execution cycle
+execution cycle data
+cycle data movement
+data movement dma
+movement dma instructions
+instructions and data
+modern computer system
+computer system works
+system works driver
+works driver understands
+understands the device
+controller and presents
+presents a uniform
+system to start
+device driver loads
+controller the device
+examines the contents
+registers to determine
+determine what action
+read a character
+starts the transfer
+transfer of data
+data is complete
+device controller informs
+informs the device
+finished its operation
+operation the device
+driver then returns
+returning the data
+device driver returns
+driver returns status
+returns status information
+information this form
+form of interrupt-driven
+moving small amounts
+amounts of data
+produce high overhead
+bulk data movement
+i to solve
+solve this problem
+direct memory access
+setting up buffers
+device controller transfers
+transfers an entire
+block of data
+storage to memory
+interrupt is generated
+generated per block
+operation has completed
+interrupt per byte
+generated for low-speed
+controller is performing
+performing these operations
+accomplish other work
+work some high-end
+systems use switch
+components can talk
+competing for cycles
+shows the interplay
+architecture in section
+introduced the general
+typical computer system
+number of general-purpose
+1.3.1 single-processor systems
+systems most systems
+vise a single
+processor the variety
+variety of single-processor
+range from pdas
+pdas through mainframes
+main cpu capable
+capable of executing
+executing a general-purpose
+general-purpose instruction set
+instructions from user
+form of device-specific
+processors that move
+special-purpose processors run
+run a limited
+limited instruction set
+run user processes
+operating system sends
+sends them information
+task and monitors
+monitors their status
+disk-controller microprocessor receives
+receives a sequence
+sequence of requests
+cpu and implements
+queue and scheduling
+algorithm this arrangement
+relieves the main
+overhead of disk
+disk scheduling pcs
+keyboard to convert
+convert the keystrokes
+keystrokes into codes
+systems or circumstances
+processors are low-level
+low-level components built
+hardware the operating
+microprocessors is common
+turn a single-processor
+system 1.3.2 multiprocessor
+1.3.2 multiprocessor systems
+systems although single-processor
+tightly coupled systems
+growing in importance
+importance such systems
+processors in close
+sharing the computer
+peripheral devices multiprocessor
+devices multiprocessor systems
+throughput by increasing
+increasing the number
+number of processors
+multiple processors cooperate
+amount of overhead
+overhead is incurred
+incurred in keeping
+parts working correctly
+correctly this overhead
+contention for shared
+lowers the expected
+gain from additional
+produce n times
+times the amount
+amount of work
+work a single
+programmer would produce
+economy of scale
+scale multiprocessor systems
+systems can cost
+equivalent multiple single-processor
+multiple single-processor systems
+set of data
+cheaper to store
+store those data
+computers with local
+reliability if functions
+halt the system
+remaining nine processors
+processors can pick
+entire system runs
+failing altogether increased
+altogether increased reliability
+system is crucial
+applications the ability
+ability to continue
+continue providing service
+providing service proportional
+level of surviving
+degradation some systems
+suffer a failure
+continue operation note
+note that fault
+fault tolerance requires
+requires a mechanism
+duplication to ensure
+ensure continued operation
+operation despite faults
+faults the system
+consists of multiple
+pairs of cpus
+working in lockstep
+lockstep both processors
+execute each instruction
+instruction and compare
+compare the results
+halted the process
+pair of cpus
+instruction that failed
+failed is restarted
+restarted this solution
+solution is expensive
+involves special hardware
+hardware and considerable
+considerable hardware duplication
+duplication the multiple-processor
+types some systems
+systems use asymmetric
+processor is assigned
+assigned a specific
+task a master
+master processor controls
+controls the system
+master for instruction
+tasks this scheme
+defines a master-slave
+relationship the master
+master processor schedules
+schedules and allocates
+systems use symmetric
+performs all tasks
+operating system smp
+system smp means
+processors are peers
+master-slave relationship exists
+exists between processors
+illustrates a typical
+typical smp architecture
+system is solaris
+version of unix
+designed by sun
+microsystems a solaris
+dozens of processors
+solaris the benefit
+processes gpu gpu
+gpu gpu cpu
+gpu cpu memory
+symmetric multiprocessing architecture
+simultaneously n processes
+processes can run
+cpus without causing
+causing a significant
+deterioration of performance
+i to ensure
+cpus are separate
+resulting in inefficiencies
+inefficiencies these inefficiencies
+share certain data
+structures a multiprocessor
+processes and resources
+lower the variance
+virtually all modern
+modern operating systems
+operating systems including
+systems including windows
+linux now provide
+support for smp
+smp the difference
+difference between symmetric
+symmetric and asymmetric
+multiprocessing may result
+hardware or software
+software special hardware
+hardware can differentiate
+differentiate the multiple
+master and multiple
+slaves for instance
+sun s operating
+operating system sunos
+system sunos version
+provided asymmetric multiprocessing
+hardware a recent
+trend in cpu
+include multiple compute
+multiple compute cores
+chip in essence
+multiprocessor chips two-way
+chips two-way chips
+common in high-end
+multiple processor boards
+chassis the difference
+traditional multiprocessor systems
+blade-processor board boots
+independently and runs
+system some blade-server
+boards are multiprocessor
+blurs the lines
+lines between types
+types of computers
+computers in essence
+consist of multiple
+multiple independent multiprocessor
+independent multiprocessor systems
+systems 1.3.3 clustered
+1.3.3 clustered systems
+systems another type
+type of multiple-cpu
+system like multiprocessor
+gather together multiple
+cpus to accomplish
+accomplish computational work
+computational work clustered
+work clustered systems
+clustered systems differ
+differ from multiprocessor
+individual systems coupled
+commercial packages wrestle
+generally accepted definition
+clustered computers share
+computers share storage
+described in section
+provide high-availability service
+service will continue
+cluster fail high
+fail high availability
+obtained by adding
+adding a level
+level of redundancy
+system a layer
+layer of cluster
+cluster software runs
+nodes each node
+node can monitor
+monitored machine fails
+storage and restart
+restart the applications
+machine the users
+users and clients
+interruption of service
+asymmetrically or symmetrically
+symmetrically in asymmetric
+running the applications
+applications the hot-standby
+hot-standby host machine
+monitor the active
+server in symmetric
+hosts are running
+run other forms
+forms of clusters
+clusters include parallel
+include parallel clusters
+clusters and clustering
+clusters allow multiple
+hosts to access
+operating systems lack
+systems lack support
+support for simultaneous
+simultaneous data access
+access by multiple
+versions of software
+software and special
+releases of applications
+oracle parallel server
+version of oracle
+oracle s database
+designed to run
+cluster each machine
+machine runs oracle
+layer of software
+software tracks access
+disk each machine
+machine has full
+database to provide
+provide this shared
+access to data
+supply access control
+control and locking
+locking to ensure
+conflicting operations occur
+occur this function
+distributed lock manager
+cluster technology cluster
+technology cluster technology
+technology is changing
+rapidly some cluster
+cluster products support
+products support dozens
+dozens of systems
+separated by miles
+improvements are made
+systems to attach
+pool of storage
+data are stored
+software can assign
+assign the application
+application to run
+dozens of hosts
+hosts can share
+performance and reliability
+discussed basic information
+information about computer-system
+organization and architecture
+ready to talk
+talk about operating
+systems an operating
+programs are executed
+operating systems vary
+aspects of operating
+ability to multiprogram
+multiprogram a single
+times multiprogramming increases
+multiprogramming increases cpu
+increases cpu utilization
+utilization by organizing
+code and data
+execute the idea
+jobs in memory
+set of jobs
+jobs that enter
+enter the system
+number of jobs
+simultaneously in memory
+pool the operating
+operating system picks
+picks and begins
+begins to execute
+512m operating job
+operating job system
+multiprogramming system non-multiprogrammed
+system non-multiprogrammed system
+cpu would sit
+system simply switches
+cpu is switched
+first job finishes
+job finishes waiting
+idle this idea
+idea is common
+situations a lawyer
+case is waiting
+lawyer can work
+idle for lack
+lack of work
+idle lawyers tend
+value in keeping
+keeping lawyers busy
+multiprogrammed systems provide
+provide for user
+system time sharing
+extension of multiprogramming
+multiprogramming in time-sharing
+cpu executes multiple
+executes multiple jobs
+jobs by switching
+users can interact
+running time sharing
+requires an interactive
+system the user
+user gives instructions
+time-shared operating system
+users to share
+share the computer
+action or command
+entire computer system
+system is dedicated
+users a time-shared
+system uses cpu
+scheduling and multiprogramming
+multiprogramming to provide
+provide each user
+computer each user
+program in memory
+memory a program
+memory and executing
+device since interactive
+user s typing
+fast for people
+slow for computers
+cpu sit idle
+interactive input takes
+input takes place
+switch the cpu
+time-sharing and multiprogramming
+require several jobs
+general main memory
+small to accommodate
+accommodate all jobs
+pool this pool
+residing on disk
+disk awaiting allocation
+allocation of main
+brought into memory
+system must choose
+making this decision
+decision is job
+operating system selects
+selects a job
+loads that job
+job into memory
+programs in memory
+requires some form
+form of memory
+ready to run
+decision is cpu
+running multiple jobs
+jobs concurrently requires
+ability to affect
+including process scheduling
+management these considerations
+considerations are discussed
+system must ensure
+ensure reasonable response
+accomplished through swapping
+processes are swapped
+out of main
+method for achieving
+achieving this goal
+goal is virtual
+completely in memory
+users to run
+larger than actual
+actual physical memory
+abstracts main memory
+array of storage
+separating logical memory
+memory as viewed
+user from physical
+memory this arrangement
+arrangement frees programmers
+programmers from concern
+concern over memory-storage
+memory-storage limitations time-sharing
+limitations time-sharing systems
+provide a file
+file system resides
+collection of disks
+time-sharing systems provide
+provide a mechanism
+mechanism for protecting
+resources from inappropriate
+ensure orderly execution
+system must provide
+mechanisms for job
+synchronization and communication
+ensure that jobs
+operations as mentioned
+systems are interrupt
+processes to execute
+devices to service
+system will sit
+trap a trap
+software-generated interrupt caused
+invalid memory access
+service be performed
+performed the interrupt-driven
+operating system defines
+defines that system
+system s general
+type of interrupt
+segments of code
+operating system determine
+routine is provided
+responsible for dealing
+share the hardware
+running with sharing
+process gets stuck
+loop could prevent
+prevent the correct
+processes more subtle
+errors can occur
+program might modify
+modify another program
+sorts of errors
+computer must execute
+properly designed operating
+designed operating system
+programs to execute
+incorrectly 1.5.1 dual-mode
+1.5.1 dual-mode operation
+operation in order
+order to ensure
+ensure the proper
+execution of operating-system
+code and userdefined
+code the approach
+provide hardware support
+modes of execution
+two separate modes
+modes of operation
+mode and kernel
+executed on behalf
+system is executing
+executing on behalf
+user application requests
+requests a service
+transition from user
+user to kernel
+mode to fulfill
+fulfill the request
+aspects of system
+starts in kernel
+mode the operating
+loaded and starts
+starts user applications
+applications in user
+trap or interrupt
+switches from user
+mode to kernel
+operating system gains
+system gains control
+mode the system
+system always switches
+switches to user
+setting the mode
+program the dual
+mode of operation
+means for protecting
+protecting the operating
+system from errant
+users and errant
+accomplish this protection
+protection by designating
+user process executing
+process executing calls
+executing calls system
+calls system call
+system call return
+return from system
+system call user
+call user mode
+kernel mode execute
+mode execute system
+execute system call
+harm as privileged
+instructions the hardware
+hardware allows privileged
+attempt is made
+made to execute
+execute a privileged
+instruction in user
+execute the instruction
+illegal and traps
+system the instruction
+instruction to switch
+switch to user
+include i control
+additional privileged instructions
+cycle of instruction
+computer system initial
+system initial control
+instructions are executed
+executed in kernel
+mode when control
+mode is set
+set to user
+control is switched
+system call system
+call system calls
+system calls provide
+provide the means
+system to perform
+perform tasks reserved
+program s behalf
+behalf a system
+call is invoked
+variety of ways
+process to request
+system a system
+call usually takes
+takes the form
+vector this trap
+mips r2000 family
+specific syscall instruction
+call is executed
+software interrupt control
+interrupt control passes
+bit is set
+set to kernel
+mode the systemcall
+systemcall service routine
+system the kernel
+examines the interrupting
+instruction to determine
+determine what system
+call has occurred
+type of service
+service the user
+program is requesting
+requesting additional information
+additional information needed
+passed in registers
+memory locations passed
+parameters are correct
+correct and legal
+executes the request
+call we describe
+describe system calls
+fully in section
+hardware-supported dual mode
+system for instance
+ms-dos was written
+mode a user
+user program running
+program running awry
+awry can wipe
+out the operating
+system by writing
+possibly disastrous results
+disastrous results recent
+results recent versions
+provide dual-mode operation
+contemporary operating systems
+linux and solaris
+solaris for x86
+feature and provide
+provide greater protection
+system once hardware
+errors violating modes
+modes are detected
+hardware these errors
+user program fails
+making an attempt
+execute an illegal
+user s address
+hardware will trap
+system the trap
+trap transfers control
+program error occurs
+system must terminate
+terminate the program
+abnormally this situation
+situation is handled
+user-requested abnormal termination
+dumped the memory
+user or programmer
+programmer can examine
+restart the program
+program 1.5.2 timer
+operating system maintains
+system maintains control
+prevent a user
+calling system services
+timer a timer
+set to interrupt
+interrupt the computer
+period the period
+counter the operating
+operating system sets
+sets the counter
+counter is decremented
+occurs for instance
+clock allows interrupts
+interrupts at intervals
+millisecond before turning
+turning over control
+operating system ensures
+timer is set
+treat the interrupt
+give the program
+instructions that modify
+modify the content
+timer are privileged
+timer to prevent
+program from running
+running too long
+long a simple
+initialize a counter
+program is allowed
+allowed to run
+run a program
+7-minute time limit
+counter is positive
+control is returned
+counter becomes negative
+operating system terminates
+terminates the program
+program for exceeding
+exceeding the assigned
+assigned time limit
+management a program
+cpu a program
+program in execution
+process a time-shared
+time-shared user program
+process a word-processing
+program being run
+process a system
+provide system calls
+processes to create
+subprocesses to execute
+concurrently a process
+resources including cpu
+devices to accomplish
+accomplish its task
+task these resources
+created or allocated
+running in addition
+physical and logical
+process whose function
+display the status
+terminal the process
+instructions and system
+calls to obtain
+obtain and display
+terminal the desired
+system will reclaim
+reclaim any reusable
+resources we emphasize
+stored on disk
+entity a single-threaded
+instruction to execute
+sequential the cpu
+executes one instruction
+considered two separate
+two separate execution
+separate execution sequences
+sequences a multithreaded
+process has multiple
+multiple program counters
+thread a process
+unit of work
+collection of processes
+execute system code
+execute user code
+concurrently by multiplexing
+multiplexing the cpu
+system is responsible
+activities in connection
+connection with process
+creating and deleting
+deleting both user
+user and system
+system processes suspending
+suspending and resuming
+resuming processes providing
+processes providing mechanisms
+mechanisms for process
+process synchronization providing
+synchronization providing mechanisms
+process communication providing
+communication providing mechanisms
+mechanisms for deadlock
+handling we discuss
+discuss process-management techniques
+discussed in section
+memory is central
+computer system main
+system main memory
+array of words
+words or bytes
+ranging in size
+size from hundreds
+hundreds of thousands
+thousands to billions
+billions each word
+word or byte
+address main memory
+quickly accessible data
+accessible data shared
+devices the central
+central processor reads
+processor reads instructions
+reads and writes
+data from main
+large storage device
+address and access
+cpu to process
+data from disk
+first be transferred
+transferred to main
+memory by cpu-generated
+cpu-generated i calls
+cpu to execute
+mapped to absolute
+addresses and loaded
+accesses program instructions
+data from memory
+memory by generating
+generating these absolute
+space is declared
+loaded and executed
+executed to improve
+computer s response
+reflect various approaches
+situation in selecting
+selecting a memory-management
+account many factors
+system each algorithm
+support the operating
+connection with memory
+parts of memory
+deciding which processes
+data to move
+out of memory
+allocating and deallocating
+deallocating memory space
+space as needed
+needed memory-management techniques
+management to make
+make the computer
+computer system convenient
+convenient for users
+view of information
+storage the operating
+operating system abstracts
+devices to define
+define a logical
+logical storage unit
+file the operating
+operating system maps
+system maps files
+files onto physical
+media and accesses
+accesses these files
+devices 1.8.1 file-system
+1.8.1 file-system management
+file-system management file
+management file management
+operating system computers
+computers can store
+types of physical
+physical media magnetic
+media magnetic disk
+characteristics and physical
+organization each medium
+medium is controlled
+drive or tape
+characteristics these properties
+properties include accessspeed
+sequential or random
+collection of related
+related information defined
+files represent programs
+source and object
+data data files
+operating system implements
+implements the abstract
+file by managing
+managing mass storage
+mass storage media
+tapes and disks
+devices that control
+organized into directories
+directories to make
+make them easier
+easier to use
+users have access
+access to files
+desirable to control
+accessed the operating
+connection with file
+deleting files creating
+directories to organize
+organize files supporting
+files supporting primitives
+primitives for manipulating
+files and directories
+directories mapping files
+files onto secondary
+secondary storage backing
+backing up files
+files on stable
+storage media file-management
+media file-management techniques
+1.8.2 mass-storage management
+accommodate all data
+data and programs
+holds are lost
+lost when power
+power is lost
+storage to back
+back up main
+memory most modern
+modern computer systems
+systems use disks
+principal on-line storage
+on-line storage medium
+programs including compilers
+formatters are stored
+disk until loaded
+source and destination
+system the operating
+connection with disk
+free-space management storage
+management storage allocation
+storage allocation disk
+allocation disk scheduling
+scheduling because secondary
+efficiently the entire
+speed of operation
+computer may hinge
+algorithms that manipulate
+slower and lower
+lower in cost
+secondary storage backups
+backups of disk
+long-term archival storage
+magnetic tape drives
+drives and platters
+platters are typical
+typical tertiary storage
+tertiary storage devices
+devices the media
+tapes and optical
+vary between worm
+formats tertiary storage
+crucial to system
+managed some operating
+leave tertiary-storage management
+management to application
+functions that operating
+systems can provide
+provide include mounting
+mounting and unmounting
+media in devices
+allocating and freeing
+freeing the devices
+devices for exclusive
+data from secondary
+secondary to tertiary
+tertiary storage techniques
+techniques for secondary
+secondary and tertiary
+tertiary storage management
+1.8.3 caching caching
+principle of computer
+computer systems information
+faster storage system
+system the cache
+piece of information
+putting a copy
+internal programmable registers
+provide a high-speed
+cache for main
+memory the programmer
+implements the register-allocation
+register-allocation and register-replacement
+algorithms to decide
+decide which information
+totally in hardware
+hardware for instance
+cache to hold
+wait several cycles
+instruction was fetched
+fetched from main
+memory for similar
+high-speed data caches
+system because caches
+caches have limited
+important design problem
+design problem careful
+problem careful selection
+policy can result
+greatly increased performance
+storage performance comparison
+comparison in large
+workstations and small
+servers that shows
+caching various replacement
+algorithms for software-controlled
+caches are discussed
+cache for secondary
+data in secondary
+copied into main
+moved to secondary
+safekeeping the file-system
+permanently on secondary
+system may maintain
+maintain a cache
+cache of file-system
+data in main
+electronic ram disks
+interface the bulk
+bulk of secondary
+disks the magnetic-disk
+tapes or removable
+disks to protect
+protect against data
+loss in case
+failure some systems
+ll ^ cqess
+cqess time insji
+levels of storage
+archive old file
+storage to tertiary
+lower the storage
+movement of information
+information between levels
+explicit or implicit
+controlling operating-system software
+software for instance
+cache to cpu
+cpu and registers
+intervention in contrast
+disk to memory
+hierarchical storage structure
+located in file
+file b resides
+resides on magnetic
+disk the increment
+increment operation proceeds
+proceeds by first
+operation to copy
+copy the disk
+resides to main
+memory this operation
+increment takes place
+systems the value
+poses no difficulties
+access to integer
+processes will obtain
+recently updated value
+magnetic disk main
+disk main memory
+main memory hardware
+memory hardware register
+migration of integer
+disk to register
+addition to maintaining
+maintaining internal registers
+resides this situation
+distributed in space
+accessed and updated
+distributed systems ensure
+replica is updated
+replicas are brought
+ways to achieve
+achieve this guarantee
+1.8.4 i systems
+hide the peculiarities
+peculiarities of specific
+specific hardware devices
+devices are hidden
+i subsystem consists
+component that includes
+spooling a general
+general device-driver interface
+device-driver interface drivers
+drivers for specific
+assigned we discussed
+1.2.3 how interrupt
+handlers and device
+construction of efficient
+efficient i subsystems
+i subsystem interfaces
+detects i completion
+protection and security
+system has multiple
+execution of multiple
+ensure that files
+gained proper authorization
+memory-addressing hardware ensures
+process can execute
+space the timer
+process can gain
+eventually relinquishing control
+relinquishing control device-control
+control device-control registers
+accessible to users
+devices is protected
+mechanism for controlling
+controlling the access
+access of processes
+processes or users
+system this mechanism
+means for specification
+imposed and means
+means for enforcement
+protection can improve
+reliability by detecting
+detecting latent errors
+interfaces between component
+subsystems early detection
+detection of interface
+malfunctioning an unprotected
+unauthorized or incompetent
+user a protection-oriented
+means to distinguish
+distinguish between authorized
+authorized and unauthorized
+prone to failure
+user whose authentication
+means of identifying
+stolen her data
+copied or deleted
+file and memory
+protection are working
+job of security
+security to defend
+defend a system
+system from external
+external and internal
+attacks such attacks
+range and include
+viruses and worms
+system s resources
+theft of service
+leave the prevention
+prevention to policy
+policy or additional
+additional software due
+rise in security
+operatingsystem security features
+security features represent
+represent a fast-growing
+area of research
+security is discussed
+require the system
+users most operating
+operating systems maintain
+maintain a list
+list of user
+windows nt parlance
+ids are unique
+authentication stage determines
+user that user
+user s processes
+processes and threads
+user name list
+distinguish among sets
+sets of users
+allowed to issue
+issue all operations
+set of users
+allowed to read
+read the file
+file to accomplish
+define a group
+group group functionality
+list of group
+names and group
+identifiers a user
+depending on operating-system
+operating-system design decisions
+decisions the user
+user s group
+process and thread
+user are sufficient
+privileges to gain
+gain extra permissions
+activity the user
+operating systems provide
+provide various methods
+escalation on unix
+privileges or terminates
+done in solaris
+pbg has user
+possibly heterogeneous computer
+heterogeneous computer systems
+networked to provide
+provide the users
+users with access
+system maintains access
+shared resource increases
+resource increases computation
+increases computation speed
+reliability some operating
+operating systems generalize
+systems generalize network
+generalize network access
+form of file
+details of networking
+interface s device
+driver others make
+users specifically invoke
+specifically invoke network
+invoke network functions
+ftp and nfs
+nfs the protocols
+protocols that create
+create a distributed
+affect that system
+system s utility
+utility and popularity
+popularity a network
+systems distributed systems
+distributed systems depend
+depend on networking
+functionality networks vary
+distances between nodes
+common network protocol
+widespread use likewise
+support of protocols
+varies most operating
+including the windows
+unix operating systems
+systems support proprietary
+support proprietary protocols
+protocols to suit
+device a network
+driver to manage
+software to handle
+data these concepts
+concepts are discussed
+networks are characterized
+nodes a local-area
+building a wide-area
+countries a global
+wan to connect
+connect its offices
+worldwide these networks
+networks may run
+run one protocol
+protocols the continuing
+forms of networks
+devices use wireless
+technology to communicate
+creating a small-area
+home the media
+media to carry
+varied they include
+include copper wires
+transmissions between satellites
+radios when computing
+devices are connected
+connected to cellular
+create a network
+short-range infrared communication
+network these networks
+networks also vary
+concept of networks
+networks and distributed
+notion of providing
+providing network connectivity
+connectivity a network
+network operating system
+includes a communication
+computers to exchange
+messages a computer
+running a network
+computers a distributed
+distributed operating system
+provide the illusion
+single operating system
+controls the network
+cover computer networks
+systems the discussion
+focused on general-purpose
+general-purpose computer systems
+classes of computer
+systems whose functions
+deal with limited
+limited computation domains
+domains 1.11.1 real-time
+1.11.1 real-time embedded
+real-time embedded systems
+embedded systems embedded
+systems embedded computers
+form of computers
+computers in existence
+existence these devices
+devices are found
+engines and manufacturing
+robots to vcrs
+vcrs and microwave
+ovens they tend
+tasks the systems
+systems they run
+systems provide limited
+provide limited features
+preferring to spend
+monitoring and managing
+managing hardware devices
+engines and robotic
+arms these embedded
+embedded systems vary
+systems vary considerably
+running standard operating
+standard operating systems
+unix with special-purpose
+applications to implement
+implement the functionality
+special-purpose embedded operating
+embedded operating system
+operating system providing
+devices with application-specific
+application-specific integrated circuits
+perform their tasks
+embedded systems continues
+continues to expand
+expand the power
+members of networks
+system can control
+heating and lighting
+coffee makers web
+makers web access
+access can enable
+enable a home
+house to heat
+arrives home someday
+refrigerator may call
+call the grocery
+notices the milk
+run real-time operating
+real-time operating systems
+systems a real-time
+rigid time requirements
+flow of data
+dedicated application sensors
+application sensors bring
+sensors bring data
+computer the computer
+computer must analyze
+analyze the data
+possibly adjust controls
+controls to modify
+modify the sensor
+sensor inputs systems
+systems that control
+control scientific experiments
+medical imaging systems
+industrial control systems
+systems some automobile-engine
+automobile-engine fuel-injection systems
+system has well-defined
+fixed time constraints
+constraints processing mustbe
+processing mustbe done
+system will fail
+fail for instance
+instructed to halt
+building a real-time
+real-time system functions
+returns the correct
+contrast this system
+cover real-time embedded
+systems in great
+scheduling facility needed
+needed to implement
+implement real-time functionality
+describe the design
+design of memory
+management for real-time
+describe the real-time
+windows xp operating
+system 1.11.2 multimedia
+1.11.2 multimedia systems
+systems most operating
+designed to handle
+handle conventional data
+trend in technology
+incorporation of multimedia
+data into computer
+computer systems multimedia
+systems multimedia data
+multimedia data consist
+consist of audio
+audio and video
+files these data
+differ from conventional
+frames of video
+describes a wide
+range of applications
+popular use today
+today these include
+include audio files
+mp3 dvd movies
+short video clips
+clips of movie
+previews or news
+news stories downloaded
+internet multimedia applications
+include live webcasts
+world wide web
+speeches or sporting
+viewer in manhattan
+manhattan to observe
+cafe in paris
+paris multimedia applications
+audio or video
+application often includes
+includes a combination
+movie may consist
+consist of separate
+applications be delivered
+desktop personal computers
+directed toward smaller
+pdas and cellular
+stock quotes delivered
+explore the demands
+demands of multimedia
+multimedia data differ
+affects the desigii
+desigii of operating
+systems that support
+support the requirements
+requirements of multimedia
+systems 1.11.3 handheld
+1.11.3 handheld systems
+handheld systems handheld
+systems handheld systems
+handheld systems include
+systems include personal
+include personal digital
+palm and pocket-pcs
+embedded operating systems
+operating systems developers
+developers of handheld
+systems and applications
+face many challenges
+inches in height
+inches in width
+amount of memory
+small display screens
+limitations the amount
+amount of physical
+gigabytes of memory
+system and applications
+applications must manage
+manage memory efficiently
+efficiently this includes
+returning all allocated
+explore virtual memory
+developers to write
+programs that behave
+devices use virtual
+virtual memory techniques
+developers must work
+confines of limited
+limited physical memory
+issue of concern
+concern to developers
+handheld devices run
+faster processors require
+require more power
+power to include
+include a faster
+device would require
+require a larger
+frequently most handheld
+devices use smaller
+processors that consume
+consume less power
+tax the processor
+processor the last
+last issue confronting
+issue confronting program
+confronting program designers
+designers for handheld
+i a lack
+lack of physical
+physical space limits
+space limits input
+limits input methods
+methods to small
+small screen-based keyboards
+keyboards the small
+display screens limit
+screens limit output
+limit output options
+computer may measure
+inches square familiar
+square familiar tasks
+e-mail and browsing
+browsing web pages
+condensed into smaller
+displays one approach
+approach for displaying
+displaying the content
+content in web
+pages is web
+page is delivered
+delivered and displayed
+device some handheld
+allowing remote access
+access to e-mail
+e-mail and web
+web browsing cellular
+browsing cellular telephones
+telephones with connectivity
+provide wireless access
+data typically requires
+requires the user
+user to first
+download the data
+pda some pdas
+pdas allow data
+functionality of pdas
+pdas are balanced
+convenience and portability
+expand as network
+cameras and mp3
+expand their utility
+provided an overview
+overview of computer-system
+organization and major
+major operating-system components
+components we conclude
+variety of computing
+environments 1.12.1 traditional
+1.12.1 traditional computing
+computing as computing
+traditional computing environments
+environments are blurring
+typical office environment
+consisted of pcs
+servers providing file
+file and print
+print services remote
+services remote access
+access was awkward
+portability was achieved
+laptop computers terminals
+computers terminals attached
+attached to mainframes
+mainframes were prevalent
+fewer remote access
+access and portability
+providing more ways
+ways to access
+access these computing
+computing environments web
+environments web technologies
+technologies are stretching
+stretching the boundaries
+boundaries of traditional
+traditional computing companies
+computing companies establish
+companies establish portals
+provide web accessibility
+internal servers network
+servers network computers
+terminals that understand
+understand web-based computing
+web-based computing handheld
+computing handheld computers
+computers can synchronize
+synchronize with pcs
+company information handheld
+information handheld pdas
+connect to wireless
+company s web
+myriad other web
+slow modem connection
+giving home users
+users more access
+data these fast
+fast data connections
+connections are allowing
+allowing home computers
+computers to serve
+serve up web
+networks that include
+servers some homes
+firewalls to protect
+protect their networks
+networks from security
+breaches those firewalls
+firewalls cost thousands
+thousands of dollars
+exist a decade
+resources were scarce
+batch or interactive
+interactive batch system
+batch system processed
+system processed jobs
+jobs in bulk
+sources of data
+interactive systems waited
+waited for input
+input from users
+users to optimize
+multiple users shared
+systems time-sharing systems
+timer and scheduling
+rapidly cycle processes
+giving each user
+user a share
+traditional time-sharing systems
+systems are uncommon
+frequently the processes
+processes that provide
+slice of computer
+user is working
+performing different tasks
+1.12.2 client-server computing
+computing as pcs
+designers have shifted
+centralized system architecture
+system architecture terminals
+architecture terminals connected
+connected to centralized
+supplanted by pcs
+functionality once handled
+increasingly being handled
+todays systems act
+act as server
+systems to satisfy
+satisfy requests generated
+generated by client
+systems this form
+form of specialized
+specialized distributed system
+general structure depicted
+categorized as compute
+servers and file
+client can send
+send a request
+request to perform
+perform an action
+executes the action
+action and sends
+sends back results
+client a server
+running a database
+database that responds
+responds to client
+requests for data
+system the file-server
+interface where clients
+clients can create
+server that delivers
+files to clients
+clients running web
+running web browsers
+1.12.3 peer-to-peer computing
+computing another structure
+clients and servers
+system are considered
+requesting or providing
+providing a service
+service peer-to-peer systems
+peer-to-peer systems offer
+offer an advantage
+advantage over traditional
+traditional client-server systems
+network to participate
+join the network
+network of peers
+node has joined
+joined the network
+begin providing services
+determining what services
+two general ways
+joins a network
+registers its service
+centralized lookup service
+network any node
+desiring a specific
+service first contacts
+contacts this centralized
+service to determine
+determine which node
+service the remainder
+communication takes place
+provider a peer
+discover what node
+service by broadcasting
+broadcasting a request
+network the node
+providing that service
+making the request
+request to support
+support this approach
+peers to discover
+discover services provided
+network peer-to-peer networks
+peer-to-peer networks gained
+networks gained widespread
+gained widespread popularity
+napster and gnutella
+peers to exchange
+first type described
+centralized server maintains
+maintains an index
+stored on peer
+exchanging of files
+files takes place
+nodes the gnutella
+client broadcasts file
+broadcasts file requests
+service the request
+client the future
+future of exchanging
+exchanging files remains
+files remains uncertain
+files are copyrighted
+governing the distribution
+distribution of copyrighted
+peerto peer technology
+undoubtedly will play
+play a role
+e-mail 1.12.4 web-based
+1.12.4 web-based computing
+computing the web
+variety of devices
+years ago pcs
+prevalent access devices
+phones also providing
+providing access web
+access web computing
+computing has increased
+increased the emphasis
+emphasis on networking
+networked now include
+wired or wireless
+wireless access devices
+faster network connectivity
+improved networking technology
+optimized network implementation
+network implementation code
+implementation of web-based
+categories of devices
+distribute network connections
+pool of similar
+similar servers operating
+servers operating systems
+systems like windows
+acted as web
+evolved into linux
+linux and windows
+act as web
+web has increased
+increased the complexity
+complexity of devices
+summary an operating
+system is software
+software that manages
+providing an environment
+environment for application
+programs to run
+job of executing
+main memory main
+memory main memory
+size from millions
+word in memory
+address the main
+lost most computer
+main memory secondary
+memory secondary storage
+form of non-volatile
+capable of holding
+holding large quantities
+data the wide
+strategies for designing
+designing a computer
+computer system uniprocessor
+system uniprocessor systems
+processor while multiprocessor
+processors that share
+share physical memory
+memory and peripheral
+common multiprocessor design
+design is symmetric
+processors are considered
+peers and run
+form of multiprocessor
+systems and consist
+multiple computer systems
+computer systems connected
+local area network
+utilize the cpu
+operating systems employ
+ensuring the cpu
+job to execute
+execute timesharing systems
+multiprogramming whereby cpu
+cpu scheduling algorithms
+algorithms rapidly switch
+switch between jobs
+providing the illusion
+illusion each job
+job is running
+concurrently the operating
+ensure correct operation
+system to prevent
+prevent user programs
+programs from interfering
+mode various instructions
+instructions and halt
+mode the memory
+operating system resides
+protected from modification
+user a timer
+timer prevents infinite
+prevents infinite loops
+loops these facilities
+basic building blocks
+systems to achieve
+achieve correct operation
+operation a process
+operating system process
+system process management
+process management includes
+management includes creating
+processes and providing
+mechanisms for processes
+processes to communicate
+communicate and synchronize
+operating system manages
+system manages memory
+memory by keeping
+freeing memory space
+memory space storage
+space storage space
+includes providing file
+providing file systems
+systems for representing
+directories and managing
+space on mass
+mass storage devices
+storage devices operating
+devices operating systems
+concerned with protecting
+protecting and securing
+securing the operating
+system and users
+protection are mechanisms
+mechanisms that control
+control the access
+computer system security
+system security measures
+measures are responsible
+responsible for defending
+defending a computer
+external or internal
+internal attacks distributed
+attacks distributed systems
+systems allow users
+geographically dispersed hosts
+dispersed hosts connected
+computer network services
+machines can perform
+computations on data
+residing on shared
+computing can continue
+subset of cluster
+cluster members fails
+members fails lans
+lans and wans
+two basic types
+types of networks
+networks lans enable
+lans enable processors
+enable processors distributed
+small geographical area
+area to communicate
+wans allow processors
+typically are faster
+faster than wans
+systems that serve
+serve specific purposes
+purposes these include
+include real-time operating
+operating systems designed
+designed for embedded
+robotics real-time operating
+fail multimedia systems
+multimedia systems involve
+involve the delivery
+delivery of multimedia
+requirements of displaying
+displaying or playing
+web has encouraged
+encouraged the development
+development of modern
+systems that include
+include web browsers
+browsers and networking
+networking and communication
+software as integral
+operating system
+computer hardware
+application programs
+computer user
+amazing aspect
+operating systems
+tasks mainframe
+mainframe operating
+optimize utilization
+personal computer
+systems support
+support complex
+complex games
+business applications
+handheld computers
+execute programs
+computer system
+system operation
+system structure
+basic functions
+system startup
+basic computer
+computer architecture
+functional operating
+created piece
+well-delineated portion
+defined inputs
+general overview
+major components
+system objectives
+grand tour
+major operating
+systems components
+provide coverage
+system organization
+abstract view
+central processing
+processing unit
+basic computing
+computing resources
+word processors
+web browsers
+browsers define
+solve users
+computing problems
+system controls
+explore operating
+user view
+computer varies
+computer users
+users sit
+system unit
+attention paid
+resource utilization
+software resources
+shared performance
+single-user experience
+user sits
+users share
+share resources
+exchange information
+maximize resource
+individual user
+user takes
+fair share
+workstations connected
+dedicated resources
+print servers
+individual usability
+standalone units
+individual users
+wireless modems
+interface limitations
+remote operations
+battery life
+embedded computers
+home devices
+numeric keypads
+turn indicator
+indicator lights
+show status
+user intervention
+system view
+resource allocator
+memory space
+file-storage space
+system acts
+resources facing
+conflicting requests
+specific programs
+resource allocation
+users access
+system emphasizes
+user programs
+control program
+program manages
+prevent errors
+defining operating
+adequate definition
+system operating
+systems exist
+usable computing
+computing system
+fundamental goal
+computer systems
+execute user
+solving user
+user problems
+problems easier
+bare hardware
+programs require
+common operations
+common functions
+allocating resources
+accepted definition
+simple viewpoint
+vendor ships
+features included
+full-screen editor
+require gigabytes
+graphical windowing
+windowing systems
+bytes computer
+computer manufacturers
+common definition
+program running
+systems programs
+last definition
+generally follow
+increasingly important
+united states
+states department
+justice filed
+filed suit
+essence claiming
+microsoft included
+prevented application
+application vendors
+web browser
+integral part
+found guilty
+limit competition
+computer-system organization
+systems operate
+general knowledge
+background knowledge
+computer-system operation
+modern general-purpose
+general-purpose computer
+system consists
+device controllers
+controllers connected
+common bus
+shared memory
+device controller
+specific type
+disk drives
+audio devices
+video displays
+memory cycles
+orderly access
+memory controller
+synchronize access
+initial program
+bootstrap program
+read-only memory
+erasable programmable
+programmable read-only
+general term
+term firmware
+cpu registers
+memory contents
+start executing
+operatingsystem kernel
+first process
+software hardware
+system bus
+bus software
+special operation
+system call
+monitor call
+immediately transfers
+transfers execution
+fixed location
+starting address
+service routine
+interrupt service
+routine executes
+cpu resumes
+interrupted computation
+important part
+computer design
+interrupt mechanism
+transfer control
+straightforward method
+generic routine
+interrupt information
+interrupt-specific handler
+predefined number
+interrupt routines
+interrupt routine
+intermediate routine
+routine needed
+low memory
+locations hold
+service routines
+interrupt vector
+unique device
+device number
+interrupt request
+interrupting device
+device operating
+dispatch interrupts
+interrupt architecture
+interrupted instruction
+interrupt address
+location indexed
+recent architectures
+architectures store
+return address
+system stack
+processor state
+modifying register
+register values
+current state
+saved return
+program counter
+computation resumes
+storage structure
+structure computer
+computer programs
+main memory
+random-access memory
+executed main
+large storage
+storage area
+access directly
+semiconductor technology
+dynamic random-access
+memory words
+address interaction
+store instructions
+specific memory
+memory addresses
+load instruction
+instruction moves
+internal register
+store instruction
+explicit loads
+loads instructions
+typical instruction-execution
+instruction-execution cycle
+von neumann
+neumann architecture
+first fetches
+instruction register
+memory notice
+memory unit
+unit sees
+instruction counter
+literal addresses
+ignore hoio
+memory address
+addresses generated
+running program
+memory permanently
+needed programs
+data permanently
+volatile storage
+storage device
+systems provide
+secondary storage
+main requirement
+large quantities
+common secondary-storage
+secondary-storage device
+magnetic disk
+proper management
+disk storage
+central importance
+larger sense
+magnetic disks
+storage systems
+magnetic tapes
+storage system
+main differences
+systems lie
+wide variety
+higher levels
+bit leqislorr
+generally increases
+expensive memory
+early storage
+storage devices
+including paper
+paper tape
+core memories
+magnetic tape
+semiconductor memory
+storage loses
+expensive battery
+generator backup
+backup systems
+nonvolatile storage
+hierarchy shown
+electronic disk
+normal operation
+disk stores
+stores data
+large dram
+dram array
+electronic-disk devices
+magnetic hard
+hard disk
+backup power
+external power
+electronic-disk controller
+controller copies
+flash memory
+personal digital
+digital assistants
+removable storage
+general-purpose computers
+computers flash
+battery backup
+limited duration
+complete memory
+memory system
+nonvolatile memory
+improve performance
+large access-time
+transfer-rate disparity
+disparity exists
+structure storage
+large portion
+system code
+varying nature
+multiple device
+device depending
+attached device
+small computer-systems
+computer-systems interface
+controller maintains
+local buffer
+buffer storage
+special-purpose registers
+peripheral devices
+device driver
+execution cpu
+instruction execution
+execution cycle
+cycle data
+data movement
+movement dma
+dma instructions
+data memory
+modern computer
+system works
+works driver
+driver understands
+uniform interface
+driver loads
+controller starts
+controller informs
+returns control
+driver returns
+returns status
+status information
+small amounts
+high overhead
+bulk data
+direct memory
+memory access
+controller transfers
+entire block
+byte generated
+low-speed devices
+high-end systems
+bus architecture
+multiple components
+shared bus
+computer-system architecture
+general structure
+typical computer
+general-purpose processors
+single-processor systems
+systems vise
+single processor
+systems range
+single-processor system
+main cpu
+general-purpose instruction
+instruction set
+including instructions
+user processes
+special-purpose processors
+device-specific processors
+graphics controllers
+move data
+processors run
+limited instruction
+run user
+system sends
+disk-controller microprocessor
+microprocessor receives
+disk queue
+scheduling algorithm
+arrangement relieves
+disk scheduling
+scheduling pcs
+low-level components
+components built
+jobs autonomously
+special-purpose microprocessors
+general-purpose cpu
+multiprocessor systems
+parallel systems
+coupled systems
+close communication
+computer bus
+devices multiprocessor
+main advantages
+increased throughput
+work done
+speed-up ratio
+multiple processors
+processors cooperate
+parts working
+working correctly
+shared resources
+expected gain
+additional processors
+programmers working
+single programmer
+scale multiprocessor
+equivalent multiple
+multiple single-processor
+share peripherals
+mass storage
+power supplies
+programs operate
+processors share
+local disks
+increased reliability
+ten processors
+failed processor
+entire system
+system runs
+failing altogether
+altogether increased
+continue providing
+providing service
+surviving hardware
+graceful degradation
+fault tolerant
+single component
+continue operation
+operation note
+fault tolerance
+tolerance requires
+nonstop system
+software duplication
+continued operation
+multiple pairs
+pair execute
+results differ
+special hardware
+considerable hardware
+hardware duplication
+multiple-processor systems
+asymmetric multiprocessing
+specific task
+master processor
+processor controls
+predefined tasks
+scheme defines
+master-slave relationship
+processor schedules
+allocates work
+slave processors
+common systems
+symmetric multiprocessing
+processor performs
+system smp
+smp means
+relationship exists
+typical smp
+smp architecture
+smp system
+commercial version
+unix designed
+sun microsystems
+solaris system
+employ dozens
+running solaris
+processes gpu
+gpu gpu
+gpu cpu
+cpu memory
+multiprocessing architecture
+significant deterioration
+carefully control
+data reach
+sitting idle
+data structures
+multiprocessor system
+modern operating
+systems including
+including windows
+provide support
+multiple slaves
+system sunos
+sunos version
+recent trend
+cpu design
+include multiple
+multiple compute
+compute cores
+single chip
+multiprocessor chips
+chips two-way
+two-way chips
+n-way chips
+architectural considerations
+bus contention
+multi-core cpus
+standard processors
+blade servers
+recent development
+multiple processor
+processor boards
+networking boards
+traditional multiprocessor
+blade-processor board
+board boots
+blade-server boards
+servers consist
+multiple independent
+independent multiprocessor
+clustered systems
+multiple-cpu system
+clustered system
+multiple cpus
+computational work
+work clustered
+systems differ
+individual systems
+systems coupled
+term clustered
+commercial packages
+packages wrestle
+clustered computers
+computers share
+share storage
+local-area network
+faster interconnect
+infiniband clustering
+high-availability service
+cluster fail
+high availability
+cluster software
+software runs
+cluster nodes
+monitored machine
+machine fails
+monitoring machine
+failed machine
+operating-system structure
+asymmetric clustering
+hot-standby mode
+hot-standby host
+host machine
+active server
+server fails
+symmetric mode
+running applications
+clusters include
+parallel clusters
+wide-area network
+multiple hosts
+shared storage
+systems lack
+lack support
+simultaneous data
+data access
+special versions
+special releases
+oracle parallel
+parallel server
+parallel cluster
+machine runs
+runs oracle
+software tracks
+tracks access
+shared disk
+full access
+shared access
+supply access
+access control
+conflicting operations
+operations occur
+distributed lock
+lock manager
+cluster technology
+technology cluster
+changing rapidly
+cluster products
+products support
+support dozens
+clustered nodes
+storage-area networks
+host fails
+database cluster
+greatlyincreasing performance
+basic information
+important aspects
+single user
+times multiprogramming
+multiprogramming increases
+increases cpu
+cpu utilization
+organizing jobs
+job pool
+system picks
+operating job
+job system
+job job
+multiprogramming system
+non-multiprogrammed system
+sit idle
+multiprogrammed system
+first job
+job finishes
+finishes waiting
+cpu back
+life situations
+papers typed
+idle lawyers
+lawyers tend
+social value
+keeping lawyers
+lawyers busy
+multiprogrammed systems
+system resources
+user interaction
+logical extension
+time-sharing systems
+cpu executes
+executes multiple
+multiple jobs
+switches occur
+sharing requires
+direct communication
+input device
+output device
+time-shared operating
+computer simultaneously
+time-shared system
+system switches
+entire computer
+small portion
+time-shared computer
+separate program
+program loaded
+operating-system operations
+process executes
+user keyboard
+people speeds
+complete input
+typing speed
+cpu sit
+interactive input
+input takes
+takes place
+multiprogramming require
+general main
+pool consists
+processes residing
+disk awaiting
+awaiting allocation
+job scheduling
+system selects
+memory management
+cpu scheduling
+running multiple
+including process
+process scheduling
+time-sharing system
+reasonable response
+common method
+virtual memory
+main advantage
+virtual-memory scheme
+enables users
+run programs
+actual physical
+physical memory
+uniform array
+logical memory
+arrangement frees
+frees programmers
+memory-storage limitations
+file system
+system resides
+disk management
+protecting resources
+orderly execution
+provide mechanisms
+job synchronization
+interrupt driven
+happen events
+software-generated interrupt
+interrupt caused
+invalid memory
+specific request
+user program
+operating-system service
+interrupt-driven nature
+system defines
+separate segments
+system determine
+infinite loop
+correct operation
+subtle errors
+erroneous program
+designed operating
+execute incorrectly
+dual-mode operation
+proper execution
+operating-system code
+userdefined code
+provide hardware
+hardware support
+separate modes
+user mode
+kernel mode
+supervisor mode
+system mode
+privileged mode
+mode bit
+current mode
+user application
+application requests
+architectural enhancement
+system boot
+hardware starts
+starts user
+user applications
+interrupt occurs
+hardware switches
+system gains
+gains control
+passing control
+dual mode
+errant users
+machine instructions
+user process
+process executing
+executing calls
+calls system
+call return
+call user
+mode execute
+execute system
+privileged instructions
+privileged instruction
+examples include
+timer management
+interrupt management
+additional privileged
+life cycle
+initial control
+call system
+system calls
+perform tasks
+tasks reserved
+functionality provided
+underlying processor
+request action
+specific location
+mips r2000
+r2000 family
+specific syscall
+syscall instruction
+software interrupt
+interrupt control
+control passes
+systemcall service
+kernel examines
+interrupting instruction
+additional information
+information needed
+memory locations
+locations passed
+kernel verifies
+describe system
+hardware-supported dual
+running awry
+multiple programs
+disastrous results
+recent versions
+intel cpu
+contemporary operating
+microsoft windows
+x86 systems
+greater protection
+hardware protection
+errors violating
+violating modes
+program fails
+illegal instruction
+access memory
+address space
+trap transfers
+transfers control
+program error
+error occurs
+program abnormally
+user-requested abnormal
+abnormal termination
+error message
+memory dump
+system maintains
+maintains control
+calling system
+system services
+returning control
+variable timer
+fixed-rate clock
+system sets
+clock ticks
+counter reaches
+10-bit counter
+1-millisecond clock
+system ensures
+timer interrupts
+control transfers
+fatal error
+simple technique
+counter initialized
+system terminates
+process management
+time-shared user
+word-processing program
+system task
+sending utput
+time-shared program
+provide system
+create subprocesses
+execute concurrently
+resources including
+including cpu
+logical resources
+process obtains
+initialization data
+desired information
+process terminates
+reusable resources
+passive entity
+file stored
+active entity
+single-threaded process
+process completes
+separate execution
+execution sequences
+multithreaded process
+multiple program
+program counters
+operating-system processes
+user code
+single cpu
+system processes
+processes suspending
+resuming processes
+processes providing
+providing mechanisms
+process synchronization
+synchronization providing
+process communication
+communication providing
+deadlock handling
+process-management techniques
+system main
+large array
+address main
+accessible data
+data shared
+central processor
+processor reads
+reads instructions
+instruction-fetch cycle
+writes data
+data-fetch cycle
+process data
+absolute addresses
+program executes
+accesses program
+program instructions
+program terminates
+memorymanagement schemes
+schemes reflect
+algorithm depends
+memory-management scheme
+specific system
+hardware design
+algorithm requires
+keeping track
+memory allocating
+deallocating memory
+memory-management techniques
+storage management
+system convenient
+logical view
+information storage
+system abstracts
+physical properties
+logical storage
+storage unit
+system maps
+maps files
+physical media
+file-system management
+management file
+file management
+visible components
+system computers
+store information
+optical disk
+physical organization
+disk drive
+unique characteristics
+properties include
+data-transfer rate
+access method
+related information
+information defined
+files represent
+represent programs
+object forms
+data data
+data files
+binary files
+text files
+fixed fields
+system implements
+abstract concept
+managing mass
+storage media
+multiple users
+deleting files
+files creating
+deleting directories
+organize files
+files supporting
+supporting primitives
+manipulating files
+directories mapping
+mapping files
+storage backing
+file-management techniques
+mass-storage management
+principal on-line
+on-line storage
+storage medium
+programs including
+including compilers
+free-space management
+management storage
+storage allocation
+allocation disk
+entire speed
+disk subsystem
+higher capacity
+storage backups
+disk data
+seldom-used data
+long-term archival
+archival storage
+tape drives
+dvd drives
+typical tertiary
+tertiary storage
+optical platters
+formats tertiary
+system performance
+tertiary-storage management
+include mounting
+unmounting media
+migrating data
+storage techniques
+caching caching
+important principle
+systems information
+faster storage
+temporary basis
+internal programmable
+programmable registers
+index registers
+high-speed cache
+register-replacement algorithms
+instruction cache
+instructions expected
+similar reasons
+high-speed data
+data caches
+memory hierarchy
+hardware-only caches
+limited size
+cache management
+important design
+design problem
+careful selection
+cache size
+replacement policy
+increased performance
+storage performance
+performance comparison
+large workstations
+small servers
+replacement algorithms
+software-controlled caches
+fast cache
+file-system data
+storage hierarchy
+highest level
+electronic ram
+ram disks
+solid-state disks
+high-speed storage
+file-system interface
+magnetic-disk storage
+removable disks
+data loss
+hard-disk failure
+pm,ttfejis cfoffipifer
+rilaiji memory
+raajft njenwjy
+file data
+tape jukeboxes
+storage cost
+controlling operating-system
+operating-system software
+data transfer
+hardware function
+operating-system intervention
+hierarchical storage
+increment operation
+operation proceeds
+first issuing
+disk block
+increment takes
+computing environment
+arrangement poses
+multitasking environment
+extreme care
+updated value
+disk main
+memory hardware
+hardware register
+multiprocessor environment
+internal registers
+local cache
+cache coherency
+hardware problem
+operating-system level
+distributed environment
+distributed systems
+systems ensure
+specific hardware
+hardware devices
+subsystem consists
+memory-management component
+general device-driver
+device-driver interface
+interface drivers
+specific device
+interrupt handlers
+device drivers
+subsystem interfaces
+system components
+manages devices
+transfers data
+concurrent execution
+multiple processes
+mechanisms ensure
+memory segments
+gained proper
+proper authorization
+memory-addressing hardware
+hardware ensures
+timer ensures
+gain control
+relinquishing control
+control device-control
+device-control registers
+protected protection
+resources defined
+provide means
+enforcement protection
+improve reliability
+detecting latent
+latent errors
+component subsystems
+early detection
+interface errors
+prevent contamination
+healthy subsystem
+unprotected resource
+incompetent user
+protection-oriented system
+unauthorized usage
+adequate protection
+inappropriate access
+authentication information
+memory protection
+internal attacks
+attacks spread
+huge range
+include viruses
+denial-ofservice attacks
+legitimate users
+identity theft
+operatingsystem function
+additional software
+alarming rise
+security incidents
+operatingsystem security
+security features
+features represent
+fast-growing area
+implementation security
+security require
+systems maintain
+user names
+user identifiers
+user ids
+numerical ids
+user logs
+authentication stage
+stage determines
+unix system
+selected set
+users belonging
+group group
+group functionality
+system-wide list
+group names
+group identifiers
+operating-system design
+design decisions
+group ids
+escalate privileges
+extra permissions
+privilege escalation
+setuid attribute
+current user
+process runs
+effective uid
+extra privileges
+user pbg
+distributed system
+heterogeneous computer
+maintains access
+shared resource
+resource increases
+increases computation
+computation speed
+data availability
+systems generalize
+generalize network
+network access
+file access
+network interface
+make users
+invoke network
+network functions
+simplest terms
+communication path
+systems distributed
+systems depend
+functionality networks
+transport media
+common network
+network protocol
+operatingsystem support
+protocols varies
+support proprietary
+proprietary protocols
+interface device
+network adapter
+handle data
+book networks
+connects computers
+links buildings
+global company
+offices worldwide
+continuing advent
+technologies brings
+metropolitan-area network
+link buildings
+city bluetooth
+wireless technology
+essence creating
+small-area network
+carry networks
+equally varied
+include copper
+copper wires
+fiber strands
+wireless transmissions
+microwave dishes
+computing devices
+cellular phones
+infrared communication
+rudimentary level
+computers communicate
+providing network
+network connectivity
+network operating
+file sharing
+communication scheme
+exchange messages
+computer running
+networked computers
+distributed operating
+autonomous environment
+special-purpose systems
+systems communicate
+single operating
+cover computer
+computer networks
+limited computation
+computation domains
+real-time embedded
+embedded systems
+systems embedded
+prevalent form
+car engines
+manufacturing robots
+microwave ovens
+specific tasks
+limited features
+user interface
+managing hardware
+automobile engines
+robotic arms
+vary considerably
+standard operating
+special-purpose applications
+embedded operating
+system providing
+functionality desired
+integrated circuits
+systems continues
+entire houses
+central computer
+embedded system
+control heating
+alarm systems
+coffee makers
+makers web
+web access
+home owner
+arrives home
+home someday
+grocery store
+real-time operating
+real-time system
+control device
+dedicated application
+application sensors
+sensors bring
+bring data
+adjust controls
+sensor inputs
+inputs systems
+control scientific
+scientific experiments
+medical imaging
+imaging systems
+industrial control
+control systems
+display systems
+realtime systems
+automobile-engine fuel-injection
+fuel-injection systems
+home-appliance controllers
+weapon systems
+real-time systems
+constraints processing
+processing mustbe
+mustbe done
+defined constraints
+robot arm
+system functions
+correct result
+constraints contrast
+batch system
+great detail
+scheduling facility
+facility needed
+real-time functionality
+real-time computing
+real-time components
+multimedia systems
+conventional data
+word-processing documents
+multimedia data
+systems multimedia
+data consist
+video files
+conventional files
+data differ
+multimedia describes
+wide range
+include audio
+audio files
+mp3 dvd
+dvd movies
+short video
+video clips
+movie previews
+news stories
+stories downloaded
+internet multimedia
+multimedia applications
+live webcasts
+world wide
+wide web
+sporting events
+live webcams
+observe customers
+paris multimedia
+multimedia application
+separate audio
+video tracks
+personal computers
+smaller devices
+including pdas
+cellular telephones
+stock trader
+stock quotes
+quotes delivered
+data affects
+handheld systems
+systems handheld
+systems include
+systems developers
+applications face
+one-half pound
+handheld devices
+small amount
+slow processors
+small display
+display screens
+handheld depends
+manage memory
+memory efficiently
+allocated memory
+computing environments
+write programs
+memory techniques
+program developers
+limited physical
+devices processors
+devices run
+faster processors
+processors require
+faster processor
+handheld device
+larger battery
+slower processors
+last issue
+issue confronting
+confronting program
+program designers
+physical space
+space limits
+limits input
+input methods
+small keyboards
+handwriting recognition
+small screen-based
+screen-based keyboards
+screens limit
+limit output
+output options
+home computer
+inches square
+familiar tasks
+reading e-mail
+browsing web
+web pages
+smaller displays
+web clipping
+small subset
+web page
+allowing remote
+remote access
+web browsing
+browsing cellular
+internet fall
+wireless access
+downloading data
+first download
+infrared link
+network connections
+digital cameras
+mp3 players
+major operating-system
+operating-system components
+traditional computing
+computing matures
+lines separating
+typical office
+office environment
+environment consisted
+pcs connected
+servers providing
+providing file
+print services
+services remote
+laptop computers
+computers terminals
+terminals attached
+fewer remote
+portability options
+current trend
+environments web
+web technologies
+computing companies
+companies establish
+establish portals
+provide web
+web accessibility
+internal servers
+servers network
+network computers
+essentially terminals
+web-based computing
+computing handheld
+company information
+information handheld
+handheld pdas
+wireless networks
+web portal
+web resources
+single computer
+slow modem
+modem connection
+network-connection speeds
+great cost
+giving home
+home users
+fast data
+data connections
+allowing home
+home computers
+run networks
+include printers
+client pcs
+security breaches
+firewalls cost
+cost thousands
+decade ago
+previous century
+interactive batch
+system processed
+processed jobs
+predetermined input
+interactive systems
+systems waited
+users shared
+systems time-sharing
+scheduling algorithms
+cycle processes
+resources today
+traditional time-sharing
+scheduling technique
+provide services
+windows created
+client-server computing
+centralized system
+system architecture
+architecture terminals
+terminals connected
+centralized systems
+userinterface functionality
+todays systems
+systems act
+server systems
+satisfy requests
+requests generated
+client systems
+structure depicted
+compute servers
+file servers
+compute-server system
+read data
+server executes
+back results
+server running
+client requests
+client client
+network server
+client-server system
+file-server system
+delete files
+web server
+delivers files
+clients running
+running web
+peer-to-peer computing
+system model
+considered peers
+service peer-to-peer
+peer-to-peer systems
+systems offer
+traditional client-server
+client-server systems
+peer-to-peer system
+nodes distributed
+providing services
+requesting services
+network determining
+general ways
+node joins
+centralized lookup
+lookup service
+node desiring
+specific service
+communication takes
+service provider
+peer acting
+desired service
+service responds
+peer making
+discovery protocol
+discover services
+services provided
+network peer-to-peer
+peer-to-peer networks
+widespread popularity
+file-sharing services
+enable peers
+exchange files
+napster system
+first type
+type described
+centralized server
+server maintains
+files stored
+peer nodes
+napster network
+actual exchanging
+files takes
+gnutella system
+client broadcasts
+broadcasts file
+file requests
+request respond
+exchanging files
+files remains
+remains uncertain
+laws governing
+copyrighted material
+peerto peer
+peer technology
+file exchange
+wider variety
+years ago
+ago pcs
+prevalent access
+access devices
+cell phones
+providing access
+access web
+web computing
+networking devices
+faster network
+improved networking
+networking technology
+optimized network
+network implementation
+implementation code
+load balancers
+distribute network
+similar servers
+servers operating
+web clients
+web servers
+users require
+visible aspect
+human user
+executing programs
+memory main
+non-volatile storage
+bit generallydecreases
+system uniprocessor
+uniprocessor systems
+common multiprocessor
+multiprocessor design
+specialized form
+multiple computer
+systems connected
+local area
+area network
+systems employ
+execute timesharing
+timesharing systems
+running concurrently
+prevent user
+proper operation
+halt instructions
+timer prevents
+infinite loops
+timer interrupt
+basic building
+building blocks
+fundamental unit
+system process
+management includes
+deleting processes
+system manages
+manages memory
+freeing memory
+space storage
+storage space
+file systems
+representing files
+managing space
+devices operating
+users protection
+resources made
+system security
+security measures
+attacks distributed
+dispersed hosts
+hosts connected
+computer network
+network services
+client-server model
+peer-to-peer model
+multiple machines
+perform computations
+data residing
+cluster members
+members fails
+fails lans
+basic types
+networks lans
+enable processors
+processors distributed
+small geographical
+geographical area
+larger area
+communicate lans
+specific purposes
+systems designed
+embedded environments
+consumer devices
+robotics real-time
+fail multimedia
+systems involve
+special requirements
+playing audio
+synchronized audio
+video streams
+include web
+communication software
+operating
+system
+program
+manages
+computer
+hardware
+basis
+application
+programs
+acts
+intermediary
+user
+amazing
+aspect
+systems
+varied
+accomplishing
+tasks
+mainframe
+designed
+primarily
+optimize
+utilization
+personal
+support
+complex
+games
+business
+applications
+handheld
+computers
+provide
+environment
+easily
+interface
+execute
+convenient
+efficient
+combination
+two
+explore
+details
+operation
+structure
+begin
+discussing
+basic
+functions
+startup
+i
+storage
+describe
+architecture
+makes
+write
+functional
+large
+created
+piece
+pieces
+well-delineated
+portion
+carefully
+defined
+inputs
+outputs
+general
+overview
+major
+components
+objectives
+grand
+tour
+coverage
+organization
+discussion
+role
+divided
+roughly
+four
+users
+abstract
+view
+central
+processing
+unit
+cpu
+memory
+devices
+computing
+resources
+word
+processors
+spreadsheets
+compilers
+web
+browsers
+define
+ways
+solve
+problems
+controls
+coordinates
+consisting
+software
+data
+means
+proper
+similar
+government
+performs
+function
+simply
+work
+understand
+fully
+viewpoints
+1.1.1
+varies
+sit
+front
+monitor
+keyboard
+mouse
+monopolize
+goal
+maximize
+play
+performing
+case
+ease
+attention
+paid
+performance
+resource
+shared
+important
+optimized
+single-user
+experience
+cases
+sits
+terminal
+connected
+minicomputer
+accessing
+terminals
+share
+exchange
+information
+assure
+efficiently
+individual
+takes
+fair
+workstations
+networks
+servers
+dedicated
+disposal
+networking
+file
+compute
+print
+compromise
+usability
+recently
+varieties
+fashion
+standalone
+units
+directly
+wire
+wireless
+modems
+power
+speed
+limitations
+perform
+remote
+operations
+amount
+battery
+life
+embedded
+home
+automobiles
+numeric
+keypads
+turn
+indicator
+lights
+show
+status
+run
+intervention
+1.1.2
+point
+intimately
+involved
+context
+allocator
+required
+problem
+space
+file-storage
+manager
+facing
+numerous
+possibly
+conflicting
+requests
+decide
+allocate
+specific
+operate
+fairly
+allocation
+access
+slightly
+emphasizes
+control
+execution
+prevent
+errors
+improper
+concerned
+1.1.3
+defining
+looked
+views
+completely
+adequate
+definition
+exist
+offer
+reasonable
+creating
+usable
+fundamental
+make
+solving
+easier
+constructed
+bare
+easy
+developed
+require
+common
+controlling
+allocating
+brought
+addition
+universally
+accepted
+part
+simple
+viewpoint
+includes
+vendor
+ships
+order
+features
+included
+vary
+greatly
+megabyte
+lack
+full-screen
+editor
+gigabytes
+based
+graphical
+windowing
+kilobyte
+1,024
+bytes
+l,0242
+gigabyte
+l,0243
+manufacturers
+round
+numbers
+million
+billion
+running
+times
+kernel
+last
+generally
+follow
+matter
+constitutes
+increasingly
+united
+states
+department
+justice
+filed
+suit
+microsoft
+essence
+claiming
+functionality
+prevented
+vendors
+competing
+browser
+integral
+result
+found
+guilty
+monopoly
+limit
+competition
+computer-system
+knowledge
+section
+parts
+out
+background
+skim
+skip
+concepts
+1.2.1
+modern
+general-purpose
+consists
+cpus
+number
+device
+controllers
+bus
+controller
+charge
+type
+disk
+drives
+audio
+video
+displays
+concurrently
+cycles
+ensure
+orderly
+provided
+synchronize
+start
+instance
+powered
+rebooted
+initial
+bootstrap
+typically
+stored
+read-only
+rom
+electrically
+erasable
+programmable
+eeprom
+term
+firmware
+initializes
+aspects
+registers
+contents
+load
+executing
+accomplish
+locate
+operatingsystem
+starts
+first
+process
+init
+waits
+event
+occur
+occurrence
+signaled
+interrupt
+trigger
+sending
+signal
+special
+call
+interrupted
+stops
+doing
+immediately
+transfers
+fixed
+location
+starting
+address
+service
+routine
+located
+executes
+completion
+resumes
+computation
+line
+shown
+interrupts
+design
+mechanism
+transfer
+straightforward
+method
+handling
+invoke
+generic
+examine
+interrupt-specific
+handler
+handled
+quickly
+predefined
+table
+pointers
+routines
+indirectly
+intermediate
+needed
+low
+locations
+hold
+addresses
+array
+vector
+indexed
+unique
+request
+interrupting
+windows
+unix
+dispatch
+manner
+save
+instruction
+designs
+recent
+architectures
+store
+return
+stack
+modify
+processor
+state
+modifying
+register
+values
+explicitly
+current
+restore
+returning
+serviced
+saved
+loaded
+counter
+occurred
+1.2.2
+main
+random-access
+ram
+executed
+area
+millions
+billions
+commonly
+implemented
+semiconductor
+technology
+dynamic
+dram
+forms
+words
+interaction
+achieved
+sequence
+instructions
+moves
+internal
+content
+explicit
+loads
+stores
+automatically
+typical
+instruction-execution
+cycle
+von
+neumann
+fetches
+decoded
+operands
+fetched
+back
+notice
+sees
+stream
+generated
+indexing
+indirection
+literal
+ignore
+hoio
+interested
+ideally
+reside
+permanently
+arrangement
+reasons
+small
+volatile
+loses
+turned
+lost
+secondary
+extension
+requirement
+quantities
+secondary-storage
+magnetic
+source
+destination
+management
+importance
+discuss
+larger
+sense
+described
+disks
+include
+cache
+cd-rom
+tapes
+storing
+datum
+holding
+retrieved
+differences
+lie
+cost
+size
+volatility
+wide
+variety
+organized
+hierarchy
+higher
+levels
+expensive
+fast
+move
+bit
+leqislorr
+decreases
+increases
+trade-off
+faster
+properties
+reason
+slower
+fact
+early
+including
+paper
+tape
+core
+memories
+relegated
+museums
+cheaper
+top
+differing
+nonvolatile
+mentioned
+earlier
+removed
+absence
+generator
+backup
+written
+safekeeping
+electronic
+normal
+electronic-disk
+hidden
+hard
+external
+copies
+restored
+form
+flash
+popular
+cameras
+digital
+assistants
+pdas
+robots
+removable
+retain
+nvram
+limited
+duration
+complete
+balance
+factors
+discussed
+providing
+inexpensive
+caches
+installed
+improve
+access-time
+transfer-rate
+disparity
+exists
+1.2.3
+types
+code
+managing
+reliability
+varying
+nature
+multiple
+depending
+attached
+computer-systems
+scsi
+maintains
+local
+buffer
+set
+special-purpose
+responsible
+moving
+peripheral
+driver
+thread
+movement
+dma
+works
+understands
+presents
+uniform
+rest
+examines
+determine
+action
+read
+character
+informs
+finished
+returns
+pointer
+interrupt-driven
+amounts
+produce
+high
+overhead
+bulk
+direct
+setting
+buffers
+counters
+entire
+block
+completed
+byte
+low-speed
+high-end
+switch
+talk
+effective
+shows
+interplay
+introduced
+categorize
+1.3.1
+single-processor
+vise
+single
+surprising
+range
+mainframes
+capable
+processes
+device-specific
+graphics
+rapidly
+managed
+sends
+task
+monitors
+disk-controller
+microprocessor
+receives
+implements
+queue
+scheduling
+algorithm
+relieves
+pcs
+convert
+keystrokes
+codes
+circumstances
+low-level
+built
+communicate
+jobs
+autonomously
+microprocessors
+multiprocessor
+1.3.2
+parallel
+tightly
+coupled
+growing
+close
+communication
+sharing
+clock
+advantages
+increased
+throughput
+increasing
+expect
+done
+speed-up
+ratio
+cooperate
+incurred
+keeping
+working
+correctly
+contention
+lowers
+expected
+gain
+additional
+similarly
+programmers
+closely
+programmer
+economy
+scale
+equivalent
+peripherals
+mass
+supplies
+distributed
+properly
+failure
+halt
+slow
+ten
+fails
+remaining
+pick
+failed
+runs
+percent
+failing
+altogether
+crucial
+ability
+continue
+proportional
+level
+surviving
+graceful
+degradation
+fault
+tolerant
+suffer
+component
+note
+tolerance
+requires
+detected
+diagnosed
+corrected
+nonstop
+tandem
+duplication
+continued
+faults
+pairs
+lockstep
+pair
+compare
+results
+differ
+halted
+moved
+restarted
+solution
+involves
+considerable
+multiple-processor
+today
+asymmetric
+multiprocessing
+assigned
+master
+scheme
+defines
+master-slave
+relationship
+schedules
+allocates
+slave
+symmetric
+smp
+peers
+illustrates
+solaris
+commercial
+version
+sun
+microsystems
+con
+employ
+dozens
+benefit
+model
+gpu
+simultaneously
+causing
+significant
+deterioration
+reach
+separate
+sitting
+idle
+overloaded
+resulting
+inefficiencies
+avoided
+structures
+dynamically
+lower
+variance
+virtually
+mac
+linux
+difference
+differentiate
+slaves
+sunos
+trend
+cores
+chip
+chips
+two-way
+mainstream
+n-way
+architectural
+considerations
+multi-core
+standard
+lastly
+blade
+development
+boards
+chassis
+traditional
+blade-processor
+board
+boots
+independently
+blade-server
+blurs
+lines
+consist
+independent
+1.3.3
+clustered
+multiple-cpu
+gather
+computational
+composed
+concrete
+packages
+wrestle
+linked
+local-area
+network
+lan
+interconnect
+infiniband
+clustering
+high-availability
+cluster
+fail
+availability
+obtained
+adding
+redundancy
+layer
+nodes
+node
+monitored
+machine
+monitoring
+ownership
+restart
+clients
+interruption
+operating-system
+structured
+asymmetrically
+symmetrically
+hot-standby
+mode
+host
+active
+server
+hosts
+clusters
+wide-area
+wan
+simultaneous
+accomplished
+versions
+releases
+oracle
+database
+tracks
+full
+supply
+locking
+lock
+dlm
+changing
+products
+separated
+miles
+improvements
+made
+storage-area
+sans
+12.3.3
+attach
+pool
+san
+assign
+greatlyincreasing
+ready
+internally
+makeup
+commonalities
+multiprogram
+busy
+multiprogramming
+organizing
+idea
+subset
+job
+enter
+smaller
+picks
+begins
+eventually
+wait
+512m
+layout
+non-multiprogrammed
+multiprogrammed
+switches
+switched
+finishes
+waiting
+long
+situations
+lawyer
+client
+trial
+papers
+typed
+lawyers
+tend
+politicians
+social
+value
+utilized
+effectively
+multitasking
+logical
+time-sharing
+switching
+frequently
+interact
+interactive
+hands-on
+input
+output
+response
+short
+time-shared
+command
+impression
+display
+people
+speeds
+bounded
+typing
+characters
+incredibly
+place
+accommodate
+initially
+residing
+awaiting
+room
+choose
+making
+decision
+selects
+covered
+finally
+affect
+phases
+text
+swapping
+swapped
+achieving
+virtual
+technique
+advantage
+virtual-memory
+enables
+actual
+physical
+abstracts
+separating
+viewed
+frees
+concern
+memory-storage
+resides
+collection
+protecting
+inappropriate
+mechanisms
+synchronization
+stuck
+deadlock
+forever
+driven
+respond
+quietly
+happen
+events
+trap
+exception
+software-generated
+caused
+error
+division
+invalid
+performed
+segments
+dealing
+adversely
+affected
+bug
+infinite
+loop
+correct
+subtle
+erroneous
+protection
+sorts
+suspect
+incorrect
+malicious
+incorrectly
+1.5.1
+dual-mode
+distinguish
+userdefined
+approach
+modes
+supervisor
+privileged
+added
+behalf
+transition
+fulfill
+enhancement
+boot
+occurs
+gains
+passing
+dual
+errant
+designating
+calls
+harm
+attempt
+treats
+illegal
+traps
+examples
+timer
+reserved
+invoked
+underlying
+mips
+r2000
+family
+syscall
+treated
+passes
+systemcall
+parameter
+requesting
+passed
+verifies
+parameters
+legal
+hardware-supported
+shortcomings
+ms-dos
+intel
+awry
+wipe
+writing
+disastrous
+pentium
+contemporary
+x86
+feature
+greater
+violating
+terminate
+abnormally
+situation
+user-requested
+abnormal
+termination
+message
+dumped
+dump
+1.5.2
+calling
+services
+period
+variable
+millisecond
+fixed-rate
+sets
+ticks
+decremented
+reaches
+10-bit
+1-millisecond
+intervals
+milliseconds
+steps
+turning
+ensures
+treat
+fatal
+give
+initialize
+allowed
+7-minute
+initialized
+positive
+returned
+negative
+terminates
+exceeding
+compiler
+word-processing
+utput
+printer
+learn
+concept
+create
+subprocesses
+files
+allocated
+obtains
+initialization
+screen
+obtain
+desired
+reclaim
+reusable
+emphasize
+passive
+entity
+single-threaded
+threads
+sequential
+completes
+considered
+sequences
+multithreaded
+pointing
+potentially
+multiplexing
+activities
+connection
+deleting
+suspending
+resuming
+process-management
+techniques
+ranging
+hundreds
+thousands
+repository
+accessible
+reads
+instruction-fetch
+writes
+data-fetch
+transferred
+cpu-generated
+mapped
+absolute
+accesses
+generating
+declared
+memorymanagement
+schemes
+reflect
+approaches
+effectiveness
+depends
+selecting
+memory-management
+account
+track
+deciding
+thereof
+deallocating
+maps
+media
+1.8.1
+file-system
+visible
+optical
+characteristics
+medium
+controlled
+drive
+accessspeed
+capacity
+data-transfer
+rate
+random
+related
+creator
+represent
+object
+alphabetic
+alphanumeric
+binary
+free-form
+formatted
+rigidly
+fields
+extremely
+directories
+use
+desirable
+append
+accessed
+organize
+supporting
+primitives
+manipulating
+mapping
+backing
+stable
+file-management
+1.8.2
+mass-storage
+holds
+principal
+on-line
+assemblers
+editors
+formatters
+free-space
+hinge
+subsystem
+algorithms
+manipulate
+backups
+seldom-used
+long-term
+archival
+dvd
+platters
+tertiary
+worm
+write-once
+read-many-times
+read-write
+formats
+leave
+tertiary-storage
+mounting
+unmounting
+freeing
+exclusive
+migrating
+1.8.3
+caching
+principle
+copied
+temporary
+check
+putting
+copy
+assumption
+index
+high-speed
+register-allocation
+register-replacement
+totally
+hardware-only
+careful
+selection
+replacement
+policy
+comparison
+software-controlled
+highest
+maintain
+solid-state
+magnetic-disk
+backed
+protect
+loss
+hard-disk
+ll
+cqess
+insji
+lanaielf
+isgistprs
+eacn
+ifflfflif
+mul
+pm,ttfejis
+cfoffipifer
+6sflher
+5q0
+iriafpari
+rilaiji
+raajft
+njenwjy
+otjemini
+sysfew
+disl
+cfisk
+sti3fgge
+s.0
+riaihltiebsi
+opep
+sii
+etti
+dpi5fia
+archive
+jukeboxes
+implicit
+contrast
+hierarchical
+suppose
+integer
+incremented
+increment
+proceeds
+issuing
+copying
+appears
+places
+differs
+poses
+difficulties
+extreme
+care
+updated
+migration
+complicated
+maintaining
+update
+reflected
+coherency
+replicas
+replica
+date
+achieve
+guarantee
+1.8.4
+purposes
+hide
+peculiarities
+buffering
+spooling
+device-driver
+drivers
+handlers
+construction
+subsystems
+interfaces
+detects
+security
+concurrent
+regulated
+purpose
+operated
+gained
+authorization
+memory-addressing
+relinquishing
+device-control
+integrity
+protected
+specification
+imposed
+enforcement
+detecting
+latent
+detection
+contamination
+healthy
+malfunctioning
+unprotected
+defend
+misuse
+unauthorized
+incompetent
+protection-oriented
+authorized
+usage
+prone
+authentication
+identifying
+stolen
+deleted
+attacks
+spread
+huge
+viruses
+worms
+denial-ofservice
+legitimate
+identity
+theft
+prevention
+due
+alarming
+rise
+incidents
+fast-growing
+research
+implementation
+list
+names
+identifiers
+ids
+parlance
+sid
+numerical
+logs
+stage
+determines
+readable
+translated
+owner
+issue
+selected
+group
+belonging
+system-wide
+groups
+decisions
+sufficient
+escalate
+privileges
+extra
+permissions
+activity
+restricted
+methods
+privilege
+escalation
+setuid
+attribute
+uid
+turns
+pbg
+physically
+heterogeneous
+networked
+generalize
+contained
+specifically
+mix
+ftp
+nfs
+protocols
+utility
+popularity
+simplest
+terms
+path
+depend
+distances
+transport
+protocol
+atm
+widespread
+likewise
+proprietary
+adapter
+example
+manage
+handle
+book
+characterized
+connects
+floor
+building
+links
+buildings
+cities
+countries
+global
+company
+connect
+offices
+worldwide
+continuing
+advent
+technologies
+brings
+metropolitan-area
+man
+link
+city
+bluetooth
+distance
+feet
+small-area
+carry
+equally
+copper
+wires
+fiber
+strands
+transmissions
+satellites
+microwave
+dishes
+radios
+cellular
+phones
+short-range
+infrared
+rudimentary
+notion
+connectivity
+messages
+aware
+autonomous
+illusion
+cover
+focused
+familiar
+classes
+objective
+deal
+domains
+1.11.1
+real-time
+prevalent
+existence
+car
+engines
+manufacturing
+vcrs
+ovens
+primitive
+preferring
+spend
+automobile
+robotic
+arms
+considerably
+implement
+application-specific
+integrated
+circuits
+asics
+continues
+expand
+members
+increase
+houses
+computerized
+heating
+lighting
+alarm
+coffee
+makers
+enable
+house
+heat
+arrives
+someday
+refrigerator
+grocery
+notices
+milk
+rigid
+requirements
+flow
+sensors
+bring
+analyze
+adjust
+sensor
+scientific
+experiments
+medical
+imaging
+industrial
+realtime
+automobile-engine
+fuel-injection
+home-appliance
+weapon
+well-defined
+constraints
+mustbe
+robot
+arm
+instructed
+smashed
+mandatory
+batch
+great
+detail
+facility
+1.11.2
+multimedia
+conventional
+documents
+incorporation
+frames
+delivered
+streamed
+restrictions
+describes
+mp3
+movies
+conferencing
+clips
+movie
+previews
+news
+stories
+downloaded
+internet
+live
+webcasts
+broadcasting
+world
+speeches
+sporting
+webcams
+viewer
+manhattan
+observe
+customers
+cafe
+paris
+desktop
+directed
+telephones
+stock
+trader
+quotes
+wirelessly
+real
+pda
+demands
+affects
+desigii
+1.11.3
+palm
+pocket-pcs
+developers
+face
+challenges
+inches
+height
+width
+weighs
+one-half
+pound
+screens
+workstation
+environments
+behave
+confines
+fraction
+replaced
+recharged
+consume
+tax
+confronting
+designers
+limits
+keyboards
+handwriting
+recognition
+screen-based
+options
+measure
+square
+reading
+e-mail
+browsing
+pages
+condensed
+displaying
+clipping
+page
+displayed
+allowing
+fall
+category
+downloading
+download
+balanced
+convenience
+portability
+connections
+players
+conclude
+1.12.1
+matures
+blurring
+office
+years
+ago
+consisted
+awkward
+laptop
+companies
+fewer
+stretching
+boundaries
+establish
+portals
+accessibility
+essentially
+web-based
+portable
+portal
+myriad
+modem
+network-connection
+giving
+serve
+printers
+homes
+firewalls
+breaches
+dollars
+decade
+half
+previous
+century
+scarce
+nonexistent
+processed
+predetermined
+sources
+waited
+uncommon
+owned
+slice
+1.12.2
+client-server
+powerful
+shifted
+centralized
+supplanted
+correspondingly
+userinterface
+todays
+act
+satisfy
+specialized
+depicted
+broadly
+categorized
+compute-server
+send
+responds
+svstem
+file-server
+delete
+delivers
+1.12.3
+peer-to-peer
+p2p
+distinguished
+bottleneck
+participate
+join
+joined
+determining
+joins
+lookup
+desiring
+contacts
+remainder
+provider
+peer
+acting
+discover
+discovery
+late
+1990s
+file-sharing
+napster
+gnutella
+exchanging
+broadcasts
+future
+remains
+uncertain
+copyrighted
+music
+laws
+governing
+distribution
+material
+peerto
+undoubtedly
+sendees
+searching
+1.12.4
+ubiquitous
+leading
+wider
+dreamt
+cell
+emphasis
+previously
+wired
+improved
+categories
+balancers
+distribute
+acted
+evolved
+complexity
+web-enabled
+summary
+human
+non-volatile
+generallydecreases
+strategies
+designing
+uniprocessor
+utilize
+ensuring
+timesharing
+interfering
+modification
+prevents
+loops
+facilities
+blocks
+representing
+securing
+measures
+defending
+geographically
+dispersed
+machines
+computations
+lans
+wans
+geographical
+consumer
+robotics
+involve
+delivery
+playing
+synchronized
+streams
+influence
+encouraged

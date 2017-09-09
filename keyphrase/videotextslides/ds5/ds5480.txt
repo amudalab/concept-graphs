@@ -1,0 +1,11 @@
+Row 1::Height 2::deletion (2)
+Row 2::Height 1::instead of setting location 8 to null place a
+Row 3::Height 1::tombstone (a marker) there.
+Row 4::Height 1::when lookup encounters a it ignores
+Row 5::Height 1::it and continues with next location
+Row 6::Height 1::if insert comes across a tombstone it puts the
+Row 7::Height 1::element at the location and removes the
+Row 8::Height 1::tombstone.
+Row 9::Height 1::too many tombstones degrades lookup
+Row 10::Height 1::performance
+Row 11::Height 1::rehash if there are too many tombstones

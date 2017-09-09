@@ -1,0 +1,13 @@
+Row 1::Height 2::raster graphics
+Row 2::Height 1::midpoint circle algorithm
+Row 3::Height 1::consider ii octant
+Row 4::Height 1::x=0;y=r;d=5/4-r
+Row 5::Height 1::writepixel(x,y)
+Row 6::Height 1::while(y>x)
+Row 7::Height 1::if d<0
+Row 8::Height 1::d+=2x+3;x+=1
+Row 9::Height 1::else
+Row 10::Height 1::d+=2x-2y+5;x+=1;y-=1
+Row 11::Height 1::end
+Row 12::Height 1::writepixel(x,y)
+Row 13::Height 1::end while

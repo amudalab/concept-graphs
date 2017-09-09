@@ -1,0 +1,1376 @@
+principles of operating
+operating systems lecture
+introduction and overview
+a.m prof nalini
+prof nalini venkatasubramanian
+nalini @ ics.uci.edu
+silberschatz textbook authors
+back for wednesday
+wednesday s class
+lecture on friday
+mbeyeler @ uci.edu
+eoguz @ ics.uci.edu
+hzhang10 @ uci.edu
+logistics and details
+details course web
+ics143 lectures mwf
+operating system concepts
+eighth edition silberschatz
+silberschatz and galvin
+alternate book principles
+bic and a.c
+homeworks and assignments
+out at midterm
+submit during finals
+finals week multistep
+week multistep assignment
+multistep assignment don
+don t start
+start in last
+week of classes
+accepted all submissions
+midterm tentatively wednesday
+class final exam
+final exam tue
+uci course catalog
+grading policy homeworks
+homeworks each worth
+programming assignment worth
+final grade midterm
+final grade final
+grade final exam
+grade final assignment
+assignment of grades
+lecture schedule week
+introduction to operating
+computer system structures
+operating system structures
+system structures week
+process management processes
+processes and threads
+process management cpu
+management cpu scheduling
+cpu scheduling week
+process management process
+management process synchronization
+process synchronization week
+review and exam
+memory management memory
+management memory management
+memory management week
+virtual memory week
+filesystems filesystems interface
+interface and implementation
+topics i subsystems
+i subsystems case
+subsystems case study
+case study unix
+revision and summary
+system early operating
+early operating systems
+operating systems simple
+systems simple batch
+simple batch systems
+batch systems multiprogrammed
+systems multiprogrammed batch
+multiprogrammed batch systems
+batch systems time-sharing
+systems time-sharing systems
+time-sharing systems personal
+systems personal computer
+personal computer systems
+computer systems parallel
+parallel and distributed
+distributed systems real-time
+systems real-time systems
+real-time systems computer
+systems computer system
+computer system architecture
+system architecture principles
+program that acts
+acts an intermediary
+computer and computer
+computer hardware major
+hardware major cost
+cost of general
+general purpose computing
+computing is software
+software os simplifies
+simplifies and manages
+manages the complexity
+complexity of running
+running application programs
+application programs efficiently
+programs efficiently principles
+operating system simplify
+simplify the execution
+execution of user
+programs and make
+make solving user
+solving user problems
+user problems easier
+easier use computer
+computer hardware efficiently
+efficiently allow sharing
+sharing of hardware
+hardware and software
+software resources make
+resources make application
+make application software
+application software portable
+portable and versatile
+versatile provide isolation
+security and protection
+protection among user
+user programs improve
+improve overall system
+system reliability error
+reliability error confinement
+study operating systems
+hardware and applications
+applications new applications
+hardware inherent aspect
+aspect of society
+understand basic principles
+design of computer
+computer systems efficient
+systems efficient resource
+efficient resource management
+specialized operating systems
+operating systems e.g
+systems e.g embedded
+e.g embedded operating
+embedded operating systems
+systems for devices
+sensors and controllers
+controllers real-time operating
+real-time operating systems
+multimedia services systems
+services systems today
+systems today principles
+irvine sensorium hardware
+sensorium hardware complexity
+hardware complexity increases
+complexity increases principles
+moore s law
+law from berkeley
+hennessy and patterson
+intel multicore chipsets
+multicore chipsets software
+chipsets software complexity
+software complexity increases
+computer system components
+system components hardware
+hardware provides basic
+basic computing resources
+operating system controls
+controls and coordinates
+hardware among application
+application programs application
+programs application programs
+application programs solve
+programs solve computing
+solve computing problems
+problems of users
+view of system
+system and application
+application programs operating
+programs operating system
+operating system computer
+system computer hardware
+computer hardware user
+user n compiler
+compiler assembler text
+assembler text editor
+text editor database
+editor database system
+operating system views
+system views resource
+views resource allocator
+allocator to allocate
+software and hardware
+system and manage
+manage them efficiently
+efficiently control program
+control program controls
+program controls execution
+programs and operation
+i devices kernel
+kernel the program
+program that executes
+application with respect
+operating system spectrum
+system spectrum monitors
+monitors and small
+small kernels special
+kernels special purpose
+purpose and embedded
+real-time systems batch
+batch and multiprogramming
+multiprogramming timesharing workstations
+timeframes transaction systems
+transaction systems personal
+systems personal computing
+personal computing systems
+computing systems mobile
+systems mobile platforms
+structure large machines
+large machines run
+run from console
+console single user
+single user system
+operator paper tape
+tape or punched
+cards early software
+early software assemblers
+libraries of common
+common subroutines secure
+subroutines secure execution
+secure execution inefficient
+expensive resources low
+resources low cpu
+low cpu utilization
+john ousterhout slides
+ousterhout slides hardware
+slides hardware expensive
+expensive ; human
+human cheap simple
+cheap simple batch
+jobs with similar
+similar requirements add
+add a card
+hire an operator
+operator automatic job
+automatic job sequencing
+job sequencing forms
+forms a rudimentary
+rudimentary os resident
+resident monitor holds
+monitor holds initial
+holds initial control
+transfers to job
+back to monitor
+job from job
+job and data
+data from program
+ousterhout slides principles
+control secure monitor
+monitor that controls
+controls job processing
+job processing special
+processing special cards
+user program prevented
+prevented from performing
+performing i separate
+user from computer
+computer user submits
+user submits card
+submits card deck
+card deck cards
+deck cards put
+put on tape
+tape tape processed
+processed by operator
+operator output written
+written to tape
+tape tape printed
+printed on printer
+problems long turnaround
+i and cpu
+overlap ; slow
+slow mechanical devices
+mechanical devices ibm
+solutions to speed
+offline processing load
+processing load jobs
+jobs into memory
+memory from tapes
+reading and line
+printing are done
+done offline spooling
+spooling use disk
+random access device
+storage for reading
+storing output files
+files until output
+ready to accept
+job with computation
+choose next job
+job to run
+increase cpu utilization
+cpu utilization principles
+i is complete
+sets a flag
+busy program tests
+tests the flag
+waiting for completion
+device forces cpu
+cpu to jump
+specific instruction address
+interrupt service routine
+returns to code
+prior to servicing
+servicing the interrupt
+multiprogramming use interrupts
+interrupts to run
+run multiple programs
+execute another program
+program till interrupt
+interrupt is received
+received requires secure
+requires secure memory
+program requires intervention
+intervention if program
+program loops indefinitely
+loops indefinitely requires
+indefinitely requires cpu
+requires cpu scheduling
+scheduling to choose
+timesharing programs queued
+queued for execution
+execution in fifo
+order like multiprogramming
+timer device interrupts
+program is returned
+returned to end
+end of fifo
+fifo next program
+head of fifo
+fifo control card
+control card interpreter
+card interpreter replaced
+replaced by command
+command language interpreter
+language interpreter hardware
+hardware getting cheaper
+cheaper ; human
+human getting expensive
+statement from user
+user file systems
+file systems online
+systems online filesystem
+filesystem is required
+required for users
+users to access
+data and code
+code virtual memory
+virtual memory job
+job is swapped
+out of memory
+memory to disk
+computing systems single
+systems single user
+single user systems
+portable i devices
+small printers laptops
+laptops and palmtops
+wireless devices single
+devices single user
+advanced cpu utilization
+utilization or protection
+protection features advantages
+ubiquitous hardware cheap
+cheap ; human
+human expensive principles
+parallel systems multiprocessor
+systems multiprocessor systems
+cpu in close
+close communication improved
+communication improved throughput
+increased reliability kinds
+vector and pipelined
+symmetric and asymmetric
+asymmetric multiprocessing distributed
+multiprocessing distributed memory
+memory vs shared
+shared memory programming
+memory programming models
+loosely coupled ,message-based
+,message-based vs shared
+shared variable parallel
+variable parallel computing
+parallel computing systems
+computing systems principles
+nuclear fusion research
+ibm blue gene
+distributed systems distribute
+systems distribute computation
+processors loosely coupled
+lines client architectures
+resource sharing computation
+sharing computation speed-up
+computation speed-up reliability
+speed-up reliability communication
+e.g email applications
+digital multimedia hardware
+hardware very cheap
+human very expensive
+expensive distributed computing
+distributed computing systems
+globus grid computing
+grid computing toolkit
+computing toolkit cloud
+toolkit cloud computing
+cloud computing offerings
+computing offerings planetlab
+offerings planetlab gnutella
+planetlab gnutella p2p
+gnutella p2p network
+p2p network principles
+real-time systems correct
+systems correct system
+correct system function
+system function depends
+depends on timeliness
+timeliness feedback loops
+sensors and actuators
+actuators hard real-time
+hard real-time systems
+real-time systems failure
+failure if response
+long secondary storage
+storage is limited
+limited soft real-time
+soft real-time systems
+accurate if response
+virtual reality principles
+summary of lecture
+real-time systems principles
+operating systems
+systems lecture
+overview mwf
+a.m prof
+prof nalini
+nalini venkatasubramanian
+lecture slides
+content adapted
+silberschatz textbook
+textbook authors
+john kubiatowicz
+prof venkat
+meeting today
+make-up lecture
+friday afternoon
+discussion session
+regular class
+a.m principles
+staff instructor
+teaching assistant
+michael beyeler
+ekin oguz
+hao zhang
+web page
+ics143 lectures
+lectures mwf
+eh1200 discussions
+operating system
+system concepts
+eighth edition
+edition silberschatz
+java versions
+alternate book
+book principles
+a.c shaw
+details homeworks
+written homeworks
+programming assignment
+java required
+finals week
+week multistep
+multistep assignment
+assignment don
+last week
+late homeworks
+eee dropbox
+tests midterm
+tentatively wednesday
+final exam
+exam tue
+catalog principles
+grading policy
+policy homeworks
+final grade
+assignment worth
+grade midterm
+final assignment
+curve principles
+lecture schedule
+schedule week
+computer system
+system structures
+structures week
+process management
+management processes
+threads week
+management cpu
+cpu scheduling
+scheduling week
+management process
+process synchronization
+synchronization week
+deadlocks principles
+deadlocks deadlocks
+midterm review
+exam week
+memory management
+management memory
+management week
+virtual memory
+memory week
+filesystems filesystems
+filesystems interface
+implementation week
+subsystems case
+case study
+study unix
+summary principles
+simple batch
+batch systems
+systems multiprogrammed
+multiprogrammed batch
+time-sharing systems
+personal computer
+computer systems
+systems parallel
+distributed systems
+real-time systems
+systems computer
+system architecture
+architecture principles
+computer hardware
+major cost
+general purpose
+purpose computing
+running application
+application programs
+programs efficiently
+efficiently principles
+system simplify
+user programs
+solving user
+user problems
+problems easier
+hardware efficiently
+software resources
+resources make
+make application
+application software
+versatile provide
+provide isolation
+programs improve
+system reliability
+reliability error
+error confinement
+fault tolerance
+reconfiguration principles
+study operating
+understand interaction
+hardware inherent
+inherent aspect
+society today
+basic principles
+systems efficient
+efficient resource
+resource management
+flexibility increasing
+systems e.g
+e.g embedded
+cell phones
+real-time operating
+aircraft control
+multimedia services
+services systems
+systems today
+today principles
+irvine sensorium
+sensorium hardware
+hardware complexity
+complexity increases
+increases principles
+computer architecture
+quantitative approach
+4th edition
+intel multicore
+multicore chipsets
+chipsets software
+software complexity
+system components
+components hardware
+basic computing
+computing resources
+system controls
+programs application
+programs solve
+computing problems
+database systems
+video games
+business programs
+banking software
+users people
+computers principles
+abstract view
+system system
+programs operating
+system computer
+hardware user
+compiler assembler
+assembler text
+text editor
+editor database
+database system
+system views
+views resource
+resource allocator
+allocate resources
+efficiently control
+control program
+program controls
+controls execution
+devices kernel
+system spectrum
+spectrum monitors
+small kernels
+special purpose
+embedded systems
+systems batch
+multiprogramming timesharing
+timesharing workstations
+timeframes transaction
+transaction systems
+personal computing
+computing systems
+mobile platforms
+people-to-computer ratio
+david culler
+early systems
+bare machine
+large machines
+machines run
+console single
+single user
+user system
+operator paper
+paper tape
+punched cards
+early software
+software assemblers
+device drivers
+common subroutines
+subroutines secure
+secure execution
+execution inefficient
+expensive resources
+low cpu
+cpu utilization
+high setup
+ousterhout slides
+slides hardware
+human cheap
+cheap simple
+reduce setup
+batching jobs
+similar requirements
+requirements add
+card reader
+operator user
+automatic job
+job sequencing
+sequencing forms
+resident monitor
+monitor holds
+initial control
+control transfers
+monitor problem
+distinguish job
+program principles
+slides principles
+control secure
+secure monitor
+controls job
+job processing
+special cards
+user program
+program prevented
+separate user
+computer user
+user submits
+submits card
+card deck
+deck cards
+cards put
+tape tape
+tape processed
+operator output
+output written
+tape printed
+printer problems
+slow mechanical
+mechanical devices
+devices ibm
+issues solutions
+offline processing
+processing load
+load jobs
+card reading
+line printing
+done offline
+offline spooling
+random access
+access device
+large storage
+input files
+storing output
+output files
+output devices
+introduces notion
+job pool
+increase cpu
+utilization principles
+complete polling
+device sets
+busy program
+program tests
+loop waiting
+device forces
+forces cpu
+specific instruction
+instruction address
+interrupt service
+service routine
+cpu returns
+interrupt principles
+run multiple
+multiple programs
+program performs
+received requires
+requires secure
+secure memory
+program requires
+requires intervention
+program loops
+loops indefinitely
+indefinitely requires
+requires cpu
+run principles
+timesharing programs
+programs queued
+fifo order
+timer device
+device interrupts
+interrupted program
+fifo control
+control card
+card interpreter
+interpreter replaced
+command language
+language interpreter
+interpreter hardware
+expensive principles
+finishes execution
+control statement
+user file
+file systems
+systems online
+online filesystem
+access data
+memory job
+disk principles
+user systems
+display screens
+small printers
+printers laptops
+smart cards
+wireless devices
+advanced cpu
+protection features
+features advantages
+user convenience
+ubiquitous hardware
+hardware cheap
+parallel systems
+systems multiprocessor
+multiprocessor systems
+close communication
+communication improved
+increased reliability
+reliability kinds
+asymmetric multiprocessing
+multiprocessing distributed
+distributed memory
+shared memory
+memory programming
+programming models
+variable parallel
+parallel computing
+systems principles
+climate modeling
+earthquake simulations
+genome analysis
+protein folding
+nuclear fusion
+fusion research
+connection machine
+ibm blue
+blue gene
+systems distribute
+distribute computation
+communication lines
+architectures advantages
+resource sharing
+sharing computation
+computation speed-up
+speed-up reliability
+reliability communication
+e.g email
+email applications
+digital libraries
+digital multimedia
+multimedia hardware
+distributed computing
+globus grid
+computing toolkit
+toolkit cloud
+cloud computing
+computing offerings
+offerings planetlab
+planetlab gnutella
+gnutella p2p
+p2p network
+network principles
+systems correct
+correct system
+system function
+function depends
+loops sensors
+systems failure
+secondary storage
+soft real-time
+virtual reality
+reality principles
+principles
+operating
+systems
+lecture
+ics
+introduction
+overview
+mwf
+a.m
+prof
+nalini
+venkatasubramanian
+ics.uci.edu
+slides
+content
+adapted
+silberschatz
+textbook
+authors
+john
+kubiatowicz
+berkeley
+ousterhout
+stanford
+venkat
+travel
+meeting
+today
+back
+wednesday
+class
+make-up
+friday
+afternoon
+discussion
+session
+p.m
+addition
+regular
+spring
+staff
+instructor
+teaching
+assistant
+michael
+beyeler
+mbeyeler
+uci.edu
+readers
+ekin
+oguz
+eoguz
+hao
+zhang
+hzhang10
+logistics
+details
+web
+page
+http
+ics143
+lectures
+00-11
+eh1200
+discussions
+00-3
+hib
+system
+concepts
+eighth
+edition
+galvin
+addison-wesley
+seventh,sixth
+editions
+java
+versions
+alternate
+book
+l.f
+bic
+a.c
+shaw
+prentice-hall
+education
+isbn
+homeworks
+assignments
+written
+quarter
+programming
+assignment
+knowledge
+required
+handed
+out
+midterm
+finals
+week
+multistep
+don
+start
+last
+classes
+late
+accepted
+submissions
+made
+eee
+dropbox
+tests
+tentatively
+final
+exam
+tue
+jun
+30-3
+uci
+catalog
+grading
+policy
+worth
+grade
+grades
+based
+curve
+schedule
+computer
+structures
+process
+management
+processes
+threads
+cpu
+scheduling
+synchronization
+deadlocks
+review
+memory
+virtual
+filesystems
+interface
+implementation
+topics
+i
+subsystems
+case
+study
+unix
+windowsnt
+revision
+summary
+early
+simple
+batch
+multiprogrammed
+time-sharing
+personal
+parallel
+distributed
+real-time
+architecture
+program
+acts
+intermediary
+user
+hardware
+major
+cost
+general
+purpose
+computing
+software
+simplifies
+manages
+complexity
+running
+application
+programs
+efficiently
+goals
+simplify
+execution
+make
+solving
+problems
+easier
+sharing
+resources
+portable
+versatile
+provide
+isolation
+security
+protection
+improve
+reliability
+error
+confinement
+fault
+tolerance
+reconfiguration
+understand
+interaction
+applications
+inherent
+aspect
+society
+basic
+design
+efficient
+resource
+flexibility
+increasing
+specialized
+e.g
+embedded
+devices
+cell
+phones
+sensors
+controllers
+aircraft
+control
+multimedia
+services
+irvine
+sensorium
+increases
+moore
+law
+years
+performance
+hennessy
+patterson
+quantitative
+approach
+4th
+sept
+intel
+multicore
+chipsets
+mit
+components
+controls
+coordinates
+solve
+users
+compilers
+database
+video
+games
+business
+banking
+people
+machines
+computers
+abstract
+view
+compiler
+assembler
+text
+editor
+views
+allocator
+allocate
+manage
+operation
+kernel
+executes
+forever
+respect
+spectrum
+monitors
+small
+kernels
+special
+multiprogramming
+timesharing
+workstations
+servers
+minicomputers
+timeframes
+transaction
+mobile
+platforms
+sizes
+people-to-computer
+ratio
+david
+culler
+bare
+machine
+1950s
+structure
+large
+run
+console
+single
+operator
+paper
+tape
+punched
+cards
+assemblers
+linkers
+loaders
+device
+drivers
+libraries
+common
+subroutines
+secure
+inefficient
+expensive
+low
+utilization
+high
+setup
+human
+cheap
+reduce
+batching
+jobs
+similar
+requirements
+add
+card
+reader
+hire
+automatic
+job
+sequencing
+forms
+rudimentary
+resident
+monitor
+holds
+initial
+transfers
+problem
+distinguish
+data
+processing
+prevented
+performing
+separate
+submits
+deck
+put
+processed
+output
+printed
+printer
+long
+turnaround
+days
+overlap
+slow
+mechanical
+ibm
+issues
+solutions
+speed
+offline
+load
+tapes
+reading
+line
+printing
+done
+spooling
+disk
+random
+access
+storage
+input
+files
+storing
+ready
+accept
+computation
+introduces
+notion
+pool
+choose
+increase
+speeding
+completion
+complete
+polling
+sets
+flag
+busy
+loop
+waiting
+interrupts
+forces
+jump
+specific
+instruction
+address
+interrupt
+service
+routine
+returns
+code
+executing
+prior
+servicing
+multiple
+simultaneously
+performs
+execute
+received
+requires
+intervention
+loops
+indefinitely
+queued
+fifo
+order
+timer
+quantum
+timeslice
+interrupted
+returned
+end
+head
+interpreter
+replaced
+command
+language
+cheaper
+cont
+interactive
+finishes
+seeks
+statement
+file
+online
+filesystem
+swapped
+keyboards
+mice
+display
+screens
+printers
+laptops
+palmtops
+smart
+wireless
+advanced
+features
+advantages
+convenience
+responsiveness
+ubiquitous
+multiprocessor
+close
+communication
+improved
+throughput
+economical
+increased
+kinds
+vector
+pipelined
+symmetric
+asymmetric
+multiprocessing
+shared
+models
+tightly
+coupled
+loosely
+,message-based
+variable
+climate
+modeling
+earthquake
+simulations
+genome
+analysis
+protein
+folding
+nuclear
+fusion
+research
+illiac
+uillinois
+connection
+blue
+gene
+tianhe-1
+china
+k-computer
+japan
+distribute
+processors
+lines
+architectures
+speed-up
+email
+digital
+globus
+grid
+toolkit
+cloud
+offerings
+planetlab
+gnutella
+p2p
+network
+correct
+function
+depends
+timeliness
+actuators
+hard
+failure
+response
+secondary
+limited
+soft
+accurate
+reality

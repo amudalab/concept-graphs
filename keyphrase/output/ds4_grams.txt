@@ -1,0 +1,1431 @@
+dictionary abstract data
+abstract data type
+search is done
+analysis for binary
+table how hashing
+hashing is done
+collision resolution techniques
+techniques a dictionary
+type that store
+store stores element
+store bank accounts
+key the notion
+right so bank
+account has lots
+lots of information
+access the bank
+account or data
+accounts stores wealth
+wealth of information
+list of transactions
+last few days
+key a dictionary
+stores the elements
+talk of key
+key the key
+number this helps
+helps us access
+application that wishes
+operate an account
+kind of operation
+provide the account
+number as key
+basically an abstract
+database the dictionary
+store this key
+key element pairs
+pairs the key
+number for instance
+identifies particular student
+supported is searching
+searching by key
+kind of methods
+standard container methods
+queues and stacks
+size which tells
+dictionary is empty
+elements which returns
+find the element
+kind of settings
+return all elements
+insert an element
+remove an element
+remove all elements
+remember the notion
+wealth of data
+special element nill
+dictionary then lets
+return a nill
+comparison of keys
+keys for equality
+two particular keys
+right one key
+doing is searching
+right for instance
+notion of taking
+taking two names
+require is comparing
+right we don
+lectures is talk
+ways of implementing
+implementing this abstract
+list to implement
+implement dictionary right
+implement a dictionary
+implement this dictionary
+dictionary every node
+predecessor or successor
+completely arbitrary manner
+throw them arbitrary
+linked list implementation
+implementation right today
+whats called hash
+binary tree red
+tree red black
+red black trees
+black trees avl
+trees avl trees
+trees b trees
+mechanisms data structures
+structures to implement
+critical very important
+important data type
+right in java
+class called java
+java that util
+util dot dictionary
+dictionary which lays
+interface java dot
+java dot util
+dot util dot
+util dot map
+dictionary you understand
+problem searching right
+problem of searching
+searching is falling
+set of sequence
+sequence of numbers
+keys and databases
+right so index
+number or null
+sitting at position
+call searching lets
+technique called binary
+search i imagine
+recall the technique
+search is divide
+divide and conquer
+doing in divide
+divide and search
+range of elements
+query the key
+sorted order increasing
+increasing or decreasing
+decreasing for binary
+search to work
+right ill compare
+fourteen and twenty
+twenty two twenty
+two is larger
+means that twenty
+twenty two lies
+set of elements
+low and high
+range of part
+searching for twenty
+middle element compare
+element compare twenty
+middle element twenty
+element which means
+means the twenty
+two this part
+element we search
+compare this middle
+location and returns
+returns this information
+write a recursive
+read and understand
+notion of low
+search so procedure
+searching for low
+end and high
+thing if low
+basically that means
+return an null
+null the key
+obtained by taking
+taking the average
+average of low
+high and check
+check if middle
+return the position
+found the keys
+mid if key
+array the left
+staring location low
+ending location mid
+location mid minus
+array which means
+means the mid
+two high right
+binary search small
+search small pieces
+pieces of code
+write a iterative
+procedure you understand
+understand this thing
+procedure the low
+low to begin
+doing same thing
+right and updating
+high and low
+first step low
+low becomes mid
+element was larger
+element the element
+mid element low
+element is smaller
+mid element high
+high become mid
+find the key
+return the location
+location we found
+found the key
+key or low
+low becomes larger
+larger than high
+loop and return
+write binary search
+two different ways
+log n base
+base two right
+problem is halved
+comparison each comparison
+essentially the range
+comparison the range
+right after logging
+roughly require log
+base two comparison
+location you desire
+desire in constant
+write any base
+base for log
+understand this class
+base two suppose
+suppose the numbers
+assume the numbers
+elements go throw
+throw entire array
+compare your key
+element you searched
+array if sorted
+huge difference coming
+right the sorting
+sort the element
+element to begin
+small pseudo code
+array one element
+asked to implement
+caller id facility
+large phone company
+right various company
+person whose making
+making the call
+return the callers
+case in delhi
+range of phone
+million phone numbers
+range his hundred
+numbers are present
+right you understand
+understand the difference
+actual different number
+number of elements
+understands the problem
+means its suppose
+searching take order
+understand why right
+roughly the order
+order so removing
+removing an element
+suppose particular person
+search first first
+first first search
+searching and removing
+removing since searching
+searching itself taking
+thing an order
+list you don
+putting the elements
+location yes inserting
+implementation is good
+things is failable
+maintain log files
+maintain some kinds
+kinds of log
+file for instance
+instance any kind
+transactions are happening
+revert the transaction
+taking what happening
+maintain this maintain
+searches or removals
+thing happens transaction
+frequent but searches
+searches and delete
+case this implementation
+good because insert
+takes only constant
+frequently to decide
+decide what type
+implement the abstract
+abstract the dictionary
+dictionary data type
+searching take log
+log n log
+log n provide
+kind of direct
+direct access mechanism
+searching takes log
+inserting and removing
+putting in input
+input an array
+maintain the sorted
+insert the element
+element particular location
+case similarly delete
+examples in previous
+inserting take order
+order n elements
+order plus log
+log n order
+recall your big
+big oh notation
+notation so order
+lot of searching
+inserts and deletes
+deletes from dictionary
+array of size
+right huge array
+array and put
+position which corresponds
+corresponds to ankurs
+ankurs phone number
+operations insert search
+search and delete
+insert a caller
+caller id capability
+array that location
+location and retrive
+remove the element
+constant time great
+great what bad
+implementation your wasting
+lot of space
+spaces is turning
+order one excepted
+two much spaces
+spaces and lets
+hundred million phone
+create an array
+size the hundred
+create a smaller
+users two locations
+number of users
+compute this value
+compute this quantity
+ankur at location
+insert and delete
+delete and lets
+lets say keys
+numbers but entry
+numbers is huge
+infact i don
+set of values
+create a table
+table of size
+modulo five function
+takes the last
+last two digits
+mapped to location
+table of hundred
+hundred entries table
+put you depending
+depending upon last
+problem not arise
+delete and search
+address this problem
+addressing this issue
+keys which mapped
+concept called chaining
+ways of addressing
+issue and today
+today in todays
+first technique simplest
+technique simplest technique
+technique called chain
+put the elements
+linked list starting
+taking the key
+key and computing
+keys were mapped
+case three keys
+keys getting mapped
+map to location
+four no keys
+address the problem
+problem of collision
+resolve the collision
+things in constant
+right worst case
+worst case worst
+case worst case
+keys get mapped
+data structure reduced
+linked list data
+list data structure
+search insert search
+phone number caller
+case each node
+person who sit
+examples of hash
+kinds of hash
+regarded as modulo
+hundred the reason
+write modulo hundred
+modulo hundred hundred
+function to find
+find the position
+doing your search
+search or insert
+insert or delete
+order then insert
+unordered then insert
+end of linked
+traverse the entire
+entire list reach
+reach the end
+right by maintaining
+maintaining one pointers
+pointers two pointers
+pointer to add
+add an element
+notion of order
+notion to order
+order the elements
+element with key
+value of hash
+hash function doing
+doing the hash
+function is mapping
+mapping the universe
+compute the hash
+key given key
+simple arithmetic operation
+operation to compute
+compute the value
+function is independent
+choice of hash
+hash function concern
+choices of hash
+function right lot
+lot of research
+research has done
+function that people
+two simple examples
+motivate the concept
+good hash function
+function a good
+distribute the keys
+keys to location
+location one location
+collisions your data
+structure would start
+single linked list
+function which distributes
+lists is small
+idea hash function
+pick at random
+locations then throw
+throw the element
+right this kind
+function which takes
+takes a key
+key and puts
+right i don
+location it picked
+ideal hash function
+assume that hash
+element and throws
+simple uniform function
+number of slots
+slots the size
+call this load
+load factor alpha
+alpha any questions
+search is unsuccessful
+element i computed
+computed the value
+table i ran
+mind the elements
+entire linked list
+spend i spend
+spend time propositional
+computing the hash
+hash function takes
+function takes constant
+right linked list
+step the entire
+list follow pointer
+pointer by pointer
+nice hash function
+hash function simple
+function simple hash
+simple hash function
+distributing the things
+examined is alpha
+roughly a constant
+ideal hash functions
+create a bad
+bad hash function
+right ill grant
+spent in computing
+function at put
+question the efficiency
+data structure relies
+good hash functions
+class hash function
+hash function designing
+function designing hash
+designing hash function
+arts then assigns
+design a good
+class some principle
+function what kind
+kind of hash
+make a successful
+answer for successful
+value the hash
+list some point
+right so lets
+lets lets argue
+ways of arguing
+database right suppose
+suppose the element
+inserted the excepted
+case of successful
+successful search excepted
+search excepted number
+element was inserted
+inserted i equals
+inserted and append
+append the element
+compare that element
+number of comparisons
+throw the entire
+excepted time required
+list the excepted
+roughly i minus
+hash function computation
+required to insert
+summing this quantity
+figure this out
+roughly the length
+list is divided
+average time computations
+half the length
+kind of behavior
+low order term
+successful successful search
+taking a similar
+choice of alpha
+size recall alpha
+table the number
+pick the size
+size of hash
+roughly the number
+inserting the hash
+table then alpha
+concept of growable
+structures you start
+elements you inserting
+sizes of linked
+move the entire
+set of element
+larger hash table
+modify these things
+larger table right
+design your hash
+hash function keeping
+number of hash
+hash tables slots
+slots were propositional
+question is wont
+problem with number
+slots was propositional
+right it depends
+big oh hiding
+hash table suppose
+thousand this hash
+table can accommodate
+accommodate any number
+accommodate only thousand
+attach any number
+hash table deteriorate
+ten thousand elements
+thousand elements coming
+average linked list
+linked list length
+case it make
+hash table right
+create a hash
+size ten thousand
+wastage of space
+small hash table
+starting very large
+large hash table
+end this class
+continue with hashing
+hashing c concepts
+concepts of good
+ways of resolving
+dictionary abstract
+abstract data
+data type
+binary search
+binary searches
+hash table
+collision resolution
+resolution techniques
+hashing techniques
+store stores
+stores element
+store bank
+bank accounts
+account number
+bank account
+account numbers
+accounts stores
+stores wealth
+current balance
+account holder
+transactions done
+additional information
+abstract model
+key element
+element pairs
+student records
+natural notion
+entry number
+main operations
+standard container
+container methods
+query methods
+key find
+update methods
+standard thing
+data databases
+special element
+element nill
+unsuccessful search
+key key
+require comparison
+student record
+comparing keys
+linked list
+dictionary right
+dictionary suppose
+doing things
+arbitrary manner
+list implementation
+right today
+binary tree
+tree red
+black trees
+trees avl
+avl trees
+mechanisms data
+data structures
+important data
+abstract class
+util dot
+dot dictionary
+interface java
+java dot
+dot util
+dot map
+dictionary dictionary
+problem searching
+searching right
+smallest side
+subsequent discussion
+single number
+return return
+found number
+searching lets
+key idea
+design technique
+future class
+elements sitting
+sorted order
+order increasing
+work suppose
+element twenty
+middle element
+element fourteen
+increasing order
+entire array
+element compare
+compare twenty
+recursive procedure
+quickly imagine
+high low
+lower end
+range high
+higher end
+procedure call
+element key
+first thing
+left part
+staring location
+ending location
+location mid
+mid minus
+recursive call
+right part
+high right
+small pieces
+iterative procedure
+height begin
+first step
+mid element
+ways write
+steps range
+first comparison
+logging comparison
+require log
+array implementation
+entire thing
+entire process
+order log
+decreasing order
+throw entire
+element element
+worst case
+first position
+spend order
+huge difference
+difference coming
+small pseudo
+pseudo code
+implement caller
+large phone
+phone company
+phone number
+lets assume
+phone numbers
+digit numbers
+hundred million
+unordered sequence
+arbitrary order
+entire list
+unordered list
+element suppose
+connection disconnection
+data record
+first search
+taking order
+small modification
+first location
+inserting takes
+log files
+log file
+happening database
+maintain log
+system administration
+system maintain
+add data
+add inserts
+insert takes
+data structure
+dictionary data
+ordered sequence
+case lets
+element put
+key right
+direct access
+access mechanism
+whichever element
+searching takes
+takes log
+inverse case
+previous class
+elements put
+create space
+move order
+make sense
+size ten
+huge array
+ankurs phone
+operations insert
+insert search
+phone connection
+location put
+wasting lot
+previous technique
+smaller array
+hypothetical setting
+small number
+value modulo
+quantity modulo
+entry numbers
+digits end
+hundred students
+huge right
+hundred people
+hash function
+hundred entries
+size hundred
+clash suppose
+location number
+degrade shape
+insert delete
+todays class
+first technique
+technique simplest
+simplest technique
+list starting
+right suppose
+computing modulo
+collision problem
+right worst
+case worst
+structure reduced
+list data
+search insert
+delete insert
+number caller
+quick recap
+find insert
+hash functions
+key modulo
+modulo hundred
+unordered right
+constant amount
+list reach
+end suppose
+function doing
+simple arithmetic
+arithmetic operation
+table array
+function concern
+good choices
+right lot
+simple examples
+good hash
+distributes things
+small right
+idea hash
+hundred locations
+random location
+ideal hash
+takes element
+simple uniform
+uniform function
+load factor
+table divided
+factor alpha
+search search
+unsuccessful right
+function takes
+takes constant
+right linked
+average size
+nice hash
+function simple
+simple hash
+excepted number
+total search
+alpha lets
+excepted search
+bad hash
+structure relies
+class hash
+function designing
+designing hash
+successful search
+lets lets
+lets argue
+database inserted
+tenth element
+excepted length
+search excepted
+elements examined
+element lets
+function computation
+quantity gap
+elements taking
+average right
+half half
+similar kind
+low order
+order term
+successful successful
+good choice
+size recall
+recall alpha
+searching insert
+excepted sense
+growable stack
+entire set
+larger hash
+larger table
+table right
+function keeping
+smaller table
+hash tables
+tables slots
+space problem
+table suppose
+thousand elements
+table deteriorate
+ten thousand
+elements coming
+list length
+small hash
+large hash
+wastage space
+bit hashing
+resolving collision
+today
+dictionary
+abstract
+data
+type
+binary
+search
+done
+analysis
+searches
+hashing
+hash
+table
+collision
+resolution
+techniques
+class
+follow
+store
+stores
+element
+located
+quickly
+bank
+accounts
+right
+key
+notion
+account
+number
+lots
+information
+access
+numbers
+wealth
+current
+balance
+address
+holder
+list
+transactions
+last
+days
+elements
+talk
+additional
+helps
+application
+wishes
+operate
+kind
+operation
+provide
+happen
+basically
+model
+database
+pairs
+instance
+case
+suppose
+student
+records
+natural
+entry
+integer
+characters
+uniquely
+identifies
+main
+operations
+supported
+searching
+methods
+standard
+container
+queues
+stacks
+size
+tells
+empty
+returns
+query
+find
+settings
+return
+update
+insert
+remove
+thing
+remember
+crucial
+difficult
+databases
+special
+nill
+unsuccessful
+means
+lets
+procedure
+mind
+require
+comparison
+keys
+equality
+two
+doing
+hindi
+record
+taking
+names
+smaller
+larger
+comparing
+don
+order
+implemented
+lectures
+ways
+implementing
+doubt
+array
+linked
+implement
+node
+inefficient
+things
+noise
+predecessor
+successor
+true
+question
+organized
+connect
+completely
+arbitrary
+manner
+nodes
+organize
+throw
+implementation
+efficient
+whats
+tree
+red
+black
+trees
+avl
+mechanisms
+structures
+critical
+important
+spending
+java
+util
+dot
+lays
+specification
+interface
+map
+specifications
+classes
+understand
+problem
+smallest
+side
+making
+end
+subsequent
+discussion
+falling
+set
+sequence
+give
+single
+four
+ten
+position
+sitting
+index
+found
+null
+nil
+doesn
+call
+technique
+imagine
+recall
+idea
+divide
+conquer
+design
+future
+apply
+problems
+narrow
+range
+sorted
+increasing
+decreasing
+work
+twenty
+middle
+fourteen
+compare
+lies
+lie
+variables
+low
+high
+part
+initially
+entire
+figure
+out
+wee
+repeat
+left
+location
+write
+recursive
+pseudo
+code
+read
+lower
+higher
+first
+invoking
+wrong
+obtained
+average
+check
+mid
+staring
+ending
+minus
+cases
+small
+pieces
+iterative
+equal
+written
+happening
+begin
+height
+roughly
+putting
+loop
+updating
+step
+questions
+point
+shown
+log
+base
+halved
+steps
+items
+essentially
+logging
+stop
+desire
+constant
+unit
+process
+earlier
+assume
+worst
+lucky
+beginning
+searched
+spend
+huge
+difference
+coming
+sorting
+sort
+run
+ends
+back
+setting
+asked
+caller
+facility
+large
+phone
+company
+based
+person
+callers
+digit
+delhi
+hundred
+million
+present
+actual
+efficiently
+understands
+unordered
+put
+traverse
+removing
+connection
+disconnection
+modification
+inserting
+care
+takes
+clear
+good
+applications
+failable
+maintain
+files
+kinds
+file
+revert
+transaction
+systems
+system
+administration
+track
+activities
+rarely
+removals
+add
+frequently
+inserts
+frequent
+delete
+rarer
+performed
+decide
+structure
+ordered
+direct
+mechanism
+whichever
+input
+shift
+inverse
+similarly
+move
+examples
+previous
+inserted
+create
+space
+big
+notation
+make
+sense
+lot
+deletes
+ankur
+corresponds
+ankurs
+capability
+straight
+retrive
+great
+bad
+wasting
+spaces
+turning
+issue
+fairly
+excepted
+users
+wasted
+locations
+mapped
+hypothetical
+fancy
+compute
+value
+modulo
+quantity
+depending
+students
+digits
+infact
+values
+people
+spent
+pick
+function
+entries
+clash
+arise
+degrade
+shape
+showed
+waste
+addressing
+deal
+spot
+concept
+chaining
+todays
+simplest
+chain
+starting
+computing
+adding
+picture
+resolve
+reduced
+identity
+sit
+quick
+recap
+determine
+functions
+typically
+regarded
+reason
+options
+amount
+reach
+pointer
+points
+maintaining
+pointers
+front
+tail
+ordering
+slot
+mapping
+universe
+slots
+rest
+simple
+arithmetic
+independent
+choice
+concern
+choices
+research
+gave
+motivate
+distribute
+uniformly
+hen
+collisions
+start
+distributes
+lists
+random
+shows
+puts
+picked
+ideal
+throws
+randomly
+probability
+uniform
+term
+load
+factor
+divided
+alpha
+computed
+ran
+propositional
+didn
+limits
+thrown
+nice
+distributing
+examined
+total
+denote
+half
+grant
+brings
+efficiency
+relies
+critically
+designing
+assign
+arts
+assigns
+show
+principle
+theorems
+successful
+answer
+walking
+argue
+arguing
+tenth
+length
+argued
+equals
+append
+comparisons
+prove
+manners
+required
+computation
+summing
+gap
+math
+computations
+similar
+behavior
+ignore
+intuitive
+meet
+suggestions
+growable
+stack
+sizes
+modify
+keeping
+tables
+wont
+depends
+hiding
+thousand
+accommodate
+attach
+performances
+deteriorate
+wastage
+grow
+offline
+bit
+continue
+concepts
+resolving

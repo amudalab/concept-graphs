@@ -1,0 +1,244 @@
+
+
+COMPUTER NETWORKS
+Prof. Sujoy Ghosh
+Department of Computer Science and Engineering
+IIT, Kharagpur
+Lecture-18
+Satellite Communication (Refer slide 1)
+
+Good day! In this lecture we will be discussing one very important component of world wide communication, which is satellite communication.
+(Refer slide 1)
+
+Slide 1
+
+Communication through satellite has been going on for quite sometime now.   Satellite Communication is fairly mature technology although some improvements are taking place. Satellite Communication is an important component of world wide communication infrastructure. We will also see how specifically MAC, which is Media Access Control, is handled in Satellite Communication. This is important, since we obviously need MAC because the communication medium is the electro magnetic field around us, which is common to everybody. (Refer slide 2)
+
+
+Slide 2
+ We now talk about satellite communication. Satellite can be looked upon as a big microwave repeater. Repeater is something, which repeats the signal. It takes in the incoming signal, amplifies it and then sends it back. It contains several transponders. Transponders listen to some portion of the spectrum. Each transponder is listening to some portion of the spectrum so that several transponders together can listen to the wider band of the spectrum. It amplifies the incoming signal and broadcasts in another frequency back to earth. Satellites are up in the space; they take the incoming signal, amplify it and broadcast it back. So satellite has to broadcast in a different frequency so as to avoid interference with the incoming signals. (Refer slide 2)
+
+
+Slide3
+This can relay signals over long distance ? this is one strength of satellite  communication, because, if you send it all the way up and then when it is sending all the way down, and if it does so at an angle, the signal can reach a very long distance. There are different kinds of satellites and the most commonly known ones are  geostationary satellites because they are above the equator at a distance of 2300 miles approximately and are in the geosynchronous orbit. They travel around the earth in exactly the time the earth takes to rotate. (Refer slide 3)
+
+
+Slide 4
+
+
+We have an uplink station from where some signal is going and then it is being listened to by one particular transponder in the satellite. It amplifies signal and sends it back to earth where the downlink station (another dish) which is facing the satellite and tracking the satellite receives the signal over here. This is the just reflected part which then gets on the horn. This signal is taken down and amplified. Then we can use it. (Slide 4)
+
+
+Earth stations communicate signals to satellite on an uplink. They	 are	called earth or base stations on the ground. The	satellite then repeats these signals back to the down link. This feature is attractive for distribution of TV	programmes. It is known that many of our television channels(unless coming through cable) are coming	from satellite, which is beaming back  the signal over a very wider area and all the receivers around can receive the signal and then amplify it and use it. So it is very popular for such kind of applications like distribution of television programming.
+
+Slide 5
+There are other applications. These signals are used to transmit signals and data over long distances for weather forecasting, television, internet communication and     global positioning system. These are the various applications of a satellite. The space orbit allows more surface coverage (Refer slide 5)
+
+Slide 6
+The spectrum is usually used by the satellite and is divided into sections; each of these bands have names like C band, Ku band or ku band and Ka band or ka band. The C band may have four downlinks and six uplinks; C band is from 3.7 to 4.2 GHz. This part of the spectrum is reserved for the C	band communication through satellite; that is, 3,7 to 4.2 GHz for downlink and 5.925 to 6.425 GHz for uplink. There is a 0.5 GHz  bandwidth for downlink and another 0.5 GHz bandwidth for uplink.
+Since the uplink is at a higher frequency, you can have more channels over there. The capacity is not very high by today?s standard, especially, if you compare with fiber, this is really low. But at the same time, at one point of time, when transoceanic fibers were not there, satellite was the chief medium of communication across continents.	The capacity is low but still it is useful; however, terrestrial interference is a problem because when the weather is bad or when there are other kinds of extraneous sources of some electromagnetic noise, etc., these interfere with the signals. But still it has got a lot of strong points; that is why it is still an important component of communication these days. (Refer slide 6)
+
+
+
+
+Slide 7
+
+Next set of transponders come in Ku band. They can accommodate greater number of transponders ? 12	on the	downlink to 14	on uplink. Rain interference	is the problem here. Ku band is from 11.7 to 12.2 GHz and 14.0 to 14.5 GHz. In this band, rain is a problem though it has higher capacity and is less crowded than C band. C band is very crowded, if you consider people with a sort of dish antenna for receiving satellite signal ? I am not talking about the base station ? those using 1-meter antenna are possibly using C band. For Ku band, the antenna size is smaller and pizza shaped at something like 18 to 20 inches. They have a higher bandwidth; however, rain and terrestrial interference are the problems faced in C band. Different parts of electromagnetic spectrum are most susceptible to interference and noise, etc., but Ku band has higher capacity. The Ka band is at an even higher frequency ? 19 downlink and 29 uplink transponders are needed. The equipment needed for this is quite	expensive.	It is from 17.7 to 21.7 GHz and 27.5 to 30.5. It covers   a greater bandwidth, but it is still not very widely used.
+
+Slide 8
+Satellite can be used for point-to-point transmission, to transfer large volume of data; voice data and communication and for video conference. Satellite is not just for broadcast; satellite can be used for point-to-point communication. You may look it as point-to-multi-point communication. So we can say that point-to-point and point-to-multi-point communication are supported. Also, standard broadcast is supported. Point-to-multi-point communication can be data communication, internet, and video conference. Broadcast services include television. (Refer slide 8)
+
+Slide 9
+
+The advantages are that you can reach a large geographical area and have a high bandwidth; it is cheaper over long distances. It is certainly cheaper than wiring it up, but if you are covering long distance, because of its inherent high capacity, the economy is in favor of the fiber optic cable and it is almost even in some cases. But in many situations satellite retains its advantage. It can transmit to places where the cable cannot reach. These are applications where satellites have an undoubted advantage over any wired kind of system. It may be a remote area, which is not very easily reachable and road or other kind of communication is not well established to take cable over there. But the satellite, since it is sitting high up in the sky, can cover any area without any difficulties. Hence this is a very strong point in favor of satellite. It is especially useful for technology deployed at multiple sites regardless of location, like mobile technology. Nowadays the first thing people think about to be mobile is the cellular phone, which uses the nearest base station, which is usually wired. But in some places where it cannot be wired, it may go through  the base station and may be connected to the backbone through a satellite. That is one thing; and if you want 100% roaming all over the earth wherever you go, then you may not have a base station around the place where you are. In that case, some satellite or the other would be visible to you and you can communicate through the satellite. So mobility and accessibility to places which are difficult to reach otherwise are very strong points of satellite and of course standard communication is also a point.
+
+Slide 10
+
+
+The disadvantage is the high initial cost. You have to build the satellite and then to put it up in the space through some launch vehicle involves high investments. But  laying fibers all over is also costly so we have to work it out on a case by case basis and determine which one comes out to be better. We cannot do much at the physical level about susceptibility to noise and interference because the physical media is such that all kinds of noises are being generated all over the place and crowding this shared medium. So we have to handle it in some other way at a higher layer. Then there is a propagation delay; and this is a significant disadvantage compared to terrestrial communication for many satellites, especially the geostationary satellites. We will come back to this point later on. Geostationary satellites are thousands of miles above earth. So although your electromagnetic signal is travelling at the speed of light which is very high but even then to go all the way up to the satellite and then come all the way back down takes significant amount of time and this has lot of implications. It has the implications on the MAC and it has the other implications like delay and may be quality of service in some cases so this is an issue, a potential disadvantage and security can also be an issue since this medium is open to everybody. Whatever you are communicating, anybody else can listen on to it. If you are trying to send some very sensitive data through satellite and you do not want other people to listen to what you are sending, then you have to take some other measure like encryption, etc. We will talk about encryption much later in the course. (Refer slide 10)
+
+
+Slide 11
+
+
+There are different types of satellites and they have different types of orbits, circular or elliptical orbits. The circular orbits will centre at the earth?s centre. There is the   elliptical orbit with one foci at earth?s centre. There are some equatorial orbits above earth?s equator. This is quite common and necessary, especially for geostationary satellite. It is necessary that they go around the equator but then you could also have a satellite pass over both the poles. Other orbits are referred to as inclined orbits. (Refer slide 11)
+
+
+Slide 12
+
+The altitude of the satellites and their distance from the earth have significant implication in terms of the time it takes for the signal to travel. We have three different classes of satellites: geostationary orbit satellites, GEOs; medium earth orbit satellites, MEOs; and low earth orbits, LEOs. Out of these, GEO is the most common one.  (Refer slide 12)
+GEOs go around the equator and have a high bandwidth. But they also require high power ? this is an important point ? and long latency. These are the important issues. When you are trying to communicate with some satellite, which is very far away, then your transmitter has to be strong enough so that the signal reaches the satellite. If the transmitter power has to be large then you require lot of power. In order to power this, it may be difficult to power it with a battery. That kind of battery power may not be enough to reach a geostationary satellite. The mobility becomes difficult from this power angle. So this is an important issue. (Refer slide 13)
+
+
+
+
+Slide 13
+
+
+
+MEO has a high bandwidth; medium kind of power; and medium kind of latency. LEO has low power and latency, but you require more number of satellites. They have smaller footprint. We have VSAT, which means very small aperture. When we talk about VSAT, we are not actually referring to any satellite. We are referring to the ground equipment that we use and VSATs have small apertures, which private WANs can use with smaller antenna. But if they are using C band or Ku band they use antenna which has a dimension of either 1 meter or 18 inches. But for the main base station of the satellite, usually a much larger antenna is put in place. We will first talk about geostationary satellite.
+This is the most common type of satellite today and it is in a circular orbit. We say it in miles about 23,000 to 22,000 odd; and in kilometres it is 35,000 odd kilometres above the earth in the equatorial plane These satellites remain in the same position over the earth as it rotates.
+(Refer slide 14 and Slide 15)
+
+
+Slide14 and 15
+
+
+Slide 16
+As the earth is moving, the satellite is moving along with that. From some point on the earth, it would appear that the satellite is stationary over its head at all times.  That is why this is so sacrosanct about this geostationary satellite, this distance of 35,785 kilometres. You can always calculate this distance by finding out about the centripetal force and the earth?s gravitation etc. You can put it in that equation and calculate that this is the exact distance at which, if you put a satellite with a particular angular velocity, which is the same angular velocity as that of the earth, what will happen is that to the people directly under it, it will appear as if the satellite is stationary. So this is the good thing about this geostationary satellite and this is why this distance is so fixed. (Refer to 16)
+
+
+
+Slide 17
+
+From such a long distance, if you send a beam which has a reasonable solid angle over here, it will cover a large portion of the earth. As a matter of fact, it has been  calculated that with three or four satellites you can cover the entire surface of the earth; but of course, three or four satellites would not be sufficient to handle the bandwidth that we require these days. Furthermore since this distance is so fixed, there is only one band in space where the satellites can be parked. The other point is that if two such satellites are very close to each other, the signals will start interfering with each other. So there has to be a minimum distance between two geostationary satellites. The geostationary orbit and these parking slots are internationally decided, but these parking slots are quite crowded. Some nations may not put the satellite but would have reserved some parking slots. These parking slots are quite crowded today with so many geostationary satellites up in the space. (Refer slide 17)
+
+
+Slide 18
+
+
+These have a  coverage of about a fourth of the earth and have good tracking properties. That means you can track it very easily but their signal weakens over great distance and the propagation delay can be large. The propagation delay we are talking about is of the order of 0.24 seconds. Usually we talk in terms of milliseconds but here we are forced to talk in terms of seconds. It may also be hard to get coverage at the polar regions because this geostationary satellite has to be over the equator; it is difficult to get coverage at the far northern and southern hemispheres. (Refer slide 19)
+
+
+
+Slide19
+
+GEO satellite provides universal connectivity in its footprint. Its footprint means the area of earth, which is covered by one particular transponder, let us say on one particular satellite. So it covers all that area at the same time. So now within its footprint it covers universal connectivity. From any particular point, you can communicate with the satellite and possible satellite parking slots are quite crowded. Wide beams are circular, whereas spot beams, which are more focused, are elliptical. Apart from broadcasting, they may also be used with VSATs for point-to-point communication. We will come back to this point later. (Refer slide No.20).
+
+Slide 20
+So they are at this kind of distance that requires large transmitter power making them large and expensive. There is considerable space delay and large cell size, which means smaller number of channels. This is one particular point and we will come back to this point in greater detail when we discuss terrestrial wireless communication. But the point is that a satellite has some amount of bandwidth which is assigned to it which it can handle; now within that bandwidth for communication,  namely, the voice channels require about 64 kbps rate. One particular transponder can handle 800 such channels. If the footprint of the satellite is very large, that means it is  covering a large number of people. But all these large number of people are constrained with those 800 channels. A large cell size also necessarily means a smaller number of channel density on earth. (Refer slide 21)
+
+
+Slide 21
+A typical satellite has 12 to 20 transponders, each with a 30 to 50 MHz bandwidth; a  transponder can carry about 800 voice channels. FDM, Frequency Division Multiplexing, was used in early satellites. Nowadays TDM is also used; as a matter of fact, a mixture of TDM and FDM is also used. The cost of transmission is independent of distance. Sometimes this is an advantage. When you are communicating via a communication satellite with somebody who is, say, 10 kilometres away or  with somebody who is 100 kilometres or 1000 kilometres away, the cost is constant over the entire footprint. That may be an advantage in some cases.  (Refer slide 22)
+
+
+Slide 22
+For some applications this may be useful. Security and privacy pose a problem as mentioned earlier. So encryption is essential. Mobility is easily achievable and setup time is not required. If the satellite is in space, then you do not require any setup time. If the satellite is not there, you have to send it there. GPS is an interesting application we will see. (Refer slide 22)
+
+
+Slide 23
+
+
+We now come to the middle earth orbit satellites. These are used for global wireless communication coverage. They maintain orbit about 8000 miles from earth. The moment you come out of the geostationary orbit, the satellite cannot remain stationary over somebody?s head any longer. Now the satellite will necessarily move over your head so in MEOs and LEOs what will happen is that you will find that the satellite is coming over your head just as other stars move. So the satellite will move over in the sky and it will be there for sometime and then it will be out of your reach because it will go down below the horizon. This is what is going to happen with MEOs as well as LEOs. How soon will they come back depends on how far they are and what is the speed, etc. So it orbits around earth once in about every 2 to 12 hours depending on its parameters. So more satellites are needed and some handoffs are required as the satellites orbit now. What is this handoff we are talking about? You are communicating through the satellite to somebody else but the satellite has moved away. So now the communication link will break. In order that the communication link does not break what will have to happen is that another satellite will have to come and take its place and there has to be a handoff of communication from this satellite to this satellite before this satellite disappears altogether so that this communication between the two end points can continue. So these handoffs are required as satellite?s orbit and transmit data rate at 9.6 Kbps to 38.4 Kbps. Transmission delay is less than 0.1 seconds. So this is considerably less than the 240 milliseconds we had earlier. (Refer slide 23)
+
+
+Slide 24
+Taking it still further down, we have  the low earth orbiting satellites, launched like a large flock of birds. You require a lot of satellites because each of these satellites is visible to one particular point in earth only for a short duration of time. So in order to give continuous coverage, you need a large number of satellites. This cell size or the footprints will also become smaller. So in order to cover the entire earth, you need a very large number of satellites orbiting at constant altitude of 400 to 1000 miles. They must travel very fast to avoid gravity forces because in that case they will fall down to lower orbit, which allows for  transmission of the 2.4 to 9.5 Kbps. It travels at 17000 miles per hour, circles earth approximately every 90 minutes. So this goes around very fast. It is used for mobile voice low- and high-speed data; internet access via mobile phones and PDAs and GPS, etc. So the low earth orbiting satellites are what are used for the so-called SAT phones. It is dual linked due to some reason. Since this is low earth orbiting, the power that you require to reach the satellite is much less. So now you have a handheld device, which may be a little bigger than your standard cell phone, but not very much bigger. You can still carry it in your hand and with that now you can phone from anywhere from the earth because you are just communicating through the satellite. (Refer slide 24)
+
+
+Slide 25
+Low earth orbiting satellites are individually cheaper.  They also give lower space delay, which is much less because we are that much nearer. However a large number of satellites need to be deployed. As the satellites keep moving, ground stations which are communicating, will have to switch from one satellite to another and quick handoffs will be required. (Refer slide 25)
+
+
+Slide 26
+One of the examples was the IRIDIUM set of satellites. There were 66 satellites, which offered mobile telephony, paging and data communication. Unfortunately by 1990 they went out of service. What happened was that, SAT phone services became very costly. By that time, other kinds of technology like fiber technology and the terrestrial wireless technology developed to such an extent that a major part of the market was captured by those, which were giving the same service to the end user at a much cheaper rate. Furthermore we require 66 of them, all of them moving very fast and you have to have this complicated handoff from satellite to satellite to make it low enough so that you can communicate from a handled device etc. This could not be supported in the market since there are very few people going to such remote places where there cannot be any other communication infrastructure. Majority of the users would have some base station for some terrestrial wireless nearby and that is why this price became very uncompetitive. There were some efforts to revive this company,  but finally it did not work out and they became bankrupt. At present there is the ambitious ongoing project called TELEDESIC in LEO, which includes 288 LEO satellites to provide low-cost high-speed internet access, networking and teleconferencing across the globe. (Refer slide 26)
+
+Slide 27
+Here, as I mentioned, the space delay is lower and becomes comparable to terrestrial lines in the L band. It is possible to communicate with it using battery powered handheld devices. However cell sizes are still too large compared to terrestrial cells. (Refer slide 27)
+
+
+Slide 28
+IRIDIUM system had 66, so each satellite was to have 48 spot beams, giving a total of 1600 cells, each with 174 channels. But 174 channels or total of 183,000 channels are not so many globally because terrestrial service providers give millions of channels over the area. So finally, the cost turned out to be too high and the project went bankrupt. (Refer slide 28)
+
+
+Slide 29
+
+
+Now we talk about VSATs, which are small terminals with about 1-meter antenna and 1 watt transmitter power. Often the downlink capacity is more than the uplink speed for point-to-point communication usually goes through a hub. If two persons want to communicate the communication will go from here to the satellite and from the satellite to a central hub, which will have a very big antenna and it can handle all the MAC part of it. We are not going into the details of this but anyway this will go to the hub and from the hub again it will go to the satellite and then go the point B. Let A be the sender and B be the receiver. So it goes in two hubs; so the space delay is doubled because we are going in two hubs, sometimes with the help of the satellite MODEM kind of thing, you can go in one hub. So those channels are more costly. Otherwise, with the usual two hubs, there is considerable delay of the order of a half a second for this communication between A and B, but then there is no setup time.  So various combinations of TDM, TDMA, FDM, and FDMA are used for handling the MAC and all this is controlled by that central hub. (Refer slide 29)
+
+
+Slide 30						As I mentioned, one important application was the GPS satellite constellation. This is a global positioning system and this is operated by US Air Force. Another GPS system is on the drawing board; it will be deployed by some other consortium. So there are 28 satellites in this and it has six orbital planes at a height of about 20,200 kilometres. Since this is not the geostationary orbit, they keep on moving and a minimum of five satellites are visible at all times. So with this what you can do is that you can locate any position on the ground, if you have a GPS terminal somewhere. A very common application of GPS is to put that antenna on a car so the car can be tracked anywhere on the earth. (Refer slide 30)
+
+
+Slide 31
+For GPS we do a Trilateration. Suppose there are a number of satellites which are visible to any of the ship, plane or a car as shown in the picture. Suppose we are measuring the car?s distance from a number of satellites. Since for the satellites we know relevant parameters, from three different readings and three different distance measurements, if measured quite precisely and accurately, you can get the accurate position of the car. There are so many different applications, which are possible. For example, there is a central database, if you give information about where you want to go, then it can tell you  the path to take or the alternative paths and which of them is crowded. In many places in Europe, you can get very precise information about where you are, which road you should take to reach the final destination. (Refer slide 31)
+
+
+Slide 32
+The advantages of AVL (automatic vehicle location) are fast despatch; customer service; safety and security; digital messaging; dynamic route optimization and driver compliance. Slide 32 shows a mobile GPS unit located on a truck. With GPS satellites, you can give faster dispatch of goods. For example, some company has to deliver a lot of goods to a lot of  warehouses. So it may ship something and now the customer wants to know where it is. You can immediately know where it is because you know into which truck you have put these goods and where it is exactly.  So, for courier service and similar services, you can give enhanced and sophisticated level of service through GPS.   (Refer slide 32)
+
+
+Slide33
+In conclusion, we can say that satellite communication will continue to serve where broadcasting is essential or where terrain is hostile or very sparsely populated. It also has a niche where rapid deployment is extremely critical. Let us consider battlefield kind of situation where you want to rapidly set up some communication network. If you have a satellite up in the sky already, you can take that transponder. May be there is a disaster where you want to quickly set up disaster recovery and relief operations. You can use this satellite because satellite communication will still go on whatever may happen. Even if there is a flood and everything is flooded, the satellite communication will still go on moving with your mobile units. In other combination with terrestrial radio links fiber is likely to hold the advantage (Refer slide 33)
+
+
+Slide34
+
+Now we come to an interesting part of the satellite communication. We see how this MAC works for satellite communication. This is another class of media access control technique, which we mentioned earlier. This is the first example that we see. It is Random Access Protocol. (Refer slide 35)
+
+
+Slide 35
+We mentioned Random Access Protocols earlier just as we talked about token based protocols, etc. We also talked about random access protocols. This is the first example of a Random Access Protocol. Random Access Protocol is actually very simple. When a node has a packet to transmit at full channel data rate, so just do not bother whether somebody else is transmitting or not transmitting or wants to transmit or it?s going to transmit. Right away, you just do not bother about anything. You just try to put in whatever you want to transmit on to the channel. Now what will happen. If you are lucky since you are doing the random thing without any knowledge or consideration about what other people are doing, your transmission may get go through. So there is no a priori coordination among the nodes but your transmission may still go through. What will happen is that two or more stations may try to   communicate at the same time or very nearly the same time. What may happen is that the packet or the frame sent by one station A and the frame sent by the station B  may collide and what will happen is that both the frames will be lost and will become garbled. Since you are talking about a medium, which is shared by everybody, these two transmitting stations A and B would also be able to listen to this and find out   that both of their messages are garbled. If they find that both are garbled, they will  retransmit as a sort of backup for a random amount of time. That is very important once again the second random is also very important  this backing a random amount of time because if the protocol says no both of them backup for a fixed amount of time and after the lapse of that fixed amount of time both of them will start communicating again. It is important  that the backoff for a random amount of time and hopefully the random number generated by one station and the random number generated by the other station happen to be two different numbers. So now they are going to stay communicating at two different points of time but they will not collide. They may collide with other stations. That is a different issue. To ensure the random access protocol, if two or more transmitting nodes start transmitting at the same time we have a collision. Random access MAC protocol specifies how to detect collisions and how to recover from collisions; for example, via delayed  retransmissions. These are the two parts of any random access protocol.  (Refer slide 36)
+
+
+Slide 36
+This satellite protocol, which is called ALOHA or slotted ALOHA is the simplest kind of random access protocol. We will see other examples like CSMA CSMACD CSMACA etc later on. So   these are the examples of Random access MAC protocols   ALOHA which was the original grandfather of all these protocols first came, then slotted ALOHA and then all these CSMA CSMACD and CSMACA etc were used (Refer slide 36)
+
+
+Slide 37
+The ALOHA protocol was originally developed for packet radio in 1970s. This was applicable to any system with uncoordinated users competing for a shared channel. There was no carrier sensing. Carrier sensing means you do not try to find out whether or not somebody is already communicating. That may sound a little strange at first; because if you could find out that somebody is already communicating, then by trying to transmit at that point of time you are not only sure to fail because your own message will get garbled and somebody else?s frame will also get garbled, but then  you will also have a more crowded media. For satellites there is a problem. You cannot always do this carrier sensing, due to space delay. Since we have a 240 milliseconds space delay, whatever you are listening to now was actually transmitted 240 milliseconds earlier. So if you find that the channel is quiet now, there is no guarantee that after 240 milliseconds also it will also remain quiet. That is why it is difficult to do carrier sensing in the case of a satellite. That is why this latency, space delay, has a very significant impact on how we handle the MAC. Here we do not do it; 240 milliseconds is a lot of time in which a number of frames may be sent. So we do not do any carrier sensing. We simply send whenever we have to send something and then later on listen to the medium to find out whether or not there has been a collision. This is the pure ALOHA protocol. (Refer slide 38)
+
+
+Slide 38
+Users transmit whenever they have data. If there is collision within a time frame, dictated by the space delay, it backs off for a random amount of time and sends it again. If the first bit of a new frame collides with the last bit of a frame that is just finishing, both are taken as garbled. So there is no such thing that the frame has gone through 95%. Either the frame has gone entirely, or even if one bit has collided, both the frames are taken as garbled and lost. (Refer slide 38)
+
+
+Slide 39
+Collision detecting by listening to broadcast channel or by absence of acknowledgement: if collision occurs, each user waits random length of time as already mentioned. Various collision resolution algorithms are available. Station does not transmit new frame until old frame has been successfully transmitted. The station is stuck with the frame until it can successfully send it. (Refer slide 39)
+
+
+Slide 40
+The slotted ALOHA has better performance. All frames are of the same size. Time is divided into equal size slots and each slot is to transmit one frame with some   distance. If the transmitters and the receivers are synchronised they try to send frames only at the beginning of a slot. So nodes start to transmit frames only at the beginning of slots. Nodes are synchronized; if two or more nodes can still try to transmit in a slot, all nodes detect collision. There may be collisions even after making the slots. For example, suppose within the span of the fifth slot three different stations are ready to transmit something. What will happen is that at the beginning of the sixth slot, all three will be communicating and all three will collide. (Refer slide 40)
+
+Slide 41
+
+When node obtains fresh frame it transmits the next slot. As soon as it gets a frame to send, it sends it in the next slot. No collision node can send new frame in the next slot. If there is a collision, the node retransmits the frame in each subsequent slot with probability p until it attains success. (Refer Slide 41)
+
+Slide 42
+
+This is a picture of a slotted ALOHA. There is a collision over three nodes ? nodes 1, 2, and 3. All three of them wanted to transmit. They start transmitting and then collision occurred. Then all of them backed off. It may so happen that the second slot went empty. Then in the third slot, what happened was that number 3 had backed off randomly for a long period of time but node 1 and 2 may have decided on the same number over here. So 1 and 2 collide again. What might happen is given as an example: may be in the fourth slot, 2 has tried again and it has been successful. So there is a success over there. Then next slot is empty. Node 1 and node 3 are trying and then they collide again. Then may be in the next slot, 3 succeeds and so after 9 slots, the three have been able to communicate these three frames. So you see because of this, collision affected efficiency. (Refer slide 42)
+
+
+Slide 43
+
+In slotted ALOHA pros a single active node can continuously transmit at full rate of channel. If nobody else is transmitting one active node can go on transmitting. This is highly decentralized. Only slots in nodes need to be in sync; so that may be taken care of from the hub or through the satellite etc.; it is a very simple kind of protocol. (Refer slide 43)
+
+The cons are that there are idle slots and hence low efficiency. (Refer slide 44)
+
+
+Slide 44
+Now what is the efficiency? Efficiency is the long run fraction of successful slots. There are many nodes each with many frames to send. Suppose N nodes with many frames to send each transmitting slots with the probability P. So probability that first node has success in a slot is equal to p (1 ? p*(N ? 1)). So it is the probability P that that particular node sends and it is the p1 ? p that all the other N ? 1 do not send. So only then you will have a success; and probability that any node has a success is Np(1?p)N?1. (Refer slide 44)
+
+
+Slide45
+
+
+So for maximum efficiency with N nodes, we have to find a p* that maximizes Np(1 ? p)*(N ? 1).Hence this value. For many nodes, we take the limit of Np*(1 ? p*)N ? 1 as N goes to infinity and this gives a value of 1/e, which is 0.37. So this is the efficiency ? 37% is the maximum theoretical efficiency that you can achieve in slotted ALOHA. So at best, channels have useful transmissions; 37% of time, which may not look like a very high figure, but then you are absolutely uncoordinated; but if you have low load then that may be alright. (Refer slide 45)
+
+
+Slide 46.
+
+For pure or unslotted ALOHA, is simpler because there is no need for synchronization. When a frame first arrives, it is transmitted immediately. So collision probability actually increases. A frame sent at t0 collides with other frames sent in t0 ? 1 assuming that each frame takes one unit of time to send up to t0 + 1; so there is a big interval from t0 ? 1 to t0 + 1, where things may collide. (Refer slide 45)
+
+
+Slide 47
+So this will overlap. So this frame will overlap and now there is no question of any slots, so anybody can start transmitting at any point of time. (Refer slide 47)
+
+
+Slide 48
+
+What will the efficiency be like? P of success by a given  node is equal to P that the node transmits multiplied by the probability no other node transmits in [t0 ? 1, t0] ? P, a probability that no other node transmits in t0, t0 + 1. So this is p(1 ? p) N ? 1 ? (1 ? p)N ? 1 so p (1 ? p)2(N ? 1). So choosing optimum p and then letting N tend to infinity gives as an efficiency of 1/(2e) or about 18%. So this is a rather low efficiency for  transmission.  (Refer Slide 48)
+
+
+Slides 49 and 50
+When a computer network developed there were a number of  competing  LAN technologies  but today ethernet has a come to dominate a LAN almost totally excepting for the newly emerging  wireless part which we will discuss later.  So this ethernet is not only a LAN. Nowadays people are talking about ethernet in the  MAN that is metropolitan network area also. So Ethernet, as you understand is very important. So we will talk about Ethernet. It?s a dominant data link layer technology (Refer slides 49 and 50)
+
+Slide51
+
+The multiple access scheme of ethernet is CSMACD now  (Refer Slide 50)
+
+Slide 52
+
+So this minimum time is which may vary from system to system, that means a network to network. So this is how it is calculated so far. Let us see how the minimum time would comes. Suppose this is the shared bus we put two nodes at the two extreme ends. Suppose now packet starts at over here at time t equal to zero. Packet is almost reached b at time t-? , at which point of time,  it does not transmit. Suppose the propagating time of the packet for moving from one end to the other is ?, at ?- ? it has almost reached b. At that point of time b starts transmitting, because we have been finding that the bus has been very quiet. There is no signal  at end so b can start .So b starts and if there is a collision and this collision is  at one this end of the of the medium .So  the collision bus  starts transmitting back the jam signal. .So it again take s almost tau to reach .Soa so the total time is ?
+noise. So collision detection can take as long as 2 ?. ( Slide 52)

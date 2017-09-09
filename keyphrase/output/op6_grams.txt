@@ -1,0 +1,4242 @@
+peter baer galvin
+operating system concepts
+view really shows
+shows the complete
+good overall picture
+system * computer
+apps + users
+serves as interface
+apps & users
+services for apps
+distinction between system
+applications and 3rd
+party or user
+fit together figure
+modern computer system
+system 1.2.1 computer-system
+1.2.1 computer-system operation
+operation * bootstrap
+program * shared
+memory between cpu
+slicing for multi-process
+operation * interrupt
+implementation of system
+system calls figure
+single process doing
+process doing output
+output 1.2.2 storage
+1.2.2 storage structure
+structure * main
+loaded into ram
+ram to run
+run o instructions
+instructions and data
+fetched from ram
+ram into registers
+registers o ram
+ram is volatile
+medium " size
+size and speed
+memory is faster
+expensive per bit
+registers o cpu
+cache * non-volatile
+permanent " storage
+disks o magnetic
+disks o optical
+magnetic tapes figure
+1.2.3 i structure
+structure * typical
+typical operation involves
+involves i requests
+direct memory access
+interrupt handling figure
+computer system works
+kinds of computer
+environments 1.3.1 single-processor
+1.3.1 single-processor systems
+cpu which manages
+manages the computer
+computer and runs
+runs user apps
+run user apps
+apps 1.3.2 multiprocessor
+1.3.2 multiprocessor systems
+economy of scale
+shared among processors
+reliability o failure
+cpu slows system
+processing provides system
+system of checks
+checks and balances
+symmetric multiprocessing architecture
+multiprocessing architecture figure
+chip 1.3.3 clustered
+1.3.3 clustered systems
+systems * independent
+shared common storage
+storage and connected
+considerations for access
+access to shared
+storage are required
+distributed lock management
+collaboration protocols figure
+structure a time-sharing
+management * process
+management * job
+scheduling * resource
+resource allocation strategies
+strategies * swap
+memory in physical
+memory * interrupt
+handling * file
+file system management
+management * protection
+protection and security
+security * inter-process
+inter-process communications figure
+operating-system operations interrupt-driven
+operations interrupt-driven nature
+nature of modern
+modern oses requires
+requires that erroneous
+dual-mode and multimode
+operation * user
+mode when executing
+executing harmless code
+code in user
+applications * kernel
+a.k.a system mode
+executing potentially dangerous
+potentially dangerous code
+executed in kernel
+mode * kernel
+entered by making
+making system calls
+system calls user
+calls user code
+flip the mode
+switch * modern
+modern computers support
+computers support dual-mode
+support dual-mode operation
+operation in hardware
+modern oses support
+oses support dual-mode
+dual-mode operation figure
+transition from user
+user to kernel
+concept of modes
+single mode bit
+bit * cpus
+cpus that support
+virtual machine manager
+system the vmm
+privileges than ordinary
+ordinary user programs
+kernel * system
+form of software
+hardware s interrupt
+handler to transfer
+switching the mode
+bit to kernel
+process the interrupt
+interrupt handler checks
+interrupt was generated
+checks additional parameters
+passed through registers
+kernel service routine
+routine to handle
+handle the service
+call * user
+programs  attempts
+attempts to execute
+execute illegal instructions
+privileged or non-existent
+access forbidden memory
+forbidden memory areas
+generate software interrupts
+handler and control
+control is transferred
+possibly dumps data
+terminates the offending
+program 1.5.2 timer
+kernel begins executing
+begins executing user
+executing user code
+timer is set
+set to generate
+generate an interrupt
+timer interrupt handler
+interrupt handler reverts
+handler reverts control
+system * timer
+requiring kernel mode
+creating and deleting
+deleting both user
+user and system
+processes * ensuring
+processes * suspending
+suspending and resuming
+processes * process
+synchronization and communication
+communication * deadlock
+blocks of memory
+processes * determining
+determining which blocks
+blocks of code
+code and data
+data to move
+out of memory
+allocating and deallocating
+memory as needed
+management 1.8.1 file-system
+1.8.1 file-system management
+files and directories
+directories * supporting
+primitives for manipulating
+files onto secondary
+storage * backing
+backing up files
+files onto stable
+stable permanent storage
+permanent storage media
+media 1.8.2 mass-storage
+1.8.2 mass-storage management
+free disk space
+disk space management
+management * storage
+allocation * disk
+disk scheduling note
+note the trade-offs
+trade-offs regarding size
+mass storage devices
+including floppy disks
+smaller higher-speed storage
+higher-speed storage space
+storage space serves
+frequently needed portions
+portions of larger
+larger slower storage
+slower storage areas
+hierarchy of memory
+memory storage ranges
+ranges from cpu
+registers to hard
+drives and external
+responsible for determining
+determining what information
+information to store
+level of cache
+choice of cache
+impact on system
+performance * data
+drive to main
+data being written
+path each step
+fetch more data
+cache the excess
+excess in order
+order to satisfy
+satisfy future requests
+future requests faster
+faster for writing
+amounts of data
+fill an entire
+entire " block
+complicated when multiple
+worse multiple computers
+access common data
+important to ensure
+1.8.4 i systems
+i subsystem consists
+component that includes
+general device-driver interface
+interface * drivers
+drivers for specific
+specific hardware devices
+unix implements multiple
+implements multiple device
+multiple device interfaces
+types of devices
+accessing the device
+character by character
+block by block
+doing a long
+size " field
+major and minor
+minor device numbers
+major number signifies
+signifies which device
+device driver handles
+block or character
+options usually differ
+security * protection
+protection involves ensuring
+interfere with resources
+e.g " protection
+variables are misused
+security involves protecting
+protecting the system
+system from deliberate
+attempting to gain
+gain unauthorized access
+access and privileges
+external attackers attempting
+attempting to access
+access or damage
+damage the system
+kernel data structures
+structures 1.10.4 bitmaps
+collection of objects
+state of blocks
+disk or pages
+pages in memory
+environments 1.11.1 traditional
+1.11.1 traditional computing
+computing 1.11.2 mobile
+1.11.2 mobile computing
+computing * computing
+computing on small
+small handheld devices
+phones or tablets
+opposed to laptops
+fall under traditional
+advantage of additional
+additional built-in sensors
+internet using wireless
+cellular telephone technology
+technology * limited
+limited in storage
+computing power relative
+generally uses slower
+consume less battery
+power and produce
+produce less heat
+two dominant oses
+dominant oses today
+today are google
+android and apple
+ios 1.11.3 distributed
+1.11.3 distributed systems
+systems * distributed
+distributed systems consist
+consist of multiple
+network and cooperating
+fashion * networks
+networks may range
+range from small
+small tight lans
+lans to broad
+broad reaching wans
+wans o wan
+wan = wide
+wide area network
+corporation o man
+man = metropolitan
+metropolitan area network
+covering a region
+region the size
+lan = local
+local area network
+campus o pan
+pan = personal
+personal area network
+network access speeds
+network may range
+form of file
+access to complex
+complex well-coordinated network
+well-coordinated network operating
+network operating systems
+systems * shared
+resources may include
+resources 1.11.4 client-server
+1.11.4 client-server computing
+server provides services
+systems which serve
+serve as clients
+clients and servers
+servers are processes
+process may act
+client and server
+resources * served
+include disk space
+system 1.11.5 peer-to-peer
+1.11.5 peer-to-peer computing
+computer or process
+network may provide
+clear " leader
+employ a central
+central " directory
+directory " server
+location of resources
+searching to find
+resources * e.g
+server to locate
+locate a desired
+communication is peer
+peer to peer
+service 1.11.6 virtualization
+guest " operating
+systems to run
+run on virtual
+virtual machines hosted
+single physical machine
+development and support
+student could run
+windows based personal
+based personal computer
+computer the student
+full root access
+underlying windows machine
+unaffected * system
+vmm and translated
+system calls made
+virtualization can slow
+slow down program
+things if virtual
+device * depending
+bypassing the virtual
+virtual machines figure
+system using vmware
+follow these steps
+download the free
+free " vmware
+player " tool
+tool from http
+choose a linux
+hundreds of virtual
+virtual machine images
+images at http
+boot the virtual
+machine within vmware
+player 1.11.7 cloud
+1.11.7 cloud computing
+computing * delivers
+network * types
+types of cloud
+service o private
+company for internal
+public and private
+components o software
+internet o platform
+server o infrastructure
+servers or storage
+storage o service
+providers may provide
+type of service
+service * clouds
+thousands of physical
+millions of virtual
+petabytes of total
+storage * web
+web hosting services
+services may offer
+computing 1.11.8 real-time
+1.11.8 real-time embedded
+real-time embedded systems
+systems * embedded
+embedded into devices
+climate control systems
+toasters and refrigerators
+involve specialized chips
+generic cpus applied
+simple electronic devices
+process control devices
+control devices require
+devices require real-time
+open-source operating systems
+flourish conference held
+held at uic
+subject of free
+libre and open
+open source software
+software is published
+modify the code
+code * open-source
+developed and maintained
+connected often unpaid
+good * critics
+argue that open-source
+counter that bugs
+bugs are found
+found and fixed
+pairs of eyes
+resource for studying
+studying os development
+students can examine
+examine the source
+lot of code
+code was open-source
+protect the privacy
+copyright protection algorithms
+richard stallman started
+started the gnu
+project to produce
+produce an open-source
+published the gnu
+founded the free
+free software foundation
+foundation to promote
+promote open-source development
+development * fsf
+fsf and gnu
+gnu general public
+general public license
+software have full
+rights to copy
+copy and change
+linux * developed
+developed by linus
+torvalds in finland
+first full operating
+full operating system
+operating system developed
+developed by gnu
+distributions of linux
+linux have evolved
+evolved from linus
+linus s original
+group of end-users
+end-users and operating
+player 1.12.3 bsd
+1.12.3 bsd unix
+unix * unix
+developed at att
+att bell labs
+source code made
+computer science students
+including the university
+university of california
+california at berkeley
+ucb * ucb
+ucb students developed
+students developed unix
+released their product
+product as bsd
+binary and source-code
+format * bsd
+needed from att
+versions of bsd
+including free bsd
+code is located
+mac operating system
+system is darwin
+derived from bsd
+solaris * solaris
+unix operating system
+system for computers
+computers from sun
+microsystems * solaris
+based on bsd
+migrated to att
+basis * parts
+parts of solaris
+covered by att
+change the open-source
+components of solaris
+portions of solaris
+solaris * open
+source code online
+download and unpack
+unpack the entire
+package 1.13.5 utility
+free software movement
+movement is gaining
+rapidly in popularity
+leading to thousands
+thousands of ongoing
+ongoing projects involving
+projects involving untold
+involving untold numbers
+numbers of programmers
+programmers * sites
+summary operating-system structures
+operating-system structures references
+systems are structured
+structured and organized
+organized different design
+issues and choices
+choices are examined
+examined and compared
+oses are presented
+operating-system services figure
+view of operating
+operating system services
+system services oses
+services oses provide
+oses provide environments
+users can issue
+batch command systems
+generally older systems
+systems using punch
+cards of job-control
+today for specialty
+specialty systems designed
+purpose * program
+load a program
+program into ram
+run the program
+terminate the program
+responsible for transferring
+devices * file-system
+addition to raw
+raw data storage
+responsible for maintaining
+directory and subdirectory
+mapping file names
+names to specific
+blocks of data
+tools for navigating
+navigating and utilizing
+utilizing the file
+system * communications
+running on separate
+processors or separate
+memory or message
+systems may offer
+hardware and software
+detected and handled
+minimum of harmful
+repercussions some systems
+systems may include
+include complex error
+complex error avoidance
+avoidance or recovery
+redundant systems debugging
+debugging and diagnostic
+diagnostic tools aid
+tools aid users
+users and administrators
+administrators in tracing
+problems other systems
+e.g cpu cycles
+devices some resources
+resources are managed
+managed with generic
+specially tuned systems
+resource and operating
+environment * accounting
+track of system
+activity and resource
+statistical record keeping
+optimize future performance
+performance * protection
+wayward internal processes
+processes or malicious
+malicious outsiders authentication
+access are obvious
+system highly secure
+highly secure systems
+systems may log
+log all process
+security regulation dictate
+dictate the storage
+records on permanent
+permanent non-erasable medium
+medium for extended
+times in secure
+user operating-system interface
+interface 2.2.1 command
+2.2.1 command interpreter
+launches the requested
+program that launches
+accesses the system
+system * unix
+configured to launch
+automatically at login
+file of initial
+settings and commands
+executed upon startup
+provide different functionality
+shell without launching
+launching any external
+programs most provide
+rudimentary command interpretation
+command interpretation structure
+shell script programming
+processing of wild
+wild card file
+card file naming
+re-direction on unix
+systems those details
+details are handled
+list of filenames
+cards are passed
+interpret the wild
+program sees fit
+sees fit figure
+bourne shell command
+shell command interpreter
+interpreter in solaris
+2.2.2 graphical user
+graphical user interface
+icons * icons
+represent some item
+icon is activated
+xerox parc research
+parc research facility
+systems the gui
+end for activating
+activating a traditional
+traditional command line
+command line interpreter
+line interpreter running
+true graphical shell
+right * mac
+advent of osx
+partially on unix
+command line interface
+mice and keyboards
+keyboards are impractical
+impractical for small
+small mobile devices
+touch-screen interface today
+patterns of swipes
+today a virtual
+touch screen figure
+touchscreen 2.2.3 choice
+choice of interface
+systems allow individual
+users to select
+select their desired
+customize its operation
+ability to switch
+interfaces as needed
+needed system administrators
+administrators generally determine
+determine which interface
+interface a user
+interfaces usually provide
+provide an option
+terminal emulator window
+window for entering
+entering command-line commands
+commands * command-line
+entered into shell
+calls * system
+system calls provide
+provide a means
+means for user
+user or application
+programs to call
+assembly for optimal
+performance * figure
+illustrates the sequence
+sequence of system
+system calls required
+required to copy
+copy a file
+number of system
+system calls invoked
+single simple command
+simple command read
+read the man
+page for strace
+strace mkdir temp
+strace cd temp
+date > t.t
+strace cp t.t
+low-level system calls
+application programming interface
+shows the read
+api on unix
+unix based systems
+direct system calls
+greater program portability
+systems the api
+api then makes
+system call interface
+lookup to access
+access specific numbered
+specific numbered system
+numbered system calls
+shown in figure
+user application invoking
+invoking the open
+call * parameters
+passed to system
+calls via registers
+stack large blocks
+memory address passed
+passing of parameters
+types of system
+calls six major
+outlined in figure
+standard library calls
+generate system calls
+2.4.1 process control
+control * process
+process control system
+control system calls
+system calls include
+calls include end
+allocate and free
+memory * processes
+resumed,and eventually stopped
+pauses or stops
+launched or resumed
+provide core dumps
+diagnostic or recovery
+tools * compare
+process is launched
+launched in dos
+interpreter first unloads
+free up memory
+loads the process
+process and transfers
+process has completed
+running a program
+command interpreter remains
+remains completely resident
+resident when executing
+executing a process
+user can switch
+place the running
+interpreter first executes
+fork " system
+original command interpreter
+interpreter the original
+process then executes
+exec " system
+replaces its code
+child to complete
+complete before issuing
+process to complete
+freebsd running multiple
+running multiple programs
+programs 2.4.2 file
+2.4.2 file management
+management * file
+file management system
+management system calls
+calls include create
+include create file
+set file attributes
+supported for directories
+actual directory structure
+implemented using ordinary
+means further details
+covered in chapters
+2.4.3 device management
+management * device
+device management system
+calls include request
+include request device
+devices * devices
+e.g disk drives
+systems represent devices
+devices as special
+file " calls
+system 2.4.4 information
+2.4.4 information maintenance
+maintenance * information
+information maintenance system
+maintenance system calls
+calls include calls
+attributes * systems
+provide the ability
+ability to dump
+single step programs
+step programs pausing
+programs pausing execution
+tracing the operation
+operation of programs
+programs 2.4.5 communication
+communication * communication
+communication system calls
+calls create communication
+transfer status information
+message passing model
+model must support
+identify a remote
+process and host
+communicate o establish
+establish a connection
+processes o open
+open and close
+close the connection
+connection as needed
+needed o transmit
+connection o wait
+wait for incoming
+blocking or non-blocking
+state o delete
+delete the connection
+shared memory model
+create and access
+shared amongst processes
+provide locking mechanisms
+locking mechanisms restricting
+mechanisms restricting simultaneous
+restricting simultaneous access
+access o free
+free up shared
+and dynamically allocate
+needed * message
+passing is simpler
+simpler and easier
+data * shared
+approach where large
+processes are reading
+reading the data
+number of processes
+protection * protection
+protection provides mechanisms
+mechanisms for controlling
+controlling which users
+processes have access
+resources * system
+adjusted as needed
+granted elevated access
+elevated access permissions
+carefully controlled temporary
+controlled temporary circumstances
+concern on multi-user
+age of ubiquitous
+ubiquitous network connectivity
+programs * system
+system programs provide
+provide os functionality
+functionality through separate
+kernel or command
+utilities or system
+systems also ship
+calculators and simple
+border between system
+system and non-system
+applications * system
+programs to create
+generally manipulate files
+directories o status
+utilities to check
+number of users
+store and recall
+recall configuration information
+applications o file
+e.g text editors
+change file contents
+contents o programming-language
+library archive management
+interpreters for common
+support for make
+make o program
+loading and execution
+debuggers o communications
+programs for providing
+connectivity between processes
+processes and users
+remote command execution
+execution o background
+system is booted
+system is running
+handling necessary services
+services examples include
+examples include network
+include network daemons
+system error monitoring
+error monitoring services
+operating systems today
+set of application
+programs to provide
+provide additional services
+files or checking
+users  views
+system is determined
+make system calls
+exception of simple
+design and implementation
+implementation 2.6.1 design
+2.6.1 design goals
+goals * requirements
+requirements define properties
+step in designing
+designing any large
+large complex system
+system o user
+requirements are features
+features that users
+commonly understood vernacular
+include any implementation
+box o system
+requirements are written
+include more details
+details about implementation
+developers and subcontractors
+detailed * requirements
+requirements for operating
+systems can vary
+vary greatly depending
+scope and usage
+mechanisms and policies
+policies * policies
+done mechanisms determine
+separated and implemented
+adjusted without re-writing
+re-writing the code
+loading new data
+priority of background
+background versus foreground
+versus foreground tasks
+tasks 2.6.3 implementation
+oses were written
+language this provided
+provided direct control
+control over hardware-related
+platform * recent
+advances in compiler
+oses are written
+sections of code
+fine-tuned and optimized
+optimized by hand
+developed using emulators
+hardware is unavailable
+e.g not built
+platform for development
+e.g smart phones
+structure for efficient
+performance and implementation
+partitioned into separate
+carefully defined tasks
+characteristics these subsystems
+2.7.1 simple structure
+structure when dos
+written its developers
+idea how big
+big and important
+benefit of modern
+modern software engineering
+software engineering techniques
+exceed its original
+break the system
+system into subsystems
+distinction between user
+user and kernel
+allowing all programs
+programs direct access
+note that user
+user versus kernel
+versus kernel mode
+nt an option
+ms-dos layer structure
+structure the original
+simple layered approach
+traditional unix system
+unix system structure
+structure 2.7.2 layered
+2.7.2 layered approach
+number of smaller
+developed and debugged
+trusted to deliver
+deliver proper services
+problem is deciding
+deciding what order
+place the layers
+layer can call
+situations may arise
+arise * layered
+request for service
+possibly with significant
+layered operating system
+system 2.7.3 microkernels
+idea behind micro
+remove all non-essential
+making the kernel
+kernel as small
+small and efficient
+microkernels provide basic
+provide basic process
+process and memory
+security and protection
+services are performed
+performed in user
+mode * system
+adding more system
+kernel * mach
+widely known microkernel
+forms a major
+component of mac
+osx * windows
+suffered from performance
+performance problems relative
+relative to windows
+performance by moving
+moving more services
+embedded systems figure
+microkernel 2.7.4 modules
+modules * modern
+modern os development
+development is object-oriented
+small core kernel
+set of modules
+linked in dynamically
+modules are similar
+similar to layers
+tasks and interfaces
+module is free
+free to contact
+eliminating the problems
+multiple intermediary layers
+similar to microkernels
+implement message passing
+passing since modules
+modules are free
+solaris loadable modules
+modules 2.7.5 hybrid
+2.7.5 hybrid systems
+max osx architecture
+osx architecture relies
+microkernel for basic
+basic system management
+system management services
+kernel for additional
+additional services application
+services application services
+dynamically loadable modules
+provide the rest
+structure 2.7.5.2 ios
+ios operating system
+system was developed
+developed by apple
+apple for iphones
+iphones and ipads
+ipads it runs
+memory and computing
+supports touchscreen interface
+interface and graphics
+graphics for small
+architecture of apple
+apple s ios
+ios 2.7.5.3 android
+developed for android
+smartphones and tablets
+open handset alliance
+google * android
+opposed to ios
+popularity * android
+android includes versions
+versions of linux
+java virtual machine
+machine both optimized
+optimized for small
+platforms * android
+apps are developed
+special java-for-android development
+java-for-android development environment
+development environment figure
+architecture of google
+google s android
+kernighan s law
+law " debugging
+hard as writing
+writing the code
+write the code
+debugging here includes
+includes both error
+discovery and elimination
+elimination and performance
+tuning 2.8.1 failure
+2.8.1 failure analysis
+analysis * debuggers
+debuggers allow processes
+examination of variables
+variables and expressions
+progresses * profilers
+profilers can document
+document program execution
+lines of code
+ordinary process crashes
+process s memory
+compiled to include
+include debugging information
+nt really work
+performance hit caused
+caused by adding
+adding the debugging
+run in kernel
+make direct access
+kernel s file-access
+file-access or direct
+direct disk-access routines
+write a crash
+kernel crash dump
+special unallocated portion
+purpose 2.8.2 performance
+2.8.2 performance tuning
+tuning * performance
+requires monitoring system
+monitoring system performance
+system to record
+record important events
+events into log
+tools these traces
+proposed new system
+system would perform
+report system status
+status upon demand
+unix " top
+top " command
+utilities may provide
+provide monitoring support
+monitoring support figure
+windows task manager
+manager 2.8.3 dtrace
+dtrace * dtrace
+facility for tracing
+tracing a running
+developed for solaris
+adds " probes
+probes are removed
+ioctl system call
+call as shown
+kernel * probe
+code is restricted
+e.g no loops
+minimum of system
+enabling control blocks
+consumer are removed
+ecbs remain interested
+monitors the cpu
+running with user
+output is shown
+dtrace is restricted
+ability to change
+critical kernel data
+dtrace is open-source
+busy producing similar
+producing similar utilities
+generation * oses
+designed and built
+specific hw configuration
+number of variable
+parameters and components
+environment * systems
+add additional resources
+security * information
+needed to configure
+ram is installed
+install or boot
+devices are present
+determine which device
+drivers to include
+characteristics and parameters
+options are desired
+values to set
+include the size
+open file table
+number of buffers
+disk scheduling algorithms
+number of slots
+commonly configuration tables
+configuration tables determine
+determine which modules
+modules to link
+key important parameters
+parameters this approach
+approach may require
+require the configuration
+configuration of complicated
+interactive configuration programs
+extreme a system
+defined by table
+system merely requires
+requires editing data
+editing data tables
+required to reboot
+reboot the system
+system to activate
+possibilities for errors
+provide some mechanism
+mechanism for booting
+booting to older
+older or alternate
+boot the general
+interrupt is generated
+generated which loads
+loads a memory
+system begins executing
+begins executing instructions
+executing instructions found
+address this address
+bootstrap " program
+located in rom
+rom bootstrap program
+program first runs
+first runs hardware
+runs hardware checks
+determining what physical
+resources are present
+present and doing
+power-on self tests
+applicable some devices
+option of pressing
+pressing a special
+launch the rom
+rom bios configuration
+bios configuration utility
+utility if pressed
+pressed this utility
+configure certain hardware
+access to additional
+additional configuration setup
+configuration setup programs
+raid disk controller
+graphics or networking
+cards * assuming
+assuming the utility
+non-volatile storage device
+depending on configuration
+primary or secondary
+secondary hard drives
+utility * assuming
+find the first
+drive and load
+physical hard drive
+drive is divided
+starts and ends
+active " partition
+booting the system
+amount of system
+first disk block
+block not occupied
+table this bootstrap
+i.e the first
+generally this code
+access the hard
+load and execute
+larger boot program
+boot program loaded
+proceed to locate
+locate the kernel
+load the kernel
+kernel into memory
+system has multiple
+systems may boot
+boot different configurations
+found in earlier
+dual-boot or multiple-boot
+program will give
+give the user
+user an opportunity
+frame the boot
+program then finds
+finds the boot
+runs that program
+program as described
+previous bullet point
+kernel is running
+user the opportunity
+opportunity to enter
+enter into single-user
+mode this mode
+enable any logins
+console this mode
+primarily for system
+maintenance and diagnostics
+system enters full
+enters full multi-user
+full multi-user multi-tasking
+multi-user multi-tasking mode
+examines configuration files
+files to determine
+determine which system
+spawns login programs
+configured to enable
+enable user logins
+getty program initializes
+program initializes terminal
+issues the login
+accepts login names
+names and passwords
+authenticates the user
+user s password
+password is authenticated
+determine what shell
+shell is assigned
+user s shell
+shell the shell
+system and user
+user configuration files
+files to initialize
+prompts for user
+system will issue
+provide an interface
+multiple different oses
+development and testing
+testing of software
+run on multiple
+platforms and oses
+obvious difficulty involves
+involves the sharing
+sharing of hard
+separate smaller virtual
+smaller virtual disks
+operating os figure
+machine 2.8.1 history
+history * virtual
+machines first appeared
+system for ibm
+sharing of physical
+machines were networked
+user full access
+affecting other users
+operating the real
+platforms 2.8.3 simulation
+alternative to creating
+creating an entire
+entire virtual machine
+run an emulator
+machine may run
+run a dos
+emulator in order
+order to run
+run dos programs
+vice-versa * emulators
+tend to run
+run considerably slower
+perfect 2.8.4 para-virtualization
+para-virtualization * para-virtualization
+environment is provided
+modified to run
+processes and resources
+exist o figure
+shows a solaris
+normal " global
+global " operating
+two additional zones
+additional zones running
+small virtualization layer
+virtualization layer figure
+zones 2.8.5 implementation
+implementation * implementation
+consequences of user
+simultaneously running kernels
+operate in kernel
+machine actually runs
+runs in user
+kernel system calls
+system calls passed
+true kernel mode
+mode for eventual
+eventual hw access
+machines may run
+levels of code
+code between applications
+benefits of caching
+faster than real
+faster than physical
+examples 2.8.6.1 vmware
+vmware * abstracts
+80x86 hardware platform
+allowing simultaneous operation
+operation of multiple
+windows and linux
+vmware workstation architecture
+2.8.6.2 the java
+machine * java
+java was designed
+developed for numerous
+numerous different underlying
+underlying hw platforms
+platforms * java
+java source code
+code is compiled
+compiled into java
+java byte code
+code in .class
+.class files java
+files java byte
+code is binary
+jvm implements memory
+implements memory management
+management and garbage
+collection * java
+compiled to native
+native system binary
+system binary code
+code using just-in-time
+piece of java
+code is encountered
+native machine binary
+machine binary code
+interpreter this native
+native binary code
+piece of code
+developed to run
+run java byte
+machine being developed
+developed to emulate
+emulate the services
+framework also relies
+concept of compiling
+intermediary virtual machine
+common language runtime
+compilation and caching
+caching to run
+run the programs
+programs on specific
+introduction references
+abraham silberschatz
+greg gagne
+peter baer
+baer galvin
+operating system
+system concepts
+ninth edition
+blind men
+operating systems
+complete picture
+abstract view
+computer system
+manages resources
+government model
+vendor ships
+system applications
+3rd party
+user apps
+computer-system organization
+modern computer
+computer-system operation
+bootstrap program
+shared memory
+multi-process operation
+interrupt handling
+system calls
+calls figure
+interrupt timeline
+single process
+process doing
+doing output
+storage structure
+main memory
+data fetched
+cpu cache
+non-volatile memory
+electronic disks
+magnetic disks
+optical disks
+magnetic tapes
+tapes figure
+storage-device hierarchy
+typical operation
+operation involves
+direct memory
+memory access
+handling figure
+system works
+computer-system architecture
+computer environments
+single-processor systems
+main cpu
+runs user
+specialized processors
+disk controllers
+run user
+multiprocessor systems
+increased throughput
+faster execution
+linear speedup
+increased reliability
+cpu slows
+slows system
+redundant processing
+e.g nasa
+symmetric multiprocessing
+multiprocessing architecture
+architecture figure
+dual-core design
+clustered systems
+independent systems
+shared common
+common storage
+high-speed lan
+special considerations
+shared storage
+distributed lock
+lock management
+collaboration protocols
+protocols figure
+general structure
+clustered system
+operating-system structure
+multi-user multi-tasking
+memory management
+process management
+resource allocation
+allocation strategies
+swap space
+virtual memory
+physical memory
+file system
+system management
+inter-process communications
+communications figure
+multiprogramming system
+operating-system operations
+interrupt-driven nature
+modern oses
+oses requires
+erroneous processes
+multimode operation
+user mode
+executing harmless
+harmless code
+user applications
+kernel mode
+a.k.a system
+system mode
+supervisor mode
+privileged mode
+dangerous code
+system kernel
+machine instructions
+privileged instructions
+making system
+calls user
+user code
+mode switch
+modern computers
+computers support
+dual-mode operation
+oses support
+support dual-mode
+operation figure
+single mode
+mode bit
+support virtualization
+extra bits
+virtual machine
+machine manager
+ordinary user
+user programs
+full kernel
+software interrupts
+interrupt handler
+transfer control
+handler checks
+additional parameters
+kernel service
+service routine
+service requested
+system call
+illegal instructions
+non-existent instructions
+access forbidden
+forbidden memory
+memory areas
+generate software
+error message
+dumps data
+offending program
+kernel begins
+executing user
+timer interrupt
+handler reverts
+reverts control
+user process
+timer control
+privileged instruction
+requiring kernel
+system processes
+process receives
+resuming processes
+process synchronization
+deadlock handling
+keeping track
+deallocating memory
+storage management
+file-system management
+filesystem management
+deleting files
+supporting primitives
+manipulating files
+mapping files
+secondary storage
+stable permanent
+permanent storage
+storage media
+mass-storage management
+free disk
+disk space
+space management
+storage allocation
+scheduling note
+mass storage
+storage devices
+including floppy
+floppy disks
+hard disks
+tape drives
+smaller higher-speed
+higher-speed storage
+storage space
+space serves
+temporary storage
+needed portions
+larger slower
+slower storage
+storage areas
+memory storage
+storage ranges
+cpu registers
+hard drives
+external storage
+transfer data
+proper choice
+cache management
+profound impact
+system performance
+data read
+migration path
+hard drive
+reverse path
+future requests
+requests faster
+small amounts
+output device
+multiple processes
+worse multiple
+multiple computers
+common data
+access reaches
+up-to-date copy
+cached data
+subsystem consists
+memory-management component
+general device-driver
+device-driver interface
+specific hardware
+hardware devices
+unix implements
+implements multiple
+multiple device
+device interfaces
+device character
+device block
+long listing
+first position
+minor device
+device numbers
+major number
+number signifies
+device driver
+driver handles
+minor number
+parameter passed
+specific device
+character device
+minor numbers
+single bit
+protection involves
+involves ensuring
+process access
+protection faults
+pointer variables
+security involves
+involves protecting
+deliberate attacks
+legitimate users
+system attempting
+unauthorized access
+external attackers
+attackers attempting
+kernel data
+data structures
+boolean state
+free state
+computing environments
+traditional computing
+mobile computing
+small handheld
+handheld devices
+smart phones
+additional built-in
+built-in sensors
+inertial movement
+wireless networking
+cellular telephone
+telephone technology
+storage capacity
+memory capacity
+computing power
+slower processors
+battery power
+dominant oses
+oses today
+google android
+apple ios
+distributed systems
+systems consist
+computers connected
+small tight
+tight lans
+broad reaching
+reaching wans
+wide area
+area network
+international corporation
+metropolitan area
+local area
+single-site corporation
+university campus
+personal area
+bluetooth connection
+network access
+access speeds
+important issues
+special form
+file access
+complex well-coordinated
+well-coordinated network
+network operating
+shared resources
+include files
+cpu cycles
+client-server computing
+defined server
+physical computer
+served resources
+include disk
+graphical displays
+resources figure
+client-server system
+peer-to-peer computing
+provide services
+peer-to-peer searching
+find resources
+e.g skype
+central server
+desired peer
+peer figure
+peer-to-peer system
+centralized service
+virtual machines
+machines hosted
+single physical
+physical machine
+cross-platform development
+run unix
+windows based
+personal computer
+full root
+root access
+underlying windows
+windows machine
+real underlying
+virtual hardware
+physical device
+machines figure
+run linux
+windows system
+vmware player
+linux version
+machine images
+cloud computing
+delivers computing
+public cloud
+private cloud
+hybrid cloud
+private components
+word processors
+software stack
+database server
+backup servers
+photo storage
+file storage
+service providers
+physical computers
+total storage
+hosting services
+clients figure
+real-time embedded
+embedded systems
+climate control
+control systems
+process control
+specialized chips
+generic cpus
+cpus applied
+current price
+plenty powerful
+simple electronic
+electronic devices
+kids toys
+control devices
+devices require
+oses response
+open-source operating
+flourish conference
+conference held
+free libre
+open source
+source software
+visit http
+open-source software
+source code
+small army
+unpaid programmers
+common good
+critics argue
+proponents counter
+eyes inspecting
+good resource
+sensitive issues
+copyright protection
+protection algorithms
+richard stallman
+stallman started
+gnu project
+open-source unix
+gnu manifesto
+free software
+software foundation
+open-source development
+gnu general
+public license
+full rights
+license agreement
+linus torvalds
+first full
+full operating
+system developed
+including redhat
+operating environments
+bsd unix
+att bell
+bell labs
+code made
+computer science
+science students
+ucb students
+students developed
+developed unix
+source-code format
+free bsd
+mac operating
+unix operating
+sun microsystems
+att systemv
+att copyrights
+open-source components
+binary libraries
+copyrighted portions
+open solaris
+code online
+entire package
+software movement
+ongoing projects
+projects involving
+involving untold
+untold numbers
+provide portals
+summary operating-system
+operating-system structures
+structures references
+chapter deals
+design issues
+basic structure
+popular oses
+operating-system services
+services figure
+system services
+services oses
+oses provide
+provide environments
+programs run
+user interfaces
+issue commands
+system depending
+command-line interface
+gui interface
+e.g windows
+batch command
+command systems
+older systems
+punch cards
+job-control language
+specialty systems
+systems designed
+single purpose
+program execution
+transferring data
+including keyboards
+file-system manipulation
+raw data
+data storage
+maintaining directory
+subdirectory structures
+mapping file
+file names
+specific blocks
+providing tools
+processes running
+separate processors
+separate machines
+message passing
+error detection
+software errors
+harmful repercussions
+include complex
+complex error
+error avoidance
+recovery systems
+including backups
+raid drives
+redundant systems
+systems debugging
+diagnostic tools
+tools aid
+aid users
+systems aid
+efficient operation
+e.g cpu
+peripheral devices
+generic systems
+tuned systems
+operating environment
+system activity
+resource usage
+billing purposes
+statistical record
+record keeping
+future performance
+preventing harm
+internal processes
+malicious outsiders
+outsiders authentication
+restricted access
+obvious parts
+highly secure
+secure systems
+process activity
+excruciating detail
+security regulation
+regulation dictate
+non-erasable medium
+extended times
+user operating-system
+operating-system interface
+command interpreter
+user request
+requested programs
+separate program
+user logs
+configuration file
+initial settings
+shells provide
+external programs
+rudimentary command
+command interpretation
+interpretation structure
+shell script
+script programming
+decision constructs
+interesting distinction
+wild card
+card file
+file naming
+unix systems
+launched sees
+filenames generated
+wild cards
+dos system
+program sees
+sees fit
+fit figure
+bourne shell
+shell command
+graphical user
+user interface
+desktop metaphor
+file folders
+trash cans
+resource icons
+icons represent
+xerox parc
+parc research
+research facility
+front end
+traditional command
+command line
+line interpreter
+interpreter running
+true graphical
+graphical shell
+line interface
+small mobile
+mobile devices
+touch-screen interface
+interface today
+physical keyboard
+kind built
+virtual keyboard
+touch screen
+screen figure
+ipad touchscreen
+modern systems
+individual users
+desired interface
+needed system
+system administrators
+user starts
+gui interfaces
+terminal emulator
+emulator window
+command-line commands
+shell scripts
+programs figure
+calls provide
+application programs
+optimal performance
+calls required
+large number
+calls invoked
+single simple
+simple command
+command read
+man page
+simple examples
+strace mkdir
+mkdir temp
+strace date
+low-level system
+application programming
+programming interface
+sidebar shows
+unix based
+based systems
+direct system
+greater program
+program portability
+call interface
+table lookup
+access specific
+specific numbered
+numbered system
+user application
+application invoking
+values pushed
+large blocks
+memory address
+address passed
+major categories
+sixth type
+library calls
+generate system
+control system
+calls include
+include end
+create process
+terminate process
+process attributes
+signal event
+free memory
+eventually stopped
+process pauses
+processes stop
+core dumps
+recovery tools
+compare dos
+single-tasking system
+multi-tasking system
+transfers control
+ms-dos execution
+system startup
+interpreter remains
+completely resident
+running process
+background process
+exact duplicate
+original command
+original process
+cloned process
+unique process
+child process
+desired process
+command prompt
+freebsd running
+running multiple
+multiple programs
+file management
+management system
+include create
+create file
+delete file
+file attributes
+ordinary files
+actual directory
+directory structure
+device management
+include request
+request device
+release device
+device attributes
+e.g disk
+disk drives
+e.g files
+ram disks
+systems represent
+represent devices
+special files
+device drivers
+unix system
+information maintenance
+maintenance system
+include calls
+system data
+dump memory
+single step
+step programs
+programs pausing
+pausing execution
+debug programs
+communication system
+communication connection
+transfer status
+status information
+remote devices
+passing model
+support calls
+remote process
+transmit messages
+incoming messages
+non-blocking state
+longer needed
+memory model
+access memory
+locking mechanisms
+mechanisms restricting
+simultaneous access
+inter-computer communications
+large amounts
+small number
+data item
+system resources
+access mechanisms
+non-priveleged users
+elevated access
+access permissions
+controlled temporary
+temporary circumstances
+multi-user systems
+ubiquitous network
+network connectivity
+system programs
+programs provide
+separate applications
+command interpreters
+system utilities
+simple editors
+e.g notepad
+debate arises
+non-system applications
+manipulate files
+data logging
+system registries
+recall configuration
+configuration information
+file modification
+e.g text
+text editors
+file contents
+programming-language support
+e.g compilers
+library archive
+archive management
+common languages
+program loading
+dynamic loaders
+overlay loaders
+interactive debuggers
+providing connectivity
+including mail
+web browsers
+remote logins
+file transfers
+remote command
+command execution
+background services
+system daemons
+services examples
+examples include
+include network
+network daemons
+print servers
+process schedulers
+system error
+error monitoring
+monitoring services
+systems today
+additional services
+copying files
+make system
+user-written programs
+operating-system design
+design goals
+requirements define
+define properties
+finished system
+first step
+large complex
+complex system
+user requirements
+users care
+commonly understood
+understood vernacular
+implementation details
+product description
+sales brochure
+shrink-wrapped box
+system requirements
+implementation specifics
+performance requirements
+compatibility constraints
+standards compliance
+requirements serve
+planned scope
+single user
+specialized system
+general purpose
+policies determine
+done mechanisms
+mechanisms determine
+adjusting parameters
+configuration files
+relative priority
+background versus
+versus foreground
+foreground tasks
+assembly language
+direct control
+hardware-related issues
+recent advances
+compiler efficiencies
+critical sections
+target hardware
+real hardware
+suitable platform
+e.g smart
+game consoles
+similar devices
+efficient performance
+separate subsystems
+defined tasks
+performance characteristics
+architectural configurations
+simple structure
+short amount
+modern software
+software engineering
+engineering techniques
+original expectations
+kernel modes
+programs direct
+direct access
+underlying hardware
+user versus
+versus kernel
+chip set
+ms-dos layer
+layer structure
+original unix
+layered approach
+big layer
+layered subsystems
+traditional unix
+system structure
+smaller layers
+services provided
+lower layer
+lower layers
+proper services
+higher layer
+chicken-and-egg situations
+layered approaches
+significant processing
+step figure
+layered operating
+basic idea
+micro kernels
+non-essential services
+microkernels provide
+basic process
+system expansion
+major component
+mac osx
+performance problems
+improved performance
+systems figure
+typical microkernel
+small core
+core kernel
+solaris structure
+multiple intermediary
+intermediary layers
+chicken-and-egg problems
+implement message
+directly figure
+loadable modules
+hybrid systems
+max osx
+osx architecture
+architecture relies
+mach microkernel
+basic system
+management services
+bsd kernel
+services application
+application services
+kernel extensions
+ios operating
+touchscreen interface
+small screens
+android smartphones
+open handset
+handset alliance
+primarily google
+android includes
+includes versions
+small platforms
+android apps
+special java-for-android
+java-for-android development
+development environment
+environment figure
+operating-system debugging
+first place
+error discovery
+performance tuning
+failure analysis
+executed stepwise
+execution progresses
+document program
+produce statistics
+ordinary process
+process crashes
+memory dump
+disk file
+include debugging
+debugging information
+performance hit
+work done
+error occurred
+direct disk-access
+disk-access routines
+crash dump
+ordinary file
+kernel crash
+unallocated portion
+disk reserved
+requires monitoring
+monitoring system
+important events
+log files
+provide utilities
+report system
+system status
+provide monitoring
+monitoring support
+support figure
+windows task
+task manager
+special facility
+dtrace adds
+probe consumers
+dtrace facility
+proportional impact
+ioctl system
+probe code
+loops allowed
+probe fires
+enabling control
+control blocks
+if-then block
+consumer terminates
+ecbs remain
+code monitors
+process running
+on-cpu uid
+off-cpu self
+critical kernel
+similar utilities
+operating-system generation
+specific site
+variable parameters
+initial installation
+additional resources
+tune performance
+optional characteristics
+device-specific characteristics
+open file
+file table
+process scheduling
+disk scheduling
+scheduling algorithms
+process table
+commonly configuration
+configuration tables
+tables determine
+key important
+important parameters
+complicated makefiles
+interactive configuration
+configuration programs
+system configuration
+table data
+editing data
+data tables
+systems provide
+alternate kernels
+system boot
+general approach
+system powers
+program counter
+system begins
+executing instructions
+instructions found
+address points
+program located
+rom chips
+eprom chips
+rom bootstrap
+runs hardware
+hardware checks
+physical resources
+controller cards
+on-board diagnostics
+special key
+post process
+rom bios
+bios configuration
+configuration utility
+hardware parameters
+restrict access
+provide access
+additional configuration
+configuration setup
+setup programs
+raid disk
+disk controller
+special graphics
+networking cards
+non-volatile storage
+storage device
+floppy drive
+secondary hard
+first sector
+fdisk table
+physical hard
+logical partitions
+partition starts
+small amount
+system code
+first disk
+disk block
+bootstrap code
+first part
+larger boot
+boot program
+single-boot system
+program loaded
+hard disk
+multiple kernels
+earlier steps
+multiple-boot systems
+default choice
+boot loader
+chosen single-boot
+previous bullet
+bullet point
+single-user mode
+maintenance mode
+mode launches
+primary log
+system maintenance
+system enters
+full multi-user
+multi-tasking mode
+examines configuration
+spawns login
+login programs
+login devices
+enable user
+user logins
+getty program
+program initializes
+login prompt
+accepts login
+login names
+system files
+shell program
+user configuration
+issue prompts
+user commands
+shell dies
+terminal device
+9th edition
+independent hardware
+oses running
+physical hardware
+multiple platforms
+obvious difficulty
+difficulty involves
+separate smaller
+virtual disks
+system models
+nonvirtual machine
+ibm mainframes
+offering protection
+security benefits
+full access
+users operating
+real machine
+product development
+multiple oses
+entire virtual
+program written
+unix machine
+dos emulator
+run dos
+dos programs
+emulators tend
+guest program
+guest programs
+zone system
+low-level hardware
+isolated system
+solaris system
+operating space
+additional zones
+zones running
+small virtualization
+virtualization layer
+layer figure
+running kernels
+loaded oses
+kernel system
+true kernel
+increased levels
+virtual devices
+real devices
+physical disks
+hardware platform
+simultaneous operation
+multiple windows
+linux oses
+vmware workstation
+workstation architecture
+platform independent
+running java
+java source
+java byte
+byte code
+.class files
+files java
+binary instructions
+jvm implements
+implements memory
+garbage collection
+native system
+system binary
+binary code
+native machine
+machine binary
+java interpreter
+native binary
+hardware chips
+run java
+interesting application
+.net framework
+compiling code
+intermediary virtual
+common language
+language runtime
+jit compilation
+introduction
+references
+abraham
+silberschatz
+greg
+gagne
+peter
+baer
+galvin
+operating
+system
+concepts
+ninth
+edition
+chapter
+blind
+men
+elephant
+systems
+number
+viewpoints
+view
+shows
+complete
+picture
+views
+pretty
+good
+users
+applications
+figure
+abstract
+components
+computer
+apps
+serves
+interface
+services
+manages
+resources
+government
+model
+nt
+produce
+debates
+included
+kernel
+vendor
+ships
+distinction
+3rd
+party
+user
+computer-system
+organization
+parts
+fit
+modern
+1.2.1
+operation
+bootstrap
+program
+shared
+memory
+cpu
+i
+cards
+slicing
+multi-process
+interrupt
+handling
+clock
+implementation
+calls
+timeline
+single
+process
+doing
+output
+1.2.2
+storage
+structure
+main
+ram
+programs
+loaded
+run
+instructions
+data
+fetched
+registers
+volatile
+medium
+size
+speed
+electronic
+faster
+smaller
+expensive
+bit
+cache
+non-volatile
+permanent
+slower
+larger
+disks
+magnetic
+optical
+tapes
+storage-device
+hierarchy
+1.2.3
+typical
+involves
+requests
+direct
+access
+dma
+works
+architecture
+kinds
+environments
+1.3.1
+single-processor
+runs
+specialized
+processors
+disk
+controllers
+gpus
+1.3.2
+multiprocessor
+increased
+throughput
+execution
+linear
+speedup
+economy
+scale
+peripherals
+reliability
+failure
+slows
+crash
+redundant
+processing
+checks
+balances
+e.g
+nasa
+symmetric
+multiprocessing
+dual-core
+design
+two
+cores
+chip
+1.3.3
+clustered
+independent
+common
+connected
+high-speed
+lan
+working
+special
+considerations
+required
+distributed
+lock
+management
+collaboration
+protocols
+general
+operating-system
+time-sharing
+multi-user
+multi-tasking
+requires
+job
+scheduling
+resource
+allocation
+strategies
+swap
+space
+virtual
+physical
+file
+protection
+security
+inter-process
+communications
+layout
+multiprogramming
+operations
+interrupt-driven
+nature
+oses
+erroneous
+processes
+disturb
+1.5.1
+dual-mode
+multimode
+mode
+executing
+harmless
+code
+a.k.a
+supervisor
+privileged
+potentially
+dangerous
+machine
+executed
+entered
+making
+flip
+switch
+computers
+support
+hardware
+transition
+concept
+modes
+extended
+requiring
+cpus
+virtualization
+extra
+bits
+manager
+vmm
+control
+privileges
+ordinary
+full
+typically
+implemented
+form
+software
+interrupts
+handler
+transfer
+part
+switching
+generated
+additional
+parameters
+generally
+passed
+service
+routine
+handle
+requested
+call
+attempts
+execute
+illegal
+non-existent
+forbidden
+areas
+generate
+trapped
+transferred
+issues
+error
+message
+possibly
+dumps
+log
+core
+analysis
+terminates
+offending
+1.5.2
+timer
+begins
+set
+reverts
+back
+assures
+instruction
+responsible
+tasks
+creating
+deleting
+ensuring
+receives
+interfering
+suspending
+resuming
+synchronization
+communication
+deadlock
+keeping
+track
+blocks
+determining
+move
+out
+allocating
+deallocating
+needed
+malloc
+1.8.1
+file-system
+filesystem
+files
+directories
+supporting
+primitives
+manipulating
+open
+flush
+mapping
+secondary
+backing
+stable
+media
+1.8.2
+mass-storage
+free
+note
+trade-offs
+longevity
+re-writability
+mass
+devices
+including
+floppy
+hard
+tape
+drives
+cds
+dvds
+1.8.3
+caching
+cases
+higher-speed
+temporary
+frequently
+portions
+ranges
+external
+table
+information
+store
+level
+proper
+choice
+profound
+impact
+performance
+read
+migration
+path
+drive
+finally
+written
+reverse
+step
+fetch
+immediately
+excess
+order
+satisfy
+future
+writing
+small
+amounts
+buffered
+fill
+entire
+block
+device
+chain
+complicated
+multiple
+worse
+important
+ensure
+reaches
+up-to-date
+copy
+cached
+1.8.4
+subsystem
+consists
+memory-management
+component
+includes
+buffering
+spooling
+device-driver
+drivers
+specific
+unix
+implements
+interfaces
+types
+accessing
+character
+long
+listing
+first
+position
+field
+numbers
+major
+minor
+normal
+signifies
+driver
+handles
+parameter
+accessed
+options
+differ
+interfere
+entitled
+accident
+faults
+pointer
+variables
+misused
+protecting
+deliberate
+attacks
+legitimate
+attempting
+gain
+unauthorized
+attackers
+damage
+structures
+1.10.4
+bitmaps
+string
+boolean
+state
+collection
+objects
+pages
+computing
+1.11.1
+traditional
+1.11.2
+mobile
+handheld
+smart
+phones
+tablets
+opposed
+laptops
+fall
+advantage
+built-in
+sensors
+gps
+tilt
+compass
+inertial
+movement
+connect
+internet
+wireless
+networking
+ieee
+cellular
+telephone
+technology
+limited
+capacity
+power
+relative
+consume
+battery
+heat
+dominant
+today
+google
+android
+apple
+ios
+1.11.3
+consist
+heterogeneous
+network
+cooperating
+fashion
+networks
+range
+tight
+lans
+broad
+reaching
+wans
+wan
+wide
+area
+international
+corporation
+man
+metropolitan
+covering
+region
+city
+local
+home
+business
+single-site
+university
+campus
+pan
+personal
+bluetooth
+connection
+phone
+headset
+car
+speeds
+throughputs
+reliabilities
+complex
+well-coordinated
+include
+cycles
+printers
+1.11.4
+client-server
+defined
+server
+serve
+clients
+technically
+servers
+co-exist
+act
+client
+served
+day
+graphical
+displays
+1.11.5
+peer-to-peer
+provide
+clear
+leader
+employ
+central
+directory
+location
+searching
+find
+skype
+locate
+desired
+peer
+centralized
+1.11.6
+guest
+machines
+hosted
+cross-platform
+development
+student
+windows
+based
+root
+crashed
+underlying
+unaffected
+caught
+translated
+made
+real
+slow
+things
+depending
+simultaneously
+native
+bypassing
+vmware
+linux
+follow
+steps
+download
+player
+tool
+http
+install
+choose
+version
+hundreds
+images
+boot
+1.11.7
+cloud
+delivers
+public
+pay
+private
+company
+internal
+hybrid
+saas
+word
+platform
+paas
+stack
+application
+database
+infrastructure
+iaas
+backup
+photo
+providers
+type
+clouds
+thousands
+millions
+petabytes
+total
+web
+hosting
+offer
+1.11.8
+real-time
+embedded
+automobiles
+climate
+toasters
+refrigerators
+involve
+chips
+generic
+applied
+task
+current
+price
+plenty
+powerful
+simple
+kids
+toys
+require
+driven
+response
+critical
+open-source
+flourish
+conference
+held
+uic
+subject
+libre
+source
+visit
+published
+sold
+optionally
+modify
+developed
+maintained
+army
+loosely
+unpaid
+programmers
+critics
+argue
+buggy
+proponents
+counter
+bugs
+found
+fixed
+quickly
+pairs
+eyes
+inspecting
+studying
+students
+examine
+change
+re-compile
+1.12.1
+history
+1950s
+lot
+companies
+protect
+privacy
+sensitive
+copyright
+algorithms
+richard
+stallman
+started
+gnu
+project
+manifesto
+arguing
+founded
+foundation
+promote
+fsf
+license
+essentially
+states
+rights
+distribute
+agreement
+copylefting
+1.12.2
+linus
+torvalds
+finland
+distributions
+evolved
+original
+redhat
+suse
+fedora
+debian
+slackware
+ubuntu
+geared
+group
+end-users
+1.12.3
+bsd
+originally
+att
+bell
+labs
+science
+universities
+california
+berkeley
+ucb
+released
+product
+binary
+source-code
+format
+spite
+lawsuits
+versions
+netbsd
+openbsd
+dragonflybsd
+located
+mac
+darwin
+derived
+1.13.4
+solaris
+sun
+microsystems
+migrated
+systemv
+basis
+covered
+copyrights
+link
+libraries
+copyrighted
+viewing
+online
+unpack
+package
+1.13.5
+utility
+gaining
+rapidly
+popularity
+leading
+ongoing
+projects
+involving
+untold
+sites
+portals
+summary
+deals
+structured
+organized
+choices
+examined
+compared
+basic
+popular
+presented
+means
+issue
+commands
+command-line
+csh
+ksh
+tcsh
+gui
+x-windows
+kde
+gnome
+batch
+command
+older
+punch
+job-control
+language
+jcl
+specialty
+designed
+purpose
+load
+terminate
+abnormally
+transferring
+keyboards
+terminals
+manipulation
+addition
+raw
+maintaining
+subdirectory
+names
+providing
+tools
+navigating
+utilizing
+ipc
+running
+processor
+separate
+passing
+detection
+errors
+detected
+handled
+appropriately
+minimum
+harmful
+repercussions
+avoidance
+recovery
+backups
+raid
+debugging
+diagnostic
+aid
+administrators
+tracing
+problems
+efficient
+peripheral
+managed
+carefully
+specially
+tuned
+customized
+environment
+accounting
+activity
+usage
+billing
+purposes
+statistical
+record
+optimize
+preventing
+harm
+wayward
+malicious
+outsiders
+authentication
+ownership
+restricted
+obvious
+highly
+secure
+excruciating
+detail
+regulation
+dictate
+records
+non-erasable
+times
+off-site
+facilities
+2.2.1
+interpreter
+request
+launches
+incorporated
+directly
+commonly
+logs
+accesses
+shells
+configured
+launch
+automatically
+login
+changed
+fly
+configuration
+initial
+settings
+startup
+functionality
+terms
+shell
+launching
+rudimentary
+interpretation
+script
+programming
+loops
+decision
+constructs
+interesting
+wild
+card
+naming
+re-direction
+details
+launched
+sees
+list
+filenames
+dos
+interpret
+bourne
+2.2.2
+desktop
+metaphor
+folders
+trash
+cans
+icons
+represent
+item
+respond
+icon
+activated
+early
+xerox
+parc
+research
+facility
+front
+end
+activating
+line
+background
+true
+right
+traditionally
+provided
+advent
+osx
+partially
+mice
+impractical
+touch-screen
+responds
+patterns
+swipes
+gestures
+keyboard
+trackball
+kind
+built
+touch
+screen
+ipad
+touchscreen
+2.2.3
+individual
+select
+customize
+ability
+determine
+starts
+option
+terminal
+emulator
+window
+entering
+scripts
+assembly
+optimal
+illustrates
+sequence
+strace
+examples
+large
+invoked
+page
+mkdir
+temp
+date
+t.t
+t.2
+low-level
+api
+sidebar
+apis
+greater
+portability
+makes
+lookup
+numbered
+shown
+invoking
+values
+pushed
+indirectly
+address
+register
+categories
+outlined
+subsections
+sixth
+described
+standard
+library
+2.4.1
+abort
+create
+attributes
+wait
+event
+signal
+allocate
+created
+monitored
+paused
+resumed,and
+eventually
+stopped
+pauses
+stops
+resumed
+stop
+compare
+single-tasking
+unloads
+loads
+transfers
+resume
+completed
+ms-dos
+remains
+completely
+resident
+place
+executes
+fork
+creates
+exact
+duplicate
+clone
+parent
+cloned
+child
+unique
+exec
+replaces
+waits
+issuing
+prompt
+waiting
+freebsd
+2.4.2
+delete
+close
+write
+reposition
+supported
+actual
+chapters
+2.4.3
+release
+logically
+attach
+detach
+partitions
+2.4.4
+maintenance
+dump
+pausing
+debug
+2.4.5
+messages
+status
+remote
+identify
+host
+communicate
+establish
+transmit
+incoming
+blocking
+non-blocking
+longer
+threads
+locking
+mechanisms
+restricting
+simultaneous
+dynamically
+simpler
+easier
+inter-computer
+approach
+reading
+2.4.6
+controlling
+adjusted
+non-priveleged
+granted
+elevated
+permissions
+controlled
+circumstances
+concern
+age
+ubiquitous
+connectivity
+interpreters
+utilities
+ship
+calculators
+editors
+notepad
+debate
+arises
+border
+non-system
+divided
+rename
+print
+manipulate
+check
+logging
+registries
+recall
+modification
+text
+contents
+programming-language
+compilers
+linkers
+debuggers
+profilers
+assemblers
+archive
+languages
+make
+loading
+loaders
+dynamic
+overlay
+interactive
+mail
+browsers
+logins
+daemons
+booted
+schedulers
+monitoring
+copying
+checking
+determined
+exception
+user-written
+2.6.1
+goals
+requirements
+define
+properties
+finished
+designing
+features
+care
+understand
+understood
+vernacular
+similar
+description
+sales
+brochure
+shrink-wrapped
+box
+developers
+specifics
+compatibility
+constraints
+standards
+compliance
+contract
+customer
+subcontractors
+detailed
+vary
+greatly
+planned
+scope
+2.6.2
+policies
+done
+properly
+separated
+policy
+easily
+re-writing
+adjusting
+priority
+versus
+foreground
+2.6.3
+hardware-related
+inextricably
+tied
+recent
+advances
+compiler
+efficiencies
+recently
+sections
+compiled
+fine-tuned
+optimized
+hand
+emulators
+target
+unavailable
+suitable
+game
+consoles
+partitioned
+subsystems
+inputs
+outputs
+characteristics
+arranged
+architectural
+configurations
+2.7.1
+idea
+big
+short
+amount
+benefit
+engineering
+techniques
+gradually
+grew
+exceed
+expectations
+break
+allowing
+layer
+layered
+breaking
+2.7.2
+layers
+rests
+relies
+solely
+lower
+debugged
+independently
+assumption
+trusted
+deliver
+problem
+deciding
+higher
+chicken-and-egg
+situations
+arise
+approaches
+filter
+significant
+2.7.3
+microkernels
+micro
+kernels
+remove
+non-essential
+implement
+enhanced
+performed
+expansion
+adding
+rebuilding
+mach
+widely
+microkernel
+forms
+suffered
+improved
+moving
+monolithic
+qnx
+2.7.4
+modules
+object-oriented
+linked
+module
+contact
+eliminating
+intermediary
+loadable
+2.7.5
+strictly
+adhere
+hybrids
+2.7.5.1
+max
+extensions
+rest
+2.7.5.2
+iphones
+ipads
+supports
+graphics
+screens
+2.7.5.3
+smartphones
+handset
+alliance
+primarily
+lead
+java
+platforms
+java-for-android
+kernighan
+law
+cleverly
+definition
+discovery
+elimination
+tuning
+2.8.1
+stepwise
+examination
+expressions
+progresses
+document
+statistics
+spent
+lines
+crashes
+saved
+work
+reasons
+hit
+caused
+unacceptable
+single-step
+people
+occurred
+file-access
+disk-access
+routines
+practical
+unallocated
+portion
+reserved
+2.8.2
+debottlenecking
+events
+analyzed
+traces
+evaluate
+proposed
+perform
+workload
+report
+demand
+top
+uptime
+2.8.3
+dtrace
+adds
+probes
+queried
+probe
+consumers
+removed
+proportional
+trace
+ioctl
+safe
+allowed
+fires
+enabling
+ecbs
+if-then
+consumer
+remain
+interested
+monitors
+sched
+on-cpu
+uid
+self
+timestamp
+off-cpu
+execname
+sum
+due
+adopted
+busy
+producing
+generation
+site
+variable
+re-configured
+installation
+add
+capabilities
+tune
+configure
+installed
+optional
+present
+device-specific
+buffers
+slots
+extreme
+edited
+re-compiled
+tables
+key
+makefiles
+case
+editing
+regenerated
+reboot
+activate
+possibilities
+mechanism
+booting
+alternate
+powers
+points
+rom
+eprom
+motherboard
+power-on
+tests
+post
+applicable
+controller
+on-board
+diagnostics
+pressing
+bios
+pressed
+restrict
+password
+setup
+assuming
+primary
+sector
+fdisk
+logical
+partition
+ends
+active
+occupied
+i.e
+os-specific
+slightly
+single-boot
+proceed
+opportunity
+stage
+earlier
+dual-boot
+multiple-boot
+give
+default
+pick
+frame
+finds
+loader
+chosen
+previous
+bullet
+point
+enter
+single-user
+enable
+console
+enters
+examines
+turn
+spawns
+gettys
+getty
+initializes
+accepts
+passwords
+authenticates
+authenticated
+assigned
+execs
+initialize
+prompts
+dies
+logout
+moved
+9th
+believes
+testing
+difficulty
+sharing
+models
+nonvirtual
+appeared
+ibm
+mainframes
+benefits
+offering
+networked
+affecting
+mentioned
+simulation
+alternative
+simply
+vice-versa
+tend
+considerably
+perfect
+2.8.4
+para-virtualization
+variation
+theme
+mimic
+modified
+para-virtual
+zone
+virtualized
+isolated
+exist
+global
+zones
+2.8.5
+challenging
+consequences
+operate
+simulated
+eventual
+levels
+2.8.6
+2.8.6.1
+abstracts
+80x86
+workstation
+2.8.6.2
+beginning
+jvm
+implementations
+numerous
+byte
+.class
+garbage
+interpreted
+just-in-time
+jit
+compilation
+scheme
+piece
+encountered
+emulate
+.net
+framework
+compiling
+runtime
+clr

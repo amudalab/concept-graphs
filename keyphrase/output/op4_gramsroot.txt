@@ -1,0 +1,1376 @@
+principles of operating::principles of operating
+operating systems lecture::operating systems lecture
+introduction and overview::introduction and overview
+a.m prof nalini::a.m prof nalini
+prof nalini venkatasubramanian::prof nalini venkatasubramanian
+nalini @ ics.uci.edu::nalini @ ics.uci.edu
+silberschatz textbook authors::silberschatz textbook authors
+back for wednesday::back for wednesday
+wednesday s class::wednesday s class
+lecture on friday::lecture on friday
+mbeyeler @ uci.edu::mbeyeler @ uci.edu
+eoguz @ ics.uci.edu::eoguz @ ics.uci.edu
+hzhang10 @ uci.edu::hzhang10 @ uci.edu
+logistics and details::logistics and details
+details course web::details course web
+ics143 lectures mwf::ics143 lectures mwf
+operating system concepts::operating system concepts
+eighth edition silberschatz::eighth edition silberschatz
+silberschatz and galvin::silberschatz and galvin
+alternate book principles::alternate book principles
+bic and a.c::bic and a.c
+homeworks and assignments::homeworks and assignments
+out at midterm::out at midterm
+submit during finals::NNP during finals
+finals week multistep::finals week multistep
+week multistep assignment::week multistep assignment
+multistep assignment don::multistep assignment don
+don t start::don t start
+start in last::start in last
+week of classes::week of classes
+accepted all submissions::accepted all submissions
+midterm tentatively wednesday::midterm tentatively wednesday
+class final exam::class final exam
+final exam tue::final exam tue
+uci course catalog::uci course catalog
+grading policy homeworks::grading policy homeworks
+homeworks each worth::homeworks each worth
+programming assignment worth::programming assignment worth
+final grade midterm::final grade midterm
+final grade final::final grade final
+grade final exam::grade final exam
+grade final assignment::grade final assignment
+assignment of grades::assignment of grades
+lecture schedule week::lecture schedule week
+introduction to operating::introduction to operating
+computer system structures::computer system structures
+operating system structures::operating system structures
+system structures week::system structures week
+process management processes::process management processes
+processes and threads::processes and threads
+process management cpu::process management cpu
+management cpu scheduling::management cpu scheduling
+cpu scheduling week::cpu scheduling week
+process management process::process management process
+management process synchronization::management process synchronization
+process synchronization week::process synchronization week
+review and exam::review and exam
+memory management memory::memory management memory
+management memory management::management memory management
+memory management week::memory management week
+virtual memory week::virtual memory week
+filesystems filesystems interface::filesystems filesystems interface
+interface and implementation::interface and implementation
+topics i subsystems::topics -NONE- subsystems
+i subsystems case::-NONE- subsystems case
+subsystems case study::subsystems case study
+case study unix::case study unix
+revision and summary::revision and summary
+system early operating::system early operating
+early operating systems::early operating systems
+operating systems simple::operating systems simple
+systems simple batch::systems simple batch
+simple batch systems::simple batch systems
+batch systems multiprogrammed::batch systems multiprogrammed
+systems multiprogrammed batch::systems multiprogrammed batch
+multiprogrammed batch systems::multiprogrammed batch systems
+batch systems time-sharing::batch systems time-sharing
+systems time-sharing systems::systems time-sharing systems
+time-sharing systems personal::time-sharing systems personal
+systems personal computer::systems personal computer
+personal computer systems::personal computer systems
+computer systems parallel::computer systems parallel
+parallel and distributed::parallel and distributed
+distributed systems real-time::distributed systems real-time
+systems real-time systems::systems real-time systems
+real-time systems computer::real-time systems computer
+systems computer system::systems computer system
+computer system architecture::computer system architecture
+system architecture principles::system architecture principles
+program that acts::program that acts
+acts an intermediary::acts an intermediary
+computer and computer::computer and computer
+computer hardware major::computer hardware major
+hardware major cost::hardware major cost
+cost of general::cost of general
+general purpose computing::general purpose computing
+computing is software::computing is software
+software os simplifies::software os simplifies
+simplifies and manages::simplifies and manages
+manages the complexity::manages the complexity
+complexity of running::complexity of running
+running application programs::running application programs
+application programs efficiently::application programs efficiently
+programs efficiently principles::programs efficiently principles
+operating system simplify::operating system simplify
+simplify the execution::simplify the execution
+execution of user::execution of user
+programs and make::programs and make
+make solving user::make solving user
+solving user problems::solving user problems
+user problems easier::user problems easier
+easier use computer::easier use computer
+computer hardware efficiently::computer hardware efficiently
+efficiently allow sharing::efficiently allow sharing
+sharing of hardware::sharing of hardware
+hardware and software::hardware and software
+software resources make::software resources make
+resources make application::resources make application
+make application software::make application software
+application software portable::application software portable
+portable and versatile::portable and versatile
+versatile provide isolation::versatile provide isolation
+security and protection::security and protection
+protection among user::protection among user
+user programs improve::user programs improve
+improve overall system::improve overall system
+system reliability error::system reliability error
+reliability error confinement::reliability error confinement
+study operating systems::study operating systems
+hardware and applications::hardware and applications
+applications new applications::applications new applications
+hardware inherent aspect::hardware inherent aspect
+aspect of society::aspect of society
+understand basic principles::understand basic principles
+design of computer::design of computer
+computer systems efficient::computer systems efficient
+systems efficient resource::systems efficient resource
+efficient resource management::efficient resource management
+specialized operating systems::specialized operating systems
+operating systems e.g::operating systems e.g
+systems e.g embedded::systems e.g embedded
+e.g embedded operating::e.g embedded operating
+embedded operating systems::embedded operating systems
+systems for devices::systems for devices
+sensors and controllers::sensors and controllers
+controllers real-time operating::controllers real-time operating
+real-time operating systems::real-time operating systems
+multimedia services systems::multimedia services systems
+services systems today::services systems today
+systems today principles::systems today principles
+irvine sensorium hardware::irvine sensorium hardware
+sensorium hardware complexity::sensorium hardware complexity
+hardware complexity increases::hardware complexity increases
+complexity increases principles::complexity increases principles
+moore s law::moore s law
+law from berkeley::law from berkeley
+hennessy and patterson::hennessy and patterson
+intel multicore chipsets::intel multicore chipsets
+multicore chipsets software::multicore chipsets software
+chipsets software complexity::chipsets software complexity
+software complexity increases::software complexity increases
+computer system components::computer system components
+system components hardware::system components hardware
+hardware provides basic::hardware provides basic
+basic computing resources::basic computing resources
+operating system controls::operating system controls
+controls and coordinates::controls and coordinates
+hardware among application::hardware among application
+application programs application::application programs application
+programs application programs::programs application programs
+application programs solve::application programs solve
+programs solve computing::programs solve computing
+solve computing problems::solve computing problems
+problems of users::problems of users
+view of system::view of system
+system and application::system and application
+application programs operating::application programs operating
+programs operating system::programs operating system
+operating system computer::operating system computer
+system computer hardware::system computer hardware
+computer hardware user::computer hardware user
+user n compiler::user n compiler
+compiler assembler text::compiler assembler text
+assembler text editor::assembler text editor
+text editor database::text editor database
+editor database system::editor database system
+operating system views::operating system views
+system views resource::system views resource
+views resource allocator::views resource allocator
+allocator to allocate::allocator to allocate
+software and hardware::software and hardware
+system and manage::system and manage
+manage them efficiently::manage them efficiently
+efficiently control program::efficiently control program
+control program controls::control program controls
+program controls execution::program controls execution
+programs and operation::programs and operation
+i devices kernel::NNP devices kernel
+kernel the program::kernel the program
+program that executes::program that executes
+application with respect::application with respect
+operating system spectrum::operating system spectrum
+system spectrum monitors::system spectrum monitors
+monitors and small::monitors and small
+small kernels special::small kernels special
+kernels special purpose::kernels special purpose
+purpose and embedded::purpose and embedded
+real-time systems batch::real-time systems batch
+batch and multiprogramming::batch and multiprogramming
+multiprogramming timesharing workstations::multiprogramming timesharing workstations
+timeframes transaction systems::timeframes transaction systems
+transaction systems personal::transaction systems personal
+systems personal computing::systems personal computing
+personal computing systems::personal computing systems
+computing systems mobile::computing systems mobile
+systems mobile platforms::systems mobile platforms
+structure large machines::structure large machines
+large machines run::large machines run
+run from console::run from console
+console single user::console single user
+single user system::single user system
+operator paper tape::operator paper tape
+tape or punched::tape or punched
+cards early software::cards early software
+early software assemblers::early software assemblers
+libraries of common::libraries of common
+common subroutines secure::common subroutines secure
+subroutines secure execution::subroutines secure execution
+secure execution inefficient::secure execution inefficient
+expensive resources low::expensive resources low
+resources low cpu::resources low cpu
+low cpu utilization::low cpu utilization
+john ousterhout slides::john ousterhout slides
+ousterhout slides hardware::ousterhout slides hardware
+slides hardware expensive::slides hardware expensive
+expensive ; human::expensive ; human
+human cheap simple::human cheap simple
+cheap simple batch::cheap simple batch
+jobs with similar::jobs with similar
+similar requirements add::similar requirements add
+add a card::add a card
+hire an operator::hire an operator
+operator automatic job::operator automatic job
+automatic job sequencing::automatic job sequencing
+job sequencing forms::job sequencing forms
+forms a rudimentary::forms a rudimentary
+rudimentary os resident::rudimentary os resident
+resident monitor holds::resident monitor holds
+monitor holds initial::monitor holds initial
+holds initial control::holds initial control
+transfers to job::transfers to job
+back to monitor::back to monitor
+job from job::job from job
+job and data::job and data
+data from program::data from program
+ousterhout slides principles::ousterhout slides principles
+control secure monitor::control secure monitor
+monitor that controls::monitor that controls
+controls job processing::controls job processing
+job processing special::job processing special
+processing special cards::processing special cards
+user program prevented::user program prevented
+prevented from performing::prevented from performing
+performing i separate::performing JJ separate
+user from computer::user from computer
+computer user submits::computer user submits
+user submits card::user submits card
+submits card deck::submits card deck
+card deck cards::card deck cards
+deck cards put::deck cards put
+put on tape::put on tape
+tape tape processed::tape tape processed
+processed by operator::processed by operator
+operator output written::operator output written
+written to tape::written to tape
+tape tape printed::tape tape printed
+printed on printer::printed on printer
+problems long turnaround::problems long turnaround
+i and cpu::-NONE- and cpu
+overlap ; slow::overlap ; slow
+slow mechanical devices::slow mechanical devices
+mechanical devices ibm::mechanical devices ibm
+solutions to speed::solutions to speed
+offline processing load::offline processing load
+processing load jobs::processing load jobs
+jobs into memory::jobs into memory
+memory from tapes::memory from tapes
+reading and line::reading and line
+printing are done::printing are done
+done offline spooling::done offline spooling
+spooling use disk::spooling use disk
+random access device::random access device
+storage for reading::storage for reading
+storing output files::storing output files
+files until output::files until output
+ready to accept::ready to accept
+job with computation::job with computation
+choose next job::choose next job
+job to run::job to run
+increase cpu utilization::increase cpu utilization
+cpu utilization principles::cpu utilization principles
+i is complete::-NONE- is complete
+sets a flag::sets a flag
+busy program tests::busy program tests
+tests the flag::tests the flag
+waiting for completion::waiting for completion
+device forces cpu::device forces cpu
+cpu to jump::cpu to jump
+specific instruction address::specific instruction address
+interrupt service routine::interrupt service routine
+returns to code::returns to code
+prior to servicing::prior to servicing
+servicing the interrupt::servicing the interrupt
+multiprogramming use interrupts::multiprogramming use interrupts
+interrupts to run::interrupts to run
+run multiple programs::run multiple programs
+execute another program::execute another program
+program till interrupt::program till interrupt
+interrupt is received::interrupt is received
+received requires secure::received requires secure
+requires secure memory::requires secure memory
+program requires intervention::program requires intervention
+intervention if program::intervention if program
+program loops indefinitely::program loops indefinitely
+loops indefinitely requires::loops indefinitely requires
+indefinitely requires cpu::indefinitely requires cpu
+requires cpu scheduling::requires cpu scheduling
+scheduling to choose::scheduling to choose
+timesharing programs queued::timesharing programs queued
+queued for execution::queued for execution
+execution in fifo::execution in fifo
+order like multiprogramming::order like multiprogramming
+timer device interrupts::timer device interrupts
+program is returned::program is returned
+returned to end::returned to end
+end of fifo::end of fifo
+fifo next program::fifo next program
+head of fifo::head of fifo
+fifo control card::fifo control card
+control card interpreter::control card interpreter
+card interpreter replaced::card interpreter replaced
+replaced by command::replaced by command
+command language interpreter::command language interpreter
+language interpreter hardware::language interpreter hardware
+hardware getting cheaper::hardware getting cheaper
+cheaper ; human::cheaper ; human
+human getting expensive::human getting expensive
+statement from user::statement from user
+user file systems::user file systems
+file systems online::file systems online
+systems online filesystem::systems online filesystem
+filesystem is required::filesystem is required
+required for users::required for users
+users to access::users to access
+data and code::data and code
+code virtual memory::code virtual memory
+virtual memory job::virtual memory job
+job is swapped::job is swapped
+out of memory::out of memory
+memory to disk::memory to disk
+computing systems single::computing systems single
+systems single user::systems single user
+single user systems::single user systems
+portable i devices::portable NNP devices
+small printers laptops::small printers laptops
+laptops and palmtops::laptops and palmtops
+wireless devices single::wireless devices single
+devices single user::devices single user
+advanced cpu utilization::advanced cpu utilization
+utilization or protection::utilization or protection
+protection features advantages::protection features advantages
+ubiquitous hardware cheap::ubiquitous hardware cheap
+cheap ; human::cheap ; human
+human expensive principles::human expensive principles
+parallel systems multiprocessor::parallel systems multiprocessor
+systems multiprocessor systems::systems multiprocessor systems
+cpu in close::cpu in close
+close communication improved::close communication improved
+communication improved throughput::communication improved throughput
+increased reliability kinds::increased reliability kinds
+vector and pipelined::vector and pipelined
+symmetric and asymmetric::symmetric and asymmetric
+asymmetric multiprocessing distributed::asymmetric multiprocessing distributed
+multiprocessing distributed memory::multiprocessing distributed memory
+memory vs shared::memory vs shared
+shared memory programming::shared memory programming
+memory programming models::memory programming models
+loosely coupled ,message-based::loosely coupled ,message-based
+,message-based vs shared::,message-based vs shared
+shared variable parallel::shared variable parallel
+variable parallel computing::variable parallel computing
+parallel computing systems::parallel computing systems
+computing systems principles::computing systems principles
+nuclear fusion research::nuclear fusion research
+ibm blue gene::ibm blue gene
+distributed systems distribute::distributed systems distribute
+systems distribute computation::systems distribute computation
+processors loosely coupled::processors loosely coupled
+lines client architectures::lines JJ architectures
+resource sharing computation::resource sharing computation
+sharing computation speed-up::sharing computation speed-up
+computation speed-up reliability::computation speed-up reliability
+speed-up reliability communication::speed-up reliability communication
+e.g email applications::e.g email applications
+digital multimedia hardware::digital multimedia hardware
+hardware very cheap::hardware very cheap
+human very expensive::human very expensive
+expensive distributed computing::expensive distributed computing
+distributed computing systems::distributed computing systems
+globus grid computing::globus grid computing
+grid computing toolkit::grid computing toolkit
+computing toolkit cloud::computing toolkit cloud
+toolkit cloud computing::toolkit cloud computing
+cloud computing offerings::cloud computing offerings
+computing offerings planetlab::computing offerings planetlab
+offerings planetlab gnutella::offerings planetlab gnutella
+planetlab gnutella p2p::planetlab gnutella p2p
+gnutella p2p network::gnutella p2p network
+p2p network principles::p2p network principles
+real-time systems correct::real-time systems correct
+systems correct system::systems correct system
+correct system function::correct system function
+system function depends::system function depends
+depends on timeliness::depends on timeliness
+timeliness feedback loops::timeliness NN loops
+sensors and actuators::sensors and actuators
+actuators hard real-time::actuators hard real-time
+hard real-time systems::hard real-time systems
+real-time systems failure::real-time systems failure
+failure if response::failure if response
+long secondary storage::long secondary storage
+storage is limited::storage is limited
+limited soft real-time::limited soft real-time
+soft real-time systems::soft real-time systems
+accurate if response::accurate if response
+virtual reality principles::virtual reality principles
+summary of lecture::summary of lecture
+real-time systems principles::real-time systems principles
+operating systems::operating systems
+systems lecture::systems lecture
+overview mwf::overview mwf
+a.m prof::a.m prof
+prof nalini::prof nalini
+nalini venkatasubramanian::nalini venkatasubramanian
+lecture slides::lecture slides
+content adapted::content adapted
+silberschatz textbook::silberschatz textbook
+textbook authors::textbook authors
+john kubiatowicz::john kubiatowicz
+prof venkat::prof venkat
+meeting today::meeting today
+make-up lecture::make-up lecture
+friday afternoon::friday afternoon
+discussion session::discussion session
+regular class::regular class
+a.m principles::a.m principles
+staff instructor::staff instructor
+teaching assistant::teaching assistant
+michael beyeler::michael beyeler
+ekin oguz::ekin oguz
+hao zhang::hao zhang
+web page::web page
+ics143 lectures::ics143 lectures
+lectures mwf::lectures mwf
+eh1200 discussions::eh1200 discussions
+operating system::operating system
+system concepts::system concepts
+eighth edition::eighth edition
+edition silberschatz::edition silberschatz
+java versions::java versions
+alternate book::alternate book
+book principles::book principles
+a.c shaw::a.c shaw
+details homeworks::details homeworks
+written homeworks::written homeworks
+programming assignment::programming assignment
+java required::java required
+finals week::finals week
+week multistep::week multistep
+multistep assignment::multistep assignment
+assignment don::assignment don
+last week::last week
+late homeworks::late homeworks
+eee dropbox::eee dropbox
+tests midterm::tests midterm
+tentatively wednesday::tentatively wednesday
+final exam::final exam
+exam tue::exam tue
+catalog principles::catalog principles
+grading policy::grading policy
+policy homeworks::policy homeworks
+final grade::final grade
+assignment worth::assignment worth
+grade midterm::grade midterm
+final assignment::final assignment
+curve principles::curve principles
+lecture schedule::lecture schedule
+schedule week::schedule week
+computer system::computer system
+system structures::system structures
+structures week::structures week
+process management::process management
+management processes::management processes
+threads week::threads week
+management cpu::management cpu
+cpu scheduling::cpu scheduling
+scheduling week::scheduling week
+management process::management process
+process synchronization::process synchronization
+synchronization week::synchronization week
+deadlocks principles::deadlocks principles
+deadlocks deadlocks::deadlocks deadlocks
+midterm review::midterm review
+exam week::exam week
+memory management::memory management
+management memory::management memory
+management week::management week
+virtual memory::virtual memory
+memory week::memory week
+filesystems filesystems::filesystems filesystems
+filesystems interface::filesystems interface
+implementation week::implementation week
+subsystems case::subsystems case
+case study::case study
+study unix::study unix
+summary principles::summary principles
+simple batch::simple batch
+batch systems::batch systems
+systems multiprogrammed::systems multiprogrammed
+multiprogrammed batch::multiprogrammed batch
+time-sharing systems::time-sharing systems
+personal computer::personal computer
+computer systems::computer systems
+systems parallel::systems parallel
+distributed systems::distributed systems
+real-time systems::real-time systems
+systems computer::systems computer
+system architecture::system architecture
+architecture principles::architecture principles
+computer hardware::computer hardware
+major cost::major cost
+general purpose::general purpose
+purpose computing::purpose computing
+running application::running application
+application programs::application programs
+programs efficiently::programs efficiently
+efficiently principles::efficiently principles
+system simplify::system simplify
+user programs::user programs
+solving user::solving user
+user problems::user problems
+problems easier::problems easier
+hardware efficiently::hardware efficiently
+software resources::software resources
+resources make::resources make
+make application::make application
+application software::application software
+versatile provide::versatile provide
+provide isolation::provide isolation
+programs improve::programs improve
+system reliability::system reliability
+reliability error::reliability error
+error confinement::error confinement
+fault tolerance::fault tolerance
+reconfiguration principles::reconfiguration principles
+study operating::study operating
+understand interaction::understand interaction
+hardware inherent::hardware inherent
+inherent aspect::inherent aspect
+society today::society today
+basic principles::basic principles
+systems efficient::systems efficient
+efficient resource::efficient resource
+resource management::resource management
+flexibility increasing::flexibility increasing
+systems e.g::systems e.g
+e.g embedded::e.g embedded
+cell phones::cell phones
+real-time operating::real-time operating
+aircraft control::aircraft control
+multimedia services::multimedia services
+services systems::services systems
+systems today::systems today
+today principles::today principles
+irvine sensorium::irvine sensorium
+sensorium hardware::sensorium hardware
+hardware complexity::hardware complexity
+complexity increases::complexity increases
+increases principles::increases principles
+computer architecture::computer architecture
+quantitative approach::quantitative approach
+4th edition::4th edition
+intel multicore::intel multicore
+multicore chipsets::multicore chipsets
+chipsets software::chipsets software
+software complexity::software complexity
+system components::system components
+components hardware::components hardware
+basic computing::basic computing
+computing resources::computing resources
+system controls::system controls
+programs application::programs application
+programs solve::programs solve
+computing problems::computing problems
+database systems::database systems
+video games::video games
+business programs::business programs
+banking software::banking software
+users people::users people
+computers principles::computers principles
+abstract view::abstract view
+system system::system system
+programs operating::programs operating
+system computer::system computer
+hardware user::hardware user
+compiler assembler::compiler assembler
+assembler text::assembler text
+text editor::text editor
+editor database::editor database
+database system::database system
+system views::system views
+views resource::views resource
+resource allocator::resource allocator
+allocate resources::allocate resources
+efficiently control::efficiently control
+control program::control program
+program controls::program controls
+controls execution::controls execution
+devices kernel::devices kernel
+system spectrum::system spectrum
+spectrum monitors::spectrum monitors
+small kernels::small kernels
+special purpose::special purpose
+embedded systems::embedded systems
+systems batch::systems batch
+multiprogramming timesharing::multiprogramming timesharing
+timesharing workstations::timesharing workstations
+timeframes transaction::timeframes transaction
+transaction systems::transaction systems
+personal computing::personal computing
+computing systems::computing systems
+mobile platforms::mobile platforms
+people-to-computer ratio::people-to-computer ratio
+david culler::david culler
+early systems::early systems
+bare machine::bare machine
+large machines::large machines
+machines run::machines run
+console single::console single
+single user::single user
+user system::user system
+operator paper::operator paper
+paper tape::paper tape
+punched cards::punched cards
+early software::early software
+software assemblers::software assemblers
+device drivers::device drivers
+common subroutines::common subroutines
+subroutines secure::subroutines secure
+secure execution::secure execution
+execution inefficient::execution inefficient
+expensive resources::expensive resources
+low cpu::low cpu
+cpu utilization::cpu utilization
+high setup::high setup
+ousterhout slides::ousterhout slides
+slides hardware::slides hardware
+human cheap::human cheap
+cheap simple::cheap simple
+reduce setup::reduce setup
+batching jobs::batching jobs
+similar requirements::similar requirements
+requirements add::requirements add
+card reader::card reader
+operator user::operator user
+automatic job::automatic job
+job sequencing::job sequencing
+sequencing forms::sequencing forms
+resident monitor::resident monitor
+monitor holds::monitor holds
+initial control::initial control
+control transfers::control transfers
+monitor problem::monitor problem
+distinguish job::distinguish job
+program principles::program principles
+slides principles::slides principles
+control secure::control secure
+secure monitor::secure monitor
+controls job::controls job
+job processing::job processing
+special cards::special cards
+user program::user program
+program prevented::program prevented
+separate user::separate user
+computer user::computer user
+user submits::user submits
+submits card::submits card
+card deck::card deck
+deck cards::deck cards
+cards put::cards put
+tape tape::tape tape
+tape processed::tape processed
+operator output::operator output
+output written::output written
+tape printed::tape printed
+printer problems::printer problems
+slow mechanical::slow mechanical
+mechanical devices::mechanical devices
+devices ibm::devices ibm
+issues solutions::issues solutions
+offline processing::offline processing
+processing load::processing load
+load jobs::load jobs
+card reading::card reading
+line printing::line printing
+done offline::done offline
+offline spooling::offline spooling
+random access::random access
+access device::access device
+large storage::large storage
+input files::input files
+storing output::storing output
+output files::output files
+output devices::output devices
+introduces notion::introduces notion
+job pool::job pool
+increase cpu::increase cpu
+utilization principles::utilization principles
+complete polling::complete polling
+device sets::device sets
+busy program::busy program
+program tests::program tests
+loop waiting::loop waiting
+device forces::device forces
+forces cpu::forces cpu
+specific instruction::specific instruction
+instruction address::instruction address
+interrupt service::interrupt service
+service routine::service routine
+cpu returns::cpu returns
+interrupt principles::interrupt principles
+run multiple::run multiple
+multiple programs::multiple programs
+program performs::program performs
+received requires::received requires
+requires secure::requires secure
+secure memory::secure memory
+program requires::program requires
+requires intervention::requires intervention
+program loops::program loops
+loops indefinitely::loops indefinitely
+indefinitely requires::indefinitely requires
+requires cpu::requires cpu
+run principles::run principles
+timesharing programs::timesharing programs
+programs queued::programs queued
+fifo order::fifo order
+timer device::timer device
+device interrupts::device interrupts
+interrupted program::interrupted program
+fifo control::fifo control
+control card::control card
+card interpreter::card interpreter
+interpreter replaced::interpreter replaced
+command language::command language
+language interpreter::language interpreter
+interpreter hardware::interpreter hardware
+expensive principles::expensive principles
+finishes execution::finishes execution
+control statement::control statement
+user file::user file
+file systems::file systems
+systems online::systems online
+online filesystem::online filesystem
+access data::access data
+memory job::memory job
+disk principles::disk principles
+user systems::user systems
+display screens::display screens
+small printers::small printers
+printers laptops::printers laptops
+smart cards::smart cards
+wireless devices::wireless devices
+advanced cpu::advanced cpu
+protection features::protection features
+features advantages::features advantages
+user convenience::user convenience
+ubiquitous hardware::ubiquitous hardware
+hardware cheap::hardware cheap
+parallel systems::parallel systems
+systems multiprocessor::systems multiprocessor
+multiprocessor systems::multiprocessor systems
+close communication::close communication
+communication improved::communication improved
+increased reliability::increased reliability
+reliability kinds::reliability kinds
+asymmetric multiprocessing::asymmetric multiprocessing
+multiprocessing distributed::multiprocessing distributed
+distributed memory::distributed memory
+shared memory::shared memory
+memory programming::memory programming
+programming models::programming models
+variable parallel::variable parallel
+parallel computing::parallel computing
+systems principles::systems principles
+climate modeling::climate modeling
+earthquake simulations::earthquake simulations
+genome analysis::genome analysis
+protein folding::protein folding
+nuclear fusion::nuclear fusion
+fusion research::fusion research
+connection machine::connection machine
+ibm blue::ibm blue
+blue gene::blue gene
+systems distribute::systems distribute
+distribute computation::distribute computation
+communication lines::communication lines
+architectures advantages::architectures advantages
+resource sharing::resource sharing
+sharing computation::sharing computation
+computation speed-up::computation speed-up
+speed-up reliability::speed-up reliability
+reliability communication::reliability communication
+e.g email::e.g email
+email applications::email applications
+digital libraries::digital libraries
+digital multimedia::digital multimedia
+multimedia hardware::multimedia hardware
+distributed computing::distributed computing
+globus grid::globus grid
+computing toolkit::computing toolkit
+toolkit cloud::toolkit cloud
+cloud computing::cloud computing
+computing offerings::computing offerings
+offerings planetlab::offerings planetlab
+planetlab gnutella::planetlab gnutella
+gnutella p2p::gnutella p2p
+p2p network::p2p network
+network principles::network principles
+systems correct::systems correct
+correct system::correct system
+system function::system function
+function depends::function depends
+loops sensors::loops sensors
+systems failure::systems failure
+secondary storage::secondary storage
+soft real-time::soft real-time
+virtual reality::virtual reality
+reality principles::reality principles
+principles::principles
+operating::operating
+systems::systems
+lecture::lecture
+ics::ics
+introduction::introduction
+overview::overview
+mwf::mwf
+a.m::a.m
+prof::prof
+nalini::nalini
+venkatasubramanian::venkatasubramanian
+ics.uci.edu::ics.uci.edu
+slides::slides
+content::content
+adapted::adapted
+silberschatz::silberschatz
+textbook::textbook
+authors::authors
+john::john
+kubiatowicz::kubiatowicz
+berkeley::berkeley
+ousterhout::ousterhout
+stanford::stanford
+venkat::venkat
+travel::travel
+meeting::meeting
+today::today
+back::back
+wednesday::wednesday
+class::class
+make-up::make-up
+friday::friday
+afternoon::afternoon
+discussion::discussion
+session::session
+p.m::p.m
+addition::addition
+regular::regular
+spring::spring
+staff::staff
+instructor::instructor
+teaching::teaching
+assistant::assistant
+michael::michael
+beyeler::beyeler
+mbeyeler::mbeyeler
+uci.edu::uci.edu
+readers::readers
+ekin::ekin
+oguz::oguz
+eoguz::eoguz
+hao::hao
+zhang::zhang
+hzhang10::hzhang10
+logistics::logistics
+details::details
+web::web
+page::page
+http::http
+ics143::ics143
+lectures::lectures
+00-11::00-11
+eh1200::eh1200
+discussions::discussions
+00-3::00-3
+hib::hib
+system::system
+concepts::concepts
+eighth::eighth
+edition::edition
+galvin::galvin
+addison-wesley::addison-wesley
+seventh,sixth::seventh,sixth
+editions::editions
+java::java
+versions::versions
+alternate::alternate
+book::book
+l.f::l.f
+bic::bic
+a.c::a.c
+shaw::shaw
+prentice-hall::NNP
+education::education
+isbn::isbn
+homeworks::homeworks
+assignments::assignments
+written::written
+quarter::quarter
+programming::programming
+assignment::assignment
+knowledge::knowledge
+required::required
+handed::handed
+out::out
+midterm::midterm
+finals::finals
+week::week
+multistep::multistep
+don::don
+start::start
+last::last
+classes::classes
+late::late
+accepted::accepted
+submissions::submissions
+made::made
+eee::eee
+dropbox::dropbox
+tests::tests
+tentatively::tentatively
+final::final
+exam::exam
+tue::tue
+jun::jun
+30-3::30-3
+uci::uci
+catalog::catalog
+grading::grading
+policy::policy
+worth::worth
+grade::grade
+grades::grades
+based::based
+curve::curve
+schedule::schedule
+computer::computer
+structures::structures
+process::process
+management::management
+processes::processes
+threads::threads
+cpu::cpu
+scheduling::scheduling
+synchronization::synchronization
+deadlocks::deadlocks
+review::review
+memory::memory
+virtual::virtual
+filesystems::filesystems
+interface::interface
+implementation::implementation
+topics::topics
+i::-NONE-
+subsystems::subsystems
+case::case
+study::study
+unix::unix
+windowsnt::windowsnt
+revision::revision
+summary::summary
+early::early
+simple::simple
+batch::batch
+multiprogrammed::multiprogrammed
+time-sharing::time-sharing
+personal::personal
+parallel::parallel
+distributed::distributed
+real-time::real-time
+architecture::architecture
+program::program
+acts::acts
+intermediary::intermediary
+user::user
+hardware::hardware
+major::major
+cost::cost
+general::general
+purpose::purpose
+computing::computing
+software::software
+simplifies::simplifies
+manages::manages
+complexity::complexity
+running::running
+application::application
+programs::programs
+efficiently::efficiently
+goals::goals
+simplify::simplify
+execution::execution
+make::make
+solving::solving
+problems::problems
+easier::easier
+sharing::sharing
+resources::resources
+portable::portable
+versatile::versatile
+provide::provide
+isolation::isolation
+security::security
+protection::protection
+improve::improve
+reliability::reliability
+error::error
+confinement::confinement
+fault::fault
+tolerance::tolerance
+reconfiguration::reconfiguration
+understand::understand
+interaction::interaction
+applications::applications
+inherent::inherent
+aspect::aspect
+society::society
+basic::basic
+design::design
+efficient::efficient
+resource::resource
+flexibility::flexibility
+increasing::increasing
+specialized::specialized
+e.g::e.g
+embedded::embedded
+devices::devices
+cell::cell
+phones::phones
+sensors::sensors
+controllers::controllers
+aircraft::aircraft
+control::control
+multimedia::multimedia
+services::services
+irvine::irvine
+sensorium::sensorium
+increases::increases
+moore::moore
+law::law
+years::years
+performance::performance
+hennessy::hennessy
+patterson::patterson
+quantitative::quantitative
+approach::approach
+4th::4th
+sept::sept
+intel::intel
+multicore::multicore
+chipsets::chipsets
+mit::mit
+components::components
+controls::controls
+coordinates::coordinates
+solve::solve
+users::users
+compilers::compilers
+database::database
+video::video
+games::games
+business::business
+banking::banking
+people::people
+machines::machines
+computers::computers
+abstract::abstract
+view::view
+compiler::compiler
+assembler::assembler
+text::text
+editor::editor
+views::views
+allocator::allocator
+allocate::allocate
+manage::manage
+operation::operation
+kernel::kernel
+executes::executes
+forever::forever
+respect::respect
+spectrum::spectrum
+monitors::monitors
+small::small
+kernels::kernels
+special::special
+multiprogramming::multiprogramming
+timesharing::timesharing
+workstations::workstations
+servers::servers
+minicomputers::minicomputers
+timeframes::timeframes
+transaction::transaction
+mobile::mobile
+platforms::platforms
+sizes::sizes
+people-to-computer::people-to-computer
+ratio::ratio
+david::david
+culler::culler
+bare::bare
+machine::machine
+1950s::1950s
+structure::structure
+large::large
+run::run
+console::console
+single::single
+operator::operator
+paper::paper
+tape::tape
+punched::punched
+cards::cards
+assemblers::assemblers
+linkers::linkers
+loaders::loaders
+device::device
+drivers::drivers
+libraries::libraries
+common::common
+subroutines::subroutines
+secure::secure
+inefficient::inefficient
+expensive::expensive
+low::low
+utilization::utilization
+high::high
+setup::setup
+human::human
+cheap::cheap
+reduce::reduce
+batching::batching
+jobs::jobs
+similar::similar
+requirements::requirements
+add::add
+card::card
+reader::reader
+hire::hire
+automatic::automatic
+job::job
+sequencing::sequencing
+forms::forms
+rudimentary::rudimentary
+resident::resident
+monitor::monitor
+holds::holds
+initial::initial
+transfers::transfers
+problem::problem
+distinguish::distinguish
+data::data
+processing::processing
+prevented::prevented
+performing::performing
+separate::separate
+submits::submits
+deck::deck
+put::put
+processed::processed
+output::output
+printed::printed
+printer::printer
+long::long
+turnaround::turnaround
+days::days
+overlap::overlap
+slow::slow
+mechanical::mechanical
+ibm::ibm
+issues::issues
+solutions::solutions
+speed::speed
+offline::offline
+load::load
+tapes::tapes
+reading::reading
+line::line
+printing::printing
+done::done
+spooling::spooling
+disk::disk
+random::random
+access::access
+storage::storage
+input::input
+files::files
+storing::storing
+ready::ready
+accept::accept
+computation::computation
+introduces::introduces
+notion::notion
+pool::pool
+choose::choose
+increase::increase
+speeding::speeding
+completion::completion
+complete::complete
+polling::polling
+sets::sets
+flag::flag
+busy::busy
+loop::loop
+waiting::waiting
+interrupts::interrupts
+forces::forces
+jump::jump
+specific::specific
+instruction::instruction
+address::address
+interrupt::interrupt
+service::service
+routine::routine
+returns::returns
+code::code
+executing::executing
+prior::prior
+servicing::servicing
+multiple::multiple
+simultaneously::simultaneously
+performs::performs
+execute::execute
+received::received
+requires::requires
+intervention::intervention
+loops::loops
+indefinitely::indefinitely
+queued::queued
+fifo::fifo
+order::order
+timer::timer
+quantum::quantum
+timeslice::timeslice
+interrupted::interrupted
+returned::returned
+end::end
+head::head
+interpreter::interpreter
+replaced::replaced
+command::command
+language::language
+cheaper::cheaper
+cont::cont
+interactive::interactive
+finishes::finishes
+seeks::seeks
+statement::statement
+file::file
+online::online
+filesystem::filesystem
+swapped::swapped
+keyboards::keyboards
+mice::mice
+display::display
+screens::screens
+printers::printers
+laptops::laptops
+palmtops::palmtops
+smart::smart
+wireless::wireless
+advanced::advanced
+features::features
+advantages::advantages
+convenience::convenience
+responsiveness::responsiveness
+ubiquitous::ubiquitous
+multiprocessor::multiprocessor
+close::close
+communication::communication
+improved::improved
+throughput::throughput
+economical::economical
+increased::increased
+kinds::kinds
+vector::vector
+pipelined::pipelined
+symmetric::symmetric
+asymmetric::asymmetric
+multiprocessing::multiprocessing
+shared::shared
+models::models
+tightly::tightly
+coupled::coupled
+loosely::loosely
+,message-based::,message-based
+variable::variable
+climate::climate
+modeling::modeling
+earthquake::earthquake
+simulations::simulations
+genome::genome
+analysis::analysis
+protein::protein
+folding::folding
+nuclear::nuclear
+fusion::fusion
+research::research
+illiac::illiac
+uillinois::uillinois
+connection::connection
+blue::blue
+gene::gene
+tianhe-1::tianhe-1
+china::china
+k-computer::k-computer
+japan::japan
+distribute::distribute
+processors::processors
+lines::lines
+architectures::architectures
+speed-up::speed-up
+email::email
+digital::digital
+globus::globus
+grid::grid
+toolkit::toolkit
+cloud::cloud
+offerings::offerings
+planetlab::planetlab
+gnutella::gnutella
+p2p::p2p
+network::network
+correct::correct
+function::function
+depends::depends
+timeliness::timeliness
+actuators::actuators
+hard::hard
+failure::failure
+response::response
+secondary::secondary
+limited::limited
+soft::soft
+accurate::accurate
+reality::reality

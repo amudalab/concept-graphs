@@ -1,0 +1,9 @@
+Row 1::Height 2::evaluation order
+Row 2::Height 1::except for && and || operators, c does not
+Row 3::Height 1::specify the order in which the operands of an
+Row 4::Height 1::operator are evaluated. this is left to the
+Row 5::Height 1::computer
+Row 6::Height 1::thus constructs like ++y + -y are inherently
+Row 7::Height 1::ambiguous and should therefore be avoided
+Row 8::Height 1::for && and || the left operand is evaluated first,
+Row 9::Height 1::right operand is evaluated only if needed

@@ -1,0 +1,8 @@
+Row 1::Height 2::analysis of hashing
+Row 2::Height 1::an element with key k is stored in slot
+Row 3::Height 3::h(k) (instead of slot without hashing)
+Row 4::Height 3::the hash function h maps the universe u
+Row 5::Height 1::of keys into the slots of hash table
+Row 6::Height 1::t[0..m-1]
+Row 7::Height 1::h:u->{0,1,...m-1}
+Row 8::Height 1::assume time to compute h(k) is o(1)

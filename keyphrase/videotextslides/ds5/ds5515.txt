@@ -1,0 +1,13 @@
+Row 1::Height 2::double hashing
+Row 2::Height 3::uses two hash function h1,h2
+Row 3::Height 1::h1(k) is the position in the table where we first
+Row 4::Height 1::check for key k
+Row 5::Height 1::h2(k) determines the offset we use when
+Row 6::Height 1::searching for k
+Row 7::Height 1::in linear probing h2(k) is always 1.
+Row 8::Height 3::doublehashinginsert(k)
+Row 9::Height 1::if (table is full) error
+Row 10::Height 1::probe = h1(k); offset - h2(k)
+Row 11::Height 1::while (table(probe)occupied)
+Row 12::Height 1::probe = (probe+offset)mod m
+Row 13::Height 1::table[probe] = k

@@ -1,0 +1,12 @@
+Row 1::Height 2::exceptions finally
+Row 2::Height 1::note that if somewhere in your method you
+Row 3::Height 1::throw an exception you need to add a throws
+Row 4::Height 1::clause next to your method name
+Row 5::Height 1::if you never catch an exception it will propagate
+Row 6::Height 1::upwards and upwards along the chain of
+Row 7::Height 1::method calls until the user sees it
+Row 8::Height 1::what exactly are exceptions in java classes
+Row 9::Height 1::public class stomachacheexception extends
+Row 10::Height 1::runtimeexception
+Row 11::Height 1::pubic stomachacheexception string err
+Row 12::Height 1::super(err)

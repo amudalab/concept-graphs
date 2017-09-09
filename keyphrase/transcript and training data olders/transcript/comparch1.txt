@@ -1,0 +1,184 @@
+welcome to this course on computer architecture today we are passing through very exciting area we see computers in all walks of life they have become integral part of most of our daily activities um you find them in various shapes and sizes and if you look at a typical computer of today it packs in more power more storage capacity much more io capability than a typical computer of nineteen fifties when they began and they occupied a big hall much bigger than this way we are sitting today 
+but although this is the most common form of computer you see today there are many applications for which this is insufficient such as weather prediction nuclear simulation for astronomical calculation and bio informatics you need much more computing power but on the other hand they are very tiny and small computers which you don’t actually see as computers they are hidden in your home appliances cameras mobile phones even in the projector which we are using today and even the remote to control this projector 
+so our question is that going through this entire variety of computers entire diversity in space and time what is common and what is different 
+so this would be one of the things we are going to learn in this course that what is the common principle which binds all these different forms of computers which you see today and also which you don’t see today 
+so um to outline what we are going to do today (refer slide time 02:39) 
+
+firstly i will introduce you to what is the objective of this course what is it i expect you to learn um why should we study this course what is the motivation for studying this um i will define the term computer architecture and also finally talk about how this course is structured on the whole (refer slide time 03:06) 
+
+to begin with the course objectives what we propose to learn is how computers work what is the basic principle and we will find this basic principle is common across all computers small and large old or new um its not sufficient just to learn how computers work we also have to worry about how efficiently they were 
+
+so performance is an important issue we will try to understand what we mean by performance and also look at some ways where we should not look at performance people have developed wrong notion which are misleading 
+so apart from performance there are other factors which are important such as power consumption and the chip area or the cost 
+so our focus will not be so much in to those we will look at computer architecture more from point of your performance 
+after having looked at (refer slide time 03:06) the basic principles that is how a computer works we will try to see how these could be designed or built okay so that is the go deeper into the design and construction aspects of computers and we will look at various sophisticated techniques which are important in todays architectures they are responsible for giving them the kind of performance we see for example how memory structure into cahes and virtual memory and so on and how a operation can be pipelined how instructions could be put in parallel 
+so some of these modern concepts would be introduced of course the scope of this course is not to go very deep into these because they are more advanced courses probably you would do at a later stage where these things will be covered in more detail but you will get a glimpse of what ever basic features of most modern computers 
+why are we trying to learn all this okay question is are you going to build a computer are you going to design a new processor or new computer um the answer is unlikely the opportunity for designing a new processor or new computer is very very rare and you may or may not get it (refer slide time 05:30) 
+
+it is very less likely that you will get that opportunity what might happen more likely is that you will probably design an improved version or a new version of an existing system 
+because the number of new architectures or new processors getting designed is very very small today 
+
+
+on the other hand many of you would go into software stream where you will be devolping software and the question they would be how to get the best performance of the software um for that you need to have good understanding of the architecture and the hardware 
+so even though you may go in a software stream understanding of architecture how it influences the performance what is the relationship between hardware and software that is going to be very very important also quite likely is that you might be a manager or administrator where your responsibility may be to buy a set of computers 
+so once agin understanding of the system is important and this knowledge of basic principles and the relations with basic performance would be important um there is another exciting area of embedded computers where computer is part of over all system it is embedded some where deep in the system and that throws open many more design opportunities 
+so its quite possible you might end up in designing a new application where computer is an embedded component (refer slide time 07:27)
+
+
+okay let me now define the term computer architecture um simplest way of giving an idea what computer achitecture is to relate it to architectural buildings building architecture is basically a plan of what different parts of building are to be used for 
+so it its an over all layout where you decide functionality of different components of building that for example if it is a residential building you will say that this is living area this is dining area this is kitchen and this is balcony and so on 
+so you you make a plan of what is the function of different parts of the building on the other hand a civil engineer would look at this plan look at this architecture of the building and do structured design which means he or she has to wory about how this building is going to um stand it shouldn’t fall um it should be durable um he has to take care of stresses and strains durability if any and so on 
+so the relationship you see between what an architect does for the building what a civil engineer does for building is some what similar to what a computer architect does for a computer and what logic design or circuit design it does 
+okay so architecture is once again an a plan of over all functionality of the computer and um what ever the basic operation it can perform how they can be sequenced and so on 
+so that that’s what architecture is about whereas to realise this functionality realise this plan you need circuit designer which has who has to put basic components together transistors registers capacitors and so on to make all this happen 
+so our focus would be on architecture but we will move little bit towards the design aspect not go all the way to circuit but will have some idea about how the computers are designed and built (refer slide time 10:03) 
+
+so um now immediately it brings up um the issue of various abstractions um you find abstractions in all disciplines of engineering and science but in computers particularly when you talk of architecture you find that they are layers and layers of abstraction what abstraction means that you leave out details which are less relevant and focus on um focus on matters and issues which are important at that particular time of a some particular consideration 
+as you go into depth you get more and more information as you have more and more abstraction by information is reduced 
+so when um when you look at the relationship between architecture and circuit essentially they are separated by several layers of abstraction
+similarly the architecture and the software are seperated by several layers of abstractions the abstractions help us in coping with the complexity because if you try to look at computer at level of basic components from circuit point of view there are millions and millions of basic components and you if you start defining your computer in terms of these components um its extremely complex and mind boggling (refer slide time 11:35) 
+
+lets look at software abstraction which you are quite familiar already you all have done programming and typically you c c plus plus java so given a problem you can write a program which is essentially solution for that problem 
+so for example this is a trivial function which simply adds two numbers and returns the result
+so as a high level language programmer in c you will just write these few lines and that’s your solution but computer does not understand that directly this solution has to be translated into a language which computer can understand more easily 
+so a compiler will take this program in c and produce an eqivalent program in assembly language okat this is a process which is automat by a compiler and as you would notice that this simple computation is broken down into number of steps each step is an instruction i am not going to go into details of  what the instructions are basically what you see as addition here is this add instruction okay there are some move instruction which you see above this add and below which are essentially preparing the data before addition can be done they are putting the data in the right place from where the circuitary inside processor can perform addition and the first and the last statement here um are essentially required to actually link this function to main program where this could be used but once again this is not the form which is understood by the computer this has to be further translated into ones and zeros 
+so that’s the job of a program called assembler assembler will take these the task here is much simpler um each step here or each instruction here can be translated into a number or a sequence of numbers which is a very straight forward process and what you get is called a machine language program or machine code 
+so each step here is essentially a number number notation i have been used here is hexa decimal this zero x stands this indicates that the number is a hexa decimal number where which is nothing but number to the base sixteen so two hexa decimal digits would mean that we are talking of a eight bit number or bytes 
+so essentially it’s a sequence of bytes which represent um the same program and in turn it represents this program which is originally written by programmer 
+so although i have written not in terms of ones and zeros but hexa decimal notation has a very that corresponds with binary notation inside a computer these would be binary numbers and interestingly whether it is a data or program data or instructions the numbers don’t distinguish from each other 
+okay this was one one side of the picture that what you see as high level language program you normally deal with that how it is related to something which hardware understands the hardware itself again has several layers of abstraction one major module there is CPU (refer slide time 15:40) 
+
+or the processor CPU is the central processing unit you have memory you have input output devices and their controllers for example here you are using mouse keyboard display disk drive they are connected to the system through a bus and some controller the processor is connected to memory again through some buses this is a system bus this a memory bus there is a bridge connecting these um if you go further to this box which i have labelled CPU you will find that there are it is further sub divided
+so you have the program counter register file ALU and bus interface program counter keeps track of current instruction being executed register file stores operand which are currently in use ALU is the one which performs um various operations arithmetical logical relational comparison operation and bus interface is the one which connects these modules to the outside world um namely the memory and io 
+one could go further into this for example if you take ALU um it is composed of several gates of different types it may have AND gates OR gates exclusive OR gates NOT gate and so on large number of those 
+these gates again would be consisted consisting of basic devices transistor register and so on 
+so as you see that harware level also you have sub systems within that you have components you go down further eventually you reach a level um of transistors of basic  devices which can be um fabricated 
+i probably would have shown these pictures to you earlier so physically this is how you would see if you peep into a PC what you are seeing is a motherboard okay 
+it’s a complex electronic um assembly where you have number of components mounted on this um on this side you have power supply um on this side on the bottom side you have some peripherals okay a floppy disk drive hard disk drive CDROM drive and so on this is what you see is fan actually actually what is under this is you see parallel bar these are fins of heat sink and under that there is a CPU or the heart of the whole system the memory is here on the side and here you have some input output cards 
+(refer slide time 17:52) 
+
+we will go further into this you can see the processor area more closely zoomed in further 
+okay um what you are seeing at the bottom some part is visible this is um part of the processor these are slots where zoomed in further okay um what you are seeing at the bottom some part is visible this is part of the processor these are slots where you can plug in input output  (refer slide time 19:27) 
+
+contollers these are PCI slots PCI is the name of the bus through which various cards are connected various controllers are connected to the computer this is a memory module okay this is in a package form this is open another one these are memory individual memory chips all this put together form a memory module and several of these form the complete memory system this is a seagate hard disk drive okay shown from two sides 
+(refer slide time 20:08) 
+
+this part is the disk controller this is just a case in you are not actually seeing the medium on which recording is done that’s inside um this is the controller circuit you can see closely 
+(refer slide time 20:08)
+
+
+okay now you have had some idea of now hardware and software what ever layers of abstraction  and this picture is trying to put these together 
+so you have in the software at the highest level you see your high level language programs c lus plus example and at the lowest level you see machine instructions um in between there was assembly language which i showed you and there are ways in which you can move from here to there 
+on the hardware side we we saw major building block registers adders and so on and at the bottom you have individual components and transistors 
+so our focus would be some where here in the middle where you see hardware software boundary okay so what exactly is hardware software boundary its where you have set of instructions which define the basic capability of a processor and a major harware components which are able to understand those instructions okay 
+so um if if you are a programmer you will you will see the machine defined by a set of instructions whereas if you are hardware designer you will see software in terms of those machine instructions which you need to interpret okay (refer slide time 22:16) 
+
+so there are levels of hierarchy here within hardware levels of hierarchy within software  
+architecture itself um which is around interface between hardware and software we are going to specifically look at two layers or sometimes it is called architectures um of at instruction set level or at micro architecture level 
+so instruction set architecture refers to the lowest level visible to programmer 
+so programmer is not concerned about your transistors or your gates or your flip flops or adders or so on um the basic unit of computation is an instruction whereas micro architecture is what concerns a hardware design a little more and it’s the it fills up the gap between the instruction and the logic modules 
+okay so logic modules for example an ALU or an register file themselves do not define any instruction but the way they are put together the way the information is made to flow through these is what defines the instruction  
+so um this is the typical view of where we place instruction set architecture um in between software and hardware at top you have application programs which we are able to run on a processor with the help of some system software  
+ (refer slide time 23:44) 
+
+for example compiler is required to translate these high level programs to machine code and os is required to manage the resources and make it possible to compile compile load and execute programs um below ISA we have the design the broad CPU design then at a lower level you have circuit design okay and for fabricating the circuit for physically realizing this you need to have a layout okay where you need to worry about where you place the transistor where you place a wire how you interconnect them and so on 
+so so its not just a network but physical dimension physical manifestation is assigned to these components 
+okay so as they mentioned earlier assembly language view defines what a processor state is okay and how the processor state changes from instruction to instruction as you execute instruction um the processor goes from one state to other state 
+so how is the state defined state is defined in terms of contents of its memory contents of various registers and flip flops which are the in the processor 
+so memory whereas memory contents some what more permanent data and program what registers contain is the something some data which is currently under use you are performing an addition typically the operand will come from register file and the result will go back to register file um the programmer at assembly language has to also worry about how instructions are represented okay what is set of instruction how each instruction is represented in terms of ones and zeros or hexa decimal digits for convenience 
+so above this layer of abstraction we have compilers and os and then you have high level language programs below this layer you have hardware components high level as register files ALU and so on and low level as transistors and resistances which actually make this instruction set posssible um but an architect has to worry about how to put these components these blocks together to do the instructions efficiently 
+so there are lots of tricks and techniques which have to be employed to make everything happen fast okay um we will be talking mostly of performance but as i mentioned there are other issues such as power consumption particularly when you are talking of hand held devices devices which have small computers lap tops mobile phones so on where power consumption is important if you if you are consuming power at a large rate then the battery which you are carrying would not last very long 
+so your task would be to carry out computation while consuming as little power as possible okay so sometime performance is the dominating issue sometime power is the dominating issue and sometime you need to have a suitable trade off you cannot let go performance and go to extreme power saving you need to have often combination of the two and with all the this had done ultimately the cost is very important 
+so you may find different ways of executing same instruction but some methods could be um very fast but they might be very expensive they may require lots and lots of transistors to do the same operation 
+so as we progress with this course we will see these options and you will see that the judgement of an architect lies in making right choice while designing a processor 
+so um what is the basic principle on which a computer works is captured here 
+ (refer slide time 23:44) 
+
+that you have the memory which contains code or program in machine language and the data on which it is supposed to operate of course they have to be means to bring in the data which one has to operate and after computations are done take the results are out um often memory contains a specialized structure called stack which is used to create functions about hierarchy of the program abstractions  
+the other block or the heart of the whole system is CPU where the key components as i showed earlier is the program counter and ALU registers condition codes 
+so where whereas ALU is the one which basically perform all arithematic and logical operations um the operands are contained in registers 
+so they may have to initially brought from the memory and after having operated on them they are send back to the memory PC is the one which keeps track of the current instruction 
+so the way it proceeds that PC will help in picking up an instruction ALU will carry out the desired operation and PC will then point to the next instruction and so on 
+so a sequence of instruction will roughly go on in this manner um the instruction will differ from each other in terms of how they are encoded what operations they invoke what ALU supposed to do 
+so there is a controller within the CPU which has not been shown but that’s the one which will guide all this components to do the right thing at the right time typically after a operation is done there are some condition code which are set okay these often could be a part of the register file itself sometime in some processor this could be separate and these could be used subsequently for decision making and that what helps in providing branches and loops as you know in high level languages 
+so there may be very sophisticated processor or simple processor but this is the idea which is common to all of them and we will elaborate on this see specific examples of this um there are architectures which have been deviced which are which deviate from this basic idea they are some architecture which are revolutionary different we will whereas talk little bit about those time permits but this is the most common thing of most principle behind everything (refer slide time 31:21) 
+
+so although we might make an abstraction like this simply say that um a processor works in terms of simple instruction which are representation of um the real problem but there are some real situation which are often have to which often get ignored 
+okay so when you do abstraction some details are getting ignored and some information may get lost 
+one has to be careful when you are making an abstraction you you must know when what kind of simplification is being done what what is getting ignored 
+
+
+
+
+for example in your registers or memory words you will store supposedly integers and  reals okay
+but what you are storing actually is only an abstraction only a representation which may not be exact okay 
+so integers for example as you understand mathematics are unbounded okay but when you talk of real programs and real hardware they have to be bounded okay
+integer will have to be represented by a finite number of bits 
+so when you perform addition of two integer in mathematics and you perform addition of two integers and finite number of bits um the two may not exactly coincide so one has to understand these differences
+similarly what you represent as far as real numbers is concerned is again an approximation because of finite number of bits you have finite precison and you have finite range 
+so sometime there are nice properties which real number would satisfy when you are working in mathematical domain the same may not hold when you are talking of real instructions okay 
+for example um when you have to add three numbers a plus b plus c you can group them anyway okay what is called associativity is a property which you simply assume 
+but you will find that it may not necessarily hold when you are talking of numbers as abstracted in your computer system 
+so you must you will have to understand to understand a processor you need to understand its assembly language um fairly well 
+although you may not in real life program an assembly okay now (refer slide time 31:21)
+almost almost all or i should say all programming is done in the high level language but still understanding of asembly language is required at the back of your mind to understand how programs are going to behave when they are on real hardware 
+okay so what what you might if you if you have no feeling of what assembly language is what instructions are what their limitations are um you may um you may program in a world which is somewhat isolated from the physical reality 
+similarly um an abstract model of memory may say that it is simply um an unbounded array of bytes or words but physically memory is bound 
+you have limit[ed] number of word or limit[ed] number of bytes each has fixed number of bits and it may not necessarily be equally fast to read different words of memory 
+one acess to memory may be fast next time you may another access to the memory it may be slow 
+so what makes that happen so there are memories not just a flat array of bytes or words it it is a hierarchial structure in real practice 
+so um that has to be kept in mind and when you are talking of performance in program often the discussion focuses on the asymptotic complexity 
+but in real life what you have to worry about is the execution time okay so that that is a bottom line given a program and given an architecture how long it takes to execute that program on that particular architecture 
+so that’s the question which has to be answered okay from theoritical consideration um whether the program has one complexity than other it is important but ultimately um what one would like to see is in terms of milli seconds seconds and minutes if program is taking that long 
+i mentioned about embedded computers domain which which would probably if you are in that domain it will provide you opportunities for making new designs 
+it would typically require designing hardware as well as software (refer slide time 36:53)
+
+
+okay and that is harder than designing just software or designing just hardware it’s a task where one has to worry about both the issues 
+so embedded computers are um treated more as components okay embedded processor is part of a system it appears just as a component which performs some intelligent function rather than the conventional view of a number [ ] or computing engine okay 
+so um a small computer which allows you to um control a proces information or perform some communication opens up lot of application possibilities and that’s what embedded computer domain is 
+typically one has to worry about real time operation there a computer in embedded domain has to work with information as it appears in real time it has to respond to that immediately and as i just mentioned that there are lot of design opportunities um because each embedded application has a customized design you you might use a standard processor um but more often you may have to customize a processor you may have to add or subtract to the architecture even if it is not a completary design 
+so when the basic principle behind all the computers is more or less same okay the simplest part the key part is same what is the difference between the variety of processors you see   (refer slide time 38:50) 
+
+you you see different processors in different applications from tiny ones to large ones you have in desk top computers lap top computers mobile phones washing machines so on um what is the difference um all work in the principle of having an instruction set and executing instructions one by one okay what is difference in these cases of course there may be difference in instructions there is they may be tremendous difference in terms of performance or speed there may be lot of difference in terms of power consumption cost um and in terms of instructions some may be very specialized and some may be general purpose general purpose means that you do not apriory know what kind of application it is going to be used for 
+so a desk top computer for example may be used for power point presentation at one point of time next time it may be used for emailing and yet another time it may be used for listening to music whereas special purpose computer for example one lets see in mobile phone has very specific task okay it has to process the calls okay um and that function is unchanged 
+so unlike in desk top processor where you um can change the program and do different things at different times in a in a mobile phone the program is fixed and over and over again it is same program which is executed 
+so here for example you have two different CPUs um this one on the left is a pentium processor and one on the right is a again from intel same manufacturer but a micro controller 
+so it is this type of processor which is found typically in embedded application the actual chip is this small rectangular tcq see inside this circular window (refer slide time 40:45) 
+
+whereas in this case the actual chip is of that size this big space which you see um the size here is larger because of the packaging requirements you have there are some thing like forty pins through which it will connect to other circuitary 
+so to accommodate forty pins it has to be made so big um but the same device same circuitory is also available in much smaller packages roughly lets say a twice this size approximately this size okay where pins are much tiny and they are much much more closely spaced 
+so these two processors are two contrasting devices the one on the left is a general purpose processor um very high performance consumes lot of power and is much more expensive whereas one on the right is um typically used for special purpose applications it has much lower power consumption um doesn’t care about performance whereas the one on the left would work at giga hertz of frequency one on the right works only at few mega hertz um now this transparent window which you are seeing is essentially a quartz window through which you can um erase the program it has memory which can store the program (refer slide time 40:45) inside 
+so since program has not to be changed frequently you can put the program inside its memory and then forget about it okay generally if you want to make correction you cannot make some upgrade you can expose this to ultra violet light the memory content will be cared of and you can change the program but that you will not do every day 
+so once you have made it a part of a circuit typically it will um that program will remain keep on operating over and over again and its only at some infrequent time if you want to make a change you can do so um they are those were you cannot make a change you just write once and you don’t chage at all 
+
+
+
+okay so finally let me summarize with list of major topics which we are going to cover in this course um and that forms an outline of the course (refer slide time 40:45) 
+
+we not necessarily go in the order in which it is written here um we will define what is meant by performance of a computer how you define it how you measure it and how you relate it to various architectural aspects we will take up specific instruction set a simple but powerful 
+so that you can see how instructions work how you can express computation in terms of doing instructions and thereby you will get a feel of what an architecture at instruction set level looks like 
+then we will move over to the design aspects we will see how an arithmetic unit can be designed when um build okay how basic operations are carried out in terms of binary numbers and how we can build circuitory to carry out those numbers um those operations then based around based around an ALU how will you build a processor to execute the instruction 
+so ALU is just one um part of the processor you have to put register file you have to put buses you have to put program counter and you have to put a controller to make the data flow into various components properly 
+so so next will be dealing with a design um the flow of data the data path an the controller briefly i will introduce how a common technique of pipelining is used to improve performance 
+so all high performance system which you see today have pipelining of some form or the other 
+then the next important component is memory which is actually structured in a hierarchy there is cache memory there is main memory there is virtual memory 
+so you will see how all these are put together to give you a good performance at a reasonable cost and finally we will talk of input output devices input output controllers and how they connect to memory and processors um let me give you an idea of the course homepage um which i am going to use to carry out various announcements put all the information about the course here the description of all lab exercises and so on 
+so here once again there is an overview similar list of topics which i talked of incidently doctor kolin paul would be associated with me in conducting this course um he will be taking some of the tutorials and also he is joining me in preparing presentation material for this there will be teaching assistant i think more than one at the moment i know of harsh dand um he will maintain a lab homepage which you can reach from here where exercise will be announced and all instructions about lab exercises would be given 
+so even for the first lab exercise which i have announced there are some more instructions which you must see here before you make a submission 
+so guidelines for how to make submission of assignment will be given here 
+so before submitting please have a look at this um initial few exercises would be using a simulator called spin which i mentioned to you earlier (refer slide time 48:13) 
+
+you can download or you can use it in our department if you have an account but don’t worry if you don’t have an account you can use it in computer services centre um the textbooks this is the main book which will be used (refer slide time 48:34) 
+
+i don’t know if it is readable this is computer organisation design the hardware software interface by g l henasy and d a paterson this is the main book other books which will be vocationally refered to computer system design and architecture by huring and jordan and computer architecture and organisation by j p haze 
+you would notice that these terms computer design computer organisation computer architecture are often used interchangeably 
+so you you can infact in just list a book we will see that they are being used in various combinations but if you if you it little rigerously the term architecture is used in terms of describing in over all functionality whereas design refers to the hardware building aspects of it 
+we will have minors majors lab exercises um weightage of lab would be twenty percent and quizs or any other class asignment all together consist of another twenty percent 
+okay so i will stop at this and if you have any questions about what i discussed today or about the course in general you are most welcome to ask 
+[noise] um PCI i think stands for um i am not recollecting what is P for but C is for computer and I is for interface peripheral computer interface yeah 
+any other question [noise] mobile phone mobile phone um you would consider it not as a computer system but it has a computer okay infact many mobiles may have not just one multiple processors 
+so it has one or more processor it has memory and it has some IO okay you can call it a special purpose computer because as we understand computer has a processor memory and IO okay so it has all that although its main functionality from a user point of view is not computing it is communication right but seen from computer point of view yes it is a special purpose computer [noise] like what [noise] palm palm top yes palm top is a computer okay it infact it is a more general purpose computer it can it can it has various programs which can be run it can do calculation it can do your um it can be used as a organiser it can be used for communication variety of function it can be used for [noise] 
+yes i can make them available on the net yes i will infact i will put them but they would be generally a gap of a day or two 
+so its only after i have delivered same day or next day typically it will be put on the net any other question 
+okay thank you 

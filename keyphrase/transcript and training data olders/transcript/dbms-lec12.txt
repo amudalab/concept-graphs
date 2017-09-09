@@ -1,0 +1,821 @@
+
+
+                                Lecture # 12
+
+             Indexing Techniques Multi-Level and Dynamic Indexes
+
+hello and welcome in the previous session we had looked into different
+varieties of index structures index structures um are auxiliary files that
+are used in the database storage that are used to help in accessing data
+that are which are stored in the primary files index structures are
+extremely important especially when database sizes have been growing
+exponentially in the recent past and the the value of index structure is
+also more important because the main problem in database is today not the
+storage of the large amounts of data but retrieval of them
+in rather in searching data elements based on some certain criteria key
+values and so on
+we saw different levels of different kinds of index structures namely
+primary indexes clustering indexes secondary indexes on key attributes and
+secondary indexes on non-key attributes and so on
+let us briefly summarize them today um in this session before we move on to
+more complex index structures[noise]
+[Refer Slide 02.28.]
+                                    [pic]
+
+
+some key definitions in um in index structures are shown here an index file
+is a secondary or auxiliary file that that is used to help speed up data
+access that that is contained in the primary files or the data file
+an index or an access structure is the data structure that is used in these
+secondary files which um help in this um retrieval process
+and of course the data structure is associated with its corresponding
+search methods and algorithms using which we can um[noise] access these
+data elements as quickly as possible
+we said that there are two kinds of index structures primarily namely this
+single level index and the multi level index structures
+however until now we have just covered this single level index structures a
+single level index structure is a single auxiliary file that directly maps
+to addresses in the primary file
+and these addresses could be either block addresses which which stores
+physical blocks on disk or any other storage medium or they could be
+recorded results where where the address of a record is directly stored or
+a record can be directly accessed within a block
+that is the block address is augmented with the offset value which gives
+which gives us the record address
+[Refer Slide 03.57]
+                                    [pic]
+
+some more definitions which are again important for um looking into multi
+level indexes which we are going to be um exploring in this session um
+the indexing field is the field or the attribute on which the index is
+maintained and usually um the field could be either an ordering field or a
+non ordering field
+it could either be a key field or an non key field
+and the corresponding index structure for each of these fields changes
+depending on [noise] what kind of fields or what is the characteristics of
+the field that we are indexing
+a primary index is um an index that is defined on the ordering key field of
+the data element that is the field should not only be an ordering field it
+should also be a key field of the data element
+what are the properties of an ordering field and and a key field
+key field has a property that it is unique that it has a uniqueness
+constraint or that no two fields in the in the database no two key fields
+in the database have the same value
+similarly if the field is an ordering field we can be [noise] we can have
+an assurance that the primary data file is physically sorted based on this
+field
+therefore whenever we have um a key value of of key of a given value i we
+know that for all key values greater than i we have to search forward that
+is we have to search in the forward direction of the file we don't have to
+search the um reverse of the file or or all the key values until now and so
+
+there therefore these properties the the property that the file is ordered
+based on the ordering field and the field is a key field helps us in
+building a primary index there is an sparse index which can which which
+which can help access data in the primary file as efficiently as possible
+we also look into clustering index which is the index structure that is
+used when the field that is that is to be indexed is an ordering field but
+not a key field
+if the um [noise] if the clustering field is not a key field then it is no
+longer constrained by the uniqueness constraints
+that is there is no longer requirement that each of these each element in a
+in this key field has to be unique
+this poses a particular problem in the sense that a given key value may
+correspond to more than one addresses
+the last kind of index that we saw was the secondary index a secondary
+index is an index that is um that is defined over some non ordering field
+[Refer Slide 6.45]
+                                    [pic]
+that is there is no assurance that the primary data file is ordered based
+on this field
+if the primary data file is not ordered based on this field then it is not
+possible for us to store a sparse index this is because we don't know way
+to search the next record record from therefore the index has to be dense
+index structure
+ however there is still there is a further dimension to the secondary index
+data structure that is um is the key field or is the indexing field on
+which the secondary index is based upon is it a key field or a non key
+field
+if it is a key field then we have a particular kind of index structure and
+if it is a non key field then the index structure changes
+[Refer Slide 07.27]
+                                    [pic]
+
+let us briefly look at some illustrations of the three kinds of index
+structures that we are covered so far so that it helps us in understanding
+the more complex index structures that we are going to cover in this
+session
+the primary index structure is shown in this slide here this slide shown an
+index file um pointing to a different blocks in the data file
+the data file comprises of different blocks that is records structure
+organized into different blocks
+and the blocks are or the records are sorted within the blocks that is the
+the indexing attribute is not only a key attribute that is it is not only
+unique um it is also the the set of  data records are also sorted based on
+this indexing field
+when this is the case it is enough for us or it is sufficient if we are
+able to store or if are able to index just the first just the first
+attribute or or the key value within a given block
+this is called the anchoring record if you remember
+so we just store the key value of the anchoring record in the index file
+and maintain a sparse index
+the number of entries in this index file is equal to the number of blocks
+the physical blocks that that make up the primary file or the data file and
+this index file is a sparse index because it does not store all um
+attributes or all values of the key
+and this index file can afford to use fixed length records because the the
+value of the record is value of the key is known and the value of the
+address block address is also known and we don't need anything else
+therefore the primary index file can afford to use fixed length records
+[Refer Slide 09.15]
+                                    [pic]
+
+this slide shows an illustration of the clustering index indexing structure
+in a clustering index the file or the primary data file is ordered based on
+the clustering field
+however this clustering field is a non key field
+if it is a non key field then there is no guarantee or there is no
+requirement for the the field to be [noise] for the field to be unique
+so in this slide there are um there are some records that are shown ordered
+on the field called department number
+and there are repetitions in the department number that is there are three
+number of ones um for for a given department number three number of twos
+and two number of threes and so on
+however since the um since the primary file are the data file is ordered
+based on this um based on this field it is sufficient for us to know where
+does the first or where is a first occurrence of a given value and that is
+what we store in the index file
+that is the index file stores [noise] a unique values that the um ordering
+field takes up that is shown in the left hand side of the slide that is
+values like one two three and so on
+and the a pointer that points the first occurrence that is um to the block
+that contains the first occurrence of this particular value
+because the um primary file is sorted this is sufficient for us
+however there is a problem with insertion of records which needs which may
+need a clustering indexes to be altered
+and which can be rectified by assigning separate blocks for each distinct
+value of the ordering field
+[Refer Slide 11.03]
+                                    [pic]
+
+we also know that secondary index on on key field attributes um if it is a
+key field note that secondary index or index structures that are that are
+maintained on non ordering fields that is
+a fields on which um fields which do not contribute to the physical
+ordering of data records in the primary data file because they do not
+contribute to the physical order of the records in the primary file
+this has to be a dense index because we have to for each  record we need to
+know where this index or where this is actually stored
+therefore all values of the the index attribute has to be reflected in the
+indexed file in the slide here there are two files shown
+the the index file shown in the left side contains each roll number which
+is the indexing attribute and which is also the key attribute that is um
+the the roll number is unique because the roll number is unique that is
+because the attribute is a key attribute we don't have to worry about
+duplicates we don't have to worry about repetitions
+and because we don't repetition is not a problem we can afford to use
+[noise] fixed length record sizes for the indexed records that is um we
+know the length of the key attribute and we know the length of a record
+address and therefore we can afford to use fixed length records in the
+indexing file
+however the indexing file is densed and it contains as many records as
+there are records in the data file itself
+if secondary index is um is maintained on a non key attribute then we no
+longer have the luxury of the uniqueness constraint on the attribute
+that means this attribute not only does not contribute to the physical
+ordering of records on on um in the primary file
+it also is not constraint by the uniqueness constraint that is there may be
+repetitions there may be several different records having the same key
+value
+if this is the case a given key value K of i may correspond to multiple
+addresses in clustering index this was not a problem because um the because
+the indexing attribute was was an ordering attribute
+that is the um physically the um data records were ordered based on this
+based on this attribute
+therefore it was sufficient for us to know where is the first occurrence of
+this record we do not have such a luxury in um in secondary indexes because
+this indexing field is not a ordering attribure
+in such a case we use extra levels of indirection or extra level levels of
+redirection in order to reach the data record in the slide here there are
+three different kinds of  files that are shown
+[Refer slide 14.02]
+                                    [pic]
+
+the left most file is the secondary index file which shows K of i and A of
+i attributes that is key values each every distinct key value and every and
+a block address for each key value
+disk block address is not the block address of the data file but in fact a
+block of addresses a block address containing a block of addresses many
+different addresses
+so this block contains um several addresses one each for each um record
+having this particular value and they are stored block wise in(14.42) and
+block overflows are handled by chaining
+so that each different key value occurs in a separate block by itself
+[Refer Slide  14.53]
+                                    [pic]
+
+so let us briefly summarize the different characteristics of single um
+[noise] a single level indexes and see um an motivate a need for multilevel
+indexes
+um[noise] if the field or the indexing field is a key field and an ordering
+field we can use a primary index as shown in the slide here
+if the indexing field is a key field and not an ordering field we can use a
+secondary index secondary index on keys that is a dense index with fixed
+length records
+if the indexing field is a non key field and but it is an ordering field
+then we use the clustering index where we can store just the address of the
+first occurrence of every unique data value
+if the on the other hand if the indexing attribute is neither a key field
+nor an ordering field then we have to resort to secondary indexes of non
+key varieties that is we have to use an extra level of indirection
+there also other properties of the index structures that is primary index
+the sparse index where the number of records in the index file is equal to
+the number of blocks in the primary file
+[Refer Slide 16.06]
+                                    [pic]
+
+similarly a clustering index is also a sparse index where the number of
+records is equal to the number of distinct values that are present for the
+attribute
+a secondary key index is a dense index which contains as many number of
+records as there are um records in the database itself
+while the secondary non key index is a is either a dense or a sparse index
+depending on weather there are repetitions in the um in the  non key
+attribute and the number of records in the key attribute is simply the
+number of distinct values that are present in the indexing attribute in a
+data file [noise]
+[Refer slide 16.46]
+                                    [pic]
+
+the one of the main advantages of index structures like say primary index
+or dense secondary indexes and so on
+is that index files are ordered files that is their their they are ordered
+on their key values because they are ordered on their key values
+we it is possibly to search them based on binary search a binary search is
+a search technique which reduces the search space by half in each iteration
+therefore in the average case in or in a ideal case one can reach the
+particular key or the address in log n number of times log n to base two
+where n is the number of records in the um file
+on the other hand a linear search requires a requires times of the order of
+n um [noise] or n by two rather so n different um memory accesses or n
+different record accesses
+however we can note that um there are three different um entities that we
+are concerned with during physical storage
+these are the file itself which is the which is a sequence of logical
+records a record which is a logical equivalent of tuple in in a relational
+schema and the block which is purely of physical nature that is um which is
+meant for efficient data transfer between the storage media and the
+computer and whose size is determined by physical characteristics
+
+now between block and records we we have defined a notion of the term
+blocking factor where blocking factor is the number of records per block or
+how many number of records can we store in the block
+now if the blocking factor of um of an index file that is of blocks storing
+an index file is greater than two that means if a block if a disk block can
+store more than two addresses or more than two index records then we can
+actually come out with a even better method of searching
+where the the method of searching is of the um reduces by the order of
+blocking factor rather than by the order of two which is which is constant
+in binary searches these are explored in multi level indexes
+[Refer Slide 19.20]
+                                    [pic]
+a multi level index is a um is a index file which contains several
+different levels as the name suggest and each index block at a given level
+has a factor called the fan out
+[noise] a fan out is a is typically derived from a blocking factor that
+which which depends on the number of records that that one can store in a
+block
+so a fan out is the the number of different records that are or the number
+of different entries that a given index entry can point to and [noise] in a
+good implementation block accesses can be reduced from um log log n or log
+b to base two
+where b is the number of blocks in the in the index file so it can be
+reduced from log b to base two to log b to base fan out
+so this is useful if fan out is obviously greater than two if fan out is
+greater than two we can reduce the number of block access by um by
+tremendous factor
+[Refer Slide 20.31]
+                                    [pic]
+
+the figure in this slide shows a two level index structure or where index
+structures are categorized into first level and second level
+the first level is called the base level and the second level is called the
+top level and for the sake of clarity i have also shown um how index
+records are divided into blocks um at at the base level
+it is divided into um two here the blocking factor is two but usually the
+blocking factor is more than two
+if you can notice the slide carefully the way the slide or um the way the
+index um index stores information is that there are different different
+levels in which information is stored at the top level um there are just
+two entries k of i entries two and ten
+this entry says that everything between two and the next number can be
+found in this index file
+that is every key value between two that is greater than or equal to two
+and less than ten can be found in this index file similarly every um key
+value that is greater than ten and there is nothing below
+therefore which is just greater than ten can be found in the index file
+that is pointed to by this pointer um
+the the other the second level index file is also a replica of the top
+level index file in the sense that um everything greater than or equal to
+the key value that is specified here and less than the key value of the
+next record is pointed to by the the present address
+that is this is an indexing scheme that is um that that indexes an ordering
+field and and also a key field
+therefore all records starting from two to less than five can be found here
+and all records starting at five and less than ten can be found here and so
+on
+[Refer Slide 22.39]
+                                    [pic]
+
+the first level or the base level is a usual primary index that is
+maintained on a sorted file the second level is a actually a primary index
+on the primary index because the index file itself is a sorted file
+and it is sorted based on the key attribute we can store another primary
+index on this index file and we can continue this process to any number of
+levels depending on the size of our database
+so we could have a third level that stores an index or that stores a
+primary index on the second level and so on [noise]
+and at each level the number of entries in the next level is determined by
+the fan out or the blocking factor
+here the fan out was two therefore um what we ended up seeing was a binary
+tree structure
+however in general the fan out would is usually much more a block could
+contain many number of records many number of index entries much more than
+two
+therefore um at at each level from level two to level three for example um
+fan out number of records that is a blocking factor number of records can
+be indexed using just one index structure therefore the number of entries
+um starts reducing exponentially by a factor of fan out
+so this again um depicts the same thing that is um at each level the number
+of index entries is getting reduced by half
+[Refer Slide 24.19]
+                                    [pic]
+
+in order for a multi level index to be efficient enough um to be more
+efficient than primary index there is an important consideration of the
+multi level index structure
+if you are familiar with with data structures you might have come across a
+data structure called tree
+which is um which is a data structure used for representing hierarchies
+a multi level index structure is useful only when the tree structure that
+is um that is um specified by the multi level index structure is balanced
+what is meant by a balance tree it is well possible for us to to have a
+multi level index structure of the kind that is shown in the left hand side
+of this this slide shown in this figure
+in the left hand side as you can see there are several levels to the um to
+the index structure and um [noise] and in the worst case one has to make
+four different one two three and four different traversal's of of different
+index um files in order to find a given record
+on the other hand the right hand side of the figure has the same number of
+nodes or here each node or each circle here represents an index file and
+the the right side of the um figure has the same number of index files
+however a smaller number of levels and the load or or the number of index
+files is more or less evenly balanced across all this across the entire
+tree
+in such a case in the average the average behavior of the um such a tree or
+even the worst case behavior of a balance tree is only log n log n to base
+fan out while the worst case behavior of an unbalanced tree is is of the
+order of n different block accesses and which is no different from
+performing a linear search over these different index files
+therefore an order for multi level indexes to be useful they have to they
+have to form a balanced tree
+[Refer Slide 26.42]
+                                    [pic]
+
+so um whenever insertions and deletions happen in a data file containing a
+multi level index the balanced property of the index trees should be
+maintained and um this is especially problematic in multi level indexes
+because all index files are physically sorted files and we need to make a
+number of different um number of different adjustments at number of
+different levels
+if you have if you have just storing several different primary index
+structures in order to um in order to maintain the balance tree property of
+the index structure
+an approach to overcome this is what is called as dynamic multi level
+indexes
+that is an index structure changes itself dynamically by as a little a
+number of operations as possible so that the balanced property of the index
+tree is maintained
+[Refer Slide 27.41]
+                                    [pic]
+
+the most commonly used index um dynamic index structures are what are
+called b-trees and b plus trees
+let us have a look at these two index structures in a little more detail
+here a b tree is a is an index tree which is of course as the name suggest
+a tree data structure
+where each node has a pre determined maximum fan out given by p which is of
+course when we are implementing it which would be related to bfr that is
+the blocking factor
+
+there are several terminologies we use when we are talking about b tree a
+given block that is allocated to a b tree is called a node in the b tree as
+we will see later um a block corresponds to tree node in the logical tree
+structure that the b tree forms
+a special kind of node called the root node forms the access to the b tree
+that is it is the top most node in the tree
+and each node has a maximum of p children that is the fan out number of
+children and of course each node has a maximum of one parent and the the um
+i am saying the maximum of one parent because the root node will not have
+any parent node
+so it is either zero or one parent depending on whether it is a root node
+or a non root node and there are what are called as leave nodes that are
+the lowest level nodes that is nodes which do not have any children and any
+node in the tree that is not a root node um that is  neither a root node
+and nor a leaf node is called an internal node
+and of course we have already defined the notion of parent and children
+that is when when a node points to some other node then it is said to be a
+parent of the other node and the other node is said to be the child of the
+node which which is pointing to it
+[Refer Slide 29.41]
+                                    [pic]
+
+this slide shows a typical structure of a b tree node this node is nothing
+but a block when it is implemented on disk as you can see here there are
+several um[noise] there are several aspects or several fields to this node
+in a b tree
+one can easily notice that there are several pointers um in fact there are
+precisely maximum of p pointers in the b tree
+each pointer which um which points to a triangle represents a sub tree that
+that can be pointed to by the by this node
+of course a sub tree can be null if this is a leaf node [noise] or if a
+pointer does not exist and um [noise] sub trees are filed in such a way
+that um there are filled leftmost
+that is you can you cannot have a left most sub tree as null but some
+internal sub trees to be filled up and and left most sub tree being null
+and in addition to the sub tree pointers or pointers to other nodes there
+are several different [noise] key and data pointers
+that is there are several blocks here that contain a key value under
+pointer to the record containing this key value
+similarly there is another key value and and pointer to that record and and
+ so on
+so so there are several key values that that are present and pointers to
+where the key values are present in the multiple in the primary file in
+addition to um maximum of p pointers to other nodes in the tree
+what are the properties of these what are the properties of such nodes or
+what are the constraints that a b tree has to adjure to
+[Refer Slide 31.30]
+                                    [pic]
+
+for a node containing p minus one keys note that if a node can can point a
+maximum of p sub trees it can contain a maximum of p minus one keys because
+um in as shown in the previous slide um
+their keys embed or or this pointers embed the keys that is their one
+pointer um on the left most side of the left most key and one at the right
+most side of the right most key and one pointer between every two keys in
+the node
+the keys are always stored in a sorted sequence that is if there are p
+minus one keys then k one is less than k two is less than etcetera until K
+of p minus one
+for any data element in a sub tree that is pointed to one of the pointed to
+the by one of the sub tree pointers
+let us say in some sub tree P i for any data element in that sub tree p i
+that data element should be less than the data element of of the left most
+key that is K of i minus one and or rather it should be greater than the
+the left most key um the right most left key that is K of i minus one and
+should be less than the the leftmost right key that is K of i
+[Refer Slide 33.02]
+                                    [pic]
+
+so more constraints of a b tree nodes   each node can have at most  p tree
+pointers of course and each node except the root node and the leaf nodes
+should have at least sealing of p by two tree pointers what is sealing of p
+by two um divide p by two and take the upper integer value of the this
+division
+so they they must have at least more than half of their um pointers to be
+filled up as part of this um as part of the tree building procedure
+the root node should have at least two tree pointers unless it is the only
+node in the tree that is um unless root node is also a leaf node
+it should have at least two children as part of the tree and all leaf nodes
+are the same level what is the the level of a node in a tree
+the level is simply the distance in terms of the number of hops from the
+root node
+all leaf nodes are maintained at the same level in the tree so this is the
+constraint that has to be maintained and suitable algorithm have to be um
+or suitable algorithms are created so that these constraints are maintained
+
+[Refer Slide 34.22]
+                                    [pic]
+
+we shall be looking at insertion and deletion algorithm for b trees after
+we have a look at the b plus trees in fact the insertion and deletion
+algorithms for for both of these tree structure are the same except that in
+b plus tree has greater expressiveness or b plus trees allows for different
+kinds of accessing different varieties of accessing um the data elements in
+addition to B trees
+therefore let us have a look at some definitions of B plus trees and their
+constraints before we look at insertion algorithms
+B plus trees is a most common index structure that is found in many of the
+commercial RDBMS
+it is very similar to a b tree except that the leaf and non leaf nodes have
+different structures in a in a b tree there is no difference between a leaf
+node and a non leaf node both of them have a same structure
+that is they have a set of address pointers and the set of key values and
+data pointers [noise]
+the the leaf nodes form a a separate kind of index containing um containing
+each different key value in a sorted form and pointers to the corresponding
+data elements um
+that is leaf nodes are linked together so has to provide ordered access to
+the data file records
+[Refer Slide35.48]
+                                    [pic]
+
+a non leaf node of a b plus tree is depicted in the following figure and as
+you can see it is quite similar to a non leaf node in a or it is quite
+similar to a node of a b tree that is it contains a two kinds of entities
+that is sub tree pointers or block pointers and key values but um the the
+only difference is that there are no data values here
+that is there are just key values k one k two etcetera there are no data
+pointers as part of this node and of course the same set of constraints
+hold that is for any x between k one and k two the the value of all the
+keys in that sub tree x should be should be greater than k one that is the
+right most left key and less than k two which is the left most right key
+[Refer Slide 36.41]
+                                    [pic]
+
+a leaf node in a b plus tree is shown in the following figure where um
+there is a there are no um sub tree pointers because there are no children
+for the leaf nodes and there are only a set of keys and data pointers
+that is there is key one and data pointer to the record containing key one
+there is key two and that the data pointer containing to record pointing to
+record containing key two and so on
+and at the end of this block there is a um pointer pointing to next logical
+leaf node or or the left logical block in this sequence
+therefore starting from the left most leaf node we can access the entire
+database in a sorted form just by following the leaf nodes and and the
+links to the left next leaf node
+[Refer Slide 37.37]
+                                    [pic]
+
+what are the properties of leaf nodes keys in a leaf node have to be
+ordered just like the property that we saw in b trees and where where keys
+have to be ordered within a leaf node
+we should be able to access um each leaf node in in key sequence that is k
+one is less than k two less than k n if there if there are n different keys
+in a leaf node and just like the nodes in a b tree each leaf node should
+have at least half of its keys filled up
+that is a sealing of p by two number of keys should be filled up and all
+leaf nodes should be at the same level as far as the overall b plus trees
+is concerned
+[Refer Slide 38.23]
+                                    [pic]
+
+let us first look at how we perform search in B trees and B plus trees um
+we are going to be looking at searches and additions and deletions in B
+plus trees and um the  corresponding algorithm for B tree can be derived
+with um in a analogous fashion in fact that um algorithm for B trees are
+little simpler than that of B plus trees
+the searching algorithm over B plus trees is a generalization of binary
+search here it is a peary search in the sense that um where where P is a
+fan out of each block
+so just like binary search we we go about um with a given key and starting
+from the root node of the tree that is given a search key k start form the
+root node
+if the key is present in the root node in the current node itself then um
+then we are successful
+that is the key corresponds to um[noise] sorry the the from the key we we
+are able to um end up find the corresponding leaf node from where we can
+find a corresponding data pointer
+however if the if the current node is a leaf node in the B plus tree and
+key is not present then we can be sure that the key is not available in the
+in the database itself
+then then we return not available or else what we do is we search for the
+the different pointers such that the key value that we are looking for is
+embedded between the left and the right most keys
+that is um if we are searching for um if we are searching for the first
+left um first sub tree that is P one then our key pointer should be lying
+between k one and k two
+if we are searching um if we want to search um any P i then our well um
+then our um then we have to search then our value key value should lie
+between K i and K i plus one it is it is a matter of terminology
+the slide shows K i minus one and K i it is a matter of terminology whether
+how we use i minus one and i that is we can either say K i minus one and k
+i or k i and k i plus one and we continue this this search in the left sub
+tree in in a recursive fashion by by going back to step two and searching
+in that node and searching in a sub tree and and so on
+[Refer Slide 41.06]
+                                    [pic]
+
+what about insertions this is the main contribution of B plus trees in the
+in the sense that we we will be able to insert records while maintaining
+the balanced property of the trees
+now we should be illustrating the process of insertion with an example and
+we shall not be going into the exact algorithm of of insertion which can be
+referred to in in um in any standard text books
+however the the illustration serves to help us clear the or help us to
+clarify the notion of how insertion happens within a B plus tree um
+the logic behind insertion in a B plus tree to begin with B plus tree
+starts with a single node which is the root node and which is also leaf
+node
+it has no parents and it has no children and um the the first key that that
+is inserted into the database goes into the um goes into the root node and
+because it is a leaf node it just points to the the corresponding data
+pointer
+as in when nodes will up that is as in well more and more record are
+inserted and more and more keys have to be incorporated into the tree nodes
+get filled up as isn't  when they their they are filled up nodes are split
+um and and this split nodes are made into children of a newly created node
+and the key values are split or also split correspondingly across these
+these two nodes and the and and the new parent node is updated accordingly
+and this split operation is cascaded to levels above so that we um end up
+with just one tree starting from one root node following um following until
+the leaf nodes and in the balanced fashion
+[Refer Slide 43.11]
+                                    [pic]
+
+let us take an example um to illustrate our point let p equal to two that
+is the fan out factor for just for the sake of simplicity we shall be
+assuming that the fan out factor is two the um that is each node has only
+two has at most two children each internal node or root node has at most
+two children
+and let us consider a sequence in which records are different keys are
+inserted and a possible sequence is shown in the slide here that is um keys
+are inserted in sequence five eight three seven two nine and so on
+so um they appear in some arbitrary sequence that the sequence need not be
+ordered and we we cannot we cannot ascribe any particular property to which
+in which keys are inserted
+initially um one when we insert five we just have one root node and one key
+node and data pointer and nothing else in the tree
+when we insert eight it is still just one root node that is shown in the
+figure here and with two key pointers five and eight and two data pointers
+two corresponding data pointers
+however when then next key is inserted that is key value three is inserted
+this node overflows that because P equal to two we cannot accommodate any
+more keys in this node
+therefore we require a spilt in this key node how do we split this node
+[Refer Slide 44.47]
+                                    [pic]
+
+note how nodes have been split in this u in this slide here initially we
+started with a root node which was also leaf node
+when you spit this node we get one more leaf node that is which is shown in
+right most side of this slide here
+and another intermediate node that is a node that points to two leaf nodes
+in a B plus tree node that the intermediate node has a different um
+structure than the leaf nodes
+this has to be incorporated so um five and eight were present in the in the
+tree
+and now um key value three has to be inserted because three is less than
+five and note that the keys always within any leaf nodes the keys always
+have to be in sorted form
+therefore the the key three has to be has to be inserted to the left of
+five to the left of this um pointer called five
+therefore we get a um we get two different leaf nodes one containing three
+and other containing five and eight
+there is there is a small bug in there is a small error in this slide that
+is the left most node  contains just the um just the key three and the
+right most node contains the um pointers five and eight
+and the non leaf node or um or [noise] or the intermediate node is suitably
+updated so that three appears here that is everything less than or equal to
+three appears in this node and everything greater than three appears in
+this pointer
+there is nothing else to be placed here because we don't have any other
+keys um to to begin
+therefore assume that we have got keys in the sequence three five and eight
+we would end up with a tree as shown in this figure here
+now suppose seven has to be inserted now seven can be inserted into this
+leaf node without any problem
+that is um seven gets inserted here and and the nodes and the key values
+are reordered earlier we had just eight in this node and one seven was
+inserted the key values were reordered so that the keys are always sorted
+and there is no overflow
+however the next um key that is key value two causes another overflow that
+is key value  two has to be inserted at the left most left most side here
+this causes causes an overflow and this overflow has to be cascaded up or
+has to go up the level in the insertion or in the B tree
+[Refer Slide 47.32]
+                                    [pic]
+
+therefore um we get a B tree of the of the following form here that is um
+both key values in the intermediate node now get filled and the
+intermediate node now points to three different leaf nodes
+the insertion of nine that is the next key value again forms a overflow
+because nine has to be inserted beyond the last block here um
+it try the algorithm tries to insert nine into the last block which fails
+and then a new node is created
+[Refer Slide 48.10]
+                                    [pic]
+
+now because a new node is created and um we encounter another overflow this
+overflow happens in the the um at the level above that is because a new
+node is created we need four different pointers
+however a node can accommodate only three different pointers here therefore
+we need to we need to spit even the the node above and and introduce a new
+level into the tree
+
+therefore the corresponding tree that that gets formed is shown in this
+figure here that is the next level node is also split so that a third level
+is created and then um the keys are more or less uniformly distributed
+across the entire tree
+as you can notice here the property or the balance property of the tree is
+maintained as in when the insertion is happening and all leaf nodes are at
+the same level
+that is the height from the from the root of the tree is is maintained at
+the same level for every leaf node in the index structure
+[Refer Slide 49.16]
+                                    [pic]
+
+so that was a brief illustration of of how keys are inserted into a B plus
+tree and um we shall not be going into the exact algorithm in order to in
+order to insert keys in a B plus tree
+deletion of keys have to contend with an analogous problem that is the
+problem of underflow
+in insertion we had the problem of overflow and in deletion we have the
+problem of underflow
+an underflow happens when a node contains less than p by two floor of p by
+two keys less than or equal to floor of p by two keys
+that is note that there was a constraint that alteast half of the keys in a
+node has to be filled up that is more than half rather
+so if it contains less than half then um of keys the um in in a node then
+there is a underflow whenever there is a underflow a node is merged with
+its sibling in order to bring down number of um levels in a tree
+we shall not be going into deletion algorithms also in in detail here
+let us um move on to the last aspect of indexing structures namely um how
+do we deal with index structures on multiple attributes
+until now we have um we have assumed that indexing attributes are are the
+fields on which are indexes are maintained or simple indexes that is simple
+attributes
+however um the indexes could some times be maintained on composite
+attributes that is a um a set of attributes forming a key attribute
+that is um for example department id and employee number combine to combine
+um to form a key attribute is is a composite attribute
+how do we maintain indexes on a composite attribute there are several
+different strategies that are variations or extensions of um existing
+indexing structures and we shall briefly summarize some of the main
+techniques used for indexing multiple attributes
+[Refer Slide 51.23]
+                                    [pic]
+
+one simple way is to index multiple attributes that is maintain a sorted
+file a primary index of multiple attributes is to have an ordered index on
+multiple attributes
+that is instead of sorting the file on just one attribute we sort the file
+on two attributes that is sorted based on first attribute and among them
+sort based on second attribute um
+which is which is the simplest solution possible but which is which can
+give us only a primary index as as we have seen earlier that is it has to
+be a um ordering attribute and a key attribute
+the second um [noise] the second strategy for dealing with composite
+attributes is to use what is called as partition hashing
+[Refer Slide 52.13]
+                                    [pic]
+
+partition hashing is a hashing technique which takes a composite attribute
+that is n different key elements um pertaining to this attribute and um and
+returns n different bucket numbers
+we then um we then transform this into a single bucket address by
+concatenating all these bucket numbers to form the bucket address
+so that is another technique for dealing with composite attribute the third
+technique that [noise] is used especially in um in applications like data
+warehouses is to use the notion of grid files
+[Refer Slide 52.50]
+                                    [pic]
+
+a grid file is a file that that that establishes that establishes grid
+structure what is a grid structure we can use a grid structure when we know
+the entire range in which a key value can be um can um can be spread upon
+for example if we know that the roll number of a student ranges form zero
+one to one fifty we know the entire range of the set of all possible roll
+number
+and if you are fairly sure that the distribution of key values in this
+range is fairly uniform then we can split this range into several different
+buckets
+now such splitting of of key ranges into buckets and combining this
+different buckets forms a grid structure
+and these grid structures form a forms a matrix or or a um or a hypercube
+which can be stored within a single file using um several techniques called
+row major techniques column major techniques and and other techniques
+called space filling curves and so on um
+using which they can be stored within a single file this slide shows such a
+such an illustration
+[Refer Slide 54.03]
+                                    [pic]
+
+
+that is there are two different key values roll number and grade roll
+numbers are ranging from zero zero one to one twenty five and they are
+divided into five different ranges similar five different buckets
+similarly grades are divided into five different ranges A B C and D and the
+combinations of this forms a grid and each cell in the grid corresponds to
+a set of bucket address or or a set of block addresses which contain
+records um that satisfy both this constraints of keys so so each pool or
+each cell corresponds to bucket pool
+[Refer Slide 54.42]
+                                    [pic]
+
+this brings us to the end of this session let us quickly summarize the main
+topics that we have covered in this session
+we covered several kinds of multi level indexes and multi level index has
+index structures has several different levels under usually organized in
+the form of a tree
+a tree contains a root node which which is the entry to the multi level
+index structure um several leaf nodes and many internal internal nodes that
+form the tree structure and for a tree structure to be efficient it has to
+be balanced and um balancing or self balancing tree structures are what are
+implemented in dynamic multi level indexes in which we saw B trees and B
+plus trees
+and we also insertion how insertion and deletions are handled in B plus
+trees
+lastly we looked at some strategies by um using which we can um we can
+maintain index structures on multiple attributes that brings us to the end
+of this session

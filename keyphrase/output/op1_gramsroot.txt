@@ -1,0 +1,1872 @@
+operating system lecture::operating system lecture
+system lecture notes::system lecture notes
+lecture notes pcp::lecture notes pcp
+introduction to operating::introduction to operating
+operating system operating::operating system operating
+system operating system::system operating system
+primarily provides services::primarily provides services
+services for running::services for running
+fact that user::fact that user
+provided with services::provided with services
+facilitate the provisioning::facilitate the provisioning
+services the central::services the central
+engine called cpu::engine called cpu
+cpu a system::cpu a system
+system should make::system should make
+user s application::user s application
+unit a user::unit a user
+application when required::application when required
+facility to communicate::facility to communicate
+game for instance::game for instance
+output usually provided::output usually provided
+times the user::times the user
+generate an output::generate an output
+printed document output::printed document output
+applications document design::applications document design
+document design accounting::document design accounting
+design accounting e-mail::design accounting e-mail
+accounting e-mail image::accounting e-mail image
+e-mail image processing::e-mail image processing
+image processing operating::image processing operating
+games we notice::games we notice
+application requires resources::application requires resources
+resources for processing::resources for processing
+processing information storage::processing information storage
+storage of information::storage of information
+mechanism to inputting::mechanism to inputting
+inputting information provision::inputting information provision
+provision for outputting::provision for outputting
+information these service::information these service
+facilities are provided::facilities are provided
+nature of application::nature of application
+offers generic services::offers generic services
+services to support::services to support
+operations these operations::operations these operations
+operations in turn::operations in turn
+facilitate the applications::facilitate the applications
+applications mentioned earlier::applications mentioned earlier
+operation is application::operation is application
+neutral and service::neutral and service
+service specific user::service specific user
+user and system::user and system
+point of view::point of view
+view the primary::view the primary
+application in launching::application in launching
+launching an application::launching an application
+clue which application::clue which application
+clues for launching::clues for launching
+launching a browser::launching a browser
+document preparation application::document preparation application
+human computer interface::human computer interface
+interface which helps::interface which helps
+helps to identify::helps to identify
+identify an application::identify an application
+hides a lot::hides a lot
+lot of details::lot of details
+selecting the application::selecting the application
+examine the programs::examine the programs
+details of character::details of character
+character reading program::character reading program
+program are hidden::program are hidden
+write a program::write a program
+program for instance::program for instance
+printf command helps::printf command helps
+helps to generate::helps to generate
+generate the desired::generate the desired
+form of output::form of output
+figure essentially depicts::figure essentially depicts
+depicts the basic::depicts the basic
+user stand point::user stand point
+users and applications::users and applications
+ensure that system::ensure that system
+resources are utilized::resources are utilized
+efficiently for instance::efficiently for instance
+server each user::server each user
+memory the system::memory the system
+determine which programs::determine which programs
+programs are active::programs are active
+await some form::await some form
+form of input::form of input
+input or output::input or output
+temporarily from engaging::temporarily from engaging
+engaging the processor::engaging the processor
+processor this strategy::processor this strategy
+strategy alone enhances::strategy alone enhances
+enhances the processor::enhances the processor
+policy and algorithm::policy and algorithm
+algorithm to allocate::algorithm to allocate
+allocate the system::allocate the system
+resources the evolution::resources the evolution
+worthwhile to trace::worthwhile to trace
+trace some developments::trace some developments
+form of computing::form of computing
+mainframe computer system::mainframe computer system
+system the mainframe::system the mainframe
+air conditioned area::air conditioned area
+room like facility::room like facility
+facility the users::facility the users
+deck of punched::deck of punched
+cards which encoded::cards which encoded
+encoded the list::encoded the list
+list of program::list of program
+instructions the mode::instructions the mode
+mode of operation::mode of operation
+user would prepare::user would prepare
+prepare a program::prepare a program
+cards the header::cards the header
+job control cards::job control cards
+deck of cards::deck of cards
+collect such jobs::collect such jobs
+users computer hardware::users computer hardware
+computer hardware operating::computer hardware operating
+hardware operating system::hardware operating system
+operating system system::operating system system
+system and application::system and application
+application programs user::application programs user
+user n operating::user n operating
+group the submitted::group the submitted
+jobs as fortran::jobs as fortran
+jobs that required::jobs that required
+required considerable processing::required considerable processing
+jobs which required::jobs which required
+required a short::required a short
+short and limited::short and limited
+set of jobs::set of jobs
+jobs was considered::jobs was considered
+batch of short::batch of short
+short fortran jobs::short fortran jobs
+jobs the output::jobs the output
+separated and turned::separated and turned
+area this scenario::area this scenario
+scenario clearly shows::scenario clearly shows
+program would engage::program would engage
+engage the processor::engage the processor
+processor this meant::processor this meant
+processor would wait::processor would wait
+i is completed::NNP is completed
+completed this meant::completed this meant
+meant that processor::meant that processor
+processor would idling::processor would idling
+speeds were orders::speeds were orders
+orders of magnitude::orders of magnitude
+led to poor::led to poor
+processor the systems::processor the systems
+systems that utilized::systems that utilized
+utilized the cpu::utilized the cpu
+cpu and memory::cpu and memory
+multiple users connected::multiple users connected
+shown in table1.1::shown in table1.1
+principle of stored::principle of stored
+stored program operation::stored program operation
+scheme of things::scheme of things
+memory and executed::memory and executed
+70s this basic::70s this basic
+operation was altered::operation was altered
+altered and system::altered and system
+system designers contemplated::system designers contemplated
+program is awaiting::program is awaiting
+engage the cpu::engage the cpu
+storing multiple executables::storing multiple executables
+multiprogramming with multiple::multiprogramming with multiple
+multiple excutables residing::multiple excutables residing
+policy to allocate::policy to allocate
+memory and processor::memory and processor
+utilizing the processor::utilizing the processor
+process is engaged::process is engaged
+engaged in input::engaged in input
+output the processor::output the processor
+output are higher::output are higher
+leads to higher::leads to higher
+multiprogramming while multiprogramming::multiprogramming while multiprogramming
+multiprogramming did lead::multiprogramming did lead
+lead to enhanced::lead to enhanced
+operated in batch::operated in batch
+batch processing mode::batch processing mode
+80s the system::80s the system
+system designers offered::system designers offered
+offered some interactivity::offered some interactivity
+capability to access::capability to access
+give every user::give every user
+user an illusion::user an illusion
+resources were operating::resources were operating
+executed to strengthen::executed to strengthen
+strengthen this illusion::strengthen this illusion
+illusion a clever::illusion a clever
+user was allocated::user was allocated
+allocated a slice::allocated a slice
+allocated time slice::allocated time slice
+slice a users::slice a users
+executed now imagine::executed now imagine
+precisely time sharing::precisely time sharing
+sharing systems attempted::sharing systems attempted
+systems attempted giving::systems attempted giving
+giving each user::giving each user
+user a small::user a small
+small time slice::small time slice
+slice and returning::slice and returning
+lack of continuity::lack of continuity
+continuity in fact::continuity in fact
+carries an impression::carries an impression
+systems clearly require::systems clearly require
+require several design::require several design
+considerations these include::considerations these include
+programs may reside::programs may reside
+allocated to process::allocated to process
+process each program::process each program
+protect a users::protect a users
+program and data::program and data
+i and processing::NNP and processing
+processing bulk storage::processing bulk storage
+storage on disks::storage on disks
+disks clearly witnessed::disks clearly witnessed
+witnessed a phenomenal::witnessed a phenomenal
+helped to implement::helped to implement
+implement the concept::implement the concept
+concept to offer::concept to offer
+offer an illusion::offer an illusion
+illusion of extended::illusion of extended
+storage the concept::storage the concept
+concept of virtual::concept of virtual
+vogue the virtual::vogue the virtual
+storage essentially utilizes::storage essentially utilizes
+utilizes these disks::utilizes these disks
+disks to offer::disks to offer
+offer enhanced addressable::offer enhanced addressable
+enhanced addressable space::enhanced addressable space
+space the fact::space the fact
+memory also meant::memory also meant
+meant that multi-programming::meant that multi-programming
+multi-programming could support::multi-programming could support
+programs in fact::programs in fact
+required active parts::required active parts
+out this means::out this means
+number of users::number of users
+users can access::users can access
+access the system::access the system
+satisfy the notion::satisfy the notion
+notion that computing::notion that computing
+facility be brought::facility be brought
+user as opposed::user as opposed
+facility is brought::facility is brought
+sense in fact::sense in fact
+reflects the notion::reflects the notion
+notion of computing::notion of computing
+personal productivity tool::personal productivity tool
+productivity tool operating::productivity tool operating
+swapping of program::swapping of program
+program parts main::program parts main
+parts main memory::parts main memory
+early 1970s bell::early 1970s bell
+1970s bell laboratory::1970s bell laboratory
+bell laboratory scientists::bell laboratory scientists
+1980s a forerunner::1980s a forerunner
+forerunner to current::forerunner to current
+cp the decade::-NONE- the decade
+promise of networked::promise of networked
+systems one notable::systems one notable
+athena at mit::athena at mit
+mit in usa::mit in usa
+usa the project::usa the project
+forms the basis::forms the basis
+developments the client-server::developments the client-server
+major fall out::major fall out
+out the users::out the users
+windows also provided::windows also provided
+provided many widgets::provided many widgets
+widgets to support::widgets to support
+support convenient human::support convenient human
+convenient human computer::convenient human computer
+human computer interfaces::human computer interfaces
+create multiple windows::create multiple windows
+windows in fact::windows in fact
+offers a virtual::offers a virtual
+front-end terminal connection::front-end terminal connection
+launch different applications::launch different applications
+experience on modern::experience on modern
+environment cp based::environment NNP based
+cp based computer::NNP based computer
+based computer networking::based computer networking
+computer networking topologies::computer networking topologies
+topologies like star::topologies like star
+ring and general::ring and general
+experimented with protocols::experimented with protocols
+protocols for communication::protocols for communication
+communication amongst computers::communication amongst computers
+issues in greater::issues in greater
+front the development::front the development
+development was aimed::development was aimed
+aimed at relieving::aimed at relieving
+relieving the processor::relieving the processor
+processor from handling::processor from handling
+handling input output::handling input output
+input output responsibilities::input output responsibilities
+cards to drive::cards to drive
+drive the display::drive the display
+display the processor::display the processor
+relieved from regulating::relieved from regulating
+i this made::NNP this made
+utilize the processor::utilize the processor
+1990s the computer::1990s the computer
+suite of network::suite of network
+protocols were implemented::protocols were implemented
+implemented the growth::implemented the growth
+area also resulted::area also resulted
+resulted in giving::resulted in giving
+users a capability::users a capability
+capability to establish::capability to establish
+communication between computers::communication between computers
+broadly called network::broadly called network
+software and application::software and application
+embed the computer::embed the computer
+regulating the temperature::regulating the temperature
+typical process control::typical process control
+process control scenario::process control scenario
+control scenario monitoring::control scenario monitoring
+scenario monitoring initializes::scenario monitoring initializes
+initializes and activates::initializes and activates
+activates the hardware::activates the hardware
+hardware input reads::hardware input reads
+reads the values::reads the values
+values from sensors::values from sensors
+sensors and stores::sensors and stores
+register decision checks::register decision checks
+range output responds::range output responds
+temperature monitoring chemical::temperature monitoring chemical
+monitoring chemical process::monitoring chemical process
+chemical process operating::chemical process operating
+program to raise::program to raise
+raise an alarm::raise an alarm
+alarm when temperature::alarm when temperature
+band the desired::band the desired
+sequence of operational::sequence of operational
+measure input temperature::measure input temperature
+perform an output::perform an output
+task the computer::task the computer
+variety of operational::variety of operational
+airlines reservation system::airlines reservation system
+provide the resources::provide the resources
+processing user access::processing user access
+storage and management::storage and management
+management of information::management of information
+protection of information::protection of information
+information against accidental::information against accidental
+accidental and intentional::accidental and intentional
+intentional misuse support::intentional misuse support
+support for data::support for data
+data processing activities::data processing activities
+processing activities communication::processing activities communication
+resource management operating::resource management operating
+support for multi-user::support for multi-user
+multi-user error handling::multi-user error handling
+error handling communication::error handling communication
+handling communication support::handling communication support
+support over network::support over network
+safety critical application::safety critical application
+critical application run::critical application run
+run and fail::run and fail
+fail gracefully operational::fail gracefully operational
+gracefully operational view::gracefully operational view
+principle of operation::principle of operation
+computer system current::computer system current
+system current systems::system current systems
+systems are based::systems are based
+principle the principle::principle the principle
+stored in memory::stored in memory
+executed by fetching::executed by fetching
+fetching an instruction::fetching an instruction
+cycle of operation::cycle of operation
+operation is fetch::operation is fetch
+fetch an instruction::fetch an instruction
+interpret the instruction::interpret the instruction
+execute the instruction::execute the instruction
+systems allow multiple::systems allow multiple
+simultaneously for instance::simultaneously for instance
+mail program receiving::mail program receiving
+program receiving mails::program receiving mails
+clock to display::clock to display
+engaged in browsing::engaged in browsing
+browsing a word::browsing a word
+schedule the processor::schedule the processor
+simultaneously without giving::simultaneously without giving
+giving an impression::giving an impression
+divided and scheduled::divided and scheduled
+application an operational::application an operational
+schedule and allocate::schedule and allocate
+processor time operating::processor time operating
+operating cycle memory::operating cycle memory
+cycle memory map::cycle memory map
+memory map operating::memory map operating
+memory executes program::memory executes program
+program and access::program and access
+access data input::access data input
+data input output::data input output
+input output devices::input output devices
+output devices communication::output devices communication
+communication with devices::communication with devices
+devices mutual exclusion::devices mutual exclusion
+mutual exclusion schedule::mutual exclusion schedule
+schedule the usage::schedule the usage
+usage of shared::usage of shared
+device and fair::device and fair
+fair access shell::fair access shell
+modern computer system::modern computer system
+system the peripheral::system the peripheral
+peripheral devices communicate::peripheral devices communicate
+mode .typically human::mode .typically human
+.typically human input::.typically human input
+input is considered::input is considered
+desire to guide::desire to guide
+guide the operation::guide the operation
+operation for instance::operation for instance
+key board input::key board input
+input these require::input these require
+require immediate attention::require immediate attention
+attention by needing::attention by needing
+interruption service operating::interruption service operating
+processes and tools::processes and tools
+support a notion::support a notion
+program in execution::program in execution
+multiple applications active::multiple applications active
+processes often applications::processes often applications
+applications may spawn::applications may spawn
+inter process communication::inter process communication
+process communication forms::process communication forms
+forms the primary::forms the primary
+basis of distributed::basis of distributed
+network and computers::network and computers
+machine and seek::machine and seek
+machine the machine::machine the machine
+seeking the services::seeking the services
+machine offering services::machine offering services
+content for browsing::content for browsing
+server all modern::server all modern
+modern oss support::modern oss support
+oss support client-server::oss support client-server
+support client-server operations::support client-server operations
+operations for service::operations for service
+service provisioning tools::service provisioning tools
+efficiently in addition::efficiently in addition
+device handling utilities::device handling utilities
+general purpose utilities::general purpose utilities
+set of packaged::set of packaged
+tools the tools::tools the tools
+terms of higher::terms of higher
+level of operations::level of operations
+absence of tools::absence of tools
+tools and tool::tools and tool
+required to write::required to write
+write a fresh::write a fresh
+utility in unix::utility in unix
+unix it supports::unix it supports
+identification of fields::identification of fields
+file with multi::file with multi
+multi field structured::multi field structured
+field structured data::field structured data
+structured data sort::structured data sort
+write a sort::write a sort
+set of records::set of records
+making a file::making a file
+support we derive::support we derive
+compression software tools::compression software tools
+tools like compression::tools like compression
+compression of files::compression of files
+files for long-term::files for long-term
+storage or transmission::storage or transmission
+tools in windows::tools in windows
+task to write::task to write
+write a compression::write a compression
+file transfer trends::file transfer trends
+trends in computing::trends in computing
+examine other trends::examine other trends
+computing the application::computing the application
+influence the types::influence the types
+types of services::types of services
+emergence of parallel::emergence of parallel
+parallel computing parallel::parallel computing parallel
+computing parallel computing::computing parallel computing
+problem solving situations::problem solving situations
+situations like weather::situations like weather
+statistical data analysis::statistical data analysis
+analysis and simulation::analysis and simulation
+pharmaceutical drug synthesis::pharmaceutical drug synthesis
+limiting factor parallel::limiting factor parallel
+factor parallel computing::factor parallel computing
+parallel computing file::parallel computing file
+computing file server::computing file server
+file server recording::file server recording
+recording pc switch::recording pc switch
+switch processing nodes::switch processing nodes
+nodes the emergence::nodes the emergence
+emergence of micro-computer::emergence of micro-computer
+launching the applications::launching the applications
+first computer system::first computer system
+clicks to launch::clicks to launch
+environment to offer::environment to offer
+offer a drag::offer a drag
+drag and drop::drag and drop
+facility in fact::facility in fact
+fact this set::fact this set
+trends to offer::trends to offer
+offer icon driven::offer icon driven
+icon driven convenient::icon driven convenient
+driven convenient ways::driven convenient ways
+ways of launching::ways of launching
+launching applications apple::launching applications apple
+applications apple mac::applications apple mac
+apple mac computer::apple mac computer
+class of problems::class of problems
+resort to parallel::resort to parallel
+parallel processing environment::parallel processing environment
+processor with minimal::processor with minimal
+minimal communication parallel::minimal communication parallel
+communication parallel processing::communication parallel processing
+network based services::network based services
+based services supports::based services supports
+supports a mode::supports a mode
+mode of computing::mode of computing
+referred some times::referred some times
+times as distributed::times as distributed
+computing in distributed::computing in distributed
+distributed computing environment::distributed computing environment
+distribution of data::distribution of data
+files and execution::files and execution
+execution of processes::execution of processes
+situation a computer::situation a computer
+system for instance::system for instance
+utilized for regulating::utilized for regulating
+regulating a utility::regulating a utility
+utility like electrical::utility like electrical
+electrical power supply::electrical power supply
+health of plant::health of plant
+situations the instrumentation::situations the instrumentation
+instrumentation monitors physical::instrumentation monitors physical
+monitors physical quantities::monitors physical quantities
+quantities like pressure::quantities like pressure
+temperature or speed::temperature or speed
+regulate the operation::regulate the operation
+category of real-time::category of real-time
+services like atm::services like atm
+automatic teller machine::automatic teller machine
+airlines reservation systems::airlines reservation systems
+systems the systems::systems the systems
+transaction oriented systems::transaction oriented systems
+basic information processing::basic information processing
+information processing involves::information processing involves
+involves a transaction::involves a transaction
+transaction atm temperature::transaction atm temperature
+process vessel exceeds::process vessel exceeds
+limit the operating::limit the operating
+rtos in addition::rtos in addition
+kind of systems::kind of systems
+class of systems::class of systems
+application for instance::application for instance
+unusual to find::unusual to find
+regulating fuel injection::regulating fuel injection
+operation of brakes::operation of brakes
+embedded in washing::embedded in washing
+machines the presence::machines the presence
+processing a request::processing a request
+request like withdrawing::request like withdrawing
+requires updating accounts::requires updating accounts
+process control systems::process control systems
+systems and transaction::systems and transaction
+systems are real::systems are real
+real time systems::real time systems
+request is critical::request is critical
+critical the main::critical the main
+timeliness in response::timeliness in response
+response the transaction::response the transaction
+local area network::local area network
+systems invariably recognize::systems invariably recognize
+recognize an event::recognize an event
+event and offer::event and offer
+offer a response::offer a response
+transaction oriented system::transaction oriented system
+system like atm::system like atm
+process control system::process control system
+system an event::system an event
+experience the presence::experience the presence
+environment only requires::environment only requires
+requires minimal control::requires minimal control
+minimal control buttons::minimal control buttons
+buttons and response::buttons and response
+panels the embedded::panels the embedded
+systems are designed::systems are designed
+general purpose computing::general purpose computing
+purpose computing environments::purpose computing environments
+cases the operating::cases the operating
+aimed at raising::aimed at raising
+raising through put::raising through put
+put with general::put with general
+general purpose utility::general purpose utility
+purpose utility back-ups::purpose utility back-ups
+designed with minimal::designed with minimal
+minimal and dedicated::minimal and dedicated
+services the minimal::services the minimal
+minimal service provisioning::minimal service provisioning
+provisioning is done::provisioning is done
+minimal os kernel::minimal os kernel
+simputer wireless systems::simputer wireless systems
+systems in general::systems in general
+general allow access::general allow access
+systems the ubiquity::systems the ubiquity
+unlike a wired::unlike a wired
+medium of communication::medium of communication
+communication is air::communication is air
+driven by web::driven by web
+web the world::web the world
+world wide web::world wide web
+web all modern::web all modern
+systems are internet::systems are internet
+user to connect::user to connect
+world web offers::world web offers
+web offers commercial::web offers commercial
+offers commercial organizations::offers commercial organizations
+organizations to offer::organizations to offer
+offer their merchandise::offer their merchandise
+consumers an opportunity::consumers an opportunity
+opportunity to seek::opportunity to seek
+country now web::country now web
+utilized for railway::utilized for railway
+air ticket booking::air ticket booking
+ticket booking web::ticket booking web
+offer other services::offer other services
+music is common::music is common
+offered by operating::offered by operating
+systems in fact::systems in fact
+paradigm where network::paradigm where network
+years ago embedded::years ago embedded
+ago embedded system::ago embedded system
+common mobile phone::common mobile phone
+personal digital assistant::personal digital assistant
+important indian contribution::important indian contribution
+simputer a simputer::simputer a simputer
+dedicated application simputers::dedicated application simputers
+upgraded to support::upgraded to support
+operating system::operating system
+system lecture::system lecture
+lecture notes::lecture notes
+notes pcp::notes pcp
+system operating::system operating
+running applications::running applications
+computer system::computer system
+central part::central part
+processing engine::processing engine
+processing unit::processing unit
+user application::user application
+store information::store information
+makes memory::makes memory
+user applications::user applications
+input facility::input facility
+key board::key board
+joy stick::joy stick
+video monitor::video monitor
+printed document::printed document
+document output::document output
+audio file::audio file
+applications document::applications document
+document design::document design
+design accounting::design accounting
+e-mail image::e-mail image
+image processing::image processing
+processing operating::processing operating
+application requires::application requires
+requires resources::requires resources
+processing information::processing information
+information storage::information storage
+information mechanism::information mechanism
+inputting information::inputting information
+information provision::information provision
+outputting information::outputting information
+service facilities::service facilities
+generic services::generic services
+turn facilitate::turn facilitate
+applications mentioned::applications mentioned
+mentioned earlier::mentioned earlier
+service specific::service specific
+specific user::specific user
+system view::system view
+user point::user point
+primary consideration::primary consideration
+helpful clues::helpful clues
+document preparation::document preparation
+preparation application::preparation application
+human computer::human computer
+computer interface::computer interface
+elementary instructions::elementary instructions
+input devices::input devices
+complex details::complex details
+character reading::character reading
+reading program::reading program
+programming language::programming language
+printf command::printf command
+command helps::command helps
+desired form::desired form
+basic schema::basic schema
+user stand::user stand
+stand point::stand point
+view point::view point
+system users::system users
+system resources::system resources
+utilized efficiently::utilized efficiently
+service requests::service requests
+web server::web server
+user request::user request
+programs residing::programs residing
+main memory::main memory
+processor throughput::processor throughput
+control policy::control policy
+common form::common form
+computing facility::computing facility
+mainframe computer::mainframe computer
+computer center::computer center
+controlled environment::controlled environment
+air conditioned::air conditioned
+conditioned area::conditioned area
+clean room::clean room
+punched cards::punched cards
+program instructions::program instructions
+header cards::header cards
+job control::job control
+control cards::control cards
+cobol compilers::cobol compilers
+users computer::users computer
+computer hardware::computer hardware
+hardware operating::hardware operating
+system system::system system
+application programs::application programs
+programs user::programs user
+submitted jobs::submitted jobs
+fortran jobs::fortran jobs
+cobol jobs::cobol jobs
+long jobs::long jobs
+considerable processing::considerable processing
+short jobs::short jobs
+limited computational::limited computational
+short fortran::short fortran
+collection area::collection area
+interactivity users::interactivity users
+direct control::direct control
+processor speeds::processor speeds
+memory units::memory units
+poor utilization::poor utilization
+multiple users::multiple users
+users connected::users connected
+systems evolved::systems evolved
+invoke von::invoke von
+neumann principle::neumann principle
+stored program::stored program
+program operation::program operation
+things discussed::things discussed
+previous paragraph::previous paragraph
+basic mode::basic mode
+system designers::system designers
+designers contemplated::designers contemplated
+program resident::program resident
+awaiting operating::awaiting operating
+storing multiple::storing multiple
+multiple executables::multiple executables
+multiple excutables::multiple excutables
+excutables residing::excutables residing
+allocate memory::allocate memory
+resident programs::resident programs
+processor utilization::processor utilization
+multiprogramming leads::multiprogramming leads
+higher throughput::higher throughput
+reason multiprogramming::reason multiprogramming
+enhanced throughput::enhanced throughput
+batch processing::batch processing
+processing mode::processing mode
+early part::early part
+designers offered::designers offered
+access system::access system
+timeshared systems::timeshared systems
+program executed::program executed
+users program::users program
+sharing systems::sharing systems
+systems attempted::systems attempted
+design considerations::design considerations
+slice allocated::slice allocated
+design trends::design trends
+processing bulk::processing bulk
+bulk storage::bulk storage
+phenomenal growth::phenomenal growth
+extended storage::extended storage
+virtual storage::virtual storage
+addressable space::addressable space
+active parts::active parts
+suspended programs::suspended programs
+swapped out::swapped out
+large number::large number
+true sense::true sense
+computing utility::computing utility
+personal productivity::personal productivity
+productivity tool::productivity tool
+tool operating::tool operating
+program parts::program parts
+parts main::parts main
+bell laboratory::bell laboratory
+laboratory scientists::laboratory scientists
+current dos::current dos
+networked systems::networked systems
+notable project::notable project
+project athena::project athena
+project forms::project forms
+modern developments::modern developments
+client-server paradigm::client-server paradigm
+major fall::major fall
+fall out::fall out
+common server::common server
+convenient human::convenient human
+computer interfaces::computer interfaces
+multiple windows::multiple windows
+windows offers::windows offers
+virtual terminal::virtual terminal
+front-end terminal::front-end terminal
+terminal connection::terminal connection
+modern day::modern day
+operating environment::operating environment
+based computer::based computer
+computer networking::computer networking
+networking topologies::networking topologies
+general graphs::general graphs
+computers evolved::computers evolved
+greater detail::greater detail
+micro-computer front::micro-computer front
+handling input::handling input
+input output::input output
+output responsibilities::output responsibilities
+graphics cards::graphics cards
+processing tasks::processing tasks
+computer communication::computer communication
+day operating::day operating
+network protocols::network protocols
+networking area::networking area
+giving users::giving users
+establish communication::establish communication
+remote computer::remote computer
+telnet protocol::telnet protocol
+file stored::file stored
+remote location::remote location
+file transfer::file transfer
+network services::network services
+industrial application::industrial application
+process control::process control
+typical process::typical process
+control scenario::control scenario
+scenario monitoring::scenario monitoring
+monitoring initializes::monitoring initializes
+hardware input::hardware input
+input reads::input reads
+register decision::register decision
+decision checks::decision checks
+range output::range output
+output responds::output responds
+situation scenario::situation scenario
+temperature monitoring::temperature monitoring
+chemical process::chemical process
+process operating::process operating
+supervisory program::supervisory program
+desired sequence::desired sequence
+operational events::operational events
+measure input::measure input
+input temperature::input temperature
+recent measurement::recent measurement
+output task::output task
+operational scenarios::operational scenarios
+airlines reservation::airlines reservation
+reservation system::reservation system
+university admissions::university admissions
+processing user::processing user
+user access::user access
+system storage::system storage
+information protection::information protection
+intentional misuse::intentional misuse
+misuse support::misuse support
+data processing::data processing
+processing activities::processing activities
+activities communication::activities communication
+devices management::devices management
+transparent manner::transparent manner
+resource management::resource management
+management operating::management operating
+multi-user error::multi-user error
+error handling::error handling
+handling communication::handling communication
+communication support::communication support
+deadline support::deadline support
+critical application::critical application
+application run::application run
+operational view::operational view
+underlying principle::underlying principle
+system current::system current
+current systems::current systems
+von-neumann principle::von-neumann principle
+principle states::principle states
+basic cycle::basic cycle
+modern systems::modern systems
+multiple application::multiple application
+running simultaneously::running simultaneously
+mail program::mail program
+program receiving::program receiving
+receiving mails::receiving mails
+word process::word process
+operational overview::operational overview
+processor schedule::processor schedule
+allocate processor::allocate processor
+operating cycle::operating cycle
+cycle memory::cycle memory
+memory map::memory map
+map operating::map operating
+memory executes::memory executes
+executes program::executes program
+access data::access data
+data input::data input
+output devices::output devices
+devices communication::devices communication
+mutual exclusion::mutual exclusion
+exclusion schedule::exclusion schedule
+shared device::shared device
+fair access::fair access
+access shell::access shell
+modern computer::modern computer
+peripheral devices::peripheral devices
+devices communicate::devices communicate
+interrupt mode::interrupt mode
+human input::human input
+human desire::human desire
+mouse click::mouse click
+board input::board input
+interruption service::interruption service
+service operating::service operating
+oss support::oss support
+multiple applications::multiple applications
+spawn processes::spawn processes
+inter process::inter process
+process communication::process communication
+communication forms::communication forms
+primary basis::primary basis
+distributed computing::distributed computing
+communications network::communications network
+create processes::create processes
+seek services::seek services
+machine seeking::machine seeking
+client machine::client machine
+machine offering::machine offering
+offering services::offering services
+server machine::server machine
+web browser::web browser
+modern oss::modern oss
+support client-server::support client-server
+client-server operations::client-server operations
+service provisioning::service provisioning
+provisioning tools::provisioning tools
+important issue::important issue
+device handling::device handling
+handling utilities::handling utilities
+oss provide::oss provide
+general purpose::general purpose
+purpose utilities::purpose utilities
+packaged tools::packaged tools
+higher level::higher level
+tool kits::tool kits
+fresh program::fresh program
+sort utility::sort utility
+supports identification::supports identification
+multi field::multi field
+field structured::field structured
+structured data::structured data
+data sort::data sort
+chosen field::chosen field
+file imagine::file imagine
+sort program::sort program
+records making::records making
+compression software::compression software
+software tools::software tools
+long-term storage::long-term storage
+zip tools::zip tools
+windows environment::windows environment
+stupendous task::stupendous task
+compression program::compression program
+transfer trends::transfer trends
+application scenario::application scenario
+parallel computing::parallel computing
+computing parallel::computing parallel
+problem solving::problem solving
+solving situations::solving situations
+weather forecasting::weather forecasting
+statistical data::statistical data
+data analysis::data analysis
+pharmaceutical drug::pharmaceutical drug
+drug synthesis::drug synthesis
+single processor::single processor
+limiting factor::limiting factor
+factor parallel::factor parallel
+computing file::computing file
+file server::file server
+server recording::server recording
+switch processing::switch processing
+processing nodes::processing nodes
+apple mackintosh::apple mackintosh
+offered improvement::offered improvement
+applications apple::applications apple
+first computer::first computer
+mouse clicks::mouse clicks
+launch application::launch application
+first environment::first environment
+drop facility::drop facility
+set trends::set trends
+offer icon::offer icon
+icon driven::icon driven
+driven convenient::driven convenient
+convenient ways::convenient ways
+launching applications::launching applications
+apple mac::apple mac
+mac computer::mac computer
+parallel processing::parallel processing
+processing environment::processing environment
+problem split::problem split
+minimal communication::minimal communication
+communication parallel::communication parallel
+network based::network based
+based services::based services
+services supports::services supports
+computing environment::computing environment
+support distribution::support distribution
+processes operating::processes operating
+control system::control system
+electrical power::electrical power
+power supply::power supply
+elaborate instrumentation::elaborate instrumentation
+instrumentation monitors::instrumentation monitors
+physical quantities::physical quantities
+real-time mode::real-time mode
+real-time systems::real-time systems
+offer services::offer services
+automatic teller::automatic teller
+teller machine::teller machine
+reservation systems::reservation systems
+transaction oriented::transaction oriented
+oriented systems::oriented systems
+basic information::basic information
+information processing::information processing
+processing involves::processing involves
+transaction atm::transaction atm
+atm temperature::atm temperature
+process vessel::process vessel
+vessel exceeds::vessel exceeds
+witnessing emergence::witnessing emergence
+regulating fuel::regulating fuel
+fuel injection::fuel injection
+cruise control::cruise control
+microcontrollers embedded::microcontrollers embedded
+washing machines::washing machines
+withdrawing money::withdrawing money
+financial transaction::financial transaction
+updating accounts::updating accounts
+acceptable response::acceptable response
+control systems::control systems
+main objective::main objective
+assure timeliness::assure timeliness
+computer network::computer network
+local area::local area
+area network::area network
+oriented system::oriented system
+card input::card input
+minimal control::minimal control
+control buttons::control buttons
+response panels::response panels
+embedded systems::embedded systems
+purpose computing::purpose computing
+computing environments::computing environments
+dedicated mode::dedicated mode
+purpose utility::purpose utility
+utility back-ups::utility back-ups
+dedicated services::dedicated services
+minimal service::minimal service
+simputer wireless::simputer wireless
+wireless systems::wireless systems
+ubiquitous systems::ubiquitous systems
+wired system::wired system
+major trend::major trend
+world wide::world wide
+wide web::wide web
+internet compliant::internet compliant
+world web::world web
+web offers::web offers
+commercial organizations::commercial organizations
+railway reservation::railway reservation
+air ticket::air ticket
+ticket booking::ticket booking
+booking web::booking web
+loading music::loading music
+common web::common web
+operating systems::operating systems
+sun ceo::sun ceo
+years ago::years ago
+ago embedded::ago embedded
+embedded system::embedded system
+common mobile::common mobile
+mobile phone::mobile phone
+personal digital::personal digital
+digital assistant::digital assistant
+important indian::important indian
+indian contribution::indian contribution
+pda simputer::pda simputer
+dedicated application::dedicated application
+application simputers::application simputers
+support wireless::support wireless
+operating::operating
+system::system
+lecture::lecture
+notes::notes
+pcp::pcp
+bangalore::bangalore
+m1::june
+module::module
+introduction::introduction
+shortly::shortly
+primarily::primarily
+services::services
+running::running
+applications::applications
+computer::computer
+primary::primary
+arises::arises
+fact::fact
+user::user
+provided::provided
+facilitate::facilitate
+provisioning::provisioning
+central::central
+part::part
+processing::processing
+engine::engine
+cpu::cpu
+make::make
+application::application
+unit::unit
+store::store
+information::information
+makes::makes
+memory::memory
+required::required
+similarly::similarly
+input::input
+facility::facility
+communicate::communicate
+form::form
+key::key
+board::board
+mouse::mouse
+joy::joy
+stick::stick
+game::game
+instance::instance
+output::output
+video::video
+monitor::monitor
+printer::printer
+times::times
+generate::generate
+printed::printed
+document::document
+forms::forms
+audio::audio
+file::file
+design::design
+accounting::accounting
+e-mail::e-mail
+image::image
+games::games
+notice::notice
+requires::requires
+resources::resources
+storage::storage
+mechanism::mechanism
+inputting::inputting
+provision::provision
+outputting::outputting
+service::service
+facilities::facilities
+nature::nature
+offers::offers
+generic::generic
+support::support
+operations::operations
+turn::turn
+mentioned::mentioned
+earlier::earlier
+extent::extent
+operation::operation
+neutral::neutral
+specific::specific
+view::view
+point::point
+consideration::consideration
+convenience::convenience
+easy::easy
+launching::launching
+helps::helps
+icon::icon
+clue::clue
+helpful::helpful
+clues::clues
+browser::browser
+preparation::preparation
+words::words
+human::human
+interface::interface
+identify::identify
+launch::launch
+hides::hides
+lot::lot
+details::details
+elementary::elementary
+instructions::instructions
+selecting::selecting
+examine::examine
+programs::programs
+devices::devices
+complex::complex
+character::character
+reading::reading
+program::program
+hidden::hidden
+true::true
+write::write
+programming::programming
+language::language
+printf::printf
+command::command
+desired::desired
+figure::figure
+essentially::essentially
+depicts::depicts
+basic::basic
+schema::schema
+stand::stand
+ensure::ensure
+users::users
+utilized::utilized
+efficiently::efficiently
+requests::requests
+web::web
+server::server
+request::request
+serviced::serviced
+residing::residing
+main::main
+determine::determine
+active::active
+await::await
+wait::wait
+suspended::suspended
+temporarily::temporarily
+engaging::engaging
+processor::processor
+strategy::strategy
+enhances::enhances
+throughput::throughput
+important::important
+control::control
+policy::policy
+algorithm::algorithm
+allocate::allocate
+evolution::evolution
+worthwhile::worthwhile
+trace::trace
+developments::developments
+happened::happened
+last::last
+four::four
+decades::decades
+1960s::1960s
+common::common
+computing::computing
+mainframe::mainframe
+housed::housed
+center::center
+controlled::controlled
+environment::environment
+air::air
+conditioned::conditioned
+area::area
+clean::clean
+room::room
+bring::bring
+deck::deck
+punched::punched
+cards::cards
+encoded::encoded
+list::list
+mode::mode
+prepare::prepare
+header::header
+job::job
+compiler::compiler
+fortran::fortran
+cobol::cobol
+compilers::compilers
+handed::handed
+operator::operator
+collect::collect
+jobs::jobs
+hardware::hardware
+operators::operators
+invariably::invariably
+group::group
+submitted::submitted
+addition::addition
+classified::classified
+long::long
+considerable::considerable
+short::short
+limited::limited
+computational::computational
+set::set
+considered::considered
+batch::batch
+done::done
+separated::separated
+turned::turned
+collection::collection
+scenario::scenario
+shows::shows
+interactivity::interactivity
+direct::direct
+engage::engage
+meant::meant
+idling::idling
+i::NNP
+completed::completed
+speeds::speeds
+orders::orders
+magnitude::magnitude
+higher::higher
+units::units
+led::led
+poor::poor
+utilization::utilization
+systems::systems
+multiple::multiple
+connected::connected
+evolved::evolved
+period::period
+shown::shown
+table1.1::table1.1
+invoke::invoke
+von::von
+neumann::neumann
+principle::principle
+stored::stored
+executed::executed
+scheme::scheme
+things::things
+discussed::discussed
+previous::previous
+paragraph::paragraph
+decade::decade
+70s::70s
+altered::altered
+designers::designers
+contemplated::contemplated
+resident::resident
+awaiting::awaiting
+completion::completion
+late::late
+early::early
+storing::storing
+executables::executables
+multiprogramming::multiprogramming
+excutables::excutables
+obvious::obvious
+utilizing::utilizing
+process::process
+engaged::engaged
+leads::leads
+reason::reason
+lead::lead
+enhanced::enhanced
+operated::operated
+80s::80s
+offered::offered
+capability::capability
+access::access
+timeshared::timeshared
+scene::scene
+basically::basically
+idea::idea
+give::give
+illusion::illusion
+strengthen::strengthen
+clever::clever
+devised::devised
+allocated::allocated
+slice::slice
+imagine::imagine
+quickly::quickly
+continuously::continuously
+task::task
+precisely::precisely
+sharing::sharing
+attempted::attempted
+giving::giving
+small::small
+returning::returning
+back::back
+feels::feels
+lack::lack
+continuity::continuity
+carries::carries
+impression::impression
+require::require
+considerations::considerations
+include::include
+reside::reside
+sustain::sustain
+timesharing::timesharing
+protect::protect
+data::data
+overwritten::overwritten
+trends::trends
+evident::evident
+1970-80::1970-80
+achieve::achieve
+overlapping::overlapping
+feasible::feasible
+bulk::bulk
+disks::disks
+witnessed::witnessed
+phenomenal::phenomenal
+growth::growth
+helped::helped
+implement::implement
+concept::concept
+offer::offer
+extended::extended
+virtual::virtual
+vogue::vogue
+utilizes::utilizes
+addressable::addressable
+space::space
+multi-programming::multi-programming
+parts::parts
+swapped::swapped
+out::out
+means::means
+large::large
+number::number
+satisfy::satisfy
+notion::notion
+brought::brought
+opposed::opposed
+compute::compute
+utility::utility
+sense::sense
+reflects::reflects
+regarded::regarded
+personal::personal
+productivity::productivity
+tool::tool
+swapping::swapping
+disc::disc
+vice-versa::vice-versa
+1970s::1970s
+bell::bell
+laboratory::laboratory
+scientists::scientists
+unix::unix
+microcomputers::microcomputers
+1980s::1980s
+forerunner::forerunner
+current::current
+dos::dos
+cp::-NONE-
+advances::advances
+promise::promise
+networked::networked
+notable::notable
+project::project
+athena::athena
+mit::mit
+usa::usa
+basis::basis
+modern::modern
+client-server::client-server
+paradigm::paradigm
+major::major
+fall::fall
+x-terminals::x-terminals
+windows::windows
+widgets::widgets
+convenient::convenient
+interfaces::interfaces
+create::create
+terminal::terminal
+front-end::front-end
+connection::connection
+experience::experience
+day::day
+supports::supports
+based::based
+networking::networking
+topologies::topologies
+star::star
+ring::ring
+general::general
+graphs::graphs
+experimented::experimented
+protocols::protocols
+communication::communication
+computers::computers
+discussions::discussions
+discuss::discuss
+issues::issues
+greater::greater
+detail::detail
+move::move
+chapters::chapters
+micro-computer::micro-computer
+front::front
+development::development
+aimed::aimed
+relieving::relieving
+handling::handling
+responsibilities::responsibilities
+handled::handled
+two::two
+mechanisms::mechanisms
+bios::bios
+graphics::graphics
+drive::drive
+display::display
+relieved::relieved
+regulating::regulating
+made::made
+utilize::utilize
+effectively::effectively
+tasks::tasks
+advent::advent
+1990s::1990s
+pretty::pretty
+order::order
+suite::suite
+network::network
+implemented::implemented
+resulted::resulted
+establish::establish
+connect::connect
+remote::remote
+telnet::telnet
+protocol::protocol
+location::location
+transfer::transfer
+ftp::ftp
+broadly::broadly
+tree::tree
+briefly::briefly
+explore::explore
+appears::appears
+context::context
+software::software
+embed::embed
+industrial::industrial
+temperature::temperature
+vessel::vessel
+typical::typical
+monitoring::monitoring
+initializes::initializes
+activates::activates
+reads::reads
+values::values
+sensors::sensors
+stores::stores
+register::register
+decision::decision
+checks::checks
+readings::readings
+range::range
+responds::responds
+situation::situation
+chemical::chemical
+supervisory::supervisory
+raise::raise
+alarm::alarm
+band::band
+sequence::sequence
+operational::operational
+events::events
+measure::measure
+recent::recent
+measurement::measurement
+perform::perform
+employed::employed
+variety::variety
+scenarios::scenarios
+bank::bank
+airlines::airlines
+reservation::reservation
+university::university
+admissions::admissions
+provide::provide
+management::management
+protection::protection
+accidental::accidental
+intentional::intentional
+misuse::misuse
+activities::activities
+transparent::transparent
+manner::manner
+review::review
+power::power
+test::test
+post::post
+resource::resource
+multi-user::multi-user
+error::error
+optional::optional
+deadline::deadline
+safety::safety
+critical::critical
+run::run
+fail::fail
+gracefully::gracefully
+underlying::underlying
+von-neumann::von-neumann
+states::states
+initially::initially
+fetching::fetching
+instruction::instruction
+cycle::cycle
+fetch::fetch
+interpret::interpret
+decode::decode
+execute::execute
+simultaneously::simultaneously
+mail::mail
+receiving::receiving
+mails::mails
+clock::clock
+browsing::browsing
+word::word
+schedule::schedule
+divided::divided
+scheduled::scheduled
+overview::overview
+map::map
+executes::executes
+mutual::mutual
+exclusion::exclusion
+usage::usage
+shared::shared
+device::device
+fair::fair
+shell::shell
+peripheral::peripheral
+interrupt::interrupt
+.typically::.typically
+desire::desire
+guide::guide
+click::click
+attention::attention
+needing::needing
+interruption::interruption
+processes::processes
+tools::tools
+oss::oss
+execution::execution
+manage::manage
+spawn::spawn
+inter::inter
+distributed::distributed
+coming::coming
+communications::communications
+machine::machine
+seek::seek
+seeking::seeking
+client::client
+offering::offering
+content::content
+issue::issue
+utilities::utilities
+purpose::purpose
+packaged::packaged
+terms::terms
+level::level
+absence::absence
+kits::kits
+fresh::fresh
+sort::sort
+identification::identification
+fields::fields
+multi::multi
+field::field
+structured::structured
+chosen::chosen
+records::records
+making::making
+derive::derive
+compression::compression
+files::files
+long-term::long-term
+transmission::transmission
+zip::zip
+stupendous::stupendous
+section::section
+considerably::considerably
+influence::influence
+types::types
+managed::managed
+emergence::emergence
+parallel::parallel
+problem::problem
+solving::solving
+situations::situations
+weather::weather
+forecasting::forecasting
+statistical::statistical
+analysis::analysis
+simulation::simulation
+pharmaceutical::pharmaceutical
+drug::drug
+synthesis::synthesis
+single::single
+limiting::limiting
+factor::factor
+recording::recording
+switch::switch
+nodes::nodes
+apple::apple
+mackintosh::mackintosh
+improvement::improvement
+first::first
+clicks::clicks
+drag::drag
+drop::drop
+driven::driven
+ways::ways
+mac::mac
+class::class
+problems::problems
+resort::resort
+split::split
+minimal::minimal
+referred::referred
+distribution::distribution
+electrical::electrical
+supply::supply
+elaborate::elaborate
+instrumentation::instrumentation
+track::track
+health::health
+plant::plant
+monitors::monitors
+physical::physical
+quantities::quantities
+pressure::pressure
+speed::speed
+respond::respond
+real-time::real-time
+regulate::regulate
+real::real
+category::category
+atm::atm
+automatic::automatic
+teller::teller
+kind::kind
+transaction::transaction
+oriented::oriented
+involves::involves
+exceeds::exceeds
+limit::limit
+rtos::rtos
+witnessing::witnessing
+embedded::embedded
+unusual::unusual
+find::find
+microprocessors::microprocessors
+car::car
+fuel::fuel
+injection::injection
+cruise::cruise
+brakes::brakes
+microcontrollers::microcontrollers
+washing::washing
+machines::machines
+presence::presence
+withdrawing::withdrawing
+money::money
+financial::financial
+updating::updating
+accounts::accounts
+acceptable::acceptable
+response::response
+objective::objective
+assure::assure
+timeliness::timeliness
+extensively::extensively
+bus::bus
+local::local
+recognize::recognize
+event::event
+card::card
+detected::detected
+totally::totally
+gadgets::gadgets
+buttons::buttons
+panels::panels
+designed::designed
+completely::completely
+philosophy::philosophy
+environments::environments
+dedicated::dedicated
+cases::cases
+raising::raising
+put::put
+back-ups::back-ups
+kernel::kernel
+micro-kernel::micro-kernel
+simputer::simputer
+wireless::wireless
+ubiquitous::ubiquitous
+ubiquity::ubiquity
+unlike::unlike
+wired::wired
+medium::medium
+anytime::anytime
+finally::finally
+trend::trend
+world::world
+wide::wide
+internet::internet
+compliant::compliant
+rest::rest
+commercial::commercial
+organizations::organizations
+merchandise::merchandise
+consumers::consumers
+opportunity::opportunity
+country::country
+railway::railway
+ticket::ticket
+booking::booking
+loading::loading
+music::music
+due::due
+proclaimed::proclaimed
+sun::sun
+ceo::ceo
+scott::scott
+mcnealy::mcnealy
+years::years
+ago::ago
+mobile::mobile
+phone::phone
+digital::digital
+assistant::assistant
+pda::pda
+indian::indian
+contribution::contribution
+simputers::simputers
+upgraded::upgraded

@@ -1,0 +1,1856 @@
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/1
+Module 19: System Administration in UNIX
+In the context of the OS service provisioning, system administration plays a pivotal role.
+This is particularly the case when a system is accessed by multiple users. The primary
+task of a system administrator is to ensure that the following happens:
+a. The top management is assured of efficiency in utilization of the system's
+resources.
+b. The general user community gets the services which they are seeking.
+In other words, system administrators ensure that there is very little to complain about the
+system's performance or service availability.
+In Linux environment with single user PC usage, the user also doubles up as a system
+administrator. Much of what we discuss in Unix context applies to Linux as well.
+In all Unix flavours there is a notion of a superuser privilege. Most major administrative
+tasks require that the system administrator operates in the superuser mode with root
+privileges. These tasks include starting up and shutting down a system, opening an
+account for a new user and giving him a proper working set-up. Administration tasks also
+involve installation of new software, distributing user disk space, taking regular back-ups,
+keeping system logs, ensuring secure operations and providing network services and web
+access.
+We shall begin this module by enlisting the tasks in system administration and offering
+exposition on most of these tasks as the chapter develops.
+19.1 Unix Administration Tasks
+Most users are primarily interested in just running a set of basic applications for their
+professional needs. Often they cannot afford to keep track of new software releases and
+patches that get announced. Also, rarely they can install these themselves. In addition,
+these are non-trivial tasks and can only be done with superuser privileges.
+Users share resources like disk space, etc. So there has to be some allocation policy of the
+disk space. A system administrator needs to implement such a policy. System
+administration also helps in setting up user's working environments.
+On the other hand, the management is usually keen to ensure that the resources are used
+properly and efficiently. They seek to monitor the usage and keep an account of system
+usage. In fact, the system usage pattern is often analysed to help determine the efficacy of 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/2
+usage. Clearly, managements' main concerns include performance and utilisation of
+resources to ensure that operations of the organisation do not suffer.
+At this juncture it may be worth our while to list major tasks which are performed by
+system administrators. We should note that most of the tasks require that the system
+administrator operates in superuser mode with root privileges.
+19.1.1 Administration Tasks List
+This is not an exhaustive list, yet it represents most of the tasks which system
+administrators perform:
+1. System startup and shutdown: In the Section 19.2, we shall see the basic steps
+required to start and to stop operations in a Unix operational environment.
+2. Opening and closing user accounts: In Unix an administrator is both a user and a
+super-user. Usually, an administrator has to switch to the super-user mode with
+root privileges to open or close user accounts. In Section 19.3, we shall discuss
+some of the nuances involved in this activity.
+3. Helping users to set up their working environment: Unix allows any user to
+customize his working environment. This is usually achieved by using .rc files.
+Many users need help with an initial set-up of their .rc files. Later, a user may
+modify his .rc files to suit his requirements. In Section 19.4, we shall see most of
+the useful .rc files and the interpretations for various settings in these files.
+4. Maintaining user services: Users require services for printing, mail Web access
+and chat. We shall deal with mail and chat in Section 19.4 where we discuss .rc
+files and with print services in Section 19.5 where we discuss device management
+and services. These services include spooling of print jobs, provisioning of print
+quota, etc.
+5. Allocating disk space and re-allocating quotas when the needs grow: Usually
+there would be a default allocation. However, in some cases it may be imperative
+to enhance the allocation. We shall deal with the device oriented services and
+management issues in Section 19.5.
+6. Installing and maintaining software: This may require installing software patches
+from time to time. Most OSs are released with some bugs still present. Often with
+usage these bugs are identified and patches released. Also, one may have some
+software installed which satisfies a few of the specialized needs of the user 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/3
+community. As a convention this is installed in the directory /usr/local/bin. The
+local is an indicator of the local (and therefore a non-standard) nature of software.
+We shall not discuss the software installation as much of it is learned from
+experienced system administrators by assisting them in the task.
+7. Installing new devices and upgrading the configuration: As a demand on a system
+grows, additional devices may need to be installed. The system administrator will
+have to edit configuration files to identify these devices. Some related issues shall
+be covered in section 19.5 later in this chapter.
+8. Provisioning the mail and internet services: Users connected to any host shall seek
+Mail and internet Web access. In addition, almost every machine shall be a
+resource within a local area network. So for resource too the machine shall have
+an IP address. In most cases it would be accessible from other machine as well.
+We shall show the use .mailrc files in this context later in Section 19.4.
+9. Ensuring security of the system: The internet makes the task of system
+administration both interesting and challenging. The administrators need to keep a
+check on spoofing and misuse. We have discussed security in some detail in the
+module on OS and Security.
+10. Maintaining system logs and profiling the users: A system administrator is
+required to often determine the usage of resources. This is achieved by analysing
+system logs. The system logs also help to profile the users. In fact, user profiling
+helps in identifying security breaches as was explained in the module entitled OS
+and Security.
+11. System accounting: This is usually of interest to the management. Also, it helps
+system administrators to tune up an operating system to meet the user
+requirements. This also involves maintaining and analysing logs of the system
+operation.
+12. Reconfiguring the kernel whenever required: Sometimes when new patches are
+installed or a new release of the OS is received, then it is imperative to compile
+the kernel. Linux users often need to do this as new releases and extensions
+become available.
+Let us begin our discussions with the initiation of the operations and shutdown
+procedures. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/4
+19.2 Starting and Shutting Down
+First we shall examine what exactly happens when the system is powered on. Later, we
+shall examine the shutdown procedure for Unix systems. Unix systems, on being
+powered on, usually require that a choice be made to operate either in single or in
+multiple-user mode. Most systems operate in multi-user mode. However, system
+administrators use single-user mode when they have some serious reconfiguration or
+installation task to perform. Family of Unix systems emanating from System V usually
+operate with a run level. The single-user mode is identified with run level s, otherwise
+there are levels from 0 to 6. The run level 3 is the most common for multi-user mode of
+operation.
+On being powered on, Unix usually initiates the following sequence of tasks:
+1. The Unix performs a sequence of self-tests to determine if there are any hardware
+ problems.
+2. The Unix kernel gets loaded from a root device.
+3. The kernel runs and initializes itself.
+4. The kernel starts the init process. All subsequent processes are spawned from init
+process.
+5. The init checks out the file system using fsck.
+6. The init process executes a system boot script.
+7. The init process spawns a process to check all the terminals from which the
+system may be accessed. This is done by checking the terminals defined under
+/etc/ttytab or a corresponding file. For each terminal a getty process is launched.
+This reconciles communication characteristics like baud rate and type for each
+terminal.
+8. The getty process initiates a login process to enable a prospective login from a
+terminal.
+During the startup we notice that fsck checks out the integrity of the file system. In case
+the fsck throws up messages of some problems, the system administrator has to work
+around to ensure that there is a working configuration made available to the users. It will
+suffice here to mention that one may monitor disk usage and reconcile the disk integrity.
+The starting up of systems is a routine activity. The most important thing to note is that
+on booting, or following a startup, all the temporary files under tmp directory are cleaned 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/5
+up. Also, zombies are cleaned up. System administrators resort to booting when there are
+a number of zombies and often a considerable disk space is blocked in the tmp directory.
+We next examine the shutdown. Most Unix systems require invoking the shutdown
+utility. The shutdown utility offers options to either halt immediately, or shutdown after a
+pre-assigned period. Usually system administrators choose to shutdown with a preassigned
+period. Such a shutdown results in sending a message to all the terminals that
+the system shall be going down after a certain interval of time, say 5 minutes. This
+cautions all the users and gives them enough time to close their files and terminate their
+active processes. Yet another shutdown option is to reboot with obvious implications.
+The most commonly used shutdown command is as follows:
+shutdown -h time [message]
+Here the time is the period and message is optional, but often it is intended to advise
+users to take precautions to terminate their activity gracefully. This mode also prepares to
+turn power off after a proper shutdown. There are other options like k, r, n etc. The
+readers are encouraged to find details about these in Unix man pages. For now, we shall
+move on to discuss the user accounts management and run command files.
+19.3 Managing User Accounts
+When a new person joins an organisation he is usually given an account by the system
+administrator. This is the login account of the user. Now a days almost all Unix systems
+support an admin tool which seeks the following information from the system
+administrator to open a new account:
+1. Username: This serves as the login name for the user.
+2. Password: Usually a system administrator gives a simple password. The users are
+advised to later select a password which they feel comfortable using. User's
+password appears in the shadow files in encrypted forms. Usually, the /etc/passwd
+file contains the information required by the login program to authenticate the
+login name and to initiate appropriate shell as shown in the description below:
+bhatt:x:1007:1::/export/home/bhatt:/usr/local/bin/bash
+ damu:x:1001:10::/export/home/damu:/usr/local/bin/bash
+Each line above contains information about one user. The first field is the name of
+the user; the next a dummy indicator of password, which is in another file, a
+shadow file. Password programs use a trap-door algorithm for encryption. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/6
+3. Home directory: Every new user has a home directory defined for him. This is
+the default login directory. Usually it is defined in the run command files.
+4. Working set-up: The system administrators prepare .login and .profile files to help
+users to obtain an initial set-up for login. The administrator may prepare .cshrc,
+.xinitrc .mailrc .ircrc files. In Section 19.4 we shall later see how these files may
+be helpful in customizing a user's working environment. A natural point of
+curiosity would be: what happens when users log out? Unix systems receive
+signals when users log out. Recall, in Section 19.2 we mentioned that a user logs
+in under a login process initiated by getty process. Process getty identifies the
+terminal being used. So when a user logs out, the getty process which was running
+to communicate with that terminal is first killed. A new getty process is now
+launched to enable yet another prospective login from that terminal.
+The working set-up is completely determined by the startup files. These are
+basically .rc (run command) files. These files help to customize the user's working
+environment. For instance, a user's .cshrc file shall have a path variable which
+defines the access to various Unix built-in shell commands, utilities, libraries etc.
+In fact, many other shell environmental variables like HOME, SHELL, MAIL, TZ
+(the time zone) are set up automatically. In addition, the .rc files define the access
+to network services or some need-based access to certain licensed software or
+databases as well. To that extent the .rc files help to customize the user's working
+environment.
+We shall discuss the role of run command files later in Section 19.4.
+5. Group-id: The user login name is the user-id. Under Unix the access privileges are
+determined by the group a user belongs to. So a user is assigned a group-id. It is
+possible to obtain the id information by using an id command as shown below:
+[bhatt@iiitbsun OS]$id
+uid=1007(bhatt) gid=1(other)
+[bhatt@iiitbsun OS]$
+6. Disc quota: Usually a certain amount of disk space is allocated by default. In
+cases where the situation so warrants, a user may seek additional disk space. A
+user may interrogate the disk space available at any time by using the df
+command. Its usage is shown below: 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/7
+ df [options] [name] : to know the free disk space.
+where name refers to a mounted file system, local or remote. We may specify
+directory if we need to know the information about that directory. The following
+options may help with additional information:
+-l : for local file system
+-t : reports total no. of allocated blocks and i-nodes on the device.
+The Unix command du reports the number of disk blocks occupied by a file. Its
+usage is shown below:
+ du [options] [name]... where name is a directory or a file
+Above name by default refers to the current directory. The following options may
+help with additional information:
+-a : produce output line for each file
+-s : report only the total usage for each name that is a directory i.e. not
+ individual files.
+ -r : produce messages for files that cannot be read or opened
+7. Network services: Usually a user shall get a mail account. We will discuss the
+role of .mailrc file in this context in section 19.4. The user gets an access to Web
+services too.
+8. Default terminal settings: Usually vt100 is the default terminal setting. One can
+attempt alternate terminal settings using tset, stty, tput, tabs with the control
+sequences defined in terminfo termcap with details recorded in /etc/ttytype or
+/etc/tty files and in shell variable TERM. Many of these details are discussed in
+Section 19.5.1 which specifically deals with terminal settings. The reader is
+encouraged to look up that section for details.
+Once an account has been opened the user may do the following:
+1. Change the pass-word for access to one of his liking.
+2. Customize many of the run command files to suit his needs.
+Closing a user account: Here again the password file plays a role. Recall in section 19.1
+we saw that /etc/password file has all the information about the users' home directory,
+password, shell, user and group-id, etc. When a user's account is to be deleted, all of this
+information needs to be erased. System administrators login as root and delete the user
+entry from the password file to delete the account. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/8
+19.4 The .rc Files
+Usually system administration offers a set of start-up run command files to a new user.
+These are files that appear as .rc files. These may be .profile, .login, .cshrc, .bashrc
+.xinitrc, .mailrc .ircrc, etc. The choice depends upon the nature of the login shell. Typical
+allocations may be as follows:
+0 Bourne or Korn shell: .profile
+1 C-Shell: .login, .cshrc
+2 BASH: .bashrci
+3 TCSH: .tcshrc
+BASH is referred as Bourne-again shell. TCSH is an advanced C-Shell with many
+shortcuts like pressing a tab may complete a partial string to the extent it can be covered
+unambiguously. For us it is important to understand what is it that these files facilitate.
+Role of .login and .profile files: The basic role of these files is to set up the environment
+for a user. These may include the following set-ups.
+? Set up the terminal characteristics: Usually, the set up may include terminal type,
+and character settings for the prompt, erase, etc.
+? Set up editors: It may set up a default editor or some specific editor like emacs.
+? Set up protection mode: This file may set up umask, which stands for the user
+mask. umask determines access right to files.
+? Set up environment variables: This file may set up the path variable. The path
+variable defines the sequence in which directories are searched for locating the
+commands and utilities of the operating system.
+? Set up some customization variables: Usually, these help to limit things like
+selecting icons for mail or core dump size up to a maximum value. It may be used
+for setting up the limit on the scope of the command history, or some other
+preferences.
+A typical .login file may have the following entries:
+# A typical .login file
+umask 022
+setenv PATH /usr/ucb:/usr/bin:/usr/sbin:/usr/local/bin
+setenv PRINTER labprinter 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/9
+setenv EDITOR vi
+biff y
+set prompt='hostname'=>
+The meanings of the lines above should be obvious from the explanation we advanced
+earlier. Next we describe .cshrc files and the readers should note the commonalities
+between these definitions of initialisation files.
+The .cshrc file: The C-shell makes a few features available over the Bourne shell. For
+instance, it is common to define aliases in .cshrc files for very frequently used commands
+like gh for ghostview and c for clear. Below we give some typical entries for .cshrc file in
+addition to the many we saw in the .login file in this section:
+if (! $?TERM) setenv TERM unknown
+if ("TERM" == "unknown" || "$TERM" == "network") then echo -n 'TERM?
+[vt100]: ';
+set ttype=($<)
+if (ttype == "") set ttype="vt100"
+if (ttype == "pc") then set ttype="vt100"
+endif
+setenv TERM $ttype
+endif
+alias cl clear
+alias gh ghostview
+set history = 50
+set nobeep
+Note that the above, in the first few lines in the script, system identifies the nature of
+terminal and sets it to operate as vt100. It is highly recommended that the reader should
+examine and walk-through the initialization scripts which the system administration
+provides. Also, a customization of these files entails that as a user we must look up these
+files and modify them to suit our needs.
+There are two more files of interest. One corresponds to regulating the mail and the other
+which controls the screen display. These are respectively initialized through .mailrc and
+.xinitrc. We discussed the latter in the chapter on X Windows. We shall discuss the
+settings in .mailrc file in the context of the mail system. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/10
+The mail system: .mailrc file : From the viewpoint of the user's host machine, the mail
+program truly acts as the main anchor for our internet-based communication. The Unix
+sendmail program together with the uu class of programs form the very basis of the mail
+under Unix. Essentially, the mail system has the following characteristics:
+1. The mail system is a Store and forward system.
+2. Mail is picked up from the mail server periodically. The mail daemon, picks up
+the mail running as a background process.
+3. Mail is sent by sendmail program under Unix.
+4. The uu class of programs like uucp or Unix-to-Unix copy have provided the basis
+for developing the mail tools. In fact, the file attachments facility is an example of
+it.
+On a Unix system it is possible to invoke the mail program from an auto-login or .cshrc
+program.
+Every Unix user has a mailbox entry in the /usr/spool/mail directory. Each person's mail
+box is named after his own username. In Table 19.1 we briefly review some very useful
+mail commands and the wild card used with these commands.
+We next give some very useful commands which help users to manage their mails
+efficiently:
+Table 19.1: Various command options for mail.
+d:r : delete all read messages.
+d:usenet : delete all messages with usenet in body
+p:r : print all read messages.
+p:bhatt : print all from user ``bhatt''. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/11
+During the time a user is composing a mail, the mail system tools usually offer facility to
+escape to a shell. This can be very useful when large files need to be edited along side the
+mail being sent. These use ~ commands with the interpretations shown below:
+ ~! escape to shell,
+~d include dead.letter
+~h edit header field
+The mail system provides for command line interface to facilitate mail operations using
+some of the following commands. For instance, every user has a default mail box called
+mbox. If one wishes to give a different name to the mailbox, he may choose a new name
+for it. Other facilities allow a mail to be composed with, or without, a subject or to see the
+progress of the mail as it gets processed. We show some of these options and their usage
+with mail command below.
+mail -s greetings user@machine.domain
+-s: option is used to send a mail with subject.
+-v: option is for the verbose option, it shows mails' progress
+-f mailbox: option allows user to name a new mail box
+mail -f newm: where newm may be the new mail box option which
+a user may opt for in place of mbox (default option).
+Next we describe some of the options that often appear inside .mailrc user files.
+Generally, with these options we may have aliases (nick-names) in place of the full mail
+address. One may also set or unset some flags as shown in the example below:
+unset askcc
+set verbose
+set append 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/12
+Table 19.2: Various options for .mailrc file.
+In Table 19.2, we offer a brief explanation of the options which may be set initially in
+.mailrc files.
+In addition, in using the mail system the following may be the additional facilities which
+could be utilized:
+1. To subscribe to listserv@machine.domain, the body of the message should
+contain ?subscribe", the group to subscribe to and the subscribers' e-mail address
+as shown in the following example.
+subscribe allmusic me@mymachine.mydomain.
+2. To unsubscribe use logout allmusic. In addition to the above there are vacation
+programs which send mails automatically when the receiver is on vacation.
+Mails may also be encrypted. For instance, one may use a pretty good privacy
+(PGP) for encrypting mails.
+Facilitating chat with .ircrc file: System administrators may prepare terminals and offer
+Inter Relay Chat or IRC facility as well. IRC enables real-time conversation with one or
+more persons who may be scattered anywhere globally. IRC is a multi-user system. To
+use IRC's, Unix-based IRC versions, one may have to set the terminal emulation to vt100
+either from the keyboard or from an auto-login file such as .login in bin/sh or .cshrc in
+/bin/csh.
+$ set TERM=vt100
+$ stty erase "^h" 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/13
+The most common way to use the IRC system is to make a telnet call to the IRC server.
+There are many IRC servers. Some servers require specification of a port number as in
+irc.ibmpcug.co.uk9999.
+When one first accesses the IRC server, many channels are presented. A channel may be
+taken as a discussion area and one may choose a channel for an online chat (like switch a
+channel on TV). IRCs require setting up an .ircrc file. Below we give some sample
+entries for a .ircrc file. The .ircrc files may also set internal variables.
+/COMMENT .....
+/NICK <nn>
+/JOIN <ch>
+IRC commands begin with a \/" character. In Table 19.3, we give a few of the commands
+for IRC with their interpretations.
+Table 19.3: Various commands with interpretation.
+IRCs usually support a range of channels. Listed below are a few of the channel types:
+Limbo or Null
+Public
+Private
+Secret
+Moderated 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/14
+Limited
+Topic limited
+Invite Only
+Message disabled.
+The above channel types are realized by using a mode command. The modes are set or
+unset as follows. The options have the interpretations shown in Table 19.4.
+/MODE sets (with +) and unsets (with -) the mode of channel with the following options
+/MODE <channel> +<channel options> < parameters>
+/MODE <channel> -<channel options> < parameters>
+Table 19.4: Various options for channels.
+19.4.1 Sourcing Files
+As we have described above, the .rc files help to provide adequate support for a variety of
+services. Suppose we are logged to a system and seek a service that requires a change in
+one of the .rc files. We may edit the corresponding file. However, to affect the changed
+behavior we must source the file. Basically, we need to execute the source command with
+the file name as argument as shown below where we source the .cshrc file:
+source .cshrc
+19.5 Device Management and Services
+Technically the system administrator is responsible for every device, for all of its usage
+and operation. In particular, the administrator looks after its installation, upgrade,
+configuration, scheduling, and allocating quotas to service the user community. We shall,
+however, restrict ourselves to the following three services:
+1. Terminal-based services, discussed in Section 19.5.1
+2. Printer services, discussed in Section 19.5.2
+3. Disc space and file services, discussed in Section 19.5.3.
+We shall begin with the terminal settings and related issues.
+19.5.1 The Terminal Settings 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/15
+In the context of terminal settings the following three things are important:
+1. Unix recognizes terminals as special files.
+2. Terminals operate on serial lines. Unix has a way to deal with files that are
+essentially using serial communication lines.
+3. The terminals have a variety of settings available. This is so even while the
+protocols of communication for all of them are similar.
+From the point of terminal services provisioning and system configuration, system
+administration must bear the above three factors in mind. Unix maintains all terminal
+related information in tty files in /etc/dev directory. These files are special files which
+adhere to the protocols of communication with serial lines. This includes those terminals
+that use modems for communication. Some systems may have a special file for console
+like /etc/dev/console which can be monitored for messages as explained in the chapter on
+X-Windows. Depending upon the terminal type a serial line control protocol is used
+which can interrogate or activate appropriate pins on the hardware interface plug.
+The following brief session shows how a terminal may be identified on a host:
+login: bhatt
+Password:
+Last login: Tue Nov 5 00:25:21 from 203.197.175.174
+[bhatt@iiitbsun bhatt]$hostname
+iiitbsun
+[bhatt@iiitbsun bhatt]$tty
+/dev/pts/1
+[bhatt@iiitbsun bhatt]$
+termcap and terminfo files: The termcap and terminfo files in the directory /etc or in
+/usr/share/lib/terminfo provide the terminal database, information and programs for use
+in the Unix environment. The database includes programs that may have been compiled
+to elicit services from a specific terminal which may be installed. The programs that
+control the usage of a specific terminal are identified in the environment variable TERM
+as shown in the example below:
+[bhatt@localhost DFT02]$ echo $TERM
+xterm
+[bhatt@localhost DFT02]$ 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/16
+Table 19.5: Options under stty.
+There are specific commands like tic, short for terminal information compilation. Also,
+there are programs that convert termcap to terminfo whenever required. For detailed
+discussions on terminal characteristics and how to exploit various features the reader may
+refer to [2]. We shall, however, elaborate on two specific commands here.
+These are the tset and stty commands.
+1. tset Command: The tset command is used to initialize a terminal. Usually, the
+command sets up initial settings for characters like erase, kill, etc. Below we show
+how under C-Shell one may use the tset command:
+$setenv TERM `tset - Q -m ":?vt100"
+Sometimes one may prepare a temporary file and source it.
+2. stty command: We briefly encountered the stty command in Section 19.2. Here
+we shall elaborate on stty command in the context of options and the values which
+may be availed by using the stty command. In Table 19.5 we list a few of the
+options with their corresponding values.
+There are many other options. In Table 19.5 we have a sample of those that are
+available. Try the command stty -a to see the options for your terminal. Below
+is shown the setting on my terminal:
+[bhatt@localhost DFT02]$ stty -a
+speed 38400 baud; rows 24; columns 80; line = 0;
+intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = M-^?; eol2 = M-^?;
+start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V;
+flush = ^O; min = 1; time = 0;
+-parenb -parodd cs8 hupcl -cstopb cread -clocal -crtscts
+-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff
+-iuclc ixany imaxbel 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/17
+opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
+isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
+echoctl echoke
+[bhatt@localhost DFT02]$
+Lastly, we discuss how to attach a new terminal. Basically we need to connect a terminal
+and then we set-up the entries in termcap and/or in terminfo and configuration files.
+Sometimes one may have to look at the /etc/inittab or /etc/ttydefs as well. It helps to
+reboot the system on some occasions to ensure proper initialization following a set-up
+attempt.
+19.5.2 Printer Services
+Users obtain print services through a printer daemon. The system arranges to offer print
+services by spooling print jobs in a spooling directory. It also has a mechanism to service
+the print requests from the spooling directory. In addition, system administrators need to
+be familiar with commands which help in monitoring the printer usage. We shall begin
+with a description of the printcap file.
+The printcap file: Unix systems have their print services offered using a spooling system.
+The spooling system recognizes print devices that are identified in /etc/printcap file. The
+printcap file serves not only as a database, but also as a configuration file. Below we see
+the printcap file on my machine:
+# /etc/printcap
+#
+# DO NOT EDIT! MANUAL CHANGES WILL BE LOST!
+# This file is autogenerated by printconf-backend during lpd init.
+#
+# Hand edited changes can be put in /etc/printcap.local, and will be included.
+iiitb:\
+:sh:\
+:ml=0:\
+:mx=0:\
+:sd=/var/spool/lpd/iiitb:\
+:lp=|/usr/share/printconf/jetdirectprint:\
+:lpd_bounce=true:\ 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/18
+:if=/usr/share/
+printconf/mf_wrap
+per:
+The printcap file
+is a read-only file
+except that it can
+be edited by
+superuser ROOT.
+The entries in printcap files can be explained using Table 19.6. With the file description
+and the table we can see that the spooling directory for our printer, with printer name iiitb
+is at /var/spool. Also note we have no limit on file size which can be printed.
+Table 19.6: The printcap file: printer characteristics.
+Printer spooling directory: As we explained earlier, print requests get spooled first.
+Subsequently, the printer daemon lpd honours the print request to print. To achieve this,
+one may employ a two layered design. Viewing it bottom up, at the bottom layer
+maintain a separate spooling directory for each of the printers. So, when we attach a new
+printer, we must create a new spooling directory for it. At the top level, we have a
+spooling process which receives each print request and finally spools it for printer(s).
+Note that the owner of the spool process is a group daemon.
+Printer monitoring commands: The printer commands help to monitor both the health
+of the services as also the work in progress. In table 19.7 we elaborate on the commands
+and their interpretations.
+Table 19.7: The printer commands.
+To add a printer one may use a lpadmin tool. Some of the system administration practices
+are best learned by assisting experienced system administrators rarely can be taught
+through a textbook. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/19
+19.5.3 Disk space allocation and management
+In this section we shall discuss how does a system administrator manage the disk space.
+We will also like the reader to refer to Section 2.7.1 where we stated that at the time of
+formatting, partitions of the disk get defined. The partitions may be physical or logical. In
+case of a physical partition we have the file system resident within one disk drive. In case
+of logical partition, the file system may extend over several drives. In either of these
+cases the following issues are at stake:
+1. Disk file system: In Chapter 2 we indicated that system files are resident in the
+root file system. Similarly, the user information is maintained in home file system
+created by the administrator. Usually, a physical disk drive may have one or more
+file systems resident on it. As an example, consider the mapping shown in Figure
+19.1. We notice that there are three physical drives with mapping or root and
+The names of file systems are shown in bold letters.
+Figure 19.1: Mapping file systems on physical drives.
+other file systems. Note that the disk drive with the root file system co-locates the
+var file system on the same drive. Also, the file system home extends over two
+drives. This is possible by appropriate assignment of the disk partitions to various
+file systems. Of course, system programmers follow some method in both
+partitioning and allocating the partitions. Recall that each file system maintains
+some data about each of the files within it.
+System administrators have to reallocate the file systems when new disks become
+available, or when some disk suffers damage to sectors or tracks which may no
+longer be available. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/20
+2. Mounting and unmounting: The file systems keep the files in a directory
+structure which is essentially a tree. So a new file system can be created by
+specifying the point of mount in the directory tree. A typical mount instruction has
+the following format.
+mount a-block-special-file point-of-mount
+Corresponding to a mount instruction, there is also an instruction to unmount. In
+Unix it is umount with the same format as mount.
+In Unix every time we have a new disk added, it is mounted at a suitable point of
+mount in the directory tree. In that case the mount instruction is used exactly as
+explained. Of course, a disk is assumed to be formatted.
+3. Disk quota: Disk quota can be allocated by reconfiguring the file system usually
+located at /etc/fstab. To extend the allocation quota in a file system we first have
+to modify the corresponding entry in the /etc/fstab file. The system administration
+can set hard or soft limits of user quota. If a hard limit has been set, then the user
+simply cannot exceed the allocated space. However, if a soft limit is set, then the
+user is cautioned when he approaches the soft limit. Usually, it is expected that
+the user will resort to purging files no longer in use. Else he may seek additional
+disk space. Some systems have quota set at the group level. It may also be
+possible to set quota for individual users. Both these situations require executing
+an edit quota instruction with user name or group name as the argument. The
+format of edquota instruction is shown below.
+edquota user-name
+4. Integrity of file systems: Due to the dynamics of temporary allocations and
+moving files around, the integrity of a file system may get compromised. The
+following are some of the ways the integrity is lost:
+? Lost files. This may happen because a user ahs opened the same file from
+multiple windows and edited them.
+? A block may be marked free but may be in use.
+? A block may be marked in use but may be free.
+? The link counts may not be correct.
+? The data in the file system table and actual files may be different. 
+Operating Systems/System Administration in UNIX Lecture Notes
+PCP Bhatt/IISc, Bangalore M19/V1/June 04/21
+The integrity of the file system is checked out by using a fsck instruction. The
+argument to the command is the file system which we need to check as shown
+below.
+ fsck file-system-to-be-checked
+On rebooting the system these checks are mandatory and routinely performed.
+Consequently, the consistency of the file system is immediately restored on
+rebooting.
+5. Access control: As explained earlier in this chapter, when an account is opened, a
+user is allocated a group. The group determines the access. It is also possible to
+offer an initial set-up that will allow access to special (licensed) software like
+matlab suite of software.
+6. Periodic back-up: Every good administrator follows a regular back-up procedure
+so that in case of a severe breakdown, at least a stable previous state can be
+achieved.
+19.6 After-Word
+In this moduler we have listed many tasks which system administrators are required to
+perform. However, as we remarked earlier, the best lessons in system administration are
+learned under the tutelage of a very experienced system administrator. There is no
+substitute to the ?hands-on" learning. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/1
+Module 20: More on LINUX
+Linux Kernel Architecture
+The Big Picture:
+It is a good idea to look at the Linux kernel within the overall system?s overall context..
+Applications and OS services:
+These are the user application running on the Linux system. These applications are not
+fixed but typically include applications like email clients, text processors etc. OS services
+include utilities and services that are traditionally considered part of an OS like the
+windowing system, shells, programming interface to the kernel, the libraries and
+compilers etc.
+Linux Kernel:
+Kernel abstracts the hardware to the upper layers. The kernel presents the same view of
+the hardware even if the underlying hardware is ifferent. It mediates and controls access
+to system resources.
+Hardware:
+This layer consists of the physical resources of the system that finally do the actual work.
+This includes the CPU, the hard disk, the parallel port controllers, the system RAM etc.
+The Linux Kernel:
+After looking at the big picture we should zoom into the Linux kernel to get a closer look.
+Purpose of the Kernel:
+The Linux kernel presents a virtual machine interface to user processes. Processes are
+written without needing any knowledge (most of the time) of the type of the physical
+hardware that constitutes the computer. The Linux kernel abstracts all hardware into a
+consistent interface. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/2
+In addition, Linux Kernel supports multi-tasking in a manner that is transparent to user
+processes: each process can act as though it is the only process on the computer, with
+exclusive use of main memory and other hardware resources. The kernel actually runs
+several processes concurrently, and mediates access to hardware resources so that each
+process has fair access while inter-process security is maintained.
+The kernel code executes in privileged mode called kernel mode. Any code that does not
+need to run in privileged mode is put in the system library. The interesting thing about
+Linux kernel is that it has a modular architecture ? even with binary codes: Linux kernel
+can load (and unload) modules dynamically (at run time) just as it can load or unload the
+system library modules.
+Here we shall explore the conceptual view of the kernel without really bothering about
+the implementation issues (which keep on constantly changing any way). Kernel code
+provides for arbitrations and for protected access to HW resources. Kernel supports
+services for the applications through the system libraries. System calls within applications
+(may be written in C) may also use system library. For instance, the buffered file
+handling is operated and managed by Linux kernel through system libraries. Programs
+like utilities that are needed to initialize the system and configure network devices are
+classed as user mode programs and do not run with kernel privileges (unlike in Unix).
+Programs like those that handle login requests are run as system utilities and also do not
+require kernel privileges (unlike in Unix).
+The Linux Kernel Structure Overview:
+The ?loadable? kernel modules execute in the privileged kernel mode ? and therefore
+have the capabilities to communicate with all of HW.
+Linux kernel source code is free. People may develop their own kernel modules.
+However, this requires recompiling, linking and loading. Such a code can be distributed
+under GPL. More often the modality is:
+Start with the standard minimal basic kernel module. Then enrich the environment by the
+addition of customized drivers.
+This is the route presently most people in the embedded system area are adopting worldwide.
+
+The commonly loaded Linux system kernel can be thought of comprising of the
+following main components: 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/3
+Process Management: User process as also the kernel processes seek the cpu and other
+services. Usually a fork system call results in creating a new process. System call execve
+results in execution of a newly forked process. Processes, have an id (PID) and also have
+a user id (UID) like in Unix. Linux additionally has a personality associated with a
+process. Personality of a process is used by emulation libraries to be able to cater to a
+range of implementations. Usually a forked process inherits parent?s environment.
+In Linux Two vectors define a process: these are argument vector and environment
+vector. The environment vector essentially has a (name, value) value list wherein
+different environment variable values are specified. The argument vector has the
+command line arguments used by the process. Usually the environment is inherited
+however, upon execution of execve the process body may be redefined with a new set of
+environment variables. This helps in the customization of a process?s operational
+environment. Usually a process also has some indication on its scheduling context.
+Typically a process context includes information on scheduling, accounting, file tables,
+capability on signal handling and virtual memory context.
+In Linux, internally, both processes and threads have the same kind of representation.
+Linux processes and threads are POSIX compliant and are supported by a threads library
+package which provides for two kinds of threads: user and kernel. User-controlled
+scheduling can be used for user threads. The kernel threads are scheduled by the kernel.
+While in a single processor environment there can be only one kernel thread scheduled.
+In a multiprocessor environment one can use the kernel supported library and clone
+system call to have multiple kernel threads created and scheduled.
+Scheduler:
+Schedulers control the access to CPU by implementing some policy such that the CPU is
+shared in a way that is fair and also the system stability is maintained. In Linux
+scheduling is required for the user processes and the kernel tasks. Kernel tasks may be
+internal tasks on behalf of the drivers or initiated by user processes requiring specific OS
+services. Examples are: a page fault (induced by a user process) or because some device
+driver raises an interrupt. In Linux, normally, the kernel mode of operation can not be
+pre-empted. Kernel code runs to completion - unless it results in a page fault, or an
+interrupt of some kind or kernel code it self calls the scheduler. Linux is a time sharing
+system. So a timer interrupt happens and rescheduling may be initiated at that time. Linux 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/4
+uses a credit based scheduling algorithm. The process with the highest credits gets
+scheduled. The credits are revised after every run. If all run-able processes exhaust all the
+credits a priority based fresh credit allocation takes place. The crediting system usually
+gives higher credits to interactive or IO bound processes ? as these require immediate
+responses from a user. Linux also implements Unix like nice process characterization.
+The Memory Manager:
+Memory manager manages the allocation and de-allocation of system memory amongst
+the processes that may be executing concurrently at any time on the system. The memory
+manager ensures that these processes do not end up corrupting each other?s memory area.
+Also, this module is responsible for implementing virtual memory and the paging
+mechanism within it. The loadable kernel modules are managed in two stages:
+First the loader seeks memory allocation from the kernel. Next the kernel returns the
+address of the area for loading the new module.
+? The linking for symbols is handled by the compiler because whenever a new
+module is loaded recompilation is imperative.
+The Virtual File System (VFS):
+Presents a consistent file system interface to the kernel. This allows the kernel code to be
+independent of the various file systems that may be supported (details on virtual file
+system VFS follow under the files system).
+The Network Interface:
+Provides kernel access to various network hardware and protocols. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/5
+Inter Process Communication (IPC):
+The IPC primitives for processes also reside on the same system. With the explanation
+above we should think of the typical loadable kernel module in Linux to have three main
+components:
+? Module management,
+? Driver registration and
+? Conflict resolution mechanism.
+Module Management:
+For new modules this is done at two levels ? the management of kernel referenced
+symbols and the management of the code in kernel memory. The Linux kernel
+maintains a symbol table and symbols defined here can be exported (that is these
+definitions can be used elsewhere) explicitly. The new module must seek these
+symbols. In fact this is like having an external definition in C and then getting the
+definition at the kernel compile time. The module management system also defines
+all the required communications interfaces for this newly inserted module. With this
+done, processes can request the services (may be of a device driver) from this module.
+Driver registration:
+The kernel maintains a dynamic table which gets modified once a new module is
+added ? some times one may wish to delete also. In writing these modules care is
+taken to ensure that initializations and cleaning up operations are defined for the
+driver. A module may register one or more drivers of one or more types of drivers.
+Usually the registration of drivers is maintained in a registration table of the module.
+The registration of drives entails the following:
+1. Driver context identification: as a character or bulk device or a network driver.
+2. File system context: essentially the routines employed to store files in Linux virtual
+file system or network file system like NFS.
+3. Network protocols and packet filtering rules.
+4. File formats for executable and other files.
+Conflict Resolution:
+The PC hardware configuration is supported by a large number of chip set
+configurations and with a large range of drivers for SCSI devices, video display
+devices and adapters, network cards. This results in the situation where we have 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/6
+module device drivers which vary over a very wide range of capabilities and options.
+This necessitates a conflict resolution mechanism to resolve accesses in a variety of
+conflicting concurrent accesses. The conflict resolution mechanisms help in
+preventing modules from having an access conflict to the HW ? for example an
+access to a printer. Modules usually identify the HW resources it needs at the time of
+loading and the kernel makes these available by using a reservation table. The kernel
+usually maintains information on the address to be used for accessing HW - be it
+DMA channel or an interrupt line. The drivers avail kernel services to access HW
+resources.
+System Calls:
+Let us explore how system calls are handled. A user space process enters the kernel.
+From this point the mechanism is some what CPU architecture dependent. Most
+common examples of system calls are: - open, close, read, write, exit, fork, exec, kill,
+socket calls etc.
+The Linux Kernel 2.4 is non preemptable. Implying once a system call is executing it
+will run till it is finished or it relinquishes control of the CPU. However, Linux kernel
+2.6 has been made partly preemptable. This has improved the responsiveness
+considerably and the system behavior is less ?jerky?.
+Systems Call Interface in Linux:
+System call is the interface with which a program in user space program accesses
+kernel functionality. At a very high level it can be thought of as a user process calling
+a function in the Linux Kernel. Even though this would seem like a normal C function
+call, it is in fact handled differently. The user process does not issue a system call
+directly - in stead, it is internally invoked by the C library.
+Linux has a fixed number of system calls that are reconciled at compile time. A user
+process can access only these finite set of services via the system call interface. Each
+system call has a unique identifying number. The exact mechanism of a system call
+implementation is platform dependent. Below we discuss how it is done in the x86
+architecture.
+To invoke a system call in x86 architecture, the following needs to be done. First, a
+system call number is put into the EAX hardware register. Arguments to the system
+call are put into other hardware registers. Then the int0x80 software interrupt is 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/7
+issued which then invokes the kernel service.
+Adding one?s own system call is a pretty straight forward (almost) in Linux. Let us
+try to implement our own simple system call which we will call ?simple? and whose
+source we will put in simple.c.
+/* simple.c */
+/* this code was never actually compiled and tested */
+#include<linux/simple.h>
+asmlinkage int sys_simple(void)
+{
+return 99;
+}
+As can be seen that this a very dumb system call that does nothing but return 99. But
+that is enough for our purpose of understanding the basics.
+This file now has to be added to the Linux source tree for compilation by executing:
+/usr/src/linux.*.*/simple.c
+Those who are not familiar with kernel programming might wonder what
+?asmlinkage? stands for in the system call. ?C? language does not allow access
+hardware directly. So, some assembly code is required to access the EAX register etc.
+The asmlinkage macro does the dirty work fortunately.
+ The asmlinkage macro is defined in XXXX/linkage.h. It initiates another
+macro_syscall in XXXXX/unistd.h. The header file for a typical system call will
+contain the following. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/8
+After defining the system call we need to assign a system call number. This can be
+done by adding a line to the file unistd.h . unistd.h has a series of #defines of the form:
+#define _NR_sys_exit 1
+Now if the last system call number is 223 then we enter the following line at the bottom
+#define _NR_sys_simple 224
+After assigning a number to the system call it is entered into system call table. The
+system call number is the index into a table that contains a pointer to the actual routine.
+This table is defined in the kernel file ?entry.S? .We add the following line to the file :
+* this code was never actually compiled and tested
+*/.long SYSMBOL_NAME(sys_simple)
+Finally, we need to modify the makefile so that our system call is added to the kernel
+when it is compiled. If we look at the file /usr/src/linux.*.*/kernel/Makefile we get a line
+of the following format.
+obj_y= sched.o + dn.o ??.etc we add: obj_y += simple.o
+Now we need to recompile the kernel. Note that there is no need to change the config file.
+With the source code of the Linux freely available, it is possible for users to make their
+own versions of the kernel. A user can take the source code select only the parts of the
+kernel that are relevant to him and leave out the rest. It is possible to get a working Linux
+kernel in single 1.44 MB floppy disk. A user can modify the source for the kernel so that 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/9
+the kernel suits a targeted application better. This is one of the reasons why Linux is the
+successful (and preferred) platform for developing embedded systems In fact, Linux has
+reopened the world of system programming.
+The Memory Management Issues
+The two major components in Linux memory management are:
+- The page management
+- The virtual memory management
+1. The page management: Pages are usually of a size which is a power of 2. Given
+the main memory Linux allocates a group of pages using a buddy system. The
+allocation is the responsibility of a software called ?page allocator?. Page
+allocator software is responsible for both allocation, as well as, freeing the
+memory. The basic memory allocator uses a buddy heap which allocates a
+contiguous area of size 2n > the required memory with minimum n obtained by
+successive generation of ?buddies? of equal size. We explain the buddy allocation
+using an example.
+An Example: Suppose we need memory of size 1556 words. Starting with a
+memory size 16K we would proceed as follows:
+1. First create 2 buddies of size 8k from the given memory size ie. 16K
+2. From one of the 8K buddy create two buddies of size 4K each
+3. From one of the 4k buddy create two buddies of size 2K each.
+4. Use one of the most recently generated buddies to accommodate the 1556
+size memory requirement.
+Note that for a requirement of 1556 words, memory chunk of size 2K words satisfies the
+property of being the smallest chunk larger than the required size.
+Possibly some more concepts on page replacement, page aging, page flushing and the
+changes done in Linux 2.4 and 2.6 in these areas.
+2. Virtual memory Management: The basic idea of a virtual memory system is
+to expose address space to a process. A process should have the entire address
+space exposed to it to make an allocation or deallocation. Linux makes a
+conscious effort to allocate logically, ?page aligned? contiguous address
+space. Such page aligned logical spaces are called regions in the memory. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/10
+Linux organizes these regions to form a binary tree structure for fast access. In
+addition to the above logical view the Linux kernel maintains the physical
+view ie maps the hardware page table entries that determine the location of the
+logical page in the exact location on a disk. The process address space may
+have private or shared pages. Changes made to a page require that locality is
+preserved for a process by maintaining a copy-on-write when the pages are
+private to the process where as these have to be visible when they are shared.
+A process, when first created following a fork system call, finds its allocation with a new
+entry in the page table ? with inherited entries from the parent. For any page which is
+shared amongst the processes (like parent and child), a reference count is maintained.
+Linux has a far more efficient page swapping algorithm than Unix ? it uses a second
+chance algorithm dependent on the usage pattern. The manner it manifests it self is that a
+page gets a few chances of survival before it is considered to be no longer useful.
+Frequently used pages get a higher age value and a reduction in usage brings the age
+closer to zero ? finally leading to its exit.
+The Kernel Virtual Memory: Kernel also maintains for each process a certain amount
+of ?kernel virtual memory? ? the page table entries for these are marked ?protected?.
+The kernel virtual memory is split into two regions. First there is a static region which
+has the core of the kernel and page table references for all the normally allocated pages
+that can not be modified. The second region is dynamic - page table entries created here
+may point anywhere and can be modified.
+Loading, Linking and Execution: For a process the execution mode is entered
+following an exec system call. This may result in completely rewriting the previous
+execution context ? this, however, requires that the calling process is entitled an access to
+the called code. Once the check is through the loading of the code is initiated. Older
+versions of Linux used to load binary files in the a.out format. The current version also
+loads binary files in ELF format. The ELF format is flexible as it permits adding
+additional information for debugging etc. A process can be executed when all the needed
+library routines have also been linked to form an executable module. Linux supports
+dynamic linking. The dynamic linking is achieved in two stages: 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/11
+1. First the linking process downloads a very small statically linked function ?
+whose task is to read the list of library functions which are to be dynamically
+linked.
+2. Next the dynamic linking follows - resolving all symbolic references to get a
+loadable executable.
+Linux File Systems
+Introduction:
+Linux retains most fundamentals of the Unix file systems. While most Linux systems
+retain Minix file systems as well, the more commonly used file systems are VFS and
+ext2FS which stand for virtual file system and extended file systems. We shall also
+examine some details of proc file system and motivation for its presence in Linux file
+systems.
+ As in other UNIXES in Linux the files are mounted in one huge tree rooted at /. The file
+may actually be on different drives on the same or on remotely networked machines.
+Unlike windows, and like unixes, Linux does not have drive numbers like A: B: C: etc.
+The mount operation: The unixes have a notion of mount operation. The mount
+operation is used to attach a filesystem to an existing filesystem on a hard disk or any
+other block oriented device. The idea is to attach the filesystem within the file hierarchy
+at a specified mount point. The mount point is defined by the path name for an identified
+directory. If that mount point has contents before the mount operation they are hidden till
+the file system is un-mounted. The un-mount requires issuance of umount command.
+Linux supports multiple filesystems. These include ext, ext2, xia, minix, umsdos, msdos,
+vfat, proc, smb, ncp, iso9660,sysv, hpfs, affs and ufs etc. More file systems will be
+supported in future versions of LINUX. All block capable devices like floppy drives, IDE
+hard disks etc. can run as a filesystem. The ?look and feel? of the files is the same
+regardless of the type of underlying block media. The Linux filesystems treat nearly all
+media as if they are linear collection of blocks. It is the task of the device driver to
+translate the file system calls into appropriate cylinder head number etc. if needed. A
+single disk partition or the entire disk (if there are no partitions) can have only one
+filesystem. That is, you cannot have a half the file partition running EXT2 and the 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/12
+remaining half running FAT32. The minimum granularity of a file system is a hard disk
+partition.
+ On the whole the EXT2 filesystem is the most successful file system. It is also now a
+part of the more popular Linux Distributions. Linux originally came with the Minix
+filesystem which was quite primitive and 'academic' in nature. To improve the situation a
+new file system was designed for Linux in 1992 called the Exteneded File System or the
+EXT file system. Mr Remy Card (R?my Card, Laboratoire MASI--Institut Blaise Pascal,
+E-Mail: card@masi.ibp.fr) further improved the system to offer the Extended File System
+-2 or the ext-2 file system. This was an important addition to Linux that was added along
+with the virtual file system which permitted Linux to interoperate with different
+filesystems.
+Description:
+Basic File Systems concepts:
+Every Linux file system implements the basic set of concepts that have been a part of the
+Unix filesystem along the lines described in ?The Design of the Unix? Book by Maurice
+Bach. Basically, these concepts are that every file is represented by an inode. Directories
+are nothing but special files with a list of entries. I/O to devices can be handled by simply
+reading or writing into special files (Example: To read data from the serial port we can do
+cat /dev/ttyS0).
+Superblock:
+Super block contains the meta-data for the entire filesystem.
+Inodes:
+Each file is associated with a structure called an inode. Inode stores the attributes of the
+file which include File type, owner time stamp, size pointers to data blocks etc.
+Whenever a file is accessed the kernel translates the offset into a block number and then
+uses the inode to figure out the actual address of the block. This address is then used to
+read/write to the actual physical block on the disk. The structure of an inode is as shown
+below in the figure. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/13
+Directories:
+Directories are implemented as special files. Actually, a directory is nothing but a file
+containing a list of entries. Each entry contains a file name and a corresponding inode
+number. Whenever a path is resolved by the kernel it looks up these entries for the
+corresponding inode number. If the inode number is found it is loaded in the memory and
+used for further file access.
+Links:
+UNIX operating systems implement the concept of links. Basically there are two types of
+links: Hard links and soft links. Hard link is just another entry in directory structure
+pointing to the same inode number as the file name it is linked to. The link count on the
+pointed inode is incremented. If a hard link is deleted the link count is decremented. If the
+Name1 I1
+Name2 I2
+Name3 I3
+Name4 I4
+Name5 I5
+Directory Inode Table 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/14
+link count becomes zero the inode is deallocated if the linkcount becoms zero. It is
+impossible to have cross file systems hard links.
+Soft links are just files which contain the name of the file they are pointing to. Whenever
+the kernel encounters a soft link in a path it replaces the soft-link with it contents and
+restarts the path resolution. With soft links it is possible to have cross file system links.
+Softlinks that are not linked to absolute paths can lead to havoc in some cases. Softlinks
+also degrade system performance.
+Device specific files:
+UNIX operating systems enable access to devices using special files. These file do not
+take up any space but are actually used to connect the device to the correct device driver.
+The device driver is located based on the major number associated with the device file.
+The minor number is passed to the device driver as an argument. Linux kernel 2.4
+introduced a new file system for accessing device files called as the device file system.
+(Look at the section on device drivers)
+The Virtual File system:
+When the Linux Kernel has to access a filesystem it uses a filesystem type independent
+interface, which allows the system to carry out operations on a File System without
+knowing its construction or type. Since the kernel is independent of File System type or
+construction, it is flexible enough to accommodate future File Systems as and when they
+become available.
+Virtual File System is an interface providing a clearly defined link between the operating
+system kernel and the different File Systems. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/15
+The VFS Structure and file management in VFS:
+For management of files, VFS employs an underlying definition for three kinds of
+objects:
+1. inode object
+2. file object
+3. file system object
+Associated with each type of object is a function table which contains the operations that
+can be performed. The function table basically maintains the addresses of the operational
+routines. The file objects and inode objects maintain all the access mechanism for each
+file?s access. To access an inode object the process must obtain a pointer to it from the
+corresponding file object. The file object maintains from where a certain file is currently
+being read or written to ensure sequential IO. File objects usually belong to a single
+User Process
+System call Interface
+VFS
+F
+A
+T
+M
+I
+N
+I
+X
+F
+S
+E
+X
+T
+2
+Buffer Cache
+ Device Driver
+Disk Controller
+Linux Kernel
+Hardware
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/16
+process. The inode object maintains such information as the owner, time of file creation
+and modification.
+The VFS knows about file-system types supported in the kernel. It uses a table defined
+during the kernel configuration. Each entry in this table describes filesystem type: it
+contains the name of the filesystem type and a pointer to a function called during the
+mount operation. When a file-system is to be mounted, the appropriate mount function is
+called. This function is responsible for reading the super-block from the disk, initializing
+its internal variables, and returning a mounted file-system descriptor to the VFS. The
+VFS functions can use this descriptor to access the physical file-system routines
+subsequently. A mounted file-system descriptor contains several kinds of data:
+information that is common to every file-system type, pointers to functions provided by
+the physical file-system kernel code, and private data maintained by the physical filesystem
+code. The function pointers contained in the file-system descriptors allow the
+VFS to access the file-system internal routines. Two other types of descriptors are used
+by the VFS: an inode descriptor and an open file descriptor. Each descriptor contains
+information related to files in use and a set of operations provided by the physical filesystem
+code. While the inode descriptor contains pointers to functions that can be used to
+act on any file (e.g. create, unlink), the file descriptors contains pointer to functions
+which can only act on open files (e.g. read, write).
+The Second Extended File System (EXT2FS)
+Standard Ext2fs features:
+This is the most commonly used file system in Linux. In fact, it extends the original
+Minix FS which had several restrictions ? such as file name length being limited to 14
+characters and the file system size limited to 64 K etc. The ext2FS permits three levels of
+indirections to store really large files (as in BSD fast file system). Small files and
+fragments are stored in 1KB (kilo bytes) blocks. It is possible to support 2KB or 4KB
+blocks sizes. 1KB is the default size. The Ext2fs supports standard *nix file types: regular
+files, directories, device special files and symbolic links. Ext2fs is able to manage file
+systems created on really big partitions. While the original kernel code restricted the
+maximal file-system size to 2 GB, recent work in the VFS layer have raised this limit to 4
+TB. Thus, it is now possible to use big disks without the need of creating many partitions. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/17
+Not only does Ext2fs provide long file names it also uses variable length directory
+entries. The maximal file name size is 255 characters. This limit could be extended to
+1012, if needed. Ext2fs reserves some blocks for the super user (root). Normally, 5% of
+the blocks are reserved. This allows the administrator to recover easily from situations
+where user processes fill up file systems.
+As we had earlier mentioned physical block allocation policy attempts to place logically
+related blocks physically close so that IO is expedited. This is achieved by having two
+forms of groups:
+1. Block group
+2. Cylinder group.
+Usually the file allocation is attempted with the block group with the inode of the file in
+the same block group. Also within a block group physical proximity is attempted. As for
+the cylinder group, the distribution depends on the way head movement can be
+optimized.
+Advanced Ext2fs features
+In addition to the standard features of the *NIX file systems ext2fs supports several
+advanced features.
+File attributes allow the users to modify the kernel behavior when acting on a set of files.
+One can set attributes on a file or on a directory. In the later case, new files created in the
+directory inherit these attributes. (Examples: Compression Immutability etc)
+BSD or System V Release 4 semantics can be selected at mount time. A mount option
+allows the administrator to choose the file creation semantics. On a file-system mounted
+with BSD semantics, files are created with the same group id as their parent directory.
+System V semantics are a bit more complex: if a directory has the setgid bit set, new files
+inherit the group id of the directory and subdirectories inherit the group id and the setgid
+bit; in the other case, files and subdirectories are created with the primary group id of the
+calling process.
+BSD-like synchronous updates can be used in Ext2fs. A mount option allows the
+administrator to request that metadata (inodes, bitmap blocks, indirect blocks and
+directory blocks) be written synchronously on the disk when they are modified. This can
+be useful to maintain a strict metadata consistency but this leads to poor performances. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/18
+Ext2fs allows the administrator to choose the logical block size when creating the filesystem.
+Block sizes can typically be 1024, 2048 and 4096 bytes.
+Ext2fs implements fast symbolic links. A fast symbolic link does not use any data block
+on the file-system. The target name is not stored in a data block but in the inode itself.
+Ext2fs keeps track of the file-system state. A special field in the superblock is used by the
+kernel code to indicate the status of the file system. When a file-system is mounted in
+read or write mode, its state is set to ``Not Clean''. Whenever filesystem is unmounted, or
+re-mounted in read-only mode, its state is reset to: ``Clean''. At boot time, the file-system
+checker uses this information to decide if a file-system must be checked. The kernel code
+also records errors in this field. When an inconsistency is detected by the kernel code, the
+file-system is marked as ``Erroneous''. The file-system checker tests this to force the
+check of the file-system regardless of its apparently clean state.
+Always skipping filesystem checks may sometimes be dangerous, so Ext2fs provides two
+ways to force checks at regular intervals. A mount counter is maintained in the
+superblock. Each time the filesystem is mounted in read/write mode, this counter is
+incremented. When it reaches a maximal value (also recorded in the superblock), the
+filesystem checker forces the check even if the filesystem is ``Clean''. A last check time
+and a maximal check interval are also maintained in the superblock. These two fields
+allow the administrator to request periodical checks. When the maximal check interval
+has been reached, the checker ignores the filesystem state and forces a filesystem check.
+Ext2fs offers tools to tune the filesystem behavior like tune2fs
+Physical Structure:
+The physical structure of Ext2 filesystems has been strongly influenced by the layout of
+the BSD filesystem .A filesystem is made up of block groups. The physical structure of a
+filesystem is represented in this table:
+Boot Sector Block Grp 1 Block Grp2 ??.. Block Grp N
+Each block group contains a redundant copy of crucial filesystem control informations
+(superblock and the filesystem descriptors) and also contains a part of the filesystem (a
+block bitmap, an inode bitmap, a piece of the inode table, and data blocks). The structure
+of a block group is represented in this table:
+Super
+Block
+FS
+descriptors
+Block
+Bitmap
+Inode
+Bitmap
+Inode Table Data Blocks 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/19
+Using block groups is a big factor contributing to the reliability of the file system: since
+the control structures are replicated in each block group, it is easy to recover from a
+filesystem where the superblock has been corrupted. This structure also helps to get good
+performances: by reducing the distance between the inode table and the data blocks, it is
+possible to reduce the disk head seeks during I/O on files.
+In Ext2fs, directories are managed as linked lists of variable length entries. Each entry
+contains the inode number, the entry length, the file name and its length. By using
+variable length entries, it is possible to implement long file names without wasting disk
+space in directories.
+As an example, the next table represents the structure of a directory containing three files:
+File, Very_long_name, and F2. The first entry in the table is inode number; the second
+entry is the entire entry length: the third field indicates the length of the file name and the
+last entry is the name of the file itself
+I1 15 05 File
+I2 40 30 Very_very_very_long_file_name
+I3 12 03
+
+I1 15 5 File I2 40 30 Very_very_very_long_file_name
+Inode Table
+0
+15 40 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/20
+The EXT3 file system: The ext2 file system is in fact a robust and well tested system.
+Even so some problem areas have been identified with ext2fs. These are mostly with the
+shutdown fsck (for filesystem health check at the time of shutdown). It takes unduly long
+to set it right using e2fsck . The solution was to add journaling to the filesystem. One
+more line about journaling. Another issue with the ext2 file system is its poor capability
+to scale to very large drives and files. The EXT3 file system which is in some sense an
+extension of the ext2 filesystem will try to address these shortcomings and also offer
+many other enhancements.
+THE PROC FILE SYSTEM:
+Proc file system shows the power of the Linux virtual file system. The Proc file system is
+a special file system which actually displays the present state of the system. In fact we
+can call it a ?pretend? file system. If one explores the /proc directory one notices that all
+the files have zero bytes as the file size. Many commands like ps actually parse the /proc
+files to generate their output. Interestingly enough Linux does not have any system call to
+get process information. It can only be accessed by reading the proc file system. The proc
+file system has a wealth of information. For example the file /proc/cpuinfo gives a lot of
+things about the host processor.
+A sample output could be as shown below:
+processor : 0
+vendor_id : AuthenticAMD
+cpu family : 5
+model : 9
+model name : AMD-K6(tm) 3D+ Processor
+stepping : 1
+cpu MHz : 400.919
+cache size : 256 KB
+fdiv_bug : no
+hlt_bug : no
+f00f_bug : no
+coma_bug : no
+fpu : yes
+fpu_exception : yes 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/21
+cpuid level : 1
+wp : yes
+flags : fpu vme de pse tsc msr mce cx8 pge mmx syscall 3dnow k6_mtrr
+bogomips : 799.53
+/proc also contains, apart from other things, properties of all the processes running on the
+system at that moment. Each property is grouped together into a directory with a name
+equal to the PID of the process. Some of the information that can be obtained is shown as
+follows.
+/proc/PID/cmdline
+Command line arguments.
+/proc/PID/cpu
+Current and last cpu in which it was executed.
+/proc/PID/cwd
+Link to the current working directory.
+/proc/PID/environ
+Values of environment variables.
+/proc/PID/exe
+Link to the executable of this process.
+/proc/PID/fd
+Directory, which contains all file descriptors.
+/proc/PID/maps
+Memory maps to executables and library files.
+/proc/PID/mem
+Memory held by this process.
+/proc/PID/root
+Link to the root directory of this process.
+/proc/PID/stat
+Process status.
+/proc/PID/statm
+Process memory status information.
+/proc/PID/status 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/22
+Process status in human readable form
+DEVICE DRIVERS ON LINUX
+Introduction:
+Most of the Linux code is independent of the hardware it runs on. Applications are often
+agnostic to the internals of a hardware device they interact with. They interact with the
+devices as a black box using operating system defined interfaces. As far as applications
+are concerned, inside the black box sits a program that exercises a protocol to interact
+with the device completely. This program interacts with the device at a very low level
+and abstracts away all the oddities and peculiarities of the underlying hardware to the
+invoking application. Obviously every device has a different device driver. The demand
+for device drivers is increasing as more and more devices are being introduced and the
+old ones become obsolete.
+In the context of Linux as an open source OS, device drivers are in great demand. There
+are two principal drivers behind this. Firstly, many hardware manufacturers do not ship a
+Linux driver so it is left for someone from the open source community to implement a
+driver. Second reason is the large proliferation of Linux in the embedded system market.
+Some believe that Linux today is number one choice for embedded system development
+work. Embedded devices have special devices attached to them that require specialized
+drivers. An example could be a microwave oven running Linux and having a special
+device driver to control its turntable motor.
+In Linux the device driver can be linked into the kernel at compile time. This implies that
+the driver is now a part of the kernel and it is always loaded. The device driver can also
+be linked into the kernel dynamically at runtime as a pluggable module. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/23
+Almost every system call eventually maps to a physical device. With the exception of the
+processor, memory and a few other entities, all device control operations are performed
+by code that is specific to the device. This code as we know is called the device driver.
+Kernel must have device drivers for all the peripherals that are present in the system right
+from the keyboard to the hard disk etc.
+Device classes:
+Char devices:
+These devices have a stream oriented nature where data is accessed as a stream of bytes
+example serial ports. The drivers that are written for these devices are usually called
+?char device drivers?. These devices are accessed using the normal file system. Usually
+they are mounted in the /dev directory. If ls ?al command is typed on the command
+prompt in the /dev directory these devices appear with a ?c? in the first column.
+Example:
+crw-rw-rw- 1 root tty 2, 176 Apr 11 2002 ptya0
+crw-rw-rw- 1 root tty 2, 177 Apr 11 2002 ptya1
+crw-rw-rw- 1 root tty 2, 178 Apr 11 2002 ptya2
+crw-rw-rw- 1 root tty 2, 179 Apr 11 2002 ptya3
+Block devices:
+Applicati
+on
+Code
+Kernel
+Subsystems
+:
+Examples:
+I/O
+controllers,
+File
+Systems
+etc.
+Device
+Drivers:
+Examples
+:Keyboard
+driver,
+Scsi
+Driver
+etc.
+Physical
+device:
+Example:
+Keyboard
+, Hard
+Disk etc.
+System call
+interface
+Hardware interface 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/24
+These devices have a ?block? oriented nature where data is provided by the devices in
+blocks. The drivers that are written for these devices are usually called as block device
+drivers. Classic example of a block device is the hard disk. These devices are accessed
+using the normal file system. Usually they are mounted in the /dev directory. If a ls ?al
+command is typed on the command prompt in the /dev directory these devices appear
+with a ?b? in the first column.
+Example:
+brw-rw---- 1 root disk 29, 0 Apr 11 2002 aztcd
+brw-rw---- 1 root disk 41, 0 Apr 11 2002 bpcd
+brw-rw---- 1 root floppy 2, 0 Apr 11 2002 fd0
+Network devices:
+These devices handle the network interface to the system. These devices are not accessed
+via the file system. Usually the kernel handles these devices by providing special names
+to the network interfaces e.g. eth0 etc.
+Note that Linux permits a lot of experimentation with regards to checking out new device
+drivers. One need to learn to load, unload and recompile to check out the efficacy of any
+newly introduced device driver. The cycle of testing is beyond the scope of discussion
+here.
+Major/minor numbers:
+Most devices are accessed through nodes in the file system. These nodes are called
+special files or device files or simply nodes of the file system tree. These names are
+usually mounted in the /dev/ directory.
+If a ls ?al command is issued in this directory we can see two comma separated numbers
+that appear where usually the file size is mentioned. The first number (from left side) is
+called the device major number and the second number is called the device minor
+number.
+Example: crw-rw-rw- 1 root tty 2, 176 Apr 11 2002 ptya0
+Here the major number is 2 and the minor number is 176
+The major number is used by the kernel to locate the device driver for that device. It is an
+index into a static array of the device driver entry points (function pointers). The minor
+number is passed to the driver as an argument and the kernel does not bother about it. The
+minor number may be used by the device driver to distinguish between the different types 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/25
+of devices of the same type it supports. It is left to the device driver, what it does with the
+minor numbers. For the Linux kernel 2.4 the major and minor numbers are eight bit
+quantities. So at a given time you can have utmost 256 drivers of a particular type and
+256 different types of devices loaded in a system. This value is likely to increase in future
+releases of the kernel.
+Kernel 2.4 has introduced a new (optional) file system to handle device. This file system
+is called the device file system . In this file system the management of devices is much
+more simplified. Although it has lot of user visible incompatibilities with the previous file
+system, at present device file system is not a standard part of most Linux distributions.
+In future, things might change in favour of the device file system. Here it must be
+mentioned that the following discussion is far from complete. There is no substitute for
+looking at the actual source code. The following section will mainly help the reader to
+know what to grep for in the source code.
+We will now discuss each of the device class drivers that is block, character and network
+drivers in more detail.
+Character Drivers:
+Driver Registeration/Uregisteration:
+We register a device driver with the Linux kernel by invoking a routine (<Linux/fs.h>)
+int register_chrdev(unsigned int major, const char * name, struct file_operations * fops);
+Here the major argument is the major number associated with the device. Name signifies
+the device driver as it will appear in the /proc/devices once it is successfully registered.
+The fops is a pointer to the structure containing function pointers to the devices?
+functionalities. We will discuss fops in detail later.
+Now the question arises: how do we assign a major number to our driver:
+Assigning major numbers:
+Some numbers are permanently allocated to some common devices. The reader may like
+to explore: /Documentation/devices.txt in the source tree. So if we are writing device
+drivers for these devices we simply use these major numbers.
+If that is not the case then we can use major numbers that are allocated for experimental
+usage. Major numbers in the range 60-63, 120-127, 240-254 are for experimental usage. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/26
+But how do we know that a major number is not already used especially when we are
+shipping a driver to some other computer.
+By far the best approach is to dynamically assign the major number. The idea is to get a
+free major number by looking at the present state of the system and then assigning it to
+our driver. If the register_chrdev function is invoked with a zero in the major number
+field, the function, if it registers the driver successfully, returns the major number
+allocated to it. What it does is that it searches the system for an unused major number,
+assigns it to the driver and then returns it. The story does not end here. To access our
+device we need to add our device to the file system tree. That is, we need to do mknod for
+the device into the tree. For that we need to know the major number for the driver. For a
+statically assigned major number that is not a problem. Just use that major number you
+assigned to the device. But for a dynamically assigned number how do we get the major
+number? The answer is: parse the /proc/devices file and find out the major number
+assigned to our device. A script can also be written to do the job.
+Removing a driver from the system is easy. We invoke the unregister_chrdev(unsigned
+int major, const char * name);
+Important Data Structure:
+The file Structure<linux/fs.h>:
+Every Linux open file has a corresponding file structure associated with it. Whenever a
+method of the device driver is invoked the kernel will pass the associated file structure to
+the method. The method can then use the contents of this structure to do its job. We list
+down some important fields of this structure.
+mode_t f_mode;
+This field indicates the mode of the file i.e for read write or both etc.
+loff_t f_pos;
+The current offset in the file.
+unsigned int f_flags;
+This fields contains the flags for driver access for example synchronous access (blocking)
+or asynchronus(non blocking) access etc.
+struct file_operations * fops;
+This structure contains the entry points for the methods that device driver supports. This
+is an important structure we will look at it in more detail in the later sections. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/27
+void * private_data;
+This pointer can be allocated memory by the device driver for its own personal use. Like
+for maintaining states of the driver across different function calls.
+sruct dentry * f_dentry;
+The directory entry associated with the file.
+Etc.
+The file operations structure(fops):<linux/fs.h>
+This is the most important structure as far as device driver writer are concerned. It
+contains pointers to the driver functions. The file structure discussed in the previous
+section contains a pointer to the fops structure. The file (device) is the object and fops
+contains the methods that act on this object. We can see here object oriented approach in
+the Linux Kernel.
+Before we look at the members of the fops structure it will be useful if we look at taggd
+structure initialization:
+Tagged structure initializations:
+The fops structure has been expanding with every kernel release. This can lead to
+compatibility problems of the driver across different kernel versions.
+This problem is solved by using tagged structure initialization. Tagged structure
+initialization is an extension of ANSI C by GNU. It allows initialization of structure by
+name tags rather than positional initialization as in standard C.
+Example:
+struct fops myfops={
+????????..
+???????.
+open : myopen;
+close : myclose:
+????..
+????
+}
+The intilization can now be oblivious of the change in the structure (Provided obviously
+that the fields have not been removed). 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/28
+Pointers to functions that are implemented by the driver are stored in the fops structure.
+Methods that are not implemented are made NULL.
+Now we look at some of the members of the fops structure:
+loff_t (*llseek) (struct file *,loff_t);
+/* This method can be used to change the present offset in a file. */
+ssize_t (*read) (struct file*,char *,size_t,loff_t *);
+/* Read data from a device.*/
+ssize_t(*write) (struct file *,const char *,size_t,loff_t *);
+/* Write data to the device. */
+int (* readdir) (struct file *,void *,fill_dir_t);
+/* Reading directories. Useful for file systems.*/
+unsigned int (* poll) (struct file *,struct poll_table_struct *);
+/* Used to check the state of the device. */
+int (*ioctl)(struct inode *,struct file *,unsigned int,unsigned long);
+/* The ioctl is used to issue device specific calls(example setting the baud rate of the
+serial port). */
+int (*mmap) (struct file *,struct vm_area_struct *);
+/* Map to primary memory */
+int (* open) (struct inode *,struct file *);
+/ * Open device.*/
+int ( *flush) (struct file *) ;
+/* flush the device*/
+int (*release) (struct inode *,struct file *);
+/* Release the file structure */
+int(*fsync) (struct inode *,struct dentry *);
+/* Flush any pending data to the device. */
+Etc.
+Advance Char Driver Operations:
+Although most of the following discussion is valid to character as well as network and
+block drivers, the actual implementation of these features is explained with respect to
+char drivers. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/29
+Blocking and non-blocking operations:
+Device drivers usually interact with hardware devices that are several orders of time
+slower than the processor. Typically if a modern PC processor takes a second to process a
+byte of data from a keyboard, the keyboard takes several thousand years to produce a
+single byte of data. It will be very foolish to keep the processor waiting for data to arrive
+from a hardware device. It could have severe impact on the overall system performance
+and throughput. Another cause that can lead to delays in accessing devices, which has
+nothing to do with the device characteristics, is the policy in accessing the device. There
+might be cases where device may be blocked by other drivers . For a device driver writer
+it is of paramount importance that the processor is freed to perform other tasks when the
+device is not ready.
+We can achieve this by the following ways.
+One way is blocking or the synchronous driver access. In this way of access we cause the
+invoking process to sleep till the data arrives. The CPU is then available for other
+processes in the system. The process is then awakened when the device is ready.
+Another method is in which the driver returns immediately whether the device is ready or
+not allowing the application to poll the device.
+Also the driver can be provided asynchronous methods for indicating to the application
+when the data is available.
+Let us briefly look at the Linux kernel 2.4 mechanisms to achieve this.
+There is a flag called O_NONBLOCK flag in filp->f_flags ( <linux/fcntl.h> ).
+If this flag is set it implies that the driver is being used with non-blocking access. This
+flag is cleared by default. This flag is examined by the driver to implement the correct
+semantics.
+Blocking IO:
+There are several ways to cause a process to sleep in Linux 2.4. All of them will use the
+same basic data structure, the wait queue (wait_queue_head_t). This queue maintains a
+linked list of processes that are waiting for an event.
+A wait queue is declared and initialized as follows:
+wait_queue_head_t my_queue; /* declaration */
+init_waitqueue_head(&my_queue) /* initialization */ 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/30
+/* 2.4 kernel requires you to intialize the wait queue, although some earlier versions of
+the kernel did not */
+The process can be made to sleep by calling any of the following:
+sleep_on(wait_queue_head_t * queue);
+/* Puts the process to sleep on this queue. */
+/* This routine puts the process into non-interruptible sleep */
+/* this a dangerous sleep since the process may end up sleeping forever */
+interruptible_sleep_on(wait_queue_head_t * queue)
+/* same as sleep_on with the exception that the process can be awoken by a signal */
+sleep_on_timeout(wait_queue_head_t * queue,long timeout)
+/* same as sleep_on except that the process will be awakened when a timeout happens.
+The timeout parameter is measured in jiffies */
+interruptible_sleep_on_timeout(wait_queue_head_t * queue,long timeout)
+/* same as interruptible_sleep_on except that the process will be awakened when a
+timeout happens. The timeout parameter is measured in jiffies */
+void wait_event(wait_queue_head_t * queue,int condition)
+int wait_event_interruptible(wait_queue_head_t * queue, int condition)
+/* sleep until the condition evaluates to true that is non-zero value */
+/* preferred way to sleep */
+If a driver puts a process to sleep there is usually some other part of the driver that
+awakens it, typically it is the interrupt service routine.
+One more important point is that if a process is in interruptible sleep it might wake up
+even on a signal even if the event it was waiting on, has not occurred. The driver must in
+this case put a process in sleep in a loop checking for the event as a condition in the loop.
+The kernel routines that are available to wake up a process are as follows:
+wake_up(wait_queue_head_t * queue)
+/* Wake proccess in the queue */
+wake_up_interruptible(wait_queue_head_t * queue)
+/* wake process in the queue that are sleeping on interruptible sleep in the queue rest of
+the procccess are left undisturbed */
+wake_up_sync(wait_queue_head_t_ * queue)
+wake_up_interruptible_sync(wait_queue_head_t_ * queue) 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/31
+/* The normal wake up calls can cause an immediate reschedule of the processor */
+/* these calls will only cause the process to go into runnable state without rescheduling
+the CPU */
+Non Blocking IO:
+If O_NONBLOCK flag is set then driver does not block even if data is not available for
+the call to complete. The normal semantics for a non-blocking IO is to return -EAGAIN
+which really tells the invoking application to try again. Usually devices that are using
+non-blocking access to devices will use the poll system call to find out if the device is
+ready with the data. This is also very useful for an application that is accessing multiple
+devices without blocking.
+Polling methods: Linux provides the applications 'poll' and 'select' system calls to check
+if the device is ready without blocking. (There are two system calls offering the same
+functionality for historical reasons. These calls were implemented in UNIX at nearly
+same time by two different distributions: BSD Unix (select) System 5(poll))
+Both the calls have the following prototype:
+unsigned int (*poll)(struct file * ,poll_table *);
+The poll method returns a bit mask describing what operations can be performed on the
+device without blocking.
+Asynchronous Notification:
+Linux provides a mechanism by which a drive can asynchronously notify the application
+if data arrives. Basically a driver can signal a process when the data arrives. User
+processes have to execute two steps to enable asynchronous notification from a device.
+1. The process invokes the F_SETOWN command using the fcntl system call,
+the process ID of the process is saved in filp->f_owner. This is the step
+needed basically for the kernel to route the signal to the correct process.
+2. The asynchronous notification is then enabled by setting the FASYNC flag in
+the device by means of F_SETFEL fcntl command.
+After these two steps have been successfully executed the user process can request the
+delivery of a SIGIO signal whenever data arrives.
+Interrupt Handling in LINUX 2.4
+The Linux kernel has a single entry point for all the interrupts. The number of interrupt
+lines is platform dependent. The earlier X86 processors had just 16 interrupt lines. But 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/32
+now this is no longer true. The current processors have much more than that. Moreover
+new hardware comes with programmable interrupt controllers that can be programmed
+among other things to distribute interrupts in an intelligent and a programmable way to
+different processors for a multi-processors system. Fortunately the device driver writer
+does not have to bother too much about the underlying hardware, since the Linux kernel
+nicely abstracts it. For the Intel x86 architecture the Linux kernel still uses only 16 lines.
+The Linux kernel handles all the interrupts in the same manner. On the receipt of an
+interrupt the kernel first acknowledges the interrupt. Then it looks for registered handlers
+for that interrupt. If a handler is registered, it is invoked. The device driver has to register
+a handler for the interrupts caused by the device.
+The following API is used to register an interrupt handler.
+<linux/sched.h>
+int request_irq(unsigned int irq, void ( * interruptHandler ) (int, void *,struct pt_regs *),
+unisgned long flags, const char * dev_name, void * dev_id);
+/* irq -> The interrupt number being requested */
+/* interruptHandler -> function pointer to the interrupt handler */
+/* flags -> bitwise orable flags one of
+SA_INTERRUPT implies 'fast handler' which basically means that the interrupt handler
+finishes its job quickly and can be run in the interrupt context with interrupts disabled.
+SA_SHIRQ implies that the interrupt is shared
+SA_SAMPLE_RANDOM implies that the interrupt can be used to increase the entropy
+of the system */
+/* dev_name ->A pointer to a string which will appear in /proc/interrupts to signify the
+owner of the interrupt */
+/* dev_id-> A unique identifier signifying which device is interrupting. Is mostly used
+when the interrupt line is shared. Otherwise kept NULL*/
+/* the interrupt can be freeed implying that the handler associated with it can be removed
+*/void free_irq(unsigned int irq,void * dev_id);
+/* by calling the following function. Here the meaning of the parameters is the same as in
+request_irq
+*/Now the question that arises: how do we know which interrupt line our device is going
+to use. Some device use predefined fixed interrupt lines. So they can be used. Some 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/33
+devices have jumper settings on them that let you decide which interrupt line the device
+will use. There are devices (like device complying to the PCI standard) that can on
+request tell which interrupt line they are going to use. But there are devices for which we
+cannot tell before hand which interrupt number they are going to use. For such device we
+need the driver to probe the IRQ number. Basically what is done is the device is asked to
+interrupt and then we look at all the free interrupt lines to figure out which line got
+interrupted. This is not a clean method and ideally a device should itself announce which
+interrupt it wants to use. (Like PCI).
+The kernel provides helper functions for probing of interrupts( <linux/interrupt.h>
+probe_irq_on , probe_irq_off) or the drive can do manual probing for interrupts.
+Top Half And Bottom Half Processing:
+One problem with interrupt processing is that some interrupt service routines are rather
+long and take a long time to process. These can then cause interrupts to be disabled for a
+long time degrading system responsiveness and performance. The method used in Linux
+(and in many other systems) to solve this problem is to split up the interrupt handler into
+two parts : The ?top half? and the ?bottom half?. The top half is what is actually invoked
+at the interrupt context. It will just do the minimum required processing and then wake up
+the bottom half. The top half is kept very short and fast. The bottom half then does the
+time consuming processing at a safer time.
+Earlier Linux had a predefined fixed number of bottom halves (32 of them) for use by the
+driver. But now the (Kernel 2.3 and later) the kernel uses ?tasklets? to do the bottom half
+processing. Tasklet is a special function that may be scheduled to run in interrupt context,
+at a system determined safe time. A tasklet may be scheduled to run multiple times, but it
+only runs once. An interesting consequence of this is that a top half may be executed
+several times before a bottom half gets a chance to execute. Now since only a single
+tasklet will be run, the tasklet should be able to handle such a situation. The top half
+should keep a count of the number of interrupts that have happened. The tasklet can use
+this count to figure out what to do.
+/* Takelets are declared using the following macro */
+DECLARE_TASKLET(taskLetName,Function,Data);
+/* taskLetName -> Name of the tasklet */
+/* the function to be run as a tasklet. The function has the following prototype */ 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/34
+/* void Function(usigned long ) */
+/* Data is the argument to be passed to the function */
+/* the tasklet can be scheduled using this function */
+tasklet_schedule(&takletName)
+Interprocess Communication in Linux:
+Again there is considerable similarity with Unix. For example, in Linux, signals may be
+utilized for communication between parent and child processes. Processes may
+synchronize using wait instruction. Processes may communicate using pipe mechanism.
+Processes may use shared memory mechanism for communication.
+Probably need some more points on this topic on IPC and the different mechanisms
+available. I found a good url ?http://cne.gmu.edu/modules/ipc/map.html?.
+(Show these using animation)
+Let us examine how the communication is done in the networked environment. The
+networking features in Linux are implemented in three layers:
+1. Socket interface
+2. Protocol drivers
+3. Network drivers.
+Typically a user applications? first I/F is the socket. The socket definition is similar to
+BSD 4.3 Unix which provides a general purpose interconnection framework. The
+protocol layer supports what is often referred to as protocol stack. The data may come
+from either an application or from a network driver. The protocol layer manages
+routing, error reporting, reliable retransmission of data
+For networking the most important support is the IP suite which guides in routing of
+packets between hosts. On top of the routing are built higher layers like UDP or TCP.
+The routing is actually done by IP driver. The IP driver also helps in disassembly /
+assembly of the packets. The routing gets done in two ways:
+1. By using recent cached routing decisions
+2. By using a table which acts as a persistent forwarding base
+Generally the packets are stored in a buffer and have a tag to identify the protocol that
+need to be used. After the selection of the appropriate protocol the IP driver then
+hands it over to the network device driver to manage the packet movement. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/35
+As for security, the firewall management maintains several chains ? with each chain
+having its own set of rules of filtering the packets.
+Real Time Linux:
+Large number of projects both open source and commercial have been dedicated to get
+real time functionality from the Linux kernel. Some of the projects are listed below
+Commercial distributions:
+FSMLabs: RTLinuxPro
+Lineo Solutions: uLinux
+LynuxWorks: BlueCat RT
+MontaVista Software: Real-Time Solutions for Linux
+Concurrent: RedHawk
+REDSonic: REDICE-Linux
+Open source distributions:
+ADEOS ?
+ART Linux
+KURT -- The KU Real-Time Linux
+Linux/RK
+QLinuxRealTimeLinux.org
+RED-Linux
+RTAI
+RTLinux
+Linux Installation
+Amongst various flavors of UNIX, Linux is currently the most popular OS. Linux is also
+part of the GNU movement which believes in free software distribution. A large
+community of programmers subscribe to it. Linux came about mainly through the efforts
+of Linus Torvalds from Finland who wanted a UNIX environment on his PC while he
+was a university student. He drew inspiration from Prof. Andrew Tanenbaum of
+University of Amsterdam, who had earlier designed a small OS called Minix. Minix was
+primarily used as a teaching tool with its code made widely available and distributed.
+Minix code could be modified and its capability extended. Linus Torvalds not only
+designed a PC-based Unix for his personal use, but also freely distributed it. Presently, 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/36
+there is a very large Linux community worldwide. Every major university, or urban
+centre, has a Linux group. Linux found ready acceptance and the spirit of free distribution
+has attracted many willing voluntary contributors. Now a days Linux community
+regulates itself by having all contributions evaluated to ensure quality and to take care of
+compatibility. This helps in ensuring a certain level of acceptance. If you do a Google
+search you will get a lot of information on Linux. Our immediate concerns here are to
+help you have your own Linux installation so that you can practice with many of the tools
+available under the broad category of Unix-based OSs.
+20.1 The Installation
+Linux can be installed on a wide range of machines. The range may span from one's own
+PDA to a set of machines which cooperate like Google's 4000 node Linux cluster. For
+now we shall assume that we wish to install it on a PC. Most PCs have a bootable CD
+player and BIOS. This means in most cases we can use the CD boot and install
+procedure. Older PC's did not have these features. In that case one was required to use a
+set of floppies. The first part of this basic guide is about getting the installation program
+up and running: using either a CD or a set of floppies.
+20.2 The Installation Program
+In this section we describe the Linux installation. The main point in the installation is to
+select the correct configuration.
+Typically Red Hat Linux is installed by booting to the install directory from a CD-ROM.
+The other options may include the following.
+* Booting to install using a floppy disk.
+* Using a hard drive partition to hold the installation software.
+* Booting from a DOS Command line.
+* Booting to an install and installing software using FTP or HTTP protocols.
+* Booting to an install and installing software from an NFS-mounted hard drive.
+Installing from CD-ROM : Most PCs support booting directly from a CD-ROM drive. Set
+your PC's BIOS (if required). Now insert the CD-ROM and reboot to the PC to install
+Red Hat Linux. You should see a boot screen that offers a variety of options for booting
+.The options typically would be as follows:
+* <ENTER> - Start the installation using a Graphical interface
+* text - Start the install using a text interface 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/37
+* nofb - Start the install using a video frame buffer
+* expert
+* Linux rescue
+* Linux dd
+At this stage if you press key F2 then it provides a help screen for the text-based
+installation. Type the word text at the boot prompt and press Enter to continue.
+You shall be asked to select a language. So select a language of your choice. Highlight
+OK button and press Enter. You will then be asked to select a keyboard for install. So
+highlight OK Button and press Enter after selecting a keyboard. You shall be next asked
+to select a pointing device, select a suitable mouse and press OK.
+Next you will be asked: Select the type of installation from?
+* Workstation
+* Server
+* Laptop
+* Custom
+* Upgrade an existing system
+Select the suitable option, for example, select server install and press Enter. Next you will
+choose a partitioning scheme. The choices include the following:
+* Auto Partition
+* Disk Druid
+* Fdisk
+The Auto Partition will the format hard drive according to the type of selected
+installation. It will automatically configure the partitions for use with Linux. The Disk
+Druid will launch a graphical editor listing the free spaces available. The Fdisk option
+offers an ability to create nearly 60 different types of partitions.
+ On clicking Disk Druid, you will get an option of creating new partitions if you are using
+a new hard drive. If you are using an old hard disk the partitions are recognized. Create
+the appropriate partitions or use existing ones as the case may be. Finally, press OK to
+continue.
+Red Hat Linux requires a minimum of two partitions. One is a swap partition and the
+other a root(/) partition. The swap partition should be more than twice as large as the 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/38
+installed amount of memory. Other partitions may be /remote and /home. These can be
+created after the installation as well.
+You will now be as asked to select a boot-loader for booting Linux. The choice of not
+using a boot-loader is also available. The options available are GRUB and LILO. Select
+the appropriate boot loader and press OK. Grub and Lilo are typically installed in the
+MBR of the first IDE hard drive in the PC. You will now be asked for to choose kernel
+parameters for booting Linux. Enter the arguments in the dialog box or use the OK
+Button to continue.
+If for some reason we cannot arrive at dual booting automatically, then add this code at
+the end of the file /etc/boot/grud/grub.conf file
+ title Windows
+rootnoverify(hd0,0)
+chainloader +1
+makeactive
+You can now configure a dual boot system, if required by configuring the boot-loader.
+When finished click OK and you will be asked to select a firewall configuration. Use a
+security level from
+* High
+* Medium
+* None
+After this you will have to set the incoming service requests followed by a time-zone
+selection dialog box. Select the appropriate settings and press OK to continue.
+You will now be prompted to enter a user-id and password. The password will not be
+echoed onto the screen. Now is the time to create user accounts. Each has home directory
+home usually under /home/usr directory.
+Next you have to select packages you want to install. Use the spacebar to select the
+various groups of software packages. The size of the installed software will dynamically
+reflect the choices. Use the select individual package item to choose the individual
+software packages. The installer will now start installing the packages selected from the
+CD-ROM drive onto the new Linux partitions.
+At the end of the installation you will get an option of creating a boot-disk for later use.
+You can create the boot disk later using the mkbootdisk command. 
+Operating Systems/More on Linux Lecture Notes
+PCP Bhatt/IISc, Bangalore M20/V1/June 04/39
+After this, your installation is done. Press OK and Red Hat Linux will eject the CD ROM
+and reboot. After rebooting you will be able to log onto a Linux session. To shutdown
+your computer use the shutdown -h now command.
+Usually most distributions allow you to Test the set-up. It helps to see if it works. The
+auto detection (like in Red Hat) takes care of most of the cards and monitor types.
+20.2.1 Finishing the installation
+With the above steps, we should have installed a good working Linux machine. The
+install program will usually prompt to take out all boot-disks, etc. and the machine will
+be rebooted (sometimes you may have to reboot). You will see the Linux loader coming
+up. It is also known as LILO. Newer versions or distributions like Mandrake come up
+with their own LILO's. RedHat 7.X comes with a graphical screen and menu for startup.
+Anyway, one may see options like Linux and/or DOS or Windows . Normally we fill in
+these names during the installations. Another popular boot-loader called GRUB has
+become the default for RedHat.

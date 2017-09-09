@@ -1,0 +1,284 @@
+ COMPUTER NETWORKS
+Prof. Sujoy Ghosh
+Dept of Computer Science & Engineering Department
+ IIT Kharagpur
+
+Lecture No. 24
+ATM: Asynchronous transfer mode
+(Refer Slide Time: 00:44)
+
+In this lecture we will start our discussion on another very important technology, namely, Asynchronous Transfer Mode or ATM. (Refer Slide Time: 00:57 - 00:59) 
+
+Slide Time: 02:25 - 03:35
+The ATM was originally envisioned as a technology, which will solve all problems. It is present in the LAN, WAN and it gives very good quality of service. When introduced, it was considered a very ambitious plan. Unfortunately, it did not work out that way because the standardisation took a lot of time. When people from computer world and people from communication world start discussing things and come up with a standard, it becomes very complex and also the cost becomes quite high. Although the ATM made its debut in some local area networks, slowly it has been replaced in most of the local area networks. But still it is a very strong and important technology in the wide area network. So ATM remains in operation in a lot of places today and we will look into this ATM (Asynchronous Transfer Mode) now. (Refer Slide Time: 02:25 - 03:35) 
+
+Slide Time: 03:04 - 03:35
+
+Why ATM networks? It is driven by the integration of services, i.e., wires, data, and everything else are integrated into the same kind of network. This is the vision of the performance requirements of both telephony and data networking. This was called broadband integrated service vision or B ISDN. Telephone networks support a single quality of service and are expensive to boot. Internet supports no quality of service; but it is flexible and cheap. The ATM was developed to utilize the best of both. (Refer Slide Time: 03:04 - 03:35)   
+
+Slide Time: 03:37 - 04:45
+ATM networks were meant to support a range of service qualities at a reasonable cost and hence intended to subsume both telephone network and the internet. But the cost and complexity turned out to be high and now IP-based technology is going to fill the above role. But as we have seen, in many service providers, ATM is still present and people are deploying ATM networks even today. So ATM will remain in existence for quite some time. (Refer Slide Time: 03:37 - 04:45) 
+ 
+
+Slide Time: 04:47 - 05:15
+Let us see in brief the history of ATM. In the 1980s, a packet research began and in 1986, it adopted the B ISDN approach. In 1989, a 53-byte cell was permitted, which was a rather small value. The communication experts wanted a small value, but computer experts wanted a large value and there was a dispute. In 1991, the ATM forum was set up. In 1992, the ATM forum issued its first spec and added user committees. In 1996, it approved the anchorage that occurred. From then on, death of ATM in the enterprise and rollouts in the carrier networks occurred. But it is still important today. (Refer Slide Time: 04:47 - 05:15)  
+
+
+
+Slide Time: 06:27-06:45
+The basic points of ATM are that it transmits all information in small, fixed-size packets called cells. Since they are of fixed size, the switch design becomes easier. Cells are transmitted asynchronously at high speeds. This is basically statistical multiplexing. In TDM we saw that one of the advantages of packet networks is that it was more efficient in terms of bandwidth utilization. The circuit switch network was less efficient because when there is no communication, the circuit is remaining idle and bandwidth is wasted. So the ATM tried to address that using statistical multiplexing. That means, the size of cell is fixed and these cells can be pushed in any order by the end stations, but the network will be connection-oriented. This was necessary in order to accommodate the quality of service that everybody wanted. This is asynchronous unlike SDH, which is a synchronous system. Nevertheless, each cell is 53 bytes long with 5 bytes of header and 48 bytes of payload. (Refer Slide Time: 06:27-06:45)  
+
+
+
+Slide Time: 07:49 - 08:05
+To make an ATM call, a message is to be sent first to set up a connection. Subsequently all cells follow the same path to the destination. So this is just like circuit switching. First of all, you have to set up a connection where the connection is not physical but they are virtual circuits. That means the path should be found first and then along the path all the ATM switches, etc., would reserve some resources for the connection. This reservation of the resources in all the nodes along the way constitutes the virtual circuit. All the cells would flow through this same path. This is a connection-oriented system, but cells are switched for better efficiency. It can handle both constant rate traffic and variable rate traffic. Thus it can carry multiple types of traffic with end-to-end quality of service. (Refer Slide Time: 07:49 - 08:05)
+
+
+
+
+Slide Time: 09:14 - 10:01
+ATM is independent of transmission medium; we will see later about the different transmission media that are possible. It does not prescribe any particular rule for transmission medium. They may be sent on a wire or fibre by themselves or they may also be packaged inside the payload of other carrier systems. This is a very interesting situation. For example, when you are carrying just ATM traffic and in-between you have a WAN segment which has SDH, the ATM cells can be pushed into some SDH container and sent along correctly. Reversal of this process is also possible. Suppose there is some SDH traffic and in-between there is an ATM link, the VCs can take some constant bit rate service on an ATM link. So ATM transmitted on SDH is possible and SDH transmitted on ATM is also possible. ATM by itself can be used as a transport network. So the carriers or the service providers have employed a lot of ATM in their backbone.  So ATM is still prevalent, although it is not present in LAN or enterprise network. (Refer Slide Time: 09:14 - 10:01) 
+
+
+
+
+The delivery of packets is not guaranteed but the order is. As this is circuit-oriented or is a set of virtual circuits, the order of the cells will remain the same, so that the higher layer cells need not be changed. For example, IBM suggested 25 Mbps for ATM NICs for taking it to the desktop, but it did not survive. One of the reasons for this was the cost.  The ATM NICs were more costly. The ATM switches are costlier than the ordinary (Ethernet) switches. There were few or no software for ATM as most of the software developed was based on IP. People were also not ready to move all the software into ATM, which would involve high cost and since the market did not expand as expected, the cost remained high for quite some time. So this was the difficulty of this approach.  Much of the ATM devices operated at 155 Mbps (OC 3) or, even higher, 622 Mbps (OC 12) speeds. The standardization process took too long and the resulting technology was too complex (costly) to remain in the cutting edge. The basic ATM concepts are: virtual circuits, fixed-size packets (cells), which allow fast hardware switching, small packet size, statistical multiplexing and integrated services. That means different qualities of services can coexist at the same time with good management and traffic engineering features. Scalability in speed and network sizes is possible. We will look at a few of these in the next lecture. (Refer Slide Time: 11:03 ? 11:35) 
+
+Slide Time: 11:03 ? 11:35
+ATM applications could be ATM deployments in frame relay backbones. Frame relay is one kind of wide area network connectivity, which is now slowly going out, but ATMs give connectivity to backbones. It is also deployed in internet backbones and aggregating residential broadband networks (cable, DSL, ISDN, etc). They can feed into an ATM switch and then get transported. Carrier infrastructure for the telephone and private line networks deploys ATM, and this is one area where it is still going strong. (Refer Slide Time: 10:36 - 12:23) 
+
+
+Slide Time: 10:36 - 12:23
+
+The failed market tests of ATM were the ATM workgroup and campus networks, ATM enterprise network consolidation, and end-to-end ATM. These did not happen because of software and these did not take off because of cost. (Refer Slide Time: 12:25 - 13:36) 
+
+Slide Time: 12:25 - 13:36
+Now we will compare the synchronous, i.e., telephone networks and ATM. Telephone networks are synchronous and we know it because 125 ?s is the frame rate, which is very sacrosanct in this world. ATM is asynchronous transfer mode. Phone networks use circuit switching, whereas ATM networks use packet or cell switching with virtual circuits. In a telephone network, cells from a particular source or information or payload from a particular source will come periodically as shown, whereas in ATM they can come any time if the line is free. (Refer Slide Time: 12:48 - 13:26)
+
+
+
+Slide Time: 12:48 - 13:26
+ 
+
+In telephone networks all rates are in multiples of 64 kbps, but with ATM service you can get any rate and you can vary the rate with time by programming for the required rate. If you require a constant bit rate service of 10 kbps in a data service, it is possible to have a virtual circuit where the reservation of resources would be in that fashion. This kind of service is used with current phone networks and all high speed circuits are manually set up. ATM allows dialling at any speed and rapid provisioning since this is done through software and signalling; ATM allows this. As far as telephone networks are concerned, there are lots of advantages of using ATM. (Refer Slide Time: 14:09 - 14:33)
+
+
+Slide Time: 14:09 - 14:33
+
+Now let us compare ATM with data networks. ATM is ?virtual circuit? based. The path (and optionally resources on the path) is reserved before transmission. IP on the other hand is connectionless and end-to-end resource reservation is not possible directly. Indirectly people are still trying to do that because quality of service remains an important issue. RSVP is a new signalling protocol in this IP domain in the internet, which tries to reserve resources. There are other ways to do this and one way which has become quite popular is MPLS; and we will talk about MPLS in a different lecture. (Refer Slide Time: 14:39 - 15:14)
+
+
+Slide Time: 14:39 - 15:14
+ 
+ATM cells are fixed and are small in size and there is a trade-off between voice and data. But IP packets are in variable sizes. ATM provides QoS routing coupled to signalling called PNNI. Internet provides ?best-effort? service, aiming only for connectivity. (Refer Slide Time: 15:15-15:41) 
+
+
+Slide Time: 15:15-15:41
+For addressing, ATM uses a 20-byte global NSAP addresses for signalling and 32-bit locally assigned labels in cells. Actually when we are talking about ATM, there are two kinds of addresses that are referred. One is the ATM address, which is 20-byte (160 bits) long. It is a huge address and it requires a large address space; this address space is divided in a particular way, which will be discussed later. There are different schemes of addresses, which people tried to subsume in this ATM addressing; this is one kind of ATM addressing. For setting of a path, this 20-byte address is required but once a path has been set up this address is not required any longer because the path has been set up. The only thing is that since this is a virtual path in-between when a node gets a cell, it must know to which particular virtual circuit this belongs. So some kind of virtual circuit identifier is required and it is a much smaller address. This is another kind of addressing. But IP uses 32-bit global address in all packets. ATM offers sophisticated traffic management and this is one of the strong points of ATM and still remains strong in it. But in TCP/IP, congestion control is packet-loss based. Whether the packet is lost or not, ATM gives much more sophisticated QoS. (Refer Slide Time: 15:43 - 17:26) 
+
+
+
+Slide Time: 15:43 - 17:26
+
+Let us see the pros and cons of fixed-size packets. Pros are that it uses simpler buffer hardware, i.e. packet arrival and departure requires us to manage fixed buffer sizes, simpler line scheduling, i.e. each cell takes a constant chunk of bandwidth to transmit, and it is easier to build large parallel packet switches. (Refer Slide Time: 17:29 - 17:55) 
+
+
+Slide Time: 17:29 - 17:55
+The disadvantage is the overhead, i.e. for sending small amounts of data at the same time for each cell you have to have this 5-byte header on only 48 bytes. So 10% is already gone on the header and if a large amount of data (may be several megabytes) is to be sent, you need a lot of cells. Hence overhead becomes important. Large frames, which are to be sent, have to be broken up into small cells. All these cells are to be put together to form the original large frame. This segmentation is on one side and the reassembly is on the other side. The overhead and the cost will also come in and the last unfilled cells, after segmentation, waste the bandwidth. This is not very important. (Refer Slide Time: 17:56 - 18:56) 
+
+Slide Time: 17:56 - 18:56
+When the cell is smaller, an endpoint has to wait for lesser time to fill it. So there is low packetization delay. When the packet is smaller, the header overhead is larger. Standard body balances the two to prescribe 48 bytes + 5 bytes, which is equal to 53 bytes.  Therefore the maximal efficiency could be about 90% only. (Refer Slide Time: 18:58 - 19:25) 
+
+Slide Time: 18:58 - 19:25
+Now we will discuss ATM layers. It was done by a committee in which there was a dispute and the ultimate result was that the ATM protocol and its layers, etc. were framed. These are quite complex. ATM is the three-dimensional figure and now we will talk about some of the important sub-layers in it. On the control and management side of it, there are number of layers and on data side there are number of them. (Refer Slide Time: 19:26 - 21:18) 
+
+Slide Time: 21:19 - 22:23
+The layers are: CS, the convergence sub-layer, SAR, the segmentation and reassembly sub-layer. These two layers put together is the ATM adaptation layer, which is called AAL. There are different kinds of AALs. AAL 1,2,3,4,5, etc. but they all have these two sub-layers. Then we have the ATM layer and this is somewhat in-between the data link layer and the network layer. The transmission convergence sub-layer, in which the transmission will come and will be put back, and the physical medium dependent sub-layer (PMD) together form the physical layer. (Refer Slide Time: 21:19 - 22:23) 
+
+
+Slide Time: 22:23 - 23:03
+In the above slide, there is an ATM adaptation layer, an ATM layer and a physical layer in the end system. This is a very simplistic view of the ATM layers. There are other layers for control and management function, which will be dealt with later. There are two end systems communicating from the ATM adaptation layer. The ATM adaptation layer will readily communicate with other higher layers of the software. It will come through this AAL, physical layer, then go only up to the ATM layer and then go to the other side. This is a simple view of a stack. (Refer Slide Time: 22:23 - 23:03) 
+
+
+Slide Time: 23:03 - 23:27
+ATM layer?s adaptation is mapping of application (e.g.: voice, data, etc.) to ATM cells. The physical layer could be SONET or it could simply be a DWDM system. ATM layer handles transmission/switching/reception, congestion control, cell header processing, sequential delivery, etc. (Refer Slide Time: 23:03 - 23:27)  
+
+Slide Time: 24:40 - 25:03
+
+Now let us discuss about the layers in detail. The top one is the top sub-layer of the AAL (ATM adaptation layer), the convergence sub-layer. It offers different kinds of services to different applications. Here the different types of services are supposed to converge and all of them are supposed to do ATM. So for convergence this ATM adaptation layer is used. For example, for a voice channel, constant bit rate traffic is required; and similarly for data, some other kind of traffic is required. So different classes of services were defined depending on the kind of AAL (AAL 1,2,3,4,5, etc.) and the convergence sub-layer negotiated that and came to a bandwidth contract. So the different services that are offered are the CBR, which is constant bit rate or bandwidth guarantee, and which is suitable for real time traffic. ABR is for available bit rate, suitable for bursty traffic and feedback, bout congestion. UBR, which is unspecified bit rate, is the cheapest of all and suitable for bursty traffic, may be data traffic. It provides a specific AAL service at an AAL network service access point (NSAP). (Refer Slide Time: 24:40 - 25:03) 
+
+Slide Time: 25:34 - 26:16
+NSAP refers to network service access point. The other sub-layer of AAL is the segmentation and reassembly sub-layer. It segments higher level user data into 48-byte cells at the sending node and reassembles cells at the receiving node. This sub-layer is usually implemented with ASIC. One of the reasons ATM was envisioned as a system, which will really scale to very high speed, is that cell segmentation and reassembly is to be done very fast. Usually it is done with the help of ASIC. ASIC is an application specific IC for doing the segmentation and reassembling. It tears down messages passed from the upper layer and converts them to cells. Some padding may be necessary to make it a multiple of 48 bytes. At the destination the stream of cells are reassembled. (Refer Slide Time: 25:34 - 26:16) 
+
+
+
+Slide Time: 26:30 - 26:50
+
+The different types of AAL are AAL 1,2,3,4, and 5, which give different classes of service, class A, class B, class C and class D. Class A is connection-oriented CBR (e.g. voice) and it is supported by AAL1. Class B is connection-oriented VBR (e.g. packet based video) supported by AAL2. Class C/D may be connection-oriented VBR (e.g. file transfer), connectionless VBR (e.g. LAN data) supported by AAL 3/4, i.e. AAL 3/4 may be connection oriented VBR or connectionless VBR. AAL 5 is a simple and efficient adaptation layer (SEAL) supporting class C/D for bursty error control at higher-layer protocol. These AALs are complex since ATM got into the service providers? backbone. But many of these AALs, etc. were never widely deployed. (Refer Slide Time: 26:30 - 26:50)
+
+
+
+Slide Time: 27:03 - 27:53
+The convergence sub-layer (CS) interprets the type and format of incoming information based on 1 to 4 classes of service assigned by the application. Class A is constant bit rate (CBR). It is connection-oriented and there is strict timing relationship between source and destination, i.e. voice. If such a very sensitive quality of service like voice is required, Class A service can be used. But Class A service is more costly. (Refer Slide Time: 27:03 - 27:53)
+
+Slide Time: 27:54 - 28:15
+Class B is variable bit rate (VBR) service and connection oriented. It has strict timing, e.g. packet mode video for video conferencing. Class C is connection oriented VBR but without a strict timing service. So there is a slight difference between class B and class C; e.g. LAN data transfer applications. Class D is connectionless VBR with no strict timing; e.g. LAN data transfer applications such as IP. For example if it is frame relay, then the person who had taken this frame relay service should have some original negotiation about the speed. So class C is a little better than class D, but not better than class A or B. (Refer Slide Time: 27:54 - 28:15)
+
+
+Slide Time: 28:17 - 2:32
+
+AAL 5 was introduced for data services. It supports both message mode and stream mode. In the message mode, a packet of length up to 65 kB may be passed to the AAL layer to have it delivered to the destination either on a guaranteed or ?best-effort? basis. (Refer Slide Time: 28:17 - 2:32) 
+
+
+Slide Time: 29:53 - 30:20
+
+
+The service categories available are ABR, UBR, CBR and VBR. ABR is Available Bit Rate. In this source bit rate, source follows network feedback and there is maximum throughput with minimum loss. Hence the network gives some feedback. This is just to give you an idea about how quality of service is handled in ATM because a lot of things which were learned in ATM are also employed today in some other guise in MPLS or some kind of very new IP technology. How quality of service can be guaranteed still remains a very important issue in networking today. As people are talking about convergence of voice, data, video, etc., into the same network, we require some guarantee about quality of service. Whatever happens in the pure data network like delay or jitter etc. may not be acceptable for this kind of service. So for convergence, quality of service is important and ATM offered a good quality of service. UBR, Unspecified Bit Rate, is of course the cheapest of all. The user sends anything with no feedback and no guarantee. Cells are dropped during congestion between UBR cells. (Refer Slide Time: 29:53 - 30:20)
+
+Slide Time: 30:20 - 31:00
+
+CBR, Constant Bit Rate, is one in which the user declares the required rate. For this, throughput delay and delay variation are guaranteed. In VBR the average and maximum rates are declared. It has two different types. One is real time VBR for voice, conferencing, etc. with maximum delay guaranteed and the other is non-real time VBR for stored video. (Refer Slide Time: 30:20 - 31:00)
+
+
+
+Slide Time: 31:01 - 31:35
+
+Let?s compare ABR and UBR. In ABR, the queue is in the source because the source takes the feedback from the network and adjusts the rate. In UBR, the queue is in the network. In ABR, if the queue gets filled it gets dropped and pushes congestion to the edges. In UBR, there is no backpressure because if there is pressure, the UBR will be dropped. ABR is good if the network is end-to-end ATM. UBR is the same whether it is end-to-end ATM or backbone to ATM. ABR is very fair and good for the provider and UBR is simple for the user. But UBR is generally unfair even though it is simple for the user. (Refer Slide Time: 31:01 - 31:35)  
+
+
+Slide Time: 31:38 - 31:45
+
+There is also a concept of guaranteed frame rate (GFR). It is a UBR with a minimum cell rate (MCR). It will try to guarantee this minimum cell rate but beyond that, it is UBR. So GFR is a frame-based service or guaranteed frame rate service. In this, complete frames are accepted or discarded in the switch, and traffic shaping is frame-based. All cells of the frame have the same cell loss priority (CLP), whether they are inside the MCR or not. (Refer Slide Time: 31:38 - 31:45)  
+
+Slide Time: 31:47 - 33:10
+All frames below MCR are given CLP = 0 service, and all frames above MCR are given best effort CLP, i.e. CLP = 1 service. (Refer Slide Time: 31:47 - 33:10)
+
+
+
+Slide Time: 33:10 - 34:01
+Having talked about the different types of quality of service that are available in ATM, now let us look at the ATM layer and then we will look at the data link layer of ATM. ATM layer is akin to the network layer of OSI, although it has data link layer characteristics. As seen already, this is somewhere in-between network layer and data link layer. ATM uses globally unique addresses using the NSAP format of ISO. This is used for setting up connections. Path and circuit identifiers are used once a connection is established. (Refer Slide Time: 33:10 - 34:01) 
+
+
+Slide Time: 34:05 - 34:15
+ATM interfaces are different types of interfaces designated in the standards. One is a computer connecting to a private switch. There is a hierarchy of switches like private switches and public switches. Here computer in the LAN may be connecting to a private ATM switch. For this there is a private UNI or private user network interface. Similarly when a private switch is connected to public switch there is a public UNI, that is, a public user network interface. Public switches talk to each other using the interface called NNI (Network Node Interface). (Refer Slide Time: 34:05 - 34:15) 
+
+
+Slide Time: 34:40 - 35:08
+UNI is the user network interface (public and private). NNI is the network node interface (private and public). PNNI is Public NNI. B ICI is broadband inter carrier interface between two carriers. So if there are two different carriers, there is an ISI defined for that.  DXI is data exchange interface with a router, etc. Different interfaces were defined but some were not fully defined because they were not very widely deployed. (Refer Slide Time: 34:40 - 35:08) 
+
+Slide Time: 35:33 - 35:55
+There is a hierarchy of switches. In the carrier, there are the carrier backbone switches and carrier edge switches in the service provider frame or central office. Enterprise switches, which stopped at the carrier edge switches, LAN or campus backbone switches and the workgroup switches are in the customer frame. Actually the hierarchy of switches means they are all basically ATM switches with different interfaces; different software and different protocols are given and these links differ depending on where that switch is. (Refer Slide Time: 35:33 - 35:55) 
+
+
+
+Slide Time: 35:56 - 36:29
+
+Let?s see the physical layer functions of ATM. It transports ATM cells on communication channels and defines mechanical specs like connectors, etc. There are two sub-layers. One is the PMD or physical medium dependent sub-layer. It has medium dependent functions like bit transfer, bit alignment, optically electrical optical (OEO) functions, etc. (Refer Slide Time: 35:56 - 36:29) 
+
+Slide Time: 36:48 - 37:08
+The other sub-layer is the transmission convergence sub-layer. It maps cells into the physical layer frame format like DS 1 or STS 3 on transmit and delineates ATM cells in the received bit stream. It is a wavelength, which generates HEC, i.e. header of cells for transmission. It generates idle cells for cell rate decoupling or speed matching. Based on the kind of transport it is using, all these speed matching, etc., have to be done and hence, this sub-layer is called transmission convergence sub-layer. (Refer Slide Time: 36:48 - 37:08) 
+
+
+
+Slide Time: 37:12 - 37:20
+Let?s see the physical layers of ATM. In ATM no particular medium was specified and so many media are possible starting from multimode fibre (100 Mbps using 4b/5b), 155 Mbps SONET STS-3c, 155 Mbps using 8 b/10 b, single mode fibre using 155 Mbps STS-3 c, 622 Mbps, plastic optical fibre using 155 Mbps, shielded twisted pair using 155 Mbps 8 b/10 b to coaxial using 45 Mbps, DS3, 155 Mbps. (Refer Slide Time: 37:12 - 37:20) 
+
+Slide Time: 37:23 - 37:40
+Other media starting from unshielded twisted pair, UTP 3 (phone wire) at 25.6, 51.84, 155 Mbps, UTP 5 (Data grade UTP) at 155 Mbps to DS1, DS3, etc., are also possible. (Refer Slide Time: 37:23 - 37:40) 
+
+
+
+Slide Time: 37:41 - 38:43
+Actually a serious attempt was made to inter-operate with several L1, L2 and L3 technologies.  However, since ATM survived only in the service provider?s backbone and at the edge fibre, the single-mode fibre remains the most important medium today. (Refer Slide Time: 37:41 - 38:43) 
+
+
+Slide Time: 38:45 - 38:56
+
+How is ATM SONET mapping done? ATM SONET mapping is done because ATM may finally get carried by a SONET transport at some point in the WAN in a good and easy manner. In a SONET there is a pointer pointing to the beginning of the payload and this payload can actually be anywhere in the frame. These cells are packed in the frame. So cells are mapped row-wise into the frame. Cells could contain data or be empty. Some empty cells might have been put over there for late matching. (Refer Slide Time: 38:45 - 38:56) 
+
+
+Slide Time: 41:08 - 41:45
+
+Since ATM is coming at a particular rate, depending on what rate it is, the ATM is connected to the next using an SDH transport. At the user end ATM has to give some guarantee about bandwidth, etc. It has to do some provisioning and for that it carries the provisioning across this SDH link. SDH is not very difficult because, depending on what speed or what rate is required, the next higher-sized container is chosen. SDH, as you know, can accommodate various types of containers like VC 1, VC 2, etc.  So it can have various types of containers, various rates, etc., and tributaries. You take the kind of container that gives guarantee about the rate. This is how the service provider provides the virtual link. The container may be in the infrastructure of the same service provider or it may be in the infrastructure of some other service provider. Then we can negotiate and configure the SDH switch so that the ATM stream will get the kind of bandwidth across the SDH part of the backbone. So this link is a virtual one. The ATM contains a number of virtual paths and each virtual path contains a number of virtual circuits. One particular pair of users is using one particular virtual circuit so that virtual circuit would be identified with a VC number known as a virtual circuit identifier and a VP number or the virtual path identifier. For good management function, ATM is divided into virtual paths and virtual circuits. (Refer Slide Time: 41:08 - 41:45) 
+
+Slide Time: 42:07 - 42:54
+
+ATM cell structure has 48 bytes of payload and 5 bytes of header. The header contains so many fields. There are 16 bits or 2 bytes for the virtual circuit identifier (VCI) and 8 bits or 1 byte for the virtual path identifier (VPI). The virtual path and the virtual circuit together will define a particular stream, a particular ATM stream coming from a particular virtual circuit which is originating from some particular user somewhere. Then there is an 8-bit HEC. (Refer Slide Time: 42:07 - 42:54) 
+
+
+
+ Slide Time: 42:55 - 43:35
+This structure of the cell header shown is not constant across all interfaces. GFC is present in UNI, but in NNI this GFC has been dropped and VPI is increased. VPI is only 8 bits in UNI but is 12 bits in NNI. When you are doing network node interface, a lot of paths, etc. are coming; you require more bits for identifying the path and so there is 12 bit of path identifier. In UNI there is 12 bit of VCI identifier, but only 8 bit of path identifier is present in NNI. (Refer Slide Time: 42:55 - 43:35) 
+
+
+Slide Time: 43:35 - 43:56
+
+Now let us discuss about ATM cell format. The first one is generic flow control (GFC).  Once again this was put there with some idea but it was not used much. This has 4 bits and is used for local flow control between the network access point (typically a switch belonging to the network provider), and one or more end stations. This is used for multiple access for more than one station and for reducing the transmission rate for single nodes, etc. This is used to do some local flow control at the LAN end between the switch and the users. But this is usually ignored. (Refer Slide Time: 43:35 - 43:56) 
+
+
+Slide Time: 45:45 - 46:06
+VPI, the virtual path identifier, has 8 bits; but since GFC is irrelevant within the network, 12 bits are used. These may be thought of as the high order bits for the virtual channel identifiers. A virtual path contains a number of virtual channels. The switches store per path parameters so that individual channels do not need any signalling. So, one pair of users is using one channel, one virtual circuit. This virtual circuit has to be identified and then given some kind of bandwidth contract. Some kind of class of service will be negotiated for this. In a big ATM network, thousands or even millions of circuits may be set up and toned down at a very high rate as many people are using millions of switched circuits under a service provider. These virtual circuits may be set up and toned down in a very short time. Theoretically with each of these virtual circuits, some kinds of quality of service parameters have been negotiated. But these are grouped together for the similar kind of services and these virtual channels are put together so that only paths are to be stored. To avoid implications in finding and routing, some of these virtual circuits are put together to form virtual paths. We have the VPI identifier for this. This VPI has the higher order bits specifying the channel, and the lower order bit specifying the VCI. (Refer Slide Time: 45:45 - 46:06) 
+
+
+Slide Time: 46:12 - 46:42
+However, if a virtual path is already set up and is scantily used, then resources are wasted. So, dynamic renegotiation of VP capacity can be used. VCI, the virtual channel identifier, is 16 bits. VC 0 to 15 are reserved for special purpose, and others are used for actual communication. (Refer Slide Time: 46:12 - 46:42) 
+
+
+Slide Time: 47:05 - 47:10
+PT is the payload type, which is of 3 bits. If high order bit is 0, the second bit indicates congestion and third bit indicates end of AAL 5 frame. 100 and 101 are reserved for link management. CLP (cell loss priority) bit is used by the source for making priority.  Intermediate switches may mark it for violating agreements. Depending on whether CLP = 0 or CLP =1, the cells may be dropped or not dropped in an intermediate switch. HEC is an 8-bit header checksum. This is very important in checking whether the header has an error. This has some other function, which will be dealt with in data link functions in ATM. (Refer Slide Time: 47:05 - 47:10) 
+
+
+Slide Time: 47:18 - 47:38
+
+The next sub-topic is data link layer in ATM. This consists of the transmission control layer. (Refer Slide Time: 47:18 - 47:38) 
+
+
+Slide Time: 47:40 - 48:06
+Each ATM cell has a 5-byte header, in which the last field, HEC, is a checksum for just the header. The TC takes the cells from the ATM layer, adds an HEC to them and sends them as bit streams to the PMD on the transmission side. The bit streams may or may not have a separate transport. (Refer Slide Time: 47:40 - 48:06) 
+
+
+Slide Time: 49:17 - 49:44
+On the receiving side, the incoming bit streams are formed into cells and passed on to the ATM layer. Here the cell boundaries are to be detected. It also discards cells with invalid headers and processes OAM cells for administration management and control. One problem which came up was the ATM forum wanted the ATM to be deployed everywhere from the backbone, provide a switch right down to the user. So nothing much was specified about the physical layer. Since they wanted neutral to the kind of physical medium through which the ATM will pass, another problem came up with receiving the bit streams. Cell starting and cell ending couldn?t be identified on the receiving side. (Refer Slide Time: 49:17 - 49:44) 
+
+Slide Time: 51:00 - 51:12
+In some cases, the underlying physical layer helps. For example, when ATM cells are carried over SONET or SDH, the SPE pointer in the SONET header points to the first full cell. So we immediately know where it starts. In other cases every 40-bit sequence is tested for being a valid header. The 8 bits at the extreme right will be valid HEC for the remaining 32 bits. HEC has two functions. One is that it gives you some checking mechanism on whether the header is correct or not and the other is for synchronization function. When a bit stream is coming and if it is 40-bit long, it is taken. Now if these 40 bits happen to be the header, the last 8 bits will be the checksum, assuming that the entire header has come correctly. So the last 8 bits would be a checksum for the other 32 bits in the header. If it is a header with an error, it is neglected. Then, the next 40 bits are taken and tested again, assuming that a header has come correctly. (Refer Slide Time: 51:00 - 51:12) 
+
+Slide Time: 52:40 - 53:27
+The TC goes through a HUNT; this is the hunting phase. And once it gets a header it gets into the PRESYNCH stage. It has one header. But, out of 40 bits, 8 bits are the checksum of the other 32 bits. So the probability is that this was not a header but a user payload and was wrongly interpreted as a header because these 8 bits matched the checksum for the other 32 bits. So, now it goes into the PRESYNCH stage. If this is indeed the header, then the first 5 bytes would be the header, the next 48 bytes would be data and the next 5 bytes would again be a header and you continue checking this for some time. This is a PRESYNCH stage. When this synchronization is done for some time and you are reasonably sure that this cannot be a coincidence in the data given by the user, then we are indeed locked on to the header and now TC is synchronized. The TC goes through the HUNT, PRESYNCH and SYNCH stages to detect the cell boundaries. If the number of HECs is found to be incorrect then TC is said to have lost synchronization. Then it has to be resynchronized. This heuristic defies the layered architecture. (Refer Slide Time: 52:40 - 53:27) 
+
+
+In this simple state diagram, the signal is in the hunting stage. At this stage the signal looks at every 40 bits and tries to figure out whether it could be a possible header or not. When correct HEC is detected it goes to the PRESYNCH stage. If correct HEC is not detected, the signal goes back to the hunting stage. If a few consecutive correct HECs are found, then it is synchronized. If a few consecutive incorrect HECs are found, then the TC will determine that it has lost synchronization and it will go back to the hunting phase. In the next lecture we will talk first about ATM addresses, ATM routing, etc.
+
+
+Preview of the next lecture
+Lecture No. 25
+ATM Signalling Routing and LAN Emulation
+
+In the last lecture we discussed ATM technology. We saw, how it handles cells, how it make cells, etc.  Now, in the first half of this lecture we will discuss ATM signalling and routing.  Ethernet networks and other kinds of networks are ubiquitous. In the second part, we will discuss about how an IP network and an ATM network will interoperate when we use ATM as the backbone.  (Refer Slide Time: 55:03 - 55:09)
+
+Slide Time: 55:11 ? 55:36
+Next we will discuss ATM signalling, routing and LAN emulation. (Refer Slide Time: 55:11 ? 55:36)
+
+Slide Time: 55:38 - 55:42
+
+ATM connections are of various types, the most predominant being the switched virtual circuit, in which a path is set up and taken to the destination.  The other one is permanent virtual circuit which is pre-coded.  There are also other connection types like simple point-to-point connection, symmetric or asymmetric bandwidth connection (Uni- or Bi-directional), point-to-multi point connection (Uni-directional) and data replicated by the network. (Refer Slide Time: 55:38 - 55:42) 
+
+Slide Time: 55:43 - 56:53
+
+This is an example of a point-to-multi point network.  (Refer Slide Time: 55:43 - 56:53)
+
+Slide Time: 56:54 - 57:28
+
+In an ATM connection set up, a signal is set up where the source and the destination are shown.  There are intermediate switches in between.  From the source there is a set up signal which goes to the intermediate switch.  The switch sends back some kind of an acknowledgement saying that the call is proceeding and sends the set up signal to the next hop and so on.  Each of them will immediately send back some kind of acknowledgement and then when the call is accepted a connect signal will start flowing in the opposite direction. When it reaches the source then a connect acknowledgement will flow and for this connect signal the circuit is set up.  Alternatively the destination may reject the signal and then it will send a Region Release Signal back. (Refer Slide Time: 56:54 - 57:28)
+
+Slide Time: 57:29 - 57:31
+On the other hand, when the circuit is as shown above, for taking it down the source will send a release.  When it finishes sending it will send a release till it reaches the destination.  The destination will then send a release all the way back.  The release could be initiated by the sender or the release could be initiated by the destination. (Refer Slide Time: 57:29 - 57:31)
+
+Slide Time: 57:33 ? 58:13
+Then connection gets terminated and the release is completed. (Refer Slide Time: 57:33 ? 58:13)
+
+Slide Time: 58:15 -51:20 min
+There is another approach to this not using LAN but using classical IP over ATM.  The definitions for implementations of classical IP over ATM are described in RFC 177.  This RFC considers only the application of ATM as a direct replacement of the ?wires?, LAN segments connecting IP end-stations (members) and routers operating in the classical LAN-based paradigm.  Issues raised by MAC level bridging and LAN emulation are not covered here. (Refer Slide Time: 58:15 -51:20 min)
+
+
+When we look at classical IP over ATM, address resolution and encapsulation are the two issues which are to be considered.  Encapsulation consists of putting appropriate ATM header/trailer to a packet, converting it to a number of cells and then sending it.  This means that when you have an ATM packet and a classical IP is running over ATM and you have got a big packet, you have to break the cells up and put a proper header on each of them and then send them.  ATM features are not utilized and inter network traffic handling is clunky.

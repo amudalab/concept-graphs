@@ -1,0 +1,744 @@
+intermediary between users
+users and computer
+users an environment
+user can execute
+conveniently and efficiently
+efficiently in technical
+software which manages
+hardware an operating
+operating system controls
+controls the allocation
+allocation of resources
+resources and services
+devices and information
+definition an operating
+program that acts
+hardware and controls
+controls the execution
+kinds of programs
+programs conceptual view
+operating system memory
+system memory management
+memory management processor
+management processor management
+processor management device
+management device management
+device management file
+management file management
+file management security
+management security control
+control over system
+system performance job
+performance job accounting
+job accounting error
+accounting error detecting
+error detecting aids
+detecting aids coordination
+software and users
+users memory management
+memory management memory
+management memory management
+memory management refers
+refers to management
+management of primary
+memory or main
+main memory main
+memory main memory
+array of words
+words or bytes
+word or byte
+address main memory
+main memory operating
+memory operating system
+activities for memory
+management keeps tracks
+tracks of primary
+primary memory i.e
+i.e what part
+decides which process
+allocates the memory
+de-allocates the memory
+process no longer
+terminated the task
+task of fulfilling
+fulfilling an allocation
+allocation request consists
+consists of locating
+locating a block
+block of unused
+memory of sufficient
+sufficient size memory
+size memory requests
+requests are satisfied
+satisfied by allocating
+pool of memory
+heap or free
+allocations several issues
+complicate the implementation
+gaps between allocated
+allocated memory blocks
+request the allocator
+allocator s metadata
+inflate the size
+managed by chunking
+chunking the memory
+memory management system
+system must track
+track outstanding allocations
+allocations to ensure
+memory leak efficiency
+specific dynamic memory
+dynamic memory allocation
+memory allocation algorithm
+allocation algorithm implemented
+implemented can impact
+impact performance significantly
+significantly a study
+digital equipment corporation
+equipment corporation illustrates
+illustrates the overheads
+variety of allocators
+allocators the lowest
+lowest average instruction
+average instruction path
+instruction path length
+path length required
+required to allocate
+allocate a single
+single memory slot
+instruction level profiler
+variety of software
+memory is accessed
+reference the specific
+organize the memory
+area and allocate
+allocate and deallocate
+chunks is interlinked
+fixed-size blocks allocation
+memory pool fixed-size
+pool fixed-size blocks
+memory pool allocation
+list of fixed-size
+blocks of memory
+simple embedded systems
+suffers from fragmentation
+long memory addresses
+significantly reduced overhead
+overhead this method
+substantially improve performance
+performance for objects
+video games buddy
+games buddy blocks
+buddy memory allocation
+memory is allocated
+pools of memory
+pool represents blocks
+two in size
+size all blocks
+sorted linked list
+list or tree
+formed during allocation
+allocation are added
+respective memory pools
+size is requested
+smallest available size
+size is selected
+selected and halved
+halves is selected
+request is complete
+block is allocated
+allocator will start
+smallest sufficiently large
+sufficiently large block
+block to avoid
+avoid needlessly breaking
+needlessly breaking blocks
+block is freed
+next-largest size buddy-block
+size buddy-block list
+buddy-block list systems
+systems with virtual
+protection and shared
+shared memory virtual
+memory virtual memory
+method of decoupling
+decoupling the memory
+hardware the applications
+applications operate memory
+memory via virtual
+attempt to access
+access stored data
+data is made
+virtual memory data
+memory data orders
+data orders translate
+translate the virtual
+addition of virtual
+virtual memory enables
+memory enables granular
+enables granular control
+control over memory
+systems and methods
+methods of access
+access in virtual
+virtual memory systems
+systems the operating
+operating system limits
+process can access
+access the memory
+memory this feature
+disallow a process
+process to read
+read or write
+write to memory
+malicious or malfunctioning
+program from interfering
+allocated for specific
+share information shared
+information shared memory
+techniques for inter-process
+inter-process communication memory
+classified by access
+rate into primary
+storage and secondary
+secondary storage memory
+storage memory management
+memory management systems
+handle the moving
+moving of information
+levels of memory
+memory processor management
+management in multiprogramming
+process scheduling operating
+scheduling operating system
+activities for processor
+tracks of processor
+processor and status
+status of process
+process program responsible
+traffic controller allocates
+allocates the processor
+process de-allocates processor
+processor when processor
+longer required device
+required device management
+management os manages
+manages device communication
+respective drivers operating
+drivers operating system
+activities for device
+devices program responsible
+i controller decides
+allocates the device
+efficient way de-allocates
+de-allocates devices file
+devices file management
+management a file
+organized into directories
+directories for easy
+navigation and usage
+usage these directories
+directions operating system
+activities for file
+management keeps track
+track of information
+file system decides
+allocates the resources
+de-allocates the resources
+resources other important
+activities that operating
+system does security
+means of password
+password and similar
+similar other techniques
+preventing unauthorized access
+access to programs
+programs and data
+delays between request
+service and response
+system job accounting
+jobs and users
+users error detecting
+production of dumps
+debugging and error
+softwares and users
+coordination and assignment
+assignment of compilers
+operating system
+computer hardware
+execute programs
+technical terms
+manages hardware
+system controls
+information definition
+conceptual view
+important functions
+system memory
+memory management
+management processor
+processor management
+management device
+device management
+management file
+file management
+management security
+security control
+system performance
+performance job
+job accounting
+accounting error
+error detecting
+detecting aids
+aids coordination
+users memory
+management memory
+management refers
+primary memory
+main memory
+memory main
+large array
+address main
+fast storage
+memory operating
+memory i.e
+process requests
+allocation request
+request consists
+unused memory
+sufficient size
+size memory
+memory requests
+allocating portions
+large pool
+free store
+future allocations
+issues complicate
+external fragmentation
+small gaps
+allocated memory
+memory blocks
+small allocations
+management system
+outstanding allocations
+memory leak
+leak efficiency
+specific dynamic
+dynamic memory
+memory allocation
+allocation algorithm
+algorithm implemented
+impact performance
+performance significantly
+study conducted
+digital equipment
+equipment corporation
+corporation illustrates
+overheads involved
+lowest average
+average instruction
+instruction path
+path length
+length required
+single memory
+memory slot
+instruction level
+level profiler
+precise location
+pointer reference
+specific algorithm
+memory area
+deallocate chunks
+fixed-size blocks
+blocks allocation
+main article
+memory pool
+pool fixed-size
+pool allocation
+free list
+embedded systems
+large objects
+memory addresses
+improve performance
+frequent allocation
+video games
+games buddy
+buddy blocks
+buddy memory
+pool represents
+represents blocks
+linked list
+respective memory
+memory pools
+smaller size
+resulting halves
+process repeats
+large block
+breaking blocks
+next-largest size
+size buddy-block
+buddy-block list
+list systems
+virtual memory
+main articles
+memory protection
+shared memory
+memory organization
+physical hardware
+applications operate
+operate memory
+virtual addresses
+access stored
+stored data
+memory data
+data orders
+orders translate
+virtual address
+physical address
+memory enables
+granular control
+memory systems
+system limits
+malfunctioning code
+memory allocated
+specific processes
+share information
+information shared
+fastest techniques
+inter-process communication
+communication memory
+access rate
+primary storage
+secondary storage
+storage memory
+management systems
+memory processor
+multiprogramming environment
+process scheduling
+scheduling operating
+process program
+traffic controller
+controller allocates
+process de-allocates
+de-allocates processor
+longer required
+required device
+manages device
+device communication
+respective drivers
+drivers operating
+devices program
+controller decides
+de-allocates devices
+devices file
+file system
+easy navigation
+directions operating
+collective facilities
+system decides
+resources allocates
+resources de-allocates
+important activities
+unauthorized access
+data control
+recording delays
+system job
+keeping track
+users error
+error messages
+computer systems
+operating
+system
+intermediary
+users
+computer
+hardware
+environment
+user
+execute
+programs
+conveniently
+efficiently
+technical
+terms
+software
+manages
+controls
+allocation
+resources
+services
+memory
+processors
+devices
+information
+definition
+program
+acts
+interface
+execution
+kinds
+conceptual
+view
+important
+functions
+management
+processor
+device
+file
+security
+control
+performance
+job
+accounting
+error
+detecting
+aids
+coordination
+refers
+primary
+main
+large
+array
+words
+bytes
+word
+byte
+address
+fast
+storage
+access
+directly
+cpu
+executed
+activities
+tracks
+i.e
+part
+multiprogramming
+decides
+process
+allocates
+requests
+de-allocates
+longer
+terminated
+task
+fulfilling
+request
+consists
+locating
+block
+unused
+sufficient
+size
+satisfied
+allocating
+portions
+pool
+heap
+free
+store
+parts
+future
+allocations
+issues
+complicate
+implementation
+external
+fragmentation
+arises
+small
+gaps
+allocated
+blocks
+invalidates
+allocator
+metadata
+inflate
+individually
+managed
+chunking
+track
+outstanding
+ensure
+overlap
+lost
+leak
+efficiency
+edit
+specific
+dynamic
+algorithm
+implemented
+impact
+significantly
+study
+conducted
+digital
+equipment
+corporation
+illustrates
+overheads
+involved
+variety
+allocators
+lowest
+average
+instruction
+path
+length
+required
+allocate
+single
+slot
+measured
+level
+profiler
+implementations
+precise
+location
+advance
+accessed
+indirectly
+pointer
+reference
+organize
+area
+deallocate
+chunks
+interlinked
+kernel
+methods
+fixed-size
+article
+list
+works
+simple
+embedded
+systems
+objects
+suffers
+long
+addresses
+due
+reduced
+overhead
+method
+substantially
+improve
+frequent
+de-allocation
+video
+games
+buddy
+details
+topic
+pools
+represents
+power
+two
+sorted
+linked
+tree
+formed
+added
+respective
+smaller
+requested
+smallest
+selected
+halved
+resulting
+halves
+repeats
+complete
+start
+sufficiently
+avoid
+needlessly
+breaking
+freed
+compared
+combined
+next-largest
+buddy-block
+virtual
+articles
+protection
+shared
+decoupling
+organization
+physical
+applications
+operate
+attempt
+stored
+data
+made
+orders
+translate
+addition
+enables
+granular
+limits
+feature
+disallow
+read
+write
+preventing
+malicious
+malfunctioning
+code
+interfering
+operation
+processes
+isolated
+share
+fastest
+techniques
+inter-process
+communication
+classified
+rate
+secondary
+operations
+handle
+moving
+levels
+function
+scheduling
+status
+responsible
+traffic
+controller
+drivers
+i
+efficient
+organized
+directories
+easy
+navigation
+usage
+files
+directions
+collective
+facilities
+means
+password
+similar
+unauthorized
+recording
+delays
+service
+response
+keeping
+jobs
+production
+dumps
+traces
+messages
+debugging
+softwares
+assignment
+compilers
+interpreters
+assemblers

@@ -1,0 +1,37 @@
+of com.puter crashes.
+The MS-DOS FAT system is explained in Norton and Wilton [1988], and the OS/2
+description can be found in Iacobucci [1988]. These operating systems use
+the Intel 8086 CPUs(Intel [1985b ], Intel [1985a], Intel [1986], and Intel [1990]).
+IBM allocation methods are described in Deitel [1990]. The internals of the
+BSD UNL'   system are covered in full in McKusick et al. [1996]. McVoy and
+Kleiman [1991] discusses optimizations of these methods made in Solaris. The
+Coogle file system is described in Ghemawat et al. [2003]. FUSE can be found
+at http:/ /fuse.sourceforge.net/.
+Disk file allocation based on the buddy system is covered in Koch
+[1987]. A file-organization scheme that guarantees retrieval in one access
+is described by Larson and Kajla [1984]. Log-structured file organizations
+for enhancing both performance and consistency are discussed in
+Rosenblum and Ousterhout [1991], Seltzer et al. [1993], and Seltzer et aL
+[1995]. Algorithms such as balanced trees (and much more) are covered
+by Knuth [1998] and Carmen et aL [2001]. The ZFS source code for space
+maps can be found at http://src.opensolaris.org/source/xref/onnv/onnvgate/
+usr I src/uts/ common/ fs/ zfs/ space_map.c.
+Disk caching is discussed by McKeon [1985] and Smith [1985]. Caching in
+the experimental Sprite operating system is described in Nelson et aL [1988].
+General discussions concerning mass-storage technology are offered by Chi
+[1982] and Hoagland [1985]. Folk and Zoellick [1987] covers the gamut of file
+structures. Silvers [2000] discusses implementing the page cache in the NetBSD
+operating system.
+The network file system (NFS) is discussed in Sandberg et aL [1985],
+Sandberg [1987], Sun [1990], and Callaghan [2000]. NFS Version 4 is a standard
+described at http:/ /www.ietf.org/rfc/rfc3530.txt. The characteristics of
+503
+workloads in distributed file systems are examined in Baker et al. [1991].
+Ousterhout [1991] discusses the role of distributed state in networked file
+systems. Log-structured designs for networked file systems are proposed in
+Hartman and Ousterhout [1995] and Thekkath et al. [1997]. NFS and the UNIX
+file system (UFS) are described in Vahalia [1996] and Mauro and McDougall
+[2007]. The Windows NT file system, NTFS, is explained in Solomon [1998]. The
+Ext2 file system used in Linux is described in Bovet and Cesati [2002] and
+the WAFL file system in Hitz et al. [1995]. ZFS documentation can be found at
+http:/ /www.opensolaris.org/ os/ community /ZFS/ docs.

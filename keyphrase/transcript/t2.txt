@@ -1,0 +1,2500 @@
+However, the cost of this compaction is time and it can be particularly severe for
+large hard disks that use contiguous allocation, where compacting all the space
+11.4 473
+may take hours and may be necessary on a weekly basis. Some systems require
+that this function be done with the file system unmounted. During
+this normal system operation generally cannot be permitted, so
+such compaction is avoided at all costs on production machines. Most modern
+systems that need defragmentation can perform it during normal
+system operations, but the performance penalty can be substantial.
+Another problem with contiguous allocation is determining how much
+space is needed for a file. When the file is created, the total amount of space
+it will need must be found and allocated. How does the creator (program or
+person) know the size of the file to be created  In some cases, this detennination
+may be fairly simple (copying an existing file, for example); in general, however,
+the size of an output file may be difficult to estimate.
+If we allocate too little space to a file, we may find that the file cannot
+be extended. Especially with a best-fit allocation strategy, the space on both
+sides of the file may be in use. Hence, we cannot make the file larger in place.
+Two possibilities then exist. First, the user program can be terminated, with
+an appropriate error message. The user must then allocate more space and
+run the program again. These repeated runs may be costly. To prevent them,
+the user will normally overestimate the amount of space needed, resulting in
+considerable wasted space. The other possibility is to find a larger hole, copy
+the contents of the file to the new space, and release the previous space. This
+series of actions can be repeated as long as space exists, although it can be time
+consuming. However, the user need never be informed explicitly about what
+is happening; the system continues despite the problem, although more and
+more slowly.
+Even if the total amount of space needed for a file is known in advance,
+preallocation may be inefficient. A file that will grow slowly over a long period
+(months or years) must be allocated enough space for its final size, even though
+much of that space will be unused for a long time. The file therefore has a large
+amount of internal fragmentation.
+To minimize these drawbacks, some operating systems use a modified
+contiguous-allocation scheme. Here, a contiguous chunk of space is allocated
+initially; then, if that amount proves not to be large enough, another chunk of
+contiguous space, known as an is added. The location of a file's blocks
+is then recorded as a location and a block count, plus a link to the first block
+of the next extent. On some systems, the owner of the file can set the extent
+size, but this setting results in inefficiencies if the owner is incorrect. Internal
+fragm.entation can still be a problem if the extents are too large, and external
+fragmentation can become a problem as extents of varying sizes are allocated
+and deallocated. The commercial Veritas file system uses extents to optimize
+performance. It is a high-performance replacement for the standard UNIX UFS.
+11.4.2 Linked Allocation
+solves all problems of contiguous allocation. With linked
+allocation, each file is a linked list of disk blocks; the disk blocks may be
+scattered anywhere on the disk. The directory contains a pointer to the first
+and last blocks of the file. For example, a file of five blocks might start at block
+9 and continue at block 16, then block 1, then block 10, and finally block 25
+(Figure 11.6). Each block contains a pointer to the next block. These pointers
+474 Chapter 11
+directory
+12
+16 170180190
+20021~_20_.~23_0-4------------~
+2402Sc.51:260270
+280290300310
+Figure i 1.6 Linked allocation of disk space.
+are not made available to the user. Thus, if each block is 512 bytes in size, and
+a disk address (the poileter) requires 4 bytes, then the user sees blocks of 508
+bytes.
+To create a new file, we simply create a new entry ile the directory. With
+linked allocation, each directory entry has a pointer to the first disk block of the
+file. This pointer is initialized to nil (the end-of-list pointer value) to signify an
+empty file. The size field is also set to 0. A write to the file causes the free-space
+management system to filed a free block, and this new block is written to
+and is linked to the end of the file. To read a file, we simply read blocks by
+following the pointers from block to block. There is no external fragmentation
+with linked allocation, and any free block on the free-space list can be used to
+satisfy a request. The size of a file need not be declared when that file is created.
+A file can continue to grow as long as free blocks are available. Consequently,
+it is never necessary to compact disk space.
+Linked allocation does have disadvantages, however. The major problem
+is that it can be used effectively only for sequential-access files. To filed the
+ith block of a file, we must start at the begirueing of that file and follow the
+pointers rnetil we get to the ith block. Each access to a pointer requires a disk
+read, and some require a disk seek. Consequently, it is inefficient to support a
+direct-access capability for linked-allocation files.
+Another disadvantage is the space required for the pointers. If a pointer
+requires 4 bytes out of a 512-byte block, then 0.78 percent of the disk is being
+used for pointers, rather than for information. Each file requires slightly more
+space than it would otherwise.
+The usual solution to this problem is to collect blocks into multiples, called
+and to allocate clusters rather than blocks. For instance, the file system
+may define a cluster as four blocks and operate on the disk only in cluster
+units. Pointers then use a much smaller percentage of the file's disk space.
+This method allows the logical-to-physical block mapping to remain simple
+11.4 475
+but improves disk throughput (because fewer disk-head seeks are required)
+and decreases the space needed for block allocation and free-list management.
+The cost of this approach is an increase in internal fragmentation, because
+more space is wasted when a cluster is partially full than when a block is
+partially full. Clusters can be used to improve the disk-access time for many
+other algorithms as welt so they are used in most file systems.
+Yet another problem of linked allocation is reliability. Recall that the files
+are linked together by pointers scattered all over the disk, and consider what
+would happen if a pointer were lost or damaged. A bug in the operating-system
+software or a disk hardware failure might result in picking up the wrong
+pointer. This error could in turn result in linking into the free-space list or into
+another file. One partial solution is to use doubly linked lists, and another is
+to store the file name and relative block number in each block; however, these
+schemes require even more overhead for each file.
+An important variation on linked allocation is the use of a
+(FAT!. This simple but efficient method of disk-space allocation is used
+by the MS-DOS and OS/2 operating systems. A section of disk at the beginning
+of each volume is set aside to contain the table. The table has one entry for
+each disk block and is indexed by block number. The FAT is used in much the
+same way as a linked list. The directory entry contains the block number of the
+first block of the file. The table entry indexed by that block number contains
+the block number of the next block in the file. This chain continues until it
+reaches the last block, which has a special end-of-file value as the table entry.
+An unused block is indicated by a table value of 0. Allocating a new block to
+a file is a simple matter of finding the first 0-valued table entry and replacing
+the previous end-of-file value with the address of the new block. The 0 is then
+replaced with the end-of-file value. An illustrative example is the FAT structure
+shown in Figure 11.7 for a file consisting of disk blocks 217, 618, and 339.
+directory entry
+name start block
+0
+217 618
+339 -
+618 339
+number of disk blocks -1
+FAT
+Figure 11.7 File-allocation table.
+476 Chapter 11
+The FAT allocation scheme can result in a significant number of disk head
+seeks, unless the FAT is cached. The disk head must move to the start of the
+volume to read the FAT and find the location of the block in question, then
+move to the location of the block itself. In the worst case, both moves occur for
+each of the blocks. A benefit is that random-access time is improved, because
+the disk head can find the location of any block by reading the information in
+the FAT.
+11.4.3 Indexed Allocation
+Linked allocation solves the external-fragmentation and size-declaration problems
+of contiguous allocation. However, in the absence of a FAT, linked
+allocation cannot support efficient direct access, since the pointers to the blocks
+are scattered with the blocks themselves all over the disk and must be retrieved
+in order. solves this problem by bringil1.g all the pointers
+together into one location: the blo;ct:.
+Each file has its own index block, which is an array of disk-block addresses.
+The i th entry in the index block points to the i 111 block of the file. The directory
+contains the address of the index block (Figure 11.8). To find and read the i 1Jz
+block, we use the pointer in the i 1lz index-block entry. This scheme is similar to
+the paging scheme described il1. Section 8.4.
+When the file is created, all pointers in the index block are set to nil. When
+the ith block is first written, a block is obtained from the free-space manage1~
+and its address is put in the ith index-block entry.
+Indexed allocation supports direct access, without suffering from external
+fragmentation, because any free block on the disk can satisfy a request for more
+space. Indexed allocation does suffer from wasted space, however. The pointer
+overhead of the index block is generally greater than the pointer overhead of
+linked allocation. Consider a common case in which we have a file of only one
+or two blocks. With linked allocation, we lose the space of only one pointer per
+directory
+file
+jeep
+16
+Figure 11.8 Indexed allocation of disk space.
+11.4 Allocation Methods 477
+block. With indexed allocation, an entire index block must be allocated, even
+if only one or two pointers will be non-nil.
+This point raises the question of how large the index block should be. Every
+file must have an index block, so we want the index block to be as small as
+possible. If the index block is too small, however, it will not be able to hold
+enough pointers for a large file, and a mechanism will have to be available to
+deal with this issue. Mechanisms for this purpose include the following:
+c Linked scheme. An index block is normally one disk block. Thus, it can
+be read and written directly by itself. To allow for large files, we can link
+together several index blocks. For example, an index block might contain a
+small header giving the name of the file and a set of the first 100 disk-block
+addresses. The next address (the last word in the index block) is nil (for a
+small file) or is a pointer to another index block (for a large file).
+  Multilevel index. A variant of linked representation uses a first-level index
+block to point to a set of second-level index blocks, which in tum point to
+the file blocks. To access a block, the operating system uses the first-level
+index to find a second-level index block and then uses that block to find the
+desired data block. This approach could be continued to a third or fourth
+level, depending on the desired maximum file size. With 4,096-byte blocks,
+we could store 1,024 four-byte pointers in an index block. Two levels of
+indexes allow 1,048,576 data blocks and a file size of up to 4GB.
+  Combined scheme. Another alternative, used in the UFS, is to keep the
+first, say, 15 pointers of the index block in the file's inode. The first 12
+of these pointers point to direct blocks; that is, they contain addresses of
+blocks that contain data of the file. Thus, the data for small files (of no more
+than 12 blocks) do not need a separate index block. If the block size is 4 KB,
+then up to 48 KB of data can be accessed directly. The next three pointers
+point to indirect blocks. The first points to a single indirect block, which
+is an index block containing not data but the addresses of blocks that do
+contain data. The second points to a double indirect block, which contains
+the address of a block that contains the addresses of blocks that contain
+pointers to the actual data blocks. The last pointer contains the address of a
+triple indirect block. Under this method, the number of blocks that can be
+allocated to a file exceeds the amount of space addressable by the four-byte
+file pointers used by many operating systems. A 32-bit file pointer reaches
+only 232 bytes, or 4GB. Many UNIX implementations, including Solaris and
+IBM's AIX, now support up to 64-bit file pointers. Pointers of this size allow
+files and file systems to be terabytes in size. A UNIX inode is shown in
+Figure 11.9.
+Indexed-allocation schemes suffer from some of the same performance
+problems as does linked allocation. Specifically, the index blocks can be cached
+in memory, but the data blocks may be spread all over a volume.
+11.4.4 Performance
+The allocation methods that we have discussed vary in their storage efficiency
+and data-block access times. Both are important criteria in selecting the proper
+method or methods for an operating system to implement.
+478 Chapter 11 Implementing File Systems
+Figure 11.9 The UNIX inode.
+Before selecting an allocation method, we need to determine how the
+systems will be used. A system with mostly sequential access should not use
+the same method as a system with mostly random access.
+For any type of access, contiguous allocation requires only one access to get
+a disk block. Since we can easily keep the initial address of the file in memory,
+we can calculate immediately the disk address of the ith block (or the next
+block) and read it directly.
+For linked allocation, we can also keep the address of the next block in
+memory and read it directly. This method is fine for sequential access; for
+direct access, however, an access to the ith block might require i disk reads. This
+problem indicates why linked allocation should not be used for an application
+requiring direct access.
+As a result, some systems support direct-access files by using contiguous
+allocation and sequential-access files by using linked allocation. For these
+systems, the type of access to be made must be declared when the file is
+created. A file created for sequential access will be linked and cannot be used
+for direct access. A file created for direct access will be contiguous and can
+support both direct access and sequential access, but its maximum length must
+be declared when it is created. In this case, the operating system must have
+appropriate data structures and algorithms to support both allocation methods.
+Files can be converted from one type to another by the creation of a new file of
+the desired type, into which the contents of the old file are copied. The old file
+may then be deleted and the new file renamed.
+Indexed allocation is more complex. If the index block is already in memory,
+then the access can be made directly. However, keeping the index block in
+memory requires considerable space. If this memory space is not available,
+then we may have to read first the index block and then the desired data
+block. For a two-level index, two index-block reads might be necessary. For an
+11.5
+11.5 479
+extremely large file, accessing a block near the end of the file would require
+reading in all the index blocks before the needed data block finally could
+be read. Thus, the performance of indexed allocation depends on the index
+structure, on the size of the file, and on the position of the block desired.
+Some systems combine contiguous allocation with indexed allocation by
+using contiguous allocation for small files (up to three or four blocks) and
+automatically switching to an indexed allocation if the file grows large. Since
+most files are small, and contiguous allocation is efficient for small files, average
+performance can be quite good.
+For instance, the version of the UNIX operating system from Sun Microsystems
+was changed in 1991 to improve performance in the file-system allocation
+algorithm. The performance measurements indicated that the maximum disk
+throughput on a typical workstation (a 12-MIPS SPARCstation1) took 50 percent
+of the CPU and produced a disk bandwidth of only 1.5 ME per second. To
+improve performance, Sun made changes to allocate space in clusters of 56 KB
+whenever possible (56 KB was the maximum size of a DMA transfer on Sun
+systems at that time). This allocation reduced external fragmentation, and thus
+seek and latency times. In addition, the disk-reading routines were optimized
+to read in these large clusters. The inode structure was left unchanged. As a
+result of these changes, plus the use of read-ahead and free-behind (discussed
+in Section 11.6.2), 25 percent less CPU was used, and throughput substantially
+improved.
+Many other optimizations are in use. Given the disparity between CPU
+speed and disk speed, it is not unreasonable to add thousands of extra
+instructions to the operating system to save just a few disk-head movements.
+Furthermore, this disparity is increasing over time, to the point where hundreds
+of thousands of instructions reasonably could be used to optimize head
+movements.
+Since disk space is limited, we need to reuse the space from deleted files for new
+files, if possible. (Write-once optical disks only allow one write to any given
+sector, and thus such reuse is not physically possible.) To keep track of free disk
+space, the system maintains a The free-space list records all free
+disk blocks-those not allocated to some file or directory. To create a file, we
+search the free-space list for the required amount of space and allocate that
+space to the new file. This space is then removed from the free-space list. When
+a file is deleted, its disk space is added to the free-space list. The free-space list,
+despite its name, might not be implemented as a list, as we discuss next.
+11.5.1 Bit Vector
+Frequently, the free-space list is implemented as a or Each
+block is represented by 1 bit. If the block is free, the bit is 1; if the block is
+allocated, the bit is 0.
+For example, consider a disk where blocks 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 17,
+18, 25, 26, and 27 are free and the rest of the blocks are allocated. The free-space
+bit map would be
+480 Chapter 11
+001111001111110001100000011100000 ...
+The main advantage of this approach is its relative simplicity and its
+efficiency in finding the first free block or n consecutive free blocks on the
+disk. Indeed, many computers supply bit-manipulation instructions that can
+be used effectively for that purpose. For example, the Intel family starting with
+the 80386 and the Motorola family starting with the 68020 have instructions
+that return the offset in a word of the first bit with the value 1 (these processors
+have powered PCs and Macintosh systems, respectively). One technique for
+finding the first free block on a system that uses a bit-vector to allocate disk
+space is to sequentially check each word in the bit map to see whether that
+value is not 0, since a 0-valued word contains only 0 bits and represents a set
+of allocated blocks. The first non-0 word is scanned for the first 1 bit, which is
+the location of the first free block. The calculation of the block number is
+(number of bits per word) x (number of 0-value words) +offset of first 1 bit.
+Again, we see hardware features driving software functionality. Unfortunately,
+bit vectors are inefficient unless the entire vector is kept in main
+memory (and is written to disk occasionally for recovery needs). Keeping it in
+main memory is possible for smaller disks but not necessarily for larger ones.
+A 1.3-GB disk with 512-byte blocks would need a bit map of over 332 KB to
+track its free blocks, although clustering the blocks in groups of four reduces
+this number to around 83 KB per disk. A 1-TB disk with 4-KB blocks requires 32
+MB to store its bit map. Given that disk size constantly increases, the problem
+with bit vectors will continue to escalate. A 1-PB file system would take a 32-GB
+bitmap just to manage its free space.
+11.5.2 Linked List
+Another approach to free-space management is to link together all the free
+disk blocks, keeping a pointer to the first free block in a special location on the
+disk and caching it in memory. This first block contains a pointer to the next
+free disk block, and so on. Recall our earlier example (Section 11.5.1), in which
+blocks 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 17, 18, 25, 26, and 27 were free and the
+rest of the blocks were allocated. In this situation, we would keep a pointer to
+block 2 as the first free block. Block 2 would contain a pointer to block 3, which
+would point to block 4, which would point to block 5, which would point to
+block 8, and so on (Figure 11.10). This scheme is not efficient; to traverse the
+list, we must read each block, which requires substantial I/0 time. Fortunately,
+however, traversing the free list is not a frequent action. Usually, the operating
+system simply needs a free block so that it can allocate that block to a file, so
+the first block in the free list is used. The FAT method incorporates free-block
+accounting into the allocation data structure. No separate method is needed.
+11.5.3 Grouping
+A modification of the free-list approach stores the addresses of n free blocks
+in the first free block. The first n-1 of these blocks are actually free. The last
+block contains the addresses of another n free blocks, and so on. The addresses
+11.5 481
+Figure 11.10 Linked free-space list on disk.
+of a large number of free blocks can now be found quickly, unlike the situation
+when the standard linked-list approach is used.
+11.5.4 Counting
+Another approach takes advantage of the fact that, generally, several contiguous
+blocks may be allocated or freed simultaneously, particularly when space is
+allocated with the contiguous-allocation algorithm or through clustering. Thus,
+rather than keeping a list of n free disk addresses, we can keep the address of
+the first free block and the number (n) of free contiguous blocks that follow the
+first block. Each entry in the free-space list then consists of a disk address and
+a count. Although each entry requires more space than would a simple disk
+address, the overall list is shorter, as long as the count is generally greater than
+1. Note that this method of tracking free space is similar to the extent method
+of allocating blocks. These entries can be stored in a B-tree, rather than a linked
+list for efficient lookup, insertion, and deletion.
+11.5.5 Space Maps
+Sun's ZFS file system was designed to encompass huge numbers of files,
+directories, and even file systems (in ZFS, we can create file-system hierarchies).
+The resulting data structures could have been large and inefficient if they had
+not been designed and implemented properly. On these scales, metadata I/0
+can have a large performance impact. Conside1~ for example, that if the freespace
+list is implemented as a bit map, bit maps must be modified both when
+blocks are allocated and when they are freed. Freeing 1GB of data on a 1-TB
+disk could cause thousands of blocks of bit maps to be updated, because those
+data blocks could be scattered over the entire disk.
+482 Chapter 11
+11.6
+ZFS uses a combination of techniques in its free-space managem.ent
+algorithm to control the size of data structures and minimize the I/0 needed
+to manage those structures. First, ZFS creates to divide the space
+on the device into chucks of manageable size. A given volume may contain
+hundreds of metaslabs. Each metaslab has an associated space map. ZFS uses
+the counting algorithm to store information about free blocks. Rather than
+write count structures to disk, it uses log-structured file- system techniques
+to record them. The space map is a log of all block activity (allocatil  g and
+freemg), in time order, in countil  g format. When ZFS decides to allocate or
+free space from a metaslab, it loads the associated space map into memory
+in a balanced-tree structure (for very efficient operation), indexed by offset,
+and replays the log into that structure. The in-memory space map is then an
+accurate representation of the allocated and free space in the metaslab. ZFS also
+condenses the map as much as possible by combining contiguous free blocks
+into a sil  gle entry. Finally, the free-space list is updated on disk as part of
+the transaction-oriented operations of ZFS. During the collection and sortmg
+phase, block requests can still occur, and ZFS satisfies these requests from the
+log. In essence, the log plus the balanced tree is the free list.
+Now that we have discussed various block-allocation and directorymanagement
+options, we can further consider their effect on performance
+and efficient disk use. Disks tend to represent a major bottleneck in system
+performance, since they are the slowest main computer component. In this
+section, we discuss a variety of techniques used to improve the efficiency and
+performance of secondary storage.
+11.6.1 Efficiency
+The efficient use of disk space depends heavily on the disk allocation and
+directory algorithms in use. For instance, UNIX inodes are preallocated on a
+volume. Even an   empty   disk has a percentage of its space lost to inodes.
+However, by preallocating the inodes and spreading them across the volume,
+we improve the file system's performance. This improved performance results
+from the UNIX allocation and free-space algorithms, which try to keep a file's
+data blocks near that file's inode block to reduce seek time.
+As another example, let's reconsider the clustermg scheme discussed in
+Section 11.4, which aids in file-seek and file-transfer performance at the cost
+of internal fragmentation. To reduce this fragmentation, BSD UNIX varies the
+cluster size as a file grows. Large clusters are used where they can be filled, and
+small clusters are used for small files and the last cluster of a file. This system
+is described in Appendix A.
+The types of data normally kept in a file's directory (or inode) entry also
+require consideration. Commonly, a   last write date   is recorded to supply
+information to the user and to determine whether the file needs to be backed
+up. Some systems also keep a   last access date,   so that a user can determine
+when the file was last read. The result of keeping this information is that,
+whenever the file is read, a field in the directory structure must be written
+11.6 483
+to. That means the block must be read into memory, a section changed, and
+the block written back out to disk, because operations on disks occur only in
+block (or cluster) chunks. So any time a file is opened for reading, its directory
+entry must be read and written as well. This requirement can be inefficient for
+frequently accessed files, so we must weigh its benefit against its performance
+cost when designing a file system. Generally, every data item associated with a
+file needs to be considered for its effect on efficiency and performance.
+As an example, consider how efficiency is affected by the size of the pointers
+used to access data. Most systems use either 16- or 32-bit pointers throughout
+the operating system. These pointer sizes limit the length of a file to either
+216 (64 KB) or 232 bytes (4 GB). Some systems implement 64-bit pointers to
+increase this limit to 264 bytes, which is a very large number indeed. However,
+64-bit pointers take more space to store and in turn make the allocation and
+free-space-management methods (linked lists, indexes, and so on) use more
+disk space.
+One of the difficulties in choosing a pointer size, or indeed any fixed
+allocation size within an operating system, is planning for the effects of
+changing technology. Consider that the IBM PC XT had a 10-MB hard drive
+and an MS-DOS file system that could support only 32 MB. (Each FAT entry
+was 12 bits, pointing to an 8-KB cluster.) As disk capacities increased, larger
+disks had to be split into 32-MB partitions, because the file system could not
+track blocks beyond 32MB. As hard disks with capacities of over 100MB became
+common, the disk data structures and algorithms in MS-DOS had to be modified
+to allow larger file systems. (Each FAT entry was expanded to 16 bits and later
+to 32 bits.) The initial file-system decisions were made for efficiency reasons;
+however, with the advent of MS-DOS Version 4, millions of computer users were
+inconvenienced when they had to switch to the new, larger file system. Sun's
+ZFS file system uses 128-bit pointers, which theoretically should never need
+to be extended. (The minimum mass of a device capable of storing 2128 bytes
+using atomic-level storage would be about 272 trillion kilograms.)
+As another example, consider the evolution of Sun's Solaris operating
+system. Originally, many data structures were of fixed length, allocated at
+system startup. These structures included the process table and the open-file
+table. When the process table became full, no more processes could be created.
+When the file table became full, no more files could be opened. The system
+would fail to provide services to users. Table sizes could be increased only by
+recompiling the kernel and rebooting the system. Since the release of Solaris
+2, almost all kernel structures have been allocated dynamically, eliminating
+these artificial limits on system performance. Of course, the algorithms that
+manipulate these tables are more complicated, and the operating system is a
+little slower because it must dynamically allocate and deallocate table entries;
+but that price is the usual one for more general functionality.
+11.6.2 Performance
+Even after the basic file-system algorithms have been selected, we can still
+improve performance in several ways. As will be discussed in Chapter 13,
+most disk controllers include local memory to form an on-board cache that is
+large enough to store entire tracks at a time. Once a seek is performed, the
+track is read into the disk cache starting at the sector under the disk head
+484 Chapter 11
+1/0 using
+read( ) and write( )
+tile system
+Figure 11.11 1/0 without a unified buffer cache.
+(reducing latency time). The disk controller then transfers any sector requests
+to the operating system. Once blocks make it from the disk controller into main
+memory, the operating system may cache the blocks there.
+Some systems maintain a separate section of main memory for a
+where blocks are kept under the assumption that will be used
+again shortly. Other systems cache file data using a The page
+cache uses virtual memory techniques to cache file data as pages rather than
+as file-system-oriented blocks. Cachii  lg file data using virtual addresses is far
+more efficient than caching through physical disk blocks, as accesses interface
+with virtual memory rather than the file system. Several systems-including
+Solaris, Linux, and Windows NT, 2000, and XP-use caching to cache
+both process pages and file data. This is known as
+Some versions of UNIX and Linux provide a To
+illustrate the benefits of the unified buffer cache, consider the two alternatives
+for opening and accessing a file. One approach is to use memory mapping
+(Section 9.7); the second is to use the standard system calls read() and
+write(). Without a unified buffer cache, we have a situation similar to Figure
+11.11. Here, the read() and write() system calls go through the buffer cache.
+The memory-mapping call, however, requires using two caches-the page
+cache and the buffer cache. A memory mapping proceeds by reading in disk
+blocks from the file system and storing them in the buffer cache. Because the
+virtual memory system does not interface with the buffer cache, the contents
+of the file in the buffer cache must be copied into the page cache. This situation
+is known as and requires caching file-system data twice. Not
+only does it waste memory but it also wastes significant CPU and I/O cycles due
+to the extra data movement within system memory. In addition, inconsistencies
+between the two caches can result in corrupt files. In contrast, when a unified
+buffer cache is provided, both memory mapping and the read() and write()
+system calls use the same page cache. This has the benefit of a voiding double
+11.6 485
+memory-mapped 1/0
+buffer cache
+file system
+Figure 11.12 1/0 using a unified buffer cache.
+caching, and it allows the virtual memory system to manage file-system data.
+The unified buffer cache is shown in Figure 11.12.
+Regardless of whether we are caching disk blocks or pages (or both), LRU
+(Section 9.4.4) seems a reasonable general-purpose algorithm for block or page
+replacement. However, the evolution of the Solaris page-caching algorithms
+reveals the difficulty in choosil1.g an algorithm. Solaris allows processes and the
+page cache to share unused memory. Versions earlier than Solaris 2.5.1 made
+no distmction between allocatmg pages to a process and allocating them to
+the page cache. As a result, a system performing many I/0 operations used
+most of the available memory for caching pages. Because of the high rates
+of I/0, the page scanner (Section 9.10.2) reclaimed pages from processesrather
+than from the page cache-when free memory ran low. Solaris 2.6 and
+Solaris 7 optionally implemented priority paging, in which the page scanner
+gives priority to process pages over the page cache. Solaris 8 applied a fixed
+limit to process pages and the file-system page cache, preventing either from
+forcing the other out of memory. Solaris 9 and 10 again changed the algorithms
+to maximize memory use and mmimize thrashing.
+Another issue that can affect the performance of I/0 is whether writes to
+the file system occur synchronously or asynchronously.
+occur in the order in which the disk subsystem receives and the writes
+are not buffered. Thus, the calling routine must wait for the data to reach the
+disk drive before it can proceed. In an the data are stored
+in the cache, and control returns to the caller. Asynchronous writes are done
+the majority of the time. However, metadata writes, among others, can be
+synchronous. Operating systems frequently include a flag in the open system
+call to allow a process to request that writes be performed synchxonously. For
+example, databases use this feature for atomic transactions, to assure that data
+reach stable storage in the required order.
+Some systems optimize their page cache by using different replacement
+algorithms, depending on the access type of the file. A file being read or
+written sequentially should not have its pages replaced in LRU order, because
+the most recently used page will be used last, or perhaps never again. Instead,
+sequential access can be optimized by techniques known as free-behind and
+read-ahead. removes a page from the buffer as soon as the next
+486 Chapter 11
+11.7
+page is requested. The previous are not likely to be used again and
+waste buffer space. With a requested page and several subsequent
+pages are read and cached. These pages are likely to be requested after the
+current page is processed. Retrieving these data from the disk in one transfer
+and caching them saves a considerable ancount of time. One might think that
+a track cache on the controller would elincinate the need for read-ahead on a
+multiprogrammed system. However, because of the high latency and overhead
+involved in making many small transfers from the track cache to main memory,
+performing a read-ahead remains beneficial.
+The page cache, the file system, and the disk drivers have some interesting
+interactions. When data are written to a disk file, the pages are buffered in the
+cache, and the disk driver sorts its output queue according to disk address.
+These two actions allow the disk driver to minimize disk-head seeks and to
+write data at times optimized for disk rotation. Unless synchronous writes are
+required, a process writing to disk simply writes into the cache, and the system
+asynchronously writes the data to disk when convenient. The user process sees
+very fast writes. When data are read from a disk file, the block I/0 system does
+some read-ahead; however, writes are much more nearly asynchronous than
+are reads. Thus, output to the disk through the file system is often faster than
+is input for large transfers, counter to intuition.
+Files and directories are kept both in main memory and on disk, and care must
+be taken to ensure that a system failure does not result in loss of data or in data
+inconsistency. We deal with these issues in this section as well as how a system
+can recover from such a failure.
+A system crash can cause inconsistencies among on-disk file-system data
+structures, such as directory structures, free-block pointers, and free FCB
+pointers. Many file systems apply changes to these structures in place. A
+typical operation, such as creating a file, can involve many structural changes
+within the file system on the disk Directory structures are modified, FCBs are
+allocated, data blocks are allocated, and the free counts for all of these blocks
+are decreased. These changes can be interrupted by a crash, and inconsistencies
+among the structures can result. For example, the free FCB count might indicate
+that an FCB had been allocated, but the directory structure might not point to
+the FCB. Compounding this problem is the caching that operating systems do
+to optimize I/0 performance. Some changes may go directly to disk, while
+others may be cached. If the cached changes do not reach disk before a crash
+occurs, more corruption is possible.
+In addition to crashes, bugs in file-system implementation, disk controllers,
+and even user applications can corrupt a file system. File systems have varying
+methods to deal with corruption, depending on the file-system data structures
+and algorithms. We deal with these issues next.
+11.7.1 Consistency Checking
+Whatever the cause of corruption, a file system must first detect the problems
+and then correct them. For detection, a scan of all the metadata on each file
+11.7 487
+system can confirm or deny the consistency of the systenL Unfortunately, this
+scan can take minutes or hours and should occur every time the system boots.
+Alternatively, a file system can record its state within the file-system metadata.
+At the start of any metadata change, a status bit is set to indicate that the
+metadata is in flux. If all updates to the metadata complete successfully, the file
+system can clear that bit. It however, the status bit remains set, a consistency
+checker is run.
+The systems program such as f s ck in UNIX or
+chkdsk in Windows-compares the data in the directory structure with the
+data blocks on disk and tries to fix any inconsistencies it finds. The allocation
+and free-space-management algorithms dictate what types of problems the
+checker can find and how successful it will be in fixing them. For instance, if
+linked allocation is used and there is a link from any block to its next block,
+then the entire file can be reconstructed from the data blocks, and the directory
+structure can be recreated. In contrast the loss of a directory entry on an
+indexed allocation system can be disastrous, because the data blocks have no
+knowledge of one another. For this reason, UNIX caches directory entries for
+reads; but any write that results in space allocation, or other metadata changes,
+is done synchronously, before the corresponding data blocks are written. Of
+course, problems can still occur if a synchronous write is interrupted by a crash.
+11.7.2 Log-Structured File Systems
+Computer scientists often fin.d that algorithms and technologies origil1.ally used
+in one area are equally useful in other areas. Such is the case with the database
+log-based recovery algorithms described in Section 6.9.2. These logging algorithms
+have been applied successfully to the of consistency '-.il'C'--  .ll
+The resulting implementations are known as
+(or file systems.
+Note that with the consistency-checking approach discussed in the preceding
+section, we essentially allow structures to break and repair them on
+recovery. However, there are several problems with this approach. One is that
+the inconsistency may be irreparable. The consistency check may not be able to
+recover the structures, resulting in loss of files and even entire directories.
+Consistency checking can require human intervention to resolve conflicts,
+and that is inconvenient if no human is available. The system can remain
+unavailable until the human tells it how to proceed. Consistency checking also
+takes system and clock time. To check terabytes of data, hours of clock time
+may be required.
+The solution to this problem is to apply log-based recovery techniques to
+file-system metadata updates. Both NTFS and the Veritas file system use this
+method, and it is included in recent versions of UFS on Solaris. In fact it is
+becoming common on many operating systems.
+Fundamentally, all metadata changes are written
+Each set of operations for performing a specific task is a
+the changes are written to this log, they are considered to be committed,
+and the system call can return to the user process, allowing it to continue
+execution. Meanwhile, these log entries are replayed across the actual filesystem
+structures. As the changes are made, a pointer is updated to indicate
+488 Chapter 11
+which actions have completed and which are still incomplete. When an entire
+committed transaction is completed, it is removed from the log file, which is
+actually a circular buffer. A cb:uL;n  writes to the end of its space and
+then continues at the beginning, overwriting older values as it goes. We would
+not want the buffer to write over data that had not yet been saved, so that
+scenario is avoided. The log may be in a separate section of the file system or
+even on a separate disk spindle. It is more efficient, but more complex, to have
+it under separate read and write heads, thereby decreasing head contention
+and seek times.
+If the system crashes, the log file will contain zero or more transactions.
+Any transactions it contains were not completed to the file system, even though
+they were committed by the operating system, so they must now be completed.
+The transactions can be executed from the pointer until the work is complete
+so that the file-system structures remain consistent The only problem occurs
+when a transaction was aborted -that is, was not committed before the system
+crashed. Any changes from such a transaction that were applied to the file
+system must be undone, again preserving the consistency of the file system.
+This recovery is all that is needed after a crash, elimil  ating any problems with
+consistency checking.
+A side benefit of using logging on disk metadata updates is that those
+updates proceed much faster than when they are applied directly to the on-disk
+data structures. The reason for this improvement is found in the performance
+advantage of sequential I/0 over random I/0. The costly synchronous random
+meta data writes are turned into much less costly synchronous sequential writes
+to the log-structured file system's loggil  g area. Those changes in turn are
+replayed asynchronously via random writes to the appropriate structures.
+The overall result is a significant gain in performance of metadata-oriented
+operations, such as file creation and deletion.
+11.7.3 Other Solutions
+Another alternative to consistency checking is employed by Network Appliance's
+WAFL file system and Sun's ZFS file system. These systems never
+overwrite blocks with new data. Rather, a transaction writes all data and metadata
+changes to new blocks. When the transaction is complete, the metadata
+structures that pointed to the old versions of these blocks are updated to point
+to the new blocks. The file system can then remove the old pointers and the old
+blocks and make them available for reuse. If the old pointers and blocks are
+kept, a is created; the snapshot is a view of the file system before the
+last update took place. This solution should require no consistency checking if
+the pointer update is done atomically. WAFL does have a consistency checke1~
+however, so some failure scenarios can still cause metadata corruption. (See
+11.9 for details of the WAFL file system.)
+Sun's ZFS takes an even more im  ovative approach to disk consistency.
+It never overwrites blocks, just as is the case with WAFL. However, ZFS goes
+further and provides check-summing of all metadata and data blocks. This
+solution (when combined with RAID) assures that data are always correct. ZFS
+therefore has no consistency checker. (More details on ZFS are found in Section
+12.7.6.)
+11.7 489
+11.7.4 Backup and Restore
+Magnetic disks sometimes fail, and care must be taken to ensure that the data
+lost in such a failure are not lost forever. To this end, system programs can be
+used to data from disk to another storage device, such as a floppy
+disk, magnetic tape, optical disk, or other hard disk. Recovery from the loss of
+an individual file, or of an entire disk, may then be a matter of the
+data from backup.
+To minimize the copying needed, we can use information from each file's
+directory entry. For instance, if the backup program knows when the last
+backup of a file was done, and the file's last write date in the directory indicates
+that the file has not changed since that date, then the file does not need to be
+copied again. A typical backup schedule may then be as follows:
+1. Copy to a backup medium all files from the disk. This is called a
+to another medium all files changed since day 1. This is an
+Day 3. Copy to another medium all files changed since day 2.
+Day N. Copy to another medium all files changed since day N-1. Then
+go back to Day 1.
+The new cycle can have its backup written over the previous set or onto
+a new set of backup media. In this manner, we can restore an entire disk
+by starting restores with the full backup and continuing through each of the
+incremental backups. Of course, the larger the value of N, the greater the
+number of media that must be read for a complete restore. An added advantage
+of this backup cycle is that we can restore any file accidentally deleted during
+the cycle by retrieving the deleted file from the backup of the previous day. The
+length of the cycle is a compromise between the amount of backup medium
+needed and the number of days back from which a restore can be done. To
+decrease the number of tapes that must be read to do a restore, an option is to
+perform a full backup and then each day back up all files that have changed
+since the full backup. In this way, a restore can be done via the most recent
+incremental backup and the full backup, with no other incremental backups
+needed. The trade-off is that more files will be modified each day, so each
+successive incremental backup involves more files and more backup media.
+A user ncay notice that a particular file is missing or corrupted long after
+the damage was done. For this reason, we usually plan to take a full backup
+from time to time that will be saved   forever.   It is a good idea to store these
+permanent backups far away from the regular backups to protect against
+hazard, such as a fire that destroys the computer and all the backups too.
+And if the backup cycle reuses media, we must take care not to reuse the
+490 Chapter 11
+11.8
+media too many times-if the media wear out, it might not be possible to
+restore any data from the backups.
+Network file systems are commonplace. They are typically integrated with
+the overall directory structure and interface of the client system. NFS is a
+good example of a widely used, well-implemented client-server network file
+system. Here, we use it as an example to explore the implementation details of
+network file systems.
+NFS is both an implementation and a specification of a software system for
+accessing remote files across LANs (or even WANs). NFS is part of ONC+, which
+most UNIX vendors and some PC operating systems support. The implementation
+described here is part of the Solaris operating system, which is a modified
+version of UNIX SVR4 running on Sun workstations and other hardware. It uses
+either the TCP or UDP /IP protocol (depending on the interconnecting network).
+The specification and the implementation are intertwined in our description of
+NFS. Whenever detail is needed, we refer to the Sun implementation; whenever
+the description is general, it applies to the specification also.
+There are multiple versions of NFS, with the latest being Version 4. Here,
+we describe Version 3, as that is the one most commonly deployed.
+11.8.1 Overview
+NFS views a set of interconnected workstations as a set of independent machines
+with independent file systems. The goal is to allow some degree of sharing
+among these file systems (on explicit request) in a transparent manner. Sharing
+is based on a client-server relationship. A machine may be, and often is, both a
+client and a server. Sharing is allowed between any pair of machines. To ensure
+machine independence, sharing of a remote file system affects only the client
+machine and no other machine.
+So that a remote directory will be accessible in a transparent manner
+from a particular machine-say, from Ml-a client of that machine must
+first carry out a mount operation. The semantics of the operation involve
+mounting a remote directory over a directory of a local file system. Once the
+mount operation is completed, the mounted directory looks like an integral
+subtree of the local file system, replacing the subtree descending from the
+local directory. The local directory becomes the name of the root of the newly
+mounted directory. Specification of the remote directory as an argument for the
+mount operation is not done transparently; the location (or host name) of the
+remote directory has to be provided. However, fron  l then on, users on machine
+Ml can access files in the remote directory in a totally transparent manner.
+To illustrate file mounting, consider the file system depicted in Figure 11.13,
+where the triangles represent subtrees of directories that are of interest. The
+figure shows three independent file systems of machines named U, 51, and
+52. At this point, on each machine, only the local files can be accessed. Figure
+11.14(a) shows the effects of mounting 81: /usr/shared over U: /usr/local.
+This figure depicts the view users on U have of their file system. Notice that
+after the mount is complete, they can access any file within the dirl directory
+11.8 491
+U: S1: S2:
+usr usr usr
+Figure 11.13 Three independent file systems.
+using the prefix /usr /local/ dir1. The original directory /usr /local on that
+machine is no longer visible.
+Subject to access-rights accreditation, any file system, or any directory
+within a file system, can be mounted remotely on top of any local directory.
+Diskless workstations can even mount their own roots from servers. Cascading
+mounts are also permitted in some NFS implementations. That is, a file system
+can be mounted over another file system that is remotely mounted, not local. A
+machine is affected by only those mounts that it has itself invoked. Mounting a
+remote file system does not give the client access to other file systems that were,
+by chance, mounted over the former file system. Thus, the mount mechanism
+does not exhibit a transitivity property.
+In Figure 11.14(b), we illustrate cascading mounts. The figure shows the
+result of mounting S2: /usr /dir2 over U: /usr/local/dir1, which is already
+remotely mounted from 51. Users can access files within dir2 on U using the
+U: U:
+(a) (b)
+Figure 11.14 Mounting in NFS. (a) Mounts. (b) Cascading mounts.
+492 Chapter 11
+prefix /usr/local/dir1. If a shared file system is mounted over a user's home
+directories on all machines in a network, the user can log into any workstation
+and get his honce environment. This property permits
+One of the design goals of NFS was to operate in a heterogeneous environment
+of different machines, operating systems, and network architectures.
+The NFS specification is independent of these media and thus encourages
+other implementations. This independence is achieved through the use of
+RPC primitives built on top of an external data representation (XDR) protocol
+used between two implementation-independent interfaces. Hence, if the
+system consists of heterogeneous machines and file systems that are properly
+interfaced to NFS, file systems of different types can be mounted both locally
+and remotely.
+The NFS specification distinguishes between the services provided by a
+mount mechanism and the actual remote-file-access services. Accordingly, two
+separate protocols are specified for these services: a mount protocol and a
+protocol for remote file accesses, the The protocols are specified as
+sets of RPCs. These RPCs are the building blocks used to implement transparent
+remote file access.
+11.8.2 The Mount Protocol
+The establishes the initial logical connection between a server
+and a client. In Sun's implementation, each machine has a server process,
+outside the kernel, performing the protocol functions.
+A mount operation includes the name of the remote directory to be
+mounted and the name of the server machine storing it. The mount request
+is mapped to the corresponding RPC and is forwarded to the mount server
+running on the specific server machine. The server maintains an
+that specifies local file systems that it exports for mounting, along with names
+of machines that are permitted to mount them. (In Solaris, this list is the
+I etc/dfs/dfstab, which can be edited only by a superuser.) The specification
+can also include access rights, such as read only. To simplify the maintenance
+of export lists and mount tables, a distributed naming scheme can be used to
+hold this information and make it available to appropriate clients.
+Recall that any directory within an exported file system can be mounted
+remotely by an accredited machine. A component unit is such a directory. When
+the server receives a mount request that conforms to its export list, it returns to
+the client a file handle that serves as the key for further accesses to files within
+the mounted file system. The file handle contains all the information that the
+server needs to distinguish an individual file it stores. In UNIX terms, the file
+handle consists of a file-system identifier and an inode number to identify the
+exact mounted directory within the exported file system.
+The server also maintains a list of the client machines and the corresponding
+currently mounted directories. This list is used mainly for administrative
+purposes-for instance, for notifying all clients that the server is going down.
+Only through addition and deletion of entries in this list can the server state
+be affected by the mount protocol.
+Usually, a system has a static mounting preconfiguration that is established
+at boot time (I etc/vfstab in Solaris); however, this layout can be modified. In
+11.8 493
+addition to the actual mount procedure, the mount protocol includes several
+other procedures, such as unmount and return export list.
+11.8.3 The NFS Protocol
+The NFS protocol provides a set of RPCs for remote file operations. The
+procedures support the following operations:
+Searching for a file within a directory
+Reading a set of directory entries
+Manipulating links and directories
+Accessing file attributes
+Reading and writing files
+These procedures can be invoked only after a file handle for the remotely
+mounted directory has been established.
+The omission of open() and close() operations is intentional. A prominent
+feature of NFS servers is that they are stateless. Servers do not maintain
+information about their clients from one access to another. No parallels to
+UNIX's open-files table or file structures exist on the server side. Consequently,
+each request has to provide a full set of arguments, including a unique file
+identifier and an absolute offset inside the file for the appropriate operations.
+The resulting design is robust; no special measures need be taken to recover
+a server after a crash. File operations must be idempotent for this purpose.
+Every NFS request has a sequence number, allowing the server to determine if
+a request is duplicated or if any are missing.
+Maintaining the list of clients that we mentioned seems to violate the
+statelessness of the server. Howeve1~ this list is not essential for the correct
+operation of the client or the server, and hence it does not need to be restored
+after a server crash. Consequently, it might include inconsistent data and is
+treated as only a hint.
+A further implication of the stateless-server philosophy and a result of the
+synchrony of an RPC is that modified data (including indirection and status
+blocks) must be committed to the server's disk before results are returned to
+the client. That is, a client can cache write blocks, but when it flushes them
+to the server, it assumes that they have reached the server's disks. The server
+must write all NFS data synchronously. Thus, a server crash and recovery
+will be invisible to a client; all blocks that the server is managing for the
+client will be intact. The consequent performance penalty can be large, because
+the advantages of caching are lost. Performance can be increased using
+storage with its own nonvolatile cache (usually battery-backed-up memory).
+The disk controller ackiwwledges the disk write when the write is stored in
+the nonvolatile cache. In essence, the host sees a very fast synchronous write.
+These blocks remain intact even after system crash and are written from this
+stable storage to disk periodically.
+A single NFS write procedure call is guaranteed to be atomic and is not
+intermixed with other write calls to the same file. The NFS protocol, however,
+does not provide concurrency-control mechanisms. A write () system call may
+494 Chapter 11
+client server
+Figure 11.15 Schematic view of the NFS architecture.
+be broken down into several RPC writes, because each NFS write or read call
+can contain up to 8 KB of data and UDP packets are limited to 1,500 bytes. As a
+result, two users writing to the same remote file may get their data intermixed.
+The claim is that, because lock management is inherently stateful, a service
+outside the NFS should provide locking (and Solaris does). Users are advised
+to coordinate access to shared files using mechanisms outside the scope of NFS.
+NFS is integrated into the operating system via a VFS. As an illustration
+of the architecture, let's trace how an operation on an already open remote
+file is handled (follow the example in Figure 11.15). The client initiates the
+operation with a regular system call. The operating-system layer maps this
+call to a VFS operation on the appropriate vnode. The VFS layer identifies the
+file as a remote one and invokes the appropriate NFS procedure. An RPC call
+is made to the NFS service layer at the remote server. This call is reinjected to
+the VFS layer on the remote system, which finds that it is local and invokes
+the appropriate file-system operation. This path is retraced to return the result.
+An advantage of this architecture is that the client and the server are identical;
+thus, a machine may be a client, or a server, or both. The actual service on each
+server is performed by kernel threads.
+11.8.4 Path-Name Translation
+in NFS involves the parsing of a path name such as
+/usr/local/dir1/file. txt into separate directory entries, or components:
+(1) usr, (2) local, and (3) dir1. Path-name translation is done by breaking the
+path into component names and perform.ing a separate NFS lookup call for
+every pair of component name and directory vnode. Once a n10unt point is
+crossed, every component lookup causes a separate RPC to the server. This
+11.8 495
+expensive path-name-traversal scheme is needed, since the layout of each
+client's logical name space is unique, dictated by the mounts the client has
+performed. It would be ITluch more efficient to hand a server a path name
+and receive a target vnode once a mount point is encountered. At any point,
+however, there might be another mount point for the particular client of whicb
+the stateless server is unaware.
+So that lookup is fast, a directory-name-lookup cache on the client side
+holds the vnodes for remote directory names. This cache speeds up references
+to files with the same initial path name. The directory cache is discarded when
+attributes returned from the server do not match the attributes of the cached
+vnode.
+Recall that mounting a remote file system on top of another already
+mounted remote file system (a cascading mount) is allowed in some implementations
+of NFS. However, a server cannot act as an intermediary between a
+client and another server. Instead, a client must establish a direct client-server
+com1ection with the second server by directly mounting the desired directory.
+When a client has a cascading mount, more than one server can be involved in a
+path-name traversaL However, each component lookup is performed between
+the original client and some server. Therefore, when a client does a lookup on
+a directory on which the server has mounted a file system, the client sees the
+underlying directory instead of the mounted directory.
+11.8.5 Remote Operations
+With the exception of opening and closing files, there is almost a one-to-one
+correspondence between the regular UNIX system calls for file operations and
+the NFS protocol RPCs. Thus, a remote file operation can be translated directly
+to the corresponding RPC. Conceptually, NFS adheres to the remote-service
+paradigm; but in practice, buffering and caching techniques are employed for
+the sake of performance. No direct correspondence exists between a remote
+operation and an RPC. Instead, file blocks and file attributes are fetched by the
+RPCs and are cached locally. Future remote operations use the cached data,
+subject to consistency constraints.
+There are two caches: the file-attribute (inode-infonnation) cache and the
+file-blocks cache. When a file is opened, the kernel checks with the remote
+server to determine whether to fetch or revalidate the cached attributes. The
+cached file blocks are used only if the corresponding cached attributes are up
+to date. The attribute cache is updated whenever new attributes arrive from
+the server. Cached attributes are, by default, discarded after 60 seconds. Both
+read-ahead and delayed-write techniques are used between the server and the
+client. Clients do not free delayed-write blocks until the server confirms that
+the data have been written to disk Delayed-write is retained even when a file
+is opened concurrently, in conflicting modes. Hence, UNIX semantics (Section
+10.5.3.1) are not preserved.
+Tuning the system for performance makes it difficult to characterize the
+consistency semantics of NFS. New files created on a machine may not be
+visible elsewhere for 30 seconds. Furthermore, writes to a file at one site may
+or may not be visible at other sites that have this file open for reading. New
+opens of a file observe only the changes that have already been flushed to the
+server. Thus, NFS provides neither strict emulation of UNIX semantics nor the
+496 Chapter 11
+11.9
+session sen  antics of Andrew (Section 10.5.3.2).ln spite of these drawbacks, the
+utility and good performance of the mechanism make it the most widely used
+multi-vendor-distributed system in operation.
+Disk I/O has a huge impact on system performance. As a result, file-system
+design and implementation command quite a lot of attention from system
+designers. Some file systems are general purpose, in that they can provide
+reasonable performance and functionality for a wide variety of file sizes, file
+types, and I/0 loads. Others are optimized for specific tasks in an attempt to
+provide better performance in those areas than general-purpose file systems.
+The WAFL file system from Network Appliance is an example of this sort of
+optimization. WAFL, the write-anywhere file layout, is a powerful, elegant file
+system optimized for random writes.
+WAFL is used exclusively on network file servers produced by Network
+Appliance and so is meant for use as a distributed file system. It can provide
+files to clients via the NFS, CIFS, ftp, and http protocols, although it was
+designed just for NFS and CIFS. When many clients use these protocols to talk
+to a file server, the server may see a very large demand for random reads and
+an even larger demand for random writes. The NFS and CIFS protocols cache
+data from read operations, so writes are of the greatest concern to file-server
+creators.
+WAFL is used on file servers that include an NVRAM cache for writes.
+The WAFL designers took advantage of running on a specific architecture to
+optimize the file system for random I/0, with a stable-storage cache in front.
+Ease of use is one of the guiding principles of WAFL, because it is designed
+to be used in an appliance. Its creators also designed it to include a new
+snapshot functionality that creates multiple read-only copies of the file system
+at different points in time, as we shall see.
+The file system is similar to the Berkeley Fast File System, with many
+modifications. It is block-based and uses inodes to describe files. Each inode
+contains 16 pointers to blocks (or indirect blocks) belonging to the file described
+by the inode. Each file system has a root inode. All of the metadata lives in
+files: all inodes are in one file, the free-block map in another, and the free-inode
+root inode
+1  free blotk map I
+Figure 11.16 The WAFL file layout
+11.9 497
+map in a third, as shown in Figure 11.16. Because these are standard files, the
+data blocks are not limited in location and can be placed anywhere. If a file
+system is expanded by addition of disks, the lengths of the metadata files are
+automatically expanded by the file systen  .
+Thus, a WAFL file system is a tree of blocks with the root inode as its
+base. To take a snapshot, WAFL creates a copy of the root inode. Any file or
+metadata updates after that go to new blocks rather than overwriting their
+existing blocks. The new root inode points to metadata and data changed as a
+result of these writes. Meanwhile, the snapshot (the old root inode) still points
+to the old blocks, which have not been updated. It therefore provides access to
+the file system just as it was at the instant the snapshot was made-and takes
+very little disk space to do so! In essence, the extra disk space occupied by a
+snapshot consists of just the blocks that have been modified since the snapshot
+was taken.
+An important change from more standard file systems is that the free-block
+map has more than one bit per block. It is a bitmap with a bit set for each
+snapshot that is using the block. When all snapshots that have been using the
+block are deleted, the bit map for that block is all zeros, and the block is free to
+be reused. Used blocks are never overwritten, so writes are very fast, because
+a write can occur at the free block nearest the current head location. There are
+many other performance optimizations in WAFL as well.
+Many snapshots can exist simultaneously, so one can be taken each hour
+of the day and each day of the month. A user with access to these snapshots
+can access files as they were at any of the times the snapshots were taken.
+The snapshot facility is also useful for backups, testing, versioning, and so on.
+WAFL's snapshot facility is very efficient in that it does not even require that
+copy-on-write copies of each data block be taken before the block is modified.
+Other file systems provide snapshots, but frequently with less efficiency. WAFL
+snapshots are depicted in Figure 11.17.
+Newer versions of WAFL actually allow read-write snapshots, known as
+,.HJ'  '-  '    Clones are also efficient, using the same techniques as shapshots. In
+this case, a read-only snapshot captures the state of the file system, and a clone
+refers back to that read-only snapshot. Any writes to the clone are stored in
+new blocks, and the clone's pointers are updated to refer to the new blocks.
+The original snapshot is unmodified, still giving a view into the file system as
+it was before the clone was updated. Clones can also be promoted to replace
+the original file system; this involves throwing out all of the old pointers and
+any associated old blocks. Clones are useful for testing and upgrades, as the
+original version is left untouched and the clone deleted when the test is done
+or if the upgrade fails.
+Another feature that naturally falls from the WAFL file system implementation
+is the duplication and synchronization of a set of data over a
+network to another system. First, a snapshot of a WAFL file system is duplicated
+to another system. When another snapshot is taken on the source system, it
+is relatively easy to update the remote system just by sending over all blocks
+contained in the new snapshot. These blocks are the ones that have changed
+between the times the two snapshots were taken. The remote system adds these
+blocks to the file system and updates its pointers, and the new system then is a
+duplicate of the source system as of the time of the second snapshot. Repeating
+this process maintains the remote system as a nearly up-to-date copy of the first
+498 Chapter 11
+11.10
+(a) Before a snapshot.
+(b) After a snapshot, before any blocks change.
+(c) After block D has changed to o .
+Figure 11.17 Snapshots in WAFL.
+system. Such replication is used for disaster recovery. Should the first system
+be destroyed, most of its data are available for use on the remote system.
+Finally, we should note that Sun's ZFS file system supports similarly
+efficient snapshots, clones, and replication.
+The file system resides permanently on secondary storage, which is designed to
+hold a large amount of data permanently. The most common secondary-storage
+medium is the disk.
+Physical disks may be segmented into partitions to control media use
+and to allow multiple, possibly varying, file systems on a single spindle.
+These file systems are mounted onto a logical file system architecture to make
+then   available for use. File systems are often implemented in a layered or
+modular structure. The lower levels deal with the physical properties of storage
+devices. Upper levels deal with symbolic file names and logical properties of
+files. Intermediate levels map the logical file concepts into physical device
+properties.
+Any file-system type can have different structures and algorithms. A VFS
+layer allows the upper layers to deal with each file-system type uniformly. Even
+499
+remote file systems can be integrated into the system's directory structure and
+acted on by standard system calls via the VFS interface.
+The various files can be allocated space on the disk in three ways:
+through contiguous, linked, or indexed allocation. Contiguous allocation can
+suffer from external fragmentation. Direct access is very inefficient with
+linked allocation. Indexed allocation may require substantial overhead for its
+index block. These algorithms can be optimized in many ways. Contiguous
+space can be enlarged through extents to increase flexibility and to decrease
+external fragmentation. Indexed allocation can be done in clusters of multiple
+blocks to increase throughput and to reduce the number of index entries
+needed. Indexing in large clusters is similar to contiguous allocation with
+extents.
+Free-space allocation methods also influence the efficiency of disk-space
+use, the performance of the file system, and the reliability of secondary storage.
+The methods used include bit vectors and linked lists. Optimizations include
+grouping, countilcg, and the FAT, which places the linked list in one contiguous
+area.
+Directory-management routines must consider efficiency, performance,
+and reliability. A hash table is a commonly used method, as it is fast and
+efficient. Unfortunately, damage to the table or a system crash can result
+in inconsistency between the directory information and the disk's contents.
+A consistency checker can be used to repair the damage. Operating-system
+backup tools allow disk data to be copied to tape, enabling the user to recover
+from data or even disk loss due to hardware failure, operating system bug, or
+user error.
+Network file systems, such as NFS, use client-server methodology to
+allow users to access files and directories from remote machines as if they
+were on local file systems. System calls on the client are translated into
+network protocols and retranslated into file-system operations on the server.
+Networking and multiple-client access create challenges in the areas of data
+consistency and performance.
+Due to the fundamental role that file systems play in system operation,
+their performance and reliability are crucial. Techniques such as log structures
+and cachirtg help improve performance, while log structures and RAID improve
+reliability. The WAFL file system is an example of optimization of performance
+to match a specific I/O load.
+11.1 In what situations would using memory as a RAM disk be more useful
+than using it as a disk cache 
+11.2 Consider a file systenc that uses a modifed contiguous-allocation
+scheme with support for extents. A file is a collection of extents,
+with each extent corresponding to a contiguous set of blocks. A key
+issue in such systems is the degree of variability in the size of the
+500 Chapter 11
+extents. What are the advantages and disadvantages of the following
+schemes 
+a. All extents are of the same size, and the size is predetermined.
+b. Extents can be of any size and are allocated dynamically.
+c. Extents can be of a few fixed sizes, and these sizes are predetermined.
+11.3 Some file systems allow disk storage to be allocated at different levels
+of granularity. For instance, a file system could allocate 4 KB of disk
+space as a single 4-KB block or as eight 512-byte blocks. How could
+we take advantage of this flexibility to improve performance  What
+modifications would have to be made to the free-space management
+scheme in order to support this feature 
+11.4 What are the advantages of the variant of linked allocation that uses a
+FAT to chain together the blocks of a file 
+11.5 Consider a file currently consisting of 100 blocks. Assume that the filecontrol
+block (and the index block, in the case of indexed allocation)
+is already in memory. Calculate how many disk I/0 operations are
+required for contiguous, linked, and indexed (single-level) allocation
+strategies, if, for one block, the following conditions hold. In the
+contiguous-allocation case, assume that there is no room to grow at
+the beginning but there is room to grow at the end. Also assume that
+the block information to be added is stored in memory.
+a. The block is added at the beginning.
+b. The block is added in the middle.
+c. The block is added at the end.
+d. The block is removed from the beginning.
+e. The block is removed from the middle.
+f. The block is removed from the end.
+11.6 Consider a file system that uses inodes to represent files. Disk blocks
+are 8 KB in size, and a pointer to a disk block requires 4 bytes. This file
+system has 12 direct disk blocks, as well as single, double, and triple
+indirect disk blocks. What is the maximum size of a file that can be
+stored in this file system 
+11.7 Assume that in a particular augmentation of a reinote-file-access
+protocol, each client maintains a name cache that caches translations
+from file names to corresponding file handles. What issues should we
+take into account in implementing the name cache 
+11.8 Consider the following backup scheme:
+Day 1. Copy to a backup medium all files from the disk.
+Day 2. Copy to another m.edium all files changed since day 1.
+Day 3. Copy to another medium all files changed since day 1.
+501
+This differs from the schedule given in Section 11.7.4 by having all
+subsequent backups copy all files modified since the first full backup.
+What are the benefits of this system over the one in Section 11.7.4 
+What are the drawbacks  Are restore operations made easier or more
+difficult  Explain your answer.
+11.9 Why must the bit map for file allocation be kept on mass storage, rather
+than in main memory 
+11.10 Consider a file system on a disk that has both logical and physical
+block sizes of 512 bytes. Assume that the information about each
+file is already in memory. For each of the three allocation strategies
+(contiguous, linked, and indexed), answer these questions:
+a. How is the logical-to-physical address mapping accomplished
+in this system  (For the indexed allocation, assume that a file is
+always less than 512 blocks long.)
+b. If we are currently at logical block 10 (the last block accessed was
+block 10) and want to access logical block 4, how many physical
+blocks must be read from the disk 
+11.11 Why is it advantageous to the user for an operating system to dynamically
+allocate its internal tables  What are the penalties to the operating
+system for doing so 
+11.12 Explain why logging metadata updates ensures recovery of a file
+system after a file-system crash.
+11.13 Fragmentation on a storage device can be eliminated by recompaction
+of the information. Typical disk devices do not have relocation or base
+registers (such as those used when memory is to be compacted), so
+how can we relocate files  Give three reasons why recompacting and
+relocation of files are often avoided.
+11.14 Consider a system where free space is kept in a free-space list.
+a. Suppose that the pointer to the free-space list is lost. Can the
+system reconstruct the free-space list  Explain your answer.
+b. Consider a file system similar to the one used by UNIX with
+indexed allocation. How many disk I/0 operations might be
+502 Chapter 11
+required to read the contents of a small local file at /a/b/c  Assume
+that none of the disk blocks is currently being cached.
+c. Suggest a scheme to ensure that the pointer is never lost as a result
+of memory failure.
+11.15 One problem with contiguous allocation is that the user must preallocate
+enough space for each file. If the file grows to be larger than the
+space allocated for it, special actions must be taken. One solution to this
+problem is to define a file structure consisting of an initial contiguous
+area (of a specified size). If this area is filled, the operating system
+automatically defines an overflow area that is linked to the initial
+contiguous area. If the overflow area is filled, another overflow area
+is allocated. Compare this implementation of a file with the standard
+contiguous and linked implementations.
+11.16 Discuss how performance optimizations for file systems might result
+in difficulties in maintaining the consistency of the systems in the event
+of com.puter crashes.
+The MS-DOS FAT system is explained in Norton and Wilton [1988], and the OS/2
+description can be found in Iacobucci [1988]. These operating systems use
+the Intel 8086 CPUs(Intel [1985b ], Intel [1985a], Intel [1986], and Intel [1990]).
+IBM allocation methods are described in Deitel [1990]. The internals of the
+BSD UNL'   system are covered in full in McKusick et al. [1996]. McVoy and
+Kleiman [1991] discusses optimizations of these methods made in Solaris. The
+Coogle file system is described in Ghemawat et al. [2003]. FUSE can be found
+at http:/ /fuse.sourceforge.net/.
+Disk file allocation based on the buddy system is covered in Koch
+[1987]. A file-organization scheme that guarantees retrieval in one access
+is described by Larson and Kajla [1984]. Log-structured file organizations
+for enhancing both performance and consistency are discussed in
+Rosenblum and Ousterhout [1991], Seltzer et al. [1993], and Seltzer et aL
+[1995]. Algorithms such as balanced trees (and much more) are covered
+by Knuth [1998] and Carmen et aL [2001]. The ZFS source code for space
+maps can be found at http://src.opensolaris.org/source/xref/onnv/onnvgate/
+usr I src/uts/ common/ fs/ zfs/ space_map.c.
+Disk caching is discussed by McKeon [1985] and Smith [1985]. Caching in
+the experimental Sprite operating system is described in Nelson et aL [1988].
+General discussions concerning mass-storage technology are offered by Chi
+[1982] and Hoagland [1985]. Folk and Zoellick [1987] covers the gamut of file
+structures. Silvers [2000] discusses implementing the page cache in the NetBSD
+operating system.
+The network file system (NFS) is discussed in Sandberg et aL [1985],
+Sandberg [1987], Sun [1990], and Callaghan [2000]. NFS Version 4 is a standard
+described at http:/ /www.ietf.org/rfc/rfc3530.txt. The characteristics of
+503
+workloads in distributed file systems are examined in Baker et al. [1991].
+Ousterhout [1991] discusses the role of distributed state in networked file
+systems. Log-structured designs for networked file systems are proposed in
+Hartman and Ousterhout [1995] and Thekkath et al. [1997]. NFS and the UNIX
+file system (UFS) are described in Vahalia [1996] and Mauro and McDougall
+[2007]. The Windows NT file system, NTFS, is explained in Solomon [1998]. The
+Ext2 file system used in Linux is described in Bovet and Cesati [2002] and
+the WAFL file system in Hitz et al. [1995]. ZFS documentation can be found at
+http:/ /www.opensolaris.org/ os/ community /ZFS/ docs.
+
+12.1
+The file system can be viewed logically as consisting of three parts. In Chapter
+10, we examined the user and programmer interface to the file system. In
+Chapter 11, we described the internal data structures and algorithms used
+by the operating system to implement this interface. In this chapter, we
+discuss the lowest level of the file system: the secondary and tertiary storage
+structures. We first describe the physical structure of magenetic disks and
+magnetic tapes. We then describe disk-scheduling algorithms, which schedule
+the order of disk I/ Os to improve performance. Next, we discuss disk formatting
+and management of boot blocks, damaged blocks, and swap space. We then
+examine secondary storage structure, covering disk reliability and stablestorage
+implementation. We conclude with a brief description of tertiary
+storage devices and the problems that arise when an operating system uses
+tertiary storage.
+To describe the physical structure of secondary and tertiary storage
+devices and its effects on the uses of the devices.
+To explain the performance characteristics of mass-storage devices.
+To discuss operating-system services provided for mass storage, including
+RAID and HSM.
+In this section, we present a general overview of the physical structure of
+secondary and tertiary storage devices.
+12.1.1 Magnetic Disks
+provide the bulk of secondary storage for modern computer
+systems. Conceptually, disks are relatively simple (Figure 12.1). Each disk
+platter has a flat circular shape, like a CD. Common platter diameters range
+505
+506 Chapter 12
+arm assembly
+rotation
+Figure 12.1 Moving-head disk mechanism.
+from 1.8 to 5.25 inches. The two surfaces of a platter are covered with a magnetic
+material. We store information by recording it magnetically on the platters.
+A read -write head   flies   just above each surface of every platter. The
+heads are attached to a that moves all the heads as a unit. The surface
+of a platter is logically divided into circular which are subdivided into
+The set of tracks that are at one arm position makes up a
+There may be thousands of concentric cylinders in a disk drive, and each track
+may contain hundreds of sectors. The storage capacity of common disk drives
+is measured iil gigabytes.
+When the disk is in use, a drive motor spins it at high speed. Most drives
+rotate 60 to 200 times per second. Disk speed has two parts. The
+is the rate at which data flow between the drive and the computer. The
+sometimes called the consists of the
+time necessary to move the disk arm to the desired cylinder, called the
+and the time necessary for the desired sector to rotate to the disk head,
+called the Typical disks can transfer several megabytes of
+data per second, and they seek times and rotational latencies of several
+milliseconds.
+Because the disk head flies on an extremely thin cushion of air (measured
+in microns), there is a danger that the head will make contact with the disk
+surface. Although the disk platters are coated with a thin protective laye1~ the
+head will sometimes damage the magnetic surface. This accident is called a
+A head crash normally cannot be repaired; the entire disk must be
+replaced.
+A disk can be allowing different disks to be mounted as needed.
+Removable magnetic disks generally consist of one platter, held in a plastic case
+to prevent damage while not in the disk drive. are inexpensive
+removable magnetic disks that have a soft plastic case containing a flexible
+platter. The head of a floppy-disk drive generally sits directly on the disk
+12.1 507
+DISK TRANSFER RATES
+As with many aspects of computingf published performance numbers for
+disks are not the same as real-world performance numbers. Stated transfer
+rates are always lower than for example. The transfer
+rate may be the rate at which bits can be read from the magnetic media by
+the disk head, but that is different from the rate at which blocks are delivered
+to the operating system.
+surface, so the drive is designed to rotate more slowly than a hard-disk drive
+to reduce the wear on the disk surface. The storage capacity of a floppy disk
+is typically only 1.44MB or so. Removable disks are available that work much
+like normal hard disks and have capacities measured in gigabytes.
+A disk drive is attached to a computer by a set of wires called an
+Several kinds of buses are available, including
+buses. The data transfers on a bus are carried out by special
+electronic processors called The is the controller at
+the computer end of the bus. A is built into each disk drive. To
+perform a disk I/0 operation, the computer places a command into the host
+controller, typically using memory-mapped I/0 portsf as described in Section
+9.7.3. The host controller then sends the command via messages to the disk
+controller, and the disk controller operates the disk-drive hardware to carry
+out the command. Disk controllers usually have a built-in cache. Data transfer
+at the disk drive happens between the cache and the disk surface, and data
+transfer to the host, at fast electronic speeds, occurs between the cache and the
+host controller.
+12.1.2 Magnetic Tapes
+was used as an early secondary-storage medium. Although it
+is relatively permanent and can hold large quantities of dataf its access time
+is slow compared with that of main memory and magnetic disk. In addition,
+random access to magnetic tape is about a thousand times slower than random
+access to magnetic disk, so tapes are not very useful for secondary storage.
+Tapes are used mainly for backup, for storage of infrequently used information,
+and as a medium for transferring information from one system to another.
+A tape is kept in a spool and is wound or rewound past a read-write head.
+Moving to the correct spot on a tape can take minutes, but once positioned,
+tape drives can write data at speeds comparable to disk drives. Tape capacities
+vary greatly, depending on the particular kind of tape drive. Typically, they
+store from 20GB to 200GB. Some have built-in compression that can more than
+double the effective storage. Tapes and their drivers are usually categorized
+by width, includil1.g 4, 8f and 19 millimeters and 1/4 and 1/2 inch. Some are
+named according to technology, such as LT0-2 and SDLT. Tape storage is further
+described in Section 12.9.
+508 Chapter 12
+12.2
+FIRE WIRE
+refers to an interface designed for connecting peripheral devices
+such as hard drives, DVD drives, and digital video cameras to a computer
+system. Fire Wire was first developed by Apple Computer and became
+the IEEE 1394 standard in 1995. The originaLFireWire standard provided
+bandwidth up to 400 megabits per second. Recently, a new standardFireWire
+2-has emerged and is identified by the IEEE 1394b standard.
+FireWire 2 provides double the data rate of the original FireWire-800
+megabits per second.
+Modern disk drives are addressed as large one-dimensional arrays of
+where the logical block is the smallest unit of transfer. The size of
+a logical block is usually 512 bytes, although some disks can be
+to have a different logical block size, such as 1,024 bytes. This option
+is described in Section 12.5.1. The one-dimensional array of logical blocks is
+mapped onto the sectors of the disk sequentially. Sector 0 is the first sector
+of the first track on the outermost cylinder. The mapping proceeds in order
+through that track, then through the rest of the tracks in that cylinder, and then
+through the rest of the cylinders from outermost to innermost.
+By using this mapping, we can -at least in theory-convert a logical block
+number into an old-style disk address that consists of a cylinder number, a track
+number within that cylinder, and a sector number within that track. In practice,
+it is difficult to perform this translation, for two reasons. First, most disks have
+some defective sectors, but the mapping hides this by substituting spare sectors
+from elsewhere on the disk. Second, the number of sectors per track is not a
+constant on smne drives.
+Let's look more closely at the second reason. On media that use
+the density of bits per track is uniform. The farther a track
+is from the center of the disk, the greater its length, so the more sectors it can
+hold. As we move from outer zones to inner zones, the number of sectors per
+track decreases. Tracks in the outermost zone typically hold 40 percent more
+sectors than do tracks in the innermost zone. The drive increases its rotation
+speed as the head moves from the outer to the inner tracks to keep the same rate
+of data moving under the head. This method is used in CD-ROM and DVD-ROM
+drives. Alternatively, the disk rotation speed can stay constant; in this case, the
+density of bits decreases from inner tracks to outer tracks to keep the data rate
+constant. This method is used in hard disks and is known as
+The number of sectors per track has been increasing as disk technology
+improves, and the outer zone of a disk usually has several hundred sectors per
+track. Similarly, the number of cylinders per disk has been increasing; large
+disks have tens of thousands of cylinders.
+12.3
+12.3 509
+Computers access disk storage in two ways. One way is via I/O ports (or
+this is common on small systems. The other way is via
+a remote host in a distributed file system; this is referred to as
+12.3.1 Host-Attached Storage
+Host-attached storage is storage accessed through local I/0 ports. These ports
+use several technologies. The typical desktop PC uses an I/0 bus architecture
+called IDE or ATA. This architecture supports a maximum of two drives per I/0
+bus. A newer, similar protocol that has simplified cabling is SATA. High-end
+workstations and servers generally use more sophisticated I/0 architectures,
+such as SCSI and fiber charmel (FC).
+SCSI is a bus architecture. Its physical medium is usually a ribbon cable with
+a large number of conductors (typically 50 or 68). The SCSI protocol supports a
+maximum of 16 devices per bus. Generally, the devices include one controller
+card in the host (the and up to 15 storage devices (the
+to.rgr:::ts). A SCSI disk is a common SCSI target, but the protocol provides the
+ability to address up to 8 in each SCSI target. A typical use of
+logical unit addressing is to commands to components of a RAID array
+or components of a removable media library (such as a CD jukebox sendil  g
+commands to the media-changer mechanism or to one of the drives).
+FC is a high-speed serial architecture that can operate over optical fiber or
+over a four-conductor copper cable. It has two variants. One is a large switched
+fabric having a 24-bit address space. This variant is expected to dominate
+in the future and is the basis of (SJld',;s), discussed in
+Section 12.3.3. Because of the large space and the switched nature of
+the communication, multiple hosts and storage devices can attach to the fabric,
+allowing great flexibility in I/0 communication. The other FC variant is an
+that can address 126 devices (drives and controllers).
+A wide variety of storage devices are suitable for use as host-attached
+storage. Among these are hard disk drives, RAID arrays, and CD, DVD, and
+tape drives. The I/0 commands that initiate data transfers to a host-attached
+storage device are reads and writes of logical data blocks directed to specifically
+identified storage units (such as bus ID, SCSI ID, and target logical unit).
+12.3.2 Network-Attached Storage
+A network-attached storage (NAS) device is a special-purpose storage system
+that is accessed remotely over a data network (Figure 12.2). Clients access
+network-attached storage via a remote-procedure-call interface such as NFS
+for UNIX systems or CIFS for Windows machines. The remote procedure calls
+(RPCs) are carried via TCP or UDP over an IP network-usually the same
+local-area network (LAN) that carries all data traffic to the clients. The networkattached
+storage unit is usually implemented as a RAID array with software that
+implements the RPC interface. It is easiest to thil  k of NAS as simply another
+storage-access protocol. For example, rather than using a SCSI device driver
+and SCSI protocols to access storage, a system using NAS would use RPC over
+TCP /IP.
+510 Chapter 12
+12.4
+LAN/WAN
+Figure 12.2 Network-attached storage.
+Network-attached storage provides a convenient way for all the computers
+on a LAN to share a pool of storage with the same ease of naming and access
+enjoyed with local host-attached storage. However, it tends to be less efficient
+and have lower performance than some direct-attached storage options.
+is the latest network-attached storage protocol. In essence, it uses the
+IP network protocol to carry the SCSI protocol. Thus, networks-rather than
+SCSI cables-can be used as the interconnects between hosts and their storage.
+As a result, hosts can treat their storage as if it were directly attached, even if
+the storage is distant from the host.
+12.3.3 Storage-Area Network
+One drawback of network-attached storage systems is that the storage I/O
+operations consume bandwidth on the data network, thereby increasing the
+latency of network communication. This problem can be particularly acute
+in large client-server installations-the communication between servers and
+clients competes for bandwidth with the communication among servers and
+storage devices.
+A storage-area network (SAN) is a private network (using storage protocols
+rather than networking protocols) connecting servers and storage units, as
+shown in Figure 12.3. The power of a SAN lies in its flexibility. Multiple hosts
+and multiple storage arrays can attach to the same SAN, and storage can
+be dynamically allocated to hosts. A SAN switch allows or prohibits access
+between the hosts and the storage. As one example, if a host is running low
+on disk space, the SAN can be configured to allocate more storage to that host.
+SANs make it possible for clusters of servers to share the same storage and for
+storage arrays to include multiple direct host com1.ections. SANs typically have
+more ports, and less expensive ports, than storage arrays.
+FC is the most common SAN interconnect, although the simplicity of iSCSI is
+increasing its use. An emerging alternative is a special-purpose bus architecture
+named InfiniBand, which provides hardware and software support for highspeed
+interconnection networks for servers and storage units.
+One of the responsibilities of the operating system is to use the hardware
+efficiently. For the disk drives, meeting this responsibility entails having
+12.4 511
+Figure 12.3 Storage-area network.
+fast access time and large disk bandwidth. The access time has two major
+components (also see Section 12.1.1). The is the time for the disk arm
+to move the heads to the cylinder containing the desired sector. The
+is the additional time for the disk to rotate the desired sector to the disk
+head. The disk is the total number of bytes transferred, divided
+by the total time between the first request for service and the completion of
+the last transfer. We can improve both the access time and the bandwidth by
+managing the order in which disk I/O requests are serviced.
+Whenever a process needs I/0 to or from the disk, it issues a system call to
+the operating system. The request specifies several pieces of information:
+Whether this operation is input or output
+What the disk address for the transfer is
+What the memory address for the transfer is
+What the number of sectors to be transferred is
+If the desired disk drive and controller are available, the request can be
+serviced immediately. If the drive or controller is busy, any new requests
+for service will be placed in the queue of pending requests for that drive.
+For a multiprogramming system with many processes, the disk queue may
+often have several pending requests. Thus, when one request is completed, the
+operating system chooses which pending request to service next. How does
+the operating system make this choice  Any one of several disk-scheduling
+algorithms can be used, and we discuss them next.
+12.4.1 FCFS Scheduling
+The simplest form of disk scheduling is, of course, the first-come, first-served
+(FCFS) algorithm. This algorithm is intrinsically fair, but it generally does not
+provide the fastest service. Consider, for example, a disk queue with requests
+for I/0 to blocks on cylinders
+98, 183, 37, 122, 14, 124, 65, 67,
+512 Chapter 12
+queue= 98, 183,37,122, 14,124,65,67
+head starts at 53
+0 14 37 536567 98 122124
+Figure 12.4 FCFS disk scheduling.
+183199
+in that order. If the disk head is initially at cylinder 53, it will first move from
+53 to 98, then to 183, 37, 122, 14, 124, 65, and finally to 67, for a total head
+movement of 640 cylinders. This schedule is diagrammed in Figure 12.4.
+The wild swing from 122 to 14 and then back to 124 illustrates the problem
+with this schedule. If the requests for cylinders 37 and 14 could be serviced
+together, before or after the requests for 122 and 124, the total head movement
+could be decreased substantially, and performance could be thereby improved.
+12.4.2 SSTF Scheduling
+It seems reasonable to service all the requests close to the current head position
+before moving the head far to service other This assumption is
+the basis for the The SSTF algorithm
+selects the request with the least seek time from the current head position.
+Since seek time increases with the number of cylinders traversed by the head,
+SSTF chooses the pending request closest to the current head position.
+For our example request queue, the closest request to the initial head
+position (53) is at cylinder 65. Once we are at cylinder 65, the next closest
+request is at cylinder 67. From there, the request at cylinder 37 is closer than the
+one at 98, so 37 is served next. Continuing, we service the request at cylinder 14,
+then 98, 122, 124, and finally 183 (Figure 12.5). This scheduling method results
+in a total head movement of only 236 cylinders-little more than one-third
+of the distance needed for FCFS scheduling of this request queue. Clearly, this
+algorithm gives a substantial improvement in performance.
+SSTF scheduling is essentially a form of shortest-job-first (SJF) scheduling;
+and like SJF scheduling, it may cause starvation of some requests. Remember
+that requests may arrive at any time. Suppose that we have two requests in
+the queue, for cylinders 14 and 186, and while the request from 14 is being
+serviced, a new request near 14 arrives. This new request will be serviced
+next, making the request at 186 wait. While this request is being serviced,
+another request close to 14 could arrive. In theory, a continual stream of requests
+near one another could cause the request for cylinder 186 to wait indefinitely.
+12.4
+queue= 98, 183, 37, 122, 14, 124, 65, 67
+head starts at 53
+0 14 37 536567 98 122124
+Figure 12.5 SSTF disk scheduling.
+513
+183199
+This scenario becomes increasingly likely as the pending-request queue grows
+longer.
+Although the SSTF algorithm is a substantial improvement over the FCFS
+algorithm, it is not optimal. In the example, we can do better by moving the
+head from 53 to 37, even though the latter is not closest, and then to 14, before
+turning around to service 65, 67, 98, 122, 124, and 183. This strategy reduces
+the total head movement to 208 cylinders.
+12.4.3 SCAN Scheduling
+In the
+toward the end, servicing requests as it reaches each cylinder, until it gets
+to the other end of the disk. At the other end, the direction of head movement
+is reversed, and servicing continues. The head continuously scans back and
+forth across the disk. The SCAN algorithm is sometimes called the
+since the disk arm behaves just like an elevator in a building, first
+servicing all the requests going up and then reversing to service requests the
+other way.
+Let's return to our example to illustrate. Before applying SCAN to schedule
+the requests on cylinders 98, 183,37, 122, 14, 124, 65, and 67, we need to know
+the direction of head movement in addition to the head's current position.
+Assuming that the disk arm is moving toward 0 and that the initial head
+position is again 53, the head will next service 37 and then 14. At cylinder 0,
+the arm will reverse and will move toward the other end of the disk, servicil  lg
+the requests at 65, 67, 98, 122, 124, and 183 (Figure 12.6). If a request arrives
+in the queue just in front of the head, it will be serviced almost immediately; a
+request arriving just behind the head will have to wait until the arm moves to
+the end of the disk, reverses direction, and comes back.
+Assuming a uniform distribution of requests for cylinders, consider the
+density of requests when the head reaches one end and reverses direction. At
+this point, relatively few requests are immediately in front of the head, since
+these cylinders have recently been serviced. The heaviest density of requests
+514 Chapter 12
+queue= 98, 183,37,122, 14,124,65,67
+head starts at 53
+0 14 37 536567 98 122124
+Figure 12.6 SCAN disk scheduling.
+183199
+is at the other end of the disk These requests have also waited the longest so
+why not go there first  That is the idea of the next algorithm.
+12.4.4 C-SCAN Scheduling
+is a variant of SCAN designed to provide
+a more uniform wait time. Like SCAN, C-SCAN moves the head from one end
+of the disk to the other, servicing requests along the way. When the head
+reaches the other end, however, it immediately returns to the beginning of
+the disk without servicing any requests on the return trip (Figure 12.7). The
+C-SCAN scheduling algorithm essentially treats the cylinders as a circular list
+that wraps around from the final cylinder to the first one.
+queue= 98, 183, 37, 122, 14, 124, 65, 67
+head starts at 53
+0 1 4 37 53 65 67 98 1 22 1 24
+Figure 12.7 C-SCAN disk scheduling.
+183199
+12.4
+queue = 98, 183, 37, 122, 14, 124, 65, 67
+head starts at 53
+0 14 37 536567 98 122124
+Figure 12.8 C-LOOK disk scheduling.
+12.4.5 LOOK Scheduling
+515
+183199
+As we described themf both SCAN and C-SCAN move the disk arm across the
+full width of the disk In practicef neither algorithm is often implemented this
+way. More commonlyf the arm goes only as far as the final request in each
+direction. Then, it reverses direction immediatelyf without going all the way to
+the end of the disk Versions of SCAN and C-SCAN that follow this pattern are
+called and because they look for a request before
+continuing to move in a given direction (Figure 12.8).
+12.4.6 Selection of a Disk-Scheduling Algorithm
+Given so many disk-scheduling algorithmsf how do we choose the best one 
+SSTF is common and has a natural appeal because it increases performance over
+FCFS. SCAN and C-SCAN perform better for systems that place a heavy load on
+the diskf because they are less likely to cause a starvation problem. For any
+particular list of requestsf we can define an optimal order of retrievat but the
+computation needed to find an optimal schedule may not justify the savings
+over SSTF or SCAN. With any scheduling algoritlunf howeverf performance
+depends heavily on the number and types of requests. For instance, suppose
+that the queue usually has just one outstanding request. Thenf all scheduling
+algorithms behave the samef because they have only one choice of where to
+move the disk head: they all behave like FCFS scheduling.
+Requests for disk service can be greatly influenced by the file-allocation
+method. A program reading a contiguously allocated file will generate several
+requests that are close together on the disk, resulting in limited head movement.
+A linked or indexed fik in contrastf may include blocks that are widely
+scattered on the diskf resulting in greater head movement.
+The location of directories and index blocks is also important. Since every
+file must be opened to be usedf and opening a file requires searching the
+directory structuref the directories will be accessed frequently. Suppose that a
+directory entry is on the first cylinder and a filef s data are on the final cylinder. In
+this casef the disk head has to move the entire width of the disk If the directory
+516 Chapter 12
+12.5
+entry were on the middle cylinder, the head would have to move only one-half
+the width. Caching the directories and index blocks in main memory can also
+help to reduce disk-arm movement particularly for read requests.
+Because of these complexities, the disk-scheduling algorithm should be
+written as a separate module of the operating system, so that it can be replaced
+with a different algorithm if necessary. Either SSTF or LOOK is a reasonable
+choice for the default algorithm.
+The scheduling algorithms described here consider only the seek distances.
+For modern disks, the rotational latency can be nearly as large as the
+average seek time. It is difficult for the operating system to schedule for
+improved rotational latency, though, because modern disks do not disclose the
+physical location of logical blocks. Disk manufacturers have been alleviating
+this problem by implementing disk-scheduling algorithms in the controller
+hardware built into the disk drive. If the operating system sends a batch of
+requests to the controller, the controller can queue them and then schedule
+them to improve both the seek time and the rotational latency.
+If I/O performance were the only consideration, the operating system
+would gladly turn over the responsibility of disk scheduling to the disk hardware.
+In practice, however, the operating system may have other constraints on
+the service order for requests. For instance, demand paging may take priority
+over application I/0, and writes are more urgent than reads if the cache is
+running out of free pages. Also, it may be desirable to guarantee the order of a
+set of disk writes to make the file system robust in the face of system crashes.
+Consider what could happen if the operating system allocated a disk page to a
+file and the application wrote data into that page before the operating system
+had a chance to flush the modified inode and free-space list back to disk. To
+accommodate such requirements, an operating system may choose to do its
+own disk scheduling and to spoon-feed the requests to the disk controller, one
+by one, for some types of I/0.
+The operating system is responsible for several other aspects of disk management,
+too. Here we discuss disk initialization, booting from disk, and bad-block
+recovery.
+12.5.1 Disk Formatting
+A new magnetic disk is a blank slate: it is just a platter of a magnetic recording
+material. Before a disk can store data, it must be divided into sectors that the
+disk controller can read and write. This process is called
+or Low-level formatting fills the disk with a special data
+structure for each sector. The data structure for a sector typically consists of a
+header, a data area (usually 512 bytes in size), and a trailer. The header and
+trailer contain information used by the disk controller, such as a sector number
+and an . When the controller writes a sector of data
+during normal I/0, the ECC is updated with a value calculated from all the bytes
+in the data area. When the sector is read, the ECC is recalculated and compared
+with the stored value. If the stored and calculated numbers are different, this
+12.5 517
+mismatch indicates that the data area of the sector has become corrupted and
+that the disk sector may be bad (Section 12.5.3). The ECC is an error-correcting
+code because it contains enough information, if only a few bits of data have
+been corrupted, to enable the controller to identify which bits have changed
+and calculate what their correct values should be. It then reports a recoverable
+. The controller automatically does the ECC processing whenever a
+sector is read or written.
+Most hard disks are low-level-formatted at the factory as a part of the
+manufacturing process. This formatting enables the manufacturer to test the
+disk and to initialize the mapping from logical block numbers to defect-free
+sectors on the disk. For many hard disks, when the disk controller is instructed
+to low-level-format the disk, it can also be told how many bytes of data space
+to leave between the header and trailer of all sectors. It is usually possible to
+choose among a few sizes, such as 256,512, and 1,024 bytes. Formatting a disk
+with a larger sector size means that fewer sectors can fit on each track; but it
+also means that fewer headers and trailers are written on each track and more
+space is available for user data. Some operating systems can handle only a
+sector size of 512 bytes.
+Before it can use a disk to hold files, the operating system still needs to
+record its own data structures on the disk. It does so in two steps. The first step
+is to the disk into one or more groups of cylinders. The operatiltg
+system can treat each partition as though it were a separate disk. For instance,
+one partition can hold a copy of the operating system's executable code, while
+another holds user files. The second step is icgicz;i or creation of a
+file system. In this step, the operating system stores the iltitial file-system data
+structures onto the disk. These data structures may include maps of free and
+allocated space (a FAT or inodes) and an initial empty directory.
+To increase efficiency, most file systems group blocks together into larger
+chunks, frequently called Disk I/0 is done via blocks, but file system
+II 0 is done via clusters, effectively assuring that II 0 has more sequential-access
+and fewer random-access characteristics.
+Some operating systems give special programs the ability to use a disk
+partition as a large sequential array of logical blocks, without any file-system
+data structures. This array is sometimes called the raw disk, and II 0 to this array
+is termed raw l/0. For example, some database systems prefer raw IIO because
+it enables them to control the exact disk location where each database record is
+stored. Raw l/0 bypasses all the file-system services, such as the buffer cache,
+file locking, prefetching, space allocation, file names, and directories. We can
+make certain applications more efficient by allowing them to implement their
+own special-purpose storage services on a raw partition, but most applications
+perform better when they use the regular file-system services.
+12.5.2 Boot Block
+For a computer to start running-for instance, when it is powered up
+or rebooted -it must have an initial program to run. This initial bootstrap
+program tends to be simple. It initializes all aspects of the system, from CPU
+registers to device controllers and the contents of main memory, and then
+starts the operating system. To do its job, the bootstrap program finds the
+518 Chapter 12
+operating-system kernel on disk, loads that kernel into memory, and jumps to
+an initial address to begin the operating-system execution.
+For most computers, the bootstrap is stored in
+This location is convenient, because ROM needs no initialization and is at a fixed
+location that the processor can start executing when powered up or reset. And,
+since ROM is read only, it cannot be infected by a computer virus. The problem is
+that changing this bootstrap code requires changing the ROM hardware chips.
+For this reason, most systems store a tiny bootstrap loader program in the boot
+ROM whose only job is to bring in a full bootstrap program from disk. The full
+bootstrap program can be changed easily: a new version is simply written onto
+the disk. The full bootstrap program is stored in the   boot blocks   at a fixed
+location on the disk. A disk that has a boot partition is called a or
+The code in the boot ROM instructs the disk controller to read the boot
+blocks into memory (no device drivers are loaded at this point) and then starts
+executing that code. The full bootstrap program is more sophisticated than the
+bootstrap loader in the boot ROM; it is able to load the entire operating system
+from a non-fixed location on disk and to start the operating system ruru1ing.
+Even so, the full bootstrap code may be small.
+Let's consider as an example the boot process in Windows 2000. The
+Windows 2000 system places its boot code in the first sector on the hard disk
+(which it terms the or Furthermore, Windows 2000
+allows a hard disk to be divided into one or more partitions; one partition,
+identified as the contains the operating system and device
+drivers. Bootil1g begins in a Windows 2000 system by running code that is
+resident in the system's ROM memory. This code directs the system to read
+the boot code from the MBR. In addition to containing boot code, the MBR
+contains a table listing the partitions for the hard disk and a flag indicating
+which partition the system is to be booted from, as illustrated in Figure 12.9.
+Once the system identifies the boot partition, it reads the first sector from that
+partition (which is called the and contilmes with the remainder of
+the boot process, which includes loading the various subsystems and system
+services.
+MBR
+partition 1
+partition 2
+partition 3
+partition 4
+boot
+code
+partition
+table
+boot partition
+Figure 12.9 Booting from disk in Windows 2000.
+12.5 519
+12.5.3 Bad Blocks
+Because disks have moving parts and small tolerances (recall that the disk
+head flies just above the disk surface), they are prone to failure. Sometimes the
+failure is complete; in this case, the disk needs to be replaced and its contents
+restored from backup media to the new disk. More frequently, one or more
+sectors become defective. Most disks even con'le from the factory with
+Depending on the disk and controller in use, these blocks are handled
+in a variety of ways.
+On simple disks, such as some disks with IDE controllers, bad blocks are
+handled manually. For instance, the MS-DOS format command performs logical
+formatting and, as a part of the process, scans the disk to find bad blocks. If
+format finds a bad block, it writes a special value into the corresponding FAT
+entry to tell the allocation routines not to use that block. If blocks go bad during
+normal operation, a special program (such as chkdsk) must be run manually
+to search for the bad blocks and to lock them away. Data that resided on the
+bad blocks usually are lost.
+More sophisticated disks, such as the SCSI disks used in high-end PCs
+and most workstations and servers, are smarter about bad-block recovery. The
+controller maintains a list of bad blocks on the disk. The list is initialized during
+the low-level formatting at the factory and is updated over the life of the disk.
+Low-level formatting also sets aside spare sectors not visible to the operating
+system. The controller can be told to replace each bad sector logically with one
+of the spare sectors. This scheme is known as or
+A typical bad-sector transaction might be as follows:
+The operating system tries to read logical block 87.
+The controller calculates the ECC and finds that the sector is bad. It reports
+this finding to the operating system.
+The next time the system is rebooted, a special command is run to tell the
+SCSI controller to replace the bad sector with a spare.
+After that, whenever the system requests logical block 87, the request is
+translated into the replacement sector's address by the controller.
+Note that such a redirection by the controller could invalidate any optimization
+by the operating system's disk-scheduling algorithm! For this reason,
+most disks are formatted to provide a few spare sectors in each cylinder and
+a spare cylinder as well. When a bad block is remapped, the controller uses a
+spare sector from the same cylinder, if possible.
+As an alternative to sector some controllers can be instructed to
+replace a bad block by Here is an example: Suppose that
+logical block 17 becomes defective and the first available spare follows sector
+202. Then, sector slipping remaps all the sectors front 17 to 202, moving them
+all down one spot. That is, sector 202 is copied into the spare, then sector 201
+into 202, then 200 into 201, and so on, until sector 18 is copied into sector 19.
+Slipping the sectors in this way frees up the space of sector 18, so sector 17 can
+be mapped to it.
+The replacement of a bad block generally is not totally automatic because
+the data in the bad block are usually lost. Soft errors may trigger a process in
+520 Chapter 12
+12.6
+which a copy of the block data is made and the block is spared or slipped.
+An unrecoverable howeverf results in lost data. Whatever file was
+using th.at block must be repaired (for instancef by restoration from a backup
+tape)f and that requires manual intervention.
+Swapping was first presented in Section 8.2f where we discussed moving
+entire processes between disk and main memory. Swapping in that setting
+occurs when the amount of physical memory reaches a critically low point and
+processes are moved from memory to swap space to free available memory.
+In practicef very few modern operating systems implement swapping in
+this fashion. Rathel~ systems now combine swapping with virtual memory
+techniques (Chapter 9) and swap pagesf not necessarily entire processes. In
+fact some systems now use the terms swapping and paging interchangeablyf
+reflecting the merging of these two concepts.
+is another low-level task of the operating
+system. Virtual memory uses disk space as an extension of main memory.
+Since disk access is much slower than memory accessf using swap space
+significantly decreases system performance. The main goal for the design and
+implementation of swap space is to provide the best throughput for the virtual
+memory system. In this sectionf we discuss how swap space is usedf where
+swap space is located on diskf and how swap space is managed.
+12.6.1 Swap-Space Use
+Swap space is used in various ways by different operating systemsf depending
+on the memory-management algorithms in use. For instancef systems that
+implement swapping may use swap space to hold an entire process imagef
+including the code and data segments. Paging systems may simply store pages
+that have been pushed out of main memory. The amount of swap space needed
+on a system can therefore vary from a few megabytes of disk space to gigabytesf
+depending on the amow1.t of physical memoryf the amount of virtual memory
+it is backingf and the way in which the virtual memory is used.
+Note that it may be safer to overestimate than to underestimate the amount
+of swap space requiredf because if a system runs out of swap space it may be
+forced to abort processes or may crash entirely. Overestimation wastes disk
+space that could otherwise be used for filesf but it does no other harm. Some
+systems recommend the amount to be set aside for swap space. Solarisf for
+examplef suggests setting swap space equal to the amount by which virtual
+memory exceeds pageable physical memory. In the past Linux has suggested
+setting swap space to double the amount of physical memoryf although most
+Linux systems now use considerably less swap space. In factf there is currently
+much debate in the Linux community about whether to set aside swap space
+at all!
+Some operating systems-including Linux-allow the use of multiple
+swap spaces. These swap spaces are usually put on separate disks so that the
+load placed on the I/0 system. by paging and swapping can be spread over the
+systemfs I/O devices.
+12.6 521
+12.6.2 Swap-Space Location
+A swap space can reside in one of two places: it can be carved out of the
+normal file system, or it can be in a separate disk partition. If the swap space
+is simply a large file within the file system, normal file-system routines can be
+used to create it, name it and allocate its space. This approach, though easy
+to implement is inefficient. Navigating the directory structure and the diskallocation
+data structures takes time and (possibly) extra disk accesses. External
+fragmentation can greatly increase swapping times by forcing multiple seeks
+during reading or writing of a process image. We can improve performance
+by caching the block location information in physical memory and by using
+special tools to allocate physically contiguous blocks for the swap file, but the
+cost of traversing the file-system data structures remains.
+Alternatively, swap space can be created in a separate partition. No
+file system or directory structure is placed in this space. Rather, a separate
+swap-space storage manager is used to allocate and deallocate the blocks
+from the raw partition. This manager uses algorithms optimized for speed
+rather than for storage efficiency, because swap space is accessed much more
+frequently than file systems (when it is used). Internal fragmentation may
+increase, but this trade-off is acceptable because the life of data in the swap
+space generally is much shorter than that of files in the file system. Since
+swap space is reinitialized at boot time, any fragmentation is short-lived. The
+raw-partition approach creates a fixed amount of swap space during disk
+partitioning. Adding more swap space requires either repartitioning the disk
+(which involves moving the other file-system partitions or destroying them
+and restoring them from backup) or adding another swap space elsewhere.
+Some operating systems are flexible and can swap both in raw partitions
+and in file-system space. Linux is an example: the policy and implementation
+are separate, allowing the machine's administrator to decide which type of
+swapping to use. The trade-off is between the convenience of allocation and
+management in the file system and the performance of swapping in raw
+partitions.
+12.6.3 Swap-Space Management: An Example
+We can illustrate how swap space is used by following the evolution of
+swapping and paging in various UNIX systems. The traditional UNIX kernel
+started with an implementation of swapping that copied entire processes
+between contiguous disk regions and memory. UNIX later evolved to a
+combination of swapping and paging as pagiltg hardware became available.
+In Solaris 1 (SunOS), the designers changed standard UNIX methods to
+improve efficiency and reflect technological developments. When a process
+executes, text-segment pages containing code are brought in from the file
+system, accessed in main memory, and thrown away if selected for pageout. It
+is more efficient to reread a page from the file system than to write it to swap
+space and then reread it from there. Swap space is only used as a backing store
+for pages of memory, which includes memory allocated for the
+stack, heap, and uninitialized data of a process.
+More changes were made in later versions of Solaris. The biggest change
+is that Solaris now allocates swap space only when a page is forced out of
+physical memory, rather than when the virtual memory page is first created.
+522 Chapter 12
+12.7
+swap partition
+or swap file
+swap map
+1---------swap area--------1
+page
+I- slot -1
+L---~---~---_L __ _L _ ~
+Figure 12.10 The data structures for swapping on Linux systems.
+This scheme gives better performance on modern computers, which have more
+physical memory than older systems and tend to page less.
+Linux is similar to Solaris in that swap space is only used for anonymous
+memory or for regions of memory shared by several processes. Linux allows
+one or more swap areas to be established. A swap area may be in either a swap
+file on a regular file system or a raw-swap-space partition. Each swap area
+consists of a series of 4-KB which are used to hold swapped pages.
+Associated with each swap area is a .u1.2.p-an array of integer counters,
+each corresponding to a page slot in the swap area. If the value of a counter is 0,
+the corresponding page slot is available. Values greater than 0 indicate that the
+page slot is occupied by a swapped page. The value of the counter iJ.l.dicates the
+number of mappings to the swapped page; for example, a value of 3 indicates
+that the swapped page is mapped to three different processes (which can occur
+if the swapped page is storing a region of memory shared by three processes).
+The data structures for swapping on Linux systems are shown in Figure 12.10.
+Disk drives have continued to get smaller and cheaper, so it is now economically
+feasible to attach many disks to a computer system. Having a large number
+of disks in a system presents opportunities for improving the rate at which data
+can be read or written, if the disks are operated in parallel. Furthermore, this
+setup offers the potential for improving the reliability of data storage, because
+redundant information can be stored on multiple disks. Thus, failure of one disk
+does not lead to loss of data. A of disk-organization techniques, collectively
+called disks (RAIDs), are commonly
+used to address the performance and reliability issues.
+In the past, RAIDs composed of small, cheap disks were viewed as a
+cost-effective alternative to large, expensive disks; today, RAIDs are used for
+their higher reliability and higher data-transfer rate, rather than for economic
+reasons. Hence, the I in RAID, which once stood for   inexpensive/' now stands
+for   iJ.l.dependent.  
+12.7.1 Improvement of Reliability via Redundancy
+Let us first consider the reliability of RAIDs. The chance that some disk out of
+a set of N disks will fail is much higher than the chance that a specific single
+12.7 523
+STRUCTURING RAID
+RAID storage can be structured in a variety of ways. For example, a system
+can have disks directly attached to its buses. In this case, the operating
+system or system software can implement RAID flmctionality. Alternatively,
+an intelligent host controller can control multiple attached disks and can
+implement RAID on those disks in hardware. Finally, a , or
+can be used. A RAID array is a standalone unit with its own controller,
+cache (usually), and disks. It is attached to the host via one or more standard
+ATA SCSI or FC controllers. This common setup allows any operating system
+and software without RAID functionality to have RAID-protected disks. It
+is even used on systems that do have RAID software layers because of its
+simplicity and flexibility.
+disk will fail. Suppose that the of a single disk is 100,000
+hours. Then the mean time to failure of some disk in an array of 100 disks
+will be 100,000/100 = 1,000 hours, or 41.66 days, which is not long at all! If we
+store only one copy of the data, then each disk failure will result in loss of a
+significant amount of data -and such a high rate of data loss is unacceptable.
+The solution to the problem of reliability is to introduce , we
+store extra information that is not normally needed but that can be used in the
+event of failure of a disk to rebuild the lost information. Thus, even if a disk
+fails, data are not lost.
+The simplest (but most expensive) approach to introducing redundancy
+is to duplicate every disk. This technique is called With mirroring,
+a logical disk consists of two physical disks, and every write is carried out
+on both disks. The result is called a mirrored volume. If one of the disks in the
+volume fails, the data can be read from the other. Data will be lost only if the
+second disk fails before the first failed disk is replaced.
+The mean time to failure of a mirrored volume-where failure is the loss
+of data- depends on two factors. One is the mean time to failure of the
+individual disks. The other is the which is the time it
+takes (on average) to replace a failed disk and to restore the data on it. Suppose
+that the failures of the two disks are that is, the failure of one disk
+is not connected to the failure of the other. Then, if the mean time to failure of a
+single disk is 100,000 hours and the mean time to repair is 10 hours, the
+of a mirrored disk system is 100, 0002 /(2    10) = 500    106
+hours, or 57,000 years!
+You should be aware that the assumption of independence of disk failures
+is not valid. Power failures and natural disasters, such as earthquakes, fires,
+and floods, may result in damage to both disks at the same time. Also,
+manufacturing defects in a batch of disks can cause correlated failures. As
+disks age, the probability of failure grows, increasing the chance that a second
+disk will fail while the first is being repaired. In spite of all these considerations,
+however, n1.irrored-disk systems offer much higher reliability than do singledisk
+systems.
+Power failures are a particular source of concern, since they occur far more
+frequently than do natural disasters. Even with mirroring of disks, if writes are
+524 Chapter 12
+in progress to the same block in both disks, and power fails before both blocks
+are fully written, the two blocks can be in an inconsistent state. One solution
+to this is to write one copy first then the next. Another is to add a
+cache to the RAID array. This write-back cache is
+protected from data loss during power failures, so the write can be considered
+complete at that point, assuming the NVRAM has some kind of error protection
+and correction, such as ECC or mirroring.
+12.7.2 Improvement in Performance via Parallelism
+Now let's consider how parallel access to multiple disks improves performance.
+With disk mirroring, the rate at which read requests can be handled is
+doubled, since read requests can be sent to either disk (as long as both disks
+in a pair are functionat as is almost always the case). The transfer rate of each
+read is the same as in a single-disk system, but the number of reads per unit
+time has doubled.
+With multiple disks, we can improve the transfer rate as well (or instead)
+by striping data across the disks. In its simplest form, consists
+of the bits of each byte across multiple disks; such striping is called
+For example, if we have an array of eight disks, we write bit
+i of each byte to disk i. The array of eight disks can be treated as a single disk
+with sectors that are eight times the normal size and, more important that have
+eight times the access rate. In such an organization, every disk participates in
+every access (read or write); so the number of accesses that can be processed
+per second is about the same as on a single disk, but each access can read eight
+times as many data in the same time as on a single disk.
+Bit-level striping can be generalized to include a number of disks that either
+is a multiple of 8 or divides 8. For example, if we use an array of four disks,
+bits i and 4 + i of each go to disk i. Further, striping need not occur at
+the bit level. In for instance, blocks of a file are striped
+across multiple disks; with n disks, block i of a file goes to disk (i mod n) + 1.
+Other levels of striping, such as bytes of a sector or sectors of a block, also are
+possible. Block-level striping is the most common.
+Parallelism in a disk system, as achieved through striping, has two main
+goals:
+Increase the throughput of multiple small accesses (that is, page accesses)
+by load balancing.
+Reduce the response time of large accesses.
+12.7.3 RAID Levels
+Mirroring provides high reliability, but it is expensive. Striping provides high
+data-transfer rates, but it does not improve reliability. Numerous schemes
+to provide redundancy at lower cost by using disk striping combined with
+  parity   bits (which we describe next) l1.ave been proposed. These schemes
+have different cost-performance trade-offs and are classified according to
+levels called We describe the various levels here; Figure 12.11
+shows them pictorially (in the figure, P indicates error-correcting bits, and C
+12.7 RAID Structure 525
+(a) RAID 0: non-redundant striping.
+(b) RAID 1: mirrored disks.
+(c) RAID 2: memory-style error-correcting codes.
+{d) RAID 3: bit-interleaved parity.
+(e) RAID 4: block-interleaved parity.
+{f) RAID 5: block-interleaved distributed parity.
+(g) RAID 6: P + Q redundancy.
+Figure 12.11 RAID levels.
+indicates a second copy. of the data). In all cases depicted in the figure, four
+disks' worth of data are stored, and the extra disks are used to store redundant
+information for failure recovery.
+  RAID level 0. RAID level 0 refers to disk arrays with striping at the level of
+blocks but without any redundancy (such as mirroring or parity bits), as
+shown in Figure 12.1l(a).
+  RAID Ievell. RAID level1 refers to disk mirroring. Figure 12.1l(b) shows
+a mirrored organization.
+  ' RAID level2. RAID level2 is also known as memory-style error-correctingcode
+(ECC) organization. Memory systems have long detected certain
+errors by using parity bits. Each byte in a memory system may have a
+parity bit associated with it that records whether the number of bits in the
+byte set to 1 is even (parity= 0) or odd (parity= 1). If one of the bits in the
+526 Chapter 12
+byte is damaged (either a 1 becomes a 0, or a 0 becomes an the parity of
+the byte changes and thus does not match the stored parity. Similarly, if the
+stored parity bit is damaged, it does not match the computed parity. Thus,
+all single-bit errors are detected by the menwry system .. Error-correcting
+schemes store two or more extra bits and can reconstruct the data if a
+single bit is damaged. The idea of ECC can be  used directly in disk arrays
+via striping of bytes across disks. For example, the first bit of each byte can
+be stored in disk 1, the second bit in disk 2, and so on until the eighth bit
+is stored in disk 8; the error-correction bits are stored in further disks. This
+scheme is shown pictorially in Figure 12.1l(c), where the disks labeled P
+store the error-correction bits. If one of the disks fails, the remaining bits
+of the byte and the associated error-correction bits can be read from other
+disks and used to reconstruct the damaged data. Note that RAID level 2
+requires only three disks' overhead for four disks of data, unlike RAID level
+1, which requires four disks' overhead.
+RAID level 3. RAID level 3, or
+improves on level 2 by taking into account the fact that, unlike memory
+systems, disk controllers can detect whether a sector has been read
+correctly, so a single parity bit can be used for error correction as well as
+for detection. The idea is as follows: If one of the sectors is damaged, we
+know exactly which sector it is, and we can figure out whether any bit in
+the sector is a 1 or a 0 by computing the parity of the corresponding bits
+from sectors in the other disks. If the parity of the remaining bits is equal
+to the stored parity, the missing bit is 0; otherwise, it is 1. RAID level3 is as
+good as level 2 but is less expensive in the number of extra disks required
+(it has only a one-disk overhead), so level 2 is not used in practice. This
+scheme is shown pictorially in Figure 12.1l(d).
+RAID level 3 has two advantages over level 1. First, the storage overhead
+is reduced because only one parity disk is needed for several regular
+disks, whereas one mirror disk is needed for every disk in level1. Second,
+since reads and writes of a byte are spread out over multiple disks with
+N-way striping of data, the transfer rate for reading or writing a single
+block is N times as fast as with RAID level 1. On the negative side, RAID
+level3 supports fewer l/Os per second, since every disk has to participate
+in every I/0 request.
+A further performance problem with RAID 3-and with all paritybased
+RAID levels-is the expense of computing and writing the parity.
+This overhead results in significantly slower writes than with non-parity
+RAID arrays. To moderate this performance penalty, many RAID storage
+arrays include a hardware controller with dedicated parity hardware. This
+controller offloads the parity computation from the CPU to the array. The
+array has an NVRAM cache as well, to store the blocks while the parity is
+computed and to buffer the writes from the controller to the spindles. This
+combination can make parity RAID almost as fast as non-parity. In fact, a
+caching array doing parity RAID can outperform a non-caching non-parity
+RAID.
+RAID level 4. RAID level4, or uses
+block-level striping, as in RAID 0, and in addition keeps a parity block on a
+separate disk for corresponding blocks from N other disks. This scheme is
+12.7 527
+diagramed in Figure 12.1l(e). If one of the disks fails, the parity block can
+be used with the corresponding blocks from the other disks to restore the
+blocks of the failed disk.
+A block read accesses only one disk, allowing other requests to be
+processed by the other disks. Thus, the data-transfer rate for each access
+is slowe1~ but multiple read accesses can proceed in parallel, leading to a
+higher overall I/0 rate. The transfer rates for large reads are high, since all
+the disks can be read in parallel; large writes also have high transfer rates,
+since the data and parity can be written in parallel.
+Small independent writes cannot be performed in parallel. An operatingsystem
+write of data smaller than a block requires that the block be read,
+modified with the new data, and written back The parity block has to be
+updated as well. This is known as the   sYTi:.e . Thus, a
+single write requires four disk accesses: two to read the two old blocks and
+two to write the two new blocks.
+WAFL (Chapter 11) uses RAID level4 because this RAID level allows disks
+to be added to a RAID set seamlessly. If the added disks are initialized with
+blocks containing all zeros, then the parity value does not change, and the
+RAID set is still correct.
+RAID levelS. RAID levelS, or , differs
+from level 4 by spreading data and parity among all N + 1 disks, rather
+than storing data in N disks and parity in one disk. For each block, one of
+the disks stores the parity, and the others store data. For example, with an
+array of five disks, the parity for the nth block is stored in disk (n mod 5)+ 1;
+the nth blocks of the other four disks store actual data for that block This
+setup is shown in Figure 12.11(f), where the Ps are distributed across all
+the disks. A parity block cannot store parity for blocks in the same disk,
+because a disk failure would result in loss of data as well as of parity, and
+hence the loss would not be recoverable. By spreading the parity across
+all the disks in the set, RAID 5 avoids potential overuse of a single parity
+disk, which can occur with RAID 4. RAID 5 is the most common parity RAID
+system.
+RAID level 6. RAID level 6, also called the is
+much like RAID level 5 but stores extra redundant information to guard
+against disk failures. Instead of parity, error-correcting codes such
+as the are used. In the scheme shown in Figure
+12.11(g), 2 bits of redundant data are stored for every 4 bits of datacompared
+with 1 parity bit in level 5-and the system can tolerate two
+disk failures.
+RAID levels 0 + 1 and 1 + 0. RAID level 0 + 1 refers to a combination of RAID
+levels 0 and 1. RAID 0 provides the performance, while RAID 1 provides
+the reliability. Generally, this level provides better performance than RAID
+5. It is common in enviromnents where both performance and reliability
+are important. Unfortunately, like RAID 1, it doubles the number of disks
+needed for storage, so it is also relatively expensive. In RAID 0 + 1, a set
+of disks are striped, and then the stripe is mirrored to another, equivalent
+stripe.
+528 Chapter 12
+stripe
+a) RAID 0 + 1 with a single disk failure.
+uA
+mirror
+b) RAID 1 + 0 with a single disk failure.
+Figure 12.12 RAID 0 + 1 and 1 + 0.
+Another RAID option that is becoming available commercially is RAID
+level 1 + 0, in which disks are mirrored in pairs and then the resulti.J.l.g
+mirrored pairs are striped. This scheme has some theoretical advantages
+over RAID 0 + 1. For example, if a single disk fails in RAID 0 + 1, an entire
+stripe is inaccessible, leaving only the other stripe available. With a failure
+in RAID 1 + 0, a single disk is unavailable, but the disk that mirrors it is still
+available, as are all the rest of the disks (Figure 12.12).
+Numerous variations have been proposed to the basic RAID schemes described
+here. As a result, some confusion may exist about the exact definitions of the
+different RAID levels.
+The implementation of RAID is another area of variation. Consider the
+following layers at which RAID can be implemented.
+Volume-management software can implement RAID within the kernel or
+at the system software layer. In this case, the storage hardware can provide
+a minimum of features and still be part of a full RAID solution. Parity RAID
+is fairly slow when implemented in software, so typically RAID 0, 1, or 0 +
+1 is used.
+RAID can be implemented in the host bus-adapter (HBA) hardware. Only
+the disks directly connected to the HBA can be part of a given RAID set.
+This solution is low in cost but not very flexible.
+12.7 529
+RAID can be implemented in the hardware of the storage array. The storage
+array can create RAID sets of various levels and can even slice these sets
+into smaller volumes, which are then presented to the operating system.
+The operating system need only implement the file system on each of the
+volumes. Arrays can have multiple connections available or can be part of
+a SAN, allowing multiple hosts to take advantage of the array's features.
+RAID can be implemented in the SAN interconnect layer by disk virtualization
+devices. In this case, a device sits between the hosts and the storage.
+It accepts commands from the servers and manages access to the storage.
+It could provide mirroring, for example, by writing each block to two
+separate storage devices.
+Other features, such as and replication, can be implemented at
+each of these levels as well. involves the automatic duplication of
+writes between separate sites for redundancy and disaster recovery. Replication
+can be synchronous or asynchronous. In synchronous replication, each block
+must be written locally and remotely before the write is considered complete,
+whereas in asynchronous replication, the writes are grouped together and
+written periodically. Asynchronous replication can result in data loss if the
+primary site fails, but it is faster and has no distance limitations.
+The implementation of these features differs depending on the layer at
+which RAID is implemented. For example, if RAID is implemented in software,
+then each host may need to carry out and manage its own replication. If
+replication is implemented in the storage array or in the SAN intercom1ect,
+however, then whatever the host operating system or its features, the host's
+data can be replicated.
+One other aspect of most RAID implementations is a hot spare disk or disks.
+A is not used for data but is configured to be used as a replacement in
+case disk failure. For instance, a hot spare can be used to rebuild a mirrored
+pair should one of the disks in the pair fail. In this way, the RAID level can be
+reestablished automatically, without waiting for the failed disk to be replaced.
+Allocating more than one hot spare allows more than one failure to be repaired
+without human intervention.
+12.7.4 Selecting a RAID Level
+Given the many choices they have, how do system designers choose a RAID
+level  One consideration is rebuild performance. If a disk fails, the time needed
+to rebuild its data can be significant. This may be an important factor if a
+continuous supply of data is required, as it is in high-performance or interactive
+database systems. Furthermore, rebuild performance influences the mean time
+to failure.
+Rebuild performance varies with the RAID level used. Rebuilding is easiest
+ or RAID level1, since data can be copied from another disk; for the other levels,
+we need to access all the other disks in the array to rebuild data in a failed disk.
+Rebuild times can be hours for RAID 5 rebuilds of large disk sets.
+RAID level 0 is used in high-performance applications where data loss is
+not critical. RAID level1 is popular for applications that require high reliability
+with fast recovery. RAID 0 + 1 and 1 + 0 are used where both performance and
+reliability are important-for example, for small databases. Due to RAID 1's
+530 Chapter 12
+THE InServ STORAGE ARRAY
+Im1ovation, in an effort to provide better, faster, and less expensive solutions,
+frequently blurs the lines that separated previous technologies. Consider the
+InServ storage array from 3Par. Unlike most other storage arrays, InServ
+does not require that a set of disks be configured at a specific RAID level.
+Rather, each disk is broken into 256-MB   chunklets.   RAm is then applied at
+the chunklet level. A disk can thus participate in multiple and various RAID
+levels as its chunklets are used for multiple volumes.
+InServ also provides snapshots similar to those created by the WAFL file
+system. The format of InServ snapshots can be read-write as well as readonly,
+allowing multiple hosts to mount copies of a given file system without
+needing their own copies of the entire file system. Any changes a host makes
+in its own copy are copy-on-write and so are not reflected in the other copies.
+A further innovation is . Some file systems do not expand
+or shrink On these systems, the original size is the only size, and any change
+requires copying data. An administrator can configure InServ to provide a
+host with a large amount of logical storage that initially occupies only a small
+amount of physical storage. As the host starts using the storage, unused disks
+are allocated to the host, up to the original logical level. The host thus can
+believe that it has a large fixed storage space, create its file systems there, and
+so on. Disks can be added or removed from the file system by InServ without
+the file systems noticing the change. This feature can reduce the number of
+drives needed by hosts, or at least delay the purchase of disks until they are
+really needed.
+high space overhead, RAID levelS is often preferred for storing large volumes
+of data. Level6 is not supported currently by many RAID implementations, but
+it should offer better reliability than levelS.
+RAID system designers and administrators of storage have to make several
+other decisions as well. For example, how many disks should be in a given
+RAID set  How many bits should be protected by each parity bit  If more disks
+are in an array, data-transfer rates are higher, but the system is more expensive.
+If more bits are protected by a parity bit, the space overhead due to parity bits
+is lower, but the chance that a second disk will fail before the first failed disk is
+repaired is greater, and that will result in data loss.
+12.7.5 Extensions
+The concepts of RAID have been generalized to other storage devices, including
+arrays of tapes, and even to the broadcast of data over wireless systems. When
+applied to arrays of tapes, RAID structures are able to recover data even if one
+of the tapes in an array is damaged. When applied to broadcast of data, a
+block of data is split into short units and is broadcast along with a parity unit;
+if one of the units is not received for any reason, it can be reconstructed from the
+other units. Comrnonly, tape-drive robots containing multiple tape drives will
+stripe data across all the drives to increase throughput and decrease backup
+time.
+12.7 531
+12.7.6 Problems with RAID
+Unfortunately, RAID does not always assure that data are available for the
+operating system and its users. A pointer to a file could be wrong, for example,
+or pointers within the file structure could be wrong. Incomplete writes, if not
+properly recovered, could result in corrupt data. Some other process could
+accidentally write over a file system's structures, too. RAID protects against
+physical media errors, but not other hardware and software errors. As large as
+is the landscape of software and hardware bugs, that is how numerous are the
+potential perils for data on a system.
+The Solaris ZFS file system takes an innovative approach to solving these
+problems through the use of - a technique which is used to verify
+the integrity of data. ZFS maintains internal checksums of all blocks, including
+data and metadata. These checksums are not kept with the block that is being
+checksummed. Rathel~ they are stored with the pointer to that block. (See
+figure 12.13.) Consider an inode with pointers to its data. Within the inode is
+the checksum of each block of data. If there is a problem with the data, the
+checksum will be incorrect and the file system will know about it. If the data
+are mirrored, and there is a block with a correct checksum and one with an
+incorrect checksum, ZFS will automatically update the bad block with the good
+one. Similarly, the directory entry that points to the inode has a checksum for the
+inode. Any problem in the inode is detected when the directory is accessed.
+This checksumming takes places throughout all ZFS structures, providing a
+much higher level of consistency, error detection, and error correction than is
+found in RAID disk sets or standard file systems. The extra overhead that is
+created by the checksum calculation and extra block read-modify-write cycles
+is not noticeable because the overall performance of ZFS is very fast.
+Another issue with most RAID implementations is lack of flexibility.
+Consider a storage array with twenty disks divided into four sets of five disks.
+Each set of five disks is a RAID level 5 set. As a result, there are four separate
+data 1
+Figure 12.13 ZFS checksums all metadata and data.
+532 Chapter 12
+volumes, each holding a file system. But what if one file system is too large
+to fit on a five-disk RAID level 5 set   And what if another file system needs
+very little space  If such factors are known ahead of time, then the disks and
+volumes can be properly allocated. Very frequently, however, disk use and
+requirements change over time.
+Even if the storage array allowed the entire set of twenty disks to be
+created as one large RAID set other issues could arise. Several volumes of
+various sizes could be built on the set. But some volume managers do not
+allow us to change a volume's size. In that case, we would be left with the same
+issue described above-mismatched file-system sizes. Some volume n  lanagers
+allow size changes, but some file systems do not allow for file-system growth
+or shrinkage. The volumes could change sizes, but the file systems would need
+to be recreated to take advantage of those changes.
+ZFS combines file-system management and volume management into a
+unit providing greater functionality than the traditional separation of those
+functions allows. Disks, or partitions of disks, are gathered together via RAID
+sets into of storage. A pool can hold one or more ZFS file systems. The
+entire pool's free space is available to all file systems within that pool. ZFS uses
+the memory model of   malloc   and   free   to allocate and release storage for
+each file system as blocks are used and freed within the file system. As a result
+there are no artificial limits on storage use and no need to relocate file systems
+between volumes or resize volumes. ZFS provides quotas to limit the size of a
+file system and reservations to assure that a file system can grow by a specified
+amount, but those variables may be changed by the file system owner at any
+time. Figure 12.14(a) depicts traditional volumes and file systems, and Figure
+12.14(b) shows the ZFS model.
+I FS I
+~ (a) Traditional volumes and file systems.
+(b) ZFS and pooled storage.
+Figure 12.14 (a) Traditional volumes and file systems. (b) A ZFS pool and file systems.
+12.8
+12.8 533
+In Chapter 6, we introduced the write-ahead log, which requires the availability
+of stable storage. By definition, information residing in stable storage is never
+lost. To implement such storage, we need to replicate the required information
+on multiple storage devices (usually disks) with independent failure modes.
+We also need to coordinate the writing of updates in a way that guarantees
+that a failure during an update will not leave all the copies in a damaged state
+and that, when we are recovering from a failure, we can force all copies to a
+consistent and correct value, even if another failure occurs during the recovery.
+In this section, we discuss how to meet these needs.
+A disk write results in one of three outcomes:
+Successful completion. The data were written correctly on disk.
+Partial failure. A failure occurred in the midst of transfer, so only some of
+the sectors were written with the new data, and the sector being written
+during the failure may have been corrupted.
+Total failure. The failure occurred before the disk write started, so the
+previous data values on the disk remain intact.
+Whenever a failure occurs during writing of a block, the system needs to
+detect it and invoke a recovery procedure to restore the block to a consistent
+state. To do that, the system must maintain two physical blocks for each logical
+block. An output operation is executed as follows:
+Write the information onto the first physical block.
+When the first write completes successfully, write the same inJormation
+onto the second physical block.
+Declare the operation complete only after the second write completes
+successfully.
+During recovery from a failure, each pair of physical blocks is examined.
+If both are the same and no detectable error exists, then no further action is
+necessary. If one block contains a detectable error, then we replace its contents
+with the value of the other block. If neither block contains a detectable error,
+but the blocks differ in content, then we replace the content of the first block
+with that of the second. This recovery procedure ensures that a write to stable
+storage either succeeds completely or results in no change.
+We can extend this procedure easily to allow the use of an arbitrarily large
+number of copies of each block of stable storage. Although having a large
+number of copies further reduces the probability of a failure, it is usually
+reasonable to simulate stable storage with only two copies. The data in stable
+storage are guaranteed to be safe unless a failure destroys all the copies.
+Because waiting for disk writes to complete (synchronous I/O) is time
+consuming, many storage arrays add NVRAM as a cache. Since the memory is
+nonvolatile (it usually has battery power to back up the unit's power), it can
+be trusted to store the data en route to the disks. It is thus considered part of
+534 Chapter 12
+12.9
+the stable storage. Writes to it are much faster than to disk, so performance is
+greatly improved.
+Would you buy a DVD or CD player that had one disk sealed inside  Of course
+not. You expect to use a DVD or CD player with many relatively inexpensive
+disks. On a computer as well, using many inexpensive cartridges with one
+drive lowers the overall cost. Low cost is the defining characteristic of tertiary
+storage, which we discuss in this section.
+12.9.1 Tertiary-Storage Devices
+Because cost is so important, in practice, tertiary storage is built with
+The most common examples are floppy disks, tapes, and read-only,
+write-once, and rewritable CDs and DVDs. Many any other kinds of tertiarystorage
+devices are available as well, including removable devices that store
+data in flash memory and interact with the computer system via a USB interface.
+12.9.1.1 Removable Disks
+Removable disks are one kind of tertiary storage. Floppy disks are an example
+of removable magnetic disks. They are made from a thin, flexible disk coated
+with magnetic material and enclosed in a protective plastic case. Although
+common floppy disks can hold only about 1 MB, similar technology is used
+for removable magnetic disks that hold more than 1 GB. Removable magnetic
+disks can be nearly as fast as hard disks, although the recording stuface is at
+greater risk of from scratches.
+A is another kind of removable disk. It records data
+on a rigid platter coated with magnetic material, but the recording technology
+is quite different from that for a magnetic disk. The magneto-optic head flies
+much farther from the disk surface than a magnetic disk head does, and the
+magnetic material is covered with a thick protective layer of plastic or glass.
+This arrangement makes the disk much more resistant to head crashes.
+The magneto-optic disk drive has a coil that produces a magnetic field; at
+room temperature, the field is too large and too weak to magnetize a bit on the
+disk. To write a bit, the disk head flashes a laser beam at the disk surface. The
+laser is aimed at a tiny spot where a bit is to be written. The laser heats this
+spot, which makes the spot susceptible to the magnetic field. Now the large,
+weak magnetic field can record a tiny bit.
+The magneto-optic head is too far from the disk surface to read the data by
+detecting the tiny magnetic fields in the way that the head of a hard disk does.
+Instead, the drive reads a bit using a property of laser light called the
+When a laser beam is bounced off of a magnetic spot, the polarization
+of the laser beam is rotated clockwise or counterclockwise, dependin~g on the
+orientation of the magnetic field. This rotation is what the head detects to read
+a bit.
+Another category of removable disk is the Optical disks do not
+use magnetism at all. Instead, they use special materials that can be altered by
+laser light to have relatively dark or bright spots. One exarnple of optical-disk
+12.9 535
+technology is the which is coated with a material that can
+freeze into either a crystalline or an amorphous state. The crystalline state is
+more transparent, and hence a laser beam is brighter when it passes through
+the lTlaterial and bounces off the reflective layer. The phase-change drive uses
+laser light at three different powers: low power to read data, medium power
+to erase the disk by melting and refreezing the recording medium into the
+crystalline state, and high power to melt the medium into the amorphous state
+to write to the disk. The most common examples of this technology are the
+re-recordable CD-RW and DVD-RW.
+The kinds of disks just described can be used over and over. They are called
+In contrast, can
+be written only once. An old way to make a WORM disk is to manufacture a thin
+aluminum film sandwiched between two glass or plastic platters. To write a
+bit, the drive uses a laser light to burn a small hole through the aluminum. This
+burning cannot be reversed. Although it is possible to destroy the information
+on a WORM disk by burning holes everywhere, it is virtually impossible to alter
+data on the disk, because holes can only be added, and the ECC code associated
+with each sector is likely to detect such additions. WORM disks are considered
+durable and reliable because the metal layer is safely encapsulated between
+the protective glass or plastic platters and magnetic fields cannot damage the
+recording. A newer write-once technology records on an organic polymer dye
+instead of an aluminum layer; the dye absorbs laser light to form marks. This
+technology is used in the recordable CD-R and DVD-R.
+Read-oniv such as CD-ROM and DVD-ROM, come from the factory
+with the data prerecorded. They use technology similar to that of WORM disks
+(although the bits are pressed, not burned), and they are very durable.
+Most removable disks are slower than their nonremovable counterparts.
+The writing process is slower, as are rotation and sometimes seek time.
+12.9.1.2 Tapes
+Magnetic tape is another type of removable medium. As a general rule, a tape
+holds more data than an optical or magnetic disk cartridge. Tape drives and
+disk drives have similar transfer rates. But random access to tape is much
+slower than a disk seek, because it requires a fast-forward or rewind operation
+that takes tens of seconds or even minutes.
+Although a typical tape drive is more expensive than a typical disk drive,
+the price of a tape cartridge is lower than the price of the equivalent capacity
+of magnetic disks. So tape is an economical medium for purposes that do not
+require fast random access. Tapes are commonly used to hold backup copies
+of disk data. They are also used in large supercomputer centers to hold the
+enornwus volumes of data used in scientific research and by large commercial
+enterprises.
+Large tape installations typically use robotic tape changers that move tapes
+between tape drives and storage slots in a tape library. These mechanisms give
+the computer automated access to many tape cartridges.
+A robotic tape library can lower the overall cost of data storage. A diskresident
+file that will not be needed for a while can be to tape, where
+the cost per gigabyte is lower; if the file is needed in the future, the computer
+can it back into disk storage for active use. A robotic tape library is
+536 Chapter 12
+sometimes called storage, since it is between the high performance
+of on-line magnetic disks and the low cost of off-line tapes sitting on shelves
+in a storage room.
+12.9.1.3 Future Technology
+In the future, other storage technologies may become important. Sometimes old
+technologies are used in new ways, as economics change or the technologies
+evolve. For example, solid-state disks, or are growing in importance and
+becoming more common. Simply described, an SSD is a disk that is used like
+a hard drive. Depending on the memory technology used, it can be volatile
+or nonvolatile. The memory technology also affects performance. Nonvolatile
+SSDs have the same characteristics as traditional hard disks but can be more
+reliable because they have no moving parts and faster because they have no
+seek time or latency. In addition, they use less energy. However, they are more
+expensive per megabyte than traditional hard disks, have lower capacity than
+the larger hard disks, and may have shorter life-spans than hard disks; so their
+uses are limited. In one example, SSDs are being used in storage arrays to hold
+metadata which requires high-performance such as the journal of a journaling
+file system. SSDs are also being added to notebook computers to make them
+smaller, faster, and more energy efficient.
+Another promising storage technology, bologt;;:phk uses laser
+light to record holographic photographs on special media. We can think of a
+hologram as a three-dimensional array of pixels. Each pixel represents one bit:
+0 for black or 1 for white. And all the pixels in a hologram are transferred in one
+flash of laser light, so the data transfer rate is extremely high. With continued
+development, holographic storage may become commercially viable.
+Another technology under active research is based on
+(IV!E\1S). The idea is to apply the fabrication
+technologies that produce electronic chips to the manufacture of small datastorage
+machines. One proposal calls for the fabrication of an array of 10,000
+tiny disk heads, with a square centimeter of magnetic storage material suspended
+above the array. When the storage material is moved lengthwise over
+the heads, each head accesses its own linear track of data on the material. The
+storage material can be shifted sideways slightly to enable all the heads to
+access their next track. Although it remains to be seen whether this technology
+can be successful, it may provide a nonvolatile data-storage technology that is
+faster than magnetic disk and cheaper than semiconductor DRAM.
+Whether the storage medium is a removable magnetic disk, a DVD, or a
+

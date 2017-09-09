@@ -1,0 +1,8 @@
+Row 1::Height 2::a recursive procedure
+Row 2::Height 1::algorithm binarysearch(a,k,low,high)
+Row 3::Height 1::if low > high then return nil
+Row 4::Height 1::else mid <-(low+high)/2
+Row 5::Height 1::if k=a[mid] then return mid
+Row 6::Height 1::elseif k<a[mid] then
+Row 7::Height 1::return binarysearch(a,k,low,mid-1)
+Row 8::Height 1::else return binarysearch(a,k,mid+1,high)

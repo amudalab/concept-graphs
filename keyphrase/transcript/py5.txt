@@ -1,0 +1,1055 @@
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+June 9 2011
+Administration
+  Just to be clear, it's okay to ask questions about
+the assignment at office hours, even if it's in the
+last 24 hours.
+  Assignment 2 will come out over the weekend,
+and the deadline will be moved to the 27th
+.
+  Office hours will be held Monday instead of
+Tuesday that week.
+  The midterm will be held June 30th at the
+regular lecture time and regular lecture room.
+June 9 2011
+Administration
+  There is a request for a volunteer note-taker.
+  There is a student in this class who requires a volunteer
+notetaker as an accommodation for a disability. By signing
+up and posting your notes, you can make a significant
+difference for this individual's capacity to fully participate in
+this course. Go to:
+http://www.studentlife.utoronto.ca/accessibility/pcourselist.aspx
+ or come in person to Accessibility Services 215 Huron St.
+Suite 939.
+  Many students notice the quality of their notetaking
+improves through volunteering.
+  You will also receive a certificate of recognition.
+June 9 2011
+Immutable objects.
+  So far all we've seen are immutable objects.
+  That is objects don't change.
+  Instead of making an old int into a new one, we
+make a new int, and throw the old one away.
+June 9 2011
+Immutable objects.
+  What if we want to change an immutable
+object 
+  It's a lot of work, we need to make a new object
+that is identical to the old one except for our
+changes.
+  This is fine for small things like ints and strings,
+but takes a lot of time for large things like
+images.
+June 9 2011
+Mutable Objects.
+  If we want to change a really large object
+without keeping the original, then making a big
+copy, modifying it and tossing the rest is
+wasteful.
+  Instead, we can use a mutable object, that
+we're allowed to change.
+  This also allows us to define functions that
+change objects, rather than return new ones.
+June 9 2011
+Aliasing
+  Consider:
+x=10
+y=x
+x=5
+print x, y
+  We know this will print 5 10 to the screen,
+because ints are immutable.
+June 9 2011
+Aliasing
+  Let pic be an already initialised picture and
+consider:
+x = pic
+y = x
+#sets the green to 0.
+for pixel in x:
+media.set_green(pixel,0)
+media.show(y)
+  Pics are mutable, so this will show a picture
+with no green.
+June 9 2011
+Aliasing and functions.
+  When one calls a function, one is effectively
+beginning with a bunch of assignment
+statements.
+  That is, the parameters are assigned to the local
+variables.
+  But with mutable objects, these assignment
+statements mean that the local variable refers
+to a mutable object that it can change.
+  This is why functions can change mutable
+objects, but not immutable ones.
+June 9 2011
+Break, the first.
+June 9 2011
+Lists
+  Recall from the assignment that you had to
+refer to each co-ordinate by a variable.
+  This is annoying, and can easily be really slow in
+high-dimensional spaces.
+  Python has a way of grouping similar items
+called a list.
+  Denoted by:
+list_name = [list_elt0,
+list_elt1, ..., list_eltn]
+June 9 2011
+Lists
+  To get to the i-th element of a list we use:
+list_name[i-1]
+  We use i-1 because lists are indexed from 0.
+  This means to refer to the elements of a 4
+element list named list_name we use
+list_name[0], list_name[1],
+list_name[2], list_name[3]
+  Lists are mutable.
+June 9 2011
+Lists
+  You can also have an empty list: [].
+  You can index into lists from the back.
+  list_name[-i] returns the ith element from the
+back.
+  Lists are heterogeneous:
+  That is, the elements in a list need not be the same
+type, can have ints and strings.
+  Can even have lists themselves.
+June 9 2011
+Lists: Functions
+  Lists come with lots of useful functions and
+methods.
+  len(list_name), as with strings, returns the
+length of the list.
+  min(list_name) and max(list_name)
+return the min and max so long as the list is
+well defined.
+  sum(list_name) returns the sum of elements
+so long as they're numbered.
+  Not defined for lists of strings.
+June 9 2011
+Lists: Methods
+  append(value) – adds the value to the end of
+the list.
+  sort() - sorts the list so long as this is well
+defined. (need consistent notions of > and ==)
+  insert(index, value) – inserts the
+element value at the index specified.
+  remove(value) – removes the first instance
+of value.
+  count(value) – counts the number of
+instances of value in the list.
+June 9 2011
+Looping over Lists.
+  Often we want to do a similar operation to every
+element of the list.
+  Python allows us to do this using for loops.
+for item in list:
+ block
+  This is equivalent to:
+item = list[0]
+block
+item = list [1]
+block
+...
+June 9 2011
+Looping over Lists.
+  Loops can be tricky with immutable objects
+for item in list:
+ block
+  Here, item is immutable, so we can't alter the
+list elements.
+  If we want to alter the list elements, we need to
+refer to the indices of the list.
+June 9 2011
+Looping over Lists
+  To do that, we use the range() function.
+  range(i) returns an ordered list of ints ranging
+from 0 to i-1.
+  range(i,j) returns an ordered list of ints ranging
+from i to j-1 inclusive.
+  range(i,j,k) returns a list of ints ranging from i
+to j-1 with a step of at least k between ints.
+  So range(i,k)==range(i,k,1)
+  To modify a list element by element we use:
+for i in range(len(list)):
+block
+June 9 2011
+List slicing.
+  Sometimes we want to perform operations on a
+sublist.
+  To refer to a sublist we use list slicing.
+  y=x[i:j] gives us a list y with the elements
+from i to j-1 inclusive.
+  x[:] makes a list that contains all the elements of the original.
+  x[i:] makes a list that contains the elements from i to the end.
+  x[:j] makes a list that contains the elements from the beginning
+to j-1.
+  y is a new list, so that it is not aliased with x.
+June 9 2011
+Break, the second.
+June 9 2011
+Tuples.
+  Sometimes we want our lists to be immutable.
+  Can help if we're worried about aliasing
+carelessness.
+  To do that we can make a tuple.
+  tuple_name=(item0,item1,item2,...)
+  Items are referenced by tuple_name[i] not
+tuple_name(i)
+  Single element tuples must be defined with a
+comma to avoid ambiguity
+– (8+3) vs. (8+3,)
+June 9 2011
+Strings revisted.
+  Strings can be considered tuples of individual
+characters. (since they are immutable).
+  In particular, this means that we can use the list
+knowlege that we gained, an apply it to strings.
+  Can reference individual characters by string[+/-i].
+  Strings are not heterogenous, they can only contain
+characters.
+  min() and max() defined on strings, but sum() is not.
+  You can slice strings just as you can lists.
+June 9 2011
+String methods revisted.
+  Now that we know that we can index into
+strings, we can look at some more string
+methods.
+  find(substring): give the index of the first character
+in a matching the substring from the left or -1 if no
+such character exists.
+  rfind(substring): same as above, but from the right.
+  find(substring,i,j): same as find(), but looks only in
+string[i:j].
+June 9 2011
+Nested Lists
+  Because lists are heterogeneous, we can have
+lists of lists.
+  This is useful if we want matrices, or to
+represent a grid or higher dimenstional space.
+  We then reference elements by list_name[i][j] if
+we want the jth element of the ith list.
+  So then naturally, if we wish to loop over all the
+elements we need nested loops:
+for item in list_name:
+ for item2 in item:
+ block
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+June 9 2011
+Administration
+  Just to be clear, it's okay to ask questions about
+the assignment at office hours, even if it's in the
+last 24 hours.
+  Assignment 2 will come out over the weekend,
+and the deadline will be moved to the 27th
+.
+  Office hours will be held Monday instead of
+Tuesday that week.
+  The midterm will be held June 30th at the
+regular lecture time and regular lecture room.
+June 9 2011
+Administration
+  There is a request for a volunteer note-taker.
+  There is a student in this class who requires a volunteer
+notetaker as an accommodation for a disability. By signing
+up and posting your notes, you can make a significant
+difference for this individual's capacity to fully participate in
+this course. Go to:
+http://www.studentlife.utoronto.ca/accessibility/pcourselist.aspx
+ or come in person to Accessibility Services 215 Huron St.
+Suite 939.
+  Many students notice the quality of their notetaking
+improves through volunteering.
+  You will also receive a certificate of recognition.
+June 9 2011
+Immutable objects.
+  So far all we've seen are immutable objects.
+  That is objects don't change.
+  Instead of making an old int into a new one, we
+make a new int, and throw the old one away.
+June 9 2011
+Immutable objects.
+  What if we want to change an immutable
+object 
+  It's a lot of work, we need to make a new object
+that is identical to the old one except for our
+changes.
+  This is fine for small things like ints and strings,
+but takes a lot of time for large things like
+images.
+June 9 2011
+Mutable Objects.
+  If we want to change a really large object
+without keeping the original, then making a big
+copy, modifying it and tossing the rest is
+wasteful.
+  Instead, we can use a mutable object, that
+we're allowed to change.
+  This also allows us to define functions that
+change objects, rather than return new ones.
+June 9 2011
+Aliasing
+  Consider:
+x=10
+y=x
+x=5
+print x, y
+  We know this will print 5 10 to the screen,
+because ints are immutable.
+June 9 2011
+Aliasing
+  Let pic be an already initialised picture and
+consider:
+x = pic
+y = x
+#sets the green to 0.
+for pixel in x:
+media.set_green(pixel,0)
+media.show(y)
+  Pics are mutable, so this will show a picture
+with no green.
+June 9 2011
+Aliasing and functions.
+  When one calls a function, one is effectively
+beginning with a bunch of assignment
+statements.
+  That is, the parameters are assigned to the local
+variables.
+  But with mutable objects, these assignment
+statements mean that the local variable refers
+to a mutable object that it can change.
+  This is why functions can change mutable
+objects, but not immutable ones.
+June 9 2011
+Break, the first.
+June 9 2011
+Lists
+  Recall from the assignment that you had to
+refer to each co-ordinate by a variable.
+  This is annoying, and can easily be really slow in
+high-dimensional spaces.
+  Python has a way of grouping similar items
+called a list.
+  Denoted by:
+list_name = [list_elt0,
+list_elt1, ..., list_eltn]
+June 9 2011
+Lists
+  To get to the i-th element of a list we use:
+list_name[i-1]
+  We use i-1 because lists are indexed from 0.
+  This means to refer to the elements of a 4
+element list named list_name we use
+list_name[0], list_name[1],
+list_name[2], list_name[3]
+  Lists are mutable.
+June 9 2011
+Lists
+  You can also have an empty list: [].
+  You can index into lists from the back.
+  list_name[-i] returns the ith element from the
+back.
+  Lists are heterogeneous:
+  That is, the elements in a list need not be the same
+type, can have ints and strings.
+  Can even have lists themselves.
+June 9 2011
+Lists: Functions
+  Lists come with lots of useful functions and
+methods.
+  len(list_name), as with strings, returns the
+length of the list.
+  min(list_name) and max(list_name)
+return the min and max so long as the list is
+well defined.
+  sum(list_name) returns the sum of elements
+so long as they're numbered.
+  Not defined for lists of strings.
+June 9 2011
+Lists: Methods
+  append(value) – adds the value to the end of
+the list.
+  sort() - sorts the list so long as this is well
+defined. (need consistent notions of > and ==)
+  insert(index, value) – inserts the
+element value at the index specified.
+  remove(value) – removes the first instance
+of value.
+  count(value) – counts the number of
+instances of value in the list.
+June 9 2011
+Looping over Lists.
+  Often we want to do a similar operation to every
+element of the list.
+  Python allows us to do this using for loops.
+for item in list:
+ block
+  This is equivalent to:
+item = list[0]
+block
+item = list [1]
+block
+...
+June 9 2011
+Looping over Lists.
+  Loops can be tricky with immutable objects
+for item in list:
+ block
+  Here, item is immutable, so we can't alter the
+list elements.
+  If we want to alter the list elements, we need to
+refer to the indices of the list.
+June 9 2011
+Looping over Lists
+  To do that, we use the range() function.
+  range(i) returns an ordered list of ints ranging
+from 0 to i-1.
+  range(i,j) returns an ordered list of ints ranging
+from i to j-1 inclusive.
+  range(i,j,k) returns a list of ints ranging from i
+to j-1 with a step of at least k between ints.
+  So range(i,k)==range(i,k,1)
+  To modify a list element by element we use:
+for i in range(len(list)):
+block
+June 9 2011
+List slicing.
+  Sometimes we want to perform operations on a
+sublist.
+  To refer to a sublist we use list slicing.
+  y=x[i:j] gives us a list y with the elements
+from i to j-1 inclusive.
+  x[:] makes a list that contains all the elements of the original.
+  x[i:] makes a list that contains the elements from i to the end.
+  x[:j] makes a list that contains the elements from the beginning
+to j-1.
+  y is a new list, so that it is not aliased with x.
+June 9 2011
+Break, the second.
+June 9 2011
+Tuples.
+  Sometimes we want our lists to be immutable.
+  Can help if we're worried about aliasing
+carelessness.
+  To do that we can make a tuple.
+  tuple_name=(item0,item1,item2,...)
+  Items are referenced by tuple_name[i] not
+tuple_name(i)
+  Single element tuples must be defined with a
+comma to avoid ambiguity
+– (8+3) vs. (8+3,)
+June 9 2011
+Strings revisted.
+  Strings can be considered tuples of individual
+characters. (since they are immutable).
+  In particular, this means that we can use the list
+knowlege that we gained, an apply it to strings.
+  Can reference individual characters by string[+/-i].
+  Strings are not heterogenous, they can only contain
+characters.
+  min() and max() defined on strings, but sum() is not.
+  You can slice strings just as you can lists.
+June 9 2011
+String methods revisted.
+  Now that we know that we can index into
+strings, we can look at some more string
+methods.
+  find(substring): give the index of the first character
+in a matching the substring from the left or -1 if no
+such character exists.
+  rfind(substring): same as above, but from the right.
+  find(substring,i,j): same as find(), but looks only in
+string[i:j].
+June 9 2011
+Nested Lists
+  Because lists are heterogeneous, we can have
+lists of lists.
+  This is useful if we want matrices, or to
+represent a grid or higher dimenstional space.
+  We then reference elements by list_name[i][j] if
+we want the jth element of the ith list.
+  So then naturally, if we wish to loop over all the
+elements we need nested loops:
+for item in list_name:
+ for item2 in item:
+ block
+
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+June 9 2011
+Administration
+  Just to be clear, it's okay to ask questions about
+the assignment at office hours, even if it's in the
+last 24 hours.
+  Assignment 2 will come out over the weekend,
+and the deadline will be moved to the 27th
+.
+  Office hours will be held Monday instead of
+Tuesday that week.
+  The midterm will be held June 30th at the
+regular lecture time and regular lecture room.
+June 9 2011
+Administration
+  There is a request for a volunteer note-taker.
+  There is a student in this class who requires a volunteer
+notetaker as an accommodation for a disability. By signing
+up and posting your notes, you can make a significant
+difference for this individual's capacity to fully participate in
+this course. Go to:
+http://www.studentlife.utoronto.ca/accessibility/pcourselist.aspx
+ or come in person to Accessibility Services 215 Huron St.
+Suite 939.
+  Many students notice the quality of their notetaking
+improves through volunteering.
+  You will also receive a certificate of recognition.
+June 9 2011
+Immutable objects.
+  So far all we've seen are immutable objects.
+  That is objects don't change.
+  Instead of making an old int into a new one, we
+make a new int, and throw the old one away.
+June 9 2011
+Immutable objects.
+  What if we want to change an immutable
+object 
+  It's a lot of work, we need to make a new object
+that is identical to the old one except for our
+changes.
+  This is fine for small things like ints and strings,
+but takes a lot of time for large things like
+images.
+June 9 2011
+Mutable Objects.
+  If we want to change a really large object
+without keeping the original, then making a big
+copy, modifying it and tossing the rest is
+wasteful.
+  Instead, we can use a mutable object, that
+we're allowed to change.
+  This also allows us to define functions that
+change objects, rather than return new ones.
+June 9 2011
+Aliasing
+  Consider:
+x=10
+y=x
+x=5
+print x, y
+  We know this will print 5 10 to the screen,
+because ints are immutable.
+June 9 2011
+Aliasing
+  Let pic be an already initialised picture and
+consider:
+x = pic
+y = x
+#sets the green to 0.
+for pixel in x:
+media.set_green(pixel,0)
+media.show(y)
+  Pics are mutable, so this will show a picture
+with no green.
+June 9 2011
+Aliasing and functions.
+  When one calls a function, one is effectively
+beginning with a bunch of assignment
+statements.
+  That is, the parameters are assigned to the local
+variables.
+  But with mutable objects, these assignment
+statements mean that the local variable refers
+to a mutable object that it can change.
+  This is why functions can change mutable
+objects, but not immutable ones.
+June 9 2011
+Break, the first.
+June 9 2011
+Lists
+  Recall from the assignment that you had to
+refer to each co-ordinate by a variable.
+  This is annoying, and can easily be really slow in
+high-dimensional spaces.
+  Python has a way of grouping similar items
+called a list.
+  Denoted by:
+list_name = [list_elt0,
+list_elt1, ..., list_eltn]
+June 9 2011
+Lists
+  To get to the i-th element of a list we use:
+list_name[i-1]
+  We use i-1 because lists are indexed from 0.
+  This means to refer to the elements of a 4
+element list named list_name we use
+list_name[0], list_name[1],
+list_name[2], list_name[3]
+  Lists are mutable.
+June 9 2011
+Lists
+  You can also have an empty list: [].
+  You can index into lists from the back.
+  list_name[-i] returns the ith element from the
+back.
+  Lists are heterogeneous:
+  That is, the elements in a list need not be the same
+type, can have ints and strings.
+  Can even have lists themselves.
+June 9 2011
+Lists: Functions
+  Lists come with lots of useful functions and
+methods.
+  len(list_name), as with strings, returns the
+length of the list.
+  min(list_name) and max(list_name)
+return the min and max so long as the list is
+well defined.
+  sum(list_name) returns the sum of elements
+so long as they're numbered.
+  Not defined for lists of strings.
+June 9 2011
+Lists: Methods
+  append(value) – adds the value to the end of
+the list.
+  sort() - sorts the list so long as this is well
+defined. (need consistent notions of > and ==)
+  insert(index, value) – inserts the
+element value at the index specified.
+  remove(value) – removes the first instance
+of value.
+  count(value) – counts the number of
+instances of value in the list.
+June 9 2011
+Looping over Lists.
+  Often we want to do a similar operation to every
+element of the list.
+  Python allows us to do this using for loops.
+for item in list:
+ block
+  This is equivalent to:
+item = list[0]
+block
+item = list [1]
+block
+...
+June 9 2011
+Looping over Lists.
+  Loops can be tricky with immutable objects
+for item in list:
+ block
+  Here, item is immutable, so we can't alter the
+list elements.
+  If we want to alter the list elements, we need to
+refer to the indices of the list.
+June 9 2011
+Looping over Lists
+  To do that, we use the range() function.
+  range(i) returns an ordered list of ints ranging
+from 0 to i-1.
+  range(i,j) returns an ordered list of ints ranging
+from i to j-1 inclusive.
+  range(i,j,k) returns a list of ints ranging from i
+to j-1 with a step of at least k between ints.
+  So range(i,k)==range(i,k,1)
+  To modify a list element by element we use:
+for i in range(len(list)):
+block
+June 9 2011
+List slicing.
+  Sometimes we want to perform operations on a
+sublist.
+  To refer to a sublist we use list slicing.
+  y=x[i:j] gives us a list y with the elements
+from i to j-1 inclusive.
+  x[:] makes a list that contains all the elements of the original.
+  x[i:] makes a list that contains the elements from i to the end.
+  x[:j] makes a list that contains the elements from the beginning
+to j-1.
+  y is a new list, so that it is not aliased with x.
+June 9 2011
+Break, the second.
+June 9 2011
+Tuples.
+  Sometimes we want our lists to be immutable.
+  Can help if we're worried about aliasing
+carelessness.
+  To do that we can make a tuple.
+  tuple_name=(item0,item1,item2,...)
+  Items are referenced by tuple_name[i] not
+tuple_name(i)
+  Single element tuples must be defined with a
+comma to avoid ambiguity
+– (8+3) vs. (8+3,)
+June 9 2011
+Strings revisted.
+  Strings can be considered tuples of individual
+characters. (since they are immutable).
+  In particular, this means that we can use the list
+knowlege that we gained, an apply it to strings.
+  Can reference individual characters by string[+/-i].
+  Strings are not heterogenous, they can only contain
+characters.
+  min() and max() defined on strings, but sum() is not.
+  You can slice strings just as you can lists.
+June 9 2011
+String methods revisted.
+  Now that we know that we can index into
+strings, we can look at some more string
+methods.
+  find(substring): give the index of the first character
+in a matching the substring from the left or -1 if no
+such character exists.
+  rfind(substring): same as above, but from the right.
+  find(substring,i,j): same as find(), but looks only in
+string[i:j].
+June 9 2011
+Nested Lists
+  Because lists are heterogeneous, we can have
+lists of lists.
+  This is useful if we want matrices, or to
+represent a grid or higher dimenstional space.
+  We then reference elements by list_name[i][j] if
+we want the jth element of the ith list.
+  So then naturally, if we wish to loop over all the
+elements we need nested loops:
+for item in list_name:
+ for item2 in item:
+ block
+Page 1
+6.189 Worksheet
+Session 9
+Administrivia
+Name:
+Instructions:
+1. Err..complete the questions :).
+2. No calculators, no laptops, etc.
+3. When we ask for output, you DON'T have to write the spaces/newlines in.
+Program Text:
+print “X”,
+print “X”,
+Output:
+XX
+Problem 1: Common Errors
+Each of the following code snippets represents a common error made by an introductory programming
+student (I know this because I ripped these errors from an introductory programming website.) What
+did they do wrong 
+Assume that the following definitions occur before every code snippet.
+Program Text:
+my_string = "This is a sentence."
+my_list = [4,2,6,8]
+user_input = "100"
+my_integer = 27
+1. Convert my_string to lowercase
+Program Text:
+my_string.lower()
+Answer: 
+Page 2
+2. Print every element in my_list in reverse order.
+Program Text:
+for i in my_list.reverse():
+print i,
+Answer:
+3. Reverse the order of elements in my_list.
+Program Text:
+my_list.reverse
+Answer:
+4. user_input contains a string representation of a number entered by the user. Multiply it by 10
+and add the resulting value to my_list as a string.
+Program Text:
+bigger_input = user_input + 0
+my_list.append(user_input)
+Answer:
+5. Create a backup copy of my_list, then remove the largest element from my_list.
+Program Text:
+new_list = my_list
+my_list.remove(max(my_list))
+Answer: 
+Page 3
+5. This function finds the position of the last instance of an element e in a list. Hints: 1) There are no
+syntax errors 2) The function always returns the correct value.
+Program Text:
+def rindex(my_list, e):
+"""Finds the position of the last occurrence of e in my_list. If e
+is not in l, returns -1"""
+if e not in my_list:
+return -1
+my_list.reverse()
+for i in range(len(my_list)):
+if my_list[i] == e:
+return len(my_list) - 1 - i
+Answer:
+6. Prints all elements of my_list
+Program Text:
+for i in my_ list:
+print i
+i = i + 1
+Answer:
+7. Finds the largest element in a list
+Program Text:
+def find_max(list):
+"""Finds the largest integer in list. Assumes list contains only
+positive integers"""
+max = 0
+for i in my_list:
+if i > max:
+return i
+return max
+Page 4
+Answer:
+Problem 2: Meaningful Names!
+Disclaimer: This example is a bit exaggerated.
+You’ll learn more about programming style in subsequent courses, but one thing we want to imprint in
+you now is using meaningful variable names. Every variable is created for a reason – its name should
+reflect the values you choose to store in it.
+The following code is something an introductory student could have written for a class. Imagine being
+the TA trying to find the bug in it.
+Program Text:
+def f3(ll):
+#all stuff in ll between 0 and 1000000
+j = 0
+k = 0
+for i in range(len(ll)):
+if ll[i] > ll[j]:
+j = i
+elif ll[i] < ll[k]:
+k = i
+l = ll[j]
+ll[k] = ll[l]
+ll[j] = ll[k]
+Your task is to find the bug in the above code. The function should swap the maximum and minimum
+elements in a list.
+Well..maybe that’s too mean. Here – I’ll give you some meaningful variable names for the above code.
+ 3   swap_max_min     max_position     temp
+     list     min_position
+Answer: 
+Page 5
+Problem 3: Test Cases
+We’ve written a function that calculates the square root of a number. If given a negative number, our
+function returns 0 (if you ever write a square root function, don’t do that :p.) We’re using this function
+in a much larger program that controls our 6.01 robot, so its kind of important that the know the
+function works correctly.
+How can we tell if a function works correctly  Staring at it for 30 minutes is probably not the best
+solution..Instead, we’re going to write a couple of test cases to make sure it works.
+Program Text:
+SQ_3 = ... #assume SQRT_3 has been initialized to the square root
+#of 3 (1.717...)
+test_cases = [_____, _____, _____, _____, _____, _____]
+test_case_answers = [_____, _____, _____, _____, _____, _____]
+def custom_sqrt(num):
+"Returns the square root of num, or 0 if num < 0"
+... (code snipped)
+for i in range(len(test_cases)):
+if custom_sqrt(test_cases[i]) != test_case_answers[i]:
+print "Test Case #",i,"failed!"
+Note: You can use the built-in zip function to make the last three lines prettier ... look it up at some
+point.
+Fill in the blanks below to complete our testing code. You’ll want to use as many unique cases as
+possible – don’t just test 1,2,3,4,5,6. At least one of your test cases should be a negative number, for
+example.
+We gave you six blanks, but you don’t need to use all of them. You want a wide variety of test cases in
+order to catch as many bugs as possible, but you also don’t want to test every random number you can
+think of. It’s a delicate balance :) – just do your best. 
+Page 1
+6.189 – Notes
+Session 8
+Day 6: Immutable Objects
+Earlier, we made a big deal about the fact that lists are mutable. The reason this is important is because
+certain objects are immutable – once created, their value cannot be changed.
+Strings are a prime example of this. Although we treated strings the same as primitives like integers and
+booleans earlier, strings are actually objects.
+Why did we do this  Think about this: if an object is immutable, it doesn't matter whether two variables
+are pointing to the same string or two different strings with the same value! Thus, while strings are
+actually immutable objects, we can treat them as we have before – as primitives. The only new meaning
+this revelation has is that like lists, strings have member functions.
+For strings (and tuples, when we get to them), its easiest to think of them like primitives – directly
+stored in the variable table.
+Day 6: Strings Revisited
+Most of the member functions in lists modified the list and had no return value. Strings are immutable,
+though – how do string member functions work  It turns out that member functions of strings tend to
+return a new string.
+Program Text:
+message = "Hello"
+print message
+message.lower() #no effect
+print message
+message = message.lower()
+print message
+Output:
+Hello
+Hello
+hello
+Note: lower() is a function that converts a string into lowercase.
+Here is a list of some useful string functions. Don't try to memorize these! Even I don't remember them –
+instead, when I need to look up a function I go to the Python Quick Reference website shown in class
+(and on the website.) 
+Page 2
+A quick reminder before starting: remember that "A" and "a" are completely different characters!
+When writing functions that manipulate strings, its generally a good idea to deal with a single case
+(usually lowercase).
+Functions that return a new string
+­ str.capitalize() / str.lower(). Returns a copy of str with all letters converted to
+uppercase / lowercase.
+­ str.strip(). Returns a copy of str with all whitespace (spaces/tabs/newlines) from the
+beginning and end of the string removed.
+Example: " test ".strip() == "test".
+­ str.replace(old,new). Returns a copy of str with all instances of old within the string
+replaced with new.
+Example: "hallo all!".replace("al", "el") == "hello ell!".
+Functions which return information about a string
+­ str.count(substring). Returns the number of times substring appears within str.
+­ str.find(substring) / str.rfind(substring). Returns the position of the first instance of
+substring within str. rfind returns the position of the last instance of substring.
+­ s.startswith(substring) / str.endswith(substring). Returns True if the string starts
+with / ends with substring.
+Example: "Hello".startswith(“he”) == False, but “Hello”.endswith(“lo”) == True
+Functions which transform the string into other types
+­ str.split(separator). Returns a list of words in str, using separator as the delimiter string.
+Example: "hello world, Mihir here".split(" ") returns
+["hello","world,","Mihir","here"].
+Example: "mississippi".split("s") returns ["mi", "", "i", "", "ippi"].
+­ separator.join(seq). This one is tricky. It takes a list of strings seq and combines them into a
+string. Each element in seq is separated by separator in the returned string.
+Example: " ".join(["hello","world"]) == "hello world"
+Day 4: Tuples
+Tuples are the immutable counterpart of lists. Unlike a list, tuples cannot be changed.
+Why/where are tuples useful  Think of a tuple as multi-dimensional data -- just like you can store an
+integer 5 in a variable, you can also store a two-dimensional coordinate (6,-3). You'll develop an
+instinct for when to use tuples versus lists as you continue in course 6 – just remember that it tends to
+be much easier to use tuples whenever you can get away with it.
+You can create tuples by using parentheses: (1,3,8) creates the tuple with elements 1, 3, 8. As you
+should expect, tuples are ordered: (1,3) != (3,1) 
+uple (a tuple with one element), you can use
+5
+se three formats using
+that
+teger), whereas the latter is a tuple that contains three elements.
+ered in the next
+ples of sequences
+e of characters.
+nything
+e syntax.
+e item (or character) at the
+length of a sequence.
+eq
+ring, e.g.
+plus operator to
+some integer
+ach ch
+pic of this class:
+. Where lists stored a sequence of items, dictionaries store a table.
+If you want to create a singleton le(5)
+(5,) ! mer is a tuple and
+(4,6) != [4,6 ,
+convert between th st(x)
+You can nest tuples in tuples! Not uple that contains
+two elements (one tuple and one i ree elements.
+will be co
+Lists, strings and tuples are all exa he case of strings,
+you can think of them as a sequen
+Sequence isn't an official term or e are very similar.
+In fact, they share much of the sa
+will return t
+returns the
+equence
+x in
+eck if a substring is in a s
+. You can use th me type. You can
+times fo
+. We learned that the any sequence
+for strings, it iterates through
+And so we come to the last major t are an mutable
+object that we can use to store dat es store a table.
+tu
+they have completely different types (the fo
+one is a tuple and the other is a list. Similarl
+l
+the former is a
+two elements (one tuple and one integer), whereas the latter is a tuple that contains t
+of ordered items. In
+on that all three of the
+[0:3] =
+is equal to
+combine two sequences of the s
+actually works on
+. Like lists, dictionarie
+object that we can use to store data. Where lists stored a sequence of items, dictionar
+Page 3
+If you want to create a singleton tuple (a tuple with one element), you can use tup le(5) or use the
+notation (5,). Note that (5,) != 5 – they have completely different types (the for mer is a tuple and
+the latter is an integer.
+Also note that (4,6) != [4,6] – one is a tuple and the other is a list. Similarly , ("a","b") !=
+"ab". You can convert between these three formats using str(x), tuple(x), and list(x), though.
+You can nest tuples in tuples! Note that ((1,2),3) != (1,2,3) – the former is a t uple that contains
+two elements (one tuple and one integer), whereas the latter is a tuple that contains three elements.
+Notation for using tuples will be covered in the next section.
+Day  : Sequence notation
+Lists, strings and tuples are all examples of sequences – a series of ordered items. In t he case of strings,
+you can think of them as a sequence of characters.
+Sequence isn't an official term or anything – just an observation that all three of thes e are very similar.
+In fact, they share much of the same syntax.
+­ Indexing. seq[i] will return the item (or character) at the ith position.
+­ Length. len(seq) returns the length of a sequence.
+­ Slicing. You can slice sequences the same way you sliced lists. "hello"[0:3] == "hel"
+­ in, not in operators. x in seq is True if and only if an item of seq is equal to x. For strings, you
+can check if a substring is in a string, e.g. "ello" in "hello" returns True.
+­ Concatenation. You can use the plus operator to combine two sequences of the sa me type. You can
+use * to duplicate it n times for some integer n, e.g. "Yay! " * 5
+­ For loops. We learned that the for operator works on lists. for actually works on any sequence –
+for strings, it iterates through each character in the string.
+Day 7: Dictionaries
+And so we come to the last major topic of this class: dictionaries. Like lists, dictionaries are an mutable
+object that we can use to store data. Where lists stored a sequence of items, dictionaries store a table. 
+Page 4
+Note that dictionaries are considered to be unordered – it doesn't matter what order we list entries in.
+We call the names on the left keys and the values on the right values.
+You can store primitives and immutable objects (like strings and tuples) as keys. You can store anything
+(e.g. lists) as a value.
+As we go through the dictionary notation, notice that a lot of it is consistent with the sequence notation
+above – the notation below should seem intuitive to you. Remember that dictionaries are fundamentally
+different from sequences, though – especially the fact that dictionaries are unordered.
+­ You can create a new dictionary using curly braces.
+Example: example_dict = {} creates an empty dictionary
+Example: example_dict = {"a":5, "test":[1,2], 27:"Test"} creates the above table.
+The amount of spacing around the colon : is irrelevant.
+­ len(d) works on dictionaries too - use it to find the number of entries in the dictionary (the above
+dictionary has length 3.)
+­ To access or change a value, use the same index notation.
+Example: print example_dict["a"] prints 5
+Example: example_dict["a"] = 7
+Note that this implies that a dictionary cannot contain two identical keys – writing
+example_dict["a"] = 7 would just change the value that a is mapped to. This should make
+sense, though – remember that dictionaries are unordered. Also, you can have a dictionary with
+identical values.
+­ Use del example_dict["a"] to remove that entry from the dictionary.
+­ k in d will return true if the dictionary d contains an entry with key k.
+Example: (27 in example_dict) == True
+Example: (5 in example_dict) == False
+Day 7: Dictionary Member functions
+Like other objects, dictionaries have member functions. You don't really need to use these much, though
+– here are a few that might be useful
+­ d.clear(). Removes all items from d.
+­ d.copy(). Returns a copy of the dictionary d.
+­ d.pop(k). Removes the entry with key k and returns its corresponding value. This is just like del
+d[k], except that the function also returns the value of d[k].
+Day 7: For loops and dictionaries
+Remember how k in d will return True if k is mapped to something  You can also use for loops with
+dictionaries. For loops will iterate over all the keys in the dictionary: 
+Page 5
+Program Text:
+example_dict = {"a" : 5, "b" : True}
+for k in example_dict:
+print k, ";", example_dict[k]
+Output:
+a ; 5
+b ; True 
+

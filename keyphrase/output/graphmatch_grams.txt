@@ -1,0 +1,1752 @@
+applied mathematics letters
+www.elsevier.com graph similarity
+graph similarity scoring
+scoring and matching
+laura a zager
+george c verghese
+department of electrical
+engineering and computer
+institute of technology
+united states received
+received in revised
+abstract we outline
+outline a class
+class of graph
+graph similarity measures
+similarity of local
+neighborhoods to derive
+derive pairwise similarity
+pairwise similarity scores
+two different graphs
+present a related
+related similarity measure
+update to generate
+generate both node
+node and edge
+edge similarity scores
+scores this measure
+task of graph
+graphs and networks
+networks ; graph
+algorithms ; similarity
+measures ; graph
+matching ; graph
+introduction many applications
+graphs a good
+deal of research
+graph isomorphism problem
+distance and maximum
+world wide web
+web has generated
+generated tremendous interest
+interest in aggregate
+aggregate statistical measures
+measures of graph
+exists a class
+class of similarity
+node or edge
+element in graph
+similar this idea
+idea naturally leads
+leads to iterative
+methods for computing
+computing similarity scores
+scores for similarity
+similarity between elements
+set of vertices
+vertices or nodes
+set of edges
+directed or undirected
+undirected the aim
+highlight graph similarity
+graph similarity methods
+elds that utilize
+utilize this iterative
+present a simple
+uential iterative approach
+hits search algorithm
+search algorithm introduced
+introduced by kleinberg
+web search results
+two different categories
+sources of information
+high-quality hubs kleinberg
+hubs kleinberg proposed
+proposed an iterative
+algorithm for computing
+computing a hub
+hub and authority
+simply the sum
+nodes that point
+point to node
+score of node
+node n points
+lzager @ mit.edu
+initial values chosen
+algorithms also utilize
+utilize the idea
+recursively computing node
+computing node similarity
+node similarity scores
+similarity scores based
+scores of neighboring
+ooding algorithm proposed
+proposed by melnik
+simrank algorithm proposed
+proposed by jeh
+jeh and widom
+method for phylogenetic
+phylogenetic tree construction
+tree construction proposed
+proposed by heymans
+heymans and singh
+vertex similarity method
+method of leicht
+depicted in fig
+equation to construct
+construct a similarity
+two graphs blondel
+denote the similarity
+similarity of node
+initial conditions blondel
+choose to initialize
+explore the application
+measure to graph
+iterative method framework
+two graph elements
+elements are similar
+neighborhoods are similar
+suggest one simple
+construct an edge
+source and terminal
+nodes are similar
+nition of edge
+edge similarity introduces
+introduces a coupling
+coupling between edge
+edge and node
+denote the source
+node of edge
+denote the terminal
+node set cardinality
+edge set cardinality
+convenient to represent
+represent the adjacency
+denote the node
+node similarity score
+score between node
+ypq the edge
+out-degree of node
+equation for edge
+node scores takes
+assembled into matrices
+construction of source
+update process represented
+represented in eqs
+introduce the vec
+operator on matrices
+stacks the columns
+denotes the kronecker
+product of matrices
+determining the score
+matrix iteration problem
+iteration problem concatenating
+concatenating these vectors
+yields a single
+single matrix update
+matrix update equation
+graph similarity measure
+condition x0 chosen
+nonnegative similarity scores
+pair of nodes
+pair of edges
+presented as theorem
+matrix with perron
+componentwise positive vector
+sequence bk converges
+apply this theorem
+expand the matrix
+applying the requirement
+graphs of fig
+two directed graphs
+discussed in section
+higher scores denote
+scores denote greater
+denote greater similarity
+symmetric and non-negative
+presented in theorem
+expressions are equal
+information about node
+initial condition constraint
+constraint is satis
+pair of graphs
+graphs in fig
+presented in table
+update of node
+cult to show
+proof of theorem
+simultaneous and sequential
+sequential update procedures
+procedures all yield
+set of similarity
+iterations and expand
+expand the expression
+node similarity update
+dbs + dat
+das and dat
+ned in section
+suggested by blondel
+node adjacency matrices
+coupled node calculation
+node calculation differs
+inclusion of additional
+additional diagonal terms
+terms that serve
+serve to amplify
+amplify the scores
+scores of nodes
+matching one common
+task in graph
+graph theory applications
+kind of optimal
+nodes and edges
+two graphs graph
+graphs graph matching
+matching has received
+received an enormous
+amount of academic
+matching and data
+data mining communities
+cient methods exist
+classes of graphs
+elements and set
+matched to element
+common optimality criteria
+found in polynomial
+authors have obtained
+nding a matrix
+properties and minimizes
+solves this problem
+almohamad and duffuaa
+present a linear
+linear programming formulation
+problem for order
+order to obtain
+obtain a permutation
+apply the hungarian
+formulated by kuhn
+computes a maximum
+maximum weight matching
+node scoring method
+scoring method presented
+previous section yields
+yields a matrix
+matrix of similarity
+scores between nodes
+nodes taken pairwise
+naturally suggests matching
+matching the nodes
+graphs by computing
+computing a maximum
+matrix of scores
+identify the location
+graph to explore
+explore this problem
+node adjacency matrix
+nodes is denoted
+node similarity matrix
+scoring method described
+described in section
+algorithm is applied
+matrix to obtain
+obtain a matching
+graph that maximizes
+maximizes the sum
+sum of matched
+generated in matlab
+hungarian algorithm requires
+algorithm requires padding
+padding the matrix
+matrix of node
+scores with extra
+scores are set
+number a success
+success is counted
+graph ; note
+kind of accounting
+yields a lower
+equally good matches
+cation are marked
+marked as failures
+variably sized subgraphs
+subgraphs and variable
+variable edge probability
+sizes were generated
+proportion of successful
+matches was recorded
+recorded the results
+depicts the expected
+proportion of correct
+assigned to nodes
+graph the computation
+bound is similar
+similar in concept
+matching hats problem
+party guests leave
+leave their hats
+hats are stolen
+leaving m remaining
+remaining the hats
+subgraph matching problem
+nodes are matched
+matched to nodes
+subgraph of size
+function of subgraph
+subgraph size plotted
+plotted in fig
+performance l.a zager
+subgraph matching performance
+enyi random graph
+graph with edge
+hungarian method applied
+node scores obtained
+obtained from eqs
+matching scenarios described
+similarity based matching
+based matching performance
+performance of random
+data of fig
+appears that higher
+higher initial connectivities
+initial connectivities lead
+lead to poorer
+performance is achieved
+achieved with larger
+performs the matching
+nodes with type
+graph matching applications
+exists side information
+attributes of nodes
+proteins that constitute
+constitute the nodes
+protein interaction network
+type when attempting
+attempting to align
+align these networks
+networks across species
+proteins that share
+type the node
+node matching procedures
+topology to identify
+similarities ; including
+including node identity
+node identity information
+information to penalize
+penalize or reward
+reward certain matches
+matches may improve
+augment our subgraph
+subgraph matching procedure
+procedure by assigning
+assigning each node
+labels with equal
+probability a random
+retaining the node
+labels are assigned
+assigned a negative
+approach are presented
+presented in fig
+number of correct
+correct node matches
+trials for subgraphs
+sizes the averages
+number of labels
+size are drawn
+drawn as vertical
+lines the expected
+expected performance results
+related random matching
+random matching scenario
+dashed vertical lines
+increasing the number
+labels improves performance
+two node labels
+distributed with asymmetric
+asymmetric probabilities fig
+histograms of subgraph
+labels are distributed
+information is communicated
+nodes with unique
+exist reference points
+pattern recognition problems
+problems to model
+model this scenario
+nodes is generated
+nodes are labeled
+labeled with unique
+ers the remaining
+label a random
+carrying the node
+nodes the node
+edited by setting
+setting the similarity
+nodes with mismatched
+number the procedure
+continues as described
+graph with connectivity
+subgraphs of size
+histogram is represented
+dashed vertical line
+analogous random matching
+solid vertical line
+node labels distributed
+solid vertical lines
+represents the performance
+graph the dashed
+dashed horizontal lines
+horizontal lines represent
+represent the expected
+matching performance improves
+number of unique
+labels is increased
+exploring the information
+kinds of structural
+structural features common
+inferred from patterns
+node matching procedure
+applied to pairs
+pairs of isomorphic
+graphs to generate
+generate self-similarity matrices
+maximum weight matches
+matches the self-similarity
+pair of undirected
+undirected bipartite graphs
+represent the point
+line incidence graphs
+set of node
+pair while projections
+reveal any interesting
+interesting structural information
+performance using varying
+numbers of unique
+labels the dashed
+dashed lines represent
+strictly smaller eigenvalues
+encode such information
+kinds of graphs
+machinery of spectral
+spectral graph theory
+theory to explore
+explore the matrix
+applications might arise
+recall that kleinberg
+improved web search
+web search tool
+applied their method
+method to automatic
+automatic synonym extraction
+graph another intriguing
+application of graph
+functionally similar subgraphs
+subgraphs within maps
+maps of protein
+protein interactions compared
+explored the identi
+holme and huss
+vertex similarity scoring
+similarity scoring method
+method to predict
+predict the function
+function of proteins
+finding new applications
+kind of similarity
+scoring might inspire
+inspire some interesting
+interesting new heuristics
+acknowledgments this material
+material is based
+based upon work
+supported in part
+national science foundation
+science foundation graduate
+foundation graduate research
+graduate research fellowship
+fellowship any opinions
+conclusions or recommendations
+ect the views
+science foundation additional
+foundation additional support
+work was provided
+dod afosr uri
+architectures for secure
+secure and robust
+robust distributed infrastructures
+led by stanford
+blondel and paul
+paul van dooren
+comments and discussion
+algorithm for subgraph
+assoc comput mach
+cliques and graph
+error correcting graph
+correcting graph matching
+underlying cost function
+ieee trans pattern
+trans pattern anal
+pattern anal mach
+anal mach intell
+graph distance metric
+distance metric combining
+metric combining maximum
+combining maximum common
+maximum common subgraph
+subgraph and minimum
+minimum common supergraph
+pattern recognit lett
+matching free trees
+cliques and monotone
+monotone game dynamics
+versatile graph matching
+graph matching algorithm
+application to schema
+18th international conference
+conference on data
+measure of structural-context
+eighth international conference
+conference on knowledge
+discovery and data
+deriving phylogenetic trees
+analysis of metabolic
+similarity in networks
+measure of similarity
+similarity between graph
+applications to synonym
+extraction and web
+approach to weighted
+weighted graph matching
+graph matching problems
+linear programming approach
+graph matching problem
+naval research logistic
+research logistic quarterly
+central file exchange
+file exchange http
+leexchange last accessed
+caps and robbers
+expect ? college
+similarity and matching
+dept of electrical
+role-similarity based functional
+based functional prediction
+prediction in networked
+roy soc interface
+applied mathematics
+mathematics letters
+graph similarity
+similarity scoring
+matching laura
+verghese department
+electrical engineering
+computer science
+massachusetts institute
+united states
+states received
+revised form
+similarity measures
+structural similarity
+local neighborhoods
+derive pairwise
+pairwise similarity
+similarity scores
+related similarity
+similarity measure
+linear update
+edge similarity
+graph matching
+rights reserved
+graph algorithms
+graph alignment
+applications call
+quantitative measure
+good deal
+graph isomorphism
+isomorphism problem
+edit distance
+common sub
+large graphs
+world wide
+wide web
+tremendous interest
+aggregate statistical
+statistical measures
+graph structure
+degree distribution
+similarity methods
+respective neighborhoods
+iterative methods
+computing similarity
+elements propagate
+neighboring elements
+highlight graph
+iterative framework
+simple application
+uential iterative
+iterative approach
+hits search
+search algorithm
+algorithm introduced
+web search
+search results
+good sources
+high-quality hubs
+hubs kleinberg
+kleinberg proposed
+iterative algorithm
+authority score
+web graph
+hub scores
+hub score
+authority scores
+e-mail address
+l.a zager
+front matter
+g.c verghese
+prototype hub
+authority graph
+initial values
+values chosen
+application-oriented algorithms
+computing node
+node similarity
+scores based
+neighboring nodes
+ooding algorithm
+algorithm proposed
+simrank algorithm
+scoring method
+phylogenetic tree
+tree construction
+construction proposed
+vertex similarity
+similarity method
+view kleinberg
+authority nodes
+generalize kleinberg
+update equation
+graphs blondel
+scores byp
+hits algorithm
+odd limits
+initial conditions
+conditions blondel
+all-ones vector
+nal score
+node scores
+coupled node
+edge scoring
+iterative method
+method framework
+graph elements
+edge score
+respective source
+terminal nodes
+similarity introduces
+source node
+terminal node
+node set
+set cardinality
+edge set
+adjacency structure
+edge matrix
+similarity score
+diagonal matrix
+diagonal entry
+scores takes
+frobenius norm
+matrix norm
+edge matrices
+update process
+process represented
+matrix form
+kronecker product
+score vector
+procedure converges
+matrix iteration
+iteration problem
+problem concatenating
+vectors yields
+single matrix
+matrix update
+theorem summarizes
+key properties
+initial condition
+positive constant
+unique set
+nonnegative similarity
+non-negative matrix
+perron root
+positive vector
+orthogonal projector
+invariant subspace
+matrix equation
+explicit expressions
+abk kabkk2
+directed graphs
+higher scores
+scores denote
+greater similarity
+positive semi-de
+nonnegative eigenvalues
+result presented
+applies note
+odd iterates
+normalization embedded
+odd expressions
+reasonable choice
+priori information
+condition constraint
+simultaneous update
+edge scores
+sequential update
+analogous argument
+update procedures
+iteration converge
+similarity update
+iteration suggested
+standard node
+node adjacency
+adjacency matrices
+node calculation
+calculation differs
+additional diagonal
+diagonal terms
+common task
+graph theory
+theory applications
+optimal matching
+respective elements
+graphs graph
+enormous amount
+academic treatment
+pattern matching
+data mining
+mining communities
+cient methods
+methods exist
+assignment matrix
+common optimality
+optimality criteria
+obtained approximations
+structural properties
+umeyama solves
+linear programming
+programming formulation
+permutation matrix
+hungarian algorithm
+maximum weight
+weight matching
+node scoring
+method presented
+previous section
+section yields
+illustrative problem
+larger graph
+adjacency matrix
+random graph
+subgraph induced
+similarity matrix
+method described
+original graph
+matched scores
+results presented
+utilized borlin
+algorithm requires
+extra entries
+ctitious scores
+negative number
+subgraph node
+original identi
+accounting yields
+lower bound
+good matches
+rst test
+sized subgraphs
+variable edge
+edge probability
+average proportion
+successful matches
+expected proportion
+correct matches
+subgraph nodes
+matching hats
+hats problem
+party guests
+guests leave
+randomly redistributed
+subgraph matching
+matching problem
+constant function
+subgraph size
+size plotted
+performance l.a
+matching performance
+15-node erd
+enyi random
+edge probabilities
+hungarian method
+method applied
+scores obtained
+matching scenarios
+scenarios described
+similarity based
+substantial improvement
+expected performance
+random matching
+interesting features
+higher initial
+initial connectivities
+connectivities lead
+poorer performance
+larger subgraphs
+entire graph
+procedure performs
+type labels
+matching applications
+exists side
+side information
+protein interaction
+interaction network
+match proteins
+node matching
+matching procedures
+preceding section
+graph topology
+identify similarities
+including node
+node identity
+identity information
+improve performance
+matching procedure
+equal probability
+random subgraph
+node labels
+negative weight
+performance results
+correct node
+node matches
+vertical lines
+related random
+matching scenario
+dashed vertical
+labels improves
+improves performance
+asymmetric probabilities
+probabilities fig
+depicts histograms
+unique labels
+unique identi
+exist reference
+reference points
+pattern recognition
+recognition problems
+uniquely-labeled nodes
+mismatched labels
+procedure continues
+vertical line
+analogous random
+solid vertical
+labels distributed
+curve represents
+node graph
+dashed horizontal
+horizontal lines
+lines represent
+performance improves
+conclusions exploring
+similarity matrices
+ongoing task
+structural features
+isomorphic graphs
+self-similarity matrices
+exploratory tests
+isomorphic mapping
+weight matches
+graphs communicate
+interesting information
+bipartite graphs
+line incidence
+incidence graphs
+projective planes
+node pair
+dominant eigenspace
+interesting structural
+structural information
+varying numbers
+dashed lines
+smaller eigenvalues
+spectral graph
+natural phenomenon
+improved web
+search tool
+automatic synonym
+synonym extraction
+dictionary graph
+intriguing application
+similar subgraphs
+protein interactions
+interactions compared
+work supported
+national science
+science foundation
+foundation graduate
+graduate research
+research fellowship
+recommendations expressed
+additional support
+dod afosr
+afosr uri
+distributed infrastructures
+stanford university
+vincent blondel
+paul van
+van dooren
+helpful comments
+j.r ullman
+subgraph isomorphism
+assoc comput
+comput mach
+replicator equations
+maximum cliques
+neural comput
+error correcting
+correcting graph
+underlying cost
+cost function
+ieee trans
+trans pattern
+pattern anal
+anal mach
+mach intell
+m.l fernandez
+graph distance
+metric combining
+combining maximum
+common subgraph
+minimum common
+common supergraph
+pattern recognit
+recognit lett
+free trees
+maximal cliques
+monotone game
+game dynamics
+j.m kleinberg
+authoritative sources
+hyperlinked environment
+versatile graph
+matching algorithm
+18th international
+international conference
+data engineering
+san jose
+structural-context similarity
+knowledge discovery
+phylogenetic trees
+similarity analysis
+metabolic pathways
+phys rev
+graph vertices
+web searching
+siam rev
+eigendecomposition approach
+weighted graph
+matching problems
+programming approach
+assignment problem
+naval research
+logistic quarterly
+random graphs
+publ math
+central file
+file exchange
+exchange http
+college math
+role-similarity based
+functional prediction
+networked systems
+yeast proteome
+roy soc
+soc interface
+applied
+mathematics
+letters
+www.elsevier.com
+graph
+similarity
+scoring
+matching
+laura
+zager
+george
+verghese
+department
+electrical
+engineering
+computer
+science
+massachusetts
+institute
+technology
+cambridge
+united
+states
+received
+november
+revised
+form
+december
+accepted
+january
+abstract
+outline
+class
+measures
+structural
+local
+neighborhoods
+derive
+pairwise
+scores
+nodes
+two
+graphs
+present
+related
+measure
+linear
+update
+generate
+node
+edge
+task
+cid
+elsevier
+rights
+reserved
+keywords
+networks
+algorithms
+alignment
+introduction
+applications
+call
+quantitative
+good
+deal
+research
+devoted
+isomorphism
+problem
+generalizations
+edit
+distance
+maximum
+minimum
+common
+sub
+super
+e.g
+additionally
+emergence
+large
+world
+wide
+web
+generated
+tremendous
+interest
+aggregate
+statistical
+structure
+clustering
+diameter
+degree
+distribution
+ends
+spectrum
+exists
+methods
+element
+considered
+similar
+respective
+idea
+naturally
+leads
+iterative
+computing
+elements
+propagate
+neighboring
+step
+consist
+set
+vertices
+edges
+directed
+undirected
+aim
+work
+highlight
+elds
+utilize
+framework
+simple
+application
+extension
+uential
+approach
+hits
+search
+algorithm
+introduced
+kleinberg
+suggested
+results
+divided
+categories
+hubs
+point
+sources
+information
+query
+authorities
+pointed
+high-quality
+proposed
+hub
+authority
+score
+iteration
+simply
+sum
+points
+odd
+author
+e-mail
+address
+lzager
+mit.edu
+l.a
+front
+matter
+doi
+g.c
+fig
+prototype
+iterates
+procedure
+converge
+possibly
+limits
+depend
+initial
+values
+chosen
+application-oriented
+recursively
+based
+ooding
+melnik
+simrank
+jeh
+widom
+method
+phylogenetic
+tree
+construction
+heymans
+singh
+vertex
+leicht
+blondel
+view
+comparison
+smaller
+depicted
+light
+observation
+generalize
+equation
+construct
+denote
+stage
+xrs
+r,i
+normalization
+byp
+general
+conditions
+choose
+initialize
+all-ones
+vector
+nal
+limit
+iterations
+i,r
+j,s
+explore
+coupled
+immediately
+suggest
+source
+terminal
+nition
+introduces
+coupling
+cardinality
+denoted
+convenient
+represent
+adjacency
+pair
+matrices
+matrix
+terminus
+ned
+representation
+properties
+das
+dat
+ypq
+diagonal
+out-degree
+entry
+in-degree
+takes
+ykl
+i,t
+i,s
+assembled
+frobenius
+norm
+required
+notation
+process
+represented
+eqs
+written
+concisely
+bsyk
+introduce
+vec
+operator
+stacks
+columns
+gxk
+expressed
+denotes
+kronecker
+product
+determining
+converges
+concatenating
+vectors
+yields
+single
+msk
+theorem
+summarizes
+key
+condition
+arbitrarily
+gx0
+positive
+constant
+unique
+nonnegative
+proof
+first
+note
+result
+presented
+symmetric
+non-negative
+perron
+root
+componentwise
+dimension
+provided
+eigenvalue
+sequence
+b0k2
+orthogonal
+projector
+invariant
+subspace
+apply
+directly
+expand
+explicit
+expressions
+abk
+kabkk2
+terms
+k
+applying
+requirement
+table
+discussed
+section
+higher
+greater
+observe
+semi-de
+nite
+eigenvalues
+applies
+factor
+appears
+eliminated
+embedded
+equal
+row
+reasonable
+choice
+priori
+2y0
+constraint
+satis
+simultaneous
+sequential
+dif
+cult
+show
+analogous
+argument
+procedures
+yield
+focus
+expression
+dbs
+dbt
+standard
+calculation
+differs
+inclusion
+additional
+serve
+amplify
+highly
+connected
+theory
+identi
+cation
+kind
+optimal
+i.e
+enormous
+amount
+academic
+treatment
+pattern
+data
+mining
+communities
+computationally
+cient
+exist
+classes
+sought
+problems
+assignment
+column
+matched
+optimality
+criteria
+found
+polynomial
+authors
+obtained
+approximations
+nding
+minimizes
+objective
+pku
+umeyama
+solves
+square
+almohamad
+duffuaa
+doubly
+stochastic
+programming
+formulation
+order
+obtain
+permutation
+hungarian
+originally
+formulated
+kuhn
+computes
+weight
+sets
+previous
+suggests
+illustrative
+identify
+location
+subgraph
+larger
+empirically
+generating
+speci
+probability
+erd
+enyi
+random
+selected
+induced
+computed
+described
+finally
+subset
+original
+maximizes
+matlab
+utilized
+borlin
+implementation
+requires
+padding
+extra
+entries
+ctitious
+negative
+number
+success
+counted
+match
+accounting
+lower
+bound
+equally
+matches
+correspond
+marked
+failures
+rst
+test
+concept
+15-node
+variably
+sized
+subgraphs
+variable
+connectivity
+parameter
+value
+sizes
+average
+proportion
+successful
+recorded
+depicts
+expected
+correct
+randomly
+assigned
+computation
+hats
+party
+guests
+leave
+room
+redistributed
+imagine
+stolen
+leaving
+remaining
+distributed
+analogously
+size
+function
+plotted
+details
+performance
+probabilities
+averaging
+trials
+bounds
+scenarios
+subsections
+encouraging
+substantial
+improvement
+interesting
+features
+observed
+connectivities
+lead
+poorer
+achieved
+entire
+performs
+correctly
+type
+labels
+side
+attributes
+proteins
+constitute
+protein
+interaction
+network
+classi
+attempting
+align
+species
+share
+preceding
+topology
+similarities
+including
+identity
+penalize
+reward
+improve
+augment
+assigning
+retaining
+histograms
+out
+averages
+drawn
+vertical
+lines
+scenario
+derived
+dashed
+increasing
+improves
+happen
+asymmetric
+evenly
+communicated
+label
+ers
+reference
+uniquely
+recognition
+model
+labeled
+removed
+carrying
+fewer
+uniquely-labeled
+edited
+setting
+mismatched
+continues
+histogram
+line
+solid
+curve
+represents
+varied
+horizontal
+steadily
+increased
+conclusions
+exploring
+contained
+ongoing
+kinds
+inferred
+patterns
+pairs
+isomorphic
+self-similarity
+exploratory
+tests
+mapping
+communicate
+bipartite
+incidence
+projective
+planes
+projections
+dominant
+eigenspace
+reveal
+varying
+numbers
+subspaces
+strictly
+encode
+characterized
+machinery
+spectral
+worthwhile
+arise
+natural
+phenomenon
+recall
+motivation
+improved
+tool
+automatic
+synonym
+extraction
+dictionary
+intriguing
+functionally
+maps
+interactions
+compared
+explored
+holme
+huss
+predict
+cerevisiae
+finding
+inspire
+heuristics
+acknowledgments
+material
+supported
+part
+national
+foundation
+graduate
+fellowship
+opinions
+ndings
+recommendations
+publication
+necessarily
+ect
+views
+support
+dod
+afosr
+uri
+architectures
+secure
+robust
+infrastructures
+f49620
+01-1-0365
+led
+stanford
+university
+vincent
+paul
+van
+dooren
+helpful
+comments
+discussion
+references
+j.r
+ullman
+assoc
+comput
+mach
+pelillo
+replicator
+equations
+cliques
+neural
+bunke
+error
+correcting
+uence
+underlying
+cost
+ieee
+trans
+anal
+intell
+m.l
+fernandez
+valiente
+metric
+combining
+supergraph
+recognit
+lett
+free
+trees
+maximal
+monotone
+game
+dynamics
+j.m
+authoritative
+hyperlinked
+environment
+acm
+garcia-molina
+rahm
+versatile
+schema
+proceedings
+18th
+international
+conference
+san
+jose
+structural-context
+eighth
+knowledge
+discovery
+edmonton
+deriving
+analysis
+metabolic
+pathways
+bioinformatics
+suppl
+newman
+phys
+rev
+gajardo
+senellart
+searching
+siam
+eigendecomposition
+weighted
+naval
+logistic
+quarterly
+publ
+math
+assignprob.zip
+central
+file
+exchange
+http
+leexchange
+last
+accessed
+caps
+robbers
+expect
+college
+masters
+thesis
+dept
+role-similarity
+functional
+prediction
+networked
+systems
+yeast
+proteome
+roy
+soc
+interface

@@ -1,0 +1,9 @@
+Row 1::Height 2::b-tree constraints
+Row 2::Height 1::each node has at most p tree pointers
+Row 3::Height 1::each node,except the root and leaf nodes,
+Row 4::Height 1::has at least[p/2] tree pointers(tree balancing
+Row 5::Height 1::constraint)
+Row 6::Height 1::the root node has at least 2 tree pointers
+Row 7::Height 1::unless it is the only node in the tree
+Row 8::Height 1::all leaf nodes are at the same level.in a leaf
+Row 9::Height 1::node,all tree pointers are null

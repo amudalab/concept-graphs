@@ -1,0 +1,7 @@
+Row 1::Height 2::open addressing
+Row 2::Height 1::all elements are stored in the hash table
+Row 3::Height 1::(can fill up!). i.e., n<m
+Row 4::Height 1::each table entry contains either an element
+Row 5::Height 1::or null
+Row 6::Height 1::when searching for an element,
+Row 7::Height 1::systematically probe table slots

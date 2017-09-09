@@ -1,0 +1,884 @@
+today we are going to look at the dictionary abstract data type 
+
+we also going to see how binary search is done what the analysis for binary searches and then we ill gone to hashing 
+
+
+
+see what is hash table how hashing is done see the collision resolution techniques and then in the next class we will follow up with more hashing techniques 
+
+
+a dictionary is an abstract data type that store stores element so that they can be located very quickly 
+so one example that we can have for a dictionary is we know want to store bank accounts right 
+
+
+
+now when you store bank accounts what is the key 
+what is the notion of the key 
+
+
+the notion of a key now is your account number right 
+so bank account has lots of information associated with it 
+
+
+
+but your going to access the bank account or data associated with that account by using the account numbers so the account numbers become the key 
+and said when accounts stores wealth of information  right 
+
+
+it could be your current balance it could be the name and address of the account holder 
+it could be list of transactions done in the last few days and so on and on 
+when you have to access any of the information you need the notion of the key 
+a dictionary is something that stores the elements 
+so the element when we talk of a element we will mean all all this additional information 
+and when we talk of key the key would be this account number this helps us access the particular information 
+so any application that wishes to um operate an account or to do any kind of operation on an account will have to provide the account number as key without that nothing is going to happen 
+
+
+
+so its basically an abstract model of a database 
+
+
+the dictionary is going to store this key element pairs 
+the key could be an account number it need not be an account number 
+for instance in the case of your 
+
+
+
+suppose i had student records then what would key be what be the most natural notion of a key here 
+your entry number which is not which is not an integer right 
+you have characters in your entry number and so on 
+anything uniquely identifies particular student or particular account becomes the key 
+and one of the main operations that is supported 
+
+
+
+is searching by key um what are the kind of methods that we have in a dictionary abstract data type 
+so this standard container methods that we seen for queues and stacks and so on 
+um one is size which tells us how many elements are there in the dictionary is empty whether the dictionary is empty or not 
+an elements which returns to us all the elements that are their in dictionary 
+then we will have these query methods right 
+so given a particular key find the element corresponding to this key no 
+in settings where you might have the same key associated with many different elements and one could have such kind of settings you ill see example of this later 
+then given a particular key want to return all elements who have that 
+you could have update methods 
+so given i might want to insert an element e which has a key k 
+i might want to insert that in to my dictionary 
+i might want to remove an element with an certain key 
+i might want to remove all elements which have a key k right 
+
+
+
+
+just what you would think as a standard thing
+but now you should remember the notion of the key and that is crucial for help in searching right 
+without without the key it will be very difficult for us to search to this wealth of data databases
+
+
+we will have a special element nill which will be return by an unsuccessful search what does that mean  that means that if i am searching for a particular key key is not there 
+
+
+
+there is no element with that key in my dictionary 
+then lets see my procedure we just return a nill 
+this is some special element 
+okay one thing we will keep in mind is that we only require comparison of keys for equality 
+
+
+so given two particular keys 
+we are not going to say one key is less than the other right
+one key is more than the other 
+this is not really require because all you doing is searching 
+searching for a certain key 
+so all that require is given two keys is you  want to say whether is same or not  
+there is no notion of [HINDI] right 
+
+
+for instance again for student record i could have my key as your name 
+in which case you know there is really really no notion of taking two names and saying name is smaller or one name is larger than other 
+so only operation we will be require is 
+
+
+comparing keys for equality right
+we don’t need any other any order on our keys really  
+
+
+
+
+okay how can a dictionary implemented 
+this is the abstract data type then what you are going to do in the next few lectures 
+
+
+
+is talk about how this particular abstract data type can be implemented 
+we are actually going to see many many different ways of implementing this abstract data type 
+you already have seen [doubt] um implementing this abstract data type 
+you could for an instance use an array 
+
+or you can use an linked list to implement dictionary right 
+can everyone think of how to use a linked list to implement a dictionary 
+
+
+suppose i had a student records right 
+how do you use a linked list to implement this dictionary 
+every node  would have the key which is the entry number and all the data’s associated with that particular entry number right 
+it’s a very inefficient way of doing anything 
+but it is way of doing things [noise] 
+there is no notion of a predecessor or successor that is true yes  
+[noise] so your question is that if we are using a linked list how would we organized it that is up to you 
+you could connect them completely arbitrary manner 
+you know the nodes could be in completely arbitrary manner or you could might want to organize them some way 
+but you know you could just throw them arbitrary in to the linked list and that’s fine linked list implementation is not very efficient but is an implementation right
+
+
+today we are going to see is whats called hash table and in later class we are going to look at binary tree red black trees avl trees b trees 
+these are all as mechanisms data structures to implement just this dictionary abstract data type which is a very critical very important data type and so we are going to do spending quite some time on this particular data type
+
+
+
+
+in this lectures 
+right in java 
+
+
+
+you have to abstract class you have an abstract class called java that util dot dictionary which lays of this specification you also have an interface java dot util dot map right 
+you can have look at this specifications are two classes on your own 
+
+
+
+before you get more in dictionary dictionary you understand what the abstract data type right
+before i get more in to it lets look at the problem searching 
+right this is the smallest side 
+but we will see 
+
+
+
+
+why i am making this aside how it will end up to the subsequent discussion to have 
+
+
+
+so the problem of searching is falling 
+you have given set of sequence of numbers that say your keys and databases anything 
+and i give you a single number
+this is my query right 
+for example i could have two four five ten seven are the keys in my databases and i query is five 
+what do you  have to return 
+return to me what is the position of this key in this databases where is it sitting
+right so index of the found number or null or or nil right
+so five sitting at position two 
+so you return two while here nine does not appear anywhere 
+so you return nil saying it doesn’t appear 
+this is the problem yeah 
+this is what we call searching 
+
+
+
+
+lets see how can we do that um 
+you are going to see a technique called binary search 
+
+
+i imagine all of you seen this before right 
+but again any case going to
+recall the technique and do an analysis of it 
+so the key idea behind your binary search is divide and conquer 
+this is an design technique we are going to see in future class also apply to different problems 
+yeah 
+so what your doing in divide and search is really to narrow down the range of elements in which we are searching for the query the key 
+
+
+
+and let me take you take you through an example 
+
+
+suppose these are the elements sitting in an array 
+right and the these elements have to be in a sorted order increasing or decreasing for binary search to work 
+suppose i am searching for an element twenty two what do i do in my binary search um 
+ill go an look for the middle element 
+look at the middle element 
+in this case it is element fourteen right 
+ill compare fourteen and twenty two 
+twenty two is larger than fourteen 
+so that means that twenty two lies in this databases would like to the right of the fourteen why is that because these set of elements are in increasing order yeah
+everyone is okay with that 
+so which means that the element twenty two has to lie between here and here 
+so we use this to variables low and high to indicate the range of part of the array in which we have to search for our element 
+initially we have to search for the element in this entire array 
+but after look at fourteen we have figure out that we should now search for the element only in this part of the array yeah
+so now we have searching for twenty two in this part of a array 
+once again wee have to repeat the same thing that is go to the middle element compare twenty two with this middle element twenty two is less than this middle element which means the twenty two has to be to the  left of this 
+which means that the now we are searching for the for twenty two this part of the array 
+once again go to the middle element we search for we compare this middle element  twenty two twenty two is larger 
+so if twenty two is their then it has to be in this particular location and it is their 
+so we can then say that twenty two is at this location and returns this information yeah 
+you all seen binary search before this is nothing new perhaps 
+
+
+
+so i am going to write a recursive procedure
+
+
+to do binary search this is just pseudo code and all of you can read and understand this quickly 
+imagine what is being done 
+once again we had notion of low and high 
+low was the lower end of the range
+high was the higher end of the range want to search 
+so procedure call is A’s array 
+k is the element key which you searching for low is for lower end and high is for higher end 
+now what is the first thing if low is more than high 
+basically that means that your invoking it something wrong 
+so you just return an null 
+the key is not there 
+else go to the middle element which is obtained by taking the average of low and high and check if middle element is the key looking for 
+if it is the key looking for then you just return recall that you have to return the position where you found the keys 
+so you return mid 
+if key is looking for less than the middle element then you know that you have to search in the left part of the array 
+the left part of the array has a staring location low and its ending location mid minus one 
+your are going to search in that your recursive call to that procedure and if you such were not the cases you come to this else and in this case what you have to do to search in the right part of the array which means the mid plus two high right 
+so this is how you can um you can do binary search small pieces of code 
+this is recursive 
+
+
+
+
+you can also write a iterative procedure for this 
+there are exactly equal 
+but i just so that you know how to may be from a recursive procedure to an iterative procedure 
+you understand this thing very well 
+i have just written down an iterative procedure also
+what is happening in our iterative procedure the low to begin with this one height begin with this n 
+this is element  one through n let say array and we doing same thing roughly except now we are putting out in a loop 
+right and updating high and low every time right
+so after this first step low becomes mid plus one because the element was larger than the middle element the element  was larger then the mid element low becomes mid plus one 
+and when the element  is smaller than the mid element high become mid minus one and we just go through this loop 
+till either we find the key in which case we just return the location we found the key or low becomes larger than high  yeah 
+
+
+
+
+in which case you come out from this loop do while loop 
+
+
+and return it 
+everyone okay with this 
+any questions from this point 
+so i just shown you how to write binary search in two different ways write a recursive procedure you can write a iterative procedure  to do the same thing 
+
+
+
+how much time does binary search take [noise]
+log n base two right you all know that why it is take n log n base two time [noise]
+exactly the size of the problem is halved at every steps 
+
+
+range of that items we have to search n is halved after one comparison each comparison right
+so if essentially the range of the elements in which i am searching for my key is n after the first comparison it goes down to n by two 
+after the second comparison the range goes down to n by four and so on and on right
+after logging comparison the range would go down to one 
+and when the range goes down one either it is that element or its not that element and you can stop 
+you will roughly require log n base two comparison yes
+now if you have an array implementation that is your elements sitting in an array then you can go to which ever location you desire in constant time 
+
+
+
+right so then you can do the entire thing each of these comparison can be done in one unit of time 
+
+
+in constant time and so you can do the entire process in only order log n time yeah
+when you don’t write any base for log n we ill understand this class that is base two 
+
+
+
+
+
+suppose the numbers in that array were in not sorted order okay 
+here earlier till now we assume the numbers were in 
+
+
+
+
+increasing order 
+you can do binary search even if the numbers were in decreasing order 
+but if they were in sorted order you can do binary search
+if they were not in sorted order what can you do 
+suppose you still  searching for a key k right 
+there is nothing else you can do but to go throw all the elements go throw entire array one after one element element after the other and compare your key against that 
+
+
+
+that’s that’s the only thing you can really do yeah 
+so the worst case time then becomes order n right 
+on an average also if your lucky you might get the element initially at the beginning only of search 
+
+
+
+
+but on an average  you will get it no if may be first time you got it at the very first position some other element you searched you got the third position 
+so in an average your going to still spend order n time right 
+this is really best you can do if the array if sorted 
+you can see there is huge difference coming already right
+the sorting if you were to sort the element to begin with then you can search much more quickly right 
+
+
+and this is the small pseudo code which is just saying that you all you can do is run through the array 
+one element at a time and compare your key against against the element in the
+ array 
+
+
+
+
+okay so now that ends my aside searching and i am going to back go back to my dictionary um 
+and i am going to look at setting were you are asked to implement caller id facility for a large phone company right 
+various company and what it want to do is given a particular phone number 
+it wants to so what happens in a caller id facility 
+when a call comes in based on a phone number you can figure out the name of the 
+person 
+
+
+
+whose making the call yes um 
+so that’s what company want to so 
+given the phone number you want to return the callers name okay 
+
+
+lets assume that our phone numbers are all digit numbers as this case in delhi right 
+so the range of phone numbers would be ten to the eight minus one 
+so hundred million that’s of million phone numbers 
+of course the number of different phone numbers is much less than this right 
+this is the range his hundred million may be delhi is about million phone numbers 
+that’s because all numbers are present 
+so the n phone numbers and um n is much smaller than r 
+right you understand the difference n and r 
+r is the range which is hundred million because the phone numbers are eight digit numbers and n is the actual different number of elements in the in your database 
+and you want to do this efficiently as possible 
+everyone understands the problem 
+
+
+
+okay so use an unordered sequence you do this what does this mean that means its suppose these were the phone numbers have not put down the eight digit numbers but let say these were the phone numbers 
+you could just put them in a list yeah 
+in any arbitrary order and now how much the time searching take order n 
+does everyone understand why right 
+it because you cannot do anything else but two traverse through this list 
+and in the worst case you might have to go through the entire list and so 
+
+
+ 
+
+it will take order n time to search for a particular phone numbers 
+so given a particular phone number 
+if you have to return the name of the  person you will have to take up roughly the order n time you will be able to do that right 
+
+
+and this is the unordered list right 
+so there is no particular order 
+so removing an element 
+so how does one remove an element 
+suppose particular person besides to um for go his connection disconnection right
+
+
+
+you have to remove that particular data record from this list what would you do 
+you would once again search first first search where it is then you will remove it 
+right searching and removing since searching itself taking order n time removing also take at least that much time you can actually 
+once you found were the element  it is then you can do some some small modification to do entire thing an order n time 
+
+
+inserting why does inserting take only constant time [noise] we say unordered list 
+you don’t  really care where you putting the elements  
+you might itself  put at the first location yes inserting takes very less time 
+so its not clear whether this particular implementation is good for this application 
+
+
+
+
+but they are certain applications in which this way of doing things is failable and one such application 
+
+
+were you maintain log files right 
+so when you have to maintain some kinds of log file for instance any kind of you know transactions are happening database try to maintain log files 
+
+
+so that if there is any problem you can figure out 
+you can revert the transaction whatever is done 
+or for instance in your systems you know 
+um for system administration you would keep track of various activities that for taking what happening in your system maintain this maintain log of them 
+so for these log files 
+
+its very rarely that you need to do searches or removals but you need to do add data frequently to your file right
+every time some thing happens transaction need to add 
+
+
+
+
+insertions are very frequent but searches and deletion are much rarer 
+and in that case this implementation is good because 
+
+insertion takes only constant time right 
+really you have to see between these three operations right 
+which is the operation which is being performed more frequently to decide what type of n a data structure used to implement the abstract the dictionary data type 
+
+
+
+
+you can use ordered sequence also
+in which case lets say the element put them in increasing order of the key right 
+know how much time does searching take log n 
+log n provide you had some kind of direct access mechanism into this thing 
+so used in array some such thing let you go to whichever element were looking for whichever element you want to go to yeah 
+searching takes log n time 
+inserting and removing will take order n time 
+if because all of these putting in input an array 
+then if i know 
+
+
+
+so since have to insert them in if i have to maintain the sorted order then have to insert the element particular location if i have to insert  at a particular location have to shift everything that is right of the element yeah 
+and so insertion will take order n time inverse case similarly deletion may you will move it to back 
+we seen examples in previous class [noise] right
+we first have to search 
+so your question is why does inserting take order n time 
+so we have to first search for way the element has to be inserted and once we know the position is then recall this is an array 
+all the elements put in an array right 
+so we have to move 
+we have to create space there 
+how can we create space their 
+we have to move everything that is to the right of the that element 
+we have to move it once step to the right right 
+and in the worst case we might have to move order n elements to the right  
+[noise] yeah what is n order plus log n order n right 
+so you have to recall your big oh notation so order n plus log n is order n 
+
+right so this would make sense when you have to do lot of searching in your searching but not so many insertions and deletions from dictionary 
+
+
+
+
+this one other way which will be useful for our subsequent discussion and that is as follows 
+say i take an array of size ten to the eight 
+right huge array and then what do i do 
+
+
+
+well 
+
+
+ankur had a phone number of “nine six three five eight nine zero four “ 
+so i go to location “nine six three five eight nine zero four “ in the array and put ankur name there whatever is the additional information associated with that in that array at that location right 
+[noise] at that very position which corresponds to ankurs phone number right 
+now all operations insert search and delete will now take only constant time 
+is that clear to everyone why 
+
+
+
+i have just to insert a caller id capability what does that mean 
+given a phone number
+i want to know who is the person 
+so given the phone number just go straight in to the array that location and retrive the name 
+given a phone number i want to let say i create a new phone connection 
+so i take the phone number and go to the particular location put the name of the person who got the connection 
+similarly if i want to delete a particular phone connection 
+i just go to the particular location and i remove the element yeah 
+so all operations take only constant time 
+
+great what bad with this implementation your wasting lot of space yes so its not that you cannot do all of these operations very quickly you can
+but here spaces is turning out be an issue right 
+
+
+
+so now we are going to use what is called hashing okay we are going to use hash table which will tell us do the things fairly quickly i have said order one excepted time here 
+it will not take two much spaces and lets see what this idea is 
+so what we are going to do is recall the what was the problem with the previous example in the previous in the previous technique in the previous technique we had hundred million phone numbers so we had to create an array of size the hundred million yes 
+but they lets say only one million users 
+
+
+
+
+so most of the array was getting wasted is nothing in their 
+but suppose i could create a smaller array with let say only one million locations in it and mapped those one million users two locations in that array right 
+that’s what we are going to do 
+lets say 
+
+in a hypothetical setting they were only small number of users 
+ i was only trying to keep the phone number of five of my numbers right but still i want to do fancy 
+so i create an array of five elements right 
+and what do i do 
+i take ankurs phone number and i compute and i compute this value modulo five which is the size of my um [doubt]  
+so i get a number between zero and four yeah 
+zero one two three four when i compute this quantity modulo five i get either zero one two three or four depending upon what i get i put 
+so in this particular case i would get four 
+so i put ankur at location four in my array right 
+so i am not using too much space [noise] and may be still get away with constant time for insertion and delete and lets see whether we can whether we cannot do that 
+
+
+
+so let me take another example just to make sure that you understand what the idea is 
+
+so lets say keys are now not for numbers 
+but entry numbers are of students in this class 
+right 
+so your entry numbers looks something like this “two zero zero four or three or two” and then you have these two characters and then you have another five digits end of this 
+yes there are about hundred students in this class yeah 
+the range of this numbers is huge right this is infact i don’t even know what the range is because what different set of values they can take 
+but i would i like to create a table of size only about hundred because there only hundred people in the class 
+why i should spent much more space than that 
+and lets let me pick up a hash function 
+so this function which was which i was using the previous example was this modulo five function is also called as an hash function right 
+i am now going to pick up a hash function which is let say which does which does just the following takes the last two digits of your entry number 
+so in this case “two zero zero four c s one zero one one zero “ would get mapped to location ten 
+you just pick up the last two digits of the entry number right
+so that’s what i am going to do
+i am going to take each one of your entry numbers 
+
+
+
+
+i am going to look at that last two digits and i just have a table of hundred entries 
+table of size hundred and i am just going to put you depending upon last two digits are 
+what is the clash suppose i had another person with this entry number 
+
+
+two zero zero four c s five zero three one zero 
+i do not know if they are in this class they could be another person also right 
+now the problem is these two going to the same location number ten 
+right 
+we will come to this problem but if this problem not arise then did you see we are in very degrade shape 
+then you can do your insert delete and search all in constant time 
+because it was very much that array implementation that i showed you right 
+except that it doesn’t waste also all that space 
+
+
+
+yeah okay so lets see what what we can do with the this problem 
+how we can address this problem 
+if two elements are getting mapped to the same location in our hash table what is it 
+this is called the collision 
+
+
+right and so we have to find a way of addressing  this issue 
+so how do we do deal with two keys which mapped to the same spot in our hash table 
+so we use the concept called chaining 
+right there are many ways of addressing this issue 
+
+
+
+
+and today in todays class only going to look at the very first technique simplest technique called chain 
+we are going to do the falling 
+
+
+we are going to this is my hash table 
+i am not going to put the elements in this hash table 
+but i am going to have a linked list starting at each of this location 
+and i am going to put the elements in this linked list in this right
+suppose this is my hash table had only five locations in it 
+so may be i was just using the hash function which was computing which was taking the key and computing modulo five are some such thing right 
+and so if two keys keep getting mapped to this same to this location two or more keys were mapped to this location 
+ill just keep adding them to this linked list 
+so as you can seen from this picture 
+it was the case three keys getting mapped to location two 
+and one key was getting map to location four they were four no keys getting mapped to location one and three yeah 
+so this doesn’t address the problem of collision 
+but what other problem does it create now 
+
+
+
+
+[noise] so why we have resolve the collision problem and we we are not able to do things in constant time any more right 
+worst case worst case will become in the worst case will become 
+in the worst case what might happen 
+in the worst case what might happen [noise] 
+
+
+
+is all the keys get mapped to one location in this hash table 
+and if all of them get mapped to the same location in the hash table 
+then your data structure reduced to a linked list data structure which we know as the worst case time of order n for search insert search and delete 
+insert is still constant   time 
+
+
+
+[noise] yes so your question is whether each of the nodes in the linked list will contain both the identity in the phone number caller id example that that will be the case 
+each node will have both the phone number but all data’s associated with the person who sit there 
+so this is quick recap how we are going to do the find insert and delete 
+
+
+
+
+of an element 
+for all of these three operations you have to do essentially the same thing 
+you have to use your hash function h to determine were that key is in this table right 
+now we have seen two examples of hash functions 
+in one case we said we ill just take the key modulo five 
+in the other case we said we just take the last two digits of the key yeah 
+but they could be many many different kinds of hash function 
+and in the next class we are going to see what are the different kinds of hash function that you typically use [noise]
+
+
+
+
+the last two digits can also be regarded as modulo hundred the reason i did not write modulo hundred hundred that was not an integer at all your entry number it had some characters in it yeah 
+so your going to use your hash function to 
+
+
+find the position of the key in the table 
+then your going to go and way of doing your search or insert or delete your going to go and do that in that linked list associated with that position yeah 
+now there are options that you have here 
+you might want to maintain these this list in a sorted order 
+you might want to keep it in unordered right
+if you want to maintain in it in a sorted order then insertion is going to take more than a constant amount of time
+if you want to keep it in unordered then insertion is going to take only constant  amount of time 
+because you can just inserted at the very beginning or at very end of the linked list 
+
+
+
+
+[noise] if you want to insert an element at the very end of linked list 
+
+
+
+then you don’t need to traverse the entire list reach the end 
+you can always have another pointer which always points to the end of the linked list
+and use that to update 
+although there is no reason why you want to insert at the end 
+suppose want to insert at the end you could also do that in constant time always right 
+by maintaining one pointers two pointers from here 
+one going to the front of this linked list and one going to the tail of the linked list use that pointer to add an element at the end of the linked list 
+
+
+
+
+[noise] you can do it in so ordering if you want to keep it ordered 
+we are not saying that in the hash table have to keep anything ordered 
+if you want to keep it ordered you can do whichever if you there is a notion of order on your keys you can use that at notion to order the elements 
+so an element with key k is 
+
+
+is store in the slot h of k what was h h was the hash function h of k is the value of hash function 
+and what is this hash function doing the hash function is mapping the universe of all keys called that U to slots of the hash table right 
+so if the hash table was [noise] size n 
+so it is mapping it’s a function from U to the universe to zero through one m minus one 
+we are going to assume for the rest of the discussion that the time to compute the hash function for any key given key k is a constant time right 
+because quite often we just have to do simple arithmetic operation to compute the value of the hash function 
+so we are going to assume that it time taken to compute the hash function is independent of the number of elements in the table array 
+
+
+
+[noise]
+as far as the choice of hash function concern we are going to see in the next class what are good choices of hash function right
+lot of research has done in this 
+we see what are the kinds of hash function that people typically use 
+i just gave you two simple examples of hash function 
+so so as to motivate the concept 
+okay what is the good hash function this should be a good hash function 
+
+
+a good hash function is one which tries to distribute the keys uniformly over the  table right
+it should not map all the keys to location one location two anything such thing because hen the then they would be too many collisions your data structure would start looking more and more like a single linked list right and that’s not what you want 
+so you want to have a hash function which distributes things uniformly over the table right 
+why uniformly so that each of the lists is small 
+
+
+
+right so an idea hash function would do something like following 
+take an element and it lets say i have table of hundred locations 
+it will pick at random one of those hundred  locations then throw the element there right 
+this kind of it shows every every location would have roughly the same number of elements right
+but this is not a hash function what i just said you cant have a hash function which takes a key and puts it a random location 
+why this is not a hash function 
+[noise] because when i am searching for the element where i am going to go and look right 
+i don’t know what random location it picked at that point 
+so while this is an ideal hash function its not really a hash function right 
+so but for our analysis we are going to assume such a hash function we are going to assume that hash function is just essentially does the following that it takes element and throws it randomly uniformly with same probability in one of those locations of the table   
+right we ill call this as simple uniform function 
+
+
+we are going to use this for analysis 
+ill use an another term is called the load factor of the table which is just a number of elements in the table divided by the number of slots the size of the table yes 
+and we will call this load factor alpha 
+any questions none 
+
+
+
+okay so what it happens when we are trying to search search is unsuccessful 
+right 
+so which means that i took the element i computed the value of the hash function 
+i went to the particular slot in the  hash table 
+i ran through the linked list 
+but i did not mind the elements  
+
+
+
+ i went through the entire linked list and did not find the element at all yeah 
+what is the so how much time you spend
+i spend time propositional to the size of the linked list that i have to go through right
+because i said computing the hash function takes constant time 
+so you didn’t take any time to go to the right linked list 
+but once you have went to the right linked list 
+you still have to step  the entire linked list follow pointer by pointer till you reach the end 
+the time is propositional to the size of the linked list 
+and what is the average size of the your linked list right
+if there are any limits i have thrown in my table and m is the number of slots and if i had this nice hash function simple hash function which was essentially distributing the things uniformly then on an average you would except that each linked list is of size n by n which was the load factor of the table right 
+so the excepted number of  elements that need to be examined 
+
+
+is alpha and so the total search time where i am using this one two denote the time taken to compute the hash function is roughly one plus alpha right 
+so this tells you that you know if your alpha lets say only a half then you know excepted search time would be roughly a constant okay
+this is excepted under the under this ideal hash functions 
+
+
+
+you can always create a bad hash function for which excepted the time taken will be order n right 
+ill grant you that but if you have a good hash function yeah [noise]
+yeah you can of course ill just just to make sure that 
+
+you understand the there is also a time that is spent in computing the hash function at put this one here 
+[noise] 
+
+
+
+
+we would not want to have a hash function for which every thing is getting mapped to one location right
+because that’s a linked list why would you want to do something like that at all right
+so we so this is again brings back to the same question the efficiency of this data structure relies critically on the hash function right and we ill see as i said we ill see what are the good hash functions in the next class  
+hash function designing hash function is much more of assign more of an arts then assigns 
+you have to really look at the data that you have to be able to do design a good hash function [noise]
+when i am going to show you in a next class some principle is behind hash function 
+what kind of hash functions one should use right 
+but there can be no their can be no theorems says that you know this is the best hash function i have you should always use 
+what happens when we make a successful search right 
+that was an answer for successful search 
+but when i make a successful search what is that mean once again took the key computed the value the hash function went to the appropriate linked list 
+and then i am walking through the linked list 
+but i don’t have to reach till the end of the linked list 
+some point in the middle itself i may able to find the element yes right
+now how many how many elements did i have to traverse in this process
+[noise] the position at which it was found exactly but how do i know 
+so what is the excepted time i would take overall by excepted time i take um excepted time i mean you know if i if i search all the various elements that are there in the database 
+what is the average time i would take to search all those n elements that are there in the database right 
+so lets lets argue it following 
+you can you can have many different ways of arguing it but lets do it in following way
+
+
+
+so  suppose i was searching for the element which was the which was the ith element which was inserted in to my database right 
+suppose the element i am looking for the key i am looking for was inserted in to the database inserted in to the hash table when there were only nine elements right
+and so this was the tenth element 
+so if it was the tenth element that was inserted 
+
+
+
+
+the excepted length of the list in which it was inserted was nine over m that what we argued just now [noise]
+exactly the number of slots m  is the number of slots in the hash table right 
+
+
+
+in the case of successful search excepted number of elements examined is one more then the number of elements examined when the when that particular element was inserted 
+when the tenth element was inserted i equals ten let say tenth element was inserted then i went through the linked list in which the element was inserted and append the element lets say at the very end 
+
+
+
+
+so i had to till compare that element with all the various elements yeah 
+so when i insert the element basically its same as saying that the number of comparisons i have done is one more than the number of comparisons i would have done in a unsuccessful search 
+we have to go throw the entire linked list when we are inserting why do we have to go through the entire linked list when we are inserting just to make sure the element is not already their 
+so in any case have to make sure that is not their then so so we have to go through the entire linked list 
+so we might as well inserted at the end 
+we could also inserted at the beginning  but it same thing right
+one could now have a analysis which looks like following
+
+
+
+
+
+is this is not critical you can all prove it in different manners but now what i am doing is i am looking at the element one through n their were n elements in my database 
+when the ith element was inserted then the excepted time required then when the ith element was inserted then the linked list the excepted length of the linked list at the end of it which it was inserted roughly i minus one by n right 
+this one lets say for our hash function computation 
+this is roughly the time excepted  time required to insert at the ith element and now we are just summing this quantity gap over all the n elements taking the average right 
+and if you just go through this math you will get something like this following
+and you know if many of you could  have figure this out on your own also 
+the average time would be roughly the length of the the excepted length of the  list is divided by two 
+whenever we doing average time computations for when i  said you know take a linked list and what is the average time to search for an element 
+you said you know well i am might have to go to till the end of the linked list or might i am find the element right at the beginning on an average ill take half half the length of the linked list 
+so your seeing similar kind of behavior here 
+
+this is the very low order term 
+so you can just ignore that 
+so what your seeing is something like one plus alpha by two 
+so we don’t really have to go through this math 
+but you can also follow it this more intuitive one could just say the average time for successful search would be like more one plus alpha by two  right 
+so again its its order one plus alpha this two is not important yeah so both for successful successful search we are taking a similar kind of a time right 
+so what should alpha b 
+
+
+
+
+
+what should be a good choice of alpha right
+we would like to keep the size recall 
+
+
+
+
+alpha was the load factor of the table 
+the number of elements in the table divided by the number of slots in the table 
+so if i pick
+
+
+the size of hash table to be roughly the number of elements if i am going to inserting the hash table 
+then alpha would be roughly a constant roughly one yeah and so all your searching insert and delete would now take constant amount of time 
+in the excepted sense 
+in the excepted sense i am meet when you have this kind of an ideal hash function which you cant really have 
+
+
+
+
+any questions till this point 
+[noise] 
+okay what if we do not know your question what if we did not know how many elements we have to insert then what should we do 
+what size of our hash table should be start off with 
+any any suggestions on that 
+[noise] exactly we used a concept of growable stack right 
+so same idea used in many of this data structures 
+you start with some thing small and if the number of elements you inserting becomes so large that the sizes of linked list is become very large then it perhaps time to move the entire set of element in to a larger hash table 
+[noise] right either you have to compute the new hash function or we ill see how to modify these things 
+how you can do small modification to the hash function 
+so that you can now put it in the larger table right
+so that one should design your hash function keeping this in mind you might have it go from a smaller table to a larger table to even a larger table so on 
+[noise] 
+if the number of hash tables slots were propositional [student:to the number of elements] was propositional to the number of elements [student:wont there be space] 
+your question is wont there be a space problem with number of hash tables slots was propositional to the number of elements right 
+it depends upon what this big oh hiding here 
+
+
+what i am saying is lets say take the number of hash tables slots to be equal to the number of elements right
+so there is no problem here 
+this hash table 
+suppose n was a thousand and m was also a thousand 
+this hash table can accommodate any number of elements 
+it not just that it can accommodate only thousand elements why is that 
+because in the linked list you can attach any number of 
+
+
+
+elements that come right is just that performances of the hash table deteriorate if you had ten thousand elements coming because then each linked list would because some  size ten  roughly may be more may be less right 
+but on an average linked list length would be ten 
+in which case it make sense to be move to a larger hash table right 
+if you keep if you know that the number of elements is only
+
+
+
+
+is is a thousand and you create a hash table of size ten thousand right 
+then there is a wastage of space 
+so you should always start with a small hash table and if need be grow it rather than starting very large hash table and having wastage space are any other questions [noise] um  i will end this class here at this point and any other questions i can take offline right 
+
+
+
+
+
+
+so in todays class we saw binary search which many of you seen before we also saw little bit hashing and we saw the dictionary abstract data type 
+in the next class we are going to continue with hashing c concepts of good hash function and see other ways of resolving collision okay  

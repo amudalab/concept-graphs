@@ -1,0 +1,822 @@
+
+Lecture # 14
+
+                      Query Processing and Optimization
+
+hello and welcome to another session in database management systems we have
+[noise] in one of a previous sessions especially when we talking about a
+storage structures and index structures we talked about what is a biggest
+challenge facing a databases such as yesterday
+the challenges is no longer the problem of storing data or of designing
+that can store larger and larger amount of data
+in fact we have very small devices today that can um that can store huge
+amounts of data devices that you can probably put in your pockets um are
+something which which you can wear inside your watches and so on um
+which can store something like two giga bytes of um of data therefore the
+the problem today is not not primarily of storage of data storage of data
+has become much more um the surface area required for storing data has
+become has shrunk in tremendous proportions and the cost of storing data is
+also fallen tremendously over the years
+however this fall in cost or this affordability of massive amounts of data
+storage has resulted in um a new problem or a new challenge the challenge
+is that are of retrieval of data
+how efficiently can we retrieve data um among the huge amounts of data that
+we have stored we also saw how the um definition of very large databases
+has been changing over the years
+today in um ten years ago very large databases would probably have meant
+hundreds of mega bytes of data probably of few giga bytes of data
+however today when we talk about very large databases its we are talking
+about databases that are easily into peta bytes of data ten power fifteen
+bytes of data
+so we saw um we had mentioned these things when we trying to motivate the
+um the use of index structures or the auxiliary files
+those are files containing metadata that can quickly point to that can help
+the application program or um the query to quickly retrieve the required
+data elements form the database
+there is however um another aspect of the story um using index structures
+alone does not help in efficient retrieval the other crucial element in
+effective retrieval of data and making a data or making the difference
+between usability and um unusablity of a database is the is a query
+execution strategies or the query execution and optimization strategies
+this is the topic of this session and the next few sessions that we are
+going to consider
+query execution and optimization um[noise] without it goes without saying
+is an extremely important aspect of database management and um this is what
+is going to determine whether a particular query is going to be useful at
+all or not
+if a particular query execution um strategy um takes um takes enormous
+amounts of time to to retrieve a particular um to retrieve a data element
+that can make the difference between whether the query is interactive in
+nature or whether the query is is batch in nature
+that is whether you have to whether the database will have to say that
+please come back after two days for for your query results and so on
+[noise]
+so let us look into what makes up a query execution and query processing
+and optimization
+[Refer Slide:  05.07]
+                                    [pic]
+
+query processing as we said before effective query processing or efficient
+query processing is crucial for good or even effective operations of
+database
+a database can be rendered unusable if a good query execution strategies
+are not used
+let us do a quick calculation suppose i have one giga bytes of data
+um[noise] and one giga byte as you know is thousand mega bytes of data
+even it is safe to assume that for for most of the server class pc's today
+we have data transfer rates of something like one mega bit one mega bytes
+per second
+um well it is usually one mega bit per second let let us consider that it
+is one mega byte per second or eight mega bits per second
+so this if i have to access or if i have to scan through a relation let us
+say i have a um i have a query that select query which which requires me to
+scan through the entire relation of one giga bytes of data that means it
+would take about thousand seconds for me to scan the entire relation
+because it is of a one giga bytes of data
+now consider a query which um which is given on two different tables each
+of one giga byte of data so there are two giga bytes of data that is there
+in the database
+now a bad query execution plan would would actually try to compute a
+cartesian product of the two tables before trying to return the um return
+the results that we required
+now if i have to um if i have to compute the cartesian product of one giga
+bytes of data times one giga bytes of data where each axis of the table is
+going to take me thousand seconds then it is going to easily take me ten
+power six that is one million seconds just to compute this cartesian
+product
+which is clearly unusable and which is clearly um ineffective as far as an
+interactive response time is concerned
+therefore efficient query execution or um trying to rehash a given query in
+in a more effective form
+for example in this in the example that we just took up the query might um
+might be able to figure out that what the user really wants is a natural
+join for example or or some kind of an equi join rather than a cartesian
+product
+if it is able to figure that out um then then probably you um you would get
+a response in a little more than a thousand seconds which which is much
+better than a million seconds um for for query execution
+and query processing depends on a variety of factors and not all of these
+factors are under the control of dbms what are this factors that um that
+can affect query execution let us take a few examples one of the factors
+that affect query execution is for example whether the storage media is
+fragmented or defragmented
+if the storage media is let us say fragmented um if you remember what is
+meant by fragmented storage of in a fragmented storage contiguous block on
+on the storage media belong to different files now if i have to access a
+relation if i have to scan through a relation
+let us say um in response to a select statement um and these blocks are
+divided or distributed all across the storage medium then the the response
+time would be increased considerably for this query
+so not all query execution or not all factors that affect queries or query
+execution times or under the control of the dbms um the the example that we
+took right now is not purely outside the control of the dbms also this is
+because several different several kinds of database management systems
+would override the operating system um override the operating system
+mechanisms and then start to deal with devices directly
+for example they they create their own file system that can ensure that um
+the file system is never defragmented is never fragmented at all and so on
+therefore um some um high end database management systems would try to
+overrule the the underlying operating system and try to access  the
+hardware directly in order to speed up query execution and um and speed up
+or decrease response times
+and um as we saw earlier insufficient or incorrect information about
+factors that can that um  that affect query plans can lead to vastly
+ineffective queries
+for example if a query execution plan estimates that the size of a table um
+is  let us say few kilobytes but the size of the table is actually a few
+giga bytes then whatever execution plan that it uses for um for a few
+kilobytes will not work for for the few giga bytes table because the entire
+strategy changes when the scale of of the problem changes um a few mega
+bytes can probably be or few kilobytes can probably be stored in main
+memory whereas a few giga bytes cannot be stored in main memory also
+and query executions usually use what is called as catalogs we shall be
+looking into catalogs in more detail in a later session um they use what is
+called as query cataloging that help in estimating several factors or
+several infor several kinds of information about the database
+this this can include the the size of um the size in terms of bytes of a
+particular table size in terms of um tuples or the number of tuples in a in
+a table and estimate of the number of tuples and um and estimate of the
+number of distinct values in a tuple that can help in building indexes for
+example
+query catalogs hence play a very crucial roll in deciding the query
+execution plan that is ultimately used on the database management system
+how does a typical um process or query execution process or query
+processing um process look like the typical steps in a query execution um
+process is quite similar to the execution steps in typical compiler um the
+way a compiler complies a given high level language construct into machine
+language and executes it
+[Refer Slide:  12.08]
+                                    [pic]
+
+we start with the user description of the sql query the sql query is is
+then read and parsed that is the sql query is then read by a query complier
+that performs scanning where um where lexical analysis is performed that is
+the the sql query is read character by character and then tokens out of the
+characters are recognized and then a token stream is given to the parser
+which in turn parses the query constructs a syntax tree and then the the um
+and then the tree is validated for semantic checks
+for for types and interoptability and and so on and once this is done an
+intermediate form of the query is is generated and which is called the
+logical query plan tree this intermediate form of the query is usually a
+relational algebra representation of the sql query
+now once this intermediate query tree is generated this um a series of
+heuristics and cost based searches are used to rewrite this tree or rewrite
+this query execution tree
+in order to make it more optimal or in order to make it um in order to use
+a better equivalent query for whatever execution whatever query has been
+requested by the user
+[Refer Slide:  13.33]
+                                    [pic]
+
+this intermediate query representation is then given to the query optimizer
+which in turn generates the query execution plan that is it rewrites the
+tree in order to um in order to reorder few of the operations and then um a
+final physical query plan tree is created
+we shall be looking into a query optimization strategies in a later session
+however there are optimization strategies can be broadly divided into
+either a heuristics based optimization strategy where which are essentially
+some kinds of thumb rules which which have been known to yield better
+strategies for for query execution
+and then there are what are called as cost based optimization strategies
+where an estimate of the cost that is required to execute one query plan
+against the other is used in order to um in order to um utilize the best
+potentially the best query execution plan
+the physically query execution plan is written in a separate language not
+necessarily the machine language but um there is a separate language that
+uses it own construct or its own um algebra for [noise] for representing um
+what are called as internal queries
+that is the the query that are actually performed on the storage structures
+on the physical files that are stored onto disks
+the query execution plan and then given to the query code generator which
+either executes the query as it is that is um starts giving results
+directly which which is called the interpreted mode of query execution or
+it generates machine code um which is called the complied mode of query
+execution
+which can then be used to actually perform the um physical operations
+required to answer the query
+[Refer Slide: 15.31]
+                                    [pic]
+
+the code um the machine code that is generated in a in a compiled um mode
+of query execution is then given to the run time database processor which
+executes the code and returns the query results
+[Refer Slide: 15.49]
+                                    [pic]
+
+in these steps of query executions two aspects are important and
+interesting these are the intermediate form of the query and the physical
+query plan
+the intermediate form of the query as we mentioned before is usually a
+relation algebra equivalent of the sql query that the user has given
+the intermediate form of the query is in the form of tree structure which
+um which is also called as an expression tree where relational algebra
+operators are are on the non leaf nodes and and the actual domains form the
+leaf nodes that is the actual relations on which query is are executed from
+the leaf nodes
+the tree is the then rewritten based on a set of rules that are derived
+from either heuristics or cost based optimization to to um generate
+generate an equivalent tree which produces the same query but preferably in
+or hopefully in much lesser time with with much lesser overheads
+the physical query plan is written in a separate language which has it own
+construct and that is either interpreted or complied into machine code
+let us have a look at what constitutes the physical um query execution
+plans and what are the constructs that make up this physical query
+execution plan
+the logical form or or the logical query execution plan or the intermediate
+form we shall be looking into greater detail in later session
+[Refer Slide: 17.24]
+                                    [pic]
+
+the physical query plan comprises of a basic set of operators that define
+the language of physical query execution now what should this operators be
+obviously the operators at the lower level or or the inner query or the
+internal query should contain all the operators of relational algebra
+itself
+that is if the relational algebra says select on this condition the
+internal um language should also be able to support um an operator that
+that can select a particular tuple based on a set of tuples on this
+condition
+however on addition to the relational algebra operators there are several
+other operators which talk about a physically accessing tables and um
+iterating through them um or or several other physical operations
+note that um relational algebra itself does not concern itself with the
+physical implementation of the database
+[Refer Slide: 18.23]
+                                    [pic]
+
+let us have a look at a few candidate physical query plan operators and see
+how they work that gives us a flavor of how does the physical code actually
+look like or or the query execution code look like um
+the first operator that you are going to see is the table scan operator
+a table scan operator has the name suggests just simply scans a particular
+given table that is it scans and returns an entire relation R or um the
+operator can be parameterized in the sense that you you can give certain
+conditions to the table scan operator that scans a given relation R and
+returns only those tuples that satisfy the given condition or the given
+predicate [noise]
+the main operations that are performed by table scan is to read all blocks
+note that blocks is the physical um component of um in terms of which the
+records are stored
+so a table scan contains a code or or the operator for table scan contains
+code by which blocks belonging to a particular file or or a particular
+table are read in sequence um and the block is and the table is returned
+there is also an index scan operator that makes use of an index file in
+order to read all blocks of a data file in sequence
+[Refer Slide: 19.50]
+                                    [pic]
+
+another operator that is used usually in the physical query plan language
+is a sort scan operator the sort scan operator scans a relation R and sorts
+this results before retuning it to the higher level whichever called it
+um if um if the relation is already stored in a sorted form and the sorting
+is also required on the same ordering attribute
+no sorting needs to be done separately by the sort scan operator and if the
+relation is small enough to fit in memory then sorting can be sorting can
+be done directly in memory
+however if the relation is too big to fit in memory then external sorting
+and external sort merge techniques have to be used in order to sort the
+given record
+[Refer Slide: 20.41]
+                                    [pic]
+
+the next um physical query plan operator that um that is quite frequently
+used is what is known as the iterator iterator is an important concept in
+in managing um or in the physical management of records
+if you have probably let us say programmed in um a done programming  c
+plus plus let us say using the standard template libraries on on unix
+environments or or the active template libraries on Microsoft environments
+you would have come across the the term iterator in several places um what
+is iterator do the iterator is um is a operator that that functions on an
+operand which is a composite operand
+for example an iterator operates on a hash table or a linked list or a tree
+or something like that um so the iterator operates in a way that iterates
+through each element that form up forms the composite operand
+that is it starts from the first element and it comprises of um GetNext
+function which can get you the next element until you reach the end of the
+um end of the operator or the data element
+so iterators typically contain three different functions as shown in this
+slide here
+the first function open um would will open the iterator object that is the
+the composite object on which the iterator function has to be performed
+the next function called GetNext is going to get the next logical block
+that or or the next logical record or next logical node or whatever it is
+in this composite object um that has to be return
+
+
+and then the last operator called close closes control on the object
+[Refer Slide: 22.35]
+                                    [pic]
+
+this slide shown an example of the iterator function um example of a table
+scan iterator that is um how we can implement the table scan operator using
+an iterator um as the slide shows there are three different functions that
+have to be implemented
+Open GetNext and Close which is shown in the next slide here the Open
+function let us say given um relation or or a given file um let let us
+consider relation to be stored in a file or a table to be stored in a file
+[noise]
+the open construct initializes two variables um a variable called b which
+which points to the first block of the relation and a variable called t
+which points to the first tuple in inside b
+the GetNext function just iterates through this variables
+that is um before we are go in to GetNext function
+let us try to um ask ourselves what should the GetNext function do
+ultimately for the programm which is calling the table scan iterator all
+that is required is the the set of tuples one after the other
+the GetNext function um however has to deal with two different um two
+different things the blocks that is the physical data stores and the tuples
+that is the logical data stores
+now tuples can be iterated within blocks but when a block is exhausted the
+blocks themselves have to be iterated across the files
+that is the next logical um block in the file has to be chosen um so the
+GetNext function um performs precisely this um set of function
+that is um if t is beyond the last tuple in b that is if the current um
+block b has been exhausted then we increment b that is um point b to next
+logical block in the sequence in in the file
+and if b is beyond the last block in the file then you return no more data
+that is um that is it is um it is exhausted in the record or or the file
+or else um the else condition he has states is um basically t is beyond the
+last tuple in the but b is not beyond the last block in the file
+that means set t to the next um or set t to the first tuple in b that is
+the next um b is been incremented and set t to the first tuple in b or or
+the new block
+[Refer Slide: 25.10]
+                                    [pic]
+
+and then increment t and return the old value of t which was which t was
+pointing to so so return that is we we first assign oldt equal to t and
+then increment t and then return oldt
+for close we don't have do anything because we have already returned we
+already return from the GetNext operator if we have reached end of the file
+
+therefore close in this um in this example is um is redundant however
+usually the close um function performs some kinds of a clean up operation
+where if some data structure were opened during the um during the course of
+the iterator function
+these data structures are closed and and the corresponding memories freed
+and so on
+let us implement um or let us look at an example of the iterator function
+we shall implement the table scan operator that we saw earlier using the
+iterator function
+[Refer Slide: 26.16]
+                                    [pic]
+as we saw before an iterator has three different functions the Open GetNext
+and Close assume that um the table is implemented or um is contained within
+a file and the file is organized as a sequence of blocks
+that is there are several blocks that make up the file so when we open the
+iterator that is open the table scan iterator um we need to initialize a
+few things um this is shown in the slide here
+that is the slide um the open function um initializes two different
+variables b and t where b is points to the first block um in the file or of
+the record and t points to the first tuple in the block
+the GetNext function note what the GetNext function should return here the
+table scan operator should return um tuples after tuples
+that is the first tuple second tuple and so on however at the physical
+level we are concerned not only with tuples but also with blocks that is we
+actually read read and write in terms of blocks and in not in terms of
+tuples
+therefore um [noise]  initially what we do is we first check to see if if
+the um if the tuple is beyond the last tuple in b
+if this is the case we have to increment b and if is beyond the last block
+in the file then we just return no more data
+that is we we say that is all there is um there are no more tuples to
+return or else that is the the the else is for the inner if so else t is
+then set to the first tuple in the next block that is we have incremented b
+and then we we just set t to the first tuple in the next block
+and if none of these is the case then we just return the next tuple that
+means we fist copy the um corresponding tuple to be return in the into a
+new variable which is called oldt in this example and then we increment um
+t and then return oldt
+[Refer Slide: 28.10]
+                                    [pic]
+for the Close function in this example we don't have to do anything because
+we have already returned in the GetNext function when we have reached the
+end of the file but usually in a Close function um
+we we use the Close function to clean up whatever um whatever mess we have
+created so to say
+that is um whatever data structures that we are opened whatever memory we
+have allocated which which are not useful anymore have to freed up and so
+on
+so um so the Close operator or the Close function is called at the end of
+the iterator which performs all this clean up operations
+let us look at another example using iterators on how to compute the Bag
+union of two [noise] of two relations um what is the Bag union
+[Refer Slide: 28.58]
+                                    [pic]
+
+remember we have talked about um a considering relation as Bags rather than
+sets a Bag is just a collection of um tuples or collection of elements um
+[noise] without regard to whether there are duplicates in the collection so
+it is it is it is also called a multi set
+a multi set union or a Bag union is simply a Bag that is made of two
+different Bags that is you just empty contents of one Bag into the other
+and you have got a multi um multi Bag union or union over Bags
+so um um this is denoted by the operator plus or or the disjoint union
+operator or plus plus
+so an iterator for performing the disjoint union here um we are considering
+that both R and S which represent relations for us are now in the form of
+iterators themselves
+that is we are abstracted away a relation form being a file to being an
+iterator that is we know it is just a data structure which we can open and
+um call the GetNext function and then close once we are done with the data
+structures
+so as far as we are concerned um both relations are just iterators so in
+the open function of our um disjoint union iterator
+[Refer Slide: 30.25]
+
+we just open one of the relations we we say R dot open and then we point
+the current relation to be R
+in the GetNext function we say that if um current relation equal to R then
+we have to call GetNext on the on the current relation that is we just say
+current relation dot GetNext
+and if GetNext returns no more data that is um if if there is no more data
+that that is return then [noise] um
+[Refer Slide: 30.53]
+                                    [pic]
+start or or set current relation as S and then call S dot Open and then in
+the um in the sub sequent GetNext operations you just call S dot GetNext
+instead of R dot GetNext
+so so what we effectively done is um we have exhausted one of the records
+by calling GetNext as as many times as possible
+that is whenever GetNext is called on us we call GetNext on the the current
+Rel that is the CurRel relation
+so once we exhausted one of the relations we open the other relation and
+start um and start calling GetNext on that function
+so when S is exhausted it returns no more data which is what should be
+returned by the GetNext as well and in the Close function we just close
+both of these um iterators
+that is we we called R dot Close and S dot Close when R dot Close and S dot
+Close don't do anything which you saw in the previous example but in case
+they they do certain clean up operation it is always a good measure to um
+or it is always a good programming practice to call um the corresponding
+Close operators in our Close operator
+[Refer Slide: 32.13]
+                                    [pic]
+
+so um we just um went through some of the um some of the elements of the
+physical query plan program programming language that is um it contains
+elements of table scan index scans and iterators and and so on
+now let us have a look at some algorithms that are build around these data
+structures or around this constructs of the physical query plan that can
+help us in understanding how a given relational algebra operator
+let us say like select or project or um something of that sort
+are is actually executed inside the database system um
+we can broadly divide algorithms for a data access into  one of the three
+following categories
+we call them sorting based methods hash based methods and index based
+methods um these methods has has you can see here
+are typically meant are oriented towards um increasing the effectiveness of
+search in a sorting based method the the relations that are um scanned are
+scanned using the sort scan operator that is they are sorted as in when
+they are scanned and because they are sorted um the the property that the
+the relations are sorted would help in um in in performing certain other
+relational operators like say join um in a efficient fashion
+similarly hash based methods um use some kind of a hash function to quickly
+search for whatever tuple or um data element that that is being asked for
+within this relations
+an index base methods resort to index structures like um trees or balance
+trees and so on um for for searching the the required data element
+the um [noise] we can also divide algorithms for data access based on what
+kinds of data access requirements that the course
+we can divide the kinds of data access requirements into one of these three
+kinds of requirements
+the first requirement is what is called as a tuple at a time unary operator
+that means um the the query requires or requires to contend with one tuple
+at at time
+for example select and project operator um every time select is called
+select has to be um or the condition for select has to be checked against
+each tuple in the relation
+that is tuple after tuple so at a time one tuple is being accessed and this
+is a unary operator that is um it is just one relation on which a
+particular tuple is being accessed
+then there are full relation unary operators where the entire relation has
+to be searched for example if i have to return um something based on or
+return the value of some relation or if i have to compute let us say set
+theoretic operations like um a like not of something and and so on um or
+any kind of set theoretic operation that that that are unary in nature
+and um um and the last kind of operations are full relation binary
+operators these are operators that again have to um compute or that again
+requires a complete relation for their for as their query result and they
+are not just unary they are binary that means they have two um two
+relations to contend with
+[Refer Slide: 35.52]
+                                    [pic]
+that is some examples or something like set theortic operators like union
+intersection and so on which require two relations and the entire relation
+has to be scanned the entire relation has to be returned
+[Refer Slide: 36.10]
+                                    [pic]
+
+let us see how um each of these kinds of um query execution requirements
+can be meet using some algorithmic strategies
+in this session we are be going to be looking at um a kind of strategies
+what are called as one pass algorithms
+what is a one pass algorithm a one pass algorithm is an algorithm that um
+that that performs at most one pass over the entire database that is um
+over over the entire relation um of interest
+it does not access the relation multiple times um very important and many
+times limiting assumption in most of the one pass algorithms that we are
+going to see here is that
+it assumes that the relation that we are looking for is small enough to fit
+in main memory in many um cases this is the reasonable assumptions but in
+many other cases
+it is not reasonable assumption that is um even a single relation could be
+so huge that it it may not fit into memory into main memory
+so how does um how can we use a single pass or a one pass algorithm to
+perform a tuple at a time unary operation
+let us take some example like select or project as shown in the slide here
+let us say select some condition over R or project some condition over R
+all we have to do is scan through this R that is use the use the table scan
+iterator for um for scanning through this relation tuple after tuple and
+store this relations or store this store this tuples that are been scanned
+in a in a input buffer
+perform a unary operator and output it to the output buffer so this is
+schematically shown in the diagram here
+that is this is the relation iterator and this relation iterator returns
+tuple after tuple which goes into the input buffer and
+in [noise] in this case this input buffer can be as small as one tuple long
+
+that is we can allocate just enough memory in the input buffer to store
+just one tuple
+so each tuple after tuple is is um put into the input buffer and checked
+against the unary operator and either discarded or sent to the output
+buffer so as simple as it
+this is this is quite simple that is within a simple single pass we have
+been able to answer answer a tuple at a time unary operation
+[Refer Slide: 38.49]
+                                    [pic]
+
+what about relation at a time unary operations what are some examples of
+relation at a time unary operators one example is that of let us say the
+unique function in the in the select in the sql statement suppose i say
+select name from employee um or select unique name from employee
+that means given me the set of all unique employee name's without
+repetitions this as you can see it is a unary operator that means it it
+operates on just one relation
+however it is a relation at a time operator that is it requires to have the
+entire relation knowledge about the entire relation um before being able to
+return the required value
+so [noise] the general strategy or a general one pass algorithmic strategy
+for um [noise] now for relation at a time unary operators is shown in the
+figure in the slide here
+R is R is the now familiar um table scan iterator which returns to a tuple
+after tuple which which goes into the input buffer
+now the input buffer um is is then read into the unary operator whatever
+whatever be the unary operator whether it's unique or group by for example
+group by is another relation at a time unique operator
+now this unique operator um will either output a this tuple into the output
+buffer if it if it is safe to do so or otherwise will put the tuple into a
+data structure holding the history of um of whatever relation has been read
+until now
+for example in the unique operator all we need to do here is have a hash
+table that contains one entry each for each unique entry that we have found
+until now in the database
+so whenever i read a new name um let us say whenever we read a new tuple
+into the input buffer and check out the name attribute
+we just check the hash table here the the data structure holding history um
+we just check the has table to see if this name name was already
+encountered if you are already encountered this thing
+if you have already encountered this name then we just discard this new
+tuple otherwise we add this new name into this um hash table here
+and then output the tuple
+so um a single pass algorithm um for a relation at a time is also quite
+simple accept that we need to have an augmenting data structure in the form
+of usually a index tree or a hash table or something like that
+that can hold um the the history that is required
+now um one more thing that is to be noted here is that suppose the unary
+operator that we are um concerned with is the groupby operator
+now the groupby operator cannot return any output until the entire set of
+relation is um or the entire set of tuples in this relation is read and the
+performing grouping is formed using this data structure
+that means this space allocated to this data structure should be large
+enough to hold the entire relation
+therefore a such a algorithm cannot be used for relations that are too
+large to fit in memory um because we are concerned only with one pass
+algorithms in this session here
+we assume that the relation can be held in memory so that um the entire
+relation or the entire history of what we have read can be held in the data
+structure
+[Refer Slide: 42.35]
+                                    [pic]
+
+let us look at one pass algorithms for relation at a time binary operators
+now one pass algorithmic strategy is vary depending upon on what is the
+binary operator that we are looking and almost all of the algorithms that
+um for binary operators require
+that at least one of the relation be read completely into memory before we
+start reading the other relation and obviously um if we have two relations
+and one is much smaller than the other it is it makes much more sense to
+read the smaller relation into memory
+and iterate over the larger relation so let us look at a few examples and
+um which will make this clear
+[Refer Slide: 43.19]
+                                    [pic]
+
+let us see what is the strategy um what is a one pass algorithmic strategy
+for computing the set union of two relations R union S
+i have explicitly use the word set union here instead of just union that
+means this is not a Bag union that means to say that we have to compute R
+union S without um without returning any duplicate entries in the result
+that means we have to remove all duplicates while returning R union S
+assuming that among R and S R is the bigger relation here is a very simple
+strategy to compute R union S
+first read S into memory completely using the iterator on S um retrieve all
+tuples from S and and place it into memory and place it in a place it in
+some kind of data structure like an index or hash table by which we can
+access each tuple in um of S in as efficient of as possible
+now um as an when we are S keep outputting the tuples of S because anyway R
+union S should contain all tuples of S then once S is completely read into
+to memory and indexed in a data structure
+start reading R that is the the next relation and for each tuple of R that
+is read into memory check whether it already exist in S
+if the tuple already exist in S then just discard the tuple because we we
+do not want duplicates in the output result otherwise if it does not exist
+in um in R then or if does not exist um in already in the in the relation
+then just output the tuple
+now here we are also making another implicit assumption that R and S are
+sets themselves and they are not multi set that means um there are no
+duplicate tuples in R itself
+therefore it is sufficient for us to check for duplicates um against S um
+otherwise we need to also store tuples in R so as to check the duplicates
+within R itself
+if we assume that R and S are sets the set union operator can be performed
+using the strategy that we outline just now
+the next binary operator that we are going to look at is the intersection
+operator the strategy for the set       intersection operator is also quite
+similar to that of the union operator
+[Refer Slide: 45.56]
+                                    [pic]
+
+
+assume that we have to perform the set intersection between R intersection
+S and assuming that R is the bigger relation we first read S into memory
+and then store tuples of S in a in an in-memory data structure or in memory
+index or hash tables structure that that can  help us access the data
+elements of S quite efficiently
+then start reading R into the memory tuple by tuple using the iterator for
+R then for each tuple um of R if and only if the tuple also exist in S
+output the tuple of R in to the output buffer otherwise discard the tuple
+[Refer Slide: 46.38]
+                                    [pic]
+
+what about set difference set difference if you see um differs depending on
+whether we are computing  R minus S or S minus R because set difference is
+not a commutative operation
+now suppose let us say without loss of generality let us say we are
+computing R minus S and that R is the bigger relation okay so we are
+computing R minus S and the first relation R is the bigger among the two
+relations
+that means we read S into memory as usual that is um read the relation S
+using the S iterator into memory and put S into a in-memory index structure
+or a hash structure
+and for each tuple of R check to see whether um it whether it already
+exists in S if it already exist in S then discard the tuple or if does not
+exist in S then output the tuple as simple as that
+but what happens if um if we compute S minus R that is R is the bigger
+relation and and um it is right hand side of the difference that is instead
+of computing  R minus S
+we are computing S minus R because R is the bigger relation um it is always
+more efficient to read S into memory rather than R now if we read S into
+memory
+how does the algorithm change let us have a look at that so um this slide
+shows set difference S minus R instead of R minus S and um and and assuming
+that R is the bigger relation
+now if R is the bigger relation have a look at the steps closely for this
+slide here if R is a bigger relation all we have to do is first read S into
+memory completely that is um read the complete use a S iterator and read
+all tuples of S into memory and place them into a index structure or a hash
+table
+now for each tuple of R okay what should we do that is we are we are
+computing S minus R that is S minus R is the set of all tuples in S
+that are not in R okay so for each tuple of R check to see if it already
+exists in S and now what happens if it already exists in S
+if it already exist in S then these tuples should not be their in the final
+output okay and though the tuples that should be in the final output or
+those tuples of S that are not in R
+so um so what we do here is um for each tuple of R um for which we found a
+we find a matching tuple in S we cancel them out that is we delete the
+tuple in S from the index structure
+that is we we deleted from the index structure of the hash table that we
+have been using now once R is exhausted that is once we have finished
+reading through the um relation R and we have deleted all common tuples
+whatever is left in um in the S data structure that that we have read into
+memory is the output
+that is that we can push them onto the output buffer
+[Refer Slide: 49.47]
+                                    [pic]
+
+
+what about cross product R times S cross product is simple as far as the
+algorithm is concerned and quite expensive as far as the performance is
+concerned that is again assuming that R is the bigger relation just read S
+into memory
+and um we don't we don't need any data structure here we we can just store
+S in it is contiguous um sequence of memory locations and for each tuple of
+R combined with every tuple of S and start returning it as simple as that
+[Refer Slide: 50.18]
+                                    [pic]
+
+[noise] the last one that we are going to be looking at um is the is a one
+pass algorithm for natural join what is a natural join
+a natural join is an equi join on two relations that equates attributes
+having the same name and domain
+now assume that R X,Y and S Y,Z are being natural are being subjected to a
+natural join
+that means Y is the common set of attributes or subset of attributes
+between R and S now assuming again R is the bigger relation read S
+completely into memory and then index um or place X in a hash table or an
+index
+so that it can be searched efficiently now for each tuple of R what we have
+to do is search through the hash
+now this hash table or the indexing structure should be um should be done
+based on the um common attributes
+that is based on Y here even if Y is not the key attribute so so we perform
+the indexing or the hashing based on the based on the common set of
+attributes Y and then using which we can search for every tuple of R that
+is read whether there is a matching tuple in S
+if there is a matching tuple match the two tuples and output it to the
+output buffer um if not just discard the tuple of R
+
+[Refer Slide: 51.44]
+                                    [pic]
+
+
+so um that was a brief  overview of the one pass algorithms that um that
+can be used um by by using the the physical query plan operators like say
+iterator and sort um table scan sort scan etcetera
+using which we can develop a strategy for performing relational algebra
+operations like R union S R intersection S select project unique groupby
+and so on
+but what are the constraints of one pass algorithms one pass algorithms are
+applicable especially for binary relation at a time binary operators
+they are applicable only when one of relation can fit completely into
+memory and it is not just it fits completely into memory
+we should also have extra blocks of memory for the other relation that is
+let us say if i have M memory blocks available for me then the the smaller
+relation can be at most M minus one in size M minus one blocks in size
+it cant be M in size because we need at least one more block to to perform
+book keeping for the other other um relation that we are reading from disc
+[Refer Slide: 53.00]
+                                    [pic]
+
+and one pass algorithms rely to a great extend on correctly estimating the
+size of relation if a query execution plan in a dbms engine decides to use
+a one pass algorithm
+for performing a particular query um relational query relational algebra
+operation then it depends for a large part large part on the estimate of
+the size of the of the relation that it has
+now if the size is wrongly estimated then it can um for example if we if we
+allocate two few buffers thinking that the size would be small then the one
+pass algorithms will be unusable the query execution plan is unusable we
+can't use the one pass algorithms at all
+on the other hand if we allocate too many buffers um thinking that the
+relation size is big then we may end up in a possibility of thrashing where
+um memory blocks have to be swapped on to disk and so on
+so it is quite crucial to obtain a good estimation in order to use one pass
+um query execution plans
+[Refer Slide: 54.15]
+                                    [pic]
+
+
+so let us summarize what we have learnt in this session we have kind of a
+scratch the surface of an important and crucial area of data base
+management systems called a query processing and optimization
+we we have seen that we have seen the different stages in query processing
+um and and two important intermediate steps in query processing
+namely the logical query plan and the physical query plan and in this
+session we have concentrated more on the physical query plan
+that is um a physical query plan is is a set of language constructs that
+perform low level operations using um that performs low level operations
+directly on the storage media
+that can physically access um files into memory for for reading for
+performing any data base related operations we also saw what a physical
+query plan language would look like or rather what kinds of constructs it
+would have
+it would obviously have relational constructs in addition it would have
+constructs like iterators tables scans sort scans etcetera
+and we have looked at the variety of one pass algorithms using these
+physical query plan constructors using which we can perform a variety of
+relational algebra operations like select project unique groupby and many
+other set theoretic operations
+in the next session we shall be looking into the the big question of
+handling joins in in query execution plans and also have a look at the
+logical um query execution plans
+so this brings us to the end of this session thank you
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

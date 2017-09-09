@@ -1,0 +1,1871 @@
+introduction to computer
+computer programming summer
+administration office hours
+office hours held
+posted on announcements
+people in thursday
+tutorials consider switching
+class in ba1170
+ba1170 on june
+july 14th website
+14th website typo
+typo in info
+added my e-mail
+e-mail is quellan
+quellan @ cs.toronto.edu
+cs.toronto.edu not quellan
+short and simple
+machines no questions
+accepted after june
+programs to recipes
+programs can behave
+behave differently depending
+two values true
+false and vice
+versa and returns
+arguments are true
+true or returns
+arguments are false
+representing boolean expressions
+true true false
+true false false
+false false true
+false true true
+true true true
+false true false
+true false true
+adapatively assign boolean
+assign boolean values
+operators that return
+true or false
+expressions and representation
+representation can combine
+combine boolean operators
+legal expression arithmetic
+false is represented
+true is represented
+lead to weirdness
+short circuit evaluation
+circuit evaluation python
+python only evaluates
+evaluates a boolean
+answer is clear
+nature of boolean
+representation can lead
+lead to strange
+strange behaviour exploiting
+exploiting these behaviours
+behaviours is bad
+boolean variables recall
+make our code
+selectively execute blocks
+blocks of code
+statement the general
+print “ pass
+block the condition
+boolean expression recall
+series of python
+evaluates to true
+true the block
+block is executed
+execute different lines
+lines of code
+block the block
+evaluates to false
+general if statement
+statement if condition1
+block elif condition2
+block elif condition3
+block python evalutates
+evalutates the conditions
+conditions in order
+order it executes
+executes the block
+true the final
+advice for booleans
+unsure of precedence
+parentheses will make
+make it easier
+parentheses for complicated
+complicated expressions simplify
+simplify your boolean
+expressions get rid
+rid of double
+review of functions
+functions we started
+python s native
+bits of code
+updating and testing
+testing much easier
+test and update
+update the function
+return vs print
+recall that functions
+return the value
+print statement print
+statement print takes
+multiple function calls
+calling other functions
+out  rule
+apply g first
+python choose variables
+python has local
+local and global
+global variables local
+variables local variables
+variables are defined
+inside of functions
+check local variables
+local variables defined
+function then check
+check global variables
+check built-in variables
+variable is defined
+call a function
+create a local
+functions name space
+space or global
+conventions for functions
+initialise and call
+call variables exploiting
+style it makes
+hard to read
+read and prone
+prone to errors
+rely on global
+functions that return
+information to code
+code should return
+function documentation recall
+information on functions
+functions or modules
+give much information
+add useful documentation
+documentation with docstrings
+docstrings a docstring
+docstring is surrounded
+module or function
+function or module
+short for documentation
+documentation string python
+string python saves
+saves the string
+string to return
+leave a blank
+docstring all functions
+write the docstring
+instant sanity check
+function is doing
+portability and updating
+writing good docstrings
+good docstrings a
+docstrings a sunset
+module.  changes
+vague and ambiguous
+good docstrings describes
+function does changes
+sunset.  makes
+makes a picture
+sunset by decreasing
+decreasing the green
+green and blue
+good docstrings makes
+makes the purpose
+clear and refers
+sunset.  takes
+picture and makes
+takes a picture
+pic and makes
+docstrings be clear
+returns a value
+computer the average
+amount of red
+picture.  returns
+returns the average
+good docstrings make
+state any assumptions
+assumptions the function
+function has def
+decreases the amount
+red per pixel
+pixel in picture
+pic by int
+int percent percent
+correct use commands
+sunset.  take
+take picture pic
+pic and make
+function works makes
+boolean docstrings def
+true if int
+return true iff
+true iff int
+iff iff stands
+fact we wrote
+re not returning
+good docstrings docstrings
+definitions or hints
+hints the docstring
+docstring for sqrt
+return the sqrt
+return the square
+marek janicki june
+model from last
+line by line
+counting non-prime factors
+considered a factor
+worry about lines
+nt have intercepts
+intercepts in general
+worry about inputs
+nt want numbers
+ve seen ints
+reals and booleans
+manipulation and logic
+type – strings
+sequences of characters
+characters two types
+two types str
+str and unicode
+ll use str
+unicode is larger
+strings are denoted
+denoted by single
+single or double
+double quotes quote
+quotes quote type
+type must match
+match ! june
+string operations strings
+added we call
+call this concatenation
+concatenation “ str
+ing ” results
+multiply a string
+multiplication operator functions
+strings using relational
+operators can check
+check if substrings
+strings that span
+span multiple lines
+made using 
+escape characters denoted
+tab aside len
+return an int
+number of characters
+types to strings
+print will display
+display the variable
+display mixed types
+print “ string
+print “ person
+python to insert
+insert a type
+value and format
+float % .2f
+pad the float
+decimal places june
+weight we put
+separated by commas
+input using raw_input
+returns a string
+people s code
+code or make
+bundle up related
+group of related
+functions and variables
+import it importing
+importing a module
+module causes python
+python to run
+run each line
+line of code
+run a module
+__name__ in addition
+addition to variables
+import a module
+module called module_m
+__main__ ” recall
+running a module
+things from module_name
+module_name import fn_name1
+fn_name1 and fn_name
+wildcard to import
+functions from module_name
+recent one stays
+methods we ve
+functions a similar
+thing is true
+true of values
+values contain ways
+call these methods
+assigned a value
+out what methods
+methods a type
+methods can find
+return the number
+number of instances
+instances of substr
+shift to lower
+lower case letters
+case letters string.upper
+shift to capitalised
+capitalised letters june
+information most direct
+exist an alternative
+check the standard
+remember ! functions
+belong to modules
+modules methods belong
+belong to objects
+types in python
+python are objects
+covered in greater
+subtle but important
+important distinction june
+repetition often times
+times in programs
+add a number
+reaches some number
+execute a block
+block of code
+condition is true
+statement this lead
+lead to unreadable
+spaghetti  code
+goto statement june
+loop instead python
+python uses loops
+loop next week
+condition is checked
+block is skipped
+code is executed
+loops while loops
+repeat an action
+condition is met
+action a fixed
+number of times
+assignment questions csc
+questions csc 108h
+out we ve
+working on grading
+testing is key
+key to developing
+developing good software
+good software tests
+easy to access
+easy to reuse
+test it based
+writing this means
+testing two main
+two main aspects
+aspects of testing
+test the tools
+tests this first
+largely language independent
+types of input
+languages have built-in
+test all inputs
+choose a subset
+suspect programmer error
+test boundary conditions
+picking test cases
+break a program
+specifies some kind
+kind of input
+choose as bad
+lots of test
+build on eachother
+great idea note
+cases that test
+functions that build
+ideally one tests
+tests each function
+test the larger
+functions that call
+call the smaller
+test a function
+right after writing
+easiest to fix
+write any code
+code this means
+write the code
+write the tests
+test professional coders
+coders often write
+write test cases
+cases before writing
+writing code thinking
+thinking about tests
+cases while designing
+inform your design
+summary want individual
+individual unit tests
+independent of eachother
+tests before writing
+writing code makes
+testing in python
+lot of constraints
+constraints in python
+hard to satisfy
+ve been testing
+testing in shell
+lot of work
+write specific code
+code for opening
+files and dealing
+module called nose
+nose that helps
+testing with nose
+nose the context
+context for testing
+module named mod
+create a module
+module called test__mod
+module we import
+body of test__func
+assert statements assert
+throw an error
+false so test__func
+bunch of statements
+output the first
+line of output
+tests a dot
+dot means pass
+means an error
+failure is incorrect
+kind each failure
+failure or error
+error produces information
+error the last
+last bit tells
+number of tests
+number of errors
+output the information
+information that python
+fail a test
+add some information
+assert statement assert
+nose and testing
+testing unit tests
+tests each test
+test in nose
+write a function
+designing tests early
+function the tests
+tests treat functions
+black box regression
+box regression testing
+regression testing nose
+testing nose makes
+easy to run
+find an error
+ways to mitigate
+mitigate this pain
+early ! test
+test often find
+find the first
+head to make
+code will work
+read the error
+code is correct
+parts the functions
+game_summary and strip_tag_info
+function that game
+game summary calls
+problem of recording
+recording the moves
+moves and boards
+state are intertwined
+component chunks chunk
+parsing the input
+done by get_move_lst
+get_move_lst and get_move_str
+individual move text
+extract a bunch
+bit of information
+bunch of functions
+solution other things
+supposed to return
+place a piece
+piece could move
+legally this code
+comments and questions
+assignment at office
+tuesday that week
+week the midterm
+regular lecture room
+lecture room june
+class who requires
+requires a volunteer
+disability by signing
+posting your notes
+make a significant
+individual s capacity
+person to accessibility
+huron st suite
+notice the quality
+improves through volunteering
+receive a certificate
+certificate of recognition
+change an immutable
+things like ints
+ints and strings
+takes a lot
+things like images
+object without keeping
+keeping the original
+making a big
+tossing the rest
+rest is wasteful
+allowed to change
+functions that change
+ints are immutable
+aliasing let pic
+sets the green
+pics are mutable
+show a picture
+aliasing and functions
+calls a function
+bunch of assignment
+parameters are assigned
+local variable refers
+functions can change
+change mutable objects
+immutable ones june
+slow in high-dimensional
+high-dimensional spaces python
+grouping similar items
+i-1 because lists
+lists are indexed
+element list named
+list named list_name
+lists are mutable
+index into lists
+lists are heterogeneous
+lists themselves june
+functions and methods
+returns the length
+return the min
+min and max
+returns the sum
+sum of elements
+numbered not defined
+defined for lists
+lists of strings
+adds the value
+sorts the list
+inserts the element
+index specified remove
+removes the first
+instance of value
+counts the number
+instances of value
+looping over lists
+loops for item
+item in list
+item = list
+tricky with immutable
+objects for item
+item is immutable
+alter the list
+returns an ordered
+list of ints
+j-1 inclusive range
+returns a list
+ints so range
+modify a list
+element by element
+makes a list
+beginning to j-1
+worried about aliasing
+make a tuple
+items are referenced
+referenced by tuple_name
+single element tuples
+strings revisted strings
+tuples of individual
+strings can reference
+reference individual characters
+characters by string
+defined on strings
+string methods revisted
+index into strings
+string methods find
+give the index
+matching the substring
+character exists rfind
+lists because lists
+lists of lists
+represent a grid
+grid or higher
+higher dimenstional space
+elements by list_name
+item in list_name
+item2 in item
+computer programming
+programming summer
+marek janicki
+administration office
+office hours
+hours held
+thursday tutorials
+website typo
+info sheet
+simple assignment
+cdf machines
+compared programs
+accurate programs
+last week
+vice versa
+returns false
+truth tables
+boolean expressions
+true true
+true false
+false false
+false true
+boolean values
+relational operators
+comparison operators
+return true
+equality operator
+boolean operators
+arithmetic operators
+legal expression
+boolean false
+avoid exploiting
+short circuit
+circuit evaluation
+evaluation python
+boolean expression
+boolean representation
+strange behaviour
+behaviour exploiting
+bad style
+boolean variables
+variables recall
+code adaptive
+execute blocks
+general form
+expression recall
+python statements
+condition evaluates
+code based
+elif condition2
+elif condition3
+block python
+python evalutates
+style advice
+complicated expressions
+expressions simplify
+double negatives
+native functions
+call functions
+reuse bits
+parse information
+human mind
+function names
+print recall
+functions end
+return statement
+keyword return
+function returns
+print statement
+statement print
+print takes
+expressions separated
+multiple function
+function calls
+functions calling
+local variables
+python choose
+choose variables
+global variables
+defined inside
+local variable
+global variable
+variables defined
+enclosing function
+built-in variables
+local namespace
+enclosing functions
+global namespace
+style conventions
+call variables
+variables exploiting
+makes code
+designing functions
+choose parameters
+global parameters
+return functions
+return information
+function documentation
+documentation recall
+built-in function
+first line
+docstring short
+documentation string
+string python
+python saves
+blank line
+instant sanity
+sanity check
+makes portability
+updating easier
+good chunking
+good docstrings
+docstrings a
+a sunset
+terrible docstrings
+function expects
+docstrings describes
+function works
+unnecessary information
+function makes
+docstrings makes
+parameter clear
+picture pic
+average amount
+picture pic.
+docstrings make
+explicitly state
+def decrease_red
+int percent
+percent percent
+grammatically correct
+descriptions takes
+take picture
+works makes
+boolean docstrings
+docstrings def
+return true
+true iff
+iff int
+iff iff
+iff stands
+boolean functions
+return false
+returning true
+docstrings docstrings
+include definitions
+square root
+janicki june
+administration questions
+memory model
+file posted
+lectures page
+announcements june
+non-prime factors
+acceptable answer
+answer june
+number manipulation
+logic manipulation
+strings june
+strings sequences
+types str
+roman alphabet
+symbols unicode
+accented letters
+chinese characters
+double quotes
+quotes quote
+quote type
+string operations
+operations strings
+multiplication operator
+operator functions
+compare strings
+span multiple
+multiple lines
+ june
+escape characters
+characters denoted
+special character
+single quote
+double quote
+string june
+converting types
+string print
+mixed types
+awkward print
+weight june
+string formatting
+special characters
+tells python
+decimal places
+places june
+multiple variables
+parentheses separated
+commas print
+user input
+giving input
+code inefficient
+user-friendly python
+converted june
+first june
+related functions
+file modules
+variables june
+function definitions
+prefix june
+import things
+module_name import
+import fn_name1
+stays june
+similar thing
+values values
+string methods
+string string.lower
+lower case
+case letters
+letters string.upper
+capitalised letters
+letters june
+method information
+nt searchable
+standard library
+skill june
+modules methods
+methods belong
+basic types
+greater detail
+function str.lower
+method subtle
+important distinction
+distinction june
+true ages
+goto statement
+unreadable spaghetti
+code python
+statement june
+checked first
+block executes
+executed june
+fixed number
+times june
+assignment questions
+questions csc
+administration assignment
+testing testing
+good software
+software tests
+testing i.e
+test code
+actual code
+re writing
+main aspects
+run tests
+first aspect
+largely language
+language independent
+common paradigm
+built-in tools
+test cases
+typical inputs
+test things
+suspect programmer
+programmer error
+boundary conditions
+picking test
+docstring specifies
+bad inputs
+great idea
+idea note
+test functions
+function individually
+unit testing
+smaller functions
+larger functions
+regression testing
+fix things
+black-box fashion
+test professional
+professional coders
+write test
+writing code
+code thinking
+tests cases
+design tool
+design makes
+robust code
+testing summary
+individual unit
+unit tests
+chosen adversarially
+design tests
+code makes
+style tests
+rerun tests
+change code
+python testing
+specific code
+opening files
+luckily python
+module named
+named mod
+import nose
+import mod
+function func
+assert statements
+statements assert
+boolean condition
+assert func
+nose runs
+produces output
+nose output
+output tells
+dot means
+means pass
+means fail
+incorrect output
+error produces
+produces information
+last bit
+bit tells
+tests passes
+tests failed
+error information
+assert statement
+statement assert
+testing unit
+unit test
+designing tests
+tests early
+tests treat
+treat functions
+black box
+box regression
+testing nose
+nose makes
+pain test
+first point
+code differs
+work read
+algebraic notation
+parts game_summary
+part strip_tag_info
+game summary
+summary calls
+boards state
+component chunks
+chunks chunk
+moves done
+individual move
+move text
+nested list
+piece started
+code relies
+hours assignment
+held monday
+held june
+regular lecture
+lecture room
+room june
+volunteer note-taker
+volunteer notetaker
+significant difference
+accessibility services
+students notice
+notetaking improves
+recognition june
+immutable objects
+nt change
+immutable object
+small things
+large things
+images june
+mutable objects
+large object
+big copy
+mutable object
+define functions
+change objects
+immutable june
+initialised picture
+green june
+assignment statements
+variable refers
+lists recall
+high-dimensional spaces
+spaces python
+similar items
+list denoted
+i-th element
+element list
+list named
+named list_name
+mutable june
+empty list
+back list_name
+back lists
+functions lists
+methods len
+list min
+defined sum
+re numbered
+methods append
+list sort
+consistent notions
+element value
+first instance
+value count
+list june
+similar operation
+list python
+block item
+lists loops
+list elements
+function range
+ordered list
+ints ranging
+i-1 range
+inclusive range
+list element
+block june
+list slicing
+perform operations
+aliasing carelessness
+tuple tuple_name
+single element
+element tuples
+avoid ambiguity
+strings revisted
+revisted strings
+considered tuples
+individual characters
+list knowlege
+characters min
+slice strings
+lists june
+methods revisted
+methods find
+first character
+character exists
+exists rfind
+right find
+nested lists
+higher dimenstional
+dimenstional space
+reference elements
+nested loops
+block csc
+csc
+108h
+introduction
+computer
+programming
+summer
+marek
+janicki
+administration
+office
+hours
+held
+t12-2
+f2-4
+posted
+announcements
+people
+thursday
+tutorials
+switching
+class
+ba1170
+june
+23rd
+july
+14th
+website
+typo
+info
+sheet
+trailing
+redirect
+added
+e-mail
+quellan
+cs.toronto.edu
+cdf.toronto.edu
+assignment
+short
+simple
+done
+write
+submit
+make
+runs
+cdf
+machines
+questions
+accepted
+2nd
+programs
+adaptive
+last
+compared
+recipes
+accurate
+behave
+differently
+depending
+situation
+snippet
+week
+booleans
+type
+two
+values
+true
+false
+operations
+vice
+versa
+returns
+arguments
+truth
+tables
+representing
+boolean
+expressions
+adapatively
+assign
+relational
+operators
+comparison
+return
+equality
+operator
+equals
+representation
+combine
+,etc
+arithmetic
+1-2
+2-4
+legal
+expression
+represented
+lead
+weirdness
+avoid
+exploiting
+circuit
+evaluation
+python
+evaluates
+long
+answer
+clear
+stop
+combined
+nature
+strange
+behaviour
+behaviours
+bad
+style
+variables
+recall
+code
+selectively
+execute
+blocks
+statements
+statement
+general
+form
+condition
+block
+grade
+print
+pass
+series
+executed
+forms
+lines
+based
+outcome
+condition1
+elif
+condition2
+condition3
+evalutates
+conditions
+order
+executes
+first
+final
+optional
+advice
+unsure
+precedence
+parentheses
+easier
+reader
+complicated
+simplify
+rid
+double
+negatives
+break
+review
+functions
+started
+native
+call
+define
+reuse
+bits
+makes
+updating
+testing
+test
+update
+function
+place
+chunking
+parse
+information
+human
+mind
+pretty
+limited
+names
+shorthand
+end
+value
+keyword
+ve
+snippets
+takes
+separated
+prints
+screen
+identical
+shell
+multiple
+calls
+calling
+case
+inside
+out
+rule
+apply
+result
+local
+choose
+global
+defined
+inside
+variable
+generally
+check
+enclosing
+finally
+built-in
+scope
+namespaces
+space
+area
+create
+namespace
+conventions
+careless
+initialise
+hard
+read
+prone
+errors
+designing
+parameters
+passed
+parameter
+rely
+show
+user
+nt
+media.show
+documentation
+modules
+give
+add
+docstrings
+docstring
+surrounded
+line
+module
+string
+saves
+convention
+leave
+blank
+instant
+sanity
+doing
+portability
+good
+writing
+a
+sunset
+module.
+changes
+sunset.
+terrible
+vague
+ambiguous
+expects
+describes
+makes
+picture
+decreasing
+green
+blue
+.
+describe
+works
+unnecessary
+re
+purpose
+refers
+takes
+pic
+average_red
+computer
+average
+amount
+red
+picture.
+returns
+float
+pic.
+explicitly
+state
+assumptions
+def
+decrease_red
+pic,percent
+decreases
+pixel
+int
+percent
+100.
+concise
+grammatically
+correct
+commands
+descriptions
+take
+is_odd
+return
+odd
+otherwise.
+commonly
+shortened
+iff
+stands
+fact
+wrote
+odd.
+understood
+returning
+include
+definitions
+hints
+sqrt
+number
+multiplied
+simply
+square
+root
+memory
+model
+file
+lectures
+page
+find_factor
+exclusive
+means
+counting
+non-prime
+factors
+acceptable
+considered
+factor
+input
+find
+intercept
+worry
+intercepts
+inputs
+numbers
+ints
+reals
+manipulation
+logic
+text
+strings
+sequences
+characters
+types
+str
+unicode
+ll
+roman
+alphabet
+symbols
+larger
+accented
+letters
+chinese
+denoted
+single
+quotes
+quote
+match
+added
+concatenation
+ing
+results
+sort
+multiply
+multiplication
+copy
+copycopycopy
+compare
+substrings
+span
+made
+
+escape
+backslash
+character
+special
+tab
+len
+converting
+convert
+display
+mixed
+real_num
+awkward
+person
+height
+age
+weight
+formatting
+insert
+tells
+format
+integer
+.2f
+pad
+decimal
+places
+put
+commas
+program
+running
+giving
+hardcode
+inefficient
+user-friendly
+raw_input
+converted
+convenient
+bundle
+related
+group
+import
+importing
+run
+trouble
+annoying
+care
+module_name.function_name
+function_name
+__name__
+addition
+module_m
+module_m.__name__
+__main__
+prefix
+things
+module_name
+fn_name1
+fn_name2
+fn_name
+referred
+wildcard
+recent
+stays
+methods
+similar
+thing
+ways
+modify
+value.fn_name
+assigned
+variable_name.fn_name
+figure
+s.replace
+instances
+replaced
+string.count
+substr
+string.lower
+shift
+lower
+string.upper
+capitalised
+method
+direct
+searchable
+dir
+browse
+exist
+alternative
+standard
+library
+http
+skill
+remember
+belong
+objects
+basic
+learn
+covered
+greater
+detail
+str.lower
+subtle
+important
+distinction
+repetition
+times
+reaches
+ages
+ago
+goto
+unreadable
+spaghetti
+loop
+loops
+cover
+checked
+skipped
+repeat
+action
+indefinitely
+met
+fixed
+autograder
+working
+grading
+key
+developing
+software
+tests
+easy
+access
+separate
+i.e
+actual
+main
+aspects
+figuring
+tools
+aspect
+largely
+language
+independent
+languages
+common
+paradigm
+cases
+subset
+representative
+typical
+inputs
+suspect
+programmer
+error
+boundary
+overlooked
+adversarially
+picking
+adversary
+cheating
+specifies
+kind
+limit
+source
+failure
+lots
+build
+eachother
+great
+idea
+note
+ideally
+individually
+unit
+smaller
+tested
+regression
+right
+easiest
+fix
+point
+structure
+black-box
+fashion
+professional
+coders
+thinking
+design
+tool
+inform
+robust
+summary
+individual
+generic
+chosen
+adversarially
+rerun
+change
+lot
+constraints
+satisfy
+work
+store
+specific
+opening
+files
+dealing
+luckily
+nose
+helps
+context
+named
+mod
+test__mod
+func
+test__func
+__main__
+nose.runmodule
+body
+assert
+throw
+bunch
+expected_output
+produces
+output
+dot
+fail
+incorrect
+exception
+bit
+passes
+failed
+back
+assertionerror
+early
+specifiction
+treat
+black
+box
+debug
+process
+painful
+mitigate
+pain
+differs
+head
+solution
+conceptually
+parts
+algebraic
+notation
+game_summary
+strip_tag_info
+part
+game
+rest
+problem
+recording
+moves
+boards
+intertwined
+big
+component
+chunks
+chunk
+parsing
+get_move_lst
+get_move_str
+move
+extract
+mate
+get_fin_sq
+get_piece_type
+track
+board
+update_board
+get_init_move
+move_piece
+nested
+list
+supposed
+piece
+pieces
+legally
+relies
+heavily
+correctness
+comments
+weekend
+deadline
+moved
+27th
+monday
+tuesday
+midterm
+30th
+regular
+lecture
+room
+request
+volunteer
+note-taker
+student
+requires
+notetaker
+accommodation
+disability
+signing
+posting
+notes
+significant
+difference
+capacity
+fully
+participate
+accessibility
+services
+huron
+suite
+students
+notice
+quality
+notetaking
+improves
+volunteering
+receive
+certificate
+recognition
+immutable
+making
+object
+small
+large
+images
+mutable
+keeping
+original
+modifying
+tossing
+wasteful
+allowed
+aliasing
+initialised
+sets
+media.set_green
+pixel,0
+pics
+effectively
+beginning
+lists
+co-ordinate
+easily
+slow
+high-dimensional
+spaces
+grouping
+items
+list_name
+list_elt0
+list_elt1
+list_eltn
+i-th
+element
+i-1
+indexed
+elements
+empty
+index
+heterogeneous
+length
+min
+max
+sum
+numbered
+append
+adds
+sorts
+consistent
+notions
+inserts
+remove
+removes
+instance
+count
+counts
+looping
+operation
+item
+equivalent
+tricky
+alter
+indices
+range
+ordered
+ranging
+i,j
+j-1
+inclusive
+i,j,k
+step
+i,k
+i,k,1
+slicing
+perform
+sublist
+aliased
+tuples
+worried
+carelessness
+tuple
+tuple_name
+item0,item1,item2
+referenced
+ambiguity
+revisted
+knowlege
+gained
+reference
+heterogenous
+slice
+substring
+matching
+left
+exists
+rfind
+substring,i,j
+matrices
+represent
+grid
+higher
+dimenstional
+naturally
+item2

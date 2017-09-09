@@ -1,0 +1,242 @@
+
+
+
+
+      Transcriptor Name:  G.Sathis kumar
+                                                                                   Proofreader Name: B.Karthick
+
+DISCRETE MATHEMATICAL STRUCTURES
+ 
+Prof. Kamala Krithivasan
+
+Department of Computer Science and Engineering
+IIT Madras
+
+Lecture #8
+
+NORMAL FORMS
+ 
+today we shall consider about normal forms already we considered a little bit about what is meant by a disjunctive normal form and conjunctive normal form 
+and conjunctive normal form we took as class form and we used it in resolution principle but again we shall go through those definitions and also what is meant by principal disjunctive normal form and principal conjunctive normal form and in the first order logic what is meant by prenex normal form 
+so let us recall some definitions which we learned earlier 
+a product of the variables and their negations in a formula is called an elementary product for example (Refer Slide Time 2:09)
+
+
+
+some thing like P AND Q AND NOT R some thing like is this called an elementary product 
+similarly a sum of the variables and their negations is called an elementary sum(Refer slide Time 2:09) for example some thing like P OR NOT P OR Q OR NOT R some thing like this is called an elementary sum
+ now you can see that [noise] a necessary and sufficient condition for an elementary product  to be identically false is that it contain at least one pair of factors in which one is the negation of the other(Refer Slide Time 3:06)
+
+suppose i have an elementary product like this and if it supp it is like this say if it contains one pair of variables or one pair of letters where one is the negation of the other you have Q AND NOT Q then this becomes identically false because you know that Q AND NOT Q is zero that is false and some thing and zero is zero
+so an elementary product is identically false if it contains two literals where one is the  negation of the other and [noise] the other way round  
+a necessary and sufficient condition for an elementary sum  to be identically true is it contains at least one pair of factors in which one is the  negation of the other(Refer Slide Time 3:06)
+so suppose i have some thing like this P OR NOT P Q OR NOT R some thing like that then you have one literal and the negation of the variable in another literal so you have one variable and also the negation of that this we know that is a tautology  P OR NOT P is one so one or some thing that will be one [noise] the [noise] now any formula involving this connectives  using proposal var variables is called a wff or well formed formula of propositional  logic (Refer Slide Time 5:00) 
+
+now any well formed formula of propositional  logic you can bring into conjunctive normal form and disjunctive normal form 
+first let us define what is meant by that first let us take disjunctive normal forms a formula that is a well formed formula which is equivalent to a given formula and which contains of a sum of elementary products is called a disjunctive normal form of the given formula (Refer Slide Time 5:39) 
+so it should be of this form some thing like know it should be the sum of elementary products okay 
+so a sum of elementary products is called a disjunctive normal form it will be some thing like this or again some thing now any well formed formula we can bring into disjunctive normal form (Refer Slide Time 6:15) 
+ 
+let us take some examples first let us take this we want to bring this well formed formula into disjunctive normal form how do you go about doing that first of all you can convert implication into NOT so this will become NOT NOT of P OR NOT of Q  P implies Q you can write as NOT P OR Q so this can be written as NOT of this OR P is equivalent to NOT Q now P [noise] is equivalent to NOT Q you can write as suppose you have P is equivalent Q
+this is equivalent to saying P AND Q OR NOT P AND NOT Q this we have either both of them must be true or both of them must be false this we know so using this rule here you will get this portion is as it is this we can write as P AND NOT Q P AND NOT Q OR NOT P and NOT NOT P and NOT of NOT Q so using demargan’s laws this will become P and Q because this will become NOT of NOT of P AND NOT of NOT of Q may be i will write that step also NOT of NOT of P AND NOT of NOT of Q 
+using demargan’s laws and OR and this will be P AND NOT Q and this will be this should be bracket here also NOT P AND Q so this is  equivalent to saying P AND Q OR P AND NOT Q OR NOT P AND Q so this is an elementary product this is an elementary product and this is an elementary product and you have a sum of elementary products so this is a disjunctive normal form )Refer Slide Time 9:05)
+ 
+let us take one more example let us convert this into again disjunctive normal form how do you go about doing this P implies Q AND R so implication you can convert into NOT P OR Q so this will be NOT P OR Q AND R AND
+this one again you can write like this NOT of NOT of P OR NOT Q AND NOT R so this again you can write as NOT P OR Q AND R AND P OR NOT Q AND NOT R 
+now you can use distributive laws you can write this as NOT P OR Q AND R AND P OR NOT P OR Q AND R AND NOT Q AND NOT R 
+again here you can use distributive laws and this will be NOT P AND P OR Q AND R AND P OR here again you can use distributive laws and this will become NOT P AND NOT Q AND NOT R OR Q AND R AND NOT Q AND NOT R 
+we can remove unnecessary parenthesis  and write it in the  proper form so here it is an elementary product elementary product here again elementary product elementary product 
+so if you rewrite this it will become NOT P AND P OR Q AND R AND P OR this one will be NOT P AND NOT Q AND NOT R and this will be Q AND R AND NOT Q AND NOT R so this is the disjunctive form normal form (Refer Slide Time 12:51)
+
+again i want to mention that disjunctive formal normal form or conjunctive normal form is not unique 
+for example this you can you know that Q you have Q and NOT Q so this  whole term is zero so it can be omitted 
+so it is not unique but any formula you can bring it to the  disjunction of elementary products 
+next we shall consider conjunctive normal form or cnf that is the one  um we used earlier 
+what is a conjunctive normal form 
+a formula which is equivalent to a given formula and which consists of a product of elementary sum is called a conjunctive normal form of the given formula(Refer Slide Time 14:00 ) 
+
+so it will be like this it be some thing like okay  P OR Q AND some thing OR OR this is called conjunctive normal form it is the product of elementary sum each one is an elementary sum and you have AND here product of elementary sums 
+again any well formed formula of the propositional  logic you can bring it to conjunctive normal form 
+we let us take one more example here so this is the formula and we want to bring it to conjunctive normal form (Refer Slide Time 14:56)
+
+so this you can write as NOT of  NOT of P OR NOT of Q using implication rule for implication P implies Q can be written as NOT P OR Q
+so NOT of this OR this one you can write as P implies NOT Q AND NOT P P P implies Q and Q implies P so NOT Q implies P
+using demargan’s laws this will become P AND Q OR NOT P OR NOT Q AND NOT of NOT of Q OR P 
+here again i am using the rule NOT P implies Q is NOT P OR Q and the same rule here
+so what will you get you get P AND Q OR NOT P OR NOT Q AND this will become NOT of NOT of Q is Q so you get P OR Q 
+we can use distributed laws now so this will um become P OR NOT P OR NOT Q AND P OR Q AND Q NOT P OR NOT Q AND P OR Q [noise] 
+so if expand this using distri distributive laws you will get P OR NOT P OR NOT Q AND P OR P OR Q and this one will becam become AND um there is a OR here [noise] Q OR NOT P OR NOT Q AND Q OR P OR Q [noise]
+so this is an elementary sum  this is an elementary sum this is an elementary sum this is an elementary sum and you have the product of elementary sums this this is conjunctive normal form 
+now you can see that because you have P OR NOT P  this will reduce to one and because you have Q OR NOT Q this will reduce to one and this will reduce to P OR Q and because P OR P is P and Q OR Q is Q so ultimately the whole thing will  reduce to P OR Q  if  you simplify if you want to simplify this will reduced to this 
+but we are not um at present interest in the this is the conjunctive normal form (Refer Slide Time 19:20)
+
+so any well formed formula of the propositional logic can be brought into either disjunctive normal form or conjunctive normal form 
+now you will consider principal disjunctive normal forms
+let us take two propositional variables P and Q  now consider the terms P and Q or P AND NOT Q or NOT P AND Q or NOT P AND NOT Q they are called minterms there are four minterms here P and Q is a minterm and P AND NOT Q is a minterm and NOT P AND Q is a minterm and NOT P AND NOT Q is a minterm 
+in a minterm every variable will be present only once either in the negated form or in the non negated form 
+so if you have  two variables it is the conjunction of two literals they can be negated or non negated 
+now what is the principal disjunctive normal form for a given formula an equivalent formula consisting of disjunction of minterms is known as its principal disjunctive normal form such a  for normal form is also called the sum of products canonical form (Refer Slide Time 21:13)
+so you should have disjunction of minterms earlier we had disjunction of elementary products here we have disjunction of minterms 
+so let us see how to convert a given formula into principal disjunctive normal form let us take some example 
+now consider this example P OR NOT P implies NOT Q implies R this you can write as P OR NOT P implies this one by changing into the form you can write it as NOT of NOT of Q is Q OR R 
+so this you can write as P OR again NOT of NOT of P P OR Q OR R so this will become P OR P OR Q OR R it is nothing but P OR Q OR R 
+now this is a this is the sum of elementary products but each one should be a minterm this is not a minterm so we have to convert this into a minterm for which you have to add the variables Q and R 
+now you know that P you can write like this P is P AND Q OR NOT Q because Q OR NOT Q is one and P AND one is P so you can write like this AND R OR NOT R and then if you expand using distributive laws this will become P AND Q AND R OR P AND Q AND NOT R OR P AND NOT Q AND R OR P AND NOT Q AND NOT R 
+so you will see that each is a minterm  this is the minterm this is the minterm this is the minterm this is the minterm so P is equivalent to these four minterms sum of the four minterms(Refer Slide Time 23:27)
+
+similarly you can write for Q also Q will be equal to P AND Q AND R OR NOT P AND Q AND R OR P AND Q AND NOT R OR NOT P AND Q AND NOT R so you have to provide the missing variables here you have only Q P and R are missing so you have to provide them in all possibilities so you have P R NOT P R P NOT R NOT P NOT R like that you have to provide(Refer Slide Time 24:13)
+
+similarly R also you can write ultimately the whole formula will be equivalent to you can omit repetition P and Q and R is there here also it is there the whole formula will become P AND Q AND R OR [noise] P AND NOT Q AND R OR P AND Q AND NOT R OR P AND NOT Q AND NOT R OR NOT P AND Q AND NOT R NOT P AND Q AND R OR NOT P AND NOT Q AND R 
+so out of the eight possibilities of combining them 
+if you you each variable should be present in the minterm either in the negated or in the non negated form so with three variables you can possibly have eight minterms and in this formula out of the eight seven are present 
+so this is the way you convert a given well formed formula into principal disjunctive normal form (Refer Slide Time 25:52)
+
+this is also called sum of products each is a product and you have the sum of them 
+now there is a way of writing this usually you write NOT P OR NOT Q OR NOT OR NOT R as zero zero zero not representing zero 
+for example P P AND Q AND R as one one one P AND NOT Q AND R i am sorry this is AND this is AND P NOT Q AND R this you can write as one zero one like that so the eight possible minterms you can represent by binary numbers from zero to seven so in this case what will this represent this will represent one one one that is seven 
+and this will represent one zero one that is five and this will represent one one zero that is six 
+and this will represent one zero zero that is four and this will represent zero one zero that is two
+and this will represent zero one one that is three And this will represent zero zero one that is one 
+so if you allow the minterms to be represented from zero to seven in this case 
+in general if you have n variables the minterms you can represent by integers from zero to two power n minus one (Refer Slide Time 26:46)
+
+so if you do that you represent the principal disjunctive normal form as sigma for example this one you can represent as sigma one two three four five six seven 
+with two variables suppose i have two minterms P AND Q NOT P AND NOT Q and  a principal disjunctive normal form like this how will you represent this 
+there are only two variables they can be represented from zero to three and this will represent three one one that is three 
+and this will represent zero zero that is zero so this whole expression you can write as  sigma zero comma three [noise] (Refer Slide Time 28:42)
+
+next [noise] we shall consider principal conjunctive normal forms
+we shall first define what is meant by a maxterm(Refer Slide Time  29:12)
+
+for a given number of variables the maxterm consists of disjunction in which each variable or its negation but not both appears only once
+so suppose you are having variables P and Q  with P and Q what will be the maxterms 
+P OR Q NOT P OR Q P OR NOT Q and NOT P OR NOT Q these are called maxterms (Refer Slide Time 29:32)
+
+they are disjunction of literals where each variable is present in the neg negated or non negated from form but not in both forms 
+so any formula you can bring into principal conjunctive normal form 
+what is principal conjunctive normal form 
+for a given formula an equivalent formula consisting of conjunctions of  maxterms only is known as principal conjunctive normal form(Refer Slide Time 29:12)
+and this is also called product of sums canonical form
+and any formula can be brought into principal conjunctive normal form let us see how we can do that 
+the earlier example which we considered this one reduced this then [noise] we added extra variables to make it to principal disjunctive normal form 
+now look at this this is a  maxterms with three variables this is a  maxterm so the whole thing reduces to just one maxterm [noise] in this example (Refer Slide Time 30:43)
+
+let us consider one more example Q implies P AND NOT P AND Q this you can write as NOT Q AND NOT P AND Q [noise] 
+so this is NOT Q OR P this is a maxterm AND NOT P AND Q 
+now you have to convert them into maxterms so NOT P you can write as NOT P OR Q AND NOT Q this is zero so NOT P OR zero is NOT P 
+and this one using distributive laws will become NOT P OR Q AND NOT P OR NOT Q (Refer Slide Time 31:58)
+
+similarly Q can be written as P AND NOT P OR Q you have to provide the missing variable like this 
+that is equivalent to using distributive laws P OR Q AND NOT P so the whole formula reduces to NOT Q OR P that i will write as P OR NOT Q using commutative laws NOT P 
+this term becomes like this NOT P P OR NOT Q and instead of NOT P you have to write these two terms NOT P OR Q AND NOT P [noise] OR NOT Q 
+and instead of Q you have to write these two terms P OR Q AND NOT P OR Q 
+now you can see that NOT P OR Q is repeated twice this is not necessary to write twice 
+so probably you can remove this  this is repeated so it 
+so you have the conjunction of maxterms each is a maxterm and you have the conjunction of maxterm this is the elementary this is the principal conjunctive normal form (Refer Slide Time 33:39)
+
+now the notation for that this so principal conjunctive normal form is a product of maxterms 
+so with two variables i have the maxterms like know P NOT P OR NOT Q NOT P OR Q P OR NOT Q P OR Q and this you can represent in binary  like zero zero zero one one zero one one  representing the numbers from zero to three (Refer Slide Time 34:20)
+
+so if you look at the last one which we consider all the four terms are present here all the four maxterms are present 
+so this can be represented as product zero comma one two three so this is the notation used (Refer Slide Time 34:44)
+
+now with three variables again you can have the maxterm represented by zero to seven 
+and if you look at this one this represents the maxterm one one one or seven so the whole formula i can be represented by pi seven 
+suppose i have P OR Q OR NOT R with three variables AND NOT P OR Q OR R AND NOT P OR NOT R NOT Q OR R suppose a formula consists of the[se] these three maxterms this will represent zero zero sorry one one zero and this will represent zero one one and this will represent zero zero one 
+so the whole thing can be written as pi of one comma three comma six the formula you can write as pi one comma three comma six 
+so this is the another notation for writing the principal conjunctive normal form as we consider for principal disjunctive normal forms 
+next we have to consider prenex normal form so for we have consider only propositional logic we didn’t use quantifiers at all 
+now if you use quantifiers how will you write it in a normal form what is the normal form for first order logic 
+for first order logic the normal form is called prenex normal form and the definition is like this A formula F in the first order logic is said to be in a prenex normal form if and only if the formula F is of the form Q one x one Q two x n m where x one x two x n are the  individual variables so every Q i x i is of the form for all of  x i or there exist x i Q one represents as quantifier for x one Q two represents as quantifier for x two and so on it can be the universal quantifier for all or the existential quantifier there exist 
+And the rest of the formula is given in M and M is a formula containing no quantifiers 
+now the Q one x one Q two x two etcetera this is called prefix of the formula and M is called the matrix of the formula(Refer Slide Time 36:26)
+
+now any well formed formula of first order logic you can bring into prenex normal form let us see how to go about that (Refer Slide Time 37:51)
+
+the steps you have to go through or given like this if you want to bring any well formed formula of the first order logic how to transform into prenex normal form 
+First step will be use the laws that is if  F is equivalent to G you have to replace it by F implies G AND G implies F and if you have a F implies G you have to replace it by NOT F OR G 
+then by this you will be eliminating the logical connective equivalence and implication 
+the second step will be repeatedly use NOT of NOT of F is equal to F and demorgon’s laws NOT of F OR G is NOT of F AND NOT of G and NOT of F AND G is NOT of F OR  NOT of G  
+and also the laws NOT of for all of F F of x by bringing the NOT inside for all will change to there exist these things we learned earlier 
+so this is equivalent to saying there exist x NOT of F of x so you are bringing the NOT inside 
+similarly here if you have NOT there exist x F of x bring the NOT inside and you will get for all of x NOT of F of x so this the second step is bring the negation signs immediately before the atoms(Refer Slide Time  38:48)
+
+the third step is rename bound variables if necessary we shall see what it is taking by some examples
+and step four will be make use of the laws now if you have Q of x F of x OR G where G does not contain x you can write it like this (Refer Slide Time 39:28)
+
+similarly if you have Q of x F of x AND G where G does not contain x you can write it like this 
+and for all distributes over AND so this one can be replaced by taking for all of x out and writing this way it is for all of x F of x AND for all of x H of x you can write as for all of x F of x AND H of x 
+and there exist x distributes over OR so in a similar manner if you have there exist x F of x OR there exist x H of x you can take out the there exist x and write it as there exist x F of x OR H of x 
+but if you have for all AND OR you cannot use that and similarly there exist will not distribute over and this you have to remember[noise]
+now if you have Q one x F of x OR Q two x H of x then how can you bring out the quantifiers Q one Q two can be for all are the there exist how can you take them out 
+now this x or this quantifier is binding this portion and this quantifier is binding this portion 
+so the best thing for us to will be rename  one of the variables so keep x here and instead of x you write it as z 
+in that case this will not have x and this will not have z so you can take the quantifiers out this is renaming of variables 
+so keep it as it is and this one  you replace by z  rename as z and then take out the quantifiers 
+so this you will get as Q one x Q two x F of x OR H of z you are renaming the variable here 
+simi this is using OR this is using AND here again you have the same thing if you have Q three x and Q four x this is binding this and this is binding this so its better to rename this variable as z and so by taking out the  quantifiers you will get this
+that is to move to quantifiers to the  left of the entire formula to obtain prenex normal form 
+let us consider one or two examples so let us consider some examples to see how to convert a well formed formula of first order logic into prenex normal form 
+we have to bring all the quantifiers to the front and the rest of the formula should be after the quantifiers the first one is called the prefix and the later one is called the matrix of the formula 
+now take this example for all of x P of x implies there exist x Q of x and we have seen what are the steps 
+we have to use in converting a formula of the well formed formula of the first order logic to prenex normal form 
+First we have to replace equivalence and implication 
+so let us try to replace this implication this you can write as NOT for all of x P of x  OR there exist x Q of x 
+so this given formula is equivalent to this this is we are using the rule P implies Q is equivalent to NOT P OR Q 
+now the next step will be to bring the NOT near up to the atom P of x and Q of x they are the atoms so how will you bring the NOT inside
+When you bring for all of x will become there exist x so you have there exist x NOT of P of x OR there exist x Q of x 
+we know that for all distributes over AND and there exist distributes over OR so we can use distributive law in the reverse and take the there exist out so you can take out there exist x and write it as NOT of P of x OR Q of x this is in prenex normal form this is the prefix and this is the matrix (Refer Slide Time 44:42)
+
+let us take one more example this has four variables the this is the well formed formula involving four individual variables x y z u for all of x for all of y  there exist z P of x z AND P of y z implies there exist u Q of x y u 
+Here P is a predicate variable with two variables and Q is a predicate variable with three variables it is a ternary predicate
+the scope of x for all of x and for all of y will be the whole thing the scope of there exist z is this portion the scope of there exist u is this portion so we must be very careful about the scope of each quantifier 
+now fortunately in this example the two quantifiers for all x and for all of y or outside the rest of the portion we need not have to do anything about that 
+Only the remaining thing we have to change so this can be written in this form for all of y and this one again the first step is to replace implication by using P implies Q is equivalent to NOT P OR Q 
+so this can be written in the form NOT there exist z P of x comma z AND P of y comma z OR there exist u Q of x y u
+now the for all of x for all of y remains as it is
+the second step will be to bring the NOT inside so in that case will get there exist will become for all so for all of z NOT of P of x z AND P of y z okay for all z is the whole thing this is AND there exist u Q of x y u 
+now for all of x for all of y this you can write as for all of z use demorgan’s laws this will become NOT of P of x comma z OR NOT of P of y comma z and the scope of z is this portion OR there exist u Q x y u 
+now you can see that the scope of z is this portion and z is not occurring in this portion at all 
+and similarly u the there exist u the scope is this and u is not appearing in this portion that way this portion is free of u and that portion is free of z 
+so using for all z here is not going to affect it at any way because it does not contain z and using there exist here there exist u here is not going to affect because this portion does not contain u at all 
+and for all of x for all of y the scope is the whole thing and they are already outside so we need not bother about that 
+so without affecting the formula we can take out for all of z and there exist u outside 
+this is possible because this does not contain z and this does not contain u supposing it contains some thing we have to renamed the variable some things like that 
+so in this particular example there is no necessity for rename renaming of variables so what you get is for all of x for all of y for all of z there exist u then you get NOT of P of x comma z OR NOT of P y comma z OR Q of x y u  
+so we have brought the given formula into prenex normal form this is the prefix which contains all the quantifiers and this is the matrix port portion which does not contain any quantifiers(Refer Slide Time 50:28)
+
+like that we can bring any formula of  first order logic into prenex normal form
+propositional logic also you can look at as boolean algebra which as got application to switching circuits 
+i am not going into detail of this circuits but you must have heard about AND gate OR gate and so on
+an AND gate is represented like this it has got two inputs and the output is P AND Q 
+P and Q can be zero or one and output will be one when P and Q are both one otherwise it will be zero this is known as the AND gate  in switching circuits
+an OR gate AND an OR gate is represented like this there will be two inputs P and Q and output will be P OR Q 
+it will be zero when both P and Q are zero when one of or both of P and Q are one it will be one 
+it represents the AND connective in the propositional logic okay 
+the NOT gate  in switching circuits is represented like this there is one only one input and output represents NOT P and this is called the NOT gate (Refer Slide Time 52:10)
+
+in switching circuits we also have two more gates known as the NAND gate and the NOR gate  
+NAND which is actually NOT AND complimentary to AND and the truth table for that will be like this P Q the NAND operator is usually denoted like this pierce arrow 
+When this is zero this is zero this is zero one you have to consider the four possibilities one zero one one 
+in the case of AND um AND of P and Q will be one in this case so NOT AND will be this is zero 
+in the other cases it will be one so it is complimentary to the AND table
+P AND Q will be like this P AND Q will be so it is complimentary this is represented by a gate of this form OR (Refer Slide Time 53:57)
+
+we also have another gate NOR which represents NOT OR the truth table for that will be like this P Q this is sometimes rep[resent] represented by this notation 
+again we have possibilities zero zero zero one one zero one one what will be the table for P OR Q P OR Q will be zero in this case in the other three cases it will be one 
+so it is NOT of OR so it will be one zero zero zero (Refer Slide Time 55:12)
+
+the truth table for NOR gate is given by this it is represented by a diagram like this 
+with two inputs P Q P now any boolean function can be represented by a kerno map and you have it is um you can represented as a canonical sum of products or disjunction of minterms
+for example involving two variables P OR Q OR R if you represented i again don’t want to go into the details what is meant by kerno map and all that those who are familiar can connect it up this 
+these suppose i have three variables P Q and R this is P this is say Q and R then zero zero zero is this zero zero one is this better use P Q and R here so zero zero will be this zero zero one will be like this 
+Zero um zero one zero three four five six seven cells can be represented like this 
+P will be represented by this Q will be represented by this and R represented by this which includes all the seven cells and this will be written in the form sigma of one comma two comma three four five six seven this we have already seen 
+so this is to show the connection between boolean algebra or propositional logic and boolean algebra and switching circuits (Refer Slide Time 57:25)
+
+we we already we have know what is meant by AND OR NOT two more gates are there in switching circuits NOR and NAND 
+and any boolean function can be represented like this as a principal disjunctive normal form  
+
+
+
+ 

@@ -1,0 +1,13 @@
+Row 1::Height 2::searching in an unsorted array
+Row 2::Height 1::input: a[1..n] - an array of integers, q - an integer.
+Row 3::Height 1::output: an index j such that a[j] - q.nil, if (1<j<n)
+Row 4::Height 1::a[j] q
+Row 5::Height 1::j<-1
+Row 6::Height 1::while j<n and a[j] q
+Row 7::Height 1::do j++
+Row 8::Height 1::if j<n then return j
+Row 9::Height 1::else return nil
+Row 10::Height 1::worst-case running time: o(n), average case:
+Row 11::Height 1::o(n)
+Row 12::Height 1::we can't do better. this is a lower bound for the
+Row 13::Height 1::problem of searching in an arbitrary sequence.

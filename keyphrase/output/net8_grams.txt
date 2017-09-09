@@ -1,0 +1,8025 @@
+computer networks prof.sujoy
+networks prof.sujoy ghosh
+prof.sujoy ghosh department
+department of computer
+science and engineering
+topic for today
+today is qosqos
+qosqos and multimedia
+quality of service
+service and multimedia
+service ? qos
+refers to traffic
+traffic control mechanisms
+mechanisms that seek
+differentiate performance based
+based on application
+application or network
+network operator requirements
+requirements or provide
+predictable or guaranteed
+performance to applications
+sessions or traffic
+aggregates it talks
+talks about lot
+lot of things
+applications which require
+require one kind
+kind of quality
+parameters may sort
+kind of qos
+set of requirements
+traffic is handled
+guarantee of performance
+performance such things
+video and audio
+audio conference requires
+conference requires bounded
+requires bounded delay
+delay and loss
+rate that means
+means the delay
+rate of packets
+tolerant of losses
+sensitive about delays
+downloading a file
+sensitive to trace
+audio streaming means
+audio or video
+requires a bounded
+bounded packet loss
+packet loss rate
+sensitive to delay
+applications like real
+real time control
+delay is important
+valuable called premium
+run these premium
+ready to pay
+expect better guaranteed
+data and error
+error rate error
+rate error rate
+packets get lost
+stateless and stateful
+stateful qos solutions
+qos solutions stateless
+solutions stateless solution
+state about traffic
+kind of thing
+maintain any states
+simply the raw
+raw packet forwarding
+packet forwarding capacity
+kind of delay
+delay or performance
+stateful solutions routers
+solutions routers maintain
+routers maintain per-flow
+maintain per-flow state
+state this flow
+important while guaranteeing
+audio signal nature
+nature is digitized
+digitized and packetized
+packet switched network
+packet in entity
+dealt with packets
+users are interested
+means the flow
+flow of packet
+streams of packets
+audio signals constitute
+constitute a flow
+purely stateless situation
+kind of packet
+maintain a state
+give powerful services
+services like guaranteed
+services plus high
+high resource utilization
+scalable that means
+number of flows
+router starts increasing
+fully stateful system
+architecture or isa
+architecture for providing
+providing qos guarantees
+networks for individual
+individual application sessions
+session of flow
+packets it relies
+relies on resource
+reservation and routers
+maintain state information
+information of allocated
+call setup requests
+requests the point
+kind of guarantee
+guarantee of service
+service that means
+means its delay
+specially reserve resources
+resources like buffers
+resources like cpu
+reserve these resources
+give better service
+maintain the state
+reservations and respond
+call setup request
+out some resources
+session some intermediate
+admitted network decides
+admit or deny
+idea of intserv
+call setup phase
+ready to provide
+provide these resources
+protocol called reservation
+protocol or rsvp
+rsvp rsvp constitutes
+constitutes of call
+setup and signaling
+traffic qos declaration
+element admission control
+control which means
+qos sensitive scheduling
+scheduling that means
+packet arrives first
+scheduled for processing
+forwarding this processing
+qos sensitive manner
+manner similarly routing
+similarly routing algorithm
+packet discard strategies
+intserv qos components
+talked about scheduling
+discuss about rsvp
+rsvp is internet
+signaling it creates
+creates and maintains
+maintains distributed reservation
+distributed reservation state
+decoupled from routing
+routing one thing
+routing for setting
+setting up paths
+multiple trees setup
+setup by routing
+rsvp multicast tree
+tree is setup
+routing protocols rsvp
+protocols there unlike
+atm or telephony
+signaling while doing
+doing the call
+assign the virtual
+state that means
+means reservation times
+out unless refreshed
+timed-out and latest
+latest paths discovered
+discovered through path
+tentative resource reservation
+reservation and confirmation
+simplex and duplex
+source would initiate
+initiate the setup
+send a setup
+first switch controller
+intermediate nodes send
+response and acknowledgement
+declare its qos
+requirements and characterize
+characterize the traffic
+specifications r spec
+defines the qos
+qos being requested
+kind of bound
+loss is acceptable
+reserved that means
+queue or buffer
+done with scheduling
+kind of traffic
+spec the intermediate
+nodes will compute
+compute what kind
+kind of resource
+required so signaling
+protocol is needed
+needed to carry
+routers where reservation
+reservation is required
+admission is concerned
+routers will admit
+admit calls based
+manage to give
+agreement to pay
+service and based
+based on current
+current resources allocated
+specifies the traffic
+guarantees of service
+element considers unreserved
+considers unreserved resources
+achieves per-flow bandwidth
+bandwidth and delay
+first the receiver
+means perform per-flow
+perform per-flow admission
+per-flow admission control
+first the path
+install per-flow state
+sender starts sending
+per-flow buffer management
+installed and maintained
+maintained per-flow state
+state for data
+data and control
+flow the router
+lot of work
+good at giving
+maintain a per-flow
+kind of classification
+classification and management
+difficult to maintain
+give it buffers
+buffers and queues
+robust stateful solutions
+stateful solutions provide
+provide more powerful
+powerful and flexible
+make fine grained
+short of demarcating
+demarcating the flow
+setting up atm
+atm virtual circuits
+done while call
+separate reservation protocol
+similar to mpls
+internet just takes
+takes a packet
+full power flow
+power flow classification
+sort of soft
+accommodate a number
+states by routers
+routers in high
+high speed networks
+networks is difficult
+flows so diffserv
+diffserv provides reduced
+reduced state services
+large granular flows
+end to end
+worlds so diffserv
+intends to address
+difficulties with intserv
+intserv and rsvp
+rsvp flexible service
+flexible service models
+provide more qualitative
+qualitative service classes
+provide relative service
+relative service distinction
+distinction like platinum
+signaling than rsvp
+rsvp many applications
+applications and users
+notion of service
+ingress edge router
+egress edge router
+edge router edge
+router edge routers
+conditioning that means
+edge the reason
+core the core
+values in ds-byte
+based on negotiated
+services and observed
+traffic interior routers
+byte and forwarding
+forwarding near stateless
+mpls or atm
+atm use ds-byte
+ds-byte as index
+per-flow traffic management
+out profile core
+profile core router
+buffering and scheduling
+based on marking
+marking at edge
+in-profile packets in-profile
+packets in-profile means
+means some traffic
+shape that means
+sending more packets
+packets per unit
+out of profile
+profile packets assured
+packets assured forwarding
+marking and power
+scheduling is done
+done the packet
+packet is marked
+type of service
+service in ipv4
+ipv4 and traffic
+class in ipv6
+differentiated service code
+service code point
+code point dscp
+dscp and determine
+determine the phb
+packet will receive
+code will dictate
+forwarding per hop
+behavior or phb
+routers is simplified
+simplified process based
+based on class
+class and resources
+sla was created
+bandwidth is equivalent
+equivalent to point
+point to point
+point leased line
+kind of service
+plain packet switch
+packet switch network
+guaranteed through policing
+policing and shaping
+shaping in order
+order to stay
+rate of leaky
+bucket and wfq
+intermediate nodes guarantee
+premium service traffic
+service traffic conditioning
+desirable to limit
+limit traffic injection
+traffic injection rate
+users declare traffic
+declare traffic profile
+rate and burst
+traffic is metered
+metered and shaped
+shaped if non-conformed
+discussed congestion control
+packets are classified
+classified and marked
+traffic maybe shaped
+chance some burst
+system can handle
+explained for ordinary
+ordinary data traffic
+traffic like web
+traffic or ftp
+delay and variation
+delay that means
+lot of packets
+bunch then packets
+packets maybe slowing
+slowing and coming
+feel very odd
+made an international
+find a lot
+lot of delay
+delay remains constant
+people can manage
+delay keeps varying
+varying a lot
+lot of jitter
+irritating for people
+hand unlike data
+bits are dropped
+find some difference
+difference in quality
+network is spreading
+find it cheaper
+traditionally telecoms domain
+sense for audio
+discussed about inserv
+path so people
+set of protocols
+protocols has evolved
+classify multimedia applications
+applications ; identify
+identify the network
+applications need making
+mechanisms for providing
+effort and architecture
+architecture for qos
+streaming of stored
+audio and video
+kind of application
+download a song
+streaming of live
+real time interactive
+classify by multimedia
+classified fundamental characteristics
+typically delay sensitive
+variation in delay
+delay loss tolerant
+losses cause minor
+antithesis of data
+intolerant but delay
+vcr like functionality
+kind of functionality
+vcr so client
+client can pause
+push slider bar
+multimedia session starts
+seconds is acceptable
+seconds until command
+separate control protocol
+kind of control
+to-be transmitted data
+stored multimedia suppose
+packets so chunks
+chunks of data
+record the video
+position the video
+video is received
+received and played
+client is playing
+playing a part
+diagram the client
+internet radio talk
+radio talk show
+live sporting event
+web cast streaming
+playback can lag
+seconds after transmission
+constraint the interactivity
+interactivity is limited
+rewind and pause
+unlike a stored
+multimedia where fast
+real time multimedia
+distributed interactive worlds
+applications of interactive
+stringent qos requirements
+qos requirements end-to-end
+requirements end-to-end delay
+end-to-end delay requirements
+kinds of requirements
+400ms is acceptable
+bothered a lot
+lot it includes
+includes application level
+application level delay
+network delays higher
+delays higher delays
+delays are noticeable
+impair the interactivity
+interactivity session initialization
+address port number
+tcp or udp
+guarantees on delay
+delay or loss
+loss but multimedia
+multimedia application requires
+requires some qos
+qos and level
+level of performance
+internet multimedia applications
+applications use application
+application level techniques
+techniques to mitigate
+implement an inserv
+inserv or diffserv
+end points i.e
+level the application
+level necessarily means
+means the end
+done from end
+number of protocols
+real time protocols
+specifies a packet
+packet for packets
+packets carrying audio
+data so rtp
+packet provides payload
+payload type identification
+type of payload
+packet sequence numbering
+important for giving
+giving some feedback
+feedback rtp runs
+end systems rtp
+systems rtp packets
+packets are encapsulated
+encapsulated in udp
+udp segments interoperability
+two internet phone
+internet phone applications
+phone applications run
+applications run rtp
+network rtp runs
+runs on top
+top of udp
+tcp and udp
+efficient than tcp
+heavy weight protocol
+lot of overhead
+flowing rtp libraries
+rtp libraries provide
+provide some kind
+kind of support
+transport layer library
+runs on udp
+provider transport layer
+transport layer interface
+interface that extend
+extend a udp
+udp so port
+adds to udp
+provide any mechanism
+mechanism to ensure
+ensure timely delivery
+delivery of data
+data or provide
+provide other quality
+rtp is running
+two end points
+points so rtp
+routers so routers
+providing best effort
+make any special
+effort to ensure
+ensure that rtp
+rtp packets arrive
+manner the services
+signal is digitized
+separate protocol control
+control called real
+protocol or rtcp
+conjunction with rtp
+rtp for multicast
+transmissions each participants
+participants in rtp
+session periodically transmits
+periodically transmits rtcp
+transmits rtcp control
+rtcp control packets
+participants each rtcp
+packet contains sender
+sender and receiver
+reports so reports
+improve the performance
+inside the network
+inside the backbone
+exchange this kind
+application can control
+control the rate
+kind of feedback
+mechanism is present
+present the statistics
+statistics include number
+number of packets
+inter arrival jitter
+jitter etc feedback
+sender may modify
+modify its transmissions
+based on feedback
+kind of feed
+running on udp
+send these statistics
+bandwidth they exchange
+kind of information
+layer to modify
+transmitting in order
+fraction of packets
+last sequence number
+average inter arrival
+receiver report sender
+report sender report
+number of bytes
+bytes sent source
+address of sender
+stream etc provide
+mapping between ssrc
+user or host
+rtcp can synchronize
+synchronize different media
+video conferencing applications
+generates one rtp
+stream for video
+audio the point
+lips are moving
+sound is coming
+synchronized in order
+order to synchronize
+referred to earlier
+two different streams
+packets are tied
+audio sampling clocks
+wall clock times
+delay each rtcp
+rtcp sender report
+sender report packet
+recently generated packet
+packet and wall
+packet was created
+association to synchronize
+synchronize the play
+out of audio
+rtcp bandwidth scaling
+attempts to limit
+limit its traffic
+session bandwidth remember
+control that means
+means whatever bandwidth
+rtp actual data
+actual data packets
+kind of divided
+suppose one sender
+sender sending video
+mbps then rtcp
+traffic that means
+protocol called rtsp
+real time streaming
+streaming protocol earlier
+talking about interactive
+interactive live audio
+talk about streaming
+streaming user interactive
+user interactive control
+control is provided
+helper application displays
+application displays content
+functions namely decompression
+compressed in audio
+removal which means
+means you play
+reconstruction of original
+kind of graphical
+graphical user interface
+interface for user
+controls like rewind
+define how audio
+video is encapsulated
+encapsulated for streaming
+streaming over network
+restrict how streamed
+media is transported
+media player buffers
+player buffers audio
+approach for steaming
+video is stored
+stored in file
+files are transferred
+transferred as http
+received in entirety
+entirety at client
+client then pass
+pass to player
+delays until play
+file is downloaded
+downloading that entire
+download the entire
+options like fast
+forward or reverse
+reverse or speed
+streaming the audio
+delay the play
+back also starts
+server with audio
+launches a player
+passing the metafile
+contacts the server
+streaming multimedia client
+multimedia client buffering
+client buffering suppose
+constant bit rate
+bit rate video
+nice streaming audio
+idea of streaming
+client side buffering
+side buffering play
+play out delay
+out delay compensate
+compensate for network
+network added delay
+delay or delay
+tcp is done
+done the server
+sends at rate
+oblivious to network
+rate is equal
+equal to encoding
+rate for constant
+constant rate minus
+rate minus packet
+minus packet loss
+packet loss short
+loss short play
+delay 2-5 seconds
+2-5 seconds compensate
+network delay jitter
+play back starts
+seconds the entire
+jitter error recovery
+error recovery takes
+recovery takes place
+sends at maximum
+maximum possible rate
+rate under tcp
+tcp and fill
+fill rate fluctuates
+rate fluctuates due
+due to tcp
+tcp congestion control
+control the windows
+varying so larger
+smooth tcp delivery
+tcp delivery rate
+handle this tcp
+variation in rates
+rating then http
+http tcp passes
+easily through firewalls
+file is created
+created and communicated
+web browser browser
+browser browser launches
+browser launches player
+rtsp control connection
+control connection data
+connection data connection
+connection to streaming
+web server presentation
+server presentation description
+player is setup
+setup a connection
+playing the media
+protocol for setting
+setting up telephone
+telephone calls h.323
+h.323 is aging
+protocol namely session
+session initiation protocol
+protocol all telephone
+calls and video
+video conferencing calls
+calls take place
+reach the callee
+callee no matter
+devices the callee
+setting up calls
+large protocol setting
+mechanisms for caller
+establish a call
+caller and callee
+callee can agree
+agree on media
+type and encoding
+mechanism to end
+end the call
+call the first
+facility to determine
+determine the current
+current ip address
+address of callee
+maps mnemonic identifier
+identifier to current
+components of chip
+add new media
+streams during call
+encoding during calls
+transfer and hold
+kinds of details
+details about codec
+reject a call
+video and multimedia
+question of accommodating
+performance has increased
+lot of multimedia
+traffic through network
+popular we talked
+talked about inserv
+strategy that people
+people actually deploy
+bandwidth so put
+put another fiber
+solve the problem
+demand for multimedia
+great good day
+talk about network
+support for managing
+managing these networks
+support for keeping
+topic is network
+process of controlling
+controlling a complex
+complex data network
+network to maximize
+maximize its efficiency
+efficiency and productivity
+goal of network
+ensure that data
+efficiency and transparency
+organization for standards
+standards in network
+network management forum
+management forum divided
+forum divided network
+divided network management
+management and accounting
+case the trap
+network management station
+management station polls
+fail to respond
+mixture of trap
+trap and polling
+types of snmp
+retrieves the value
+set of variables
+values of entries
+entry get bulk
+bulk request retrieves
+retrieves a large
+amount of data
+multiple get request
+lot of information
+bandwidth is concerned
+concerned set request
+set or store
+store a value
+request contains values
+variables requested trap
+agent to manager
+manager to report
+report an event
+value from agents
+remote manager report
+designed to report
+report some types
+types of errors
+errors between managers
+snmp data types
+data types computer
+types computer networks
+sujoy ghosh department
+today is network
+deployed in large
+network management system
+enterprise management system
+management system enterprise
+system enterprise management
+system usually takes
+configurations of individual
+management and performance
+aspects which network
+process of locating
+problems or faults
+networks it involves
+discover the problem
+isolate the problem
+fix the problem
+discovering the problem
+problem is important
+hundreds of components
+support for discovering
+discovering the fault
+fault a fault
+network can lead
+lead to impairment
+impairment of services
+suppose some switch
+generating a lot
+lot of spurious
+traffic is coming
+part of fault
+management another thing
+thing to note
+mode of discovering
+discovering the topology
+locate the faults
+data network devices
+network devices controls
+controls the behavior
+data network configuration
+network configuration management
+process of finding
+finding and setting
+access to information
+monitor access points
+alarms for security
+talk little bit
+management and securities
+securities in network
+measuring the performance
+software and media
+examples of measured
+throughput percentage utilization
+degradation in performance
+packets getting dropped
+rates are important
+percentage and utilization
+ways to find
+out these things
+involves tracking individual
+utilization and grouping
+grouping of network
+resources to ensure
+ensure that users
+users have sufficient
+resources this involves
+granting or removing
+permission for access
+snmp simple network
+simple network management
+network management protocol
+management protocol objectives
+framework for management
+set of fundamental
+operations for monitoring
+monitoring and maintaining
+maintaining an internet
+application level protocol
+monitor devices made
+form a part
+talking about network
+manager can talk
+broadly two types
+types of devices
+device and unmanaged
+support this snmp
+order to manage
+place the devices
+network for cost
+put some unmanaged
+management of fault
+monitor them centrally
+centrally for monitoring
+managed devices managed
+devices managed devices
+kind of software
+hardware support inside
+device to talk
+protocol it talks
+agent this agent
+manager for monitoring
+router or host
+host that runs
+runs the snmp
+snmp server program
+managing network devices
+agents in software
+fashion the agent
+agent keeps performance
+send a trap
+sort of alert
+snmp client program
+access to values
+checks an agent
+agent by requesting
+information that reflects
+reflects the behavior
+agent a manager
+forces an agent
+agent to perform
+perform a task
+task by resetting
+database an agent
+process by warning
+warning the manager
+commands for doing
+two other protocols
+structure of management
+management information base
+basic management information
+information base accessed
+defines the format
+format of packets
+agent it reads
+values of objects
+variables in snmp
+defines the general
+rules for naming
+defining object types
+object types including
+types including range
+range and length
+length and showing
+objects and values
+values smi defines
+number of objects
+objects an entity
+entity should manage
+names the objects
+managed nor defines
+defines the association
+scheme for giving
+object the names
+series of integers
+encoding the names
+names of objects
+precise and distinct
+taking into consideration
+role of mib
+creates a collection
+collection of named
+group was formed
+efforts were completed
+completed in early
+documents describing snmp
+describing snmp version
+two network management
+network management stations
+station which runs
+runs some network
+network management application
+nma this software
+talks in snmp
+snmp which manage
+managed this nma
+nma network management
+protocol to talk
+agent which resides
+object this managed
+managed object maintains
+maintains the mib
+mib management information
+system to obtain
+information from snmp
+talk about traps
+basically the information
+management station traps
+traps are un-requested
+un-requested event reports
+snmp agent process
+type of event
+trappable event occurs
+message is generated
+specific configured network
+configured network address
+station many events
+configured to signal
+signal a trap
+general protection fault
+power supply failure
+pros and cons
+configured a trap
+limit the number
+number of traps
+overwhelm the network
+carry any extra
+information in helping
+helping to set
+right the fault
+constrain the number
+generated per minute
+idea to generate
+traps for low
+generating any trap
+network may consist
+thousand network devices
+generate routine reports
+managing a network
+resources are required
+devices to generate
+generate a trap
+lot of events
+occur the network
+received the information
+trap is redundant
+generated a trap
+generating any extra
+extra or relevant
+system periodically queries
+queries the network
+device for information
+polling from time-to-time
+time-to-time the network
+network management agent
+agent will request
+round robin fashion
+configurable the advantage
+amount of delay
+noticed for short
+interval the network
+bandwidth is wasted
+interval the response
+response to events
+slow the point
+immediately some fault
+poll very fast
+bandwidth and network
+efficient and bandwidth
+kind of trade-off
+traps and polling
+occurs the network
+network device generates
+generates a simple
+trap the management
+system then polls
+polls the network
+information the management
+low frequency polling
+purely on trap
+generate the trap
+variables ; getnextrequest
+table ; getbulkrequest
+variable ; response
+response ? response
+values of variables
+requested ; trap
+agents under control
+manager ; report
+kind of standard
+kinds of devices
+types of variables
+signed 32-bit integer
+important data types
+detailed of object
+talk about smi
+smi ; null
+special data type
+string of size
+byte of addresses
+addresses in network
+network byte order
+integer which rolls
+bit will count
+counter the value
+value is rescheduled
+rescheduled which means
+kind of statistics
+statistics you collect
+out and stay
+show a high
+gauge has topped
+rolled over value
+value time ticks
+bit integer rolls
+create new data
+types for specific
+purpose like date
+snmp mibs management
+mibs management information
+collection of related
+related managed objects
+define what information
+standard and enterprise
+enterprise specific mibs
+mibs the point
+designed by cisco
+specialty will require
+require some information
+vendor specific information
+specific to vendor
+separated so naming
+naming of objects
+types of mib
+mibs currently designed
+designed to capture
+capture the core
+module then enterprise-specific
+vendor specific mibs
+mibs that provide
+provide additional management
+additional management capabilities
+features that require
+require the mib
+require a mib
+mib alias tool
+mib query tool
+directly and mib
+alias is required
+structure and identification
+identification of management
+information the smi
+defines the rules
+objects are described
+protocols may access
+access these objects
+define the type
+type of data
+data for transmission
+requires each managed
+specific router coming
+coming from location
+convention really starts
+iso has defined
+global naming tree
+tree it starts
+department of defense
+decided by iso
+manage all objects
+managed by snmp
+identifier the object
+identifier always starts
+object in smi
+choice of simple
+type what type
+type of object
+kind of access
+access is defined
+defined and status
+1.3.6.1.2 and smi
+base for defining
+defining new objects
+iso ? ccitt
+iso node administrator
+node administrator defines
+number of things
+tree for naming
+group the dod
+manage so internet
+group was approved
+approved by iab
+identification for management
+trees for specific
+tree to talk
+talk about interfaces
+scenario only trouble
+impossible for human
+beings to remember
+management application makes
+makes this query
+query to mibs
+spared the trouble
+find such object
+divided into ten
+system descriptor system
+object id system
+contact the system
+last re initialization
+vendor object identification
+makes the scheme
+scheme very general
+devices from heterogeneous
+network management platform
+network management revolved
+revolved around multiple
+systems each managing
+managing one specific
+set of components
+data network restrictions
+restrictions of money
+technical expertise led
+show their inter
+management platform evolved
+functionality of network
+vendors for managing
+managing a specific
+set of devices
+vendor for managing
+managing his devices
+network management applications
+i.e the general
+provide generic functionality
+functionality for managing
+managing a variety
+variety of network
+requirements for network
+type of device
+software can integrate
+platform to include
+include are graphical
+user interface gui
+gui and network
+map the first
+accessible that means
+screen like showing
+showing different colors
+types of nodes
+map is important
+important a dbms
+method to query
+customizable menu system
+platform using graphing
+kind of plots
+device is performing
+plot very easily
+application programming interface
+programming interface api
+api is important
+generic network management
+network management aspects
+give you special
+tools these special
+api application programming
+examples of network
+network management platforms
+widely used network
+showed two network
+network management architecture
+architectures to provide
+hierarchical and distributed
+central network management
+station or network
+single computer system
+large network network
+network network management
+network management software
+point of failure
+make the critical
+fall back mechanism
+primary one fails
+put two network
+redundancy the computer
+system is backed
+consoles on network
+alerts and events
+access all management
+location to view
+events and alerts
+place to access
+access network management
+applications and information
+security is easier
+easier to maintain
+easier to make
+make it secure
+access the nmi
+disadvantages single system
+redundant or fault
+tolerant by keeping
+keeping another machine
+box as network
+elements are added
+difficult or expensive
+expensive to scale
+scale the system
+system to handle
+handle the load
+query all devices
+matter of fact
+enterprise of today
+today an enterprise
+server can scale
+wan bandwidth server
+out of wan
+wan and wan
+network management traffic
+multiple computer systems
+working as clients
+clients central server
+central server requires
+server requires backups
+backups for redundancy
+big local area
+local area network
+network to manage
+manage the local
+put a central
+condensed and summarized
+information is coming
+conserve wan bandwidth
+clients and drill
+good and expensive
+expensive network experts
+detect a problem
+issue and offer
+offer a genuine
+architecture the central
+link is cut
+distribution of network
+network management tasks
+tasks is distributed
+distributed now network
+network monitoring distributed
+centralized information storage
+advantages of hierarchical
+systems to manage
+manage the network
+list of managed
+architecture it combines
+combines the centralized
+centralized and hierarchical
+multiple peer network
+peer network management
+network management systems
+systems each peer
+database each peer
+peer can perform
+perform various tasks
+tasks and report
+sort of master-slave
+kind of situation
+central management network
+management network station
+advantages from central
+central and hierarchical
+network information alerts
+location to access
+talk about specific
+specific network management
+applications the goals
+goals of specific
+manage a specific
+avoid functionality overlap
+platform which means
+means the network
+api and menu
+reside on multiple
+two different vendors
+choosing a network
+two major components
+platform and applications
+applications a practical
+perform device inventory
+prioritize the functional
+areas of network
+survey network management
+management applications choose
+choose the network
+remote monitoring mib
+agents and probes
+standardized to operate
+operate on ethernet
+growing it network
+meaningful network management
+management without machine
+network the number
+number of events
+log starts accumulating
+traffic is flowing
+part in designing
+designing a network
+balance among trap
+manage good day
+people have started
+started giving services
+services through network
+network these services
+dependent on security
+security is breached
+overview of security
+features in network
+bits that means
+out the content
+message must reach
+key the private
+entire thing i.e
+i.e the original
+receiver will decrypt
+whomever it purports
+digital signature plays
+plays its role
+receiver can verify
+verify by applying
+decrypt the signature
+two results equality
+results equality means
+equality means document
+document is unmodified
+unmodified computer networks
+computer networks prof
+networks prof s.ghosh
+prof s.ghosh dept
+dept of computer
+science & engineering
+banking this banking
+intact which means
+kinds of services
+messages are coming
+coming in order
+finally the availability
+layers are working
+versa if network
+integrity and availability
+work on security
+active research area
+area at present
+lots of solutions
+handled through encryption
+sending the message
+intercepts this message
+encryption techniques encryption
+handle confidentiality integrity
+signatures and retransmission
+messages in order
+layer although security
+important that nowadays
+issues are handled
+role to play
+attempts to subvert
+subvert the goals
+exposure of data
+make a matrix
+matrix of goals
+goals vs threats
+data for data
+integrity in goals
+tampering with data
+threat for system
+denial of service
+fun that serves
+kinds of intruders
+prying by non
+non technical users
+out of curiosity
+snooping by insiders
+insiders often motivated
+motivated by curiosity
+curiosity or money
+breaches some insider
+insider is involved
+involved in majority
+difficult to handle
+handle it determined
+attempt to make
+commercial and military
+big business military
+business military communication
+encrypted so encryption
+encryption basically derives
+derives its history
+purpose and now-a-days
+age of information
+information the information
+large commercial houses
+crack those encrypted
+techniques the goal
+scrambling the data
+algorithm to scramble
+data the algorithm
+data and key
+difficult to ensure
+modern cryptography depends
+mainstay cracking codes
+modern encryption techniques
+basics of cryptography
+algorithms in general
+secret so keeping
+keeping these keys
+keys a secret
+distribute the keys
+encrypting the message
+decrypting the message
+message in general
+effective the cipher
+people with keys
+encrypt the plain
+intercepts the cipher
+decrypt the cipher
+plain text back
+hard or impossible
+impossible to find
+out the message
+message without knowing
+knowing the key
+fast to find
+difficult to find
+order to handle
+classical encryption techniques
+techniques the letters
+message are replaced
+numbers or symbols
+symbols and transposition
+techniques that performs
+performs some sort
+sort of permutation
+kind of encryption
+classical detective stories
+caesar cipher suppose
+suppose the message
+phhw ph diwhu
+out various possibilities
+easy to crack
+crack this code
+kind of history
+alphabetic characters caesar
+mono alphabetic cipher
+set of letters
+considered the blank
+difficult to break
+fairly long text
+frequency of occurrences
+occur many times
+done by detectives
+detectives but now-a-days
+now-a-days a computer
+finally you crack
+crack the message
+approach to encryption
+encryption is transposition
+performing a sort
+alternately you write
+read the top
+easy to decipher
+ensure the security
+system the key
+size and sending
+receiver is impossible
+distribute this key
+senders and receivers
+understood the previous
+message then distributing
+security an encryption
+scheme is secure
+takes very long
+break the cipher
+break all text
+breaking the cipher
+cipher text takes
+lifetime is defined
+decrypting a cipher
+text takes longer
+years to decrypt
+decrypt a message
+number of substitution
+substitution and transposition
+make a strong
+strong encryption scheme
+des or data
+data encryption standard
+standard the basic
+basic des module
+encrypt and decrypt
+difficult to guess
+millions of keys
+put a number
+number of machines
+working in parallel
+good encryption technique
+difficult encryption techniques
+techniques are based
+based on des
+des the current
+algorithm is advanced
+advanced encryption standard
+encryption standard aes
+bit keys adding
+adding one bit
+hard to guess
+average to find
+find the right
+thousand billion years
+good and modern
+modern encryption technique
+broken by brute
+attack crypt analysis
+analysis but discuss
+basic des scheme
+des scheme suppose
+non linear function
+function which produces
+produces an output
+output is xor
+first w bits
+xor is transposed
+round of des
+kind of operation
+final encrypted text
+text the decryption
+set of keys
+original key size
+keys are generated
+people use triple
+triple des triple
+des triple des
+modern encryption standard
+require three keys
+first des block
+message you encrypt
+kind of cryptographic
+public key cryptography
+symmetric key cryptography
+cryptography in symmetric
+encryption and decryption
+mono alphabetic substitution
+substitution that table
+similarly in des
+des or triple
+key or sets
+sets of keys
+class of algorithms
+decryption and knowing
+key for decryption
+impossible to guess
+guess the key
+key or public
+encryption and private
+send some message
+idea another kind
+kind of function
+key cryptography quickly
+cryptography quickly public-key
+quickly public-key cryptography
+single shared secret
+pairs one key
+pair kept secret
+private or secret
+secret two keys
+keys are inverses
+encrypt a message
+popular method involves
+method involves primes
+primes and exponentiation
+basically is based
+difficult to crack
+crack the encryption
+encryption unless large
+method for factoring
+factoring very large
+large numbers large
+numbers large number
+large number means
+number means numbers
+numbers or integers
+integers with large
+number of places
+difficultly with public
+slow for large
+trap door one-way
+door one-way functions
+trap door function
+authentication in digital
+functions are functions
+easy to evaluate
+infeasible to find
+similar to encryption
+produces fixed length
+fixed length output
+variable length output
+similar to xor
+xor in blocks
+blocks of cipher
+text together common
+common algorithms include
+algorithms include md5
+result or sha
+key and one-way
+signatures a hand
+hand written signature
+message that means
+suppose i sign
+sign some document
+sign any number
+number of documents
+signature will remain
+difficult for ordinary
+people to replicate
+replicate many signatures
+equivalent of handwritten
+useless in ecommerce
+copied or forged
+prove his identity
+sign a document
+sort of written
+signed the document
+document or agreed
+digital signature digital
+signature digital signature
+message a digital
+secure hash algorithm
+algorithm to produce
+digest that means
+means you make
+make it run
+encrypt this hash
+produces the digital
+result is encrypted
+digital signature part
+message so comparing
+hashes are equal
+message is authentic
+solve the entire
+require some identity
+document ? identity
+basically a piece
+piece of paper
+trusted third party
+party with information
+verifying the identity
+key that means
+means secret key
+receiver is holding
+key is held
+protocol for holder
+holder to prove
+non electronic world
+digital identity document
+identity document binding
+binding a public
+public private key
+private key pair
+person or organization
+verifying a digital
+signature only proves
+key pair belonged
+independent third party
+party to verify
+verify the person
+identity through non-electronic
+means and issue
+issue a digital
+certificate authority data
+hash and public
+public key algorithms
+business or personal
+information the point
+trusted this means
+key of certificate
+case this authority
+authority is trusted
+trusted that means
+bearing the digital
+physical trusted authority
+key this private
+version of certificate
+put the signature
+issuer the subject
+public key value
+period of validity
+computationally expensive process
+slow pretty good
+pretty good privacy
+public and private
+key to chart
+chart a middle
+public key encryption
+encryption to facilitate
+facilitate key distribution
+encrypting with persons
+persons public key
+person to send
+encrypt with persons
+persons private key
+slow the solution
+encryption to exchange
+exchange a shared
+key a shared
+message is encrypted
+symmetric key encryption
+key cryptography system
+system to exchange
+key this key
+parties are sharing
+works much faster
+encrypted using symmetric
+key encryption pgp
+signature and send
+message as plaintext
+network technology part
+security of messages
+talking about security
+firewall it solves
+solves poor internal
+poor internal security
+internal security measures
+securing the functioning
+intrusion detection system
+detection or intrusion
+intrusion prevention system
+system is integrated
+two different boxes
+boxes so intrusion
+unwanted or unauthorized
+access to data
+data and messages
+detects non network
+non network security
+network security breaches
+security breaches accomplished
+network therefore firewalls
+firewalls and intrusion
+boxes for doing
+question of authentication
+authentication of users
+ldap or aaa
+typical corporate network
+network a typical
+network is meant
+secure we start
+left hand corner
+hand corner suppose
+domain name server
+server or internal
+internal mail server
+internal web server
+internal file server
+i.e the intranet
+corporation this term
+intranet really means
+things like web
+technology being deployed
+left hand part
+right hand corner
+internet other people
+make this internal
+internal network secure
+machines also belonging
+people by providing
+forwarding and dns
+firewall finally connects
+firewall basically inspects
+inspects the packets
+packets and decides
+set of rules
+levels of security
+firewall a firewall
+configure the security
+make your internal
+network absolutely secure
+highly secured zone
+absolutely the internal
+internal code network
+lot of checks
+high security zone
+machine like web
+similarly your dns
+kind of medium
+medium level security
+kinds of machines
+demilitarized zone dmz
+firewall may connect
+low security termed
+low security zone
+firewalls sometimes people
+secure and dmz
+middle level security
+filtering firewall based
+based on packet
+mechanisms a proxy
+level of security
+security the network
+network address translation
+class c addresses
+order to obviate
+private ip addresses
+private ip address
+order to communicate
+proxy will remember
+address is wanting
+wanting to communicate
+puts a valid
+valid ip address
+pool in place
+out the request
+conventional to number
+number the private
+class a address
+huge address space
+route any address
+address which starts
+difficult for outsiders
+internet to log
+place therefore network
+address translation protocol
+translation protocol maps
+protocol maps internal
+internal to assigned
+assigned address mail
+address mail forwarding
+hide internal addresses
+map incoming mail
+mail to real
+incoming and outgoing
+enhance the security
+make your network
+network hundred percent
+hundred percent safe
+increase the level
+level of safety
+out what traffic
+traffic is allowed
+allowed external source
+put ip restriction
+restriction so external
+type of traffic
+smtp for mail
+mail or http
+http for web
+proxy between dmz
+servers and internet
+internet and proxy
+firewall the network
+issue these days
+development is taking
+works very fast
+lots of things
+peer to peer
+kind of things
+handle for internal
+put traffic restrictions
+restrictions on ports
+proxy between intranet
+direct console access
+access is required
+access using ssh
+ssh secured shell
+secured shell connections
+shell connections allowed
+allowed from internal
+internal to dmz
+dmz administration connections
+specific internal ips
+administer the dmz
+dmz this reduces
+reduces the security
+ways one question
+authentication will scale
+repeat the authentication
+distributed authentication scheme
+attacks and defenses
+defenses one kind
+kind of attack
+common is denial
+kinds of attacks
+people are thinking
+ways of compromising
+compromising security confidentiality
+network is manageable
+encryption to protect
+integrity is reducible
+reducible to single
+digital signatures verify
+signatures verify source
+source and commit
+commit protocols handle
+protocols handle network
+handle network failure
+attack that means
+means overwhelm tcp
+overwhelm tcp stack
+stack on target
+machine which prevents
+prevents legitimate connections
+legitimate connections routing
+connections routing attack
+attack is misdirecting
+misdirecting traffic spoofing
+entering your network
+identity then spoofing
+imitates a legitimate
+attack ? limit
+limit the availability
+availability by overwhelming
+overwhelms the tcp
+number of emails
+emails being generated
+flood in tcp
+initiates a syn
+server will acknowledge
+send a sequence
+number the server
+send the syn
+multi-step process sequence
+process sequence numbers
+numbers are incremented
+message it ensures
+ensures message order
+order and retransmits
+retransmits if lost
+receive the syn
+receives the syn
+acknowledges and waits
+waits for response
+sending one syn
+acknowledgements and wait
+space for connections
+connections becomes allocated
+connections from illegitimate
+drop oldest connection
+oldest connection attempts
+flood of syns
+solve the distributed
+router establishes connection
+connection to client
+establishes with server
+server so router
+history of successful
+connections otherwise kills
+intrusion prevention kind
+encrypt your syn
+difficult and cumbersome
+cumbersome to implement
+overload the server
+typically garbage requests
+requests using legitimate
+emails to victim
+scripts these overwhelm
+overwhelm the server
+give legitimate service
+overwhelm the client
+attacks are coming
+ways to handle
+developing and important
+computer networks prof.s.ghosh
+networks prof.s.ghosh dept
+engineering i.i.t kharagpur
+i.i.t kharagpur lecture
+ftp-smtp good day
+two important application
+important application layer
+application layer protocols
+protocols namely ftp
+ftp and smtp
+file transfer protocol
+widely used protocol
+protocol for reliable
+transfer of files
+tcp as transport
+transport for reliability
+out of band
+missing one bit
+corrupt the entire
+degree of reliability
+discussion on tcp
+achieve this reliability
+ftp for downloading
+start an ftp
+ftp to download
+download a file
+immediately unlike mail
+requirement of ftp
+constant the speed
+speed should remain
+requirement for ftp
+ftp a file
+network gets congested
+ideal transport protocol
+protocol for running
+general scheme first
+contact an ftp
+tcp control connection
+connection at port
+mentioned the control
+mentioned a data
+band control means
+nodes are communicating
+telephone the connection
+actual data occupy
+occupy two distinct
+two distinct channels
+communication that means
+means the control
+band for control
+control connection tcp
+ports the request
+opens a port
+client and starts
+ftp client contacts
+client contacts ftp
+server at port
+transport protocol client
+protocol client obtains
+client obtains authorization
+authorization over control
+important to check
+questions of privacy
+privacy and security
+case what ftp
+users and passwords
+channel therefore client
+connection a client
+client browses remote
+browses remote directory
+directory by sending
+commands over control
+connection which means
+end by giving
+giving some commands
+clients with good
+good graphical user
+directory and select
+select whatever file
+receives a command
+transfer the server
+opens a tcp
+tcp data connection
+connection is setup
+setup after transferring
+transferring one file
+file server closes
+closes the connection
+transfer a number
+number of files
+connection the server
+server will open
+open another connection
+setup to transfer
+transfer another file
+band and ftp
+ftp server maintains
+server maintains state
+meaning of state
+directory and earlier
+authentication that means
+out that authorization
+valid that means
+current directory means
+means the directory
+downloading the present
+maintains the state
+current directory remains
+ftp sample commands
+simple ascii text
+channel it expects
+expects the user
+list of file
+file in current
+basic ftp command
+interface which shows
+graphical fashion retr
+retrieve a filename
+filename stor filename
+stor filename stores
+stores or puts
+upload a file
+commands for ftp
+ftp sample responses
+sample responses give
+give a status
+code and phase
+entered the user
+give the password
+connection already open
+open transfer starting
+kinds of responses
+open the data
+error writing file
+extremely important protocol
+important protocol people
+kind of file
+set the mode
+set a mode
+today is smtp
+electronic mails electronic
+mails electronic mail
+http and email
+email i.e web
+web and email
+networks which made
+made computer network
+network immensely popular
+contributed a lot
+network in general
+economies of scale
+money is invested
+lot of money
+sparse further growth
+innovation etc http
+http and smtp
+apps of computer
+details of smtp
+smtp smtp stands
+simple mail transfer
+mail transfer protocol
+protocol like ftp
+popular network services
+supported by tcp
+tcp ip protocol
+protocol smtp system
+system for sending
+exchange between users
+send a mail
+number of people
+lots of advantages
+email the chief
+vogue the classical
+renamed as snail
+space whereas email
+minutes the mail
+attach any kind
+make the email
+email very attractive
+volume of email
+email has grown
+grown tremendously dwarfing
+dwarfing the number
+number of ordinary
+orders of magnitude
+sending a single
+recipients sending messages
+sending messages include
+messages include text
+video or graphics
+carry only text
+encoding other kinds
+wanted to send
+kinds of graphics
+messages to users
+users on networks
+internet is swamping
+types of network
+tcp ip networks
+types of networks
+found to exchange
+mails to users
+kind of network
+introduced a lot
+lot of complexity
+internet and tcp
+electronic mail system
+examples of user
+agents like eudora
+kinds of user
+makes it sort
+sort of simpler
+servers which handles
+handles the incoming
+transfer to reach
+reach the mail
+connected to mail
+servers the mail
+mail server maintains
+maintains an outgoing
+outgoing message queue
+individual users mail
+users mail boxes
+yellow boxes represent
+represent the users
+agent will connect
+mail boxes mail
+boxes mail boxes
+i.e the mails
+boxes and mails
+mail server sends
+mail servers talk
+reach another mail
+agent it prepares
+prepares the message
+message and creates
+creates an envelope
+envelope this envelope
+write a letter
+similarly you put
+put your message
+agent to create
+create the message
+message or upload
+puts the message
+envelope and sends
+mail transfer agent
+job of user
+show the incoming
+kind of user
+directories for classifying
+classifying the mails
+mails from friends
+directory and mails
+mails for business
+examine the mail
+mail and put
+agent the envelope
+agent who transfers
+transfers the mail
+create the envelope
+message transfer agent
+agent or mail
+envelope is delivered
+proper user agent
+accesses his mail
+mtas so mail
+number of mtas
+email to users
+gateway a relay
+receive and send
+disambiguate the address
+final mail server
+proper mail server
+job of mail
+mails between heterogeneous
+gateway this mail
+kind of relay
+make those proper
+type of network
+suppose a user
+kinds of networks
+network is giving
+unique addressing system
+system it consists
+ack something dot
+dot something dot
+part is supposed
+sending the mail
+domain name reaches
+reaches its destination
+local part finding
+out the address
+box is easy
+local part defines
+defines the user
+mailbox where mail
+mail is stored
+user and domain
+ftp or http
+http for mails
+site or intermediate
+configured to pole
+delivers the mail
+sends and receives
+important so people
+people put powerful
+put powerful machines
+machines for doing
+doing these jobs
+compared to snail
+protocols like fttp
+fttp or http
+http this smtp
+site or receiving
+alias to represent
+represent several email
+one-to-many alias expansion
+expansion a single
+many-to-one email expansion
+group of people
+send a message
+message to reach
+define the group
+giving the email
+compose the mail
+send one copy
+expansion similarly many-to-one
+kind of picture
+agent which puts
+collects the mails
+mail boxes user
+reach its destination
+mail message format
+protocol for exchanging
+exchanging email messages
+messages and rfc
+standard for text
+text message format
+format the header
+mail is coming
+single blank line
+client and mta
+mta servers smtp
+smtp uses commands
+commands and responses
+responses to transfer
+client and mtp
+command and response
+application protocols mail
+protocols mail transfer
+process of transferring
+transferring a mail
+mail message occurs
+connection establishment client
+establishment client makes
+makes a tcp
+smtp the smtp
+smtp server starts
+starts the connection
+mta client sends
+sends a request
+sever is ready
+message from client
+side and server
+side will respond
+actual smtp session
+connection is ready
+ready a single
+message transfer phase
+sends the quit
+service is closed
+doing a telnet
+telnet the sever
+reply from server
+enter your commands
+finally you quit
+lets you send
+misapplications and misuse
+sample smtp interaction
+ernet.in if suppose
+cse iitkgp ernet.in
+receive a helo
+helo cse iitkgp
+iitkgp ernet.in pleased
+pleased to meet
+give an address
+client and server
+client is sending
+sending one command
+server is responding
+giving the feedback
+end with dot
+test mail checking
+mail checking protocol
+end the mail
+return nine feeds
+body is ended
+means message accepted
+accepted for delivery
+words about smtp
+connections that means
+session i showed
+directly using smtp
+standard mail agent
+agent for doing
+opens an smtp
+number of messages
+standard mail agents
+mail you connect
+web mail server
+mail server i.e
+service through http
+onwards it works
+smtp uses persistent
+persistent connections smtp
+connections smtp requires
+smtp requires message
+header and body
+7-bit ascii smtp
+ascii smtp server
+server uses crlf
+crlf that means
+means carriage return
+carriage return line
+return line feed
+line feed carriage
+feed carriage return
+line to determine
+end of message
+immediately it tells
+http one thing
+protocol that means
+means the user
+user rather makes
+makes a request
+request and pulls
+pulls the content
+content is pushed
+ascii command response
+command response interaction
+interaction and status
+codes in http
+http each object
+object is encapsulated
+response message smtp
+message smtp multiple
+smtp multiple objects
+send a multipart
+kinds of things
+things namely pictures
+mail this means
+send binary files
+encoding this binary
+send in nvt
+nvt 7-bit ascii
+7-bit ascii format
+directly send binary
+video or audio
+audio or images
+multipurpose internet mail
+internet mail extension
+extension to smtp
+non ascii data
+transforms non ascii
+data into nvt
+adds additional lines
+lines in message
+header to declare
+declare mime content
+mime content type
+file the initial
+header from sujoy
+picture of car
+sending a picture
+content transfer encoding
+encoding is base
+encoding a binary
+ways of encoding
+encoding binary file
+file into text
+text and base
+mention or sender
+standard encoding scheme
+encoding the file
+mention the method
+image or jpeg
+give the base
+bytes and make
+four 6-bit sequences
+interpret these 6-bit
+6-bit binary strings
+number you encode
+form so 6-bit
+6-bit will give
+lower case letters
+post office protocol
+office protocol pop3
+protocol for interacting
+box or downloading
+departmental server giving
+giving the mail
+mails get accumulated
+load the mail
+mail server variable
+practice to download
+machine and pop3
+protocol for doing
+doing this download
+mail access protocols
+pushed a message
+access that email
+mail access protocol
+protocol is retrieval
+stored in mail
+folders on mail
+server usually pop
+doing this mail
+internet mail access
+web mail services
+http that means
+accessed through http
+protocols which people
+office protocol version
+simple and limited
+limited in functionality
+functionality it consists
+consists of client
+software and server
+software the server
+server performs password
+performs password authentication
+software to access
+access the recipients
+recipients mail box
+main mail server
+group or department
+department or organization
+user and password
+simply a password
+user is authenticated
+leads to overloading
+starts getting full
+memory space starts
+organize your local
+local mail folders
+email folders now-a-days
+storing old information
+people need access
+access to pass
+laptop and carry
+carry that laptop
+web mail service
+service your mail
+service both web
+mail and imap4
+facility of storing
+storing the mail
+server what facility
+facility you require
+access the mail
+box the interface
+complicated than pop3
+features imap4 means
+imap4 means internet
+means internet mail
+access protocol version
+access from multiple
+attributes on mails
+mail from steve
+directory and access
+access your mails
+important because now-a-days
+thousands of mails
+fail to delete
+kind of organization
+kind of searching
+order to operate
+operate with mails
+features than pop3
+mentioned can check
+check email header
+prior to downloading
+feature what pop3
+download all mails
+fashion for accessing
+accessing through imap4
+kind of filtering
+filtering by checking
+checking the email
+contents of email
+prior to download
+download so contents
+partially download email
+delete or rename
+rename mail boxes
+create a hierarchy
+hierarchy of mailboxes
+folder for email
+creating a hierarchy
+hierarchy of directories
+directories for sorting
+sorting the mail
+two important protocols
+ftp and mails
+mails that means
+means file download
+file download upload
+upload and mail
+exchange another protocol
+naturally the http
+discuss about http
+widely used application
+application layer protocol
+layer protocol today
+world wide web
+hypertext transfer protocol
+virtually all files
+collectively called resources
+http takes place
+place through tcp
+tcp ip sockets
+sockets which means
+tcp world wide
+world wide means
+wide means majority
+termed as files
+files and large
+number of applications
+based on web
+spread of web
+providers are beginning
+beginning to give
+give their services
+hours a day
+programs like hyper
+hyper text transfer
+text transfer protocol
+protocol in hypertext
+based with hyperlinks
+updated regularly last-modified
+side that means
+lastly modified value
+value has changed
+refresh the current
+request line consists
+url and version
+categorize request message
+uniform resource locator
+page or document
+naming the hosts
+hosts with domain
+remember the domain
+cases the domain
+domain name remains
+underlying ip addresses
+give the domain
+address computer networks
+networks prof sujoy
+prof sujoy ghosh
+http good day
+layer protocol http
+http this protocol
+majority of resources
+resources available today
+today on world
+hypertext the word
+hyperlinks but now-a-days
+now-a-days a lot
+protocol the http
+clients it sends
+standard and default
+port for http
+server to listen
+client is requesting
+negotiate another port
+point because require
+talking about resources
+resources a resource
+chunk of information
+url and url
+url is universal
+universal resource locator
+valid any resource
+dynamically generated query
+generated query result
+dynamic web pages
+page may change
+sort of outputs
+sever side script
+side script output
+output that means
+means some script
+output of programs
+machine that means
+www plain text
+hyper text means
+text means text
+text with hyperlinks
+hyperlinks that means
+url is pointing
+hyperlinks are embedded
+text and hyper
+combination of ftp
+services of tcp
+connection unlike ftp
+smtp as data
+transfers between client
+format of message
+controlled by mime
+mime like headers
+headers http messages
+messages are delivered
+smtp like ftp
+http the messages
+simple client sends
+request and server
+sends a response
+similar to mail
+letter with mime
+mime like format
+network protocols http
+client server model
+model an http
+http client opens
+opens a connection
+connection and sends
+server the server
+server then returns
+returns a response
+delivering the response
+connection making http
+http a stateless
+maintaining any connection
+information between transactions
+point to remember
+remember that basic
+protocol a request
+responds and forgets
+forgets and closes
+things like access
+side another common
+simple text file
+text file kind
+server can leave
+leave that file
+source of breach
+breach of privacy
+privacy or security
+block the cookies
+basic http protocol
+protocol is stateless
+stateless that means
+serviced the machine
+structure of http
+transactions the formats
+request and response
+messages are similar
+similar and english
+oriented both kinds
+kinds of messages
+crlf carriage return
+return and line
+optional message body
+file or query
+data or query
+message is initial
+request versus response
+initial request line
+response a request
+separated by spaces
+version of http
+typical request line
+index dot html
+dot html file
+directory and subdirectory
+locate the resource
+finally it mentions
+mentions the version
+common http method
+post and head
+case the path
+general and http
+version always takes
+takes the form
+kind of protocol
+give a path
+file that path
+constitute the url
+initial response line
+line the initial
+response status code
+english reason phrase
+reason phrase describing
+describing the status
+status code typical
+code typical status
+typical status lines
+means a request
+found this means
+file not found
+client or browser
+http the status
+code is meant
+readable the reason
+phrase is meant
+vary the status
+first digit identifies
+identifies the general
+category of response
+2xx indicates success
+redirects the client
+leave a redirection
+common status codes
+found ok means
+means the request
+request is succeeded
+resource is returned
+means not found
+location response header
+script to redirect
+redirect the browser
+unexpected server error
+server side script
+syntax or fails
+header lines header
+lines header lines
+header lines provide
+lines provide information
+request or response
+usual text header
+text header format
+line per header
+form ? header
+email and news
+end in crlf
+crlf the header
+number of spaces
+spaces or tabs
+value header lines
+header lines beginning
+beginning with space
+space or tab
+previous header line
+header line folded
+folded into multiple
+lines for easy
+two header lines
+some-long-value-1b or header1
+included that means
+making the request
+lot of unsolicited
+unsolicited mails coming
+running the program
+configurable for privacy
+identifies the program
+send the header
+header ? user-agent
+servers consider including
+including these headers
+responses the server
+header is analogous
+user agent header
+identifies the server
+form of program
+version of apache
+activities used gmt
+format last modified
+modified is important
+important the point
+lot of people
+page is brought
+makes the request
+last modified value
+refresh that page
+webpage or document
+domain name remaining
+underlying ip address
+address the domain
+number together form
+form the socket
+give the method
+request is port
+give the host
+host ip address
+socket which means
+reached the machine
+means you start
+file is present
+proper ip address
+basically the addressing
+scheme for http
+retrieve the document
+gopher or news
+news or telnet
+information is located
+address directly port
+directly port number
+number is separated
+path is path
+give some program
+web originally http
+envisioned or envisaged
+locating some resource
+increasingly the web
+people are hooked
+web that people
+people started giving
+communicating in http
+command or request
+client wants information
+similar to put
+list of differences
+actual new document
+copy a file
+moves a file
+remove a document
+creates a link
+delete links created
+created with link
+body of data
+body that means
+user entered data
+data or uploaded
+http message includes
+includes a body
+message that describes
+describes the body
+suppose some image
+side the client
+type of image
+application or program
+program to display
+display gif files
+activated the content
+retrieve the file
+url we write
+domain name path
+request the port
+open a socket
+www.somehost.com at port
+sequence ; first
+first you open
+case some host
+put another request
+agent you mention
+put the blank
+server should respond
+request is granted
+date that means
+body the body
+case a text
+html html stands
+stands for hypertext
+mark up language
+open any web
+made up version
+file the html
+number of tags
+tags like header
+sort of shown
+shown in bold
+tags to show
+show the back
+back ground color
+kinds of formatting
+tag so html
+happy new millennium
+sending the response
+response the server
+closes the socket
+simple text html
+text html document
+methods the head
+asks the server
+server to return
+return the response
+work very fast
+content the response
+line and header
+script a post
+block of data
+headers to describe
+describe this message
+body like content
+resource to retrieve
+program to handle
+handle the data
+sending the http
+suppose the bill
+address of bsnl
+page a link
+web page meaning
+initial or main
+page or index
+make an http
+server the main
+displayed first actuall
+part the located
+give the entire
+connect to bsnl
+find the main
+mentioned the domain
+means a server
+means this domain
+server the domain
+page or main
+cursor has changed
+color has changed
+user but underline
+underline this text
+information about duplicate
+generate a fresh
+protocol has shown
+made another request
+process the form
+form you enter
+submit actually submit
+sounds very nice
+nice and user-friendly
+upload some information
+upload that information
+server this uploading
+uploading of information
+submit html form
+html form data
+data to cgi
+cgi script cgi
+script cgi stands
+stands for common
+common gateway interface
+easy to pass
+form some kind
+kind of query
+data base query
+talking about telephone
+bills are stored
+current request information
+form a query
+dynamically generated web
+generated web page
+encoded and content
+content length header
+url encoded form
+encoded form data
+cgi script receives
+receives the message
+body through stdin
+stdin and decodes
+decodes it cgi
+typical form submission
+submission using post
+invoking some cgi
+mentioned the method
+www form urlencoded
+finally a dynamic
+dynamic web page
+generated and shown
+reasons one reason
+access the web
+costly and wan
+internal band width
+page is fresh
+proxy an http
+program that acts
+client directly calling
+calling the server
+sending a request
+proxy it receives
+request from clients
+clients and forwards
+forwards those requests
+servers the responses
+proxy has functions
+sends all requests
+differ from normal
+resource being requested
+request that means
+give the path
+sending the request
+sends its request
+sending its request
+caching and bandwidth
+space is small
+give a proper
+public ip address
+class b addresses
+existent these days
+class b address
+give the proper
+send the request
+back the server
+open the tcp
+solve this problem
+proxy that means
+class c address
+allot some number
+valid ip addresses
+request and proxies
+proxies that means
+means it sends
+sends the request
+web server giving
+kind of data
+kind of sites
+server to forward
+forward the request
+hierarchy of proxies
+send and tolerant
+receive other clients
+clients and servers
+servers you interact
+http specification suggests
+lines should end
+end with crlf
+single line feed
+accept either crlf
+initial message line
+accept any number
+side is tolerant
+gamut of web
+field of networking
+networking has grown
+tremendous rate people
+people usually talk
+talk about moore
+law for computing
+power and memory
+steeper than moore
+rate or growth
+rate of growth
+number of technologies
+encompass the basic
+touched upon core
+layers we talked
+talked about web
+important these days
+days because transactions
+ubiquitous-ness of network
+grow and now-a-days
+carry a pen
+find a pen
+similarly the expectation
+find the network
+laptop or palm
+thinking of advertising
+advertising intelligent machines
+universally networked world
+computer networks
+prof.sujoy ghosh
+ghosh department
+computer science
+engineering iit
+kharagpur lecture
+qos refers
+traffic control
+control mechanisms
+differentiate performance
+performance based
+network operator
+operator requirements
+guaranteed performance
+traffic aggregates
+basic notion
+network delay
+packet loss
+qos characteristics
+file transfer
+handle qos
+multimedia traffic
+audio conference
+conference requires
+bounded delay
+loss rate
+trace video
+audio streaming
+streaming means
+video server
+internet radio
+bounded packet
+critical applications
+premium applications
+guaranteed service
+low premium
+valuable applications
+qos requirements
+delay variation
+send data
+error rate
+rate error
+stateful qos
+qos solutions
+solutions stateless
+stateless solution
+router maintains
+grained state
+positive point
+raw packet
+packet forwarding
+forwarding capacity
+weak services
+stateful solutions
+solutions routers
+routers maintain
+per-flow state
+guaranteeing quality
+service suppose
+audio conferencing
+audio signal
+signal nature
+packet switched
+switched network
+single packet
+end users
+audio signals
+signals constitute
+flow suppose
+purely stateless
+stateless situation
+stateful situation
+powerful services
+guaranteed services
+high resource
+resource utilization
+grain differentiation
+router starts
+core routers
+core router
+integrated services
+stateful system
+intserv architecture
+providing qos
+qos guarantees
+individual application
+application sessions
+entire session
+flow consisting
+resource reservation
+maintain state
+state information
+allocated resources
+call setup
+setup requests
+requested kind
+reserve resources
+intermediate points
+flow continues
+ordinary packet
+setup request
+resource pool
+intermediate router
+admitted network
+network decides
+basic idea
+setup phase
+virtual circuit
+reserves resources
+intermediate nodes
+intermediate routers
+reservation protocol
+rsvp rsvp
+rsvp constitutes
+traffic qos
+qos declaration
+element admission
+admission control
+sensitive scheduling
+packet arrives
+uniform manner
+sensitive manner
+routing algorithm
+packet discard
+discard strategies
+intserv qos
+qos components
+internet signaling
+maintains distributed
+distributed reservation
+reservation state
+reserved resources
+multiple trees
+trees setup
+routing protocols
+rsvp multicast
+multicast tree
+protocols rsvp
+reserving protocols
+unlike atm
+telephony signaling
+virtual setup
+soft state
+means reservation
+reservation times
+refresh reservation
+latest paths
+paths discovered
+path messages
+forward direction
+reservation messages
+reverse direction
+signaling semantics
+setup acknowledgement
+setup response
+tentative resource
+duplex setup
+multicast support
+setup call
+first switch
+switch controller
+nodes send
+setup ack
+spec defines
+special queue
+traffic characteristics
+traffic characteristic
+visibly required
+signaling protocol
+required rsvp
+leading candidate
+call admission
+admit calls
+calls based
+financial side
+premium service
+current resources
+resources allocated
+request specifies
+element considers
+considers unreserved
+unreserved resources
+required resources
+achieves per-flow
+per-flow bandwidth
+delay guarantees
+allocate resources
+means perform
+per-flow admission
+response path
+consistent manner
+routers agree
+sender starts
+integral part
+per-flow classification
+per-flow buffer
+buffer management
+flow scheduling
+cpu resources
+data path
+per-flow scheduling
+control path
+control paths
+giving services
+per-flow kind
+stateless solutions
+solutions provide
+flexible services
+grained differentiation
+receives protection
+flows demarcating
+virtual circuits
+reserve request
+separate reservation
+treated specially
+raw internet
+full power
+power flow
+flow classification
+good control
+differentiated service
+distinct flow
+distinct state
+soft states
+maintaining states
+high speed
+speed networks
+difficult due
+large number
+reduced state
+state services
+large granular
+granular flows
+end flows
+diffserv intends
+flexible service
+service models
+qualitative service
+service classes
+relative service
+service distinction
+simpler signaling
+qualitative notion
+quantitative notion
+diffserv model
+ingress edge
+edge router
+interior routers
+egress edge
+router edge
+edge routers
+traffic conditioning
+set values
+header based
+negotiated services
+observed traffic
+traffic classification
+stateless core
+forwarding table
+per-flow traffic
+traffic management
+marks packets
+out profile
+profile core
+edge preference
+in-profile packets
+in-profile means
+traffic shape
+profile packets
+packets assured
+traffic class
+ipv6 renamed
+service code
+code point
+point dscp
+hop behavior
+phb carried
+simplified process
+process based
+created phb
+low loss
+low delay
+low jitter
+assigned bandwidth
+leased line
+plain packet
+packet switch
+switch network
+departure rate
+leaky bucket
+nodes guarantee
+service traffic
+traffic injection
+injection rate
+users declare
+traffic profile
+burst size
+discussed congestion
+congestion control
+traffic spec
+ordinary data
+web traffic
+file download
+international call
+quiet annoying
+delay remains
+unlike data
+human perception
+data traffic
+people find
+computer network
+traditionally telecoms
+telecoms domain
+video conferencing
+consistent support
+packet level
+taking note
+handle multimedia
+classify multimedia
+multimedia applications
+network services
+effort service
+specific protocols
+network level
+supported qos
+stored audio
+live audio
+interactive audio
+generally classify
+multimedia application
+fundamental characteristics
+delay sensitive
+delay jitter
+delay loss
+loss tolerant
+infrequent losses
+minor glitches
+loss intolerant
+delay tolerant
+functionality suppose
+fast forward
+push slider
+slider bar
+multimedia session
+session starts
+initial delay
+command effect
+separate control
+control protocol
+timing constraint
+transmitted data
+play out
+stored multimedia
+multimedia suppose
+recorded video
+cumulative data
+live multimedia
+radio talk
+talk show
+live sporting
+sporting event
+web cast
+cast streaming
+playback buffer
+interactive real
+important applications
+video conference
+interactive worlds
+stringent qos
+requirements end-to-end
+end-to-end delay
+delay requirements
+includes application
+application level
+level delay
+network delays
+higher delays
+interactivity session
+session initialization
+callee advertise
+address port
+port number
+encoding algorithms
+telephony call
+standard tcp
+application requires
+effective today
+internet multimedia
+level techniques
+network layer
+end points
+points i.e
+end point
+application layer
+pseudo protocol
+protocols rtp
+rtp specifies
+packets carrying
+carrying audio
+video data
+rtp packet
+payload type
+type identification
+packet sequence
+sequence numbering
+feedback rtp
+rtp runs
+end systems
+systems rtp
+rtp packets
+udp segments
+segments interoperability
+internet phone
+phone applications
+applications run
+run rtp
+network rtp
+lightweight protocol
+tcp tcp
+heavy weight
+weight protocol
+flowing rtp
+rtp libraries
+libraries provide
+transport layer
+layer library
+provider transport
+layer interface
+port numbers
+rtp adds
+application domain
+rtp header
+timely delivery
+service guarantees
+rtp encapsulation
+end system
+routers providing
+special effort
+packets arrive
+timely manner
+voice signal
+packet produced
+separate protocol
+protocol control
+multicast transmissions
+rtp session
+transmits rtcp
+rtcp control
+control packets
+rtcp packet
+receiver reports
+reports statistics
+session inside
+rtcp packets
+feedback mechanism
+statistics include
+include number
+packets lost
+inter arrival
+arrival jitter
+control performance
+transmissions based
+main point
+packets coming
+band control
+last sequence
+sequence number
+average inter
+receiver report
+report sender
+sender report
+rtp stream
+source description
+e-mail address
+provide mapping
+synchronization rtcp
+media streams
+conferencing applications
+sender generates
+video streams
+audio sampling
+sampling clocks
+wall clock
+clock times
+rtcp sender
+report packet
+generated packet
+delay receivers
+rtcp bandwidth
+bandwidth scaling
+rtcp attempts
+session bandwidth
+bandwidth remember
+actual data
+data packets
+receivers suppose
+sender sending
+sending video
+rtcp traffic
+kbps rtcp
+streaming protocol
+interactive live
+streaming user
+interactive control
+helper application
+application displays
+displays content
+web browser
+real player
+typical functions
+jitter removal
+constant rate
+error correction
+redundant packets
+original stream
+graphical user
+user interface
+user controls
+streamed media
+media player
+player buffers
+buffers audio
+simple approach
+steaming audio
+video audio
+file files
+http object
+entire file
+media means
+video file
+simple situation
+web server
+audio files
+actp request
+meta file
+browser launches
+player passing
+player contacts
+progressive download
+streaming multimedia
+multimedia client
+client buffering
+buffering suppose
+constant bit
+bit rate
+rate video
+sufficient delay
+nice streaming
+streaming audio
+buffered part
+client side
+side buffering
+buffering play
+out delay
+delay compensate
+network added
+added delay
+server sends
+network congestion
+encoding rate
+fill rate
+rate minus
+minus packet
+loss short
+short play
+seconds compensate
+entire thing
+jitter error
+error recovery
+recovery takes
+takes place
+rate fluctuates
+tcp congestion
+windows size
+larger play
+tcp delivery
+delivery rate
+tcp variation
+smooth rating
+http tcp
+tcp passes
+browser browser
+launches player
+player sets
+rtsp control
+control connection
+connection data
+data connection
+streaming server
+server presentation
+presentation description
+media server
+starts playing
+media stream
+itu standard
+telephone calls
+calls h.323
+newer protocol
+session initiation
+initiation protocol
+conferencing calls
+callee roams
+large protocol
+protocol setting
+media type
+mnemonic identifier
+chip register
+call management
+change encoding
+hold calls
+codec negotiation
+network performance
+past years
+handle lot
+actual strategy
+multiplexer weight
+good day
+network management
+keeping track
+complex data
+data network
+maximum efficiency
+international organization
+management forum
+forum divided
+divided network
+functional areas
+fault management
+configuration management
+security management
+performance management
+accounting management
+management station
+station polls
+snmp packets
+retrieve values
+bulk request
+request retrieves
+large amount
+concerned set
+set request
+variable response
+variables requested
+requested trap
+inform request
+remote manager
+manager report
+snmp data
+data types
+types computer
+sujoy ghosh
+large network
+management system
+enterprise management
+system enterprise
+takes care
+individual machines
+network devices
+locating problems
+data networks
+considerable area
+good support
+spurious traffic
+first thing
+problem lies
+central part
+entire network
+devices controls
+network configuration
+critical devices
+controlling access
+monitor access
+access points
+records information
+periodic basis
+audit trails
+sounds alarms
+security breaches
+big topic
+involves measuring
+media examples
+measured activities
+throughput percentage
+percentage utilization
+error rates
+network node
+network resources
+sufficient resources
+removing permission
+snmp simple
+simple network
+management protocol
+protocol objectives
+management devices
+fundamental operations
+level protocol
+monitor devices
+devices made
+manufacturers installed
+physical networks
+heterogeneous platforms
+standard protocol
+network manager
+managed device
+unmanaged device
+managed switch
+unmanaged switch
+management agent
+central place
+cost consideration
+unmanaged devices
+managed devices
+devices managed
+hardware support
+support inside
+costs money
+simplified picture
+agent resides
+agent variables
+snmp server
+server program
+managing network
+management agents
+performance information
+unusual occurs
+snmp client
+client program
+basic ideas
+manager checks
+requesting information
+manager forces
+resetting values
+agent database
+agent contributes
+management process
+unusual situation
+basic approaches
+specific commands
+management information
+information base
+naming objects
+basic management
+base accessed
+snmp defines
+packets exchanged
+smi defines
+general rules
+defining object
+object types
+types including
+including range
+encode objects
+values smi
+giving names
+heterogeneous network
+mib creates
+named objects
+documents describing
+describing snmp
+snmp version
+basic commands
+basic operations
+general situation
+critical network
+management stations
+management application
+software talks
+manage devices
+network elements
+nma network
+snmp protocol
+managed object
+object maintains
+mib management
+information passes
+general scheme
+obtain information
+traps traps
+station traps
+un-requested event
+event reports
+snmp agent
+agent process
+network device
+event happened
+trappable event
+event occurs
+trap message
+trap destination
+configured network
+network address
+cable fault
+general protection
+protection fault
+power supply
+supply failure
+trade offs
+faulty node
+extra information
+good idea
+generate traps
+low clarity
+thousand network
+routine reports
+sending traps
+events occur
+network bandwidth
+limited view
+relevant information
+snmp polling
+round robin
+robin fashion
+periodic fashion
+big picture
+short interval
+low frequency
+last poll
+long interval
+device generates
+simple trap
+frequency polling
+getbulkrequest retrieves
+standardize things
+32-bit integer
+octet string
+byte string
+object identifier
+important data
+data type
+data value
+special data
+network byte
+byte order
+bit integer
+ten minutes
+counter value
+right count
+low value
+high value
+integer rolls
+network world
+specific purpose
+display string
+mac address
+physical address
+truth value
+variable pointer
+textual conventions
+snmp mibs
+mibs management
+managed objects
+specific mibs
+device designed
+specific information
+general information
+mib modules
+standard mibs
+core aspects
+achieves standardization
+standard module
+vendor specific
+additional management
+management capabilities
+mib tools
+mib compiler
+mib browser
+mib alias
+alias tool
+mib query
+query tool
+device directly
+aliasing tool
+management protocols
+encode data
+smi requires
+specific router
+router coming
+naming convention
+high level
+naming tree
+european organization
+internet started
+objects managed
+smi termed
+object descriptor
+object type
+defined syntax
+abstract syntax
+simple syntax
+application syntax
+textual description
+accessible kind
+telephone number
+first group
+joint iso
+iso node
+node administrator
+administrator defines
+global naming
+group defines
+u.s department
+fourth group
+osi directory
+object identification
+management purpose
+sub trees
+specific vendors
+sub tree
+naming procedure
+management scenario
+human beings
+application makes
+object identifiers
+ten groups
+address translation
+internet protocol
+system group
+system descriptor
+descriptor system
+system contact
+system object
+vendor object
+heterogeneous vendors
+standard things
+management platform
+management revolved
+multiple systems
+specific set
+network restrictions
+physical space
+technical expertise
+expertise led
+components managed
+single system
+inter connections
+network map
+platform evolved
+software package
+basic functionality
+network components
+general kind
+management applications
+general software
+generic functionality
+specific things
+basic features
+interface gui
+colors showing
+management data
+standard method
+query devices
+customizable menu
+menu system
+event log
+additional features
+graphing tools
+graphing tool
+application programming
+programming interface
+interface api
+generic network
+management aspects
+special aspects
+special tools
+api application
+system security
+management platforms
+sunnet manager
+ibm netview
+management architecture
+provide functionality
+centralized architecture
+central network
+single computer
+computer system
+centralized system
+network network
+management software
+single point
+critical components
+critical component
+back mechanism
+full redundancy
+forward events
+network alerts
+network information
+central architecture
+single location
+view events
+single place
+access network
+unauthorized person
+fault tolerant
+black box
+central server
+wan bandwidth
+bandwidth server
+management traffic
+expensive scenario
+hierarchical architecture
+multiple computer
+computer systems
+system acting
+systems working
+server requires
+requires backups
+big local
+local area
+area network
+local network
+important information
+summarized information
+central location
+entire picture
+expensive network
+network experts
+genuine advice
+key features
+single link
+managed distribution
+management tasks
+network monitoring
+centralized information
+information storage
+network cons
+information gathering
+manually configured
+distributed architecture
+multiple peer
+peer network
+management systems
+complete database
+central system
+master-slave kind
+entire database
+central management
+management network
+network station
+hierarchical architectures
+information alerts
+specific network
+effectively manage
+avoid functionality
+functionality overlap
+multiple platforms
+share information
+cisco works
+major components
+practical approach
+perform device
+device inventory
+survey network
+applications choose
+remote monitoring
+monitoring mib
+specific groups
+statistics group
+history group
+alarm group
+host group
+host top
+ethernet segments
+broad overview
+meaningful network
+machine support
+log starts
+high rate
+network traffic
+tremendous pace
+major part
+network security
+bank transaction
+banking service
+thing falls
+security features
+moves bit
+place securely
+secured integrity
+original document
+hash function
+hashed result
+secret key
+private key
+digital signature
+thing i.e
+signature plays
+received document
+public key
+results equality
+equality means
+means document
+unmodified computer
+networks prof
+s.ghosh dept
+integrity issues
+lower layers
+vice versa
+main issues
+active research
+research area
+present people
+encryption techniques
+techniques encryption
+handle confidentiality
+confidentiality integrity
+digital signatures
+tcp protocol
+security environment
+network nodes
+operating systems
+encrypt messages
+good speed
+security issues
+play goals
+commercial gain
+malicious intent
+data confidentiality
+data integrity
+system availability
+service kind
+malicious people
+systems availability
+casual prying
+technical users
+determined attempt
+make money
+military espionage
+big business
+military communication
+military purpose
+information technology
+core part
+military machine
+security breach
+large commercial
+commercial houses
+business process
+efficient manner
+confidentiality cryptography
+honored technique
+sophisticated now-a-days
+older techniques
+encrypted messages
+encryption algorithms
+scramble data
+authorized users
+bad idea
+secret algorithm
+remain secret
+modern cryptography
+cryptography depends
+mainstay cracking
+cracking codes
+modern encryption
+important part
+crypto system
+cipher text
+plain text
+ideal world
+secret fashion
+encryption key
+encryption algorithm
+decryption key
+text back
+encryption part
+decryption part
+message knowing
+handle efficiency
+classical encryption
+substitution techniques
+transposition techniques
+message letters
+basic techniques
+sophisticated fashion
+detective stories
+classical detective
+substitution cipher
+julius caesar
+caesar cipher
+cipher suppose
+modern computers
+alphabetic characters
+characters caesar
+alphabetic cipher
+reverse mapping
+dictionary breaking
+long text
+statistical table
+encrypting things
+historical purpose
+yoga party
+top line
+bottom line
+practical problems
+fully random
+key size
+message size
+secured channel
+potential senders
+long key
+secured communication
+computational security
+encryption scheme
+brute force
+text takes
+infeasible lifetime
+military orders
+check transaction
+business agreement
+takes longer
+transposition modules
+strong encryption
+data encryption
+encryption standard
+basic des
+des module
+bit keys
+decrypt keys
+special hardware
+special machine
+break des
+out millions
+billions keys
+machines working
+good encryption
+encryption technique
+difficult encryption
+current algorithm
+advanced encryption
+standard aes
+keys adding
+key makes
+thousand billion
+billion years
+attack crypt
+crypt analysis
+des scheme
+function takes
+non linear
+linear function
+first half
+encrypted text
+reverse order
+original key
+days people
+triple des
+des triple
+first des
+des block
+encrypted message
+important kind
+cryptographic technique
+key cryptography
+asymmetric key
+symmetric key
+alphabetic substitution
+key basically
+encryption purposes
+decryption purpose
+pairs suppose
+trap door
+cryptography quickly
+quickly public-key
+public-key cryptography
+shared secret
+pair distributed
+identical encryption
+deciphered message
+popular method
+method involves
+involves primes
+large numbers
+number means
+means numbers
+large messages
+door one-way
+one-way functions
+door function
+give eke
+fixed length
+length output
+variable length
+common algorithms
+algorithms include
+include md5
+bit result
+important application
+hand written
+written signature
+ordinary people
+good forgers
+digital equivalent
+handwritten signatures
+real signature
+basic scheme
+signature digital
+message encrypted
+long message
+secure hash
+hash algorithm
+produce hash
+message digest
+hashing function
+one-way function
+signature part
+entire problem
+identity documents
+identity document
+birth certificate
+paper issued
+information verifying
+means secret
+right person
+person named
+electronic world
+digital certificate
+digital identity
+document binding
+public private
+key pair
+specific person
+organization verifying
+pair belonged
+claimed individual
+non-electronic means
+serial number
+certificate authority
+authority data
+key algorithms
+personal information
+physical trusted
+trusted authority
+certificate standard
+digital certificates
+key value
+elegant system
+expensive process
+good privacy
+key encryption
+key distribution
+send message
+shared key
+first phase
+cryptography system
+bit inefficient
+encryption pgp
+authenticate sender
+service organizations
+concerned security
+activities dependant
+network technology
+technology part
+poor internal
+internal security
+security measures
+intrusion detection
+detection system
+intrusion prevention
+prevention system
+secured zone
+detects non
+non network
+breaches accomplished
+stock prevention
+network vendors
+separate boxes
+distributed authentication
+centralized authentication
+aaa server
+distributed co-operation
+typical corporate
+corporate network
+left hand
+hand corner
+corner suppose
+user machines
+internal domain
+internal mail
+mail server
+internal web
+internal file
+file server
+private network
+term intranet
+internal network
+private purpose
+hand part
+authentic users
+right hand
+network secure
+internal firewall
+helping people
+providing servicing
+mail forwarding
+demilitarized zone
+external firewall
+rules depending
+ports suppose
+port-wise configure
+security level
+absolutely secure
+internal code
+code network
+high security
+security zone
+mail machine
+public dealing
+public face
+medium level
+level security
+network area
+zone dmz
+low security
+security termed
+network regions
+highly secure
+middle level
+network boundaries
+filtering firewall
+firewall based
+packet headers
+security device
+low level
+ipv4 addresses
+private address
+addresses starting
+full class
+huge address
+address space
+first place
+translation protocol
+protocol maps
+assigned address
+address mail
+hide internal
+internal addresses
+map incoming
+incoming mail
+real server
+additional incoming
+outgoing checks
+network hundred
+hundred percent
+percent safe
+firewall configuration
+external source
+dmz servers
+outer firewall
+burning issue
+taking place
+firewall design
+modern firewall
+counter peer
+peer messages
+traffic restrictions
+dmz administration
+direct console
+console access
+special access
+ssh secured
+secured shell
+shell connections
+connections allowed
+administration connections
+specific internal
+internal ips
+security risk
+multiple administration
+authentication scheme
+service attack
+routing attack
+spoofing attack
+attacks people
+compromising security
+security confidentiality
+protect transmission
+key management
+signatures verify
+verify source
+commit protocols
+protocols handle
+handle network
+network failure
+means overwhelm
+overwhelm tcp
+tcp stack
+target machine
+prevents legitimate
+legitimate connections
+connections routing
+misdirecting traffic
+traffic spoofing
+network claiming
+false identity
+spoofing imitates
+legitimate source
+flood attack
+overwhelming service
+syn flood
+client initiates
+multi-step process
+process sequence
+sequence numbers
+future message
+ensures message
+message order
+malicious person
+server receives
+allocates connection
+rapid succession
+server side
+send acknowledgements
+entire space
+malicious user
+legitimate user
+absolutely overwhelmed
+limit connections
+ignore connections
+illegitimate sources
+oldest connection
+connection attempts
+network solutions
+router establishes
+establishes connection
+connected establishes
+client synkill
+monitor machine
+good addresses
+successful connections
+prevention kind
+service-level flooding
+typically garbage
+garbage requests
+legitimate protocol
+large emails
+http connections
+legitimate service
+overwhelming server
+network attacks
+important field
+overview today
+prof.s.ghosh dept
+engineering i.i.t
+i.i.t kharagpur
+layer protocols
+transfer protocol
+reliable transfer
+good degree
+downloading files
+unlike mail
+crucial requirement
+respects tcp
+ideal transport
+transport protocol
+running ftp
+ftp client
+ftp server
+tcp control
+control means
+general term
+control information
+connection setup
+data occupy
+distinct channels
+band communication
+connection tcp
+server opens
+starts communicating
+client contacts
+contacts ftp
+protocol client
+client obtains
+obtains authorization
+proper authorization
+rudimentary level
+authorization process
+control channel
+client browses
+browses remote
+remote directory
+sending commands
+authorization phase
+current directory
+server end
+raw ftp
+ftp clients
+good graphical
+tcp data
+server closes
+server maintains
+maintains state
+earlier authentication
+client connects
+directory means
+present file
+stateful protocol
+directory remains
+ftp sample
+sample commands
+ascii text
+simple ascii
+return list
+basic ftp
+ftp command
+graphical fashion
+fashion retr
+filename stor
+stor filename
+filename stores
+puts file
+remote host
+sample responses
+responses give
+status code
+password required
+open transfer
+transfer starting
+error writing
+writing file
+simple protocol
+important protocol
+protocol people
+download files
+binary file
+text file
+discuss today
+electronic mails
+electronic mail
+http protocol
+lecture http
+email i.e
+i.e web
+killer applications
+made computer
+naturally money
+killer apps
+smtp smtp
+smtp stands
+simple mail
+mail transfer
+sending mails
+popular network
+protocol smtp
+smtp system
+sending message
+computer users
+mail exchange
+chief advantage
+mail reaches
+classical mail
+post office
+snail mail
+snail space
+extremely fast
+instantaneous depending
+mail servers
+kind file
+ordinary mails
+single message
+recipients sending
+sending messages
+messages include
+include text
+text messages
+people found
+people wanted
+send pictures
+send messages
+exchange mails
+heterogeneous kind
+smtp gateways
+mail system
+user agents
+netscape messenger
+graphical interface
+late people
+outgoing messages
+outgoing message
+message queue
+user messages
+incoming messages
+users address
+individual users
+users mail
+mail boxes
+yellow boxes
+boxes represent
+user agent
+boxes mail
+basically directories
+mail i.e
+servers talk
+smtp protocol
+mail box
+system works
+important component
+proper format
+transfer agent
+incoming mails
+create directories
+business purposes
+define rules
+proper directory
+message transfer
+homogenous kind
+networking system
+proper user
+user accesses
+email architecture
+relay mtas
+send email
+mail gateway
+relay mta
+mail prepared
+final mail
+mail relays
+bigger entities
+proper mail
+mail relay
+transfer mails
+heterogeneous networks
+delivering mails
+unique addressing
+addressing system
+local part
+mail addresses
+deposited suppose
+proper destination
+single hop
+address part
+part finding
+part defines
+user mailbox
+mail exchanger
+unlike ftp
+mails messages
+sender site
+intermediate servers
+machines connected
+outgoing mail
+receives messages
+nowadays mail
+people put
+powerful machines
+sending site
+person smtp
+email addresses
+one-to-many alias
+alias expansion
+single user
+many-to-one email
+email expansion
+send mails
+people suppose
+group giving
+outgoing mails
+boxes user
+mail message
+message format
+exchanging email
+email messages
+text message
+header lines
+subject line
+single blank
+blank line
+ascii characters
+mta client
+mta servers
+servers smtp
+transfer mail
+mtp client
+mtp server
+response mode
+application protocols
+protocols mail
+message occurs
+connection establishment
+connection termination
+establishment client
+client makes
+tcp connection
+smtp server
+server starts
+connection phase
+service ready
+client sends
+actual smtp
+smtp session
+transfer phase
+server responds
+port suppose
+send mail
+email client
+sample smtp
+smtp interaction
+cse iitkgp
+iitkgp ernet.in
+helo cse
+ernet.in pleased
+data command
+enter mail
+full stop
+test mail
+mail checking
+checking protocol
+carries return
+mail body
+means message
+message accepted
+final words
+persistent connections
+point doing
+standard mail
+mail agent
+machine opens
+smtp connection
+mail agents
+popular now-a-days
+web mails
+web mail
+server i.e
+point onwards
+connections smtp
+smtp requires
+requires message
+ascii smtp
+crlf crlf
+means carriage
+carriage return
+return line
+line feed
+feed carriage
+determine end
+chatty protocol
+pull kind
+ascii command
+command response
+response interaction
+status codes
+response message
+message smtp
+smtp multiple
+multiple objects
+multipart message
+voice recording
+binary files
+textual form
+encoding smtp
+ascii format
+images mime
+multipurpose internet
+internet mail
+mail extension
+non ascii
+ascii data
+common now-a-days
+transforms non
+nvt ascii
+sending end
+additional lines
+message header
+declare mime
+mime content
+content type
+initial part
+standard message
+mime version
+content transfer
+transfer encoding
+standard encoding
+encoding scheme
+encoded data
+simple suppose
+6-bit binary
+binary strings
+binary number
+lower case
+case letters
+upper case
+user end
+office protocol
+protocol pop3
+desktop machine
+mails now-a-days
+departmental server
+server giving
+mail services
+good practice
+mail access
+access protocols
+pop3 smtp
+push protocol
+access protocol
+mail stored
+create folders
+manipulate messages
+hot mail
+major protocols
+accessing mails
+protocol version
+client software
+server software
+server performs
+performs password
+password authentication
+recipients mail
+pop3 client
+pop3 server
+main mail
+work group
+user authentication
+password check
+copy remains
+practice leads
+buffer starts
+memory space
+space starts
+local mail
+mail folders
+creating directories
+email folders
+folders now-a-days
+common mode
+exchanging information
+pass mails
+mail service
+directly access
+features imap4
+imap4 means
+means internet
+stores user
+multiple locations
+address mails
+arrival numbers
+define attributes
+last mail
+flexible manner
+accumulating junk
+easy manner
+check email
+email header
+blind fashion
+search contents
+download email
+rename mail
+email storage
+proper category
+mail rfc
+important protocols
+means file
+download upload
+lecture lecture
+layer protocol
+protocol today
+world wide
+wide web
+http stands
+hypertext transfer
+network protocol
+html files
+image files
+query results
+tcp world
+wide means
+means majority
+multimedia content
+video files
+service providers
+hyper text
+text transfer
+word text
+original content
+modified value
+current page
+request line
+line consists
+request type
+categorize request
+request message
+uniform resource
+resource locator
+web page
+document address
+domain names
+address computer
+prof sujoy
+last lecture
+protocol http
+http client
+internet explorer
+http clients
+http server
+sends responses
+default port
+first request
+transmit resources
+universal resource
+universally valid
+common kind
+generated query
+query result
+cgi script
+dynamic web
+web pages
+static files
+learning http
+practical matter
+http resources
+side script
+script output
+script running
+surfing web
+client machine
+access data
+www plain
+text means
+means text
+means links
+pages embedded
+hyper link
+url embedded
+automatically generated
+http functions
+transfers files
+data transfers
+smtp messages
+message controlled
+headers http
+http messages
+unlike smtp
+delivered immediately
+simple client
+mail request
+network protocols
+protocols http
+client server
+server model
+client opens
+connection making
+making http
+stateless protocol
+connection information
+important point
+basic http
+web servers
+access logs
+simple text
+file kind
+clients request
+last visit
+writing things
+machine forgets
+http transactions
+response messages
+english oriented
+messages consist
+initial line
+crlf carriage
+optional message
+message body
+query data
+query output
+http message
+request versus
+versus response
+initial request
+parts separated
+local path
+requested resource
+typical request
+index dot
+dot html
+html file
+index html
+common http
+http method
+method names
+request uri
+http version
+initial response
+response line
+status line
+response status
+english reason
+reason phrase
+phrase describing
+typical status
+status lines
+separate window
+separate page
+computer readable
+human readable
+three-digit integer
+first digit
+digit identifies
+general category
+information message
+redirection message
+url land
+clients part
+common status
+resulting resource
+resources moved
+location response
+response header
+existing file
+server error
+unexpected server
+bad syntax
+run correctly
+lines header
+lines provide
+provide information
+usual text
+text header
+header format
+news postings
+value header
+lines beginning
+previous header
+header line
+line folded
+multiple lines
+easy reading
+some-long-value-1a some-long-value-1b
+email address
+unsolicited mails
+mails coming
+program doing
+privacy concerns
+header identifies
+form program
+alphanumeric version
+program version
+writing servers
+agent header
+beta version
+last modified
+modification date
+bandwidth-saving activities
+conserve bandwidth
+user proxies
+proxies cache
+proxy makes
+distant location
+entire socket
+slash means
+entire url
+resources located
+public proper
+addressing scheme
+method part
+host part
+address directly
+directly port
+current version
+detail http
+applications based
+program output
+resource download
+people started
+java script
+browser client
+actual command
+client issues
+document head
+actual document
+header part
+server put
+replacement document
+server patch
+location move
+location delete
+location unlink
+delete links
+links created
+link option
+explanatory text
+user entered
+entered data
+uploaded files
+main content
+message includes
+mime type
+gif type
+gif files
+content length
+first open
+host www.somehost.com
+text document
+html html
+html stands
+hypertext mark
+top menu
+final made
+original source
+header sort
+back ground
+ground color
+foreground color
+font colors
+formatting information
+html documents
+embed links
+html document
+tag html
+similarly body
+file contents
+server forgets
+text html
+head method
+head request
+response headers
+actual resource
+check characteristics
+saving bandwidth
+files content
+post method
+post request
+extra headers
+http response
+static file
+electric utility
+bsnl subscriber
+home page
+page meaning
+main page
+index page
+http request
+correct server
+first page
+displayed first
+first actuall
+last part
+located part
+entire path
+people serve
+telephone bill
+main address
+dns system
+socket part
+nice format
+duplicate bill
+underlined someway
+duplicate bills
+fresh request
+server socket
+request http
+submit sounds
+submit html
+html form
+form data
+script cgi
+cgi stands
+common gateway
+gateway interface
+data base
+base query
+telephone bills
+bsnl server
+current bills
+current request
+request information
+generated web
+length header
+url encoded
+encoded form
+script receives
+values retrieved
+generally implemented
+typical form
+form submission
+www form
+form urlencoded
+http proxies
+people access
+internal band
+band width
+http proxy
+receives request
+intended servers
+responses passes
+urls requests
+proxy differ
+normal requests
+first line
+complete url
+original server
+actual file
+local proximation
+bandwidth conservation
+fire walls
+organizations now-a-days
+proper public
+big network
+non existent
+servers respond
+fire wall
+big organization
+proxy takes
+intended web
+actual private
+sites people
+http requests
+version number
+network programming
+minor flaws
+http specification
+specification suggests
+single line
+initial message
+message line
+single space
+entire gamut
+web services
+demands codes
+tremendous rate
+rate people
+computing power
+memory capacity
+law moore
+law means
+higher base
+steeper rate
+phenomenal rate
+phenomenon rate
+basic technologies
+core ideas
+web today
+web applications
+networks security
+network outlet
+advertising intelligent
+intelligent machines
+microwave oven
+networked world
+computer
+networks
+prof.sujoy
+ghosh
+department
+science
+engineering
+iit
+kharagpur
+lecture
+topic
+today
+qosqos
+multimedia
+quality
+service
+qos
+refers
+traffic
+control
+mechanisms
+seek
+differentiate
+performance
+based
+application
+network
+operator
+requirements
+provide
+predictable
+guaranteed
+applications
+sessions
+aggregates
+talks
+lot
+things
+basic
+notion
+require
+kind
+important
+delay
+packet
+loss
+parameters
+sort
+ways
+affect
+differently
+talk
+audio
+video
+net
+characteristics
+set
+file
+transfer
+handle
+handled
+happen
+guarantee
+examples
+conference
+requires
+bounded
+rate
+means
+variability
+bounds
+packets
+quiet
+tolerated
+tolerant
+losses
+sensitive
+delays
+downloading
+trace
+streaming
+server
+internet
+radio
+streamed
+clients
+critical
+real
+valuable
+premium
+run
+ready
+pay
+expect
+low
+variation
+jitter
+throughput
+send
+data
+error
+lost
+two
+approaches
+stateless
+stateful
+solutions
+solution
+router
+maintains
+grained
+state
+positive
+point
+scalable
+thing
+talked
+routers
+maintain
+states
+simply
+raw
+forwarding
+capacity
+robust
+weak
+services
+encounter
+hand
+per-flow
+flow
+guaranteeing
+suppose
+conferencing
+people
+signal
+nature
+digitized
+packetized
+switched
+essentially
+heart
+single
+entity
+dealt
+end
+users
+interested
+streams
+flowing
+signals
+constitute
+purely
+situation
+make
+out
+part
+naturally
+give
+powerful
+high
+resource
+utilization
+grain
+differentiation
+flows
+protection
+problem
+number
+starts
+increasing
+core
+integrated
+fully
+system
+intserv
+architecture
+isa
+providing
+guarantees
+individual
+talking
+entire
+session
+consisting
+relies
+reservation
+information
+allocated
+resources
+respond
+call
+setup
+requests
+starting
+requested
+specially
+reserve
+buffers
+cpu
+intermediate
+points
+long
+continues
+ordinary
+form
+reservations
+request
+pool
+admitted
+decides
+admit
+deny
+idea
+case
+phase
+virtual
+circuit
+source
+destination
+back
+reserves
+nodes
+protocol
+rsvp
+constitutes
+signaling
+declaration
+element
+admission
+scheduling
+arrives
+first
+buffer
+scheduled
+processing
+done
+uniform
+manner
+similarly
+routing
+algorithm
+discard
+strategies
+components
+discuss
+creates
+distributed
+decoupled
+setting
+paths
+reserved
+multiple
+trees
+protocols
+multicast
+tree
+reserving
+unlike
+atm
+telephony
+doing
+assign
+initiated
+receiver
+scales
+soft
+times
+refreshed
+refresh
+timed-out
+latest
+discovered
+path
+messages
+forward
+direction
+reverse
+semantics
+acknowledgement
+response
+tentative
+confirmation
+directions
+simplex
+duplex
+support
+initiate
+switch
+controller
+finally
+ack
+coming
+fashion
+node
+asked
+declare
+characterize
+specifications
+spec
+defines
+bound
+acceptable
+depending
+special
+queue
+weight
+processor
+burstiness
+characteristic
+compute
+visibly
+required
+needed
+carry
+leading
+candidate
+concerned
+calls
+manage
+financial
+side
+agreement
+current
+senders
+specifies
+reply
+considers
+unreserved
+replies
+satisfied
+achieves
+bandwidth
+allocate
+perform
+shown
+install
+recognized
+challenge
+consistent
+right
+sender
+agree
+sending
+classified
+integral
+classification
+put
+managed
+management
+installed
+maintained
+work
+scale
+good
+giving
+level
+difficult
+properly
+queues
+flexible
+receives
+short
+demarcating
+similar
+circuits
+separate
+mpls
+differentiated
+treated
+takes
+route
+effort
+discarded
+spectrum
+full
+power
+question
+model
+diff-serv
+distinct
+necessarily
+accommodate
+pressure
+backbone
+scalability
+maintaining
+speed
+due
+large
+diffserv
+reduced
+granular
+achieve
+worlds
+intends
+address
+difficulties
+models
+classes
+qualitative
+relative
+distinction
+platinum
+gold
+silver
+simpler
+quantitative
+ingress
+edge
+interior
+egress
+conditioning
+policing
+marking
+dropping
+reason
+lower
+busy
+values
+ds-byte
+header
+negotiated
+observed
+byte
+index
+table
+marks
+profile
+class
+buffering
+preference
+in-profile
+shape
+expected
+unit
+assured
+marked
+type
+ipv4
+ipv6
+renamed
+bits
+code
+dscp
+determine
+phb
+hop
+behavior
+receive
+unused
+dictate
+carried
+simplified
+process
+sla
+created
+defined
+rfc
+assigned
+equivalent
+leased
+line
+plain
+shaping
+order
+stay
+departure
+leaky
+bucket
+wfq
+desirable
+limit
+injection
+burst
+size
+metered
+shaped
+non-conformed
+discussed
+congestion
+meters
+conforms
+chance
+drops
+qoi
+absolutely
+explained
+web
+ftp
+download
+bunch
+slowing
+extra
+matter
+feel
+odd
+years
+made
+international
+routed
+peculiar
+find
+speaking
+usa
+annoying
+additionally
+remains
+constant
+varying
+irritating
+dropped
+analyze
+machines
+difference
+human
+perception
+spreading
+cheaper
+convenient
+traditionally
+telecoms
+domain
+sense
+inserv
+trouble
+handling
+taking
+note
+evolved
+principles
+classify
+identify
+making
+rtp
+specific
+supported
+stored
+song
+movie
+live
+interactive
+generally
+fundamental
+typically
+infrequent
+minor
+glitches
+antithesis
+intolerant
+vcr
+functionality
+equate
+client
+pause
+rewind
+fast
+push
+slider
+bar
+initial
+seconds
+command
+effect
+feedback
+timing
+constraint
+to-be
+transmitted
+play
+recorded
+cumulative
+staircase
+chunks
+record
+position
+received
+played
+start
+playing
+diagram
+started
+show
+sporting
+event
+cast
+playback
+lag
+transmission
+interactivity
+limited
+solely
+depends
+stringent
+end-to-end
+kinds
+150ms
+400ms
+bothered
+includes
+packetization
+higher
+noticeable
+impair
+initialization
+callee
+advertise
+port
+encoding
+algorithms
+issues
+standard
+tcp
+udp
+effective
+techniques
+mitigate
+efforts
+layer
+implement
+places
+practical
+moment
+i.e
+penetrate
+deeper
+pseudo
+carrying
+payload
+identification
+sequence
+numbering
+stamping
+runs
+systems
+encapsulated
+segments
+interoperability
+phone
+communicate
+top
+lightweight
+efficient
+heavy
+overhead
+acks
+libraries
+transport
+library
+provider
+interface
+extend
+numbers
+addresses
+adds
+moves
+bit
+mechanism
+ensure
+timely
+delivery
+happening
+running
+encapsulation
+arrive
+noted
+front
+voice
+traveling
+produced
+rtcp
+conjunction
+transmissions
+participants
+periodically
+transmits
+reports
+statistics
+improve
+inside
+exchange
+present
+include
+inter
+arrival
+modify
+main
+feed
+band
+stamp
+experienced
+transmitting
+fraction
+last
+average
+report
+ssrc
+stream
+bytes
+description
+e-mail
+mapping
+user
+host
+synchronization
+synchronize
+media
+generates
+synchronized
+lips
+moving
+sound
+referred
+earlier
+stamps
+tied
+sampling
+clocks
+wall
+clock
+exchanged
+recently
+generated
+timestamp
+receivers
+association
+scaling
+attempts
+remember
+actual
+divided
+mbps
+kbps
+percent
+remaining
+rtsp
+provided
+helper
+displays
+content
+browser
+player
+typical
+functions
+decompression
+compressed
+removal
+correction
+redundant
+reconstruction
+original
+graphical
+controls
+define
+restrict
+transported
+simple
+approach
+steaming
+files
+transferred
+http
+object
+entirety
+pass
+pipelining
+downloaded
+options
+actp
+meta
+launches
+passing
+metafile
+contacts
+progressive
+availability
+sufficient
+lines
+crossing
+nice
+buffered
+compensate
+added
+preferred
+sends
+oblivious
+equal
+fill
+minus
+2-5
+mind
+care
+recovery
+place
+permits
+maximum
+fluctuates
+windows
+larger
+smooth
+rates
+rating
+passes
+easily
+firewalls
+communicated
+sets
+connection
+presentation
+teardown
+mention
+h.323
+itu
+telephone
+aging
+newer
+initiation
+vision
+reach
+roams
+devices
+caller
+establish
+invite
+commands
+facility
+maps
+mnemonic
+identifier
+chip
+register
+add
+change
+hold
+details
+codec
+negotiation
+reject
+strongly
+poor
+accommodating
+increased
+exponentially
+past
+popular
+gifserv
+strategy
+deploy
+fiber
+multiplexer
+solve
+demand
+great
+day
+managing
+keeping
+track
+controlling
+complex
+maximize
+efficiency
+productivity
+goal
+complexity
+transparency
+iso
+organization
+standards
+forum
+functional
+areas
+fault
+configuration
+security
+accounting
+deployed
+trap
+station
+polls
+device
+fail
+wrong
+mixture
+polling
+quickly
+types
+snmp
+retrieves
+value
+variable
+variables
+retrieve
+entries
+entry
+bulk
+amount
+store
+agent
+manager
+inform
+remote
+agents
+designed
+errors
+managers
+widely
+prof
+sujoy
+00-57
+min
+time-1
+16min
+enterprise
+configurations
+aspects
+locating
+problems
+faults
+involves
+steps
+discover
+isolate
+fix
+remotely
+discovering
+hundreds
+considerable
+area
+lead
+impairment
+faulty
+generating
+spurious
+locate
+physically
+lies
+central
+topology
+fixed
+working
+elements
+correctly
+continuously
+mode
+occurs
+finding
+configuring
+access
+monitor
+records
+periodic
+basis
+audit
+trails
+sounds
+alarms
+breaches
+big
+devote
+securities
+measuring
+hardware
+software
+measured
+activities
+percentage
+degradation
+successfully
+conclusion
+malfunctioning
+11min
+tracking
+grouping
+granting
+removing
+permission
+cases
+objectives
+framework
+operations
+monitoring
+manufacturers
+physical
+vendor
+procured
+vendors
+heterogeneous
+platforms
+market
+broadly
+unmanaged
+cost
+consideration
+separately
+centrally
+broke
+costs
+money
+picture
+resides
+program
+instrument
+database
+unusual
+alert
+ideas
+checks
+requesting
+reflects
+forces
+task
+resetting
+contributes
+warning
+smi
+structure
+mib
+base
+naming
+objects
+accessed
+format
+reads
+status
+general
+rules
+defining
+including
+range
+length
+showing
+encode
+names
+scheme
+friendly
+series
+integers
+precise
+role
+collection
+named
+relationships
+group
+formed
+completed
+early
+documents
+describing
+version
+stations
+nma
+obtain
+traps
+basically
+pushed
+un-requested
+happened
+trappable
+message
+configured
+events
+cable
+failing
+nic
+supply
+failure
+pros
+cons
+trade
+offs
+throttled
+overwhelm
+helping
+constrain
+minute
+priority
+major
+marginal
+informational
+normal
+unknown
+generate
+clarity
+consist
+hundred
+thousand
+routine
+occur
+thresholds
+view
+detected
+relevant
+queries
+time-to-time
+round
+robin
+period
+configurable
+advantage
+disadvantage
+noticed
+interval
+wasted
+slow
+frequency
+poll
+immediately
+occurred
+trade-off
+backup
+depend
+getrequest
+getnextrequest
+getbulkrequest
+setrequest
+design
+standardize
+innovate
+integer
+signed
+32-bit
+octet
+string
+detailed
+null
+counter
+unsigned
+rolls
+count
+trillion
+rescheduled
+counting
+ten
+minutes
+processed
+collect
+counters
+sufficiently
+deliberately
+gauge
+topped
+reset
+estimate
+rolled
+ticks
+days
+world
+opaque
+create
+snmpv1
+purpose
+date
+display
+mac
+truth
+pointer
+textual
+conventions
+mibs
+related
+cisco
+specialty
+found
+mix
+separated
+modules
+capture
+technology
+experimental
+temporary
+standardization
+module
+enterprise-specific
+additional
+capabilities
+features
+56min
+tools
+compiler
+alias
+tool
+query
+browse
+directly
+repeat
+aliasing
+10min
+described
+unique
+location
+24min
+convention
+integer.representation
+name.notation
+global
+iso.org.dod.internet.management.mib
+entities
+defense
+european
+decided
+management.2
+close
+1.3.6.1.2.1
+mib.2
+dodn
+prefix
+dods
+termed
+descriptor
+syntax
+abstract
+choice
+definition
+read
+write
+accessible
+mandatory
+optional
+obsolete
+1.3.6.1.2
+ccitt
+joint
+administrator
+organizations
+sun
+u.s
+1.3.6
+fourth
+dod
+approved
+iab
+osi
+directory
+22min
+1.3.6.1.2.1.1.1
+deep
+sub
+interfaces
+procedure
+scenario
+impossible
+beings
+makes
+spared
+identifiers
+mib-2
+groups
+translation
+contact
+accommodated
+03min
+platform
+historically
+revolved
+restrictions
+space
+technical
+expertise
+led
+desire
+connections
+map
+package
+sit
+couple
+integrate
+generic
+variety
+collected
+gui
+supposed
+previously
+graphically
+screen
+colors
+icons
+dbms
+method
+customizable
+menu
+log
+graphing
+shows
+plots
+performing
+plot
+programming
+api
+finished
+33min
+sunnet
+ibm
+netview
+openview
+category
+showed
+architectures
+common
+centralized
+hierarchical
+suggest
+duplicate
+machine
+fails
+component
+fall
+primary
+redundancy
+backed
+consoles
+alerts
+20min
+easier
+secure
+nmi
+unauthorized
+person
+disadvantages
+room
+cut
+black
+box
+expensive
+load
+fact
+locations
+wan
+extent
+step
+acting
+backups
+geographically
+local
+condensed
+summarized
+conserve
+drill
+specifics
+advantages
+experts
+detect
+issue
+offer
+genuine
+advice
+juncture
+key
+dependent
+link
+distribution
+tasks
+storage
+gathering
+consuming
+layers
+list
+predetermined
+manually
+combines
+peer
+complete
+master-slave
+peers
+goals
+effectively
+avoid
+overlap
+reside
+share
+works
+3com
+transcend
+choosing
+built
+inventory
+prioritize
+survey
+choose
+term
+rmon
+probes
+history
+alarm
+standardized
+operate
+ethernet
+stop
+broad
+overview
+growing
+meaningful
+tremendous
+month
+delete
+accumulating
+pace
+balance
+designing
+ubiquitous
+crucially
+bank
+transaction
+banking
+breached
+falls
+movement
+securely
+confidentiality
+communication
+secured
+integrity
+intact
+document
+function
+hash
+hashed
+result
+encrypted
+secret
+private
+assigner
+digital
+signature
+encrypt
+public
+decrypt
+whomever
+purports
+plays
+verify
+applying
+apply
+comparing
+results
+equality
+unmodified
+s.ghosh
+dept
+modification
+sitting
+perfectly
+vice
+versa
+active
+research
+lots
+encryption
+intercepts
+copy
+signatures
+retransmission
+environment
+closely
+linked
+operating
+nowadays
+subvert
+fun
+commercial
+gain
+malicious
+intent
+exposure
+matrix
+threats
+tampering
+threat
+denial
+attack
+serves
+intruders
+casual
+prying
+non
+curiosity
+snooping
+insiders
+motivated
+estimated
+insider
+involved
+majority
+determined
+attempt
+military
+espionage
+business
+confidential
+derives
+now-a-days
+age
+country
+breach
+houses
+networked
+deal
+expose
+mentioned
+cryptography
+honored
+technique
+sophisticated
+computers
+older
+crack
+scrambling
+scramble
+inputs
+authorized
+relying
+secrecy
+bad
+vulnerable
+remain
+modern
+mainstay
+cracking
+codes
+basics
+assume
+hack
+intercept
+keys
+crypto
+distribute
+discussion
+encrypting
+decrypting
+cipher
+text
+ideal
+produce
+decryption
+hard
+knowing
+easy
+inefficient
+classical
+substitution
+letters
+replaced
+symbols
+transposition
+performs
+permutation
+detective
+stories
+earliest
+julius
+caesar
+meet
+party
+mod
+phhw
+diwhu
+gibberish
+possibilities
+longer
+alphabetic
+characters
+displaced
+mono
+considered
+blank
+dictionary
+breaking
+blanks
+break
+fairly
+statistical
+occurrences
+detectives
+guess
+faster
+historical
+yoga
+alternately
+bottom
+decipher
+random
+practically
+repeated
+channel
+potential
+understood
+previous
+possibly
+comparable
+distributing
+computational
+brute
+force
+infeasible
+lifetime
+orders
+hour
+check
+year
+strong
+des
+millions
+billions
+parallel
+frame
+quick
+advanced
+aes
+adding
+billion
+broken
+crypt
+analysis
+input
+divide
+parts
+xor
+output
+linear
+produces
+transposed
+half
+rounds
+operation
+k16
+16rounds
+final
+triple
+block
+cryptographic
+asymmetric
+symmetric
+parties
+purposes
+pairs
+decrypted
+door
+public-key
+shared
+pair
+inverses
+identical
+deciphered
+primes
+exponentiation
+factored
+factoring
+difficultly
+one-way
+computationally
+eke
+authentication
+formula
+evaluate
+blocks
+md5
+sha
+written
+signer
+sign
+signing
+handwriting
+replicate
+forgers
+handwritten
+useless
+ecommerce
+compare
+copied
+forged
+prove
+identity
+agreed
+digest
+hashing
+product
+visually
+hashes
+authentic
+passport
+birth
+certificate
+driver
+license
+piece
+paper
+issued
+trusted
+verifying
+holder
+holding
+held
+electronic
+photograph
+fingerprint
+binding
+proves
+belonged
+claimed
+independent
+non-electronic
+serial
+authority
+personal
+verified
+bearing
+certifying
+certificates
+checked
+issuer
+subject
+certified
+validity
+elegant
+pretty
+privacy
+chart
+middle
+facilitate
+persons
+sharing
+pgp
+authenticate
+plaintext
+foundation
+dependant
+focus
+terms
+commonly
+firewall
+solves
+internal
+measures
+securing
+functioning
+intrusion
+detection
+prevention
+boxes
+unwanted
+intruded
+zone
+intrudes
+detects
+accomplished
+stock
+ldap
+aaa
+co-operation
+corporate
+meant
+left
+corner
+mail
+corporation
+intranet
+dns
+connected
+belonging
+servicing
+demilitarized
+connects
+external
+inspects
+configure
+levels
+ports
+port-wise
+staying
+highly
+open
+dealing
+face
+medium
+dmz
+connect
+leg
+deployment
+regions
+boundaries
+filtering
+headers
+proxy
+virtually
+disappeared
+obviate
+wanting
+puts
+valid
+conventional
+10.x.x.x
+huge
+outsiders
+hide
+incoming
+outgoing
+performed
+enhance
+safe
+increase
+safety
+measure
+allowed
+restriction
+smtp
+telnet
+servers
+outer
+burning
+development
+region
+administration
+direct
+console
+troublesome
+ssh
+shell
+ips
+administer
+reduces
+risk
+attacks
+defenses
+spoofing
+thinking
+hackers
+peoples
+compromising
+manageable
+protect
+reducible
+commit
+flooding
+stack
+target
+prevents
+legitimate
+misdirecting
+entering
+claiming
+false
+imitates
+flood
+overwhelming
+syn
+overwhelms
+emails
+script
+initiates
+waits
+acknowledge
+wait
+multi-step
+incremented
+future
+ensures
+retransmits
+allocates
+acknowledges
+rapid
+succession
+opening
+acknowledgements
+overwhelmed
+ignore
+illegitimate
+sources
+drop
+oldest
+syns
+establishes
+synkill
+successful
+kills
+cumbersome
+service-level
+overload
+garbage
+victim
+scripts
+developing
+field
+prof.s.ghosh
+i.i.t
+ftp-smtp
+reliable
+reliability
+missing
+corrupt
+degree
+delivered
+requirement
+crucial
+beginning
+congested
+slowdown
+respects
+communicating
+ringing
+occupy
+channels
+opens
+obtains
+authorization
+proper
+questions
+rudimentary
+passwords
+browses
+cryptic
+select
+transferring
+closes
+meaning
+accessing
+browsing
+sample
+ascii
+expects
+username
+password
+return
+attractively
+retr
+filename
+stor
+stores
+upload
+responses
+entered
+writing
+extremely
+binary
+images
+mails
+email
+killer
+immensely
+contributed
+growth
+grow
+economies
+invested
+sparse
+innovation
+apps
+stands
+intricacies
+chief
+reaches
+vogue
+post
+office
+snail
+instantaneous
+cheap
+attach
+attractive
+volume
+grown
+tremendously
+dwarfing
+magnitude
+supports
+recipients
+graphics
+originally
+envisaged
+wanted
+pictures
+swamping
+existence
+introduced
+gateways
+eudora
+outlook
+pine
+netscape
+messenger
+late
+handles
+yellow
+represent
+directories
+prepares
+envelope
+brought
+letter
+job
+classifying
+friends
+automatically
+examine
+transfers
+travels
+homogenous
+networking
+accesses
+relay
+mtas
+relayed
+sites
+gateway
+mta
+prepared
+disambiguate
+relays
+bigger
+delivering
+addressing
+consists
+dot
+deposited
+mailbox
+exchanger
+delayed
+site
+waiting
+pole
+delivers
+jobs
+compared
+fttp
+receiving
+aliases
+one-to-many
+expansion
+many-to-one
+regularly
+member
+multicasting
+members
+compose
+spoon
+collects
+exchanging
+addressed
+body
+mtp
+phases
+establishment
+termination
+sever
+recipient
+quit
+responds
+closed
+enter
+receipt
+lets
+reader
+identified
+misapplications
+misuse
+facilities
+interaction
+telneted
+iitkgp
+ernet.in
+cse
+helo
+pleased
+sender,ok
+responding
+test
+checking
+carries
+feeds
+crlf
+smtps
+ended
+accepted
+quits
+words
+persistent
+intention
+onwards
+7-bit
+carriage
+chatty
+tells
+flexibility
+pull
+pulls
+multipart
+attachments
+recording
+nvt
+mime
+multipurpose
+extension
+transforms
+transformed
+car
+decoded
+decode
+image
+jpeg
+encoded
+6-bits
+four
+6-bit
+sequences
+interpret
+strings
+upper
+digits
+pop3
+interacting
+desktop
+loaded
+departmental
+accumulated
+practice
+retrieval
+pop
+folders
+imap
+manipulate
+hot
+yahoo
+authenticated
+leads
+overloading
+memory
+organize
+creating
+subdirectories
+laptop
+storing
+alternative
+imap4
+specifically
+complicated
+attributes
+steve
+search
+thousands
+junk
+searching
+prior
+feature
+blind
+contents
+searched
+partially
+rename
+hierarchy
+mailboxes
+folder
+sorting
+references
+preview
+wide
+hypertext
+deliver
+collectively
+html
+sockets
+developed
+spread
+providers
+hours
+outputs
+programs
+hyper
+passed
+word
+textually
+hyperlinks
+cache
+updated
+last-modified
+lastly
+modified
+changed
+page
+url
+categorize
+methods
+locator
+figure
+prefer
+hosts
+underlying
+resolver
+increasingly
+vastly
+explorer
+mozilla
+default
+listen
+negotiate
+transmit
+chunk
+universal
+universally
+served
+dynamically
+cgi
+languages
+dynamic
+pages
+static
+learning
+surfing
+effects
+java
+applets
+www
+links
+embedded
+click
+pointing
+clicked
+manifestation
+combination
+controlled
+returns
+transactions
+forgets
+logs
+cookies
+writes
+leave
+visit
+breaks
+serviced
+formats
+english
+oriented
+delineate
+versus
+header1
+value1
+header2
+value2
+spaces
+subdirectory
+mentions
+head
+uri
+located
+phrase
+forthcoming
+window
+readable
+vary
+three-digit
+digit
+identifies
+1xx
+2xx
+success
+3xx
+redirects
+moved
+redirection
+land
+unknowingly
+redirected
+4xx
+5xx
+exist
+succeeded
+resulting
+returned
+permanently
+temporarily
+retrieved
+redirect
+existing
+unexpected
+usual
+ending
+news
+postings
+tabs
+colon
+tab
+folded
+reading
+some-long-value-1a
+some-long-value-1b
+net-politeness
+included
+unsolicited
+concerns
+x.xx
+alphanumeric
+user-agent
+analogous
+beta
+apache
+caching
+bandwidth-saving
+gmt
+proxies
+straight
+distant
+webpage
+alternatively
+socket
+subsequently
+reached
+slash
+root
+uniquely
+gopher
+detail
+interact
+envisioned
+hooked
+28-27
+replacement
+patch
+differences
+move
+remove
+unlink
+option
+explanatory
+uploaded
+describes
+told
+gif
+activated
+www.somehost.com
+get
+granted
+mark
+language
+tags
+displayed
+bold
+ground
+color
+foreground
+font
+formatting
+embed
+tag
+happy
+millennium
+deeply
+asks
+decision
+rest
+saving
+describe
+electric
+utility
+bill
+bsnl
+subscriber
+home
+google
+website
+correct
+actuall
+aware
+conversant
+sight
+serve
+bsnl.co.in
+stand
+translated
+cursor
+underlined
+someway
+underline
+hyperlink
+bills
+fresh
+forgotten
+brings
+submit
+user-friendly
+typed
+uploading
+opposite
+stdin
+decodes
+implemented
+submission
+invoking
+content-type
+urlencoded
+reasons
+costly
+width
+acts
+intermediary
+calling
+forwards
+intended
+urls
+differ
+proximation
+conservation
+fire
+walls
+small
+existent
+allot
+boundary
+strict
+flaws
+gracefully
+specification
+suggests
+accept
+fields
+gamut
+demands
+moore
+law
+computing
+steeper
+exponential
+phenomenal
+phenomenon
+technologies
+expanding
+encompass
+touched
+ubiquitous-ness
+pen
+expectation
+outlet
+palm
+dicp
+advertising
+intelligent
+microwave
+oven
+heater

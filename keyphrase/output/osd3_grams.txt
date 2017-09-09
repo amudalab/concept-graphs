@@ -1,0 +1,10805 @@
+set of processes
+result of cpu
+computer s response
+users to realize
+realize this increase
+increase in performance
+processes in memory
+discuss various ways
+ways to manage
+memory the memorymanagement
+memorymanagement algorithms vary
+primitive bare-machine approach
+approach to paging
+paging and segmentation
+strategies each approach
+advantages and disadvantages
+specific system depends
+algorithms require hardware
+require hardware support
+integrated the hardware
+hardware and operating
+system to provide
+provide a detailed
+ways of organizing
+organizing memory hardware
+hardware to discuss
+discuss various memory-management
+segmentation to provide
+supports both pure
+segmentation and segmentation
+segmentation with paging
+memory is central
+modern computer system
+computer system memory
+system memory consists
+array of words
+words or bytes
+address the cpu
+cpu fetches instructions
+instructions from memory
+counter these instructions
+storing to specific
+specific memory addresses
+addresses a typical
+typical instruction-execution cycle
+fetches an instruction
+instruction from memory
+memory the instruction
+fetched from memory
+back in memory
+memory the mernory
+mernory unit sees
+stream of memory
+instructions or data
+hozu a program
+generates a memory
+sequence of memory
+memory addresses generated
+program we begin
+begin our discussion
+discussion by covering
+covering several issues
+techniques for managing
+memory this coverage
+includes an overview
+overview of basic
+basic hardware issues
+binding of symbolic
+symbolic memory addresses
+addresses to actual
+actual physical addresses
+distinction between logical
+logical and physical
+addresses we conclude
+conclude the section
+loading and linking
+code and shared
+libraries 8.1.1 basic
+8.1.1 basic hardware
+basic hardware main
+hardware main memory
+cpu can access
+addresses as arguments
+instructions in execution
+direct-access storage devices
+cpu can operate
+clock most cpus
+cpus can decode
+instructions and perform
+perform simple operations
+operations on register
+operations per clock
+memory bus completing
+completing a memory
+required to complete
+complete the instruction
+executing this situation
+situation is intolerable
+frequency of memory
+accesses the remedy
+add fast memory
+lj.o i process
+limit register define
+define a logical
+logical address space
+memory a memory
+accommodate a speed
+described in section
+speed of accessing
+accessing physical memory
+ensure correct operation
+operation to protect
+protect the operating
+system from access
+access by user
+protect user processes
+separate memory space
+ability to determine
+determine the range
+range of legal
+process may access
+process can access
+provide this protection
+illustrated in figure
+holds the smallest
+smallest legal physical
+legal physical memory
+physical memory address
+specifies the size
+base register holds
+access all addresses
+protection of memory
+space is accomplished
+cpu hardware compare
+compare every address
+generated in user
+registers any attempt
+executing in user
+mode to access
+access operating-system memory
+users  memory
+treats the attempt
+prevents a user
+modifying the code
+code or data
+users the base
+base and limit
+special privileged instruction
+instruction since privileged
+operating system executes
+executes in kernel
+system can load
+load the base
+registers this scheme
+system to change
+change the value
+registers but prevents
+prevents user programs
+programs from changing
+changing the registers
+registers  contents
+contents the operating
+executing in kernel
+operating system memory
+memory and users
+memory this provision
+system to load
+users  programs
+programs into users
+trap to operating
+operating system monitor-addressing
+system monitor-addressing error
+monitor-addressing error memory
+error memory figure
+hardware address protection
+protection with base
+out those programs
+programs in case
+case of errors
+access and modify
+parameters of system
+8.1.2 address binding
+binary executable file
+brought into memory
+moved between disk
+disk and memory
+execution the processes
+memory for execution
+load that process
+process into memory
+process is executed
+instructions and data
+data from memory
+space is declared
+process to reside
+affects the addresses
+optional-before bein.g executed
+bind these symbolic
+addresses to relocatable
+editor or loader
+bind the relocatable
+addresses to absolute
+binding of instructions
+data to memory
+process will reside
+reside in memory
+starting at location
+generated compiler code
+code will start
+location and extend
+recompile this code
+code the ms-dos
+ms-dos .com-format programs
+programs are bound
+bound at compile
+compile time load
+compiler must generate
+binding is delayed
+delayed until load
+reload the user
+code to incorporate
+incorporate this changed
+changed value execution
+delayed until run
+run time special
+scheme to work
+discussed in section
+8.1.3 most general-purpose
+general-purpose operating systems
+11se this method
+method a major
+chapter is devoted
+devoted to showing
+discussing appropriate hardware
+program 8.1.3 logical
+8.1.3 logical versus
+logical versus physical
+versus physical address
+physical address space
+space an address
+memory-is commonly referred
+compile-time and load-time
+load-time address-binding methods
+address-binding methods generate
+methods generate identical
+generate identical logical
+execution-time addressbinding scheme
+addressbinding scheme results
+results in differing
+logical and addresses
+address and virtual
+text the set
+logical addresses generated
+logical the set
+in_ the execution-time
+execution-time address-binding scheme
+physical address spaces
+address spaces differ
+differ the run-time
+mapping from virtual
+virtual to physical
+addresses is done
+methods to accomplish
+accomplish such mapping
+relocation register sections
+illustrate this mapping
+simple mmu scheme
+base-register scheme described
+8.1.1 the base
+register is added
+user to address
+relocated to location
+access to location
+mapped to location
+ms-dos operating system
+operating system running
+intel 80x86 family
+family of processors
+four relocation registers
+registers when loading
+loading and running
+processes the user
+program never sees
+sees the real
+real physical addresses
+addresses the program
+program can create
+create a pointer
+pointer to location
+load or store
+register the user
+user program deals
+deals with logical
+addresses the memory-mapping
+memory-mapping hardware converts
+hardware converts logical
+converts logical addresses
+addresses into physical
+addresses this form
+form of execution-time
+binding was discussed
+8.1.2 the final
+referenced memory address
+reference is made
+two different types
+types of addresses
+tor + max
+generates only logical
+addresses and thinks
+runs in locations
+max the user
+user program generates
+mapped to physical
+separate physical address
+space is central
+central to proper
+proper memory management
+management 8.1.4 dynamic
+8.1.4 dynamic loading
+process to execute
+execute the size
+size of physical
+memory to obtain
+obtain better memory-space
+dynamic with dynancic
+relocatable load format
+format the main
+program is loaded
+loaded into memory
+call another routine
+routine first checks
+relocatable linking loader
+load the desired
+routine into menwry
+update the program
+program s address
+tables to reflect
+reflect this change
+change then control
+control is passed
+newly loaded routine
+routine the advantage
+advantage of dynamic
+loaded this method
+amounts of code
+code are needed
+needed to handle
+handle infrequently occurring
+infrequently occurring cases
+total program size
+smaller dynamic loading
+require special support
+users to design
+design their programs
+method operating systems
+providing library routines
+routines to implement
+implement dynamic loading
+loading 8.1.5 dynamic
+8.1.5 dynamic linking
+linking and shared
+shared libraries figure
+shows some operating
+operating systems support
+support only linking
+system language libraries
+libraries are treated
+binary program image
+program image dynamic
+image dynamic linking
+similar to dynamic
+postponed until execution
+language subroutine libraries
+system must include
+include a copy
+image this requirement
+wastes both disk
+space and main
+memory with dynamic
+stub is included
+reference the stub
+piece of code
+memory-resident library routine
+load the library
+stub is executed
+loads the routine
+routine into memory
+routine and executes
+executes the routine
+segment is reached
+routine is executed
+incurring no cost
+cost for dynamic
+language library execute
+code this feature
+extended to library
+programs that reference
+reference the library
+version without dynamic
+relinked to gain
+versions of libraries
+information is included
+information to decide
+decide which copy
+versions with minor
+minor changes retain
+versions with major
+major changes increment
+increment the number
+version are affected
+incompatible changes incorporated
+library was installed
+installed will continue
+library this system
+unlike dynamic loading
+linking generally requires
+memory are protected
+process s memory
+processes to access
+addresses we elaborate
+paging in section
+8.4.4 a process
+executed a process
+out of memory
+memory for continued
+assume a multiprogramming
+round-robin cpu-scheduling algorithm
+manager will start
+start to swap
+out the process
+swap another process
+scheduler will allocate
+process in memory
+finishes its quantum
+manager can swap
+ready to execute
+reschedule the cpu
+cpu in addition
+amounts of computing
+done between swaps
+swaps a variant
+priority-based scheduling algorithms
+higher-priority process arrives
+out the lower-priority
+load and execute
+execute the higher-priority
+higher-priority process finishes
+out @ swap
+swap in backing
+backing store main
+store main memory
+main memory figure
+continued this variant
+variant of swapping
+space it occupied
+previously this restriction
+restriction is dictated
+method of address
+binding if binding
+binding is done
+assembly or load
+location if execution-time
+addresses are computed
+computed during execution
+execution time swapping
+requires a backing
+store the backing
+commonly a fast
+provide direct access
+images the system
+maintains a consisting
+processes whose memory
+ready to run
+cpu scheduler decides
+decides to execute
+execute a process
+calls the dispatcher
+dispatcher the dispatcher
+free memory region
+out a process
+memory and swaps
+registers and transfers
+process the context-switch
+standard hard disk
+main memory takes
+assuming an average
+out and swap
+amount of memory
+resident operating system
+operating system taking
+smaller than this-say
+required for swapping
+memory a user
+process with dynamic
+dynamic memory requirements
+issue system calls
+memory and release
+inform the operating
+memory needs swapping
+swapping is constrained
+swap a process
+i a process
+swap that process
+process to free
+free up memory
+accessing the user
+operation is queued
+device is busy
+swap out process
+swap in process
+belongs to process
+two main solutions
+process with pending
+execute i operations
+operating-system buffers transfers
+transfers between operating-system
+buffers and process
+memory then occur
+process is swapped
+explanation we postpone
+discussing this issue
+issue until chapter
+structure is covered
+space is allocated
+chunk of disk
+systems it requires
+reasonable memory-management solution
+memory-management solution modified
+solution modified versions
+versions of swapping
+systems a modification
+modification of swapping
+versions of unix
+processes are running
+system is reduced
+reduced memory management
+management in unix
+unix is described
+fully in sections
+a.6 early pcs-which
+early pcs-which lacked
+lacked the sophistication
+sophistication to implement
+implement more advanced
+advanced memory-management methods-ran
+memory-management methods-ran multiple
+methods-ran multiple large
+multiple large processes
+version of swapping
+swapping a prime
+supports concurrent execution
+execution of processes
+process is loaded
+insufficient main memory
+swapped to disk
+disk this operating
+provide full swapping
+preempt one process
+swapped-out process remains
+process remains swapped
+selects that process
+process to run
+run subsequent versions
+versions of microsoft
+microsoft operating systems
+systems take advantage
+advanced mmu features
+features now found
+found in pcs
+pcs we explore
+explore such features
+features in section
+cover virtual memory
+memory the main
+memory must accommodate
+allocate main menlory
+explains one common
+contiguous memory allocation
+allocation the memory
+place the operating
+memory or high
+memory the major
+major factor affecting
+affecting this decision
+programmers usually place
+system in low
+operating system resides
+resides in low
+memory the development
+situation is similar
+processes to reside
+allocate available memory
+input queue waiting
+process is contained
+single contiguous section
+section of memory
+memory 8.3.1 memory
+8.3.1 memory mapping
+mapping and protection
+protection before discussing
+discussing memory allocation
+discuss the issue
+issue of memory
+provide these features
+8.1.1 the relocation
+relocation register contaitls
+contaitls the value
+smallest physical address
+range of logical
+relocation and limit
+maps the logical
+dynamically by adding
+adding the value
+register this mapped
+cpu scheduler selects
+selects a process
+process for execution
+loads the relocation
+values as part
+cpu is checked
+programs and data
+process the relocation-register
+system s size
+size to change
+dynamically this flexibility
+flexibility is desirable
+system contains code
+code and buffer
+space for device
+code and data
+data in memory
+purposes such code
+transient operating-system code
+system during program
+execution 8.3.2 memory
+8.3.2 memory allocation
+ready to turn
+turn to memory
+methods for allocating
+fixed-sized each partition
+degree no trap
+addressing error figure
+hardware supportfor relocation
+multiprogramming is bound
+number of partitions
+partition is free
+process is selected
+process this method
+ibm os operating
+os operating system
+primarily in batch
+indicating which parts
+parts of memory
+considered one large
+set of holes
+sizes as processes
+enter the system
+queue the operating
+operating system takes
+takes into account
+account the memory
+space in determining
+determining which processes
+processes are allocated
+process is allocated
+compete for cpu
+releases its memory
+system can order
+order the input
+scheduling algorithm memory
+memory is allocated
+allocated to processes
+block of memory
+hold that process
+process the operating
+large enough block
+smaller memory requirements
+met in generat
+generat as mentioned
+blocks available comprise
+comprise a set
+scattered throughout memory
+searches the set
+parts one part
+part is allocated
+releases its block
+hole is adjacent
+holes are merged
+merged to form
+form one larger
+waiting for memory
+freed and recombined
+memory could satisfy
+satisfy the demands
+processes this procedure
+general which concerns
+satisfy a request
+request of size
+select a free
+holes first fit
+first fit allocate
+allocate the first
+big enough searching
+searching can start
+previous first-fit search
+first-fit search ended
+find a free
+allocate the smallest
+search the entire
+list is ordered
+ordered by size
+size this strategy
+produces the smallest
+smallest leftover hole
+leftover hole worst
+hole worst fit
+worst fit allocate
+allocate the largest
+sorted by size
+produces the largest
+largest leftover hole
+smaller leftover hole
+best-fit approach simulations
+simulations have shown
+fit in terms
+terms of decreasing
+utilization neither first
+terms of storage
+faster 8.3.3 fragmentation
+first-fit and best-fit
+strategies for memory
+memory allocation suffer
+suffer from external
+external as processes
+processes are loaded
+loaded and removed
+removed from memory
+free memory space
+space is broken
+pieces external fragmentation
+external fragmentation exists
+total memory space
+space to satisfy
+contiguous ; storage
+storage is fragmented
+number of small
+holes this fragmentation
+block of free
+pieces of memory
+big free block
+first-fit or best-fit
+strategy can affect
+affect the amount
+amount of fragmentation
+block is allocated
+matter which algorithm
+average process size
+major problem statistical
+problem statistical analysis
+analysis of first
+lost to fragmentation
+one-third of memory
+multiple-partition allocation scheme
+18,464 bytes suppose
+requests 18,462 bytes
+bytes the overhead
+approach to avoiding
+avoiding this problem
+break the physical
+memory into fixed-sized
+blocks and allocate
+memory in units
+based on block
+memory the difference
+numbers is internal
+partition one solution
+problem of external
+shuffle the memory
+place all free
+large block compaction
+relocation is static
+done ; compaction
+relocation is dynamic
+done at execution
+addresses are relocated
+requires only moving
+moving the program
+program and data
+changing the base
+register to reflect
+address when compaction
+determine its cost
+cost the simplest
+simplest compaction algorithm
+move all processes
+end of memory
+producing one large
+memory this scheme
+permit the logical
+allowing a process
+allocated physical memory
+two complementary techniques
+complementary techniques achieve
+achieve this solution
+scheme that permits
+permits the physical
+space a process
+noncontiguous paging avoids
+paging avoids external
+avoids external fragmentation
+solves the considerable
+problem of fitting
+fitting memory chunks
+chunks of varying
+introduction of paging
+problem the problem
+fragments or data
+residing in main
+fragmentation problems discussed
+discussed in connection
+connection with main
+compaction is impossible
+advantages over earlier
+operating systems physical
+systems physical address
+physical address foooo
+page table figure
+hardware 1---------1 physical
+1---------1 physical memory
+support for paging
+handled by hardware
+designs have implemented
+integrating the hardware
+microprocessors 8.4.1 basic
+8.4.1 basic method
+method the basic
+method for implementing
+implementing paging involves
+paging involves breaking
+involves breaking physical
+breaking physical memory
+blocks called harnes
+harnes and breaking
+breaking logical memory
+memory into blocks
+pages are loaded
+store is divided
+divided into fixed-sized
+frames the hardware
+paging is illustrated
+generated the cpu
+cpu is divided
+page in physical
+memory this base
+address is combined
+offset to define
+define the physical
+unit the paging
+model of memory
+memory is shown
+shown in figure
+hardware the size
+typically a power
+architecture the selection
+page size makes
+makes the translation
+number and page
+offset particularly easy
+bytes or wordst
+logical address designate
+designate the page
+low-order bits designate
+page table frame
+table frame number
+frame number physical
+number physical memory
+physical memory figure
+model of logical
+page number page
+number page offset
+memory in figure
+user s view
+view of memory
+mapped into physical
+physical memory logical
+memory logical address
+find that page
+maps to physical
+mapped to frame
+noticed that paging
+form of dynamic
+relocation every logical
+address is bound
+address using paging
+paging is similar
+table of base
+frame of memory
+page table logical
+table logical memory
+logical memory physical
+memory physical memory
+memory with 4-byte
+internal fragmentation notice
+notice that frames
+frames are allocated
+allocated as units
+happen to coincide
+coincide with page
+last frame allocated
+resulting in internal
+frame if process
+size is independent
+independent of page
+expect internal fragmentation
+fragmentation to average
+average one-half page
+page per process
+process this consideration
+suggests that small
+small page sizes
+sizes are desirable
+overhead is involved
+overhead is reduced
+data being transferred
+transferred is larger
+sizes have grown
+support even larger
+larger page sizes
+sizes some cpus
+cpus and kernels
+kernels even support
+support multiple page
+multiple page sizes
+sizes for instance
+solaris uses page
+support for variable
+variable on-the-fly page
+on-the-fly page size
+size can vary
+entry can point
+physical page frames
+frames if frame
+system with 4-byte
+entries can address
+expressed in pages
+examined each page
+process the first
+number is put
+page is loaded
+aspect of paging
+actual physical memory
+memory the user
+user program views
+program views memory
+program in fact
+program is scattered
+scattered throughout physical
+holds other programs
+programs the difference
+memory is reconciled
+hardware the logical
+addresses are translated
+translated into physical
+addresses this mapping
+mapping is hidden
+operating system notice
+process by definition
+definition is unable
+unable to access
+system is managing
+managing physical memory
+details of physical
+physical memory-which frames
+frame the frame
+physical page frame
+free or allocated
+process or processes
+free-frame list free-frame
+list free-frame list
+new-process page table
+allocation in addition
+aware that user
+user processes operate
+operate in user
+mapped to produce
+produce physical addresses
+makes a system
+produce the correct
+correct physical address
+address the operating
+operating system maintains
+maintains a copy
+counter and register
+contents this copy
+translate logical addresses
+addresses to physical
+system must map
+map a logical
+physical address manually
+dispatcher to define
+define the hardware
+hardware page table
+allocated the cpu
+paging therefore increases
+increases the context-switch
+8.4.2 hardware support
+support each operating
+methods for storing
+storing page tables
+tables most allocate
+allocate a page
+process a pointer
+table is stored
+process control block
+dispatcher is told
+told to start
+start a process
+registers and define
+define the correct
+correct hardware page-table
+hardware page-table values
+stored user page
+user page table
+table the hardware
+table is implemented
+set of dedicated
+dedicated these registers
+logic to make
+make the paging-address
+paging-address translation efficient
+efficient every access
+access to memory
+consideration the cpu
+cpu dispatcher reloads
+reloads these registers
+instructions to load
+load or modify
+modify the page-table
+system can change
+change the memory
+map the dec
+architecture the address
+table thus consists
+table is satisfactory
+registers to implement
+implement the page
+page table changing
+table changing page
+changing page tables
+page tables requires
+tables requires changing
+substantially reducing context-switch
+required to access
+access a user
+user memory location
+page number fori
+fori this task
+requires a memory
+offset to produce
+produce the actual
+access the desired
+place in memory
+two memory accesses
+accesses are needed
+needed to access
+access a byte
+access is slowed
+resort to swapping
+fastlookup hardware cache
+bc.1her the tlb
+tlb is associative
+memory each entry
+memory is presented
+item is compared
+item is found
+field is returned
+returned the search
+search is fast
+number of entries
+tlb is small
+1,024 the tlb
+address is generated
+number is presented
+number is found
+unmapped memory reference
+number is obtained
+add the page
+number and frame
+full of entries
+system must select
+replacement replacement policies
+replacement policies range
+entries for kernel
+code are wired
+entry an asid
+asid uniquely identifies
+identifies each process
+provide address-space protection
+attempts to resolve
+resolve virtual page
+virtual page numbers
+running process matches
+matches the asid
+attempt is treated
+miss in addition
+addition to providing
+providing address-space protection
+support separate asids
+table is selected
+wrong translation information
+tlb could include
+include old entries
+tlb hit tlb
+tlb p tlb
+tlb miss page
+miss page table
+hardware with tlb
+tlb physical memory
+memory contain valid
+valid virtual addresses
+incorrect or invalid
+invalid physical addresses
+physical addresses left
+process the percentage
+percentage of times
+80-percent hit ratio
+find the desired
+desired page number
+nanoseconds to search
+search the tlb
+nanoseconds to access
+mapped-memory access takes
+fail to find
+find the page
+first access memory
+table and frame
+byte in memory
+nanoseconds to find
+find the effective
+weight the case
+suffer a 40-percent
+slowdown in memory-access
+98-percent hit ratio
+nanoseconds this increased
+increased hit rate
+hit rate produces
+slowdown in access
+explore the impact
+tlb in chapter
+8.4.3 protection memory
+protection memory protection
+environment is accomplished
+accomplished by protection
+table one bit
+bit can define
+define a page
+read-write or read-only
+read-only every reference
+reference to memory
+table to find
+find the correct
+correct frame nuncber
+checked to verify
+page an attempt
+attempt to write
+expand this approach
+approach to provide
+provide a finer
+level of protection
+hardware to provide
+providing separate protection
+separate protection bits
+kind of access
+accesses illegal attempts
+system one additional
+bit is set
+set to valid
+process s logical
+set to invalid
+address space illegal
+space illegal addresses
+addresses are trapped
+valid -invalid bit
+bit the operating
+operating system sets
+sets this bit
+14-bit address space
+number j valid-invalid
+---------  page
+page n figure
+table any attempt
+attempt to generate
+generate an address
+address in pages
+computer will trap
+trap to flee
+flee operating system
+invalid page reference
+scheme has created
+created a problem
+address is illegal
+howeve1 ~ references
+references to page
+classified as valid
+accesses to addresses
+invalid this problem
+2-kb page size
+size and reflects
+reflects the internal
+fragmentation of paging
+range in fact
+fact many processes
+cases to create
+create a page
+table with entries
+valuable memory space
+space some systems
+systems provide hardware
+page table value
+value is checked
+address to verify
+system 8.4.4 shared
+8.4.4 shared pages
+pages an advantage
+advantage of paging
+possibility of sharing
+sharing common code
+code this consideration
+system that supports
+executes a text
+text editor consists
+three-page editor-each page
+large page size
+simplify the figure
+processes each process
+data page reentrant
+page reentrant code
+code is non-self-modifying
+processes can execute
+copy of registers
+registers and data
+storage to hold
+hold the data
+process s execution
+execution the data
+two different processes
+memory each user
+user s page
+page table maps
+pages are mapped
+space per user
+user the total
+total space required
+8,000 kb-a significant
+kb-a significant savings
+heavily used programs
+reentrant the read-only
+nature of shared
+system should enforce
+enforce this property
+property the sharing
+sharing of memory
+memory among processes
+system is similar
+task by threads
+described in chapter
+described shared memory
+process p1 process
+process p3 page
+sharing of code
+corrununication some operating
+operating systems implement
+systems implement shared
+implement shared memory
+memory using shared
+shared pages organizing
+pages organizing memory
+pages provides numerous
+benefits in addition
+addition to allowing
+allowing several processes
+processes to share
+benefits in chapter
+techniques for structuring
+structuring the page
+table 8.5.1 hierarchical
+8.5.1 hierarchical paging
+paging most modern
+modern computer systems
+computer systems support
+support a large
+large logical address
+32-bit logical address
+table may consist
+4mb of physical
+allocate the page
+contiguously in main
+memory one simple
+divide the page
+table into smaller
+accomplish this division
+two-level paging algorithm
+page table memory
+table memory figure
+two-level page-table scheme
+scheme a 32-bit
+address is divided
+page number consisting
+page offset consisting
+page the page
+10-bit page number
+10-bit page offset
+outer page table
+table the address-translation
+architecture is shown
+address translation works
+vax architecture supports
+supports a variation
+variation of two-level
+paging the vax
+bytes the logical
+process is divided
+four equal sections
+bytes each section
+represent the logical
+logical page number
+represent an offset
+page by partitioning
+partitioning the page
+page outer page
+two-level 32-bit paging
+32-bit paging architecture
+system can leave
+leave partitions unused
+section page offset
+designates the section
+one-level page table
+bytes per entry
+pages the user-process
+user-process page tables
+64-bit logical address
+two-level paging scheme
+illustrate this point
+page table consists
+iml.er page tables
+entries the addresses
+page inner page
+bytes the obvious
+divide the outer
+processors for added
+flexibility and efficiency
+page the outer
+three-level paging scheme
+paging scheme suppose
+table is made
+64-bit address space
+2nd outer page
+outer page outer
+table is sti11234
+bytes in size
+four-level paging scheme
+second-level outer page
+ultrasparc would require
+require seven levels
+levels of paging-a
+paging-a prohibitive number
+number of memory
+memory accessesto translate
+translate each logical
+hierarchical page tables
+generally considered inappropriate
+inappropriate 8.5.2 hashed
+8.5.2 hashed page
+hashed page tables
+tables a common
+approach for handling
+handling address spaces
+address spaces larger
+virtual page number
+number each entry
+list of elements
+elements that hash
+mapped page frame
+list the algorithm
+address is hashed
+table the virtual
+number is compared
+compared with field
+form the desired
+desired physical address
+list are searched
+matching virtual page
+number this scheme
+scheme is shown
+favorable for 64-bit
+64-bit address spaces
+proposed this variation
+similar to hashed
+hash table refers
+single page-table entry
+entry can store
+store the mappings
+mappings for multiple
+multiple physical-page frames
+physical-page frames clustered
+frames clustered page
+clustered page tables
+references are noncontiguous
+noncontiguous and scattered
+space 8.5.3 inverted
+8.5.3 inverted page
+inverted page tables
+table the page
+virtual hash table
+hash table figure
+hashed page table
+page table physical
+table physical address
+physical address physical
+address physical memory
+processes reference pages
+pages  virtual
+addresses the operating
+translate this reference
+table is sorted
+sorted by virtual
+physical address entry
+entry is located
+consist of millions
+millions of entries
+entries these tables
+tables may consume
+consume large amounts
+amounts of physical
+solve this problem
+page an inverted
+inverted page table
+real memory location
+process that owns
+owns the page
+page of physical
+shows the operation
+page table compare
+depicts a standard
+standard page table
+table in operation
+operation inverted page
+tables often require
+address spaces mapping
+spaces mapping physical
+mapping physical memory
+physical memory storing
+storing the address-space
+address-space identifier ensures
+process is mapped
+page frame examples
+examples of systems
+systems using inverted
+page tables include
+include the 64-bit
+ultrasparc and powerpc
+powerpc to illustrate
+illustrate this method
+describe a simplified
+i11verted page table
+inverted page-table entry
+assumes the role
+memory page table
+physical address figure
+table physical memory
+consisting of process-id
+subsystem the inverted
+match is found-say
+i-then the physical
+offset is generated
+match is found
+illegal address access
+decreases the amount
+needed to store
+store each page
+increases the amount
+needed to search
+search the table
+page reference occurs
+sorted by physical
+occur on virtual
+match this search
+long to alleviate
+alleviate this problem
+limit the search
+search to one-or
+hash table adds
+adds a memory
+virtual memory reference
+memory reference requires
+two real memory
+real memory reads-one
+tlb is searched
+table is consulted
+offering some performance
+tables have difficulty
+difficulty implementing shared
+implementing shared memory
+shared memory shared
+memory shared memory
+implemented as multiple
+multiple virtual addresses
+sharing the memory
+address this standard
+virtual page entry
+shared virtual addresses
+addresses a simple
+technique for addressing
+addressing this issue
+shared physical address
+address this means
+means that references
+references to virtual
+result in page
+faults an important
+aspect of memory
+unavoidable with paging
+view is mapped
+mapped onto physical
+memory this mapping
+mapping allows differentiation
+differentiation between logical
+memory and physical
+memory 8.6.1 basic
+8.6.1 basic method
+method do users
+array of bytes
+data most people
+prefer to view
+collection of variable-sized
+ordering among segments
+set of methods
+include various data
+modules or data
+elements is referred
+caring what addresses
+addresses in memory
+memory these elements
+stack is stored
+defined by subroutine
+subroutine symbol table
+main program logical
+program logical address
+segment are identified
+seventh stack frame
+stack frame entry
+scheme that supports
+supports this user
+memory a logical
+collection of segments
+segments each segment
+length the addresses
+segment the user
+user therefore specifies
+specifies each address
+contrast this scheme
+simplicity of implementation
+segments are numbered
+segn lent number
+logical address consists
+program is compiled
+compiler automatically constructs
+automatically constructs segments
+constructs segments reflecting
+reflecting the input
+compiler might create
+create separate segments
+code global variables
+variables the heap
+allocated the stacks
+thread the standard
+standard c library
+table yes trap
+error + figure
+segmentation hardware physical
+hardware physical memory
+physical memory libraries
+assign.ed separate segments
+segments the loader
+segments and assign
+assign them segment
+numbers 8.6.2 hardware
+sequence of bytes
+define an implementation
+implementation to map
+map twodimensional user-defined
+twodimensional user-defined addresses
+addresses into one-dimensional
+one-dimensional physical addresses
+mapping is effected
+limit the segment
+startilcg physical address
+resides in memory
+segment limit specifies
+specifies the length
+table is illustrated
+table the offset
+logical addressing attempt
+attempt beyond end
+end of segment
+offset is legal
+base to produce
+produce the address
+address in physical
+byte the segment
+essentially an array
+array of base-limit
+base-limit register pairs
+segments are stored
+stored in physical
+memory as shown
+shown the segment
+giving the beginning
+segment in physical
+long and begins
+begins at location
+reference to byte
+segment o segment1
+segment1 symbol table
+main program segment
+segment table figure
+segmentation 14001---1 segment
+reference to segment
+base of segment
+tooo bytes long
+long both paging
+segmentation have advantages
+disadvantages in fact
+fact some architectures
+discuss the intel
+intel pentium architecture
+give a complete
+present the major
+based we conclude
+conclude our discussion
+overview of linux
+linux address translation
+translation on pentium
+systems in pentium
+cpu generates logical
+generates logical addresses
+unit the segmentation
+segmentation unit produces
+produces a linear
+address the linear
+generates the physical
+address in main
+segmentation and paging
+paging units form
+form the equivalent
+8.7.1 pentium segmentation
+segmentation the pentium
+number of segments
+segments per process
+cpu i figure
+logical to physical
+physical address translation
+partitions the first
+first partition consists
+ldt and gdt
+8-byte segment descriptor
+descriptor with detailed
+including the base
+location and limit
+segment the logical
+designates the segment
+gdt or ldt
+deals with protection
+protection the offset
+segment in question
+question the machine
+allowing six segments
+8-byte microprogram registers
+registers to hold
+ldt or gdt
+gdt this cache
+lets the pentium
+read the descriptor
+descriptor from memory
+reference the linear
+segment register points
+gdt the base
+generate a first
+check for address
+fault is generated
+offset is added
+32-bit linear address
+paging unit turns
+turns this linear
+address 8.7.2 pentium
+8.7.2 pentium paging
+paging the pentium
+two-level paging schence
+architecture is similar
+intel pentium address
+pentium address translation
+translation is shown
+logical address offset
+linear address figure
+intel pentium segmentation
+pentium segmentation detail
+detail in figure
+high-order bits reference
+reference an entry
+outernlost page table
+terms the page
+cr3 register points
+page directory entry
+directory entry points
+4-kb page pointed
+table one entry
+page size flag
+flag is set
+page directory points
+4-mb page frame
+registe r page
+page directory page
+directory page directory
+page 4-mb page
+4-mb page figure
+improve the efficiency
+efficiency of physical
+intel pentium page
+pentium page tables
+entry is pointing
+memory on demand
+demand 8.7.3 linux
+linux on pentium
+linux operating system
+architecture because linux
+linux is designed
+designed to run
+variety of processors
+provide only limited
+support for segmentationlinux
+rely on segmentation
+segment for kernel
+code a segment
+data a segment
+segment for user
+data a task-state
+default ldt segment
+segment the segments
+segments for user
+code and user
+data are shared
+running in user
+descriptors are stored
+global descriptor table
+segment is stored
+gdt the tss
+store the hardware
+process during context
+switches the default
+ldt as noted
+segment selector includes
+includes a 2-bit
+field for protection
+levels of protection
+limlx only recognizes
+mode and kernel
+two-level paging model
+variety of hardware
+platforms where two-level
+linux has adopted
+adopted a threelevel
+threelevel paging strategy
+strategy that works
+32-bit and 64-bit
+architectures the linear
+address in linux
+linux is broken
+global directory middle
+directory middle directory
+middle directory page
+directory page table
+highlights the three-level
+three-level paging model
+model in linux
+linux the number
+number of bits
+linear address varies
+lglobal directory global
+directory global directory
+global directory cr3
+directory cr3 __,.c__
+cr3 __,.c__ ___
+__,.c__ ___ __l
+___ __l register
+middle directory figure
+paging in linux
+linux offset page
+offset page frame
+bypassing the middle
+directory each task
+task in linux
+set of page
+tables and -just
+-the cr3 register
+task currently executing
+register is saved
+saved and restored
+context switch memory-management
+switch memory-management algorithms
+algorithms for multiprogrammed
+multiprogrammed operating systems
+operating systems range
+simple single-user system
+single-user system approach
+approach to paged
+provided every memory
+memory address generated
+checked for legality
+address the checking
+combinations of paging
+aspects in comparing
+comparing different memory-management
+support a simple
+simple base register
+base-limit register pair
+pair is sufficient
+single and multiple-partition
+segmentation need mapping
+tables to define
+define the address
+address map performance
+required to map
+physical address increases
+compare or add
+implemented in fast
+user memory accesses
+substantially a tlb
+tlb can reduce
+reduce the performance
+acceptable level fragmentation
+fragmentation a multiprogrammed
+level of multiprogramming
+increase the multiprogramming
+packing more processes
+processes into memory
+memory to accomplish
+accomplish this task
+reduce memory waste
+systems with fixed-sized
+fixed-sized allocation units
+scheme and paging
+suffer from internal
+internal fragmentation systems
+systems with variable-sized
+variable-sized allocation units
+scheme and segmentation
+external fragmentation relocation
+relocation one solution
+problem is compaction
+compaction compaction involves
+compaction involves shifting
+shifting a program
+program in memory
+notice the change
+change this consideration
+requires that logical
+addresses be relocated
+compact storage swapping
+storage swapping swapping
+algorithm at intervals
+dictated by cpu-scheduling
+processes are copied
+copied from main
+back to main
+fit into memory
+sharing another means
+means of increasing
+increasing the multiprogramming
+sharing generally requires
+paging or segmentation
+provide small packets
+packets of information
+pages or segments
+means of running
+running many processes
+designed carefully protection
+protection if paging
+segmentation is provided
+read-write this restriction
+case to provide
+provide simple run-time
+simple run-time checks
+checks for common
+common programming errors
+explain the difference
+difference between internal
+internal and external
+compare the memory
+memory organization schemes
+schemes of contiguous
+paging with respect
+fragmentation b internal
+fragmentation c ability
+ability to share
+code across processes
+paging sometimes combined
+program to allocate
+allocate more memory
+space during execution
+allocation of data
+segments of programs
+required to support
+support dynamic memory
+dynamic memory allocation
+schemes a contiguous
+allocation b pure
+segmentation c pure
+intel address-translation scheme
+address-translation scheme shown
+pentium in translatil
+system of hardware
+complicated memory translation
+purpose of paging
+paging the page
+explain why sharil
+module is easier
+easier when segmentation
+system with paging
+system allow access
+compare the segmented
+pagil g scheme
+page table scheme
+scheme for handling
+handling large address
+large address spaces
+page table stored
+stored in memory
+memory reference takes
+paged memory reference
+references are found
+effective memory reference
+assume that finding
+finding a page-table
+paging with segmentation
+segmentation with respect
+address translation structures
+structures in order
+order to convert
+convert virtual addresses
+data the cpu
+fetch or store
+two baselimit register
+baselimit register pairs
+pairs are provided
+data the instruction
+instruction base-limit register
+discuss the advantages
+process for generating
+binaries a compiler
+generate the object
+code for individual
+combine multiple object
+multiple object modules
+single program bilcary
+linkage editor change
+change the bindmg
+bindmg of instructions
+addresses what information
+editor to facilitate
+facilitate the memory-binding
+hierarchical paging scheme
+operations are performed
+user program executes
+executes a memory-load
+worst-fit algorithms place
+algorithms place processes
+describe a mechanism
+segment could belong
+4-kb page size
+size the system
+512mb of physical
+conventional single-level page
+single-level page table
+1-kb page size
+numbers and offsets
+provided as decimal
+code is stored
+fixed virtual address
+storing the program
+program starts executing
+stack is allocated
+virtual address space
+allowed to grow
+grow toward lower
+lower virtual addresses
+segment base length
+words per page
+bits are required
+segments among processes
+processes without requiring
+dynamically linked segmentation
+linked segmentation system
+system a define
+define a system
+linking and sharing
+sharing of segments
+segments without requiring
+describe a paging
+shared without requiring
+32-bit virtual address
+page size write
+passed a virtual
+output the page
+number and offset
+program would run
+program would output
+writing this program
+program will require
+type to store
+bits we encourage
+unsigned data types
+dynamic storage allocation
+allocation was discussed
+discussed by knuth
+found through simulation
+results that first
+discussed the 50-percent
+rule the concept
+concept of paging
+described by kilburn
+concept of segmentation
+segmentation was first
+discussed by dennis
+daley and dennis
+tables are discussed
+ibm rt storage
+manager by chang
+chang and mergen
+translation in software
+software is covered
+covered in jacob
+jacob and mudge
+hennessy and patterson
+explains the hardware
+aspects of tlbs
+discusses page tables
+tables for 64-bit
+address spaces alternative
+spaces alternative approaches
+approaches to enforcing
+enforcing memory protection
+protection are proposed
+proposed and studied
+studied in wahbe
+tedmiques for managing
+managing the tlb
+support for large
+large pages tanenbaum
+discusses intel80386 paging
+intel80386 paging memory
+paging memory management
+described by jacob
+segmentation on lim1x
+systems is presented
+presented in bovet
+bovet and cesati
+discussed various memory-management
+tend to require
+execute virtual memory
+completely in memory
+memory one major
+larger than physical
+virtual memory abstracts
+memory abstracts main
+abstracts main memory
+array of storage
+separating logical memory
+memory as viewed
+user from physical
+memory this technique
+technique frees programmers
+concerns of memory-storage
+memory-storage limitations virtual
+limitations virtual memory
+memory in addition
+mechanism for process
+process creation virtual
+creation virtual memory
+easy to implement
+substantially decrease performance
+discuss virtual memory
+form of demand
+paging and examine
+examine its complexity
+complexity and cost
+cost to describe
+describe the benefits
+virtual memory system
+system to explain
+explain the concepts
+concepts of demand
+allocation of page
+frames to discuss
+discuss the principles
+model the memory-management
+memory-management algorithms outlined
+outlined in chapter
+instructions being executed
+memory the first
+approach to meeting
+meeting this requirement
+place the entire
+entire logical address
+space in physical
+physical memory dynamic
+memory dynamic loading
+ease this restriction
+generally requires special
+requires special precautions
+precautions and extra
+requirement that instructions
+limits the size
+memory in fact
+examination of real
+real programs shows
+needed for instance
+code to handle
+handle unusual error
+unusual error conditions
+occur in practice
+allocated more memory
+elements an assembler
+assembler symbol table
+symbols certain options
+options and features
+rarely for instance
+routines on u.s
+u.s government computers
+computers that balance
+balance the budget
+program is needed
+ability to execute
+execute a program
+partially in memory
+memory would confer
+confer many benefits
+longer be constrained
+amount of physical
+extremely large virtual
+large virtual address
+simplifying the programming
+programming task page
+page v virtual
+virtual memory memory
+memory memory map
+memory map physical
+map physical memory
+diagram showing virtual
+showing virtual memory
+increase in cpu
+utilization and throughput
+increase in response
+needed to load
+load or swap
+swap user programs
+programs into memory
+running a program
+memory would benefit
+involves the separation
+separation of logical
+memory as perceived
+perceived by users
+users from physical
+memory this separation
+large virtual memory
+provided for programmers
+smaller physical memory
+virtual memory makes
+makes the task
+task of programming
+programming much easier
+programmer no longer
+programmed the address
+process is stored
+address 0-and exists
+exists in contiguous
+recall from chapter
+fact physical memory
+organized in page
+page frames assigned
+map logical pages
+pages to physical
+frames in memory
+note in figure
+heap to grow
+upward in memory
+stack to grow
+downward in memory
+memory through successive
+successive function calls
+calls the large
+large blank space
+stack is part
+virtual address figure
+require actual physical
+actual physical pages
+heap or stack
+stack grows virtual
+grows virtual address
+virtual address spaces
+spaces that include
+sparse address spaces
+sparse address space
+space is beneficial
+stack or heap
+heap segments grow
+dynam.ically link libraries
+possibly other shared
+execution in addition
+addition to separating
+memory from physical
+memory allows files
+files and memory
+processes through page
+processes through mapping
+considers the shared
+reside in physical
+memory are shared
+library is mapped
+virtual memory enables
+memory enables processes
+share memory recall
+processes can communicate
+shared memory virtual
+memory virtual memory
+process to create
+create a region
+region of memory
+process processes sharing
+sharing this region
+pages of memory
+shared during process
+calt thus speeding
+speeding up process
+explore these-and other-benefits
+other-benefits of virtual
+discuss implementing virtual
+implementing virtual memory
+memory through demand
+demand paging shared
+paging shared library
+shared library shared
+library shared pages
+shared pages shared
+pages shared library
+shared library figure
+library using virtual
+loaded from disk
+disk into nlemory
+nlemory one option
+load the entire
+program in physical
+memory at program
+suppose a program
+loading the entire
+program into memory
+results in loading
+loading the executable
+needed this technique
+virtual memory systems
+systems with demand-paged
+demand-paged virtual memory
+demanded during program
+execution ; pages
+loaded into physical
+memory a demand-paging
+system with swapping
+reside in secondary
+swapping the entire
+swapper never swaps
+swaps a page
+page into memory
+viewing a process
+sequence of pages
+large contiguous address
+contiguous address space
+incorrect a swapper
+swapper manipulates entire
+manipulates entire processes
+connection with demand
+demand paging program
+program a program
+program b main
+main memory swap
+memory to contiguous
+contiguous disk space
+9.2.1 basic concepts
+guesses which pages
+pages into memory
+reading into memory
+decreasing the swap
+physical memory needed
+form of hardware
+support to distinguish
+disk the valid
+-invalid bit scheme
+bit scheme described
+disk the page-table
+memory is set
+set as usuat
+simply marked invalid
+page on disk
+disk this situation
+situation is depicted
+depicted in figure
+notice that marking
+marking a page
+process never attempts
+attempts to access
+access that page
+right and page
+process will run
+executes and accesses
+valid-invalid frame bit
+physical memory dod
+main memory operating
+memory operating system
+operating system reference
+backing store trap
+store trap restart
+trap restart instruction
+restart instruction page
+instruction page table
+page table reset
+table reset page
+reset page table
+bring in missing
+missing page figure
+steps in handling
+handling a page
+access a page
+page marked invalid
+translating the address
+causing a trap
+system this trap
+system s failure
+failure to bring
+bring the desired
+memory the procedure
+procedure for handling
+handling this page
+fault is straightforward
+check an internal
+process to determine
+invalid memory access
+reference was invalid
+terminate the process
+schedule a disk
+operation to read
+read the desired
+newly allocated frame
+read is complete
+modify the internal
+memory we restart
+restart the instruction
+trap the process
+access the page
+executing a process
+pages in memory
+sets the instruction
+process immediately faults
+page is brought
+continues to execute
+faults this scheme
+bring a page
+programs could access
+possibly causing multiple
+causing multiple page
+multiple page faults
+faults per instruction
+instruction this situation
+situation would result
+result in unacceptable
+unacceptable system performance
+analysis of running
+running processes shows
+exceedingly unlikely programs
+results in reasonable
+performance from demand
+paging the hardware
+hardware to support
+support demand paging
+hardware for paging
+paging and swapping
+table this table
+ability to mark
+mark an entry
+value of protection
+protection bits secondary
+bits secondary memory
+memory this memory
+holds those pages
+present in main
+memory the secondary
+section of disk
+allocation is discussed
+discussed in chapter
+requirement for demand
+ability to restart
+restart any instruction
+save the state
+page fault occurs
+restart the process
+place and state
+requirement is easy
+easy to meet
+meet a page
+fault may occur
+restart by fetching
+fetching the instruction
+fetching an operand
+fetch and decode
+decode the instruction
+fetch the operand
+add the content
+placing the result
+steps to execute
+execute this instruction
+fetch a fetch
+fetch b add
+store the sum
+correct the page
+instruction the restart
+restart will require
+occurs the major
+major difficulty arises
+instruction may modify
+source or destination
+straddles a page
+fault might occur
+done in addition
+source and destination
+destination blocks overlap
+instruction this problem
+two different ways
+computes and attempts
+access both ends
+modified the move
+fault can occur
+solution uses temporary
+hold the values
+values of overwritten
+values are written
+back into memory
+occurs this action
+action restores memory
+instruction was started
+architectural problem resulting
+resulting from adding
+difficulties involved paging
+paging is added
+people often assume
+assume that paging
+assumption is true
+page fault represents
+represents a fatal
+page fault means
+restarted 9.2.2 performance
+performance of demand
+demand paging demand
+paging demand paging
+affect the performance
+compute the effective
+read the relevant
+page from disk
+close to zero-that
+faults the ttp
+needed to service
+service a page
+fault a page
+sequence to occur
+operating system save
+save the user
+registers and process
+page fault check
+reference was legal
+legal and determine
+determine the location
+issue a read
+request is serviced
+serviced b wait
+begin the transfer
+frame while waiting
+allocate the cpu
+receive an interrupt
+disk i subsystem
+save the registers
+tables to show
+process again restore
+restore the user
+resume the interrupted
+cpu is allocated
+occurs this arrangement
+arrangement allows multiprogramming
+multiprogramming to maintain
+maintain cpu utilization
+utilization but requires
+resume the page-fault
+page-fault service routine
+transfer is complete
+faced with tlu
+tlu ee major
+service the page-fault
+page-fault interrupt read
+instructions these tasks
+typical hard disk
+hardware and software
+queue of processes
+processes is waiting
+free to service
+service our request
+average page-fault service
+microseconds the computer
+due to paging
+399,990 to page-fault
+page-fault in sum
+page-fault rate low
+access time increases
+slowing process execution
+process execution dramatically
+dramatically an additional
+aspect of demand
+swap space disk
+i to swap
+faster because swap
+lookups and indirect
+indirect allocation methods
+gain better paging
+throughput by copying
+copying an entire
+entire file image
+space at process
+performing demand paging
+space another option
+write the pages
+pages to swap
+replaced this approach
+approach will ensure
+pages are read
+paging is done
+done from swap
+attempt to limit
+limit the amount
+amount of swap
+paging of binary
+binary files demand
+files demand pages
+files are brought
+simply be overwritten
+system itself serves
+backing store howeve1
+howeve1 ~ swap
+include the stack
+stack and heap
+solaris and bsd
+unix in section
+process can start
+similar to page
+covered in section
+rapid process creation
+creation and minimizes
+minimizes the number
+newly created process
+process i modifies
+page c recall
+recall thatthe fork
+system call creates
+creates a child
+worked by creating
+creating a copy
+parent s address
+duplicating the pages
+child processes invoke
+invoke the exec
+immediately after creation
+works by allowing
+allowing the parent
+parent and child
+initially to share
+pages these shared
+pages are marked
+marked as copy-on-write
+page is created
+copy-on-write is illustrated
+illustrated in figures
+show the contents
+child process attempts
+attempts to modify
+modify a page
+page containing portions
+copy-on-write the operating
+system will create
+create a copy
+process the child
+modify its copied
+process are copied
+child processes note
+process1 physical memory
+page c process2
+arked as copy-on-write
+pages containing executable
+duplicated using copyon
+important to note
+note the location
+allocated many operating
+operating systems provide
+requests these free
+process must expand
+managed operating systems
+systems typically allocate
+allocate these pages
+1and zero-fill-on-demand pages
+erasing the previous
+contents several versions
+solaris and linux
+provide a variation
+variation ofthe fork
+differently from fork
+copy-on-write with vfork
+process is suspended
+parent because vfork
+caution to ensure
+modify the address
+child process calls
+process calls exec
+copying of pages
+pages takes place
+extremely efficient method
+method of process
+implement unix command-line
+unix command-line shell
+command-line shell interfaces
+referenced this representation
+process of ten
+demand paging saves
+increase our degree
+degree of multiprogramming
+multiprogramming by running
+run eight processes
+required ten frames
+run six processes
+pages in size
+higher cpu utilization
+frames to spare
+holding program pages
+program pages buffers
+consume a considerable
+increase the strain
+strain on memory-placement
+memory-placement algorithms deciding
+memory to allocate
+challenge some systems
+allocate a fixed
+percentage of memory
+subsystem to compete
+memory for user
+table for user
+page replacement over-allocation
+over-allocation of memory
+process is executing
+occurs the operating
+operating system determines
+page is residing
+terminate the user
+system s attempt
+attempt to improve
+improve the computer
+system s utilization
+choice the operating
+frames and reducing
+reducing the level
+multiprogramming this option
+9.4.1 basic page
+basic page replacement
+page replacement page
+replacement page replacement
+page replacement takes
+frame is free
+free a frame
+frame by writing
+writing its contents
+contents to swap
+space and changing
+changing the page
+longer in memory
+frame to hold
+hold the page
+faulted we modify
+modify the page-fault
+routine to include
+include page replacement
+find the location
+algorithnc to select
+write the victim
+disk ; change
+change the page
+page and frame
+tables accordingly read
+newly freed frame
+frame ; change
+frame tables restart
+restart the user
+user process notice
+frames are free
+two page transfers
+required this situation
+situation effectively doubles
+doubles the page-fault
+increases the effective
+reduce this overhead
+page or frame
+hardware the modify
+page is set
+word or byte
+page is written
+select a page
+page for replacement
+examine its modify
+write the page
+read into memory
+write the memory
+technique also applies
+pages of binary
+discarded when desired
+desired this scheme
+required to service
+modified frame valid-invalid
+frame valid-invalid bit
+replacement is basic
+basic to demand
+paging it completes
+completes the separation
+separation between logical
+enormous virtual memory
+provided for programnlers
+addresses are mapped
+sets of addresses
+constrained by physical
+process of twenty
+algorithm to find
+contents are copied
+solve two major
+two major problems
+problems to implement
+implement demand develop
+develop a algorithm
+frames to allocate
+replacement is required
+select the frames
+designing appropriate algorithms
+algorithms to solve
+solve these problems
+expensive even slight
+improvements in demand-paging
+demand-paging methods yield
+methods yield large
+yield large gains
+gains in system
+algorithms every operating
+algorithm in general
+lowest page-fault rate
+rate we evaluate
+evaluate an algorithm
+algorithm by running
+string of memory
+references and computing
+computing the number
+number of page
+faults the string
+generate reference strings
+system and record
+record the address
+produces a large
+number of data
+reduce the number
+two facts first
+hardware or system
+page fault page
+immediately following references
+bytes per page
+sequence is reduced
+number of frames
+graph of page
+faults versus number
+frames to determine
+determine the number
+string and page-replacement
+frames available increases
+page faults decreases
+reference strillg considered
+page in contrast
+resulting in eleven
+faults in general
+expect a curve
+page faults drops
+adding physical memory
+physical memory increases
+increases the number
+illustrate several page-replacement
+algorithms in doing
+frames 9.4.2 fifo
+9.4.2 fifo page
+fifo page replacement
+replacement the simplest
+simplest page-replacement algorithm
+algorithm a fifo
+fifo replacement algorithm
+replacement algorithm associates
+page was brought
+page is chosen
+create a fifo
+queue to hold
+hold all pages
+memory we replace
+replace the page
+empty the first
+first three references
+brought in first
+reference the first
+results in replacement
+replacement of page
+page frames figure
+fifo page-replacement algorithm
+first in line
+replaced by page
+continues as shown
+show which pages
+fifteen faults altogether
+altogether the fifo
+algorithm is easy
+easy to lmderstand
+lmderstand and program
+heavily used variable
+constant use notice
+select for replacement
+replacement a page
+replace an active
+immediately to retrieve
+retrieve the active
+replaced to bring
+bring the active
+bad replacement choice
+replacement choice increases
+increases the page-fault
+rate and slows
+slows process execution
+execution to illustrate
+illustrate the problems
+shows the curve
+curve of page
+reference string versus
+versus the number
+number of faults
+rate may increase
+number of allocated
+allocated frames increases
+expect that giving
+giving more memory
+process would improve
+improve its performance
+anomaly was discovered
+result 9.4.3 optimal
+9.4.3 optimal page
+optimal page replacement
+replacement of belady
+suffer from belady
+belady s anomaly
+algorithm does exist
+opt or min
+curve for fifo
+page-replacement algorithm guarantees
+guarantees the lowest
+lowest possible pagefault
+sample reference string
+optimal page-replacement algorithm
+algorithm would yield
+yield nine page
+references cause faults
+faults that fill
+frames the reference
+reference to page
+ignore the first
+algorithms must suffer
+good as fifo
+algorithm can process
+process this reference
+frames with fewer
+algorithm is difficult
+difficult to implement
+requires future knowledge
+encountered a similar
+sjf cpu-schedulin.g algorithm
+algorithm in section
+studies for instance
+algorithm reference string
+percent of optimal
+optimal at worst
+percent on average
+average 9.4.4 lru
+9.4.4 lru page
+lru page replacement
+fifo and opt
+backward versus forward
+lru replacement associates
+page s last
+chooses the page
+algorithm looking backward
+algorithm on sis
+result of applying
+applying lru replacement
+string is shown
+lru algorithm produces
+algorithm produces twelve
+produces twelve faults
+twelve faults notice
+first five faults
+lru replacement sees
+lru algorithm replaces
+algorithm replaces page
+knowing that page
+faults for page
+replacement with twelve
+replacement with fifteen
+fifteen the lru
+good the major
+implement lru replacement
+replacement an lru
+lru page-replacement algorithm
+algorithm may require
+require substantial hardware
+substantial hardware assistance
+assistance the problem
+determine an order
+implementations are feasible
+entry a time-of-use
+field and add
+cpu a logical
+clock or counter
+counter the clock
+clock is reference
+page is made
+register are copied
+page we replace
+smallest time value
+value this scheme
+requires a search
+find the lru
+write to memory
+access the times
+aintained when page
+tables are changed
+due to cpu
+stack another approach
+approach to implementing
+implementing lru replacement
+stack of page
+page is referenced
+stack and put
+recently used page
+implement this approach
+doubly linked list
+tail pointer removing
+removing a page
+page and putting
+stack then requires
+changing six pointers
+pointers at worst
+worst each update
+tail pointer points
+page this approach
+software or microcode
+implementations of lru
+replacement like optimal
+class of page-replacement
+anomaly a stack
+set of pages
+frames for lru
+recently referenced pages
+frames is increased
+implementation of lru
+conceivable without hardware
+standard tlb registers
+registers the updating
+stack to record
+recent page references
+fields or stack
+software to update
+update such data
+slow every memory
+slowing every user
+factor of ten
+ten few systems
+systems could tolerate
+tolerate that level
+level of overhead
+overhead for memory
+management 9.4.5 lru-approximation
+9.4.5 lru-approximation page
+lru-approximation page replacement
+replacement few computer
+computer systems provide
+systems provide sufficient
+provide sufficient hardware
+sufficient hardware support
+support for true
+true lru page
+replacement some systems
+provide no hardware
+bits are cleared
+user process executes
+referenced is set
+determine which pages
+examining the reference
+algorithms that approximate
+approximate lru replacement
+replacement 9.4.5.1 additional-reference-bits
+9.4.5.1 additional-reference-bits algorithm
+gain additional ordering
+additional ordering information
+information by recording
+recording the reference
+bits at regular
+table in memory
+memory at regular
+timer interrupt transfers
+interrupt transfers control
+system the operating
+operating system shifts
+shifts the reference
+bit and discarding
+discarding the low-order
+bit these 8-bit
+8-bit shift registers
+history of page
+shift register value
+history register value
+interpret these 8-bit
+bytes as unsigned
+method to choose
+bits of history
+make the updating
+updating as fast
+9.4.5.2 second-chance algorithm
+algorithm the basic
+algorithm of second-chance
+inspect its reference
+proceed to replace
+replace this page
+give the page
+chance and move
+reference pages reference
+pages reference pages
+reference pages bits
+pages bits bits
+bits bits circular
+bits circular queue
+queue of pages
+pages circular queue
+bit is cleared
+reference bit set
+implement the second-chance
+queue a poi11ter
+frame is needed
+finds a page
+clears the reference
+page is found
+page is replaced
+page is inserted
+bits are set
+giving each page
+chance it clears
+bits before selecting
+replacement second-chance replacement
+second-chance replacement degenerates
+degenerates to fifo
+set 9.4.5.3 enhanced
+9.4.5.3 enhanced second-chance
+enhanced second-chance algorithm
+enhance the second-chance
+four possible classes
+modified -best page
+page to replace
+recently used hut
+out before replacement
+out to disk
+replaced each page
+classes when page
+examine the class
+belongs we replace
+replace the first
+first page encountered
+lowest nonempty class
+nonempty class notice
+scan the circular
+queue several times
+find a page
+replaced the major
+simpler clock algorithm
+modified to reduce
+required 9.4.6 counting-based
+9.4.6 counting-based page
+counting-based page replacement
+number of references
+page and develop
+page-replacement algorithm requires
+count be replaced
+replaced the reason
+actively used page
+large reference count
+count a problem
+count and remains
+remains in memory
+needed one solution
+shift the counts
+bit at regular
+exponentially decaying average
+decaying average usage
+average usage count
+algorithm is based
+mfu nor lfu
+replacement is common
+common the implementation
+algorithms is expensive
+approxinlate opt replacement
+9.4.7 page-buffering algorithms
+algorithms other procedures
+specific page-replacement algorithm
+pool of free
+frame is chosen
+page is read
+victim is written
+out this procedure
+process to restart
+frame is added
+maintain a list
+list of modified
+device is idle
+page is selected
+disk its modify
+reset this scheme
+increases the probability
+selected for replacement
+out another modification
+remember which page
+frame is written
+reused directly fronc
+fronc the free-frame
+frame is reused
+i is needed
+frame and read
+algorithm mistakenly replaces
+replaces a page
+buffer provides protection
+algorithm this method
+versions of vax
+implement the reference
+reference bit correctly
+correctly some versions
+method in conjunction
+reduce the penalty
+wrong victim page
+selected 9.4.8 applications
+applications and page
+applications accessing data
+system s virtual
+virtual memory perform
+memory perform worse
+operating system provided
+provided no buffering
+i buffering applications
+understand their memory
+algorithms for general-purpose
+system is buffering
+application is doing
+warehouses frequently perform
+frequently perform massive
+perform massive sequential
+massive sequential disk
+sequential disk reads
+computations and writes
+writes the lru
+removing old pages
+pages and preserving
+reading older pages
+pages than newer
+starts its sequential
+efficient than lru
+operating systems give
+systems give special
+give special programs
+programs the ability
+large sequential array
+array of logical
+file-system data structures
+structures this array
+array is termed
+raw i raw
+raw i bypasses
+file i demand
+i demand paging
+efficient when implementing
+special-purpose storage services
+regular file-system services
+issue of allocation
+allocate the fixed
+amount of free
+composed of pages
+size this system
+frames the operating
+process under pure
+pure demand paging
+initially be put
+user process started
+process started execution
+generate a sequence
+sequence of page
+faults the first
+list was exhausted
+operating system allocate
+buffer and table
+support user paging
+free frames reserved
+swap is taking
+user process continues
+execute other variants
+strategy is clear
+allocated any free
+frame 9.5.1 minimum
+9.5.1 minimum number
+frames our strategies
+allocation of frames
+frames are constrained
+requirement one reason
+reason for allocating
+frames involves performance
+page-fault rate increases
+ilcstruction is complete
+frames to hold
+ilcstruction can reference
+instructions may reference
+reference in addition
+one-level indirect addressing
+addressing is allowed
+instruction on page
+address on page
+frames per process
+frames the minimum
+frames is defined
+straddle two pages
+pages in addition
+location to storage
+pages the block
+block of characters
+characters to move
+pages this situation
+situation would require
+require six frames
+frames the worst
+worst case occurs
+instruction that straddles
+frames the worst-case
+worst-case scenario occurs
+occurs in computer
+levels of indirection
+1-bit indirect indicator
+simple load instruction
+instruction could reference
+reference an indirect
+page in virtual
+entire virtual memory
+memory to overcome
+overcome this difficulty
+place a limit
+limit an instruction
+16levels of indirection
+first indirection occurs
+counter is set
+counter is decremented
+reduces the maximum
+references per instruction
+process is defined
+number is defined
+left with significant
+choice in frame
+allocation 9.5.2 allocation
+9.5.2 allocation algorithms
+algorithms the easiest
+split m frames
+frames for instance
+free-frame buffer pool
+pool this scheme
+amounts of memory
+1-kb frame size
+small student process
+two processes running
+make much sense
+sense to give
+give each process
+frames the student
+wasted to solve
+memory for process
+frames to process
+required by tl1e
+tl1e instruction set
+sum not exceeding
+equal and proportional
+allocation may vary
+level is increased
+process will lose
+lose some frames
+frames to provide
+provide the memory
+multiprogramming level decreases
+remaining processes notice
+equal or proportional
+process is treated
+give the high-priority
+process more memory
+memory to speed
+speed its execution
+detriment of low-priority
+processes one solution
+proportional allocation scheme
+ratio of frames
+sizes of processes
+priorities of processes
+combination of size
+size and priority
+priority 9.5.3 global
+9.5.3 global versus
+global versus local
+versus local allocation
+allocation another important
+processes is page
+replacement with multiple
+multiple processes competing
+competing for frames
+classify page-replacement algorithms
+two broad categories
+local global replacement
+local replacement requires
+set of allocated
+processes to select
+frames from low-priority
+processes for replacement
+replacement a process
+process can select
+select a replacement
+process this approach
+process to increase
+increase its frame
+local replacement strategy
+change with global
+process may happen
+happen to select
+select only frames
+increasing the number
+choose its frames
+frames for replacement
+global replacement algorithm
+rate the set
+process may perform
+totally external circuntstances
+local replacement algorithm
+algorithm under local
+process is affected
+process local replacement
+replacement might hinder
+hinder a process
+replacement generally results
+results in greater
+greater system throughput
+method 9.5.4 non-uniform
+9.5.4 non-uniform memory
+non-uniform memory access
+coverage of virtual
+memory is created
+systems with multiple
+access some sections
+sections of main
+main memory faster
+differences are caused
+cpus and memory
+memory are interconnected
+system is made
+memory the system
+boards are interconnected
+ranging from system
+busses to high-speed
+high-speed network connections
+connections like infiniband
+board can access
+access the memory
+memory access times
+access times vary
+collectively as systems
+slower than systems
+memory and cpus
+cpus are located
+managing which page
+frames are stored
+significantly affect performance
+performance in numa
+memory as uniform
+cpus may wait
+wait significantly longer
+longer for memory
+modify memory allocation
+memory allocation algorithms
+numa into account
+system the goal
+memory frames allocated
+allocated as close
+process is running
+running the definition
+definition of close
+cpu the algorithmic
+algorithmic changes consist
+track the last
+schedule each process
+improved cache hits
+hits and decreased
+decreased memory access
+times will result
+result the picture
+complicated once threads
+threads are added
+threads may end
+case solaris solves
+solves the problem
+problem by creating
+creating an entity
+kernel each lgroup
+gathers together close
+hierarchy of lgroups
+amount of latency
+schedule all threads
+process and allocate
+allocate all memory
+picks nearby lgroups
+latency is minimized
+cpu cache hit
+cache hit rates
+rates are maximized
+low-priority process falls
+minimum number required
+suspend that process
+out its remaining
+frames this provision
+introduces a swap-in
+level of intermediate
+intermediate cpu scheduling
+scheduling in fact
+num.ber of frames
+pages in active
+replace some page
+replace a page
+back in immediately
+immediately this high
+high paging activity
+process is thrashing
+paging than executing
+thrashing thrashing results
+results in severe
+severe performance problems
+behavior of early
+early paging systems
+systems the operating
+operating system monitors
+system monitors cpu
+monitors cpu utilization
+utilization if cpu
+increase the degree
+multiprogramming by introducing
+system a global
+global page-replacement algorithm
+pages without regard
+belong now suppose
+frames it starts
+faulting and taking
+processes these processes
+processes these faulting
+device to swap
+ready queue empties
+empties as processes
+cpu utilization decreases
+decreases the cpu
+cpu scheduler sees
+sees the decreasing
+decreasing cpu utilization
+utilization and increases
+increases the degree
+started by taking
+frames from running
+causing more page
+cpu utilization drops
+thrashing has occurred
+system throughput plunges
+plunges the pagefault
+pagefault rate increases
+rate increases tremendously
+m.emory-access time increases
+increases no work
+processes are spending
+paging this phenomenon
+phenomenon is illustrated
+utilization is plotted
+utilization also ilccreases
+maximum is reached
+multiprogramming is increased
+utilization drops sharply
+increase cpu utilization
+utilization and stop
+decrease the degree
+limit the effects
+effects of thrashing
+process starts thrashing
+solved if processes
+fault will increase
+longer average queue
+thrashing to prevent
+provide a process
+teclmiques the working-set
+frames a process
+defines the locality
+locality of process
+execution the locality
+locality model states
+moves from locality
+locality to locality
+locality a locality
+references are made
+exit the function
+leaves this locality
+variables and instructions
+longer in active
+localities are defined
+structures the locality
+programs will exhibit
+exhibit this basic
+basic memory reference
+memory reference structure
+reference structure note
+book if accesses
+types of data
+data were random
+suppose we allocate
+allocate enough frames
+process to accommodate
+accommodate its current
+frames to accommodate
+accommodate the size
+process will thrash
+9.6.2 working-set model
+model as mentioned
+assumption of locality
+locality this model
+define the vrindovv
+vrindovv the idea
+references the set
+program s locality
+set has changed
+working set depends
+encompass the entire
+page reference table
+compute the working-set
+dis the total
+demand for frames
+frames each process
+wss ; frames
+demand is greater
+thrashing will occur
+model is simple
+simple the operating
+monitors the working
+process and allocates
+set enough frames
+working-set sizes increases
+exceeding the total
+operating system selects
+process to suspend
+suspend the process
+process s pages
+pages are written
+frames are reallocated
+processes the suspended
+working-set strategy prevents
+strategy prevents thrashing
+thrashing while keeping
+keeping the degree
+multiprogramming as high
+optimizes cpu utilization
+utilization the difficulty
+model is keeping
+set the working-set
+oldest reference drops
+end a page
+approximate the working-set
+fixed-interval timer interrupt
+equals 10,000 references
+copy and clear
+clear the reference-bit
+examine the current
+current reference bit
+two in-memory bits
+bits to determine
+working set note
+reduce the uncertainty
+uncertainty by increasing
+number of history
+frequency of interrupts
+bits and interrupts
+cost to service
+frequency 9.6.3 page-fault
+9.6.3 page-fault frequency
+frequency the working-set
+model is successful
+thrashilcg a strategy
+approach the specific
+prevent thrashilcg thrashing
+high page-fault rate
+control the page-fault
+upper and lower
+desired page-fault rate
+actual page-fault rate
+page-fault rate exceeds
+exceeds the upper
+allocate the process
+process another frame
+page-fault rate falls
+remove a frame
+measure and control
+rate to prevent
+suspend a process
+page-fault rate ilccreases
+select some process
+process and suspend
+distributed to processes
+processes with high
+high page-fault rates
+file on disk
+standard system calls
+system calls open
+file access requires
+requires a system
+call and disk
+virtual memory techniques
+memory techniques discussed
+i as routine
+routine memory accesses
+accesses this approach
+lead to significant
+significant performance increases
+increases when performing
+sets and page
+typically as shown
+working set ofa
+set ofa process
+references to data
+data and code
+code sections move
+memory to store
+store the working
+processis 11.ot thrashing
+tbe page-fault rate
+process will transition
+transition between peaks
+peaks and valleys
+behavior is shown
+page fault rate
+fault rate working
+rate working set
+set time figure
+page-fault rate occurs
+fault rate rises
+set is loaded
+memory the span
+start of thenext
+thenext peak represents
+represents the transition
+9.7.1 basic mechanism
+basic mechanism memory
+mechanism memory mapping
+mapping a file
+file is accomplished
+accomplished by mapping
+mapping a disk
+memory initial access
+proceeds through ordinary
+ordinary demand paging
+file is read
+systems may opt
+opt to read
+chunk of memory
+reads and writes
+file are handled
+handled as routine
+simplifying file access
+access and usage
+usage by allowing
+allowing the system
+system to manipulate
+files through memory
+incurring the overhead
+l is done
+done in memory
+memory as opposed
+calls that involve
+note that writes
+mapped in memory
+disk some systems
+systems may choose
+choose to update
+update the physical
+system periodically checks
+page in memory
+file is closed
+data are written
+back to disk
+disk and ren
+process some operating
+systems provide memory
+provide memory mapping
+specific system call
+calls to perform
+choose to memory-map
+memory-map a file
+maps the file
+file is opened
+opened and accessed
+accessed using ordinary
+ordinary system calls
+memory-maps the file
+file is mapped
+kernel address space
+treats all file
+i as memory-mapped
+allowing file access
+efficient memory subsystem
+memory subsystem multiple
+subsystem multiple processes
+allowed to map
+sharing of data
+modify the data
+data in virtual
+discussions of virtual
+sharing of memory-mapped
+sections of memory
+memory is implemented
+virtual memory map
+sharing process points
+physical memory-the page
+page that holds
+holds a copy
+block this memory
+sharing is illustrated
+memory-mapping system calls
+support copy-on-write functionality
+share a file
+file in read-only
+data they modify
+j---r  -rl..-r
+.....c.c ~ ..----r
+disk file figure
+memory-mapped files process
+process b virtual
+memory-mapped file figure
+memory in windows
+windows using memory-mapped
+data is coordinated
+mechanisms for achieving
+achieving mutual exclusion
+mutual exclusion described
+files is similar
+similar to shared
+memory as described
+unix and linux
+mapping is accomplished
+memory is achieved
+howeve1 ~ shared
+memory is accomplished
+accomplished by memory
+memory mapping files
+communicate using shared
+spaces the memorymapped
+memorymapped file serves
+region of shared
+api for shared
+memory using memory-mapped
+files 9.7.2 shared
+9.7.2 shared memory
+api the general
+outline for creating
+creating a region
+memory using memorymapped
+win32 api involves
+api involves first
+involves first creating
+creating a file
+establishing a view
+process s virtual
+open and create
+create a view
+space the mapped
+mapped file represents
+represents the shared-menwry
+illustrate these steps
+process first creates
+creates a shared-memory
+api the producer
+producer then writes
+writes a message
+message to shared
+consumer process opens
+opens a mapping
+object and reads
+reads the message
+consum.er to establish
+establish a memory-mapped
+process first opens
+opens the file
+returns a handle
+file the process
+process then creates
+creates a mapping
+mapping is established
+process then establishes
+establishes a view
+function the view
+represents the portion
+file being mapped
+windows.h # include
+include stdio.h int
+stdio.h int main
+hmapfile ; lpvoid
+lpmapaddress ; hfile
+hfile = createfile
+genericjread i generic_write
+existing file file_attribute_normal
+file attributes null
+file template hmapfile
+hmapfile = createfilemapping
+access to mapped
+map entire file
+shared memory object
+memory object lpmapaddress
+lpmapaddress = mapviewdffile
+object handle filejmap_all_access
+view of entire
+write to shared
+shared memory sprintf
+shared memory message
+writing to shared
+win32 api -the
+api -the entire
+-the entire file
+mapped we illustrate
+illustrate this sequence
+checking for code
+call to createfilemapping
+creates a named
+named shared-memory object
+object called sharedobj
+ect the consumer
+process will communicate
+segment by creating
+creating a mapping
+object the producer
+producer then creates
+creates a view
+space by passing
+passing the last
+last three parameters
+parameters the value
+offset and size
+creating a view
+loaded # include
+hmapfile = openfilemapping
+mapped file object
+file object lpmapaddress
+lpmapaddress = mapviewoffile
+read from shared
+shared memory printf
+reading from shared
+api into memory
+returns a pointer
+producer process writes
+writes the message
+message shared memory
+memory a program
+consumer process establishes
+object is shown
+create a mapping
+existii1g named shared-memory
+object the consumer
+process did ii1
+ii1 the program
+program in figure
+consumer then reads
+reads from shared
+memory the message
+memory message thatwas
+message thatwas written
+remove the view
+call to unmapviewoffile
+provide a programming
+chapter using shared
+memory with memory
+api 9.7.3 memory-mapped
+mentioned in section
+i controller includes
+controller includes registers
+special i instructions
+instructions allow data
+registers and system
+devices1 many computer
+computer architectures provide
+ranges of memory
+addresses are set
+device registers reads
+registers this method
+screen is mapped
+n1.emory location displaying
+location displaying text
+easy as writing
+writing the text
+memory-mapped locations memory-mapped
+serial and parallel
+modems and printers
+computer the cpu
+cpu transfers data
+kinds of devices
+devices by reading
+reading and writing
+i to send
+out a long
+string of bytes
+memory-mapped serial port1
+port1 the cpu
+writes one data
+register and sets
+sets a bit
+register to signal
+takes the data
+clears the bit
+cpu can transfer
+cpu uses polling
+polling to watch
+watch the control
+method of operation
+poll the control
+receives an interrupt
+device is ready
+user rnode requests
+rnode requests additional
+additional memory pages
+pages are allocated
+list of free
+free page frames
+page frames maintained
+kernel this list
+free pages scattered
+user process requests
+requests a single
+memory internal fragmentation
+granted an entire
+entire page frame
+page frame kernel
+kernel memory however1
+satisfy ordinary user-mode
+ordinary user-mode processes
+two primary reasons
+kernel requests memory
+memory for data
+structures of varying
+page in size
+result1 the kernel
+conservatively and attempt
+attempt to minimize
+minimize waste due
+due to fragmentation
+subject kernel code
+allocated to user-mode
+contiguous physical memory
+however certain hardware
+hardware devices interact
+directly with physical
+memory-without the benefit
+virtual memory interface-and
+require memory residing
+physically contiguous pages
+examine two strategies
+strategies for managing
+managing free memory
+assigned to kernel
+system and slab
+9.8.1 buddy system
+buddy system tbe
+system tbe buddy
+tbe buddy system
+buddy system allocates
+system allocates memory
+fixed-size segment consisting
+contiguous pages memory
+requests in units
+request in units
+sized is rounded
+simple example assume
+assume the size
+memory the segment
+two 64-kb buddiesbland
+two 32-kb buddies
+request this scheme
+scheme is illustrated
+request an advantage
+quickly adjacent buddies
+combined to form
+form larger segments
+coalescing in figure
+system can coalesce
+segment this segment
+turn be coalesced
+segment the obvious
+fragmentation within allocated
+segment in fact
+due to internal
+explore a memory
+memory allocation scheme
+space is lost
+fragmentation physically contiguous
+buddy system allocation
+9.8.2 slab allocation
+strategy for allocating
+allocating kernel memory
+nwre physically contiguous
+pages a consists
+unique kernel data
+kernel data structure
+data structure -for
+data structure representing
+structure representing process
+representing process descriptors
+cache for file
+cache for semaphores
+cache is populated
+structure the cache
+cache representing semaphores
+representing semaphores stores
+semaphores stores instances
+instances of semaphore
+cache representing process
+process descriptors stores
+descriptors stores instances
+instances of process
+process descriptor objects
+relationship between slabs
+objects is shown
+shows two kernel
+two kernel objects
+size these objects
+objects are stored
+caches the slab-allocation
+algorithm uses caches
+caches to store
+store kernel objects
+cache is created
+number of objects-which
+marked as free-are
+cache the number
+number of objects
+continguous 4-kb pages
+cache are marked
+marked as free
+structure is needed
+allocator can assign
+assign any free
+cache to satisfy
+satisfy the request
+request the object
+cache is marked
+representing a process
+descriptor in linux
+type struct task_struct
+linux kernel creates
+struct task_struct object
+cache the cache
+cache will fulfill
+fulfill the request
+free in linux
+kernel objects slabs
+slabs 3-kb objects
+objects 7-kb objects
+7-kb objects figure
+allocation physically contiguous
+full all objects
+slab are marked
+empty all objects
+partial the slab
+allocator first attempts
+attempts to satisfy
+object is assigned
+slab is allocated
+allocated from contiguous
+contiguous physical pages
+pages and assigned
+cache ; memory
+object is allocated
+slab the slab
+two main benefits
+memory is wasted
+fragmentation fragn entation
+cache is made
+divided into chunks
+chunks the size
+objects being represented
+slab allocator returns
+returns the exact
+required to represent
+represent the object
+object memory requests
+quickly the slab
+slab allocation scheme
+memory when objects
+allocated and deallocated
+case with requests
+kernel the act
+act of allocating-and
+objects are created
+created in advance
+kernel has finished
+object and releases
+free and returned
+kernel the slab
+allocator first appeared
+user-mode memory requests
+requests in solaris
+beginning with version
+linux kernel adopted
+adopted the slab
+allocator the major
+prepaging an obvious
+property of pure
+faults that occur
+process is started
+started this situation
+locality into memory
+situation may arise
+times for instance
+process is restarted
+attempt to prevent
+prevent this high
+level of initial
+paging the strategy
+bring into memory
+needed some operating
+operating systerns-notably solaris-prepage
+solaris-prepage the page
+frames for small
+process a list
+lack of free
+remember the working
+i has finished
+memory its entire
+entire working set
+set before restarting
+restarting the process
+prepaging may offer
+offer an advantage
+cases the question
+cost of servicing
+memory by prepaging
+pages are prepaged
+saved page faults
+faults is greater
+cost of prepaging
+wins 9.9.2 page
+9.9.2 page size
+size the designers
+existing machine seldom
+single best page
+set of factors
+factors that support
+support various sizes
+sizes page sizes
+size one concern
+virtual memory space
+decreasing the page
+page size increases
+number of pages
+size is desirable
+utilized with smaller
+allocated memory starting
+units of allocation
+creating internal fragmentation
+independence of process
+size and page
+wasted this loss
+bytes to minimize
+minimize internal fragmentation
+small page size
+size another problem
+required to read
+read or write
+write a page
+composed of seek
+transfer times transfer
+page size howeve1
+latency and seek
+milliseconds to transfer
+milliseconds and seek
+percent is attributable
+actual transfer doubling
+doubling the page
+milliseconds it takes
+milliseconds to read
+read a single
+read the sam.e
+desire to minimize
+larger page size
+smaller page size
+improved a smaller
+page to match
+match program locality
+locality more accurately
+transferred and allocated
+allocate and transfer
+size should result
+total allocated memory
+byte a process
+memory would generate
+102,400 page faults
+byte each page
+page fault generates
+generates the large
+amount of overhead
+needed for processing
+processing the interrupt
+replacing a page
+tables to minimize
+minimize the number
+size other factors
+relationship between page
+size and sector
+edition of operating
+operating system concepts
+bound on page
+common page size
+section 9.9.3 tlb
+9.9.3 tlb reach
+reach in chapter
+percentage of virtual
+virtual address translations
+ratio is related
+increase the hit
+construct the tlb
+expensive and power
+power hungry related
+tlb reach refers
+simply the number
+process will spend
+spend a considerable
+resolving memory references
+double the number
+double the tlb
+insufficient for storing
+storing the working
+set another approacl1
+approacl1 for increasing
+increasing the tlb
+increase the size
+page or provide
+provide multiple page
+increase the page
+quadruple the tlb
+increase in fragmentation
+system may provide
+ultrasparc supports page
+supports page sizes
+4-mb page sizes
+reach for solaris
+majority of applications
+8-kb page size
+size is sufficient
+maps the first
+two 4-mb pages
+4-mb pages solaris
+applications-such as databases-to
+databases-to take advantage
+large 4-mb page
+4-mb page size
+page size providing
+size providing support
+support for multiple
+page sizes requires
+requires the operating
+operating system -not
+-not hardware-to manage
+manage the tlb
+tlb entry managing
+tlb in software
+cost in performance
+increased hit ratio
+ratio and tlb
+tlb reach offset
+offset the performance
+move toward softwaremanaged
+tlbs and operating-system
+sizes the ultrasparc
+alpha architectures employ
+architectures employ software-managed
+employ software-managed tlbs
+tlbs the powerpc
+powerpc and pentium
+tlb in hardware
+hardware 9.9.4 inverted
+9.9.4 inverted page
+page tables section
+section 8.5.3 introduced
+introduced the concept
+table the purpose
+form of page
+reduce the amount
+needed to track
+track virtual-to-physical address
+virtual-to-physical address translations
+translations we accomplish
+accomplish this savings
+savings by creating
+creating a table
+entry per page
+virtual memory page
+page is stored
+page tables reduce
+store this information
+table no longer
+longer contains complete
+information is required
+memory demand paging
+demand paging requires
+requires this information
+information to process
+process page faults
+external page table
+traditional per-process page
+per-process page table
+page is located
+external page tables
+page tables negate
+negate the utility
+utility of inverted
+tables are referenced
+virtual memory n1.anager
+n1.anager to generate
+generate another page
+locate the virtual
+store this special
+special case requires
+case requires careful
+requires careful handling
+processing 9.9.5 program
+9.9.5 program structure
+program structure demand
+structure demand paging
+paging is designed
+nature of memory
+underlying demand paging
+contrived but informative
+informative example assume
+assume that pages
+words in size
+program whose function
+code is typical
+array is stored
+stored row major
+127j for pages
+takes one page
+preceding code zeros
+zeros one word
+operating system allocates
+system allocates fewer
+execution will result
+16,384 page faults
+faults in contrast
+suppose we change
+change the code
+code to inti
+page before starting
+reducing the number
+selection of data
+structures and programming
+structures can increase
+lower the page-fault
+stack has good
+top a hash
+designed to scatter
+producing bad locality
+locality of reference
+heavily weighted factors
+weighted factors include
+factors include search
+include search speed
+compiler and loader
+effect on paging
+paging separating code
+data and generating
+generating reentrant code
+reentrant code means
+means that code
+modified clean pages
+replaced the loader
+loader can avoid
+avoid placing routines
+routines across page
+keeping each routine
+routines that call
+page this packaging
+problem of operations
+pack the variable-sized
+variable-sized load segments
+references are minimized
+large page sizes
+sizes the choice
+choice of programming
+language can affect
+tend to randomize
+diminishing a process
+process s locality
+locality some studies
+studies have shown
+shown that object-oriented
+programs also tend
+interlock when demand
+separate i processor
+usb storage device
+number of bytes
+bytes to transfer
+cpu is interrupted
+sequence of events
+processes cause page
+replaces the page
+process the pages
+pages are paged
+i request advances
+two common solutions
+problem one solution
+i to user
+copied between system
+memory and user
+memory i takes
+i takes place
+device to write
+write a block
+block on tape
+copy the block
+block to system
+tape this extra
+copying may result
+unacceptably high overhead
+overhead another solution
+locked into memory
+frame is locked
+lock into memory
+memory the pages
+block the system
+continue as usual
+usual locked pages
+i is complete
+pages are unlocked
+reason why frames
+kernel is locked
+tolerate a page
+page fault caused
+lock bit involves
+bit involves normal
+involves normal page
+normal page replacement
+low-priority process faults
+process faults selecting
+selecting a replacement
+paging system reads
+ready to continue
+low-priority process enters
+enters the ready
+queue and waits
+low-priority process waits
+high-priority process faults
+paging system sees
+sees a page
+referenced or modified
+process just brought
+replace the low-priority
+delaying the low-priority
+wasting the effort
+spent to bring
+decide to prevent
+newly brought-in page
+bit to implement
+implement this mechanism
+bit is turned
+frame becomes unusable
+overuse of locking
+locking would hurt
+doing the locking
+locking multiuser systems
+trusting of users
+users for instance
+solaris allows locking
+free to disregard
+disregard these hints
+individual process requests
+pages be locked
+locked in memory
+describe how windows
+solaris implement virtual
+implement virtual memory
+memory 9.10.1 windows
+windows xp windows
+windows xp implements
+implements virtual memory
+memory using demand
+paging with clustering
+clustering handles page
+handles page faults
+faults by bringing
+process is first
+assigned a working-set
+minimum and maximum
+pages the process
+process is guaranteed
+memory if sufficient
+value of working-set
+minimum and working-set
+allowed to exceed
+exceed its working-set
+virtual memory manager
+memory manager maintains
+maintains a list
+sufficient free memory
+memory manager allocates
+allocates a page
+working-set rnaximum incurs
+incurs a page
+local page-replacement policy
+free memory falls
+restore the value
+threshold automatic working-set
+automatic working-set trimming
+working-set trimming works
+works by evaluating
+evaluating the number
+allocated more pages
+memory manager removes
+manager removes pages
+reaches its working-set
+minimum a process
+list once sufficient
+determine which page
+page to remove
+type of processor
+processor on single-processor
+single-processor 80x86 systems
+clock algorithm discussed
+9.4.5.2 on alpha
+alpha and multiprocessor
+multiprocessor x86 systems
+clearing the reference
+bit may require
+translation look-aside buffer
+incurring this overhead
+fifo algorithm discussed
+9.4.2 9.10.2 solaris
+solaris in solaris
+assigns a page
+pages it maintains
+represents a threshold
+threshold to begin
+paging the lotsfree
+memory four times
+number of free
+free pages falls
+falls below lotsfree
+process is similar
+second-chance algorithm described
+hands while scanning
+pageout process works
+scans all pages
+setting the reference
+examines the reference
+appending each page
+page whose reference
+list and writing
+writing to disk
+disk its contents
+contents if modified
+modified solaris maintains
+maintains a cache
+list of pages
+overwritten the free
+list contains frames
+invalid contents pages
+list the pageout
+parameters to control
+control the rate
+pages are scam
+scanrate is expressed
+ranges from slowscan
+slowscan to fastscan
+fastscan when free
+occurs at slowscan
+progresses to fastscan
+value of slowscan
+total physical pages
+clock is determil
+handspread the amount
+slowscan minfree desfree
+minfree desfree amount
+free memory figure
+solaris page scanner
+clearing a bit
+hand s investigating
+investigating its value
+handspread if scam-ate
+seconds can pass
+uncommon this means
+clearing and investigating
+investigating a bit
+seconds as mentioned
+pageout process checks
+process checks memory
+falls below desfree
+intention of keeping
+desfree free memory
+process is unable
+memory at desfree
+kernel begins swapping
+begins swapping processes
+freeing all pages
+allocated to swapped
+processes in general
+system is unable
+unable to maintain
+maintain the amount
+memory at minfree
+page recent releases
+kernel have provided
+enhancement involves recognizing
+involves recognizing pages
+pages from shared
+shared libraries pages
+libraries pages belonging
+belonging to libraries
+process another enhancement
+enhancement concerns distinguishing
+concerns distinguishing pages
+processes from pages
+allocated to regularfiles
+process whose logical
+space is larger
+address space virtual
+space virtual memory
+map a large
+smaller physical menlory
+physical menlory virtual
+menlory virtual memory
+run extremely large
+extremely large processes
+raise the degree
+increasing cpu utilization
+frees application programmers
+programmers from worrying
+worrying about memory
+availability in addition
+processes can share
+share system libraries
+libraries and memory
+memory also enables
+type of process
+child processes share
+processes share actual
+share actual pages
+implemented by demand
+demand paging pure
+paging pure demand
+paging never brings
+referenced the first
+system the operating-system
+operating-system kernel consults
+consults an internal
+table to determine
+finds a free
+frame and reads
+reads the page
+store the page
+table is updated
+updated to reflect
+instruction that caused
+caused the page
+fault is restarted
+restarted this approach
+entire memory image
+performance is acceptable
+paging to reduce
+process this arrangement
+arrangement can increase
+allowing more processes
+least-the cpu utilization
+memory requirements exceed
+exceed the total
+total available physical
+memory such processes
+run in virtual
+memory if total
+total memory requirements
+exceed the capacity
+capacity of physical
+pages from memory
+memory to free
+pages various page-replacement
+replacement is easy
+easy to program
+program but suffers
+suffers from belady
+anomaly optimal page
+page replacement requires
+replacement requires future
+future knowledge lru
+knowledge lru replacement
+approximation of optimal
+implement most page-replacement
+approximations of lru
+replacement in addition
+policy is needed
+suggesting local page
+local page replacement
+suggesting global replacement
+replacement the working-set
+working-set model assumes
+assumes that processes
+execute in localities
+localities the working
+allocated enough frames
+current working set
+providing enough frames
+process to avoid
+thrashing may require
+require process swapping
+swapping and schedulil
+systems provide features
+features for memory
+memory mappil1g files
+treated as routine
+routine memory access
+access the win32
+win32 api implements
+api implements shared
+implements shared memory
+memory through memory
+mappil1g files kernel
+files kernel processes
+processes typically req1.1ire
+typically req1.1ire memory
+allocated using pages
+contiguous the buddy
+memory to kernel
+processes in units
+results in fragmentation
+fragmentation slab allocators
+slab allocators assign
+allocators assign kernel
+assign kernel data
+kernel data structures
+structures to caches
+pages with slab
+addition to reqmnng
+solve the major
+problems of page
+replacement and frame
+paging systern requires
+segment where memory
+system using figure
+draw a tree
+requests are allocated
+bytes next modify
+modify the tree
+releases of memory
+memory perform coalescing
+virtual and physical
+addresses with 256-byte
+pages the list
+equivalent physical addresses
+addresses in hexadecimal
+hexadecimal all numbers
+algorithm should minimize
+achieve this minimization
+minimization by distributing
+heavily used pages
+frame a counter
+counter a define
+define a page-replacement
+idea specifically address
+address these problems
+counters increased iii
+page faults occur
+four page frames
+optimal pagereplacement strategy
+string in part
+cpu utilization paging
+utilization paging disk
+improve cpu utilization
+cpu utilization explain
+explain your answers
+answers a install
+install a faster
+cpu b install
+install a bigger
+bigger paging disk
+disk c increase
+multiprogramming d decrease
+install more main
+n1.enl0ry f install
+faster hard disk
+disk or multiple
+controllers with multiple
+multiple hard disks
+disks g add
+algorithms h increase
+demand-paged computer system
+fixed at four
+four the system
+measured to determine
+disk the results
+multiprogramming be increased
+increased to increase
+increase the cpu
+helping a cpu
+percent ; disk
+percent b cpu
+percent c cpu
+access and transfer
+table in main
+microsecond per memory
+page table takes
+takes two accesses
+accesses to improve
+added an associative
+memory that reduces
+associative memory assume
+effective memory access
+view of thread
+states is ready
+ready and waiting
+i.e is waiting
+assuming a thread
+explain your answer
+thread change state
+thread state diagram
+diagram for exercise
+generates a tlb
+reference is resolved
+discuss the hardware
+hardware support required
+page reference string
+faults would occur
+first unique pages
+pages will cost
+cost one fault
+fault each lru
+lru replacement fifo
+replacement fifo replacement
+fifo replacement optimal
+replacement optimal replacement
+system that allocates
+scheme what modifications
+memory system provide
+provide this functionality
+frequently used page-replacement
+page-replacement algorithm generates
+algorithm generates fewer
+generates fewer page
+fewer page faults
+recently used page-replacement
+algorithm also discuss
+circumstances the opposite
+circumstances do page
+faults occur describe
+describe the actions
+machine provides instructions
+access memory locations
+indirect addressing scheme
+scheme what sequence
+faults is ilccurred
+indirect memory-load operation
+per-process frame allocation
+frame allocation technique
+support for user-level
+user-level and kernellevel
+threads the mapping
+multithreaded process consist
+feature what hardware
+support is required
+required to implement
+implement this feature
+paged memory system
+system with pages
+pages of size
+process that manipulates
+manipulates the matrix
+resides in page
+faults are generated
+replacement and assuming
+assuming that page
+system detect thrashing
+eliminate this problem
+monitoring the rate
+pointer is moving
+fast b pointer
+algorithm for resident
+recently used pages
+pool is managed
+recently used replacement
+replacement policy answer
+free space generated
+newly requested page
+resident page set
+free-france pool managed
+managed to make
+number of resident
+pages is set
+object type assuming
+cache per object
+done to address
+address this scalability
+memory the page
+table is held
+held in registers
+registers it takes
+milliseconds to service
+page is modified
+replaced is modified
+maximum acceptable page-fault
+acceptable page-fault rate
+segmentation is similar
+similar to paging
+variable-sized pages define
+define two segment-replacement
+two segment-replacement algorithms
+segment-replacement algorithms based
+based on fifo
+fifo and lru
+lru pagereplacement schemes
+pagereplacement schemes remember
+leave enough consecutive
+segment consider strategies
+strategies for systems
+systems where segments
+relocated and strategies
+techniques and structures
+structures are good
+answers a stack
+stack b hashed
+hashed symbol table
+table c sequential
+search d binary
+search e pure
+code f vector
+operations a indirection
+requesting the page
+page must block
+block while waiting
+brought from disk
+disk into physical
+physical memory assume
+exists a process
+mapping of user
+threads to kernel
+user thread incurs
+fault while accessing
+accessing its stack
+user user threads
+user threads belonging
+process first starts
+first starts execution
+characterize the page
+rate c assume
+free memory identify
+identify some options
+options system designers
+designers could choose
+handle this situation
+referenced an address
+address in virtual
+virtual memory describe
+describe a scenario
+scenario can occur
+page fault tlb
+fault tlb miss
+miss and page
+fault tlb hit
+hit and page
+bytes the computer
+bytes of physical
+memory the virtual
+implemented by paging
+bytes a user
+user process generates
+generates the virtual
+physical location distinguish
+distinguish between software
+software and hardware
+list the costs
+costs to exceed
+exceed the benefits
+illustrates the problem
+problem with restarting
+restarting the move
+move character instruction
+regions are overlapping
+define the working-set
+effect of setting
+number of active
+processes currently executing
+two working sets
+representing code explain
+examine each page
+discard that page
+lru or second-chance
+write a program
+program that implements
+implements the fifo
+lru page-replacement algorithms
+page-replacement algorithms presented
+generate a random
+random pagereference string
+string where page
+page numbers range
+apply the random
+random page-reference string
+record the number
+page faults incurred
+implement the replacement
+frames can vary
+assume that demand
+integer sequence c11
+problems the first
+first catalan numbers
+formula generating c11
+design two programs
+programs that communicate
+communicate with shared
+api as outlined
+outlined in section
+9.7.2 the producer
+process will generate
+generate the catalan
+sequence and write
+read and output
+output the sequence
+sequence from shared
+passed an integer
+numbers to produce
+command line means
+means the producer
+generate the first
+first five catalan
+paging was first
+first used iil
+iil the atlas
+manchester university muse
+university muse computer
+early demand-paging system
+system was multics
+researchers to observe
+fifo replacement strategy
+strategy may produce
+anomaly that bears
+demonstrated that stack
+subject to belady
+anomaly the optimal
+optimal replacement algorithm
+algorithm was presented
+optimal by mattson
+allocation ; prieve
+prieve and fabry
+presented an optimal
+algorithm for situations
+allocation can vary
+vary the enl
+enl lanced clock
+lanced clock algorithm
+algorithm was discussed
+discussed by carr
+carr and hennessy
+model was developed
+developed by denning
+model were presented
+presented by denning
+scheme for monitoring
+monitoring the page-fault
+rate was developed
+developed by wulf
+applied this technique
+burroughs bssoo computer
+bssoo computer system
+computer system wilson
+presented several algoritluns
+algoritluns for dynamic
+memory allocation jolmstone
+jolmstone and wilson
+described various memory-fragmentation
+issues buddy system
+buddy system memory
+system memory allocators
+allocators were described
+described in knowlton
+peterson and norman
+discussed the slab
+bonwick and adams
+extended the discussion
+discussion to multiple
+processors other memory-fitting
+found in stephenson
+survey of memory-allocation
+found in wilson
+solomon and russinovich
+russinovich and solomon
+described how windows
+windows implements virtual
+virtual memory mcdougall
+mcdougall and mauro
+discussed virtual memory
+memory in solaris
+solaris virtual memory
+techniques in linux
+linux and bsd
+bsd were described
+described by bovet
+ganapathy and schimmel
+discussed operating system
+operating system support
+page sizes ortiz
+described virtual memory
+real-time embedded operating
+embedded operating system
+operating system jacob
+implementations of virtual
+architectures a companion
+described the hardware
+implementation of virtual
+including the ultrasparc
+small to accommodate
+data and programs
+system must provide
+provide secondary storage
+storage to back
+back up main
+main memory modern
+memory modern computer
+systems use disks
+primary on-line storage
+on-line storage medium
+medium for information
+mechanism for on-line
+disks a file
+collection of related
+related information defined
+creator the files
+files are mapped
+system onto physical
+physical devices files
+organized into directories
+directories for ease
+aspects some devices
+transfer a character
+randomly some transfer
+read-only or read-write
+read-write they vary
+greatly in speed
+slowest major component
+provide a wide
+range of functionality
+functionality to applications
+control all aspects
+devices one key
+provide the simplest
+system because devices
+cpu scheduling
+share memory
+manage memory
+memorymanagement algorithms
+primitive bare-machine
+bare-machine approach
+segmentation strategies
+disadvantages selection
+memory-management method
+specific system
+system depends
+hardware design
+algorithms require
+require hardware
+hardware support
+recent designs
+operating system
+detailed description
+organizing memory
+memory hardware
+memory-management techniques
+including paging
+intel pentium
+pure segmentation
+modern computer
+computer system
+system memory
+memory consists
+large array
+cpu fetches
+fetches instructions
+program counter
+additional loading
+specific memory
+memory addresses
+typical instruction-execution
+instruction-execution cycle
+first fetches
+mernory unit
+unit sees
+instruction counter
+literal addresses
+ignore hozu
+program generates
+memory address
+addresses generated
+running program
+managing memory
+coverage includes
+basic hardware
+hardware issues
+symbolic memory
+actual physical
+physical addresses
+linking code
+shared libraries
+hardware main
+main memory
+registers built
+access directly
+machine instructions
+disk addresses
+direct-access storage
+storage devices
+cpu clock
+decode instructions
+perform simple
+simple operations
+register contents
+clock tick
+memory bus
+bus completing
+memory access
+data required
+memory accesses
+fast memory
+process base
+limit process
+limit register
+register define
+logical address
+address space
+memory buffer
+speed differential
+relative speed
+physical memory
+correct operation
+user processes
+protect user
+separate memory
+memory space
+legal addresses
+base holds
+smallest legal
+legal physical
+base register
+register holds
+legally access
+cpu hardware
+hardware compare
+address generated
+user mode
+program executing
+access operating-system
+operating-system memory
+memory results
+fatal error
+scheme prevents
+user program
+data structures
+limit registers
+special privileged
+privileged instruction
+privileged instructions
+kernel mode
+system executes
+prevents user
+user programs
+unrestricted access
+load users
+system monitor-addressing
+monitor-addressing error
+error memory
+memory figure
+hardware address
+address protection
+modify parameters
+system calls
+address binding
+program resides
+binary executable
+executable file
+process depending
+memory management
+execution form
+normal procedure
+input queue
+accesses instructions
+process terminates
+user process
+computer starts
+first address
+approach affects
+optional-before bein.g
+steps addresses
+source program
+symbolic addresses
+relocatable addresses
+lin.kage editor
+turn bind
+absolute addresses
+generated compiler
+compiler code
+starting location
+ms-dos .com-format
+.com-format programs
+final binding
+starting address
+user code
+changed value
+value execution
+memory segment
+special hardware
+general-purpose operating
+operating systems
+major portion
+multistep processing
+logical versus
+physical address
+load-time address-binding
+address-binding methods
+methods generate
+identical logical
+execution-time addressbinding
+addressbinding scheme
+scheme results
+virtual address
+logical addresses
+execution-time address-binding
+address-binding scheme
+address spaces
+spaces differ
+run-time mapping
+hardware device
+dynamic relocation
+relocation register
+register sections
+simple mmu
+mmu scheme
+base-register scheme
+scheme described
+address location
+ms-dos operating
+system running
+relocation registers
+running processes
+real physical
+indirect load
+program deals
+memory-mapping hardware
+hardware converts
+execution-time binding
+final location
+referenced memory
+base valuer
+user generates
+process runs
+separate physical
+proper memory
+dynamic loading
+entire program
+memory-space utilization
+relocatable load
+load format
+main program
+calling routine
+relocatable linking
+linking loader
+desired routine
+address tables
+loaded routine
+unused routine
+large amounts
+occurring cases
+error routines
+total program
+program size
+special support
+method operating
+providing library
+library routines
+dynamic linking
+libraries figure
+systems support
+system language
+language libraries
+object module
+binary program
+program image
+system libraries
+language subroutine
+subroutine libraries
+language library
+routines referenced
+executable image
+requirement wastes
+disk space
+libraryroutine reference
+small piece
+memory-resident library
+library routine
+needed routine
+program loads
+stub replaces
+code segment
+library execute
+library code
+library updates
+bug fixes
+gain access
+incompatible versions
+version information
+version number
+library version
+programs linked
+older library
+multiple processes
+continued execution
+multiprogramming environment
+round-robin cpu-scheduling
+cpu-scheduling algorithm
+quantum expires
+memory manager
+cpu scheduler
+process finishes
+swap processes
+reasonable amounts
+swapping policy
+priority-based scheduling
+scheduling algorithms
+higher-priority process
+process arrives
+lower-priority process
+backing store
+store main
+occupied previously
+swapping requires
+fast disk
+accommodate copies
+memory images
+direct access
+system maintains
+scheduler decides
+dispatcher checks
+free memory
+memory region
+dispatcher swaps
+desired process
+reloads registers
+transfers control
+selected process
+swapping system
+fairly high
+standard hard
+hard disk
+transfer rate
+actual transfer
+memory takes
+seconds assuming
+average latency
+total swap
+milliseconds notice
+major part
+total transfer
+memory swapped
+resident operating
+system taking
+maximum size
+seconds required
+reducing swap
+system informed
+memory requirements
+dynamic memory
+issue system
+request memory
+release memory
+changing memory
+completely idle
+user memory
+swapped assume
+out process
+main solutions
+operating-system buffers
+buffers transfers
+process memory
+head seeks
+secondary-storage structure
+swap space
+file system
+standard swapping
+reasonable memory-management
+memory-management solution
+solution modified
+modified versions
+unix swapping
+threshold amount
+memory swapping
+reduced memory
+advanced memory-management
+memory-management methods-ran
+methods-ran multiple
+large processes
+modified version
+microsoft windows
+supports concurrent
+concurrent execution
+insufficient main
+full swapping
+swapped-out process
+process remains
+user selects
+run subsequent
+subsequent versions
+microsoft operating
+advanced mmu
+mmu features
+virtual memory
+main menlory
+section explains
+common method
+contiguous memory
+memory allocation
+low memory
+high memory
+major factor
+factor affecting
+interrupt vector
+system resides
+queue waiting
+single contiguous
+contiguous section
+memory mapping
+discussing memory
+register contaitls
+smallest physical
+mmu maps
+mapped address
+scheduler selects
+dispatcher loads
+correct values
+context switch
+running process
+relocation-register scheme
+change dynamically
+buffer space
+device drivers
+device driver
+operating-system service
+transient operating-system
+operating-system code
+program execution
+simplest methods
+allocating memory
+divide memory
+addressing error
+error figure
+supportfor relocation
+free partition
+method described
+fixed-partition scheme
+batch environments
+ideas presented
+time-sharing environment
+table indicating
+large block
+system takes
+allocated memory
+allocated space
+block sizes
+scheduling algorithm
+algorithm memory
+processes untit
+smaller memory
+memory blocks
+sizes scattered
+system searches
+arriving process
+adjacent holes
+larger hole
+processes waiting
+recombined memory
+waiting processes
+free hole
+first fit
+fit allocate
+first hole
+previous first-fit
+first-fit search
+search ended
+smallest hole
+entire list
+strategy produces
+smallest leftover
+leftover hole
+hole worst
+worst fit
+largest hole
+largest leftover
+smaller leftover
+best-fit approach
+approach simulations
+storage utilization
+generally faster
+best-fit strategies
+allocation suffer
+external fragmentation
+fragmentation exists
+total memory
+large number
+small holes
+fragmentation problem
+worst case
+small pieces
+big free
+free block
+best-fit strategy
+problem depending
+total amount
+memory storage
+average process
+process size
+major problem
+statistical analysis
+allocated blocks
+memory fragmentation
+multiple-partition allocation
+allocation scheme
+bytes suppose
+process requests
+requested block
+general approach
+fixed-sized blocks
+allocate memory
+units based
+block size
+memory allocated
+requested memory
+internal memory
+memory contents
+free nlemory
+block compaction
+relocation requires
+base address
+simplest compaction
+compaction algorithm
+holes move
+large hole
+external-fragmentation problem
+complementary techniques
+techniques achieve
+memory-management scheme
+noncontiguous paging
+paging avoids
+considerable problem
+fitting memory
+memory chunks
+varying sizes
+backin.g store
+memorymanagement schemes
+problem arises
+code fragments
+data residing
+fragmentation problems
+problems discussed
+earlier methods
+address foooo
+table figure
+paging hardware
+64-bit microprocessors
+basic method
+implementing paging
+paging involves
+involves breaking
+logical memory
+memory frames
+san1.e size
+page number
+page table
+page offset
+memory unit
+paging model
+page size
+frame size
+computer architecture
+size makes
+addressing units
+address designate
+low-order bits
+bits designate
+table frame
+frame number
+number page
+table logical
+32-byte memory
+4-byte pages
+paging scheme
+free frame
+internal fragmentation
+fragmentation notice
+page boundaries
+last frame
+frame allocated
+completely full
+entire frame
+one-half page
+consideration suggests
+small page
+page sizes
+page-table entry
+pages increases
+amount data
+data sets
+larger today
+larger page
+support multiple
+multiple page
+data stored
+pages researchers
+developing support
+variable on-the-fly
+on-the-fly page
+32-bit entry
+physical page
+page frames
+4-byte entries
+process requires
+first page
+loaded injo
+allocated frames
+important aspect
+clear separation
+program views
+views memory
+single space
+address-translation hardware
+system notice
+access memory
+addressing memory
+table includes
+process owns
+allocation details
+physical memory-which
+memory-which frames
+total frames
+data structure
+frame table
+page frame
+free-frame list
+new-process page
+free frames
+processes operate
+user space
+user makes
+system call
+address manually
+cpu dispatcher
+hardware page
+cpu paging
+storing page
+page tables
+register values
+process control
+control block
+user registers
+correct hardware
+page-table values
+stored user
+user page
+hardware implementation
+simplest case
+high-speed logic
+paging-address translation
+translation efficient
+paging map
+major consideration
+dispatcher reloads
+registers instructions
+page-table registers
+memory map
+address consists
+fast registers
+contemporary computers
+table changing
+changing page
+tables requires
+memory location
+access location
+first index
+ptbr offset
+number fori
+task requires
+actual address
+desired place
+standard solution
+fastlookup hardware
+hardware cache
+high-speed memory
+tlb consists
+associative memory
+keys simultaneously
+value field
+page-table entries
+percent longer
+unmapped memory
+memory reference
+replacement replacement
+replacement policies
+policies range
+tlb entries
+kernel code
+tlbs store
+tlb entry
+address-space protection
+tlb attempts
+virtual page
+page numbers
+process matches
+tlb miss
+providing address-space
+processes simultaneously
+separate asids
+executing process
+wrong translation
+translation information
+tlb hit
+hit tlb
+miss page
+virtual addresses
+invalid physical
+addresses left
+previous process
+80-percent hit
+hit ratio
+desired page
+mapped-memory access
+access takes
+first access
+desired byte
+effective access
+40-percent slowdown
+98-percent hit
+increased hit
+hit rate
+rate produces
+percent slowdown
+protection memory
+memory protection
+paged environment
+protection bits
+correct frame
+frame nuncber
+read-only page
+hardware trap
+memory-protection violation
+finer level
+create hardware
+execute-only protection
+separate protection
+illegal attempts
+additional bit
+space illegal
+illegal addresses
+valid -invalid
+-invalid bit
+system sets
+disallow access
+page suppose
+14-bit address
+situation shown
+valid-invalid bit
+flee operating
+invalid page
+page reference
+program extends
+illegal howeve1
+address range
+small fraction
+valuable memory
+systems provide
+provide hardware
+table value
+valid range
+process failure
+error trap
+shared pages
+common code
+text editor
+editor consists
+data space
+editor-each page
+large page
+data page
+page reentrant
+reentrant code
+non-self-modifying code
+data storage
+processes wilt
+table maps
+physical copy
+data pages
+total space
+space required
+significant savings
+shared -compilers
+window systems
+run-time libraries
+database systems
+read-only nature
+shared code
+shared memory
+paging environment
+interprocess corrununication
+systems implement
+implement shared
+pages organizing
+numerous benefits
+physical pages
+common techniques
+hierarchical paging
+computer systems
+large logical
+excessively large
+32-bit logical
+entry consists
+simple solution
+smaller pieces
+two-level paging
+paging algorithm
+table memory
+two-level page-table
+page-table scheme
+number consisting
+offset consisting
+10-bit page
+outer page
+address-translation method
+address translation
+translation works
+vax architecture
+architecture supports
+32-bit machine
+equal sections
+section represents
+high-order bits
+bits represent
+logical page
+page outer
+two-level 32-bit
+32-bit paging
+paging architecture
+leave partitions
+partitions unused
+section page
+section number
+one-level page
+vax process
+vax pages
+user-process page
+64-bit logical
+table consists
+iml.er page
+large table
+32-bit processors
+added flexibility
+three-level paging
+scheme suppose
+standard-size pages
+64-bit address
+2nd outer
+sti11234 bytes
+four-level paging
+second-level outer
+64-bit ultrasparc
+prohibitive number
+accessesto translate
+64-bit architectures
+hierarchical page
+considered inappropriate
+hashed page
+common approach
+handling address
+hash value
+hash table
+linked list
+handle collisions
+element consists
+mapped page
+algorithm works
+first element
+subsequent entries
+table refers
+single page
+single page-table
+multiple physical-page
+physical-page frames
+frames clustered
+clustered page
+memory references
+inverted page
+virtual hash
+table representation
+processes reference
+reference pages
+address entry
+value directly
+real page
+page stored
+real memory
+table compare
+standard page
+operation inverted
+address-space identifier
+spaces mapping
+memory storing
+identifier ensures
+frame examples
+tables include
+simplified version
+i11verted page
+system consists
+process-id assumes
+memory page
+address figure
+reference occurs
+memory subsystem
+illegal address
+address access
+scheme decreases
+memory needed
+lookups occur
+few-page-table entries
+table adds
+reference requires
+memory reads-one
+hash-table entry
+performance improvement
+difficulty implementing
+memory shared
+multiple virtual
+process sharing
+standard method
+page entry
+simple technique
+mapped result
+page faults
+linear array
+users prefer
+view memory
+variable-sized segments
+data elements
+math library
+n1.ain program
+elements occupy
+variable length
+subroutine symbol
+symbol table
+program elements
+first statement
+seventh stack
+stack frame
+frame entry
+user view
+user specifies
+single address
+segn lent
+lent number
+constructs segments
+segments reflecting
+input program
+separate segments
+global variables
+segment table
+segmentation hardware
+memory libraries
+assign.ed separate
+segment numbers
+two-dimensional address
+one-dimensional sequence
+twodimensional user-defined
+user-defined addresses
+one-dimensional physical
+segment base
+segment limit
+segment resides
+limit specifies
+segment number
+logical addressing
+addressing attempt
+base-limit register
+register pairs
+segments numbered
+separate entry
+beginning address
+subroutine segment
+segment1 symbol
+program segment
+limit base
+bytes long
+architectures provide
+pentium architecture
+complete description
+memory-management structure
+major ideas
+linux address
+pentium systems
+cpu generates
+segmentation unit
+unit produces
+linear address
+paging unit
+turn generates
+paging units
+units form
+memory-management unit
+pentium segmentation
+maximum number
+logical-address space
+first partition
+partition consists
+processes information
+gdt consists
+8-byte segment
+segment descriptor
+detailed information
+base location
+16-bit number
+32-bit number
+segment registers
+microprogram registers
+cache lets
+pentium avoid
+segment register
+register points
+limit information
+address validity
+memory fault
+32-bit linear
+unit turns
+pentium paging
+paging schence
+address-translation scheme
+scheme shown
+pentium address
+address offset
+segmentation detail
+bits reference
+outernlost page
+pentium terms
+page directory
+cr3 register
+current process
+directory entry
+entry points
+page pointed
+size flag
+which-if setindicates
+directory points
+directory page
+page figure
+pentium page
+invalid bit
+disk location
+linux operating
+limited support
+kernel data
+user data
+task-state segment
+default ldt
+ldt segment
+processes running
+segment descriptors
+global descriptor
+descriptor table
+hardware context
+context switches
+segment selector
+selector includes
+2-bit field
+hardware platforms
+threelevel paging
+paging strategy
+global directory
+directory middle
+middle directory
+address varies
+lglobal directory
+directory cr3
+cr3 __,.c__
+__,.c__ ___
+___ __l
+__l register
+directory figure
+linux offset
+offset page
+three-level model
+-the cr3
+tss segments
+tasks involved
+switch memory-management
+memory-management algorithms
+systems range
+simple single-user
+single-user system
+system approach
+paged segmentation
+important determinant
+hardware provided
+contiguous allocation
+memory-management strategies
+simple base
+register pair
+multiple-partition schemes
+mapping tables
+address map
+map performance
+memory-management algorithm
+address increases
+simple systems
+logical address-operations
+fast paging
+mapping table
+performance degradation
+acceptable level
+level fragmentation
+multiprogrammed system
+higher level
+multiprogramming level
+reduce memory
+memory waste
+fragmentation systems
+fixed-sized allocation
+allocation units
+single-partition scheme
+variable-sized allocation
+multiple-partition scheme
+fragmentation relocation
+compaction compaction
+compaction involves
+consideration requires
+compact storage
+storage swapping
+swapping swapping
+intervals determined
+cpu-scheduling policies
+share code
+users sharing
+small packets
+shared sharing
+limited amount
+shared programs
+read -only
+simple run-time
+run-time checks
+common programming
+programming errors
+memory organization
+organization schemes
+pure paging
+execution allocation
+heap segments
+intel address-translation
+complicated memory
+memory translation
+address-translation system
+reentrant module
+segmented pagil
+table scheme
+large address
+paging system
+table stored
+reference takes
+paged memory
+add tlbs
+page-table references
+effective memory
+tlbs takes
+compare paging
+memory required
+translation structures
+instruction fetch
+data fetch
+baselimit register
+instruction base-limit
+users discuss
+generating binaries
+object code
+individual modules
+linkage editor
+combine multiple
+multiple object
+object modules
+single program
+program bilcary
+editor change
+memory-binding tasks
+memory operations
+program executes
+memory-load operation
+memory partitions
+worst-fit algorithms
+algorithms place
+place processes
+algorithm makes
+system supports
+conventional single-level
+single-level page
+address references
+decimal numbers
+program binaries
+data segment
+program variables
+program starts
+lower virtual
+base length
+sharing segments
+linked segmentation
+segmentation system
+static linking
+32-bit virtual
+size write
+command line
+data type
+unsigned data
+data types
+dynamic storage
+storage allocation
+simulation results
+fit knuth
+50-percent rule
+atlas system
+storage manager
+hardware aspects
+mmus talluri
+discusses page
+spaces alternative
+alternative approaches
+enforcing memory
+tlb fang
+evaluate support
+large pages
+pages tanenbaum
+discusses intel80386
+intel80386 paging
+paging memory
+ultrasparcare described
+lim1x systems
+entire process
+major advantage
+memory abstracts
+uniform array
+technique frees
+frees programmers
+memory-storage limitations
+share files
+efficient mechanism
+process creation
+decrease performance
+demand paging
+memory system
+page-replacement algorithms
+working-set model
+algorithms outlined
+basic requirement
+first approach
+entire logical
+special precautions
+extra work
+real programs
+programs shows
+unusual error
+error conditions
+errors seldom
+executed arrays,lists
+assembler symbol
+average program
+u.s government
+government computers
+write programs
+large virtual
+programming task
+task page
+memory memory
+diagram showing
+cpu utilization
+swap user
+run faster
+user involves
+smaller physical
+memory makes
+process refers
+process begins
+logical address-say
+memorymanagement unit
+logical pages
+memory note
+successive function
+function calls
+large blank
+blank space
+stack grows
+include holes
+sparse address
+segments grow
+link libraries
+shared objects
+page sharing
+shared object
+process considers
+actual pages
+libraries reside
+memory enables
+enables processes
+memory recall
+process processes
+system calt
+these-and other-benefits
+paging shared
+pages shared
+shared library
+library figure
+executable program
+memory suppose
+select loading
+executable code
+alternative strategy
+load pages
+memory systems
+demand-paged virtual
+demand-paging system
+processes reside
+secondary memory
+lazy swapper
+large contiguous
+contiguous address
+term swapper
+technically incorrect
+swapper manipulates
+entire processes
+individual pages
+paging program
+memory swap
+contiguous disk
+basic concepts
+pager guesses
+pager brings
+memory pages
+bit scheme
+page invalid
+process executes
+accesses pages
+execution proceeds
+valid-invalid frame
+frame bit
+memory dod
+odd figure
+memory operating
+system reference
+store trap
+trap restart
+restart instruction
+instruction page
+table reset
+reset page
+missing page
+page fault
+page marked
+internal table
+invalid memory
+disk operation
+allocated frame
+disk read
+extreme case
+instruction pointer
+non-memory-resident page
+process continues
+instruction execution
+causing multiple
+unacceptable system
+system performance
+processes shows
+programs tend
+reasonable performance
+support demand
+entry invalid
+special value
+memory holds
+high-speed disk
+swap device
+swap-space allocation
+crucial requirement
+condition code
+interrupted process
+fault occurs
+three-address instruction
+repeated work
+complete instruction
+major difficulty
+difficulty arises
+ibm system
+move character
+page boundary
+partially done
+destination blocks
+blocks overlap
+source block
+microcode computes
+relevant pages
+temporary registers
+overwritten locations
+trap occurs
+action restores
+restores memory
+architectural problem
+problem resulting
+adding paging
+existing architecture
+difficulties involved
+involved paging
+non-demand-paging environment
+fault represents
+fatal errm
+fault means
+additional page
+process restarted
+paging demand
+demand-paged memory
+relevant page
+desired word
+nrr access
+system save
+process state
+fault check
+disk issue
+read request
+device seek
+disk correct
+memory wait
+interrupted instruction
+maintain cpu
+page-fault service
+service routine
+major components
+page-fault interrupt
+interrupt read
+page restart
+careful coding
+typical hard
+total paging
+including hardware
+paging device
+average page-fault
+reasonable level
+page-fault rate
+slowing process
+process execution
+execution dramatically
+additional aspect
+space disk
+larger blocks
+file lookups
+indirect allocation
+allocation methods
+paging throughput
+entire file
+file image
+process startup
+performing demand
+demand pages
+needed pages
+subsequent paging
+systems attempt
+binary files
+files demand
+page replacement
+store howeve1
+pages include
+method appears
+good compromise
+including solaris
+bsd unix
+first instruction
+rapid process
+created process
+physical figure
+modifies page
+call creates
+child process
+pages belonging
+child processes
+processes invoke
+copy-on-write pages
+process writes
+shared page
+process attempts
+pages set
+copied page
+page belonging
+parent process
+copy-on-write technique
+unmodified pages
+processes note
+child copy-on-write
+common technique
+including windows
+copyon write
+free page
+free pages
+managed operating
+zero-fill-on-demand pages
+previous contents
+variation ofthe
+ofthe fork
+system call-vfork
+altered pages
+process calls
+calls exec
+pages takes
+takes place
+efficient method
+implement unix
+unix command-line
+command-line shell
+shell interfaces
+earlier discussion
+first referenced
+ten pages
+paging saves
+forty frames
+ten frames
+higher cpu
+data set
+sixty frames
+holding program
+program pages
+pages buffers
+considerable amount
+memory-placement algorithms
+algorithms deciding
+significant challenge
+systems allocate
+fixed percentage
+valid-invalid pc
+replacement over-allocation
+memory manifests
+system determines
+throughput users
+paged system-paging
+common solution
+basic page
+replacement page
+replacement takes
+freed frame
+process faulted
+include page
+disk find
+page-replacement algorithnc
+victim frame
+frame tables
+tables restart
+process notice
+page transfers
+modify bit
+read-only pages
+binary code
+modified frame
+enormous virtual
+user addresses
+longer constrained
+twenty pages
+replacement algorithm
+major problems
+implement demand
+demand develop
+replaced designing
+important task
+slight improvements
+demand-paging methods
+methods yield
+large gains
+replacement scheme
+lowest page-fault
+generate reference
+reference strings
+random-number generator
+choice produces
+entire address
+fault page
+first reference
+address sequence
+reference string
+frames figure
+versus number
+page-replacement algorithm
+faults decreases
+reference strillg
+strillg considered
+faultsone fault
+eleven faults
+frames increases
+faults drops
+minimal level
+memory increases
+fifo page
+simplest page-replacement
+fifo replacement
+algorithm associates
+oldest page
+chosen notice
+fifo queue
+initially empty
+empty frames
+replaces page
+fifteen faults
+faults altogether
+fifo page-replacement
+page replaced
+initialization module
+longer needed
+works correctly
+active page
+bad replacement
+replacement choice
+choice increases
+slows process
+incorrect execution
+string versus
+frames notice
+unexpected result
+early research
+investigators noticed
+optimal page
+longest period
+page-fault curve
+algorithm guarantees
+pagefault rate
+fixed number
+sample reference
+optimal page-replacement
+optimal replacement
+fifo algorithm
+irt fact
+future knowledge
+similar situation
+sjf cpu-schedulin.g
+cpu-schedulin.g algorithm
+optimal algorithm
+comparison studies
+algorithm reference
+lru page
+key distinction
+opt algorithms
+backward versus
+versus forward
+opt algorithm
+recent past
+lru replacement
+replacement associates
+lru chooses
+lru algorithm
+applying lru
+algorithm produces
+produces twelve
+twelve faults
+faults notice
+replacement sees
+algorithm replaces
+lru policy
+implement lru
+lru page-replacement
+substantial hardware
+hardware assistance
+frames defined
+time-of-use field
+logical clock
+clock register
+ti1ne-of-use field
+last reference
+scheme requires
+considered stack
+implementing lru
+head pointer
+tail pointer
+pointer removing
+pointer points
+microcode implementations
+stack algorithm
+referenced pages
+standard tlb
+tlb registers
+recent page
+page references
+clock fields
+lru-approximation page
+sufficient hardware
+true lru
+pagereplacement algorithms
+reference bit
+reference bits
+page referenced
+approximate lru
+additional-reference-bits algorithm
+additional ordering
+ordering information
+regular intervals
+8-bit byte
+timer interrupt
+interrupt transfers
+system shifts
+high-order bit
+low-order bit
+8-bit shift
+shift registers
+shift register
+register value
+history register
+8-bit bytes
+unsigned integers
+lowest number
+replaced notice
+smallest value
+fifo method
+history included
+second-chance algorithm
+basic algorithm
+second-chance replacement
+pages reference
+pages bits
+bits bits
+circular queue
+bit set
+clock algorithm
+pointer advances
+victim page
+position notice
+pointer cycles
+replacement second-chance
+replacement degenerates
+ordered pair
+-best page
+page belongs
+page encountered
+lowest nonempty
+nonempty class
+class notice
+major difference
+simpler clock
+give preference
+counting-based page
+algorithm requires
+smallest count
+large reference
+reference count
+initial phase
+large count
+average usage
+usage count
+lfu replacement
+approxinlate opt
+opt replacement
+page-buffering algorithms
+specific page-replacement
+written out
+free-frame pool
+modified pages
+modified page
+scheme increases
+frame contents
+free-frame buffer
+early versions
+bit correctly
+unix system
+pagereplacement algorithm
+penalty incurred
+wrong victim
+applications accessing
+accessing data
+memory perform
+perform worse
+system provided
+buffering applications
+implementing algorithms
+data warehouses
+frequently perform
+massive sequential
+sequential disk
+disk reads
+older pages
+sequential reads
+systems give
+special programs
+disk partition
+large sequential
+sequential array
+logical blocks
+file-system data
+raw disk
+termed raw
+filesystem services
+file locking
+space allocation
+file names
+directories note
+special-purpose storage
+storage services
+raw partition
+applications perform
+regular file-system
+file-system services
+fixed amount
+memory composed
+pure demand
+process started
+started execution
+in-memory pages
+process terminated
+simple strategy
+system allocate
+table space
+support user
+user paging
+frames reserved
+page swap
+taking place
+basic strategy
+minimum number
+total number
+frames involves
+involves performance
+frames allocated
+process decreases
+rate increases
+executing ilcstruction
+single ilcstruction
+memory-reference instructions
+mernory reference
+one-level indirect
+indirect addressing
+load instruction
+indirect reference
+paging requires
+move instruction
+pdp-11 includes
+addressing modes
+indirect references
+mvc instruction
+storage location
+case occurs
+execute instruction
+worst-case scenario
+scenario occurs
+computer architectures
+multiple levels
+16-bit word
+15-bit address
+1-bit indirect
+indirect indicator
+simple load
+indirect address
+entire virtual
+first indirection
+indirection occurs
+successive irtdirection
+excessive indirection
+limitation reduces
+significant choice
+frame allocation
+allocation algorithms
+equal share
+leftover frames
+buffer pool
+differing amounts
+small student
+student process
+interactive database
+ncinimum number
+frames required
+tl1e instruction
+instruction set
+proportional allocation
+processes share
+level decreases
+departed process
+remaining processes
+processes notice
+high-priority process
+low-priority process
+low-priority processes
+frames depends
+relative sizes
+global versus
+local allocation
+important factor
+processes competing
+broad categories
+local global
+global replacement
+replacement frame
+local replacement
+replacement requires
+process select
+high-priority processes
+select frames
+replacement strategy
+process depends
+paging behavior
+external circuntstances
+generally results
+greater system
+system throughput
+non-uniform memory
+multiple cpus
+memory faster
+performance differences
+system boards
+system busses
+high-speed network
+network connections
+system systems
+access times
+motherboard managing
+affect performance
+numa systems
+treat memory
+modify memory
+scheduling system
+minimum latency
+system board
+scheduler track
+last cpu
+process ran
+previous cpu
+memory-management system
+allocate frames
+process close
+improved cache
+cache hits
+decreased memory
+running threads
+threads scheduled
+case solaris
+solaris solves
+lgroup gathers
+close cpus
+lgroups based
+groups solaris
+nearby lgroups
+resources needed
+memory latency
+hit rates
+process falls
+number required
+remaining pages
+provision introduces
+swap-out level
+intermediate cpu
+support pages
+quickly page-fault
+replacing pages
+high paging
+paging activity
+thrashing thrashing
+thrashing results
+severe performance
+performance problems
+actual behavior
+early paging
+paging systems
+system monitors
+monitors cpu
+global page-replacement
+replaces pages
+process enters
+taking frames
+faulting processes
+pagin.g device
+swap pages
+ready queue
+queue empties
+processes wait
+utilization decreases
+scheduler sees
+decreasing cpu
+longer queue
+utilization drops
+throughput plunges
+increases tremendously
+effective m.emory-access
+multiprogramming increases
+thrashing sets
+drops sharply
+increase cpu
+process starts
+starts thrashing
+multiprogramming figure
+average service
+longer average
+average queue
+prevent thtashing
+working-set strategy
+approach defines
+locality model
+model states
+function call
+local variables
+process leaves
+program structure
+basic memory
+reference structure
+structure note
+unstated principle
+caching discussions
+useless suppose
+current locality
+memory-reference pattern
+working set
+set depends
+entire locality
+reference table
+pages touched
+important property
+working-set size
+total demand
+extra frames
+working-set sizes
+sizes increases
+system selects
+suspended process
+strategy prevents
+prevents thrashing
+keeping track
+working-set window
+moving window
+reference appears
+oldest reference
+reference drops
+fixed-interval timer
+reference-bit values
+current reference
+in-memory bits
+set note
+reference occurred
+history bits
+frequent interrupts
+correspondingly higher
+page-fault frequency
+control thrashilcg
+direct approach
+specific problem
+prevent thrashilcg
+thrashilcg thrashing
+high page-fault
+lower bounds
+actual page-fault
+rate exceeds
+upper limit
+rate falls
+lower limit
+prevent thrashing
+rate ilccreases
+freed frames
+page-fault rates
+sequential read
+standard system
+file access
+access requires
+disk access
+memory techniques
+techniques discussed
+routine memory
+significant performance
+performance increases
+working sets
+page faultrates
+set ofa
+ofa process
+code sections
+sections move
+sufficient memory
+tbe page-fault
+general behavior
+fault rate
+rate working
+rate occurs
+process moves
+rate rises
+lower rate
+span oftime
+thenext peak
+peak represents
+basic mechanism
+mechanism memory
+disk block
+initial access
+file proceeds
+ordinary demand
+page-sized portion
+page-sized chunk
+subsequent reads
+simplifying file
+manipulate files
+involve disk
+file mapped
+physical file
+memory-mapped data
+provide memory
+systems choose
+ordinary system
+kernel address
+solaris treats
+allowing file
+efficient memory
+subsystem multiple
+data writes
+processes modify
+earlier discussions
+memory-mapped sections
+sharing process
+process points
+physical memory-the
+memory-the page
+memory sharing
+memory-mapping system
+copy-on-write functionality
+allowing processes
+read-only mode
+disk file
+file figure
+memory-mapped files
+files process
+memory-mapped file
+shared data
+processes involved
+mutual exclusion
+exclusion described
+linux systems
+posix-compliant shmget
+systems calls
+mapping files
+communicating processes
+memorymapped file
+file serves
+illustrate support
+win32 api
+general outline
+memorymapped files
+api involves
+first creating
+file mapping
+mapped file
+file represents
+shared-menwry object
+enable communication
+producer process
+shared-memory object
+memory-mapping features
+shared m.emory
+consumer process
+process opens
+message written
+opened file
+file handle
+include windows.h
+include stdio.h
+stdio.h int
+int main
+int argc
+char argv
+handle hfile
+lpvoid lpmapaddress
+file null
+security open_always
+file file_attribute_normal
+file attributes
+attributes null
+template hmapfile
+handle null
+security pagejreadwrite
+mapped pages
+map entire
+memory object
+object lpmapaddress
+object handle
+handle filejmap_all_access
+mapped view
+memory sprintf
+memory message
+producer writing
+api -the
+-the entire
+program shown
+error checking
+code brevity
+sharedobj ect
+shared-memory segment
+named object
+passed values
+entire mapping
+handle hmapfile
+access false
+file object
+memory printf
+read message
+consumer reading
+bringing pages
+fm1ction returns
+message shared
+program illustrating
+process establishes
+existii1g named
+message thatwas
+processes remove
+programming exercise
+controller includes
+includes registers
+hold commands
+data transfers
+convenient access
+device registers
+registers reads
+fast response
+video controllers
+n1.emory location
+location displaying
+displaying text
+memory-mapped locations
+parallel ports
+connect modems
+cpu transfers
+transfers data
+long string
+memory-mapped serial
+serial port1
+cpu writes
+data byte
+data register
+control register
+device takes
+data transfer
+process running
+user rnode
+rnode requests
+pages scattered
+explained earlier
+single byte
+entire page
+frame kernel
+free-memory pool
+ordinary user-mode
+user-mode processes
+primary reasons
+kernel requests
+requests memory
+minimize waste
+subject kernel
+pages allocated
+contiguous physical
+hardware devices
+devices interact
+physical memory-without
+memory interface-and
+require memory
+memory residing
+contiguous pages
+kernel processes
+buddy system
+slab allocation
+system tbe
+tbe buddy
+system allocates
+allocates memory
+fixed-size segment
+segment consisting
+pages memory
+satisfies requests
+units sized
+highest power
+next-highest power
+segment allocated
+adjacent buddies
+larger segments
+kernel releases
+original256-kb segment
+obvious drawback
+allocated segments
+allocated unit
+system allocation
+allocating kernel
+kernel memory
+single cache
+unique kernel
+structure -for
+separate cache
+representing process
+process descriptors
+file objects
+cache represents
+cache representing
+representing semaphores
+semaphores stores
+stores instances
+semaphore objects
+descriptors stores
+process descriptor
+descriptor objects
+figure shows
+kernel objects
+respective caches
+slab-allocation algorithm
+store kernel
+cache depends
+free object
+object assigned
+slab allocator
+object representing
+type struct
+struct task_struct
+linux kernel
+kernel creates
+task_struct object
+objects slabs
+objects figure
+free partial
+slab consists
+free objects
+partial slab
+empty slab
+empty slabs
+main benefits
+fragmentation fragn
+fragn entation
+allocator returns
+exact amount
+object memory
+memory requests
+aging memory
+allocating-and releasing-memory
+time-consuming process
+subsequent requests
+general-purpose nature
+user-mode memory
+solaris linux
+kernel adopted
+major decisions
+allocation policy
+obvious property
+situation results
+initial locality
+high level
+initial paging
+small files
+process prepaging
+pages brought
+saved page
+unnecessary pages
+prepaging loses
+prepaging wins
+existing machine
+machine seldom
+sizes page
+invariably powers
+size increases
+active process
+desirable memory
+smaller pages
+memory starting
+final page
+assuming independence
+transfer times
+times transfer
+amount transferred
+size howeve1
+dwarf transfer
+bytes latency
+transfer doubling
+sam.e amount
+smaller page
+match program
+program locality
+fault generates
+large amount
+overhead needed
+saving registers
+updating tables
+sector size
+table size
+historical trend
+first edition
+system concepts
+upper bound
+common page
+modern systems
+tlb reach
+tlb recall
+tlb refers
+address translations
+power hungry
+hungry related
+similar metric
+reach refers
+entries multiplied
+resolving memory
+memory-intensive applications
+prove insufficient
+page size-say
+kb-we quadruple
+ultrasparc supports
+supports page
+pages sizes
+64-entry tlb
+solaris ranges
+solaris maps
+pages solaris
+size providing
+providing support
+sizes requires
+system -not
+entry managing
+performance howeve1
+reach offset
+performance costs
+recent trends
+softwaremanaged tlbs
+operating-system support
+alpha architectures
+architectures employ
+software-managed tlbs
+pentium manage
+tables section
+page management
+virtual-to-physical address
+physical frame
+tables reduce
+complete information
+referenced page
+memory demand
+process page
+external page
+traditional per-process
+per-process page
+tables negate
+memory n1.anager
+special case
+case requires
+careful handling
+page-lookup processing
+structure demand
+paged nature
+underlying demand
+stored row
+stored data
+row takes
+preceding code
+code zeros
+careful selection
+programming structures
+increase locality
+good locality
+scatter references
+bad locality
+weighted factors
+factors include
+include search
+search speed
+sigicificant effect
+paging separating
+separating code
+generating reentrant
+code means
+code pages
+modified clean
+clean pages
+placing routines
+page routines
+bin-packing problem
+operations research
+variable-sized load
+load segments
+fixed-sized pages
+interpage references
+programming language
+pointers tend
+randomize access
+object-oriented programs
+poor locality
+situation occurs
+usb storage
+storage device
+process issues
+waiting process
+paged out
+request advances
+device queue
+common solutions
+extra copying
+high overhead
+lock bit
+usual locked
+locked pages
+unlocked figure
+lock bits
+operating-system kernel
+fault caused
+bit involves
+normal page
+process faults
+faults selecting
+system reads
+process waits
+system sees
+perfect replacement
+policy decision
+effort spent
+prevent replacement
+brought-in page
+faulting process
+situation occur
+locked frame
+user doing
+locking multiuser
+multiuser systems
+locking hints
+individual process
+solaris implement
+clustering handles
+handles page
+faultil1.g page
+faulting page
+working-set minimum
+working-set maximum
+manager maintains
+threshold value
+manager allocates
+working-set rnaximum
+rnaximum incurs
+local page-replacement
+page-replacement policy
+memory falls
+automatic working-set
+working-set trimming
+trimming works
+manager removes
+removes pages
+process reaches
+allocated pages
+free-page-frame list
+sufficient free
+algorithm discussed
+multiprocessor x86
+x86 systems
+require invalidatil
+look-aside buffer
+thread incurs
+kernel assigns
+faulting thread
+sufficient amount
+parameter-zotsfree-that represents
+begin paging
+lotsfree parameter
+kernel checks
+pages falls
+pageout starts
+pageout process
+algorithm described
+scanning pages
+process works
+front hand
+clock scans
+back hand
+clock examines
+free list
+modified solaris
+solaris maintains
+cache list
+invalid contents
+contents pages
+pageout algorithm
+scanning occurs
+slowscan pages
+default value
+total physical
+withfastscan set
+system parameter
+fastscan cll
+slowscan minfree
+minfree desfree
+desfree amount
+solaris page
+page scanner
+value depends
+process checks
+checks memory
+desfree free
+30-second average
+kernel begins
+swapping processes
+swapped processes
+long periods
+recent releases
+solaris kernel
+provided enhancements
+enhancement involves
+recognizing pages
+libraries pages
+scannerare skipped
+page-scanning process
+enhancement concerns
+concerns distinguishing
+distinguishing pages
+physical menlory
+increasing cpu
+frees application
+application programmers
+memory availability
+share system
+efficient type
+paging pure
+kernel consults
+entire memory
+memory image
+and-in theory
+requirements exceed
+processes run
+replace pages
+anomaly optimal
+knowledge lru
+frame-allocation policy
+needed allocation
+local page
+model assumes
+processes execute
+avoid thrashing
+require process
+process swapping
+provide features
+memory mappil1g
+mappil1g files
+api implements
+implements shared
+files kernel
+req1.1ire memory
+physically contiguous
+fragmentation slab
+slab allocators
+allocators assign
+assign kernel
+proper design
+paging systern
+systern requires
+prep aging
+tree illustrating
+bytes request
+followilcg releases
+perform coalescing
+bytes release
+256-byte pages
+small number
+smallest counter
+basic idea
+initial value
+counters increased
+increased iii
+counters decreased
+faults occur
+optimal pagereplacement
+pagereplacement strategy
+time-measured utilizations
+utilization paging
+paging disk
+improve cpu
+utilization explain
+faster cpu
+bigger paging
+main n1.enl0ry
+faster hard
+multiple controllers
+multiple hard
+hard disks
+page-fetch algorithms
+demand-paged computer
+determine utilization
+paging helping
+disk utilization
+average access
+milliseconds addresses
+table takes
+reduces access
+memory assume
+simplified view
+thread states
+running state
+thread change
+change state
+state figure
+thread state
+state diagram
+address reference
+support required
+replacement algorithms
+frames remember
+first unique
+unique pages
+replacement fifo
+replacement optimal
+allocates pages
+system provide
+discuss situations
+algorithm generates
+fewer page
+opposite holds
+occur describe
+memory locations
+addressing scheme
+indirect memory-load
+per-process frame
+allocation technique
+kernellevel threads
+kernel thread
+user thread
+multithreaded process
+process consist
+thread explain
+copy-on-write feature
+two-dimensional array
+small process
+matrix resides
+array-initialization loops
+system detect
+detect thrashing
+candidate page
+moving fast
+moving slow
+resident pages
+pages assume
+replacement policy
+policy answer
+free space
+space generated
+requested page
+page exists
+resident page
+page set
+free-france pool
+pool managed
+make space
+system degenerate
+object type
+type assuming
+scalability issue
+empty frame
+replaced page
+nanoseconds assume
+acceptable page-fault
+variable-sized pages
+pages define
+segment-replacement algorithms
+algorithms based
+lru pagereplacement
+pagereplacement schemes
+schemes remember
+consecutive locations
+needed segment
+segments cam
+programming techniques
+demand-paged environment
+good explain
+hashed symbol
+sequential search
+binary search
+pure code
+vector operations
+process requesting
+user-level threads
+user threads
+kernel threads
+user user
+threads belonging
+memory explain
+starts execution
+memory identify
+options system
+system designers
+memory describe
+fault tlb
+process generates
+system establishes
+physical location
+hardware operations
+computing system
+benefits list
+character instruction
+destination regions
+small value
+high value
+representing data
+representing code
+code explain
+paged system
+last examination
+algorithms presented
+random pagereference
+pagereference string
+numbers range
+random page-reference
+page-reference string
+faults incurred
+algorithm implement
+catalan numbers
+integer sequence
+sequence c11
+treeenumeration problems
+first catalan
+formula generating
+generating c11
+catalan sequence
+integer parameter
+line means
+manchester university
+university muse
+muse computer
+early demand-paging
+first researchers
+stack algorithms
+fixed allocation
+enl lanced
+lanced clock
+burroughs bssoo
+bssoo computer
+system wilson
+allocation jolmstone
+issues buddy
+memory allocators
+multiple processors
+memory-fitting algorithms
+memory-allocation strategies
+windows implements
+memory mcdougall
+discussed operating
+system support
+sizes ortiz
+embedded operating
+system jacob
+compared implementations
+pentium architectures
+companion article
+ultrasparc part
+secondary storage
+memory modern
+primary on-line
+on-line storage
+storage medium
+programs residing
+related information
+information defined
+physical devices
+devices files
+computer vary
+devices transfer
+transfer data
+slowest major
+major component
+device variation
+wide range
+key goal
+simplest interface
+performance bottleneck
+chapter
+showed
+cpu
+shared
+set
+processes
+result
+scheduling
+improve
+utilization
+speed
+computer
+response
+users
+realize
+increase
+performance
+memory
+share
+discuss
+ways
+manage
+memorymanagement
+algorithms
+vary
+primitive
+bare-machine
+approach
+paging
+segmentation
+strategies
+advantages
+disadvantages
+selection
+memory-management
+method
+specific
+system
+depends
+factors
+hardware
+design
+require
+support
+recent
+designs
+closely
+integrated
+operating
+provide
+detailed
+description
+organizing
+techniques
+including
+intel
+pentium
+supports
+pure
+central
+operation
+modern
+consists
+large
+array
+words
+bytes
+address
+fetches
+instructions
+value
+program
+counter
+additional
+loading
+storing
+addresses
+typical
+instruction-execution
+cycle
+first
+instruction
+decoded
+operands
+fetched
+executed
+results
+stored
+back
+mernory
+unit
+sees
+stream
+generated
+indexing
+indirection
+literal
+data
+ignore
+hozu
+generates
+interested
+sequence
+running
+begin
+discussion
+covering
+issues
+pertinent
+managing
+coverage
+includes
+overview
+basic
+binding
+symbolic
+actual
+physical
+distinction
+logical
+conclude
+section
+dynamically
+linking
+code
+libraries
+8.1.1
+main
+registers
+built
+processor
+storage
+access
+directly
+machine
+arguments
+disk
+execution
+direct-access
+devices
+moved
+operate
+generally
+accessible
+clock
+cpus
+decode
+perform
+simple
+operations
+register
+contents
+rate
+tick
+accessed
+transaction
+bus
+completing
+cycles
+cases
+stall
+required
+complete
+executing
+situation
+intolerable
+frequency
+accesses
+remedy
+add
+fast
+process
+soa
+lj.o
+base
+1go
+limit
+figure
+define
+space
+buffer
+accommodate
+differential
+described
+1.8.3
+concerned
+relative
+accessing
+ensure
+correct
+protect
+user
+addition
+protection
+provided
+implemented
+outline
+implementation
+make
+separate
+ability
+determine
+range
+legal
+two
+illustrated
+holds
+smallest
+specifies
+size
+legally
+inclusive
+accomplished
+compare
+mode
+attempt
+operating-system
+trap
+treats
+fatal
+error
+scheme
+prevents
+accidentally
+deliberately
+modifying
+structures
+loaded
+special
+privileged
+kernel
+executes
+load
+change
+programs
+changing
+unrestricted
+provision
+monitor-addressing
+dump
+out
+case
+errors
+modify
+parameters
+calls
+8.1.2
+resides
+binary
+executable
+file
+brought
+depending
+management
+waiting
+form
+normal
+procedure
+select
+input
+queue
+eventually
+terminates
+declared
+systems
+reside
+part
+starts
+affects
+steps-some
+optional-before
+bein.g
+represented
+steps
+source
+count
+compiler
+typically
+bind
+relocatable
+beginning
+module
+lin.kage
+editor
+loader
+turn
+absolute
+mapping
+classically
+done
+step
+compile
+krww
+starting
+location
+start
+extend
+recompile
+ms-dos
+.com-format
+bound
+generate
+final
+delayed
+reload
+incorporate
+changed
+segment
+run
+work
+discussed
+8.1.3
+general-purpose
+11se
+major
+portion
+devoted
+showing
+bindings
+effectively
+discussing
+multistep
+processing
+versus
+commonly
+referred
+unit-that
+memory-is
+compile-time
+load-time
+address-binding
+methods
+identical
+execution-time
+addressbinding
+differing
+virtual
+interchangeably
+text
+in_
+spaces
+differ
+run-time
+device
+choose
+accomplish
+dynamic
+relocation
+sections
+illustrate
+mmu
+generalization
+base-register
+added
+relocated
+mapped
+80x86
+family
+processors
+four
+real
+create
+pointer
+store
+manipulate
+addresses-all
+number
+indirect
+deals
+memory-mapping
+converts
+referenced
+determined
+reference
+made
+types
+max
+ranger
+tor
+valuer
+thinks
+runs
+locations
+concept
+proper
+8.1.4
+entire
+execute
+limited
+obtain
+memory-space
+dynancic
+routine
+routines
+format
+call
+calling
+checks
+desired
+menwry
+update
+tables
+reflect
+control
+passed
+newly
+advantage
+unused
+amounts
+needed
+handle
+infrequently
+occurring
+total
+smaller
+responsibility
+programmer
+providing
+library
+implement
+8.1.5
+shows
+language
+treated
+object
+combined
+image
+contrast
+similar
+postponed
+feature
+subroutine
+facility
+include
+copy
+requirement
+wastes
+stub
+included
+libraryroutine
+small
+piece
+locate
+memory-resident
+present
+loads
+replaces
+reached
+incurring
+cost
+extended
+updates
+bug
+fixes
+replaced
+version
+automatically
+relinked
+gain
+incompatible
+versions
+information
+decide
+minor
+retain
+increment
+compiled
+affected
+incorporated
+linked
+installed
+continue
+older
+unlike
+requires
+protected
+entity
+check
+multiple
+elaborate
+8.4.4
+temporarily
+continued
+assume
+multiprogramming
+environment
+round-robin
+cpu-scheduling
+algorithm
+quantum
+expires
+manager
+swap
+finished
+freed
+meantime
+scheduler
+allocate
+slice
+finishes
+swapped
+ideally
+ready
+reschedule
+reasonable
+computing
+swaps
+variant
+swapping
+policy
+priority-based
+higher-priority
+arrives
+service
+lower-priority
+backing
+roll
+occupied
+previously
+restriction
+dictated
+assembly
+easily
+computed
+copies
+images
+direct
+maintains
+consisting
+decides
+dispatcher
+free
+region
+reloads
+transfers
+selected
+context-switch
+fairly
+high
+idea
+standard
+hard
+transfer
+50mb
+100-mb
+takes
+seconds
+assuming
+average
+latency
+milliseconds
+notice
+proportional
+amount
+resident
+taking
+maximum
+3gb
+this-say
+compared
+simply
+reducing
+effective
+informed
+requirements
+issue
+request
+release
+inform
+constrained
+completely
+idle
+concern
+pending
+i
+asynchronously
+buffers
+queued
+busy
+belongs
+solutions
+problem
+occur
+assumption
+mentioned
+earlier
+head
+seeks
+explanation
+postpone
+secondary-storage
+structure
+covered
+allocated
+chunk
+solution
+modified
+found
+modification
+unix
+disabled
+threshold
+halted
+reduced
+fully
+a.6
+early
+pcs-which
+lacked
+sophistication
+advanced
+methods-ran
+prime
+microsoft
+windows
+concurrent
+insufficient
+full
+preempt
+swapped-out
+remains
+selects
+subsequent
+features
+pcs
+explore
+cover
+menlory
+efficient
+explains
+common
+contiguous
+allocation
+divided
+partitions
+place
+low
+factor
+affecting
+decision
+interrupt
+vector
+programmers
+development
+contained
+single
+8.3.1
+contaitls
+maps
+adding
+values
+context
+switch
+checked
+relocation-register
+flexibility
+desirable
+situations
+drivers
+driver
+purposes
+transient
+8.3.2
+simplest
+allocating
+divide
+fixed-sized
+partition
+degree
+addressing
+supportfor
+originally
+ibm
+mft
+longer
+fixed-partition
+mvt
+primarily
+batch
+environments
+ideas
+presented
+applicable
+time-sharing
+table
+indicating
+parts
+initially
+considered
+block
+holes
+sizes
+enter
+put
+account
+determining
+compete
+releases
+fill
+list
+order
+untit
+finally
+satisfied
+-that
+hole
+hold
+wait
+skip
+met
+generat
+blocks
+comprise
+scattered
+searches
+split
+arriving
+returned
+adjacent
+merged
+larger
+point
+recombined
+satisfy
+demands
+instance
+general
+concerns
+fit
+big
+searching
+previous
+first-fit
+search
+ended
+stop
+find
+ordered
+strategy
+produces
+leftover
+worst
+largest
+sorted
+best-fit
+simulations
+shown
+terms
+decreasing
+faster
+8.3.3
+fragmentation
+suffer
+external
+removed
+broken
+pieces
+exists
+fragmented
+severe
+wasted
+affect
+end
+piece-the
+top
+bottom
+matter
+statistical
+analysis
+reveals
+optimization
+lost
+one-third
+unusable
+property
+internal
+multiple-partition
+18,464
+suppose
+requests
+18,462
+requested
+left
+overhead
+track
+substantially
+avoiding
+break
+units
+based
+slightly
+difference
+numbers
+goal
+shuffle
+nlemory
+compaction
+static
+moving
+move
+direction
+producing
+expensive
+external-fragmentation
+permit
+noncontiguous
+allowing
+complementary
+achieve
+permits
+avoids
+solves
+considerable
+fitting
+chunks
+varying
+backin.g
+schemes
+introduction
+suffered
+arises
+fragments
+residing
+fmmd
+problems
+connection
+slower
+impossible
+forms
+foooo
+f1111
+page
+1---------1
+traditionally
+handled
+integrating
+64-bit
+microprocessors
+8.4.1
+implementing
+involves
+breaking
+harnes
+pages
+frames
+san1.e
+index
+offset
+model
+frame
+defined
+power
+architecture
+makes
+translation
+easy
+wordst
+high-order
+bits
+designate
+low-order
+displacement
+concrete
+minuscule
+show
+view
+noticed
+32-byte
+4-byte
+happen
+coincide
+boundaries
+last
+2,048
+72,766
+1,086
+resulting
+byte
+independent
+expect
+one-half
+consideration
+suggests
+involved
+page-table
+entry
+increases
+transferred
+grown
+sets
+today
+kernels
+solaris
+researchers
+developing
+variable
+on-the-fly
+long
+32-bit
+entries
+expressed
+examined
+injo
+important
+aspect
+clear
+separation
+views
+fact
+reconciled
+address-translation
+translated
+hidden
+controlled
+definition
+unable
+owns
+aware
+details
+memory-which
+free-frame
+new-process
+produce
+parameter
+buffe1
+translate
+map
+manually
+8.4.2
+told
+dedicated
+high-speed
+logic
+paging-address
+nlust
+efficiency
+dec
+pdp-11
+satisfactory
+sncall
+contemporary
+computers
+million
+machines
+feasible
+points
+ptbr
+fori
+task
+slowed
+delay
+circumstances
+resort
+fastlookup
+cache
+bc.1her
+tlb
+associative
+key
+tag
+item
+keys
+simultaneously
+field
+numbering
+1,024
+immediately
+percent
+unmapped
+obtained
+quickly
+replacement
+policies
+recently
+lru
+random
+tlbs
+meaning
+wired
+asid
+uniquely
+identifies
+address-space
+attempts
+resolve
+ensures
+matches
+asids
+match
+miss
+erased
+wrong
+hit
+valid
+incorrect
+invalid
+percentage
+times
+80-percent
+ratio
+means
+nanoseconds
+mapped-memory
+fail
+weight
+probability
+40-percent
+slowdown
+memory-access
+98-percent
+increased
+impact
+8.4.3
+paged
+bit
+read-write
+read-only
+nuncber
+verify
+writes
+write
+memory-protection
+violation
+expand
+finer
+level
+execute-only
+kind
+combination
+illegal
+trapped
+attached
+-invalid
+disallow
+14-bit
+valid-invalid
+10,468
+2,287
+---------
+flee
+created
+extends
+howeve1
+references
+classified
+2-kb
+reflects
+rarely
+fraction
+wasteful
+valuable
+length
+failure
+test
+possibility
+sharing
+8,000
+three-page
+editor-each
+simplify
+-being
+reentrant
+non-self-modifying
+wilt
+kb-a
+significant
+savings
+heavily
+-compilers
+window
+database
+sharable
+nature
+correctness
+enforce
+threads
+recall
+interprocess
+corrununication
+numerous
+benefits
+structuring
+8.5.1
+hierarchical
+excessively
+consist
+4mb
+contiguously
+division
+two-level
+10-bit
+outer
+works
+vax
+variation
+equal
+represents
+represent
+partitioning
+manner
+leave
+designates
+one-level
+8mb
+reduce
+main-memory
+user-process
+iml.er
+conveniently
+obvious
+avoid
+giving
+three-level
+standard-size
+daunting
+2nd
+sti11234
+four-level
+second-level
+ultrasparc
+levels
+paging-a
+prohibitive
+accessesto
+architectures
+inappropriate
+8.5.2
+hashed
+handling
+hash
+elements
+collisions
+element
+fields
+searched
+matching
+favorable
+proposed
+refers
+mappings
+physical-page
+clustered
+8.5.3
+inverted
+slot
+validity
+representation
+natural
+calculate
+located
+drawbacks
+millions
+consume
+solve
+depicts
+identifier
+examples
+powerpc
+describe
+simplified
+i11verted
+triple
+process-id
+page-number
+pair
+assumes
+role
+occurs
+pagenumber
+subsystem
+found-say
+i-then
+attempted
+decreases
+lookups
+alleviate
+one-or
+few-page-table
+adds
+reads-one
+hash-table
+consulted
+offering
+improvement
+difficulty
+technique
+faults
+unavoidable
+differentiation
+8.6.1
+linear
+people
+prefer
+collection
+variable-sized
+segments
+ordering
+writing
+procedures
+functions
+objects
+arrays
+stacks
+variables
+modules
+talk
+stack
+math
+n1.ain
+caring
+occupy
+sqrt
+function
+intrinsically
+symbol
+purpose
+identified
+begim1.ing
+statement
+seventh
+quantities
+partitioned
+invisible
+simplicity
+numbered
+segn
+lent
+tuple
+segment-number
+constructs
+reflecting
+global
+heap
+thread
+assign.ed
+assign
+8.6.2
+two-dimensional
+one-dimensional
+twodimensional
+user-defined
+effected
+startilcg
+essentially
+base-limit
+pairs
+begins
+segment1
+14001---1
+1-----1
+--1
+f--------1
+tooo
+give
+linux
+equivalent
+8.7.1
+logical-address
+private
+ldt
+gdt
+8-byte
+descriptor
+selector
+16-bit
+word
+question
+addressed
+microprogram
+descriptors
+lets
+read
+formed
+fault
+turns
+8.7.2
+4-kb
+schence
+detail
+outernlost
+directory
+cr3
+current
+indexed
+innermost
+0-11
+pointed
+flag
+which-if
+setindicates
+4-mb
+bypassing
+registe
+pointing
+demand
+8.7.3
+illustration
+designed
+variety
+segmentationlinux
+rely
+minimally
+task-state
+tss
+default
+switches
+noted
+2-bit
+limlx
+recognizes
+platforms
+plausible
+adopted
+threelevel
+middle
+highlights
+varies
+apply
+lglobal
+__,.c__
+___
+__l
+-just
+-the
+saved
+restored
+tasks
+multiprogrammed
+single-user
+determinant
+legality
+possibly
+checking
+efficiently
+software
+combinations
+aspects
+comparing
+considerations
+sufficient
+complex
+address-operations
+degraded
+degradation
+acceptable
+higher
+packing
+waste
+single-partition
+shifting
+compact
+intervals
+copied
+increasing
+packets
+carefully
+-only
+programming
+explain
+organization
+respect
+translatil
+complicated
+manufacturer
+sharil
+easier
+segmented
+pagil
+preferable
+finding
+convert
+separated
+fetch
+baselimit
+generating
+binaries
+individual
+linkage
+combine
+bilcary
+bindmg
+facilitate
+memory-binding
+performed
+memory-load
+worst-fit
+mechanism
+belong
+512mb
+conventional
+single-level
+1-kb
+offsets
+decimal
+structured
+fixed
+allowed
+grow
+lower
+significance
+0,430
+1,10
+2,500
+3,400
+4,112
+requiring
+decincal
+command
+line
+output
+type
+encourage
+unsigned
+knuth
+simulation
+superior
+50-percent
+rule
+credited
+designers
+atlas
+kilburn
+howarth
+dennis
+supported
+multics
+organick
+daley
+article
+chang
+mergen
+jacob
+mudge
+hennessy
+patterson
+caches
+mmus
+talluri
+discusses
+alternative
+approaches
+enforcing
+studied
+wahbe
+1993a
+chase
+bershad
+thorn
+dougan
+tedmiques
+fang
+evaluate
+tanenbaum
+intel80386
+architectures-such
+pentiunl
+ultrasparcare
+1998a
+lim1x
+bovet
+cesati
+tend
+tecrucique
+abstracts
+extremely
+uniform
+separating
+viewed
+frees
+memory-storage
+limitations
+files
+creation
+decrease
+carelessly
+examine
+complexity
+concepts
+page-replacement
+principles
+working-set
+outlined
+meeting
+ease
+precautions
+extra
+m.ust
+unfortunate
+limits
+examination
+unusual
+conditions
+seldom
+practice
+arrays,lists
+assembler
+room
+3,000
+symbols
+options
+u.s
+government
+balance
+budget
+years
+partially
+confer
+simplifying
+diagram
+sance
+throughput
+turnaround
+benefit
+perceived
+worry
+concentrate
+programmed
+address-say
+0-and
+organized
+assigned
+note
+upward
+similarly
+downward
+successive
+blank
+grows
+sparse
+beneficial
+filled
+dynam.ically
+link
+leads
+considers
+enables
+communicate
+fork
+calt
+speeding
+these-and
+other-benefits
+option
+problent
+ultimately
+demand-paged
+demanded
+demand-paging
+secondary
+lazy
+swapper
+viewing
+term
+technically
+manipulates
+pager
+9.2.1
+guesses
+brings
+reading
+distinguish
+n1.emory
+usuat
+marked
+depicted
+marking
+effect
+guess
+right
+proceeds
+dod
+jtb
+odd
+restart
+reset
+bring
+missing
+translating
+causing
+straightforward
+terminate
+schedule
+interrupted
+extreme
+non-memory-resident
+continues
+faulting
+theoretically
+unacceptable
+fortunately
+behavior
+exceedingly
+9.6.1
+mark
+swap-space
+crucial
+save
+state
+condition
+meet
+fetching
+operand
+worst-case
+three-address
+content
+placing
+sum
+decoding
+repeated
+repetition
+mvc
+character
+ncove
+overlapping
+destination
+straddles
+boundary
+overlap
+solved
+microcode
+computes
+ends
+occm
+relevant
+temporary
+overwritten
+written
+action
+restores
+started
+architectural
+existing
+illustrates
+difficulties
+transparent
+true
+non-demand-paging
+errm
+restarted
+9.2.2
+significantly
+compute
+denoted
+ranges
+close
+zero-that
+ttp
+nrr
+deterncine
+serviced
+seek
+optional
+receive
+completed
+restore
+resume
+arrangement
+maintain
+page-fault
+faced
+tlu
+components
+careful
+coding
+hundred
+microseconds
+page-switch
+remember
+device-service
+device-queueing
+memoryaccess
+8,000,000
+7,999,800
+1,000
+due
+fewer
+399,990
+slowing
+dramatically
+copying
+startup
+performing
+serves
+appears
+good
+compromise
+bsd
+demandpaging
+bypass
+rapid
+minimizes
+modifies
+thatthe
+creates
+child
+duplicate
+parent
+worked
+creating
+duplicating
+belonging
+invoke
+exec
+unnecessary
+copy-on-write
+figures
+portions
+nl.apping
+unmodified
+process1
+process2
+nwdified
+arked
+duplicated
+copyon
+managed
+zem-fhl-on-den
+1and
+zero-fill-on-demand
+zeroed-out
+erasing
+ofthe
+call-vfork
+operates
+differently
+vfork
+suspended
+altered
+visible
+resumes
+ork
+caution
+intended
+command-line
+shell
+interfaces
+assumed
+strictly
+accurate
+ten
+half
+saves
+forty
+spare
+suddenly
+sixty
+holding
+strain
+memory-placement
+deciding
+challenge
+pc
+r
+-------
+monitor
+over-allocation
+manifests
+determines
+finds
+system-paging
+logically
+choice
+freeing
+9.4.1
+faulted
+algorithnc
+victim
+doubles
+applies
+discarded
+reduces
+completes
+enormous
+programnlers
+twenty
+replacing
+develop
+tceme
+h
+designing
+slight
+improvements
+yield
+gains
+lowest
+string
+strings
+artificially
+random-number
+generator
+trace
+record
+facts
+follow
+0100,0432,0101,0612,0102,0103,0104,0101,0611,0102,0103
+0104,0101,0610,0102,0103,0104,0101,0609,0102,0105
+..0
+graph
+strillg
+faultsone
+eleven
+curve
+drops
+minimal
+doing
+9.4.2
+fifo
+first-in
+first-out
+associates
+oldest
+chosen
+replace
+insert
+tail
+empty
+fifteen
+altogether
+lmderstand
+hand
+initialization
+ago
+initialized
+constant
+active
+correctly
+retrieve
+bad
+slows
+greater
+unexpected
+research
+investigators
+belady
+anomaly
+discovered
+9.4.3
+optimal
+exist
+opt
+min
+longest
+period
+moj
+guarantees
+pagefault
+sample
+irt
+difficult
+future
+knowledge
+encountered
+sjf
+cpu-schedulin.g
+5.3.2
+comparison
+studies
+optimat
+9.4.4
+approximation
+backward
+forward
+past
+chooses
+strangely
+reverse
+sis
+applying
+twelve
+knowing
+substantial
+assistance
+implementations
+counters
+associate
+time-of-use
+incremented
+ti1ne-of-use
+aintained
+overflow
+doubly
+removing
+putting
+pointers
+class
+ack
+exhibit
+subset
+conceivable
+updating
+slow
+tolerate
+9.4.5
+lru-approximation
+pagereplacement
+cleared
+examining
+basis
+approximate
+9.4.5.1
+additional-reference-bits
+recording
+regular
+8-bit
+timer
+shifts
+discarding
+shift
+history
+periods
+interpret
+integers
+guaranteed
+unique
+varied
+leaving
+9.4.5.2
+second-chance
+inspect
+proceed
+chance
+circular
+arrival
+chances
+poi11ter
+advances
+clears
+inserted
+position
+selecting
+degenerates
+9.4.5.3
+enhanced
+enhance
+classes
+-best
+hut
+modified-not
+clean-probably
+-probably
+nonempty
+scan
+simpler
+preference
+9.4.6
+counting-based
+frequently
+lfu
+reason
+actively
+initial
+phase
+counts
+forming
+exponentially
+decaying
+usage
+mfu
+argument
+approxinlate
+9.4.7
+page-buffering
+pool
+expansion
+clean
+reused
+fronc
+mistakenly
+retrieved
+poor
+sirnple
+conjunction
+augmentation
+penalty
+incurred
+9.4.8
+applications
+worse
+buffering
+understand
+application
+warehouses
+massive
+sequential
+reads
+computations
+preserving
+newer
+file-system
+raw
+termed
+bypasses
+filesystem
+services
+locking
+prefetching
+names
+directories
+special-purpose
+composed
+exhausted
+in-memory
+94th
+terminated
+variations
+reserved
+variants
+9.5.1
+minimum
+ilcstruction
+memory-reference
+modes
+straddle
+characters
+area
+m.oved
+scenario
+15-bit
+1-bit
+indicator
+touched
+overcome
+16levels
+decremented
+irtdirection
+excessive
+limitation
+9.5.2
+easiest
+recognize
+student
+interactive
+sense
+speaking
+approximately
+adjust
+integer
+ncinimum
+tl1e
+exceeding
+equally
+lose
+conversely
+departed
+spread
+remaining
+high-priority
+low-priority
+detriment
+priorities
+priority
+9.5.3
+local
+competing
+classify
+broad
+categories
+.no
+-cu
+expense
+totally
+circuntstances
+hinder
+making
+9.5.4
+non-uniform
+equal-or
+1.3.2
+differences
+caused
+interconnected
+boards
+ranging
+busses
+network
+connections
+infiniband
+board
+collectively
+exception
+motherboard
+numa
+treat
+rnade
+algorithmic
+ran
+scheduled
+improved
+hits
+decreased
+picture
+lgroup
+gathers
+hierarchy
+lgroups
+groups
+picks
+nearby
+rest
+resources
+minimized
+rates
+maximized
+falls
+suspend
+introduces
+swap-in
+swap-out
+intermediate
+num.ber
+activity
+thrashing
+spending
+monitors
+introducing
+regard
+enters
+pagin.g
+empties
+occurred
+plunges
+tremendously
+m.emory-access
+phenomenon
+plotted
+ilccreases
+slowly
+sharply
+effects
+thrash
+prevent
+thtashing
+teclmiques
+9.6.2
+defines
+locality
+states
+moves
+localities
+exit
+leaves
+return
+unstated
+principle
+caching
+discussions
+book
+patterned
+useless
+paramete1
+vrindovv
+jjl
+jlli111
+pattern
+working
+drop
+accuracy
+encompass
+,2,5,6,7
+extrem.e
+infinite
+wss
+dis
+allocates
+initiated
+reallocated
+keeping
+optimizes
+fixed-interval
+assum.e
+equals
+10,000
+5,000
+reference-bit
+15,000
+interval
+uncertainty
+interrupts
+frequent
+correspondingly
+9.6.3
+successful
+prepaging
+9.9.1
+clumsy
+thrashilcg
+establish
+upper
+bounds
+exceeds
+remove
+measure
+distributed
+open
+,read
+alternatively
+lead
+faultrates
+directrelationship
+ofa
+pver
+processis
+11.ot
+tbe
+transition
+peaks
+valleys
+peak
+rises
+returning
+span
+oftime
+thenext
+9.7.1
+ordinary
+page-sized
+opposed
+involve
+necessarily
+imm.ediate
+synchronous
+periodically
+closed
+memory-mapped
+ren
+loved
+memory-map
+mmap
+opened
+memory-maps
+concurrently
+memory-the
+functionality
+j---r
+-rl..-r
+-r
+.....c.c
+..----r
+.l
+coordinated
+mechanisms
+achieving
+mutual
+exclusion
+3.4.1
+achieved
+posix-compliant
+shmget
+shmat
+3.5.1
+communicating
+memorymapped
+win32
+api
+9.7.2
+establishing
+shared-menwry
+enable
+communication
+producer
+shared-memory
+message
+m.emory
+consumer
+opens
+consum.er
+createfile
+returns
+createfilemapping
+established
+establishes
+mapviewdffile
+windows.h
+stdio.h
+int
+argc
+char
+argv
+hfile
+hmapfile
+lpvoid
+lpmapaddress
+temp.txt
+genericjread
+generic_write
+null
+security
+open_always
+file_attribute_normal
+attributes
+template
+pagejreadwrite
+sharedobject
+filejmap_all_access
+sprintf
+unmapviewoffile
+closehandle
+eliminate
+brevity
+named
+sharedobj
+ect
+passing
+subsection
+openfilemapping
+file_map_all_access
+false
+inheritance
+mapviewoffile
+printf
+bringing
+fm1ction
+ii1stance
+illustrating
+existii1g
+ii1
+thatwas
+exercise
+9.7.3
+1.2.1
+controller
+commands
+convenient
+devices1
+video
+controllers
+screen
+displaying
+serial
+parallel
+ports
+connect
+modems
+printers
+kinds
+send
+port1
+signal
+polling
+watch
+constantly
+looping
+poll
+receives
+rnode
+maintained
+populated
+explained
+granted
+however1
+free-memory
+user-mode
+primary
+reasons
+result1
+conservatively
+minimize
+subject
+interact
+memory-without
+interface-and
+physically
+buddy
+slab
+9.8.1
+fixed-size
+power-of-2
+allocator
+satisfies
+sized
+appropriately
+rounded
+highest
+16-kb
+buddies-which
+-each
+buddies
+64-kb
+buddiesbland
+br
+next-highest
+32-kb
+21-kb
+teclmique
+coalescing
+coalesce
+coalesced
+128-kb
+original256-kb
+drawback
+rounding
+33-kb
+guarantee
+9.8.2
+nwre
+slabs
+-for
+representing
+semaphores
+instantiations
+stores
+instances
+semaphore
+relationship
+respective
+slab-allocation
+objects-which
+free-are
+12-kb
+continguous
+struct
+task_struct
+fulfill
+3-kb
+7-kb
+partial
+fragn
+entation
+exact
+aging
+deallocated
+act
+allocating-and
+releasing-memory
+time-consuming
+advance
+appeared
+decisions
+selections
+arise
+tin1.e
+systerns-notably
+solaris-prepage
+lack
+resumed
+restarting
+offer
+servicing
+prepaged
+loses
+wins
+9.9.2
+invariably
+powers
+4,096
+4,194,304
+8,192
+utilized
+continuing
+independence
+loss
+argue
+12.1.1
+dwarf
+attributable
+doubling
+sam.e
+desire
+argues
+tall
+accurately
+isolate
+102,400
+saving
+queueing
+sector
+answer
+historical
+trend
+edition
+9.9.3
+reach
+introduced
+translations
+resolved
+related
+cheaply
+construct
+hungry
+metric
+multiplied
+spend
+resolving
+double
+memory-intensive
+prove
+approacl1
+size-say
+kb-we
+quadruple
+8-kb
+64-entry
+256mb
+majority
+applications-such
+databases-to
+-not
+hardware-to
+costs
+trends
+softwaremanaged
+mips
+alpha
+employ
+software-managed
+9.9.4
+virtual-to-physical
+traditional
+per-process
+negate
+utility
+n1.anager
+page-lookup
+9.9.5
+unaware
+awareness
+underlying
+contrived
+informative
+initialize
+128-by-128
+inti
+128j
+row
+127j
+preceding
+zeros
+16,384
+scatter
+weighted
+stage
+sigicificant
+packed
+packaging
+bin-packing
+pack
+interpage
+randomize
+potentially
+diminishing
+object-oriented
+9.9.6
+interlock
+emory
+usb
+events
+tape
+unacceptably
+locked
+lock
+usual
+unlocked
+waits
+perfect
+apparently
+delaying
+wasting
+effort
+spent
+brought-in
+turned
+dispatched
+dangerous
+overuse
+hurt
+multiuser
+trusting
+hints
+disregard
+9.10.1
+implements
+clustering
+handles
+faultil1.g
+exceed
+rnaximum
+incurs
+tactic
+automatic
+trimming
+evaluating
+removes
+reaches
+free-page-frame
+single-processor
+multiprocessor
+x86
+clearing
+invalidatil
+look-aside
+9.10.2
+assigns
+imperative
+parameter-zotsfree-that
+lotsfree
+pageout
+hands
+scanning
+front
+scans
+setting
+examines
+appending
+reclaimed
+scam
+scanrate
+slowscan
+fastscan
+progresses
+fasts
+withfastscan
+distance
+determil
+handspread
+cll
+minfree
+desfree
+scanner
+investigating
+scam-ate
+pass
+thousand
+uncommon
+intention
+30-second
+enhancements
+enhancement
+recognizing
+processes-even
+eligible
+claimed
+scannerare
+skipped
+page-scanning
+distinguishing
+regularfiles
+11.6.2
+raise
+worrying
+availability
+consults
+updated
+and-in
+theory
+least-the
+capacity
+suffers
+approximations
+frame-allocation
+suggesting
+schedulil
+mappil1g
+req1.1ire
+allocators
+reqmnng
+systern
+prep
+1,024-kb
+guide
+draw
+tree
+followilcg
+12-bit
+256-byte
+hexadecimal
+dash
+9ef
+minimization
+distributing
+evenly
+specifically
+iii
+time-measured
+utilizations
+answers
+install
+bigger
+n1.enl0ry
+disks
+page-fetch
+measured
+alternatives
+happening
+helping
+microsecond
+blocked
+i.e
+questions
+modifications
+opposite
+actions
+ilccurred
+nonresident
+user-level
+kernellevel
+multithreaded
+matrix
+array-initialization
+loops
+detect
+detects
+monitoring
+candidate
+free-france
+degenerate
+nt
+scale
+scalability
+held
+segment-replacement
+consecutive
+cam
+requesting
+fault-that
+characterize
+identify
+measures
+regions
+nonsuspended
+regularly
+discard
+pagereference
+page-reference
+catalan
+c11
+treeenumeration
+formula
+ell
+iil
+manchester
+university
+muse
+observe
+bears
+mattson
+demonstrated
+proved
+prieve
+fabry
+enl
+lanced
+carr
+developed
+denning
+wulf
+successfully
+applied
+burroughs
+bssoo
+wilson
+algoritluns
+jolmstone
+memory-fragmentation
+knowlton
+1965l
+peterson
+norman
+purdom
+stigler
+bonwick
+adams
+memory-fitting
+stephenson
+bays
+brent
+survey
+memory-allocation
+solomon
+russinovich
+mcdougall
+mauro
+mckusick
+ganapathy
+schimmel
+navarro
+ortiz
+real-time
+embedded
+1998b
+companion
+permanently
+on-line
+medium
+creator
+attach
+sequentially
+randomly
+synchronously
+greatly
+slowest
+component
+wide
+interface
+bottleneck
+optimize

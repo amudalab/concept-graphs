@@ -1,0 +1,9 @@
+Row 1::Height 2::more examples
+Row 2::Height 1::consider the program fragment
+Row 3::Height 1::int x,y=10
+Row 4::Height 1::x=++y + -y
+Row 5::Height 1::the final value of y is 10 but what about x?
+Row 6::Height 1::the final value of x depends on which of the two
+Row 7::Height 1::operands of the + operatoe is evaluated first
+Row 8::Height 1::if ++y is evaluated first, x will get value 21
+Row 9::Height 1::if -y is evaluated first, x will get value 19

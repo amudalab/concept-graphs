@@ -1,0 +1,944 @@
+class we discussed::class we discussed
+collision resolution techniques::collision resolution techniques
+first saw chaining::first saw chaining
+chaining then last::chaining then last
+double hashing linear::double hashing linear
+hashing linear programming::hashing linear programming
+bit of analysis::bit of analysis
+right in today::right in today
+talk about trees::talk about trees
+trees some data::trees some data
+structures for trees::structures for trees
+top most trees::top most trees
+notion of parent::notion of parent
+parent and children::parent and children
+parent of node::parent of node
+difference between ancestor::difference between ancestor
+ancestor and grandparent::ancestor and grandparent
+siblings please note::siblings please note
+children of node::children of node
+great grand parent::great grand parent
+term just call::term just call
+terms we defined::terms we defined
+nature of family::nature of family
+right the extremists::right the extremists
+leaf a leaf::leaf a leaf
+tree so leaf::tree so leaf
+leaves more definitions::leaves more definitions
+nodes right node::nodes right node
+associate a notion::associate a notion
+notion of level::notion of level
+node the root::node the root
+level zero children::level zero children
+level two right::level two right
+depth in level::depth in level
+depth zero depth::depth zero depth
+depth two depth::depth two depth
+node the height::node the height
+point the degree::point the degree
+node the number::node the number
+number of children::number of children
+leaves have degree::leaves have degree
+basically basic terminology::basically basic terminology
+terminology quite intuitive::terminology quite intuitive
+represent the hierarchy::represent the hierarchy
+lets called electronics::lets called electronics
+r&d one divisions::r&d one divisions
+divisions another purchasing::divisions another purchasing
+purchasing another manufacturing::purchasing another manufacturing
+manufacturing fourth division::manufacturing fourth division
+fourth division sales::fourth division sales
+lets say domestic::lets say domestic
+division an international::division an international
+represent the organizational::represent the organizational
+tree to represent::tree to represent
+represent the table::represent the table
+table of contents::table of contents
+lets say book::lets say book
+book called student::book called student
+chapters overview grading::chapters overview grading
+overview grading environment::overview grading environment
+grading environment programming::grading environment programming
+environment programming support::environment programming support
+programming support code::programming support code
+sections called exams::sections called exams
+homework s programs::homework s programs
+build up tree::build up tree
+tree your file::tree your file
+directory certain directory::directory certain directory
+two sub directories::two sub directories
+directories in mat::directories in mat
+homework s assignment::homework s assignment
+start using definitions::start using definitions
+node are ordered::node are ordered
+put this child::put this child
+child right suppose::child right suppose
+draw family tree::draw family tree
+draw the eldest::draw the eldest
+move from left::move from left
+notion of ordered::notion of ordered
+reflect that order::reflect that order
+notion of order::notion of order
+two sub directory::two sub directory
+sub directory trees::sub directory trees
+nt really make::nt really make
+make a sense::make a sense
+convey any additional::convey any additional
+children s right::children s right
+tree a binary::tree a binary
+notion of left::notion of left
+four five leaves::four five leaves
+children this node::children this node
+children one child::children one child
+defined the notion::defined the notion
+interchange the top::interchange the top
+top two nodes::top two nodes
+stil remain ordered::stil remain ordered
+remain ordered wont::remain ordered wont
+ordered wont wont::ordered wont wont
+wont be ordered::wont be ordered
+ordered be started::ordered be started
+manner which means::manner which means
+means i put::means i put
+move this entire::move this entire
+two different binary::two different binary
+representing an information::representing an information
+change the order::change the order
+define a binary::define a binary
+binary tree recursive::binary tree recursive
+tree recursive format::tree recursive format
+right a binary::right a binary
+read the single::read the single
+node a leaf::node a leaf
+attached two trees::attached two trees
+two trees binary::two trees binary
+trees binary tree::trees binary tree
+tree this part::tree this part
+left sub tree::left sub tree
+right sub tree::right sub tree
+construct any binary::construct any binary
+node i attached::node i attached
+attached left sub::attached left sub
+tree right sub::tree right sub
+sub tree recursive::sub tree recursive
+obtained by taking::obtained by taking
+taking a node::taking a node
+node and attaching::node and attaching
+attaching to left::attaching to left
+right sub trees::right sub trees
+attached both right::attached both right
+right so remember::right so remember
+remember this term::remember this term
+introduce other terms::introduce other terms
+terms left sub::terms left sub
+piece this piece::piece this piece
+examples of binary::examples of binary
+binary trees arithmetic::binary trees arithmetic
+trees arithmetic expressions::trees arithmetic expressions
+expression and suppose::expression and suppose
+parenthesized this manner::parenthesized this manner
+node would correspond::node would correspond
+evaluate this expression::evaluate this expression
+draw a tree::draw a tree
+tree whose root::tree whose root
+operator one child::operator one child
+child is sub::child is sub
+tree that obtained::tree that obtained
+built this tree::built this tree
+representing yeah decision::representing yeah decision
+make much sense::make much sense
+star bucks cafe::star bucks cafe
+bucks cafe paragon::bucks cafe paragon
+tree each node::tree each node
+decision tree corresponds::decision tree corresponds
+top root node::top root node
+meal the answer::meal the answer
+bucks the answer::bucks the answer
+trees why binary::trees why binary
+follow the decision::follow the decision
+terminology and examples::terminology and examples
+right so lets::right so lets
+competes stuff lets::competes stuff lets
+stuff lets define::stuff lets define
+define a complete::define a complete
+complete binary tree::complete binary tree
+call a tree::call a tree
+tree a complete::tree a complete
+sense its full::sense its full
+right every node::right every node
+tree okay lets::tree okay lets
+children every internal::children every internal
+children then telling::children then telling
+case every node::case every node
+two two children::two two children
+children some nodes::children some nodes
+children every node::children every node
+leaf that means::leaf that means
+means every internal::means every internal
+two nodes level::two nodes level
+two four level::two four level
+tree we call::tree we call
+maximum level number::maximum level number
+tree that means::tree that means
+nodes that means::nodes that means
+number of leaves::number of leaves
+leaves complete binary::leaves complete binary
+tree of height::tree of height
+number of internal::number of internal
+minus one right::minus one right
+nodes the number::nodes the number
+nodes is number::nodes is number
+binary tree number::binary tree number
+number of nodes::number of nodes
+right lets call::right lets call
+call this number::call this number
+tree n node::tree n node
+tree n nodes::tree n nodes
+whats the number::whats the number
+half the nodes::half the nodes
+nodes are leaves::nodes are leaves
+half our internal::half our internal
+tree is log::tree is log
+log of number::log of number
+number of complete::number of complete
+height h whats::height h whats
+nodes then whats::nodes then whats
+whats it height::whats it height
+height is log::height is log
+tree is number::tree is number
+roughly the total::roughly the total
+whats the binary::whats the binary
+start suitably large::start suitably large
+suitably large complete::suitably large complete
+large complete binary::large complete binary
+right for instance::right for instance
+matter what tree::matter what tree
+tree i wanted::tree i wanted
+right this picture::right this picture
+obtain any binary::obtain any binary
+tree at level::tree at level
+tree is obtained::tree is obtained
+obtained from complete::obtained from complete
+tree by pruning::tree by pruning
+nodes at level::nodes at level
+binary tree height::binary tree height
+node at level::node at level
+nodes that binary::nodes that binary
+rewrite this suppose::rewrite this suppose
+suppose i told::suppose i told
+rearranged is greater::rearranged is greater
+greater than log::greater than log
+tree which achieves::tree which achieves
+achieves this equality::achieves this equality
+tree which acquires::tree which acquires
+acquires the smallest::acquires the smallest
+create a binary::create a binary
+tree i give::tree i give
+minimum possible height::minimum possible height
+height of log::height of log
+whats the maximum::whats the maximum
+height that binary::height that binary
+nodes has height::nodes has height
+height n minus::height n minus
+nodes here height::nodes here height
+tree so binary::tree so binary
+nodes minimum height::nodes minimum height
+mistake many people::mistake many people
+assume that binary::assume that binary
+binary tree means::binary tree means
+tree means height::tree means height
+tree have right::tree have right
+whats the minimum::whats the minimum
+minimum number leaves::minimum number leaves
+prove the number::prove the number
+nodes any binary::nodes any binary
+tree the number::tree the number
+node internal nodes::node internal nodes
+nt have child::nt have child
+leaf so base::leaf so base
+cases when number::cases when number
+case left hand::case left hand
+left hand side::left hand side
+side the right::side the right
+right hand side::right hand side
+assume the statement::assume the statement
+statement is true::statement is true
+minus one internal::minus one internal
+true for trees::true for trees
+internal nodes suppose::internal nodes suppose
+nodes right lets::nodes right lets
+sub one internal::sub one internal
+nodes to internal::nodes to internal
+tree now lets::tree now lets
+apply the induction::apply the induction
+hypothesis the number::hypothesis the number
+tree so total::tree so total
+proof which shows::proof which shows
+shows the number::shows the number
+leaves is equal::leaves is equal
+height the tree::height the tree
+leaves and number::leaves and number
+achieves the equality::achieves the equality
+right how small::right how small
+equal to number::equal to number
+implies the number::implies the number
+done just number::done just number
+nodes is greater::nodes is greater
+mind binary tree::mind binary tree
+half the number::half the number
+equality was achieved::equality was achieved
+number that tree::number that tree
+type of data::type of data
+abstract data types::abstract data types
+care generic container::care generic container
+generic container methods::generic container methods
+methods of size::methods of size
+tree is empty::tree is empty
+position based container::position based container
+based container methods::based container methods
+container methods kind::container methods kind
+list or sequence::list or sequence
+sequence data types::sequence data types
+right so swap::right so swap
+positions as references::positions as references
+position data type::position data type
+positions the tree::positions the tree
+objects this positions::objects this positions
+access the element::access the element
+element swap elements::element swap elements
+swapping the elements::swapping the elements
+two positions replace::two positions replace
+positions replace element::positions replace element
+replacing the element::replacing the element
+external or leafs::external or leafs
+correspond to leaf::correspond to leaf
+access a methods::access a methods
+root an object::root an object
+object of type::object of type
+returns the root::returns the root
+root means reference::root means reference
+reference of type::reference of type
+parent node children::parent node children
+return if children::return if children
+return an sequence::return an sequence
+sequence an object::sequence an object
+object type sequence::object type sequence
+access the data::access the data
+data the update::data the update
+typically application specific::typically application specific
+method okay binary::method okay binary
+derived class tree::derived class tree
+method will describe::method will describe
+left child give::left child give
+child or give::child or give
+data your keeping::data your keeping
+reference to key::reference to key
+key or data::key or data
+node any element::node any element
+element that sitting::element that sitting
+make any sense::make any sense
+access the left::access the left
+child by invoking::child by invoking
+invoking the left::invoking the left
+left child method::left child method
+invoke element method::invoke element method
+implement the position::implement the position
+node its parent::node its parent
+parent the root::parent the root
+child the left::child the left
+node right child::node right child
+child um member::child um member
+referring to null::referring to null
+null any questions::null any questions
+care of arbitrary::care of arbitrary
+arbitrary trees lets::arbitrary trees lets
+lets say unbounded::lets say unbounded
+right this node::right this node
+node has lets::node has lets
+reach the last::reach the last
+members three members::members three members
+members right parent::members right parent
+left most child::left most child
+referred to left::referred to left
+questions some question::questions some question
+sense in left::sense in left
+binary tree left::binary tree left
+right only make::right only make
+make sense binary::make sense binary
+sense binary tree::sense binary tree
+return left child::return left child
+right first child::right first child
+child such thing::child such thing
+child then lets::child then lets
+lets you access::lets you access
+access its siblings::access its siblings
+children throughout linked::children throughout linked
+list any questions::list any questions
+end our discussion::end our discussion
+discussion on binary::discussion on binary
+binary trees today::binary trees today
+reversals of trees::reversals of trees
+last class::last class
+collision resolution::collision resolution
+resolution techniques::resolution techniques
+double hashing::double hashing
+hashing linear::hashing linear
+linear programming::linear programming
+binary trees::binary trees
+data structures::data structures
+turn parent::turn parent
+great grand::great grand
+grand parent::grand parent
+family tree::family tree
+real trees::real trees
+generic terms::generic terms
+internal nodes::internal nodes
+internal node::internal node
+term depth::term depth
+maximum level::maximum level
+basic terminology::basic terminology
+company lets::company lets
+fourth division::fourth division
+division sales::division sales
+domestic sales::domestic sales
+sub division::sub division
+organizational structure::organizational structure
+out tree::out tree
+student guide::student guide
+chapters overview::chapters overview
+grading environment::grading environment
+environment programming::environment programming
+programming support::programming support
+support code::support code
+exams homework::exams homework
+file system::file system
+unix environment::unix environment
+windows environment::windows environment
+root directory::root directory
+sub directories::sub directories
+sub directory::sub directory
+todays class::todays class
+doubt kind::doubt kind
+ordered tree::ordered tree
+draw family::draw family
+eldest child::eldest child
+younger child::younger child
+order lets::order lets
+directory trees::directory trees
+picture concerned::picture concerned
+additional information::additional information
+binary tree::binary tree
+left child::left child
+right child::right child
+stil remain::stil remain
+remain ordered::remain ordered
+ordered wont::ordered wont
+wont wont::wont wont
+entire piece::entire piece
+recursive format::recursive format
+single node::single node
+left sub::left sub
+sub tree::sub tree
+right sub::right sub
+tree recursive::tree recursive
+sub trees::sub trees
+terms left::terms left
+arithmetic expressions::arithmetic expressions
+arithmetic expression::arithmetic expression
+resulting value::resulting value
+decision trees::decision trees
+star bucks::star bucks
+bucks cafe::bucks cafe
+cafe paragon::cafe paragon
+decision tree::decision tree
+tree corresponds::tree corresponds
+top root::top root
+root node::root node
+fast meal::fast meal
+competes stuff::competes stuff
+stuff lets::stuff lets
+lets define::lets define
+complete binary::complete binary
+equivalent right::equivalent right
+evry node::evry node
+node level::node level
+nodes level::nodes level
+level number::level number
+leaves complete::leaves complete
+leaf nodes::leaf nodes
+tree number::tree number
+total number::total number
+right lets::right lets
+lets call::lets call
+tree lets::tree lets
+simple counting::simple counting
+leafy kind::leafy kind
+large complete::large complete
+pieces cut::pieces cut
+important fact::important fact
+tree height::tree height
+last level::last level
+maximum number::maximum number
+smallest height::smallest height
+shortest height::shortest height
+nodes close::nodes close
+minimum height::minimum height
+maximum height::maximum height
+zig zag::zig zag
+manner height::manner height
+nodes minimum::nodes minimum
+people make::people make
+tree means::tree means
+means height::means height
+minimum number::minimum number
+number leaves::number leaves
+lets figure::lets figure
+inequality number::inequality number
+induction induction::induction induction
+base case::base case
+base cases::base cases
+case left::case left
+left hand::left hand
+hand side::hand side
+right hand::right hand
+inequality suspect::inequality suspect
+read statement::read statement
+nodes suppose::nodes suppose
+induction hypothesis::induction hypothesis
+simple proof::simple proof
+mind binary::mind binary
+leafy term::leafy term
+dryer trees::dryer trees
+right whats::right whats
+abstract type::abstract type
+data types::data types
+generic methods::generic methods
+abstract data::abstract data
+generic container::generic container
+container methods::container methods
+method list::method list
+position based::position based
+based container::based container
+methods kind::methods kind
+sequence data::sequence data
+swap elements::swap elements
+position data::position data
+data type::data type
+elements sitting::elements sitting
+method positions::method positions
+position objects::position objects
+positions methods::positions methods
+tree references::tree references
+element method::element method
+positions access::positions access
+element swap::element swap
+positions replace::positions replace
+replace element::replace element
+query methods::query methods
+leaf access::leaf access
+methods root::methods root
+call root::call root
+type position::type position
+understand difference::understand difference
+root means::root means
+means reference::means reference
+type casting::type casting
+position return::position return
+parent node::parent node
+node children::node children
+object type::object type
+type sequence::type sequence
+position position::position position
+update methods::update methods
+typically application::typically application
+generic method::generic method
+sub class::sub class
+derived class::derived class
+class tree::class tree
+additional methods::additional methods
+position give::position give
+child give::child give
+sibling right::sibling right
+node structure::node structure
+node suppose::node suppose
+root method::root method
+child method::child method
+invoke element::invoke element
+parent link::parent link
+arbitrary trees::arbitrary trees
+trees lets::trees lets
+unbounded trees::unbounded trees
+data members::data members
+create space::create space
+linked list::linked list
+last element::last element
+first field::first field
+node empty::node empty
+right parent::right parent
+right sibling::right sibling
+tree left::tree left
+make sense::make sense
+return left::return left
+trees today::trees today
+last::last
+class::class
+discussed::discussed
+hashing::hashing
+collision::collision
+resolution::resolution
+techniques::techniques
+first::first
+chaining::chaining
+double::double
+linear::linear
+programming::programming
+bit::bit
+analysis::analysis
+right::right
+today::today
+talk::talk
+trees::trees
+binary::binary
+data::data
+structures::structures
+tree::tree
+root::root
+top::top
+nt::nt
+notion::notion
+parent::parent
+children::children
+node::node
+argument::argument
+turn::turn
+ancestor::ancestor
+grandparent::grandparent
+understand::understand
+difference::difference
+descendents::descendents
+fact::fact
+siblings::siblings
+sibling::sibling
+note::note
+ancestors::ancestors
+great::great
+grand::grand
+term::term
+call::call
+terms::terms
+defined::defined
+nature::nature
+family::family
+real::real
+leaves::leaves
+upside::upside
+extremists::extremists
+leaf::leaf
+generic::generic
+nodes::nodes
+child::child
+definitions::definitions
+internal::internal
+associate::associate
+level::level
+two::two
+depth::depth
+thing::thing
+height::height
+maximum::maximum
+questions::questions
+point::point
+degree::degree
+number::number
+basically::basically
+basic::basic
+terminology::terminology
+intuitive::intuitive
+represent::represent
+hierarchy::hierarchy
+organization::organization
+instance::instance
+company::company
+lets::lets
+electronics::electronics
+divisions::divisions
+r&d::r&d
+purchasing::purchasing
+manufacturing::manufacturing
+fourth::fourth
+division::division
+sales::sales
+domestic::domestic
+sub::sub
+international::international
+organizational::organizational
+structure::structure
+out::out
+table::table
+contents::contents
+book::book
+student::student
+guide::guide
+chapters::chapters
+overview::overview
+grading::grading
+environment::environment
+support::support
+code::code
+chapter::chapter
+sections::sections
+exams::exams
+homework::homework
+programs::programs
+subsections::subsections
+build::build
+file::file
+system::system
+unix::unix
+windows::windows
+organized::organized
+directory::directory
+directories::directories
+mat::mat
+assignment::assignment
+todays::todays
+start::start
+classes::classes
+doubt::doubt
+kind::kind
+ordered::ordered
+means::means
+put::put
+left::left
+suppose::suppose
+draw::draw
+eldest::eldest
+younger::younger
+move::move
+reflect::reflect
+order::order
+make::make
+sense::sense
+picture::picture
+concerned::concerned
+convey::convey
+additional::additional
+information::information
+four::four
+change::change
+impact::impact
+interchange::interchange
+stil::stil
+remain::remain
+wont::wont
+started::started
+slightly::slightly
+manner::manner
+entire::entire
+piece::piece
+dependent::dependent
+application::application
+representing::representing
+meaning::meaning
+front::front
+clear::clear
+define::define
+recursive::recursive
+format::format
+read::read
+single::single
+attached::attached
+part::part
+construct::construct
+obtained::obtained
+taking::taking
+attaching::attaching
+null::null
+remember::remember
+introduce::introduce
+examples::examples
+arithmetic::arithmetic
+expressions::expressions
+expression::expression
+parenthesization::parenthesization
+parenthesized::parenthesized
+numbers::numbers
+correspond::correspond
+operations::operations
+evaluate::evaluate
+sum::sum
+operator::operator
+resulting::resulting
+value::value
+adding::adding
+operation::operation
+built::built
+decision::decision
+star::star
+bucks::bucks
+cafe::cafe
+paragon::paragon
+corresponds::corresponds
+fast::fast
+meal::meal
+answer::answer
+coffee::coffee
+place::place
+typically::typically
+follow::follow
+competes::competes
+stuff::stuff
+complete::complete
+equal::equal
+full::full
+equivalent::equivalent
+evry::evry
+give::give
+quickly::quickly
+show::show
+telling::telling
+case::case
+requirement::requirement
+implies::implies
+counter::counter
+count::count
+definition::definition
+squared::squared
+minus::minus
+total::total
+step::step
+whats::whats
+equals::equals
+half::half
+remaining::remaining
+similarly::similarly
+log::log
+directly::directly
+simple::simple
+counting::counting
+doing::doing
+mind::mind
+large::large
+roughly::roughly
+leafy::leafy
+suitably::suitably
+cut::cut
+matter::matter
+wanted::wanted
+pieces::pieces
+proof::proof
+obtain::obtain
+pruning::pruning
+branches::branches
+important::important
+square::square
+rewrite::rewrite
+told::told
+quantity::quantity
+rearranged::rearranged
+greater::greater
+achieves::achieves
+equality::equality
+acquires::acquires
+smallest::smallest
+create::create
+shortest::shortest
+packing::packing
+close::close
+filling::filling
+levels::levels
+minimum::minimum
+zig::zig
+zag::zag
+mistake::mistake
+people::people
+assume::assume
+figure::figure
+prove::prove
+inequality::inequality
+induction::induction
+base::base
+cases::cases
+hand::hand
+side::side
+suspect::suspect
+satisfy::satisfy
+statement::statement
+true::true
+apply::apply
+hypothesis::hypothesis
+shows::shows
+power::power
+small::small
+rearrange::rearrange
+done::done
+replace::replace
+achieved::achieved
+dryer::dryer
+showed::showed
+abstract::abstract
+type::type
+types::types
+methods::methods
+care::care
+container::container
+size::size
+empty::empty
+element::element
+method::method
+list::list
+elements::elements
+position::position
+based::based
+sequence::sequence
+swap::swap
+positions::positions
+references::references
+access::access
+sitting::sitting
+objects::objects
+parameters::parameters
+invoke::invoke
+swapping::swapping
+replacing::replacing
+query::query
+external::external
+leafs::leafs
+times::times
+return::return
+object::object
+returns::returns
+reference::reference
+casting::casting
+update::update
+specific::specific
+treated::treated
+derived::derived
+continue::continue
+describe::describe
+skip::skip
+keeping::keeping
+key::key
+stored::stored
+invoking::invoking
+datas::datas
+implement::implement
+links::links
+link::link
+referring::referring
+member::member
+arbitrary::arbitrary
+unbounded::unbounded
+members::members
+space::space
+linked::linked
+pointing::pointing
+head::head
+essentially::essentially
+reach::reach
+field::field
+referred::referred
+question::question
+end::end
+discussion::discussion
+reversals::reversals

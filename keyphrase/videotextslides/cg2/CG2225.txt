@@ -1,0 +1,12 @@
+Row 1::Height 2::raster graphics
+Row 2::Height 3::midpoint line algorithm
+Row 3::Height 1::dx=x2-x1;dy=y2-y1
+Row 4::Height 1::d=2dy-dx;e=2dy;nw=2(dy-dx)
+Row 5::Height 1::writepixel(y):
+Row 6::Height 1::if d<=0
+Row 7::Height 1::d+=e;x+=1
+Row 8::Height 1::else
+Row 9::Height 1::d+=me;x+=1;y+=1;
+Row 10::Height 1::end
+Row 11::Height 1::writepixel(x,y);
+Row 12::Height 1::end while

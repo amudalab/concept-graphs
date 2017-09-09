@@ -1,0 +1,791 @@
+
+Lecture -3
+                         Systems analysis and Design
+                              Prof.V.Rajaraman
+              Department of Super computer education & Research
+                Indian Institute of Science (IISc), Bangalore
+
+we saw that there are six major functional areas which are important in  any
+organization and when you design information systems you  have  to  able  to
+create a to the requirements in all these functional areas
+the functional areas are [01.33...]
+are production marketing materials management finance human resource
+development and research and development
+among these we did talk about production
+not every organization may not have really production
+um but um most organization you have
+for instance if you are really a company which is retaining materials like
+food mart then you don't produce anything
+you only get things from your suppliers and then you market it
+so on the other hand marketing is an important part of any organization
+whether it be a organization like a motor car company or it be a um um food
+world kind of company which does these sales the all materials they buy
+from their um vendors or even um a company like google which is um which is
+primarily based on verb and their major product is a um effective of
+searching in
+so um they also have to have what i would call marketing
+because marketing is very crucial in case of any company
+particularly so if you are in the area of software design and try to market
+the software products or even hardware design and hardware products
+if you are making for instance some personal computers some p c's or
+something equivalent to that the company's future is very much depend upon
+how well are able to market the product you made
+it may be the best product
+but um unless the marketing is effective one will not able to make any kind
+of profit for the company
+so marketing is an important aspect of every company
+besides marketing of course every fa company will have functional areas or
+finance
+because without money nothing moves in this world
+so you have to have finance and um you have to have um materials
+there is  materials [04.08...]
+i mean but materials may be there definitely in many most companies
+including for instance a web based company like google their materials are
+primarily the um the servers which they have to buy and they have to
+maintain the servers they have to have huge bank of servers and [04.27....]
+
+and so on
+so materials are a part of many company
+then apart from that human resource
+no company can have without people and people are the most important part
+of any organization and um the people how smart they are how satisfied they
+are makes a lot of difference to particularly software companies
+software companies depend upon the intellectual labor of the people
+so their production is primarily software or writing programs or developing
+systems
+for them these are all done by people
+so unless the people are satisfied and the people are productive
+the company is not going to make reasonable product in reasonable time
+so managing human resources in any organization is very important part
+research and development is extremely important in all the newer
+technologies
+particularly in um telecommunications in computing in um even motor car
+which are being made in searching [05.50..]
+ and other types of web based products
+it may not be all that important in companies like food mart which really
+are selling
+the research and development may not be an important aspect for them
+but in general the um all the six functional areas will be there in most
+organizations
+and at least four of them will be there  in almost every organization
+so now we look at marketing at some length
+as usual we look at  of course the requirements of information  under the
+categories of strategic requirements tactical requirements and operational
+requirements
+and among these the strategic requirements are really requirement by the
+top management which are an overview of the business and they want to kind
+of grow the business in the long run
+and tactics are the second level of management who having desire on a
+particular strategy
+try to make the best out of the strategy in terms of what i would call
+tactics um which um um last hour i pointed out an example of a cricket team
+where strategy is something which is designed by the coach and the captain
+and the selectors and so on
+and the tactics on the field is  by the captain to to win the match
+so similarly to make the company profitable tactics is extremely important
+and the tactical information is what is the um major um work which is done
+by the middle level managers
+and of course operational information is luminous and that is required for
+um day to day running and they require a lot of um that operational
+information in order to able to we have informed  decisions at the
+tactical  level as well as the strategic level
+unless  you process [08.17...]
+day to day information one had the the people on the top will not know
+really what is going on day to day
+they don't need to know everything
+but they had need to have the digest of  what is the state of operation and
+how the strategy are important on the operations
+is the strategy left left to better operations or the strategy is left left
+to worse operations
+so they can change the strategy based on the results of the operations
+which is  obtained by the operational information
+so coming to marketing as i said marketing is the most important part of
+the working in every company
+and um even in a company such as google the marketing strategy has been
+extremely important to make that company prosper
+one may wonder what does a search engine  where do they make money and
+infact they have to make money to survive
+because you have continuously improve your [09.30...] engines
+they get into new areas and so on
+so they have to have reasonable profit coming into their company for being
+able to be there for long all
+and um everybody is trying to compete with this kind of business
+now this strategy which um one has to look at is um what is the markets
+what are the new market which are developing and what are the competitors
+doing and what is the technology and demographic forecast and product
+changes
+and these are the marketing primarily consists of  methods of looking at
+what the competition also does
+so that you can appropriately change your method of working
+to to look at an example of google what they started what they started with
+search engine they had a twenty search engine already in the market
+and they have to make in roads into this market where is  already a lot of
+competition
+so what do they do
+in order to get into the market they give a free
+so they started giving away the google free in the sense even today you can
+log on to google google dot com and search the web and over sometime by
+word of mouth and by people actually using it they found that their first
+strategy in search engine was performing much better than the existing
+search engines
+so there is a lot of people starting to move to um using google
+now when they start using google that means you have to  actually improve
+it to survive
+and in new way [11.41..] of course they can't be developing the software
+free of cost and putting all the servers and so on with no revenue coming
+in
+the original revenue of course came from some so called venture capitals to
+give money to get something started
+but to sustain you have to market
+now the marketing is very interesting in this case because people are used
+to using this google being free
+suddenly you say in order to use google you have to you have to pay some
+money may be quickly your your market may vanish
+so you have to take a strategy
+ so their great strategic idea was that they went to advertising people and
+then as i said people lot of people use of search engines and they search
+for a particular item on the  web like for instance searching for um say um
+information about cars
+when they search for the information about the cars then i um will give
+[refer slide time 12.56]
+
+[pic]
+
+along with the results of the search a little add saying that saying that
+your your car is um one of one of the best in the market and so on um
+but but not of course um is not a not a [13.13...]
+in the sense that he is only putting an advertisement for you which
+synchronizes with the search which a person is doing
+so there is no point in giving some um advertisement regarding um um um
+magi noodles when some body is looking for search okay
+so it is extremely important to kind of synchronize what you pick
+so that technology is developed with the result that they are able to
+synchronize with advertising with the search and getting the money from
+advertisers
+so effectively they are getting money from the tutor and then giving it to
+the free to [13.55...] okay
+and as for as you are concerned you are very happy to continue to receive
+free search and we don't particularly mind those adds as long as they are
+not intrusive
+if they intrude and some body gives a better search engine without all
+those inclusions very quickly people will desert google and go to some
+other search engine
+so these are to be people has to look out for this strategy or the company
+must be to continuously look out for these um these problems
+and um if you take an another example of a motor cars the motor cars us as
+you know today in india there are many company which are competing
+on one hand there is old maruti which is being there for the oldest company
+making many cars
+then there this hyundai which  which came up and then there is tata which
+also give up a motor car and there are other companies like feat and so on
+which are there in the in the market
+there are at least about half a dozen companies in the market making cars
+so the top management has to take a particular strategic decisions of what
+you have to do with different models of my car okay and um
+how do i look for new markets of my car
+ you know the indian market is some what getting saturated
+in the sense that there are too many competitors competitors and so on
+so they all look for say market in srilanka
+do i  look for market in south africa or do i go to um um um far east or do
+i go to europe
+um um so these are issues in terms of looking for the markets and doing
+some kind of a strategic decisions are either going to say market like
+south africa or srilanka wiil decide not to
+because the top management may be think that the [16.03...]
+of being able to send the cars and getting profit out of that and the local
+competition over come there may be quite difficult
+and um another strategic decision you may take is that the way in which car
+is sold
+car is sold through a lot of agents who are over there in the um um so
+called partners who market these cars and they give service after marketing
+
+so some your car face after you buy it then they essentially try to help
+you and get the car set right free of cost and even take your car from free
+servicing or for free repairs at least for the first one or two years and
+so on
+so these are the issues strategy the strategic people has to decide
+and you have to also look at the competitive strategy
+suppose some body else is giving um some some kind of free service he says
+three years it is free service and i will give one year free service is it
+worth going for a three year service or it not worth going for a three year
+free service that kind of decision one has to take
+and um you also have to look at the demographic forecast
+in other words where what i mean by demographic forecast is um how the
+population growing and at what age groups are people there
+in fact india has a large number of young people who are getting into the
+um labor market starting to make reasonable amount of money
+and now you have to see whether you had our strategy to meet the
+requirements of this younger people and they may not require a large car
+you may just try try a small car as a beginning thing
+so maruti strategy has to come up with a small car at low cost
+so once you buy the low cost and get used to it then you will become
+slightly richer and want money to dispose then you decide you go for a
+maruti itself with a better model or more expensive model and of course
+they have a strategy may be if you are an x maruti owner  and you want to
+abbreviate the maruti i will take back your old car and pay some money or i
+will give some concession in the new car
+so these are the kind of strategies which top management has to decide so
+that they with once get the customer they try to keep the customer happy
+right through possible his career so he goes on being loyal to you also
+so again give some called loyalty bonus something to things of that type
+so this essential what the companies try to strategy
+now in order to do this strategy you also have to look at the tactics of
+what you how how  do the middle management to help use the strategy and
+make it to work
+so um you have to look at for instance how [19.28...]
+ the fact the strategic decision is taken that the you are the um existing
+owner of a small car and you want to abbreviate to a bigger model then i
+will give you  concession or i will take back your old car [19.46...]
+you should know so that [19.50..]
+technique should i use
+how widely should  i i advertise how is it going to cost me
+is it is it written in the advertising revenue worth the cost
+also today there are plenty of different avenues of advertising
+you can advertise in t v you can advertise in papers you can advertise in
+the um um the web
+as i said google's major revenue is advertising revenue you can advertise
+in the web
+so there are so many different areas to reach it you can advertise
+but you have to decide which is more cost effective
+so you really have to have an information and anal analysis of information
+in terms of intact of certain types of advertising on the increase in
+revenue
+suddenly you find the put a t v slot and you found that because the t v
+slot which you had suddenly people start enquiring about your car and you
+asked a feed back on that then you that this t v slot has really helped
+okay
+and so that that is the kind of thing which i mean by  say saying the
+analysis of impact
+and also surveys of cus customer preferences in other words you try to look
+at um um who prefers what type of car um you may go for um tata car or the
+vofa maruti car and so on and you ask a question why you are doing this
+and um one way of doing this is by saying out question as  to people
+but no body answers questioners
+because it's bore
+you know you have to fill up the form and returning it so on
+so some times you use you use a tactic of saying that well [21.52...]
+you fill up a form and send it to us and i receive the form then you are
+eligible for for a lottery which free free car and so on
+so many body [22.06....] fill that form
+but most people may not think after you have possibility of getting lottery
+car is so little  that you may not worth you may not think it is worth
+spending out time and doing that
+so normally people what the you had to have a tactical method also of um
+whether to use this form method or to send people to enquire from house to
+house
+but then people cost a lot of money to go and enquire
+so this being determining the cost benefit of all these methods
+and now what is the correlation between prices and sales
+if i reduce the price is sales going up okay
+or um should i sometimes what happens is if the price is made low people
+think that it's a cheap product
+they don't buy it
+they go for a expensive one because they think an expensive product is
+double quality
+so there is also [23.11...] involved in this
+so to pricing at the right level is an important tactical decision one has
+to take
+like for instance um um if you take um um say computer you are a you are
+trying to manufacture computers in the market and sell computers in the
+market
+now um everybody talks about the sum ten thousand p c and so on okay [refer
+slide time 23.39]
+[pic]
+
+
+so um is it really feasible to have that kind of a machine even the people
+claim that sum ten thousand is now available
+but the question is what do you get with that sum  ten thousand okay
+and um is that machine um full fill all the requirements
+so one has to also look at the um um look at the fact that by putting the
+sum  ten thousand p c in the market as many sales  gone up okay
+when it is gone up suddenly because of this lowering of price may be i can
+make a nice product sof the margin of profit is small and get my money
+through margin
+there is the margin is small by by volume
+huge volume is sold in a small margin to get a profit is quite high
+very interesting example of this is what is as the tact to be followed by a
+um um [24.43....]
+  in olden days which came up with a compiler for pascal and um when they
+came up with a compiler for pascal they sold it at forty nine dollars okay
+we just considered a very low price
+compared to compilers already in the market which are selling for thousands
+of dollars
+now when it is a forty nine dollars thing immediately people started to
+looking at it
+because first of all they are concerned may be it is not very [25.19....]
+compiler
+and started using it because the companies are giving sample copies
+when you start using it and you found that is as good as any in the market
+suddenly the market size increased and lot of people millions of copies are
+sold and so even the margin on the each copy is small if you multiply a
+million even five dollars per copy it becomes a huge amount
+ and interestingly in software the cost is not linearly proportional to the
+number of products products which are sold
+what i mean by this is in a car there is a fixed cost for producing a car
+and whenever you sell a car the price of the car must be higher than the
+fixed cost of the car and that is the profit margin
+in the case of a um software the fixed cost of fund that is the amount of
+time you spend in developing the soft ware and the number of people who
+have worked for it and so on
+so all your money is already gone in terms of clearing that product
+so now the larger you sell that cost is not going go up for you
+whereas your profit is going to go up for each new product because the cost
+of a new software is one one more copy of a software is cost of a c d and c
+d cost no money at all
+really speaking okay compared to cost of  that  software
+so the marginal cost of selling extra soft ware is in terms of production
+cost is almost zero
+whereas the profit is is constant
+so it can the profit can sky rocket if your volume goes up okay and that is
+essentially what they found
+and these are lessons learned by lot of software suppliers okay
+they said that it is better to kind of price it at a reasonable level and
+try to get volumes
+and make your product good quality so they sell by itself and also the
+method of giving something free as you so called a trial copy for something
+like  a month
+and a trial copy if you use for a month and feel satisfied then you pay for
+it and keep it
+other wise  i will kind of go away from your machine
+so these are the kind of tact tactical methods which people follow
+now the um other tactical thing one has to do is about how to deploy your
+sales force
+people have to um in many any product you had to have some other sales
+do you really  have people  go around selling or [noise]
+this advertising sufficient for selling
+these are really issues they really have to look at in terms of the um
+sales force
+like in the case of for instance sale  of books the sales force this goes
+to various book levels and college teachers and so on and tries to promote
+the book
+and um the sales force becomes very important to make the book known to the
+public
+and being available by producing it  in book store and so on
+so where do i deploy this sales force
+by deploying in north india or south india or east india or west india
+for books for instance  many of many of the companies  deploy lot more
+people in south india because the number of engineering colleges in south
+india is huge compared to that of colleges in north india
+so there is again in terms of decision how to deploy and what are the
+alternate marketing channels
+do they sell books by the web or by book stores and so on
+and you have a special sales campaigns
+um these are issues which tactics tactics are important [refer slide time
+29.33]
+
+[pic]
+
+the operational information which is important in marketing management is
+um as i said to feed the tactics in strategy
+you look at the sales of the deployment as a tactical decision the
+operational  decision to is to operational information required to take
+this tactical decision is to find out sales analysis by regions which
+customize which sales person sold and so on
+and um the operational information is very important to be able to also
+reward  a better sales person and so on
+suppose a particular sales person in a area did extremely well what
+normally companies do is to give some quotas to each sales person saying
+that you are suppose to sale this much  and if they exceed that quota of
+considered  amount then you have to give a bonus and um make make that
+thing and make him give an  incentive
+so that information should should be available to find out whether he
+exceeded quota or he is below quota
+if he is below quota of course you have to warn him and so on
+so this is um the computer continuously computes or determines active of
+sales who is sales person in charge and so you have a table which is
+operational information
+and you then you give a exceptional report based on table giving the people
+who have exceed the target buy considerable amount and by the tactical
+people may have to tell you anything which exceeds twenty percent of the
+base amount you let me now
+or if it is below ten percent of the base amount you let me know
+if it is below ten percent that means the guy is not doing too well
+above twenty percent means he is doing extremely well
+so then i can take corrective action
+the person is just going straight ahead and keeping up his quota and they
+don't inform at all at the at the tactical level
+so the guy continues and that is the kind of thing which because i i  don't
+require i shouldn't have too much of information
+so um the um similarly um the question of market share and trends there is
+the what is the what the market share is again computed by looking at the
+how the other competitors what their total market how much did they sell
+and then this information is detailed information on how much they sold in
+delhi how much they sold in chandigarh how much they sold in um um chennai
+how much they sold in hyderabad and so on
+the whole um um lot  of um data is available as at the operational level
+and this data has got to be digested to at the tactics [refer slide time
+32.51]
+and operational information has seasonal variations where we are we are
+selling gold jewelery  for instance gold jewelry is always a variation in
+festival season like deepavali um there is a lot more sales of gold than
+the other parts of the year and in south india during some thing like
+sankaranthi there is lot more sale or during new years yugadhi  or
+something there is lot more sales
+so all these things you have to look at the variations and that is
+essentially done by collecting the data
+and um when you change a model of a car say maruti for instance when you
+rent from eight hundred to something else okay and um was there a [33.45..]
+change in the demand  for that car
+that again is a detailed information and one has to analyze that and um how
+how your sales outlet doing
+or the how are they performing is the way in detailed information and one
+has to digest it and cost of the campaign what exactly the campaign cost
+and how how much is the benefit [refer slide time 34.08]
+
+[pic]
+
+so these are the things in terms of um what i would say lots of details
+which has to kind of get digested
+materials management is really how to um manage the um requirements of the
+materials for the organization
+like if you are a car maker then you require a lot of materials like on a
+sense you require a seats of a car you require um steering wheels you
+require horn you require tyres you require um um um lights head lights any
+how [34.51...] items okay
+and so with the [34.56..]
+items which are there you have to decide on whether what kind of
+development should i offer when they like
+you know it is not possible for every car company to make all their
+materials in internally
+like suppose you want to make a um say a horn in your  car [refer slide
+time 35.18]
+
+[pic]
+
+in your car company a horn is a low cost item but is a crucial item
+and um you it may not worth your um while to do that because your labor
+cost may be very high and it may not be worth really um putting that if the
+quality is good
+so you may take a strategic decision that horns are important
+but i don't want  a kind of a invest a lot of money in that and um um break
+all these things
+so why don't i develop a vendor or a supplier i get over a small scale
+person in the near by area and depend [36.03...]
+ tell him look here i have a requirement for um fifty thousand um every two
+or three months but can you make the fifty thousand horns and also giving
+the know how to make it
+because the small scale person may not have  to know how and train him
+today that and so on and then you develop that vendor
+once he becomes a good vendor then your head ache is removed
+that is he makes good horns for you apart to your specification
+ also the horn maker tries to find sells this that horn to other company ma
+companies also and then he will try similar advantage because of if your
+volume goes up then this cost will go down and new also get the benefit
+so vendor  development for critical items is an important part of any um um
+any new materials management
+um similarly you know the development of for a for a publishing company
+developing a um where  a paper vendor
+so saying i i require this quality of paper so can you produce that quality
+of paper
+and essentially trying to develop that person
+and another important strategic decision is what the optimal level of my
+inventory
+in other words  suppose i buy horns in a for my car [noise]
+and expect there is about i will say fifty thousand cars
+do i buy fifty thousand horns ahead of time and if i don't sell fifty
+thousand cars and sell only thirty thousand i will be [noise] holding
+twenty thousand horns for which i have paid and i am not getting any any
+result
+so that is very bad thing to do
+in fact many of the japanese companies their major method is to so called
+just in time manufacturing
+that is they don't keep any thing at all buffer in their company or
+inventory in their company
+they expect the vendor to supply the item as if when required which there
+is in  specified time
+that i say within eight hours i require this item they should be ready to
+sell it
+sell it to you
+this is possible in many areas where the liability of the entire system is
+very good in terms of transport in terms of general situation and so on
+is some what like that you know normally let me say very homely example
+suppose you know that in your house if there is  a twenty four hours of
+water coming continuously  and water is never fails
+whenever you open the tape the water comes
+then what will you do
+you never fill the buckets in your house or you will not have  a sump or
+over head tanks and things like that
+so as you open the tape you can be assured that the water will come
+that is called just in time water
+when you require it the water comes
+but if it turned out the supply is  irregular for various reasons two days
+only you get once in two days when you get the water
+then what you do
+fill up all the buckets enough for two days and this i would say in some
+sense waste one
+because you may not use all the water
+but you you want to be error on the wrong side because you don't want to be
+kept caught got without water
+so you will ove over stock water
+same thing in a in a country suppose transport system is not very reliable
+a lot of delay in transporting the items then i have to make a buffer stock
+or inventory to carry out for that transport delay
+and also for unforcing disruptions like strikes bandhs and things like that
+which are not normally common things like bandhs are not common in
+countries like japan
+so they don't have to worry about this law inventory
+many of the indian companies are forced to keep the conventry because of
+this problem okay
+then that is strategic decision
+how much do you keep
+how reliable is your is your system going to be and so on
+determining proportions of materials needed i mean um and reducing
+varieties of inventory in other words another important thing in terms of
+proportion of material needed is also proportional items which i
+specifically look look out for
+has to look kind at with the some detail and reducing variety is extremely
+important
+in other words the more the variety the more the um um the different types
+of inventory i have to keep
+in fact one of the interesting thing which  strategy which every one use to
+adopt
+even today many computer manufacturers adopt is that they fully load up a
+machine and then they remove some features some soft ware and give it to
+you
+because the varieties only one variety is there and then you order more the
+more things then they will enable that part
+like in order to use a have electric  type writer  which could supply which
+could type both greek letters and english letters and the design is such
+that both greek and english letters is possible
+so when you did not ask for greek [42.33....] but the machine
+[42.35....]was greek part  in the machine and some body wanted the greek
+part  they enable that part
+because  as you know many of these machines are now a days grew into  soft
+ware and you can do that
+ so it is redu reducing variety in terms of the profitability [refer slide
+time 42.50]
+
+[pic]
+
+is better because you only make one type
+now tactical information in material management is in terms of a um of the
+um as i said the you develop the  vendors
+and in developing a vendor you know [43.14..] vendor
+there is a [43.18....]vendor then you have to after some time you start
+asking for whatever price with which you can pay
+so you really have to have multiple vendor development
+ the strategy may be too in fact have more than one vendor developed and
+tactics will be how many developed vendor
+how do i make up my orders among these three based on their performance
+so come up with performance measures
+performance measures may be in terms of quality of what they are producing
+responsiveness which the um the um made by request and um um in terms of
+cost also
+i mean are they the free free vendors one of them may cost more little bit
+more
+but his material may be much better quality
+ so i have to have some method of measuring them
+and also optimal reorder levels
+optimal reorder levels what it really means is that when the inventory goes
+below certain value at what value before will below which it goes do i
+decide of  reordering
+this essentially relocate the buffer
+but in just in time inventory business then there is no question of
+reordering level
+reorder level is zero when ever you know i i get almost zero i ask by phone
+to send the supplies
+but if it is a situation when another [45.04...] supply for some reason
+then you have to decide based on unavailability
+let water in all two buckets or three buckets and so on depends upon your
+consumption pattern and how quickly how how quickly can the new supply come
+okay
+and items you shop has a certain needs
+what it means is that in a in a assembly shop which assembling cars is
+assembling thousand cars a day you need four thousand tyres plus one spare
+type spare tyre
+now you have to have that four thousand tyres ready
+but you may not put all those four thousand tyres in front of you
+but you may submit in groups periodically determining the period and um
+[noise] how to issue what is the standard deal in standard times in a
+tactical decision [refer slide time 46.06]
+
+[pic]
+
+controlling the high value inventory
+in fact one of the interesting things the most companies  do is what is
+called a b c analysis
+that is they look at the costing inventory item and divided upon three
+groups
+the a group which is a high cost item
+b group is a medium cost item
+c group is very low cost item you don't have to worry too much about it
+about reorder level that's not critical
+c level may be nuts and bolts
+b level may be horns and um mirrors and so on
+a level may be um gear boxes or um engine box which are very expensive
+so i pay more attention to the high value inventory and not asking
+[47.17...] to see
+because they really matter too much to me
+so when you concentrate on the high value items i in the long run i will
+save lot more money
+that is what is called controlling high value of inventory
+determining impact on material cost and procurement with design changes and
+new product information
+in other words suppose i want to change the model of a car [refer slide
+time 47.43]
+
+[pic]
+
+then to what extend will the old  old  items work
+do i require new materials do you have to develop new vendors
+how the cost of the materials will impact it
+so these are things which one has to be concerned about whenever a model is
+changed
+and operation is of course as i said a lot of  detail in terms of  excess
+and deficient items received from the vendor
+list of items rejected because of their poor quality
+but a critical items received so  i can immediately tell the manager who is
+waiting for the critical item that is come you can start using it
+so quickly the information has to circulate upstairs [refer slide time
+48.34]
+
+[pic]
+stores in transit because mainly for some thing for  no dues and transit
+i don't have to reorder many  in a big  hurry and i [48.45...] to come and
+how much is already come is being inspected i can [48.50...] inspection if
+i am running out of that material
+so these are operational information which day to day [48.59..] in terms of
+you know how the what i what i really mean by this is more the critical
+item the exception report can go to the tactical manager saying that
+critical item which you are really looking at
+it is in inspection
+so now he he has inspectors [49.24...] saying in a [49.25...] inspection
+and other things do this first and send it back
+so this operational information is important
+value of inventory in hand what is inventory which is um um in the in my
+hand so that i don't have too much of desk stocked
+because too much of inventory in hand and it is too expensive then i am
+loosing money because it is dead
+the value has to be known to the um to the [50.05....] management
+from day to day [noise] the value should be available
+what are the goods received what are rejected and what is issued
+these are all details which whenever some goods have come have or to have
+um [50.27...] what is if rejected what is issued once iss it is taken into
+stock then you have to inform the stores people that is ready to be taken
+to the stock and once it goes to the store you have to tell the finance
+people that money has to be paid because item has been taken into stock
+so then he has to generate a cheque
+this is operational information
+daily these things have to happen as as when an item is taken into stock
+and stored the payment has to be made
+if the payment is delayed then you have a bad relations with vendor and so
+later on he he start reducing on supplies stopping your supplies like that
+so this operational information is very important [refer slide time 51.20]
+[pic]
+
+
+
+finance is the next major item which you have to consider in some detail
+because i said no company can really work without money and um
+so strategy is in terms of how do i finance my my operation
+as i said i gave an example of google
+the financing at the beginning is a whole year of [51.58...] calculus money
+
+that is some fellows gave me venture capital [noise] and i use that venture
+ capital money to be able to finance my first year of operation
+after that how do find out some method of  financing i have to get a
+revenue stream
+some income has to be generated
+now the method of generating is an income is one the the interesting top
+management strategy
+but how much do you require to sustain the operation something which the
+finance manager has to worry about
+how do i price the another important part of any um any company
+i gave an example of the the um pricing idea of um of Borland or pascal
+compilers
+similarly in india now what is the most important part one of the most
+widely selling product is a accounting product called tally
+so lot of people buy it for accounting
+now those people has to decide what pricing should i do if this particular
+product is got to be adapted by smaller shops [noise]
+if i  if i decide that the if i tell the small shop keeper who has a
+computer that to have  accounting package from me it is going to cost you
+twelve thousand rupees he may say only computer itself cost fifteen
+thousand rupees why should i pay twelve thousand rupees for software
+that is the normal reaction of any person
+so you have to look at is the pricing appropriate for the for the customer
+to whom you are selling
+so um strategy may be that if you want to sell lot more may be i make a
+special dispensation in terms of kind of cutting down on on features like
+[54.12...] and necessary features and give a bare bones or core [refer
+slide time 54.17]
+
+[pic]
+
+and price i say five hundred rupees or thousand rupees whatever and survive
+of volume
+so these are kind of pricing policies
+tax planning you know tax planning means that every year as you know taxes
+cannot be or inevitable
+there is some body put it dead in taxes of true certainties in life and so
+you have to pay your tax and you have to find methods of planning for that
+in that certain companies what they really do is put their production in
+some small state like pondichery or goa or some where where the taxation is
+very low or they  sell make it there and sell it  to another state may be
+the taxation is not is is lower
+so you desire on where to do this you know and tax planning could be able
+to get some profitability
+the important point is that tax planning does not mean that you try to
+cheat the government by not paying tax
+that is that is wrong okay
+this means is that you follow the rules in a game
+rules of a game as decided by the budget and the government
+within the rules of the game what is strategy of follow to reduce my impact
+of taxes
+so that is essential what is tax planning and tax planning is of course
+there for both large company and even for individuals
+one has to kind of have so called tax planning guides which are coming
+reduce your overall taxation burden within within the rules okay
+so these are the issues which one has to be concerned about the finance
+management
+and tactics in the middle level you normally come up with the budget every
+year and you look at actually the what what  what budget should be there
+how do budget for various things
+in other words like if I am running a software company how much do you have
+budget for buying new lap tops buying um desk tops how much do i allocate
+for sales and marketing
+how much i allocate for people going to work for me the human resource okay
+so i look at all the expenses like human resource marketing cost the rental
+for the place where i am going to have that soft ware company and have to
+be concerned about that
+in fact it turns out that certain areas like suppose you go to down town
+that is nariman point in bombay the cost of ten square feet of area for a
+small place for a soft ware engineer sit in work in front of his p c cost
+more money for the company than his salary
+so you may decide if there is no point you you  have to budget it
+if you budget it you decide the budget is this much you go to nariman point
+
+so you may  decide that it is not worth putting in  nariman point
+the strategic decision may be taken to kind of shift it to out of a place
+may be suburb where the rental is much lower and many people are even
+happier to come to work there
+or now the new trend is there is all internet white band and all that to
+say um you don't have to travel to work
+you work from home and you do always software development at home
+and working from home is a gain some thing which is possible because of
+soft ware
+so you have to really look at that
+in other words the finance management would say that if the cost of the
+location is becoming important and i may decide to let my employees work
+from home
+but have a meeting place for all of them to meet say once in two once in
+three days to assess progress look at other teams and things like that
+so there are many items of tactics one has to follow and um if many
+companies major problem is that they already sold the item but they have
+not received the money
+so you have to kind of track the track your bill of what you have received
+and large large outstanding company has to take care of that  say
+so the top management has to know what is last large outstanding payment
+[refer slide time 59.31]
+
+[pic]
+
+ we will give in  the next module
+thank you
+
+
+
+
+
+

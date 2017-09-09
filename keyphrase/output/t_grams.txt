@@ -1,0 +1,9119 @@
+provide several capabilities
+media for data
+storage these capabilities
+capabilities are discussed
+discussed in section
+12.9.2 operating-system support
+support two major
+two major jobs
+manage physical devices
+present a virtual
+virtual machine abstraction
+abstraction to applications
+array of data
+operating system queues
+schedules the interleaved
+media are removable
+12.9.2.1 application interface
+interface most operating
+systems can handle
+handle removable disks
+cartridge is inserted
+empty file system
+system is generated
+disk this file
+hard disk tapes
+differently the operating
+system usually presents
+presents a tape
+raw storage medium
+medium an application
+open a file
+exits or closes
+closes the tape
+device this exclusivity
+exclusivity makes sense
+tens of seconds
+interleaving random accesses
+accesses to tapes
+drive is presented
+provide file-system services
+services the application
+application must decide
+array of blocks
+blocks for instance
+program that backs
+disk to tape
+tape might store
+store a list
+list of file
+names and sizes
+copy the data
+organize a tape
+full of data
+program that created
+names and file
+find it difficult
+file names stored
+sizes in binary
+binary or ascii
+tremendously long string
+string of bytes
+operations are read
+set of basic
+operation the tape
+positions the tape
+specific logical block
+entire track locating
+locating to block
+rewinding the tape
+kinds of tape
+partly filled tape
+manage their physical
+place empty sectors
+written most tape
+variable block size
+block is detern
+block is written
+area of defective
+tape is encountered
+encountered during writing
+area is skipped
+written area -the
+area -the positions
+positions and numbers
+operation that returns
+returns the logical
+logical block number
+located many tape
+drives also support
+support a space
+operation for relative
+two logical blocks
+writing a block
+write in practice
+side effect means
+updating a block
+block the tape
+tape drive implements
+implements this appending
+appending by placing
+placing an end-of-tape
+written the drive
+refuses to locate
+past the eot
+start writing doing
+doing so overwrites
+mark and places
+blocks just written
+file-system data structures
+structures and algorithms
+property of tape
+12.9.2.2 file naming
+naming another question
+files on removable
+file name consists
+molmt table enables
+enables the operating
+system to discover
+drive the file
+file is located
+disk is removable
+knowing what drive
+contained the cartridge
+find the file
+two serial numbers
+digits in length
+remember the names
+memorize a 12-digit
+12-digit serial number
+kind of removable
+difficulty is knowing
+knowing the contents
+contents and data
+machines or drives
+problems can arise
+drives are compatible
+computers may store
+encodings for binary
+ascii on pcs
+pcs versus ebcdic
+ebcdic on mainframes
+today s operating
+systems generally leave
+leave the name-space
+name-space problem unsolved
+unsolved for removable
+media and depend
+depend on applications
+applications and users
+users to figure
+access and interpret
+interpret the data
+kinds of removable
+drive data cds
+operating-system device driver
+programmed to handle
+comn1on formats dvd
+formats dvd fonnats
+12.9.2.3 hierarchical storage
+hierarchical storage management
+enables the computer
+computer to change
+change the removable
+tape or disk
+drive without human
+assistance two major
+backups and hierarchical
+hierarchical storage systems
+jukebox for backups
+backups is simple
+cartridge becomes full
+instructs the jukebox
+jukebox to switch
+cartridge some jukeboxes
+jukeboxes hold tens
+tens of drives
+drives and thousands
+thousands of cartridges
+robotic arms managing
+managing the movement
+movement of tapes
+hierarchical storage system
+storage system extends
+extends the storage
+hierarchy beyond primary
+memory and secondary
+incorporate tertiary storage
+tertiary storage tertiary
+storage tertiary storage
+jukebox of tapes
+tapes or removable
+disks this level
+hierarchy is larger
+virtual memory system
+manner to tertiary
+out in practice
+practice the reason
+delay is intolerable
+intolerable for demand
+forms of virtual
+extend the file
+frequently used files
+remain on magnetic
+continues to exist
+file no longer
+longer occupy space
+space in secondary
+open the file
+call is suspended
+operation returns control
+found in installations
+volumes of data
+work in hsm
+hsm includes extending
+move from disk
+back to disk
+sites save e-mail
+backup tape ilm
+tape ilm centralizes
+ilm centralizes knowledge
+12.9.3 performance issues
+aspects of tertiary-storage
+performance are speed
+speed the speed
+speed of tertiary
+bandwidth and latency
+latency we measure
+measure the bandwidth
+bandwidth in bytes
+average data rate
+number of bytes
+calculates the average
+jukebox in essence
+stream actually flows
+data rate provided
+drive the bandwidth
+tlce bandwidth ranges
+range of bandwidths
+aspect of speed
+faster than tapes
+tapes disk storage
+open a disk
+access simply moves
+moves the ann
+cylinder and waits
+milliseconds by contrast
+storage is three-dimensional
+tape is accessible
+bits are buried
+buried below hundreds
+hundreds or thousands
+thousands of layers
+layers of tape
+reel a random
+access on tape
+tape requires winding
+winding the tape
+selected block reaches
+reaches the tape
+tens or hundreds
+hundreds of seconds
+thousand times slower
+slower than random
+access on disk
+jukebox is involved
+drive must stop
+arm must switch
+switch the disk
+drive must spin
+cartridge this operation
+takes several seconds-about
+hundred times longer
+disk so switching
+high performance penalty
+generally must rewind
+tape is loaded
+drive to calibrate
+slow tape jukebox
+latency of tens
+latency of hundreds
+seconds ; switching
+tapes is expensive
+expensive tape jukeboxes
+jukeboxes can rewind
+item of data
+latency seem reasonable
+focus our attention
+find a terrible
+first the bandwidth
+bandwidth the bandwidth-to-storage-capacity
+disk to read
+large hard disk
+hour to read
+large tape library
+years the situation
+situation with respect
+respect to access
+bad to illustrate
+requests are queued
+hour the low
+cost of tertiary
+tertiary storage results
+cheap cartridges share
+infrequently used data
+library can satisfy
+good pe1jormance means
+pe1jormance means high
+means high speed
+aspect of performance
+performance is reliability
+read some data
+drive or media
+purposes the access
+important to understand
+understand the reliability
+reliability of removable
+fixed hard disks
+exposed to harmful
+harmful environmental conditions
+temperature and humidity
+shock and bending
+bending optical disks
+disks are considered
+considered very reliable
+layer that stores
+stores the bits
+bits is protected
+plastic or glass
+layer the reliability
+reliability of magnetic
+magnetic tape varies
+kind of drive
+drive some inexpensive
+inexpensive drives wear
+wear out tapes
+drives are gentle
+millions of reuses
+reuses by comparison
+disk head flies
+tape the scrubbing
+tape can wear
+out the head
+thousands or tens
+tens of thousands
+thousands of hours
+removable-disk or tape
+disk or tape
+fixed magnetic disk
+weakness a head
+disk generally destroys
+destroys the data
+drive or optical-disk
+drive often leaves
+leaves the data
+data cartridge unharmed
+12.9.3.3 cost storage
+cost storage cost
+media may lower
+storage cost suppose
+disk that holds
+platters the storage
+manufacture the platters
+capacity is lox
+expensive to make
+make a removable
+cost per gigabyte
+gigabyte of removable
+drive is averaged
+show cost trends
+trends per megabyte
+megabyte for dram
+magnetic hard disks
+drives the prices
+lowest prices found
+found in advertisements
+world wide web
+year these prices
+reflect the smallcomputer
+prices are low
+low by comparison
+mainframe and minicomputer
+case of tape
+cost of tape
+tapes are purchased
+2oos year figure
+price per megabyte
+megabyte of dram
+huge tape library
+library containing thousands
+cost is dominated
+cost of dram
+dram fluctuates widely
+excess production caused
+caused a glut
+marketplace caused sigrtificant
+caused sigrtificant price
+sigrtificant price increases
+case of hard
+steadier tape-drive prices
+prices also fell
+price per gigabyte
+gigabyte of inexpensive
+inexpensive tape drives
+drives has ceased
+ceased its dramatic
+price of mid-range
+mid-range tape technology
+continued to fall
+megabyte of magnetic
+magnetic hard disk
+in.expensive drives tape-drive
+drives tape-drive prices
+shown for years
+prices are targeted
+cost of storage
+storage has fallen
+comparing the graphs
+price of disk
+storage has plummeted
+price of dram
+dram and tape
+magnetic disk storage
+disk storage improved
+orders of magnitude
+improvement for main
+magnitude main memory
+main memory today
+expensive than disk
+rapidly for disk
+magnetic disk drive
+drive is approaching
+small and medium-sized
+medium-sized tape libraries
+higher storage cost
+cost than disk
+systems with equivalent
+fall in disk
+largely rendered tertiary
+rendered tertiary storage
+tertiary storage obsolete
+tertiary storage technology
+magnitude less expensive
+expensive than magnetic
+disk it appears
+revival of tertiary
+storage must await
+await a revolutionary
+storage will find
+limited to purposes
+backups of disk
+drives and archival
+storage in enormous
+enormous tape libraries
+exceed the practical
+practical storage capacity
+capacity of large
+large disk farms
+secondary-storage i devices
+secondary storage devices
+disks or n1.agnetic
+modern disk drives
+drives are structured
+structured as large
+large one-dimensional arrays
+arrays of logical
+logical disk blocks
+bytes in size
+local i ports
+requests for disk
+i are generated
+system each request
+specifies the address
+block number disk-schedliling
+number disk-schedliling algorithms
+algorithms can improve
+improve the effective
+variance in response
+response time algorithms
+c-look are designed
+designed to make
+make such improvements
+improvements through strategies
+strategies for disk-queue
+harmed by external
+fragmentation some systems
+systems have utilities
+utilities that scan
+scan the file
+system to identify
+identify fragmented files
+decrease the fragmentation
+badly fragmented file
+fragmented file system
+significantly improve performance
+sophisticated file systems
+unix fast file
+fast file system
+incorporate many strategies
+strategies to control
+fragmentation during space
+operating system manages
+manages the disk
+formatted to create
+create the sectors
+raw hardware-new disks
+disk is partitioned
+systems are created
+blocks are allocated
+allocated to store
+store the system
+system s bootstrap
+block is corrupted
+out that block
+efficient swap space
+key to good
+systems usually bypass
+bypass the file
+raw disk access
+access for paging
+i some systems
+dedicate a raw
+raw disk partition
+partition to swap
+user or system
+administrator to make
+make the decision
+decision by providing
+providing both options
+amount of storage
+required on large
+frequently made redundant
+redundant via raid
+algorithms these algorithms
+disk failure raid
+failure raid algorithms
+algorithms are organized
+combination of reliability
+reliability and high
+high transfer rates
+write-ahead log scheme
+log scheme requires
+requires the availability
+availability of stable
+implement such storage
+replicate the needed
+information on multiple
+multiple nonvolatile storage
+nonvolatile storage devices
+independent failure modes
+update the information
+manner to ensure
+recover the stable
+failure during data
+transfer or recovery
+storage is built
+built from disk
+disk and tape
+including magnetic tape
+magnetic and magneto-optic
+including space management
+management and requestqueue
+drive this convention
+convention is simpler
+potentially more confusing
+identifies a specific
+support for jukeboxes
+privileged application designed
+designed for backups
+aspects of performance
+performance are bandwidth
+reliability many bandwidths
+disks and tapes
+generally much greater
+ratio of drives
+drives to cartridges
+reading a large
+long time optical
+protect the sensitive
+generally more robust
+robust than magnetic
+expose the magnetic
+material to physical
+storage has decreased
+past two decades
+notably for disk
+effects on cost
+cost and performance
+performance if tape
+density as disk
+number of gigabits
+gigabits per square
+medium in fact
+fact the suitability
+device for random
+random access depends
+term streaming transfer
+streaming transfer rate
+transfer rate denotes
+denotes the rate
+excluding the effect
+effect of access
+latency by contrast
+effective transfer rate
+ratio of total
+bytes per total
+megabytes per seconds
+device to decrease
+data are transferred
+ratio of effective
+rate to streaming
+transfer rate calculate
+calculate the utilization
+four transfer sizes
+compute the smallest
+smallest transfer size
+size for disk
+device for transfers
+larger than ______
+device for s1naller
+compute the minimum
+minimum transfer sizes
+sizes that give
+give acceptable utilization
+utilization for cache
+tape a random-access
+described in terms
+measured in drive-hours
+drive-hours per failure
+1,000 disk drives
+750,000 hour mtbf
+failure will occur
+1,000 of dying
+deduce the mtbf
+convert this figure
+figure from hours
+hours to years
+model of disk
+number of years
+system could maintain
+maintain a free-space
+tape-resident file system
+file system assume
+marks and locate
+read position commands
+commands as described
+described in section
+holographic storage drive
+invented the drive
+cartridge the size
+holds 40,000 images
+square black-and-white picture
+drive can read
+read or write
+write one picture
+kinds of storage
+term fast wide
+fast wide scsi-ii
+wide scsi-ii denotes
+denotes a scsi
+bus that operates
+moves a packet
+packet of bytes
+wide scsi-ii disk
+scsi-ii disk drive
+disk drive spins
+sectors per track
+track a estimate
+estimate the sustained
+sustained transfer rate
+drive in megabytes
+tracks per cylinde1
+information to give
+give an accurate
+workload that reads
+reads individual sectors
+disk d calculate
+calculate the random-access
+random-access i operations
+reduce the average
+average seek distance
+seek distance suppose
+workload is reading
+reading 8-kilobyte pages
+average queue length
+scheduling algorithm reduces
+reduces the average
+milliseconds now calculate
+compare the performance
+performance of write
+write operations achieved
+raid level1 organization
+serving a request
+request at cylinder
+queue of pending
+current head position
+disk arm moves
+moves to satisfy
+algorithms a fcfs
+fcfs b sstf
+c-scan f c-look
+elementary physics states
+object is subjected
+relationship between distance
+disk in exercise
+accelerates the disk
+decelerates the disk
+disk can perform
+perform a seek
+number of cylinders
+head moves explain
+write an equation
+distance this equation
+distance in cylinders
+calculate the total
+schedules in exercise
+determine which schedule
+smallest total seek
+schedule over fcfs
+accelerating seek described
+described in exercise
+typical of hard-disk
+drives by contrast
+hard disks manufactured
+fixed rate suppose
+scb.edule over fcfs
+average rotational latency
+found or part
+one-sided 5.25-inch optical-disk
+5.25-inch optical-disk cartridge
+gigabit per square
+inch further suppose
+megabits per square
+1,800 feet long
+feet long calculate
+calculate an estimate
+storage media suppose
+optical tape exists
+disk what volume
+volume of data
+optical tape hold
+magnetic tape cost
+write a program
+program that simulates
+simulates the disk-scheduling
+disk-scheduling algorithms discussed
+considered in disk
+c-scan to include
+include latency optimization
+remapping bad blocks
+blocks by sector
+sparing or sector
+slipping can influence
+influence perfonnance suppose
+drive in exercise
+sectors at random
+sector is mapped
+estimate the number
+random-access workload consisting
+assuming a queue
+choice of scheduling
+sector on performance
+discuss the relative
+advantages and disadvantages
+disadvantages of sector
+sparing and sector
+performance of c-scan
+c-scan and scan
+assuming a uniform
+distribution of requests
+request s service
+variation in response
+sizes of seek
+starvation may occur
+assertion is true
+scan to ensure
+explain why fairness
+examples of circumstances
+system be unfair
+unfair in serving
+serving i requests
+comprising five disks
+parity for sets
+four disks stored
+blocks are accessed
+accessed in order
+order to perform
+block of data
+blocks of data
+system generally treats
+generally treats removable
+treats removable disks
+disks as shared
+shared file systems
+systems but assigns
+assigns a tape
+give three reasons
+explain this difference
+difference in treatment
+treatment of disks
+describe the additional
+shared file-system access
+sharing the tape
+files were disk-resident
+explain your answer
+ram disk affect
+affect your selection
+algorithm what factors
+apply to hard-disk
+file system stores
+recently used blocks
+cache in main
+estimates to compare
+compare the cost
+terabyte storage system
+storage system made
+incorporates tertiary storage
+tertiary storage suppose
+magnetic disk holds
+average access latency
+milliseconds also suppose
+tape library costs
+compute the total
+maximum total data
+total data rate
+pure disk system
+describe and justify
+reside on disk
+percent are archived
+disk system handles
+mixed configuration comprising
+configuration comprising disks
+comprising disks organized
+organized as raid
+levell and raid
+raid levels disks
+levels disks assume
+system has flexibility
+flexibility in deciding
+deciding which disk
+file which files
+disks in order
+order to optimize
+involved in rereading
+rereading code pages
+file system versus
+versus using swap
+space to store
+expect a cylinder
+fat or inodes
+scheduling algorithms discussed
+propose a disk-scheduling
+performance by taking
+systems typically fil1.d
+typically fil1.d data
+fil1.d data blocks
+fat in dos
+dos or inodes
+inodes in unix
+indirection to improve
+improve disk performance
+discuss the reasons
+system might require
+require accurate information
+blocks are stored
+operating system improve
+system improve file
+improve file system
+file system performance
+number of drives
+compare the throughput
+raid levels organization
+raid levell organization
+operations on single
+blocks b read
+operations on multiple
+multiple contiguous blocks
+achieve better performance
+performance for read
+striping of data
+discussions of redundant
+arrays of independent
+presented by patterson
+survey of chen
+architectures for high-performance
+computing are discussed
+discussed by katz
+enhancements to raid
+systems are discussed
+discussed in wilkes
+teorey and pinkerton
+present an early
+early comparative analysis
+analysis of disk-scheduling
+simulations that model
+model a disk
+choice for queue
+c-look is good
+good for queue
+ways to improve
+improve the seek
+moving the disk
+jacobson and wilkes
+describe disk-scheduling algorithms
+latency in addition
+addition to seek
+seek time scheduling
+optimizations that exploit
+exploit disk idle
+disk idle times
+times are discussed
+discussed in lumb
+discuss disk performance
+performance and show
+show the negligible
+negligible performance impact
+impact of defect
+management the placement
+placement of hot
+data to improve
+improve seek times
+considered by ruemmler
+ruemmler and wilkes
+akyurek and salenl
+describe an accurate
+accurate performance model
+modern disk drive
+disk drive worthington
+determine low-level disk
+low-level disk properties
+advanced by schindler
+schindler and gregory
+disk power management
+power management issues
+issues are discussed
+discussed in douglis
+1994l and golding
+size and randomness
+influence on disk
+report numerous interesting
+numerous interesting workload
+interesting workload characteristics
+files are smalt
+newly created files
+files are deleted
+opened for reading
+reading are read
+seeks are short
+describe the berkeley
+berkeley fast file
+techniques to obtain
+obtain good performance
+variety of workloads
+mcvoy and kleiman
+discuss further improvements
+basic ffs quinlan
+implement a file
+system on worm
+magnetic disk cache
+cache ; richards
+discusses a file-system
+approach to tertiary
+tertiary storage maher
+give an overview
+integration of distributed
+distributed file systems
+systems and tertiary
+years for instance
+paper by mattson
+describes a mathematical
+approach to predicting
+predicting the performance
+describes the accommodation
+accommodation of removable
+commercial operating system
+miller and katz
+describe the characteristics
+characteristics of tertiary-storage
+supercomputing environment benjamin
+massive storage requirements
+project at nasa
+disks and programmable
+disks are discussed
+discussed in gibson
+1997b t gibson
+1998t and lee
+lee and thekkath
+holographic storage technology
+article by psaltis
+psaltis and mok
+collection of papers
+assembled by sincerbox
+asthana and finkelstein
+describe several emerging
+emerging storage technologies
+including holographic storage
+electron trapping toigo
+description of modern
+modern disk technology
+potential future storage
+future storage technologies
+two main jobs
+i and processing
+incidental for instance
+browse a web
+page or edit
+edit a file
+read or enter
+enter some information
+compute an answer
+system in computer
+manage and control
+control i operations
+devices although related
+pieces to paint
+paint a complete
+describe the basics
+hardware interface places
+interface places constraints
+i services provided
+application i interface
+operating system bridges
+bridges the gap
+discuss the unix
+system v streams
+enables an application
+application to assemble
+pipelines of driver
+driver code dynamically
+discuss the performance
+principles of operating-system
+design that improve
+improve i performance
+explore the structure
+discuss the principles
+principles and complexities
+explain the performance
+hardware and software
+control of devices
+concern of operating-system
+i devices vary
+function and speed
+methods are needed
+needed to control
+kernet which separates
+separates the rest
+complexities of managing
+managing i devices
+exhibits two conflicting
+two conflicting trends
+standardization of software
+software and hardware
+interfaces this trend
+11s to incorporate
+incorporate improved device
+improved device generations
+generations into existing
+computers and operating
+increasingly broad variety
+unlike previous devices
+challenge to incorporate
+systems this challenge
+challenge is met
+combination of hardware
+techniques the basic
+basic i hardware
+i hardware elements
+accommodate a wide
+devices to encapsulate
+encapsulate the details
+details and oddities
+system is structured
+modules the present
+present a uniform
+uniform deviceaccess interface
+system calls provide
+provide a standard
+operate a great
+great many kinds
+kinds of devices
+devices most fit
+categories of storage
+military fighter jet
+human gives input
+joystick and foot
+computer sends output
+sends output commands
+motors to move
+concepts to understand
+devices are attached
+software can control
+control the hardware
+system by sending
+air the device
+port if devices
+set of wires
+rigidly defined protocol
+protocol that specifies
+specifies a set
+set of messages
+messages are conveyed
+conveyed by patterns
+patterns of electrical
+electrical voltages applied
+wires with defined
+timings when device
+cable that plugs
+plugs into device
+device c plugs
+chain usually operates
+widely in computer
+architecture and vary
+methods a typical
+typical pc bus
+bus structure appears
+appears in figure
+common pc system
+connects the processor-memory
+connects relatively slow
+keyboard and serial
+serial and usb
+disks are c01mected
+scsi bus plugged
+interconnect main parts
+collection of electronics
+operate a port
+device a serial-port
+simple device controller
+computer that controls
+controls the signals
+port by contrast
+scsi bus controller
+protocol is complex
+separate circuit board
+memory to enable
+process the scsi
+scsi protocol messages
+messages some devices
+circuit board attached
+side this board
+controller it implements
+implements the disk
+kind of com1ection-scsi
+com1ection-scsi or ata
+processor give commands
+commands and data
+controller to accomplish
+transfer the short
+registers for data
+data and control
+signals the processor
+controller by reading
+reading and writing
+writing bit patterns
+communication can occur
+special i instructions
+byte or word
+i instruction triggers
+instruction triggers bus
+triggers bus lines
+lines to select
+select the proper
+controller can support
+registers are mapped
+processor the cpu
+executes i requests
+standard data-transfer instructions
+instructions to read
+read and write
+write the device-control
+techniques for instance
+instructions to control
+control some devices
+devices and memory-mapped
+control others figure
+shows the usual
+usual i port
+addresses for pcs
+pcs the graphics
+ports for basic
+basic control operations
+large memory558 chapter
+000-00f dma controller
+controller 020-021 interrupt
+020-021 interrupt controller
+controller 040-043 timer
+timer 200-20f game
+200-20f game controller
+controller 2f8-2ff serial
+2f8-2ff serial port
+320-32f hard-disk controller
+controller 378-37f parallel
+378-37f parallel port
+port 3d0-3df graphics
+3d0-3df graphics controller
+controller 3f0-3f7 diskette-drive
+3f0-3f7 diskette-drive controller
+controller 3f8-3ff serial
+3f8-3ff serial port
+locations on pcs
+region to hold
+hold screen contents
+contents the process
+process sends output
+screen by writing
+region the controller
+generates the screen
+screen image based
+memory this technique
+technique is simple
+millions of bytes
+memory is faster
+faster than issuing
+ease of writing
+memory-mapped i controller
+controller is offset
+type of software
+region of memory
+memory-mapped device register
+register is vulnerable
+vulnerable to accidental
+protected memory helps
+helps to reduce
+reduce this risk
+port typically consists
+host to send
+host these bits
+bits indicate states
+command has completed
+error has occurred
+host to start
+start a command
+change the nlode
+device for instance
+serial port chooses
+chooses between full-duplex
+full-duplex and half-duplex
+bit enables parity
+enables parity checking
+sets the word
+size some controllers
+controllers have fifo
+hold several bytes
+bytes of input
+input or output
+data to expand
+expand the capacity
+register a fifo
+chip can hold
+hold a small
+burst of data
+device or host
+receive those data
+polling the complete
+protocol for interaction
+basic handshaking notion
+notion is simple
+simple we explain
+coordinate the producer-consumer
+host the controller
+set a bit
+means to write
+clear a bit
+sets the busy
+working and clears
+clears the busy
+ready to accept
+comm.and the host
+signals its wishes
+register the host
+sets the command-ready
+controller to execute
+host writes output
+controller by handshaking
+host repeatedly reads
+reads the busy
+bit becomes clear
+sets the write
+register and writes
+writes a byte
+bit is set
+reads the command
+register and sees
+sees the write
+reads the data-out
+clears the command-ready
+clears the error
+device i succeeded
+loop is repeated
+reading the status
+controller and device
+host must service
+service the device
+lost for instance
+data are streaming
+controller will overflow
+overflow and data
+long before returning
+returning to read
+read the bytes
+cycles are sufficient
+sufficient to poll
+poll a device
+read a device
+logical-and to extract
+extract a status
+basic polling operation
+operation is efficient
+efficient but polling
+polling becomes inefficient
+finds a device
+ready for service
+cpu processing remains
+processing remains undone
+efficient to arrange
+controller to notify
+notify the cpu
+device becomes ready
+require the cpu
+cpu to poll
+completion the hardware
+mechanism that enables
+enables a device
+device to notify
+cpu device driver
+device driver initiates
+cpu executing checks
+checks for interrupts
+interrupts between instructions
+instructions cpu resumes
+cpu resumes processing
+processing of interrupted
+interrupts the basic
+basic interrupt mechanism
+interrupt mechanism works
+senses after executing
+executing every instruction
+controller has asserted
+asserted a signal
+performs a state
+save and jumps
+address in memory
+memory the interrupt
+interrupt handler determines
+executes a return
+return from interrupt
+instruction to return
+return the cpu
+device controller raises
+raises an interrupt
+interrupt by asserting
+asserting a signal
+interrupt request line
+catches the interrupt
+interrupt and dispatches
+clears the interrupt
+interrupt by servicing
+servicing the device
+summarizes the interrupt-driven
+interrupt-driven i cycle
+interrupt mechanism enables
+enables the cpu
+cpu to respond
+controller becomes ready
+modern operating system
+nlore sophisticated interrupthandling
+sophisticated interrupthandling features
+ability to defer
+defer interrupt handling
+handling during critical
+proper interrupt handler
+device without first
+raised the interrupt
+system can distinguish
+distinguish between high
+high and low-priority
+degree of urgency
+modern computer hardware
+features are provided
+two interrupt request
+interrupt request lines
+reserved for events
+unrecoverable memory errors
+execution of critical
+critical instruction sequences
+controllers to request
+interrupt mechanism accepts
+accepts an number
+number that selects
+selects a specific
+specific interrupt-handling routine
+addresses of specialized
+specialized interrupt handlers
+handlers the purpose
+vectored interrupt mechanism
+single interrupt handler
+handler to search
+sources of interrupts
+interrupts to determine
+service in practice
+solve this problem
+technique of interrupt
+interrupt vector points
+list of interrupt
+il1.terrupt is raised
+service the request
+request this structure
+huge interrupt table
+inefficiency of dispatching
+illustrates the design
+design of theinterruptvector
+intel pentium processor
+processor the events
+signal various error
+conditions the events
+mechanism also implements
+implements a system
+cpu to defer
+defer the handling
+handling of low-priority
+interrupts without maskii1.g
+interrupts and makes
+interrupt to preempt
+preempt the execution
+operating system interacts
+ways at boot
+operating system probes
+probes the hardware
+buses to determine
+determine what devices
+devices are present
+present and installs
+device controllers raise
+controllers raise interrupts
+service these interrupts
+signify that output
+output has cornpleted
+detected the interrupt
+handle a wide
+accessing a protected
+protected or nonexistent
+nonexistent memory address
+attempting to execute
+execute a privileged
+instruction from user
+mode the events
+events that trigger
+occurrences that induce
+induce the cpu
+cpu to execute
+execute an urgent
+urgent self-contained routine
+mechanism that saves
+saves a small
+amount of processor
+19-31 32-255 breakpoint
+32-255 breakpoint into-detected
+breakpoint into-detected overflow
+into-detected overflow bound
+overflow bound range
+bound range exception
+range exception invalid
+exception invalid opcode
+invalid opcode device
+double fault coprocessor
+fault coprocessor segment
+coprocessor segment overrun
+invalid task state
+task state segment
+state segment segment
+segment not present
+present stack fault
+stack fault general
+fault general protection
+general protection page
+protection page fault
+floating-point error alignment
+error alignment check
+alignment check machine
+check machine check
+maskable interrupts figure
+figure i3.4 intel
+i3.4 intel pentium
+pentium processor event-vector
+processor event-vector table
+calls a privileged
+mechanism for virtual
+virtual memory paging
+paging a page
+exception that raises
+interrupt the interrupt
+suspends the current
+process and jumps
+kernel this handler
+saves the state
+moves the process
+performs page-cache management
+operation to fetch
+fetch the page
+schedules another process
+process to resume
+implementation of system
+program uses library
+calls to issue
+issue system calls
+calls the library
+library routines check
+check the arguments
+build a data
+structure to convey
+convey the arguments
+execute a special
+operand that identifies
+identifies the desired
+desired kernel service
+executes the trap
+interrupt hardware saves
+switches to supervisor
+routine that implements
+implements the requested
+service the trap
+low interrupt priority
+interrupt priority compared
+assigned to device
+interrupts-executilcg a system
+call on behalf
+urgent than servicing
+servicing a device
+fifo queue overflows
+overflows and loses
+manage the flow
+flow of control
+required to complete
+complete a disk
+read one step
+data from kernel
+buffer this copying
+block other high-priority
+handling another step
+drive this step
+step has higher
+previous one completes
+pair of interrupt
+interrupt handlers implen
+handlers implen ents
+ents the kernel
+code that completes
+completes a disk
+read the high-priority
+high-priority handler records
+clears the device
+raises a low-priority
+interrupt to complete
+complete the work
+occupied with high-priority
+completes the userlevel
+i by copying
+calling the scheduler
+scheduler to place
+place the application
+threaded kernel architecture
+suited to implement
+implement multiple interrupt
+multiple interrupt priorities
+enforce the precedence
+precedence of interrupt
+handling over background
+processing in kernel
+kernel and application
+routines we illustrate
+illustrate this point
+kernel in solaris
+handlers are executed
+executed as kernel
+threads a range
+range of high
+priorities is reserved
+priorities give interrupt
+give interrupt handlers
+interrupt handlers precedence
+precedence over application
+code and kernel
+housekeeping and implement
+implement the priority
+relationships among interrupt
+handlers the priorities
+solaris thread scheduler
+scheduler to preempt
+preempt lowpriority interrupt
+lowpriority interrupt handlers
+handlers in favor
+favor of higher-priority
+threaded implementation enables
+implementation enables multiprocessor
+enables multiprocessor hardware
+hardware to run
+run several interrupt
+interrupt handlers concurrently
+concurrently we describe
+describe the interrupt
+architecture of windows
+unix in chapter
+modern operating systems
+systems to handle
+handle asynchronous events
+trap to supervisor-mode
+kernel to enable
+system of interrupt
+interrupt priorities device
+priorities device controllers
+calls all raise
+interrupts to trigger
+trigger kernel routines
+routines because interrupts
+heavily for time-sensitive
+efficient interrupt handling
+handling is required
+required for good
+good system performance
+13.2.3 direct memory
+direct memory access
+expensive general-purpose processor
+processor to watch
+watch status bits
+register one byte
+time-a process termed
+termed many computers
+computers avoid burdening
+burdening the main
+cpu with pio
+pio by offloading
+initiate a dma
+writes a dma
+dma command block
+block into memory
+memory this block
+transferred the cpu
+writes the address
+work the dma
+dma controller proceeds
+proceeds to operate
+operate the memory
+bus to perform
+cpu a simple
+simple dma controller
+component in pcs
+high-speed dma hardware
+controller is performed
+pair of wires
+wires called dma-request
+dma-request and dma-acknowledge
+device controller places
+places a signal
+word of data
+transfer this signal
+controller to seize
+place the desired
+place a signal
+iia -acknowledge wire
+device controller receives
+receives the dma-acknowledge
+signat it transfers
+transfers the word
+data to memory
+memory and removes
+removes the dma-request
+transfer is finished
+dma controller interrupts
+interrupts the cpu
+process is depicted
+depicted in figure
+dma controller seizes
+seizes the memory
+prevented from accessing
+accessing main memory
+access data items
+primary and secondary
+offloading the data-transfer
+controller generally improves
+improves the total
+total system performance
+performance some computer
+architectures use physical
+physical memory addresses
+addresses for dma
+mercwry using virtual
+translation to physical
+physical addresses dvma
+dvma can perform
+perform a transfer
+two memory-mapped devices
+system generally prevents
+generally prevents processes
+processes from issuing
+issuing device commands
+device commands directly
+directly this discipline
+discipline protects data
+data from access-control
+protects the system
+system from erroneous
+operating system exports
+system exports functions
+sufficiently privileged process
+access low-level operations
+hardware on kernels
+kernels without memory
+processes can access
+access device controllers
+device controllers directly
+directly this direct
+avoid kernel communication
+layers of kernelsoftware
+interferes with system
+security and stability
+stability the trend
+trend in general-purpose
+general-purpose operating systems
+memory and devices
+guard against erroneous
+erroneous or malicious
+dma controller transfers
+controller transfers bytes
+bytes to buffer
+increasing memory address
+address and decreasing
+driver is told
+told to transfer
+transfer disk data
+data to buffer
+buffer at address
+device driver tells
+--  disk
+controller to transfer
+transfer c bytes
+bytes from disk
+disk to buffer
+dma interrupts cpu
+cpu to signal
+signal transfer completion
+2..c ~ li.ip
+rc-c ~ .,.,---j
+.,.,---j = ,._
+disk controller initiates
+controller initiates dma
+initiates dma transfer
+dma transfer cg
+cg ! ,or
+disk controller sends
+sends each byte
+byte to dma
+dma controller figure
+i are complex
+complex when considered
+level of detail
+detail of electronics-hardware
+described are sufficient
+sufficient to enable
+features of operating
+review the main
+bus a controller
+registers the handshaking
+controller the execution
+interrupts the offloading
+controller for large
+transfers we gave
+gave a basic
+handshaking that takes
+section in reality
+poses a problem
+problem for operating-system
+implementers each kind
+kind of device
+set of capabilities
+protocols for interacting
+system be designed
+attach new devices
+computer without rewriting
+rewriting the operating
+operating system give
+give a convenient
+uniform i interface
+interface to applications
+applications we address
+address those questions
+discuss structuring techniques
+techniques and interfaces
+system that enable
+enable i devices
+application can open
+disk without knowing
+knowing what kind
+kind of disk
+cmnputer without disruption
+complex software-engineering problems
+approach here involves
+devices by identifying
+kinds each kind
+kind is accessed
+set of functions-an
+functions-an the differences
+differences are encapsulated
+encapsulated in kernel
+modules called device
+internally are custom-tailored
+custom-tailored to specific
+standard interfaces figure
+kernel are structured
+structured in software
+hide the differences
+differences among device
+i system calls
+system calls encapsulate
+encapsulate the behavior
+behavior of devices
+hide hardware differences
+differences from applications
+simplifies the job
+benefits the hardware
+design new devices
+existing host controller
+host controller interface
+write device drivers
+drivers to interface
+hardware to popular
+kernel i structure
+attach new peripherals
+computer without waiting
+vendor to develop
+develop support code
+unfortm1ately for device-hardware
+type of operating
+device may ship
+ship with multiple
+multiple device drivers-for
+device drivers-for instance
+drivers for ms-dos
+solaris devices vary
+illustrated in figure
+character-stream or block
+block a character-stream
+character-stream device transfers
+device transfers bytes
+block device transfers
+transfers a block
+block of bytes
+sequential or random
+access a sequential
+sequential device transfers
+device transfers data
+fixed order determined
+device can instruct
+instruct the device
+device to seek
+data storage locations
+synchronous or asynchronous
+asynchronous a synchronous
+synchronous device performs
+device performs data
+performs data transfers
+transfers with predictable
+predictable response times
+times an asynchronous
+asynchronous device exhibits
+device exhibits irregular
+irregular or unpredictable
+unpredictable response times
+sharable or dedicated
+dedicated a sharable
+processes or threads
+speed of operation
+operation device speeds
+device speeds range
+perform both input
+input and output
+data transfer direction
+access method transfer
+method transfer schedule
+schedule i direction
+synchronous asynchronous dedicated
+asynchronous dedicated sharable
+dedicated sharable latency
+sharable latency seek
+seek time transfer
+transfer rate delay
+delay between operations
+read only write
+write only read-write
+read-write tape keyboard
+tape keyboard tape
+keyboard tape keyboard
+tape keyboard cd-rom
+keyboard cd-rom figure
+purpose of application
+differences are hidden
+devices are grouped
+types the resulting
+styles of device
+exact system calls
+calls may differ
+differ across operating
+standard the major
+major access conventions
+access conventions include
+conventions include block
+memory-mapped file access
+network sockets operating
+sockets operating systems
+systems also provide
+provide special system
+special system calls
+calls to access
+operating systems provide
+provide a set
+set of system
+calls for graphical
+transparently passes arbitrary
+passes arbitrary conunands
+driver in unix
+call is ioctl
+system call enables
+application to access
+access any functionality
+call the ioctl
+arguments the first
+descriptor that connects
+connects the application
+driver by referring
+hardware device managed
+integer that selects
+arbitrary data structure
+structure in memory
+memory that enables
+enables the application
+application and driver
+driver to communicate
+information or data
+block and character
+devices the captures
+accessing disk drives
+devices the device
+device is expected
+expected to understand
+block to transfer
+applications normally access
+capture the essen.tial
+behaviors of block-storage
+applications are insulated
+prefer to access
+access a block
+simple linear array
+blocks this mode
+mode of access
+unneeded buffering likewise
+locking of file
+blocks or regions
+operating-system locking services
+worst to avoid
+avoid these conflicts
+raw-device access passes
+access passes control
+letting the operating
+operating system step
+device a compromise
+mode of operation
+file that disables
+buffering and locking
+layered on top
+top of block-device
+interface provides access
+access to disk
+array of bytes
+bytes in main
+memory the system
+call that maps
+maps a file
+file into memory
+returns the virtual
+virtual memory address
+file the actual
+actual data transfers
+transfers are performed
+needed to satisfy
+transfers are handled
+demand-paged virtual memory
+virtual memory access
+efficient memory mapping
+convenient for programmers-access
+simple as reading
+writing to memory
+memory operating systems
+systems that offer
+offer virtual memory
+interface for kernel
+services for instance
+execute a program
+operating system maps
+maps the executable
+executable into memory
+executable the mapping
+access to swap
+space on disk
+basic system calls
+enable an application
+character on top
+built that offer
+offer line-at-a-time access
+buffering and editing
+types a backspace
+character is removed
+style of access
+access is convenient
+convenient for input
+modems that produce
+data for input
+input spontaneously -that
+necessarily be predicted
+application this access
+good for output
+printers and audio
+fit the concept
+stream of bytes
+13.3.2 network devices
+performance and addressing
+characteristics of network
+network i differ
+provide a network
+network i interface
+disks one interface
+unix and windows
+socket for electricity
+socket interface enable
+create a socket
+connect a local
+plugs this application
+application to plug
+send and receive
+connection to support
+support the implementation
+implementation of servers
+function called select
+manages a set
+set of sockets
+sockets a call
+call to select
+sockets have room
+room to accept
+accept a packet
+eliminates the polling
+polling and busy
+i these functions
+encapsulate the essential
+behaviors of networks
+facilitating the creation
+creation of distributed
+underlying network hardware
+hardware and protocol
+approaches to interprocess
+communication and network
+implemented for instance
+network interface card
+ground for network
+find half-duplex pipes
+clocks and timers
+timers most computers
+computers have hardware
+timers that provide
+provide three basic
+give the current
+give the elapsed
+set a timer
+timer to trigger
+calls that implement
+implement these functions
+standardized across operating
+hardware to measure
+set to wait
+generate an interrupt
+repeat the process
+process to generate
+generate periodic interrupts
+interrupts the scheduler
+mechanism to generate
+preempt a process
+disk i subsystem
+invoke the periodic
+flushing of dirty
+dirty cache buffers
+buffers to disk
+congestion or failures
+failures the operating
+provide an interface
+interface for user
+timers the operating
+system can support
+support more timer
+number of timer
+timer hardware chan11els
+chan11els by simulating
+simulating virtual clocks
+timer device driver
+maintains a list
+list of interrupts
+sorted in earliest-time-first
+order it sets
+sets the timer
+signals the requester
+requester and reloads
+reloads the timer
+interrupt rate generated
+resolution is coarse
+computer can execute
+hundreds of millions
+millions of instructions
+precision of triggers
+triggers is limited
+overhead of maintaining
+maintaining virtual clocks
+maintain the system
+system time-of-day clock
+clock can drift
+clock is constructed
+case the counter
+considered a highresolution
+offers accurate measurements
+blocking and nonblocking
+system-call interface relates
+choice between blocking
+i and nonblocking
+issues a system
+application is suspended
+suspended the application
+application is moved
+system s run
+system call completes
+eligible to resume
+receive the values
+call the physical
+physical actions performed
+varying or unpredictable
+systems use blocking
+blocking system calls
+blocking application code
+code is easier
+easier to understand
+understand than nonblocking
+nonblocking application code
+interface that receives
+keyboard and mouse
+input while processing
+processing and displaying
+application that reads
+file on disk
+decompressing and displaying
+displaying the output
+writer can overlap
+write a multithreaded
+application some threads
+threads can perform
+perform blocking system
+executing the solaris
+technique to implement
+implement a user-level
+library for asynchronous
+freeing the application
+task some operating
+systems provide nonblocking
+nonblocking i system
+calls a nonblocking
+halt the execution
+extended time h1.stead
+bytes were transferred
+nonblocking system call
+asynchronous system call
+call an asynchronous
+asynchronous call returns
+complete the application
+continues to execute
+execute its code
+code the completion
+signal or software
+linear control flow
+application the difference
+difference between nonblocking
+nonblocking and asynchronous
+asynchronous system calls
+data are available-the
+available-the full number
+requests a transfer
+two i methods
+methods are shown
+shown in figure
+call for network
+sockets this system
+system call takes
+takes an argument
+argument that specifies
+specifies a maximum
+application can poll
+poll for network
+kernel user user
+user user kernel
+introduces extra overhead
+call only checks
+kind of read
+fotmd in mach
+blocking multiple-read call
+specifies desired reads
+call and returns
+provide many services
+i several services-scheduling
+error handlil1.g-are provided
+subsystem and build
+hardware and devicedriver
+responsible for protectil1.g
+processes and malicious
+scheduling to schedule
+schedule a set
+i requests means
+means to determine
+determine a good
+applications issue system
+scheduling can improve
+improve overall system
+share device access
+fairly among processes
+i to complete
+applications issue blocking
+issue blocking read
+blocking read calls
+requests a block
+disk the operating
+system can reduce
+reduce the distance
+disk ann travels
+travels by serving
+serving the applications
+rearrangil1.g the order
+order of service
+operating-system developers implement
+developers implement scheduling
+scheduling by maintaining
+maintaining a wait
+queue of requests
+issues a blocking
+blocking i system
+i system call
+i scheduler rearranges
+rearranges the order
+queue to improve
+response time experienced
+experienced by applications
+applications the operating
+receives especially poor
+give priority service
+service for delay-sensitive
+requests for instance
+virtual memory subsystem
+priority over application
+requests several scheduling
+algorithms for disk
+i are detailed
+detailed in section
+kernel supports asynchronous
+system might attach
+attach the wait
+manages this table
+device s type
+device is busy
+type of request
+i subsystem improves
+improves the efficiency
+scheduling i operations
+space in main
+disk via teclul.iques
+teclul.iques called buffering
+area that stores
+data being transferred
+buffering is done
+reasons one reason
+producer and consumer
+data stream suppose
+received via modem
+modem for storage
+disk the modem
+buffer is created
+created in main
+mernory to accumulate
+accumulate the bytes
+buffer of data
+data has arrived
+written to disk
+place to store
+store additional incoming
+additional incoming data
+fills the first
+write is requested
+requested the modem
+modem then starts
+starts to fill
+buffer is written
+modem has filled
+modem can switch
+decouples the producer
+producer of data
+relaxing timing requirements
+decoupling is illustrated
+lists the enormous
+differences in device
+speeds for typical
+typical computer hardware
+adaptations for devices
+sizes such disparities
+common in computer
+widely for fragmentation
+reassembly of messages
+message is fragmented
+fragmented into small
+small network packets
+packets the packets
+receiving side places
+buffer to form
+form an image
+support copy semantics
+semantics for application
+clarify the meaning
+meaning of copy
+copy semantics suppose
+wishes to write
+write to disk
+disk it calls
+calls the write
+providing a pointer
+bytes to write
+system call returns
+disk is guaranteed
+application system calt
+system calt independent
+application s buffer
+buffer a simple
+system can guarantee
+guarantee copy semantics
+call to copy
+copy the application
+application i system
+system bus hype
+pci ~ xpress
+lnfi ! l.i
+buffer before returning
+application the disk
+write is performed
+copying of data
+data between kernel
+buffers and application
+application data space
+space is common
+common in operating
+efficiently by clever
+virtual memory mapping
+mapping and copy-on-write
+copy-on-write page protection
+region of fast
+memory that holds
+copies of data
+efficient than access
+original for instance
+process are stored
+stored on disk
+cached ilc physical
+ilc physical memory
+cpu s secondary
+secondary and primary
+caches the difference
+buffer may hold
+holds a copy
+copy on faster
+item that resides
+caching and buffering
+buffering are distinct
+sometinces a region
+purposes for illstance
+preserve copy semantics
+enable efficient scheduling
+scheduling of disk
+system uses buffers
+buffers in maill
+memory to hold
+hold disk data
+data these buffers
+efficiency for files
+shared by applications
+written and reread
+receives a file
+file i request
+kernel first accesses
+accesses the buffer
+avoided or deferred
+writes are accumulated
+transfers are gathered
+efficient write schedules
+schedules this strategy
+strategy of delayilcg
+writes to improve
+improve i efficiency
+efficiency is discussed
+context of remote
+remote file access
+spooling and device
+buffer that holds
+accept ilcterleaved data
+ilcterleaved data streams
+prillter can serve
+print their output
+operating system solves
+solves this problem
+problem by intercepting
+intercepting all output
+printer each application
+application s output
+output is spooled
+separate disk file
+application finishes printing
+spooling system queues
+queues the correspondilcg
+correspondilcg spool file
+file for output
+spooling system copies
+copies the queued
+queued spool files
+spooling is managed
+system daemon process
+interface that enables
+users and system
+administrators to display
+display the queue
+remove unwanted jobs
+printer is serviced
+drives and printers
+requests of multiple
+multiple concurrent applications
+concurrent applications spooling
+systems can coordinate
+coordinate concurrent output
+deal with concurrent
+concurrent device access
+provide explicit facilities
+facilities for coordination
+coordination some operating
+support for exclusive
+exclusive device access
+access by enabling
+enabling a process
+process to allocate
+allocate an idle
+deallocate that device
+needed other operating
+operating systems enforce
+enforce a limit
+open file handle
+device many operating
+systems provide functions
+functions that enable
+processes to coordinate
+coordinate exclusive access
+access among thenlselves
+thenlselves for instance
+calls to wait
+call that declares
+declares the types
+types of access
+applications to avoid
+13.4.5 error handling
+handling an operating
+memory can guard
+kinds of hardware
+hardware and application
+complete system failure
+minor mechanical glitch
+mechanical glitch devices
+transfers can fail
+network becomes overloaded
+controller becomes defective
+defective operating systems
+effectively for transient
+failures for instance
+protocol so specifies
+important component experiences
+experiences a permanent
+call will return
+return one bit
+bit of information
+signifying either success
+success or failure
+unix operating system
+additional integer variable
+integer variable named
+variable named errno
+return an error
+values-indicating the general
+out of range
+file not open
+hardware can provide
+provide highly detailed
+highly detailed error
+detailed error information
+current operating systems
+designed to convey
+convey this information
+application for instance
+device is reported
+levels of detail
+key that identifies
+identifies the general
+states the category
+category of failure
+bad command parameter
+hardware subsystem failed
+failed its self-test
+scsi devices maintain
+devices maintain internal
+maintain internal pages
+pages of error-log
+issue of protection
+protection a user
+attempt to disrupt
+disrupt the normal
+systern by attempting
+attempting to issue
+illegal i instructions
+mechanisms to ensure
+camlot take place
+users from performing
+issue i instructions
+user program executes
+executes a system
+call to request
+operating system perform
+executing in monitor
+request is valid
+requested the operating
+system then returns
+trap to monitor
+monitor kernel perform
+return to user
+user user program
+user program figure
+call to perform
+i port memory
+port memory locations
+protected from user
+memory-protection system note
+deny all user
+access most graphics
+games and video
+editing and playback
+software need direct
+access to memory-mapped
+memory-mapped graphics controller
+graphics controller memory
+memory to speed
+speed the performance
+provide a locking
+section of graphics
+representing a window
+window on screen
+13.4.7 kernel data
+kernel data structures
+structures the kernel
+variety of in-kernel
+in-kernel data structures
+open-file table structure
+structure from section
+structures to track
+track network connections
+unix provides file-system
+variety of entities
+spaces of processes
+supports a read
+differ for instance
+read a user
+probe the buffer
+cache before deciding
+perform a disk
+i to read
+read a raw
+disk sector size
+boundary to read
+read a process
+data from memory
+memory unix encapsulates
+encapsulates these differences
+teclucique the open-file
+system-wide open-file table
+pointer to read
+pointer to select
+pointer to ioctl
+ioctl function file
+function file descriptor
+file descriptor .,_
+pointer to close
+user-process memory networking
+pointer to network
+read and write.functions
+select function pointer
+ioctl function pointer
+close f..un ction
+kernel memory figure
+table that holds
+type of file
+systems use object-oriented
+request is converted
+change the message
+contents for output
+written for input
+buffer to receive
+receive the data
+data the message-passing
+approach can add
+comparison with procedural
+shared data structures
+simplifies the structure
+structure and design
+system and adds
+kernel i subsystem
+i subsystem summary
+summary in summary
+i subsystem coordinates
+coordinates an extensive
+collection of services
+i subsystenc supervises
+supervises these procedures
+space for files
+files and devices
+devices access control
+control to files
+devices operation control
+file-system space allocation
+space allocation device
+allocation device allocation
+spooling i scheduling
+i scheduling device-status
+scheduling device-status monitoring
+failure recovery device-driver
+recovery device-driver configuration
+configuration and initialization
+initialization the upper
+i subsystem access
+subsystem access devices
+uniform interface provided
+described the handshaking
+operating system connects
+connects an application
+set of network
+specific disk sector
+reading a file
+file from disk
+disk the application
+file system maps
+directories to obtain
+obtain the space
+file for instance
+table entry tells
+tells which disk
+file in unix
+hardware port address
+memory-mapped controller registers
+simple operating system
+preceding the colon
+string that identifies
+specific hardware device
+primary hard disk
+disk the fact
+represents the primary
+disk is built
+specific port address
+device name space
+space is separate
+file-system name space
+space this separation
+makes it easy
+system to associate
+associate extra functionality
+easy to invoke
+space is incorporated
+file-system name services
+services are provided
+system provides ownership
+ownership and access
+devices have owners
+owners and access
+control since files
+files are stored
+stored on devices
+access the devices
+access the files
+unix represents device
+represents device names
+unlike an ms-dos
+portion in fact
+prefixes of path
+names with specific
+specific device names
+names to resolve
+resolve a path
+table to find
+find the longest
+longest ncatchilcg prefix
+space when unix
+file-system directory structures
+minor device number
+number the m.ajor
+m.ajor device number
+device number identifies
+identifies a device
+device the minor
+number is passed
+driver to index
+operating systems obtain
+systems obtain significant
+obtain significant flexibility
+stages of lookup
+physical device controller
+controller the mechanisms
+mechanisms that pass
+requests between applications
+applications and drivers
+drivers are general
+introduce new devices
+devices and drivers
+computer without recompiling
+recompiling the kernel
+kernel in fact
+ability to load
+load device drivers
+drivers on demand
+demand at boot
+system first probes
+describe the typical
+typical life cycle
+blocking read request
+i operation requires
+requires a great
+great many steps
+consume a tremendous
+number of cpu
+checks the parameters
+parameters for correctness
+case of input
+irl the buffer
+data are returned
+request is completed
+performed the process
+process is removed
+request is scheduled
+i subsystem sends
+sends the request
+device driver depending
+device driver allocates
+driver allocates kernel
+allocates kernel buffer
+kernel buffer space
+space to receive
+data and schedules
+driver sends commands
+controller by writing
+device controller operates
+operates the device
+hardware to perform
+perform the data
+driver may poll
+poll for status
+status and data
+transfer into kernel
+memory we assume
+transfer is managed
+generates an interrupt
+correct interrupt handler
+interrupt handler receives
+receives the interrupt
+signals the device
+device driver receives
+receives the signal
+request has completed
+determines the request
+request s status
+signals the kernel
+kernel transfers data
+data or return
+process and moves
+system call device-controller
+call device-controller commands
+device-controller commands user
+commands user process
+user process kernel
+subsystem device driver
+device driver interrupt
+driver interrupt handler
+interrupt handler device
+handler device controller
+device controller return
+return from system
+system call interrupt
+interrupt ~ -------tim_e
+moving the process
+ready queue unblocks
+unblocks the process
+assigns the process
+process resumes execution
+dynamically a stream
+process it consists
+controls the device
+stream user process
+modules _j figure
+pair of queues
+queues -a read
+write queue message
+queue message passing
+data between queues
+queues the streams
+structure is shown
+provide the functionality
+functionality of streams
+call for examplef
+examplef a process
+process can open
+open a serial-port
+module to handle
+handle input editing
+editing because messages
+messages are exchanged
+exchanged between queues
+queues in adjacent
+module may overflow
+overflow an adjacent
+queue to prevent
+queue may support
+support without flow
+accepts all messages
+module without buffering
+queue supporting flow
+supporting flow control
+flow control buffers
+control buffers messages
+messages without sufficient
+sufficient buffer space
+process involves exchanges
+exchanges of control
+messages between queues
+user process writes
+process writes data
+call the write
+system call writes
+call writes raw
+writes raw data
+stream head copies
+copies the data
+message and delivers
+module in line
+line this copying
+copying of messages
+message is copied
+user process reads
+process reads data
+call if read
+queue and returns
+returns ordinary data
+unstructured byte stream
+process if getmsg
+message is returned
+i is asynchronous
+user process communicates
+stream ~ head
+head when writing
+process will block
+queue uses flow
+room to copy
+copy the message
+block when reading
+end-like the stream
+head and modules-has
+modules-has a read
+end must respond
+respond to interrupts
+frame is ready
+unlike the stream
+unable to copy
+copy a message
+queue in line
+end must handle
+handle all incoming
+incoming data drivers
+drivers must support
+support flow control
+device s buffer
+buffer is fult
+fult the device
+device typically resorts
+resorts to dropping
+dropping incoming messages
+card whose input
+buffer is full
+full the network
+drop further messages
+ample buffer space
+store incoming messages
+modular and incremental
+approach to writing
+writing device drivers
+drivers and network
+network protocols modules
+ethernet network card
+wireless network card
+streams allows support
+support for message
+boundaries and control
+information when communicating
+communicating between modules
+modules most unix
+unix variants support
+variants support streams
+method for writing
+protocols and device
+system v unix
+unix and solaris
+implement the socket
+mechanism using streams
+factor in system
+performance it places
+places heavy demands
+execute device-driver code
+block and unblock
+unblock the resulting
+resulting context switches
+context switches stress
+stress the cpu
+i also exposes
+exposes any inefficiencies
+kernel in addition
+bus during data
+copies between controllers
+controllers and physical
+copies between kernel
+data space coping
+computers can handle
+handle many thousands
+thousands of interrupts
+task each interrupt
+system to perform
+perform a state
+execute the interrupt
+restore state programmed
+efficient than internjpt-driven
+number of cycles
+spent in busy
+completion typically unblocks
+unblocks a process
+high context-switch rate
+character is typed
+interrupt is generated
+character is passed
+process the user
+user process issues
+issues a network
+network i system
+call to send
+send the character
+machine the character
+layers that construct
+construct a network
+network device driver
+driver the network
+device driver transfers
+transfers the packet
+sends the character
+character and generates
+interrupt is passed
+network l system
+call to complete
+system s network
+network hardware receives
+receives the packet
+generated the character
+character is unpacked
+daemon the network
+network daemon identifies
+identifies which remote
+remote login session
+session is involved
+involved and passes
+passes the packet
+switches and state
+echoes the character
+doubles the work
+eliminate the context
+context switches involved
+involved in moving
+moving each character
+character between daemons
+solaris developers reimplemented
+reimplemented the daemon
+daemon using in-kernel
+in-kernel threads sun
+threads sun estimates
+improvement sending system
+sending system receiving
+system receiving system
+receiving system figure
+increased the maximum
+number of network
+systems use separate
+separate for terminal
+i to reduce
+reduce the interrupt
+cpu for instance
+multiplex the traffic
+traffic from hundreds
+hundreds of remote
+special-purpose cpu found
+found in mainframes
+systems the job
+offload i work
+cpu the idea
+main cpu remains
+cpu remains free
+free to process
+process the data
+controllers and dma
+dma controllers found
+found in smaller
+channel can process
+process more general
+general and sophisticated
+employ several principles
+principles to improve
+improve the efficiency
+reduce the number
+number of context
+number of times
+times that data
+copied in memory
+memory while passing
+passing between device
+device and application
+reduce the frequency
+frequency of interrupts
+controllers or channels
+channels to offload
+offload simple data
+simple data copying
+move processing primitives
+primitives into hardware
+operation in device
+concurrent with cpu
+cpu and bus
+greatly in complexity
+complexity for instance
+mouse is simple
+simple the mouse
+movements and button
+clicks are converted
+converted into numeric
+passed from hardware
+mouse device driver
+application by contrast
+windows nt disk
+disk device driver
+driver is complex
+manages individual disks
+implements raid arrays
+converts an application
+application s read
+set of disk
+disk i operations
+implements sophisticated error-handling
+error-handling and data-recovery
+algorithms and takes
+takes many steps
+steps to optimize
+optimize disk performance
+functionality be implemented
+-in the device
+observe the progression
+experimental i algorithms
+code is f1exible
+f1exible and application
+reboot or reload
+reload device drivers
+code an application-level
+overhead o context
+advantage of internal
+internal kernel data
+device functionality progression
+efficient in-kernel messaging
+algorithm has demonstrated
+demonstrated its worth
+complex software system
+debugged to avoid
+avoid data corruption
+corruption and system
+implementation in hardware
+controller the disadvantages
+hardware implementation include
+include the difficulty
+difficulty and expense
+expense of making
+making further improvements
+hardware raid controller
+provide any means
+kernel to influence
+influence the order
+order or location
+location of individual
+individual block reads
+reads and writes
+kernel has special
+basic hardware elements
+hardware elements involved
+i are buses
+work of moving
+data between devices
+devices and main
+memory is perform.ed
+cpu as programmed
+controller the kernel
+module that controls
+controls a device
+driver the system-call
+system-call interface provided
+provided to applications
+applications is designed
+designed to handle
+handle several basic
+categories of hardware
+including block devices
+programmed interval timers
+timers the system
+calls usually block
+block the processes
+processes that issue
+sleep while waiting
+operation to complete
+subsystem provides num.erous
+handling another service
+makes the connections
+connections between hardware
+symbolic file names
+applications it involves
+involves several levels
+levels of mapping
+mapping that translate
+translate from character-string
+specific device drivers
+drivers and device
+ports or bus
+controllers this mapping
+mapping may occur
+implementation and methodology
+protocols through streams
+bidirectionally for processing
+costly in terms
+terms of cpu
+layers of software
+application these layers
+layers imply overhead
+switching to cross
+cross the kernel
+kernel s protection
+signal and interrupt
+handling to service
+cpu and memory
+system to copy
+implementation of virtual
+including the queueing
+queueing and management
+management of timer
+kernel and applications
+disadvantages of supporting
+i to device
+device control registers
+interrupt is raised
+two separate pieces
+pieces the first
+first piece executes
+completes and schedules
+piece of code
+design of interrupt
+system use interrupt-driven
+manage a single
+single serial port
+port and polling
+i to manage
+manage a front-end
+kinds of performance
+servicing an interrupt
+coordinates the activities
+kernel i components
+components by manipulating
+manipulating shared in-kernel
+shared in-kernel data
+object-oriented message passing
+passing between kernel
+discuss three pros
+user programs access
+programs access memory
+memory through virtual
+system uses raw
+raw physical addresses
+addresses to access
+completion can waste
+waste a large
+iterates a busy-waiting
+loop many times
+device is ready
+catching and dispatching
+dispatching an interrupt
+describe a hybrid
+strategy that combines
+i device service
+describe a computing
+graphical user interface
+multitasking operating system
+drive containing user
+card with direct
+direct bus connection
+accessible through memory-mapped
+design the operating
+i or interrupt-driven
+interrupt-driven i give
+i give reasons
+handshaking in section
+implement this handshaking
+describe the protocol
+bit is insufficient
+discuss the advantages
+disadvantages of guaranteeing
+guaranteeing reliable transfer
+transfer of data
+data between modules
+dma controllers support
+controllers support direct
+support direct virtual
+direct virtual memory
+translation from virtual
+virtual to physical
+address is performed
+complicate the design
+advantages of providing
+providing such functionality
+important to scale
+scale up system-bus
+system-bus and device
+speeds as cpu
+cpu speed increases
+determine the order
+discuss what issues
+considered in assigning
+describe three circumstances
+i and networking
+networking in unix
+structures and methods
+employed in bsd
+bsd unix milenkovic
+discusses the complexity
+methods and implementation
+interprocesscommunication and network
+protocols in unix
+unix are explored
+explored in stevens
+documents the windows
+windows nt application
+sample minix operating
+minix operating system
+system is described
+described in tanenbaum
+tanenbaum and woodhull
+includes detailed information
+details of hardware-level
+handling and memory-mapping
+processor reference manuals
+hennessy and patterson
+describe multiprocessor systems
+systems and cache-consistency
+cache-consistency issues tanenbaum
+hardware i design
+sargent and shoemaker
+provide a programmer
+programmer s guide
+guide to low-level
+low-level pc hardware
+software the ibm
+ibm pc device
+device i address
+i address map
+issue of ieee
+computer is devoted
+discussion of streams
+part six protection
+protection mechanisms control
+mechanisms control access
+system by limiting
+limiting the types
+types of file
+file access permitted
+permitted to users
+users in addition
+protection must ensure
+gained proper authorization
+system can operate
+operate on memory
+protection is provided
+mechanism that controls
+controls the access
+access of programs
+system this mechanism
+mechanism must provide
+provide a means
+means of enforcing
+ensures the authentication
+authentication of system
+users to protect
+protect the integrity
+data and code
+system the security
+security system prevents
+system prevents unauthorized
+prevents unauthorized access
+alteration of data
+introduction of inconsistency
+chapter the processes
+activities to provide
+provide such protection
+mechanism for controlling
+controlling the access
+means of enforcement
+enforcement we distinguish
+distinguish between protection
+protection and security
+measure of confidence
+focus on protection
+protection security assurance
+discuss the goals
+goals and principles
+principles of protection
+modern computer system
+explain how protection
+resources a process
+process may access
+capability and language-based
+language-based protection systems
+sophisticated and pervasive
+protect their integrity
+adjunct to multiprogramming
+multiprogramming operating systems
+share a common
+logical name space
+directory of files
+physical name space
+memory modern protection
+modern protection concepts
+concepts have evolved
+evolved to increase
+increase the reliability
+system that makes
+prevent the mischievous
+program component active
+system uses system
+consistent with stated
+policies this requirement
+protection can improve
+reliability by detecting
+detecting latent errors
+interfaces between component
+subsystems early detection
+detection of interface
+unauthorized or incompetent
+user a protection-oriented
+system provides means
+means to distinguish
+distinguish between authorized
+authorized and unauthorized
+role of protection
+provide a mechanism
+policies governing resource
+variety of ways
+files and programs
+programs a protection
+flexibility to enforce
+enforce a variety
+variety of policies
+policies for resource
+vary by application
+longer the concern
+system the application
+guard resources created
+created and supported
+subsystem against misuse
+describe the protection
+mechanisms the operating
+system should provide
+note that mechanisms
+mechanisms are distinct
+distinct from policies
+policies mechanisms determine
+done ; policies
+done the separation
+separation of policy
+policy and mechanism
+mechanism is important
+important for flexibility
+change from place
+place to place
+change in policy
+policy would require
+require a change
+mechanism using general
+general mechanisms enables
+principle simplifies design
+simplifies design decisions
+consistent and easy
+easy to understand
+understand a key
+time-tested guiding principle
+principle for protection
+dictates that programs
+privileges to perform
+perform their tasks
+key will result
+result in minimal
+passkey allows access
+implements its features
+failure or compromise
+done the overflow
+process to fail
+execution of code
+process s stack
+enable a remote
+user to gain
+gain maximum privileges
+privileges and access
+calls and services
+written with fine-grained
+fine-grained access controls
+mechanisms to enable
+needed also beneficial
+creation of audit
+privileged function access
+access the audit
+officer to trace
+trace all protection
+privilege entails creating
+creating a separate
+back up files
+system has access
+commands and files
+needed to accomplish
+accomplish the job
+job some systems
+systems implement role-based
+implement role-based access
+role-based access control
+provide this functionality
+limited to running
+running specific services
+accessing specific remote
+specific remote hosts
+hosts via specific
+restrictions are implemented
+implemented through enabling
+enabling or disabling
+disabling each service
+access control lists
+described in sections
+secure computing environment
+complex protection scheme
+holes by comparison
+solaris is considered
+considered relatively secure
+variant of unix
+historically was designed
+protection in mind
+mind one reason
+lines of code
+services than solaris
+secure and protect
+protect another reason
+scheme in windows
+irtcomplete or protects
+protects the wrong
+leaving other areas
+collection of processes
+processes and objects
+objects by objects
+well-defined and meaningful
+meaningful operations objects
+essentially abstract data
+abstract data types
+execute memory segments
+read and written
+cd-rom or dvd-rom
+read tape drives
+rewound data files
+deleted ; program
+allowed to access
+reqllires to complete
+complete its task
+limiting the amount
+amount of damage
+damage a faulty
+process p invokes
+formal parameters passed
+variables of process
+invokes a compiler
+compiler to compile
+file the compiler
+subset of files
+accounting or optimization
+purposes that process
+access the need-to-know
+principle is similar
+goals of protection
+minimize the risks
+14.3.1 domain structure
+structure to facilitate
+facilitate the scheme
+scheme just described
+specifies the resources
+access each domain
+defines a set
+set of objects
+types of operations
+object the ability
+ability to execute
+execute an operation
+collection of access
+access right file
+executing in domain
+share access rights
+domains can print
+processes in domain
+set of resources
+process is fixed
+process s lifetime
+establishing dynamic protection
+dynamic protection domains
+complicated than establishing
+establishing static protection
+static protection domains
+association between processes
+processes and domains
+domains is fixed
+change the content
+domain the reason
+process may execute
+two different phases
+phase and write
+domain is static
+define the domain
+domain to include
+include both read
+principle is violated
+domain always reflects
+reflects the n1inimum
+n1inimum necessary access
+association is dynamic
+enabling the process
+process to switch
+effect by creating
+content and switching
+change the domain
+user domain switching
+domain switching occurs
+user is changed
+process domain switching
+sends a message
+local variables defined
+call is made
+discuss domain switching
+switching in greater
+detail in section
+model of operating-system
+executes in monitor
+execute privileged instructions
+gain complete control
+system in contrast
+executes in user
+invoke only nonprivileged
+predefined memory space
+two modes protect
+protect the operating
+executing in user
+multiprogrammed operating system
+two protection domains
+domains are insufficient
+scheme is needed
+needed we illustrate
+scheme by examining
+examining two influential
+two influential operating
+influential operating systems-unix
+systems-unix and multics
+implement these concepts
+switching the domain
+corresponds to changing
+changing the user
+change is accomplished
+tbough the file
+executes that file
+user with userid
+executing a file
+process is set
+userid is set
+temporary userid change
+userid change ends
+domains in operating
+mechanism this mechanism
+general user population
+users to access
+access a network
+network without letting
+letting them write
+causing the user
+program was run
+run the user
+user with network
+network access privilege
+manages to create
+create a file
+file with user
+user id root
+system the setuid
+mechanism is discussed
+place privileged programs
+directory the operating
+designed to change
+change the user
+equivalent of root
+directory this eliminates
+eliminates one security
+problem with setuid
+create and hide
+hide such programs
+file or directory
+change of user
+access to privileged
+facilities for instance
+started at boot
+user id users
+users then run
+run a separate
+facility this method
+tops-20 operating system
+writing privileged programs
+programs any oversight
+oversight can result
+lack of protection
+attacked by people
+feature we discuss
+security in chapter
+domains are organized
+structure each ring
+rings are numbered
+two domain rings
+subset of dj
+two rings exist
+scheme is equivalent
+n1ode of execution
+monitor mode corresponds
+user mode corresponds
+segmented address space
+rings a segm.ent
+segm.ent description includes
+includes an entry
+entry that identifies
+identifies the ring
+number in addition
+includes three access
+bits to control
+execution the association
+association between segments
+segments and rings
+identifying the ring
+process is executing
+multics ring structure
+access a segment
+type of access
+switching in multics
+calling a procedure
+process could start
+executing in ring
+controlled domain switching
+modify the ring
+descriptor to include
+bracket a pair
+pair of integers
+limit an integer
+list of gates
+identifies the entry
+ring i calls
+calls a procedure
+call is allowed
+current ring number
+operating system occurs
+situation is handled
+allowed to occur
+parameters are passed
+segments not accessible
+designated entry points
+gates this scheme
+scheme allows processes
+processes with limited
+limited access rights
+rights to call
+procedures in lower
+carefully controlled mmmer
+enforce the need-to-know
+accessible in domain
+multics protection system
+generally more complex
+systems if protection
+significantly decreases system
+decreases system performance
+system for instance
+complex protection system
+university to process
+students  grades
+students for classwork
+classwork a similar
+similar protection system
+prefer to separate
+separate the mechanism
+complex or simple
+simple protection depending
+users to separate
+mechanism from policy
+model of protection
+access matrix represent
+matrix represent domains
+columns represent objects
+objects each entry
+set of access
+column defines objects
+omit the object
+right the entry
+defines the set
+set of operations
+invoke on object
+illustrate these concepts
+access matrix shown
+four objects-three files
+printer a process
+write onto files
+policies the mechanism
+consists of implementing
+implementing the access
+read read write
+read write write
+write write figure
+matrix and ensuring
+matrix can implement
+implement policy decisions
+decisions concerning protection
+policy decisions involve
+involve which rights
+decide the domain
+executes this last
+users normally decide
+decide the contents
+creator the user
+user may decide
+decide to enter
+enter some rights
+entries in cohum1
+mechanism for defining
+defining and implementing
+implementing strict control
+static and dynamic
+switch a process
+executing an operation
+control domain switching
+switching by including
+performing an operation
+including the access
+execute these operations
+switching from domain
+access right switch
+switch e access
+switch to domain
+process in domain
+switch to d2
+d2 allowing controlled
+allowing controlled change
+access-matrix entries requires
+requires three additional
+control we examine
+examine these operations
+read read switch
+print switch switch
+read switch write
+switch write write
+matrix of figure
+domains as objects
+execute read execute
+read execute execute
+execute execute read
+matrix with copy
+ability to copy
+copy an access
+right is defined
+magnetic tape
+operating system
+removable media
+data storage
+operating-system support
+major jobs
+physical devices
+virtual machine
+machine abstraction
+hard disks
+raw device
+data blocks
+file system
+magnetic disk
+system queues
+interleaved requests
+storage media
+application interface
+operating systems
+removable disks
+fixed disks
+blank cartridge
+empty file
+hard disk
+disk tapes
+handled differently
+raw storage
+storage medium
+tape drive
+application exits
+tape device
+exclusivity makes
+makes sense
+random access
+interleaving random
+random accesses
+file-system services
+file names
+application makes
+backup tape
+file sizes
+file data
+ascii form
+files written
+long string
+block size
+block written
+disk drive
+basic operations
+tape drives
+tape locate
+disk seek
+specific logical
+logical block
+entire track
+track locating
+filled tape
+empty space
+written area
+physical space
+disk drives
+fixed size
+formatting process
+empty sectors
+final positions
+variable block
+defective tape
+bad area
+operation explains
+area -the
+-the positions
+logical blocks
+block number
+tape head
+relative motion
+operation space
+locate backward
+side effect
+effect means
+append-only devices
+drive implements
+drive refuses
+eot mark
+start writing
+writing doing
+file-system data
+data structures
+append-only property
+file naming
+fixed disk
+drive letter
+molmt table
+table enables
+removable cartridge
+serial number
+removable device
+serial numbers
+12-digit serial
+write data
+removable drive
+additional problems
+store bytes
+binary numbers
+name-space problem
+problem unsolved
+music cds
+universal format
+drive data
+data cds
+operating-system device
+device driver
+comn1on formats
+formats dvd
+dvd fonnats
+hierarchical storage
+storage management
+human assistance
+storage systems
+computer instructs
+jukeboxes hold
+hold tens
+robotic arms
+arms managing
+storage system
+system extends
+storage hierarchy
+primary memory
+secondary storage
+tertiary storage
+virtual memory
+memory system
+straightforward manner
+long delay
+demand paging
+files remain
+file-archiving systems
+directory entry
+file continues
+longer occupy
+occupy space
+system call
+file contents
+operation returns
+returns control
+disk-resident copy
+large volumes
+current work
+hsm includes
+data move
+sites save
+hsm tape
+tape ilm
+ilm centralizes
+centralizes knowledge
+performance issues
+important aspects
+tertiary-storage performance
+average data
+data rate
+bytes divided
+sustained bandwidth
+data stream
+effective bandwidth
+rate provided
+tlce bandwidth
+bandwidth ranges
+fastest tapes
+similar range
+performance measure
+tapes disk
+disk storage
+disk access
+selected cylinder
+rotational latency
+tape storage
+small portion
+tape wound
+tape requires
+tape reels
+selected block
+block reaches
+tape cartridge
+thousand times
+access latency
+significantly higher
+removable disk
+stop spinning
+robotic arm
+disk cartridges
+operation takes
+switching disks
+jukebox incurs
+high performance
+performance penalty
+slow tape
+tape jukebox
+disk jukebox
+switching tapes
+expensive tape
+tape jukeboxes
+random item
+pay attention
+terrible bottleneck
+bandwidth-to-storage-capacity ratio
+robotic library
+data stored
+large hard
+large tape
+tape library
+average waiting
+low cost
+storage results
+cheap cartridges
+cartridges share
+expensive drives
+removable library
+small number
+good pe1jormance
+pe1jormance means
+high speed
+important aspect
+media failure
+practical purposes
+infinitely small
+removable n1.ag
+netic disks
+harmful environmental
+environmental conditions
+mechanical forces
+optical disks
+transparent plastic
+glass layer
+tape varies
+inexpensive drives
+drives wear
+out tapes
+magnetic-disk head
+magnetic-tape drive
+weak spot
+disk head
+head flies
+close contact
+scrubbing action
+fixed-disk drive
+optical disk
+head crash
+optical-disk drive
+data cartridge
+cost storage
+storage cost
+important factor
+cost suppose
+magnetic platters
+total price
+removable storage
+low price
+removable cartridges
+show cost
+cost trends
+dram memory
+magnetic hard
+lowest prices
+prices found
+computer magazines
+world wide
+wide web
+prices reflect
+smallcomputer marketplace
+minicomputer markets
+2oos year
+year figure
+small fraction
+huge tape
+tape cartridges
+dram fluctuates
+fluctuates widely
+price crashes
+excess production
+production caused
+marketplace caused
+sigrtificant price
+price increases
+price decline
+tape-drive prices
+inexpensive tape
+dramatic fall
+mid-range tape
+tape technology
+in.expensive drives
+tracking prices
+small-computer marketplace
+small computers
+storage improved
+main memory
+magnitude main
+memory today
+megabyte dropped
+medium-sized tape
+tape libraries
+higher storage
+disk systems
+equivalent capacity
+disk prices
+storage obsolete
+storage technology
+revolutionary technology
+archival storage
+enormous tape
+practical storage
+storage capacity
+large disk
+disk farms
+major secondary-storage
+storage devices
+magnetic disks
+n1.agnetic tapes
+modern disk
+large one-dimensional
+one-dimensional arrays
+logical disk
+disk blocks
+size disks
+computer system
+host computer
+network cmmection
+request specifies
+disk-schedliling algorithms
+average response
+disk-queue ordering
+external fragmentation
+fragmented files
+move blocks
+fragmentation defragmenting
+fragmented file
+improve performance
+reduced performance
+sophisticated file
+file systems
+unix fast
+fast file
+control fragmentation
+space allocation
+disk reorganization
+system manages
+hardware-new disks
+boot blocks
+bootstrap program
+efficient swap
+swap space
+good performance
+raw disk
+systems dedicate
+disk partition
+system administrator
+storage required
+large systems
+raid algorithms
+continued operation
+automatic recovery
+disk failure
+failure raid
+high transfer
+transfer rates
+write-ahead log
+log scheme
+scheme requires
+stable storage
+needed information
+multiple nonvolatile
+nonvolatile storage
+independent failure
+failure modes
+controlled manner
+stable data
+data transfer
+removable magnetic
+magneto-optic disks
+full services
+file-system interface
+including space
+space management
+requestqueue scheduling
+specific cartridge
+raw interface
+built-in support
+jukeboxes jukebox
+privileged application
+application designed
+random-access latency
+switching cartridges
+low ratio
+large fraction
+optical media
+sensitive layer
+transparent coating
+magnetic media
+magnetic material
+physical damage
+areal density
+square inch
+sequential-access medium
+random-access medium
+storage device
+access depends
+transfer size
+term streaming
+streaming transfer
+transfer rate
+rate denotes
+effective transfer
+total bytes
+total seconds
+including overhead
+disk described
+average access
+rate calculate
+transfer sizes
+performance figures
+smallest transfer
+acceptable utilization
+random-access device
+______ bytes
+sequentialaccess device
+s1naller transfers
+minimum transfer
+give acceptable
+sequential-access device
+hard-disk drive
+hour mtbf
+drive failure
+disk farm
+thousand years
+mortality statistics
+u.s resident
+mtbf hours
+expected lifetime
+manufacturer guarantees
+free-space list
+tape-resident file
+system assume
+eot marks
+read position
+position commands
+holographic storage
+drive costs
+cartridge holds
+square black-and-white
+black-and-white picture
+pixel stores
+millisecond answer
+device affect
+computing system
+term fast
+fast wide
+wide scsi-ii
+scsi-ii denotes
+scsi bus
+device suppose
+scsi-ii disk
+drive spins
+sector size
+sustained transfer
+adjacent-cylinder seek
+additional information
+accurate estimate
+huge transfer
+average seek
+random-access workload
+individual sectors
+multiple requests
+scheduling algorithm
+seek distance
+distance suppose
+8-kilobyte pages
+average queue
+queue length
+algorithm reduces
+write operations
+operations achieved
+raid level
+raid level1
+level1 organization
+previous request
+pending requests
+fifo order
+current head
+head position
+total distance
+disk arm
+arm moves
+disk-scheduling algorithms
+elementary physics
+physics states
+constant acceleration
+constant rate
+seek assume
+adjacent cylinder
+full-stroke seek
+head moves
+moves explain
+square root
+total seek
+smallest total
+percentage speedup
+fastest schedule
+accelerating seek
+seek described
+hard-disk drives
+floppy disks
+disks manufactured
+fixed rate
+rate suppose
+constant-rate seek
+constantacceleration seek
+additional cylinder
+seek-time function
+fastest scb.edule
+average rotational
+one-sided 5.25-inch
+5.25-inch optical-disk
+optical-disk cartridge
+inch wide
+feet long
+long calculate
+storage capacities
+media suppose
+optical tape
+tape exists
+physical size
+storage density
+tape hold
+marketable price
+tape cost
+algorithms discussed
+disk scheduling
+modify sstf
+include latency
+latency optimization
+bad blocks
+sector sparing
+sector slipping
+influence perfonnance
+perfonnance suppose
+bad sectors
+random locations
+bad sector
+cylinder estimate
+workload consisting
+kilobyte reads
+relative advantages
+scan scheduling
+uniform distribution
+performance depend
+relative sizes
+disk-scheduling disciplines
+modify algorithms
+ensure fairness
+important goal
+time-sharing system
+organization comprising
+disks stored
+continuous blocks
+shared file
+tapes describe
+additional features
+applications sharing
+special properties
+disk-resident explain
+ram disk
+disk affect
+disk-scheduling algorithm
+hard-disk scheduling
+system stores
+buffer cache
+simple estimates
+terabyte storage
+system made
+storage suppose
+disk holds
+library costs
+seconds compute
+total cost
+maximum total
+total data
+pure disk
+disk system
+system handles
+library handles
+mixed configuration
+configuration comprising
+comprising disks
+disks organized
+raid levell
+raid levels
+levels disks
+disks assume
+disk organization
+optimize performance
+tradeoffs involved
+rereading code
+code pages
+system versus
+uniformly distributed
+file-system fat
+files suppose
+fixed number
+scheduling algorithms
+case explain
+taking advantage
+hot spot
+fil1.d data
+indirection table
+unix describe
+improve disk
+disk performance
+accurate information
+system improve
+improve file
+system performance
+open files
+throughput achieved
+levels organization
+levell organization
+read operations
+single blocks
+contiguous blocks
+organization achieve
+read requests
+nonredundant striping
+redundant arrays
+independent disks
+detailed survey
+disk-system architectures
+high-performance computing
+raid systems
+early comparative
+comparative analysis
+cylinders crossed
+good choice
+queue lengths
+describes ways
+disk ann
+idle seltzer
+scheduling optimizations
+exploit disk
+idle times
+discuss disk
+negligible performance
+performance impact
+defect management
+hot data
+improve seek
+seek times
+accurate performance
+performance model
+drive worthington
+low-level disk
+disk properties
+zone structure
+disk power
+power management
+management issues
+considerable influence
+numerous interesting
+interesting workload
+workload characteristics
+created files
+short mckusick
+berkeley fast
+sophisticated techniques
+wide variety
+workloads mcvoy
+basic ffs
+ffs quinlan
+worm storage
+disk cache
+file-system approach
+storage maher
+distributed file
+thirty years
+mathematical approach
+commercial operating
+tertiary-storage access
+supercomputing environment
+environment benjamin
+massive storage
+storage requirements
+eosdis project
+nasa management
+network-attached disks
+topic dating
+emerging storage
+storage technologies
+electron trapping
+trapping toigo
+in-depth description
+disk technology
+potential future
+future storage
+main jobs
+main job
+web page
+related topics
+complete picture
+hardware interface
+interface places
+places constraints
+internal facilities
+services provided
+system bridges
+unix system
+streams mechanism
+assemble pipelines
+driver code
+code dynamically
+performance aspects
+operating-system design
+devices connected
+major concern
+operating-system designers
+cd-rom jukebox
+varied methods
+methods form
+technology exhibits
+conflicting trends
+increasing standardization
+hardware interfaces
+trend helps
+improved device
+device generations
+existing computers
+broad variety
+previous devices
+software techniques
+hardware elements
+device controllers
+device-driver modules
+uniform deviceaccess
+deviceaccess interface
+system calls
+calls provide
+standard interface
+computers operate
+general categories
+transmission devices
+network cards
+human-interface devices
+military fighter
+fighter jet
+space shuttle
+flight computer
+foot pedals
+computer sends
+sends output
+output commands
+move rudders
+incredible variety
+device communicates
+sending signals
+connection point
+serial port
+common set
+defined protocol
+electrical voltages
+voltages applied
+defined timings
+daisy chain
+computer architecture
+signaling methods
+connection methods
+bus structure
+structure appears
+figure shows
+system bus
+processor-memory subsystem
+fast devices
+slow devices
+usb ports
+upper-right portion
+bus plugged
+scsi controller
+common buses
+main parts
+computer include
+serial-port controller
+simple device
+device controller
+single chip
+bus controller
+scsi protocol
+separate circuit
+circuit board
+private memory
+protocol messages
+built-in controllers
+board attached
+disk controller
+disk side
+bad-sector mapping
+processor give
+give commands
+short answer
+control signals
+processor communicates
+writing bit
+bit patterns
+port address
+instruction triggers
+triggers bus
+bus lines
+proper device
+move bits
+device register
+device-control registers
+address space
+cpu executes
+standard data-transfer
+data-transfer instructions
+port addresses
+graphics controller
+basic control
+control operations
+large memory558
+memory558 chapter
+dma controller
+interrupt controller
+game controller
+hard-disk controller
+parallel port
+diskette-drive controller
+port locations
+mapped region
+screen contents
+process sends
+writing data
+memory-mapped region
+controller generates
+screen image
+image based
+writing millions
+graphics memory
+issuing millions
+common type
+software fault
+incorrect pointer
+unintended region
+memory-mapped device
+accidental modification
+protected memory
+memory helps
+send output
+current command
+data-in register
+device error
+control register
+port chooses
+half-duplex communication
+bit enables
+enables parity
+parity checking
+bit sets
+word length
+bits select
+speeds supported
+data registers
+fifo chips
+output data
+data register
+fifo chip
+small burst
+complete protocol
+basic handshaking
+handshaking notion
+producer-consumer relationship
+busy bit
+status register
+bit means
+controller sets
+busy working
+host signals
+command-ready bit
+command register
+host sets
+host writes
+writes output
+write bit
+data-out register
+controller notices
+controller reads
+write command
+controller clears
+error bit
+small buffer
+host waits
+computer architectures
+cpu-instruction cycles
+status bit
+basic polling
+polling operation
+cpu processing
+processing remains
+remains undone
+hardware controller
+hardware mechanism
+cpu device
+driver initiates
+cpu executing
+executing checks
+instructions cpu
+cpu resumes
+resumes processing
+interrupted task
+basic interrupt
+interrupt mechanism
+mechanism works
+cpu hardware
+cpu senses
+cpu detects
+cpu performs
+state save
+fixed address
+interrupt handler
+handler determines
+state restore
+interrupt instruction
+execution state
+controller raises
+interrupt request
+request line
+cpu catches
+handler clears
+device figure
+mechanism enables
+asynchronous event
+modern operating
+sophisticated interrupthandling
+interrupthandling features
+interrupt handling
+critical processing
+proper interrupt
+first polling
+multilevel interrupts
+low-priority interrupts
+modern computer
+computer hardware
+request lines
+unrecoverable memory
+memory errors
+interrupt line
+critical instruction
+instruction sequences
+maskable interrupt
+request service
+mechanism accepts
+specific interrupt-handling
+interrupt-handling routine
+small set
+memory addresses
+interrupt handlers
+vectored interrupt
+single interrupt
+address elements
+interrupt vector
+interrupt chaining
+vector points
+huge interrupt
+interrupt table
+intel pentium
+pentium processor
+error conditions
+device-generated interrupts
+high-priority interrupt
+low-priority interrupt
+system interacts
+system probes
+hardware buses
+controllers raise
+raise interrupts
+interrupts signify
+input data
+nonexistent memory
+memory address
+privileged instruction
+user mode
+trigger interrupts
+common property
+self-contained routine
+efficient hardware
+software mechanism
+small amount
+processor state
+into-detected overflow
+overflow bound
+bound range
+range exception
+exception invalid
+invalid opcode
+opcode device
+double fault
+fault coprocessor
+coprocessor segment
+segment overrun
+invalid task
+task state
+state segment
+segment segment
+present stack
+stack fault
+fault general
+general protection
+protection page
+page fault
+intel reserved
+floating-point error
+error alignment
+alignment check
+check machine
+machine check
+maskable interrupts
+interrupts figure
+processor event-vector
+event-vector table
+privileged routine
+memory paging
+interrupt suspends
+current process
+page-fault handler
+handler saves
+wait queue
+performs page-cache
+page-cache management
+resume execution
+library calls
+issue system
+library routines
+routines check
+data structure
+special instruction
+desired kernel
+kernel service
+process executes
+trap instruction
+interrupt hardware
+hardware saves
+user code
+supervisor mode
+kernel routine
+requested service
+low interrupt
+interrupt priority
+priority compared
+fifo queue
+queue overflows
+loses data
+processing required
+disk read
+copy data
+kernel space
+user buffer
+higher priority
+handlers implen
+implen ents
+kernel code
+high-priority handler
+handler records
+device interrupt
+high-priority work
+handler completes
+copying data
+kernel buffers
+application space
+ready queue
+threaded kernel
+kernel architecture
+implement multiple
+multiple interrupt
+interrupt priorities
+background processing
+application routines
+solaris kernel
+kernel threads
+high priorities
+priorities give
+handlers precedence
+application code
+kernel housekeeping
+priority relationships
+solaris thread
+thread scheduler
+preempt lowpriority
+lowpriority interrupt
+threaded implementation
+implementation enables
+enables multiprocessor
+multiprocessor hardware
+handlers concurrently
+interrupt architecture
+asynchronous events
+supervisor-mode routines
+urgent work
+modern computers
+priorities device
+hardware faults
+trigger kernel
+kernel routines
+time-sensitive processing
+efficient interrupt
+good system
+direct memory
+memory access
+large transfers
+expensive general-purpose
+general-purpose processor
+watch status
+status bits
+feed data
+controller register
+time-a process
+process termed
+computers avoid
+main cpu
+special-purpose processor
+dma transfer
+dma command
+command block
+cpu writes
+controller proceeds
+memory bus
+placing addresses
+perform transfers
+simple dma
+standard component
+high-speed dma
+dma hardware
+controller places
+dma-request wire
+desired address
+memory-address wires
+iia -acknowledge
+-acknowledge wire
+controller receives
+dma-acknowledge signat
+dma-request signal
+entire transfer
+controller interrupts
+controller seizes
+access data
+data items
+secondary caches
+cpu computation
+data-transfer work
+total system
+physical memory
+perform mercwry
+virtual addresses
+undergo translation
+physical addresses
+addresses dvma
+memory-mapped devices
+protected-mode kernels
+prevents processes
+issuing device
+device commands
+commands directly
+discipline protects
+protects data
+access-control violations
+system crash
+system exports
+exports functions
+privileged process
+access low-level
+low-level operations
+underlying hardware
+memory protection
+access device
+controllers directly
+direct access
+avoid kernel
+kernel communication
+context switches
+system security
+general-purpose operating
+protect memory
+malicious applications
+controller transfers
+transfers bytes
+increasing memory
+transfer disk
+disk data
+driver tells
+dma interrupts
+interrupts cpu
+signal transfer
+transfer completion
+.2-j rc-c
+controller initiates
+initiates dma
+transfer cg
+controller sends
+controller figure
+hardware summary
+hardware aspects
+electronics-hardware design
+operating systen
+main concepts
+handshaking relationship
+polling loop
+takes place
+devices poses
+operating-system implementers
+control-bit definitions
+system give
+structuring techniques
+complex software-engineering
+software-engineering problems
+involves abstraction
+software layering
+detailed differences
+general kinds
+standardized set
+kernel modules
+device drivers
+specific devices
+standard interfaces
+interfaces figure
+software layers
+device-driver layer
+generic classes
+hide hardware
+hardware differences
+applications making
+subsystem independent
+hardware simplifies
+operating-system developer
+hardware manufacturers
+existing host
+host controller
+controller interface
+write device
+operating-system vendor
+develop support
+support code
+device-hardware manufacturers
+device-driver interface
+multiple device
+device drivers-for
+drivers-for instance
+solaris devices
+character-stream device
+device transfers
+block device
+sequential device
+transfers data
+fixed order
+order determined
+storage locations
+synchronous device
+device performs
+performs data
+data transfers
+predictable response
+response times
+asynchronous device
+device exhibits
+unpredictable response
+sharable device
+dedicated device
+operation device
+device speeds
+speeds range
+devices perform
+transfer direction
+access method
+method transfer
+transfer schedule
+synchronous asynchronous
+asynchronous dedicated
+dedicated sharable
+sharable latency
+latency seek
+rate delay
+operations read
+read-write tape
+tape keyboard
+keyboard tape
+keyboard cd-rom
+cd-rom figure
+application access
+conventional types
+resulting styles
+device access
+broadly applicable
+exact system
+device categories
+fairly standard
+major access
+access conventions
+conventions include
+include block
+memory-mapped file
+file access
+network sockets
+sockets operating
+special system
+additional devices
+time-of-day clock
+systems provide
+graphical display
+audio devices
+arbitrary conunands
+call enables
+file descriptor
+hardware device
+device managed
+commands implemented
+arbitrary data
+control information
+character devices
+accessing disk
+block-oriented devices
+understand commands
+essen.tial behaviors
+block-storage devices
+low-level differences
+special applications
+databasemanagement systems
+simple linear
+linear array
+application performs
+file systen1
+unneeded buffering
+buffering likewise
+file blocks
+operating-system locking
+locking services
+raw-device access
+access passes
+passes control
+system step
+operating-system services
+unix world
+block-device drivers
+offering read
+memory-mapped interface
+memory returns
+actual data
+satisfy access
+memory image
+demand-paged virtual
+efficient memory
+memory mapping
+memory operating
+offer virtual
+mapping interface
+kernel services
+system maps
+transfers control
+entry address
+kernel access
+basic system
+interface enable
+line-at-a-time access
+editing services
+user types
+preceding character
+input stream
+input devices
+produce data
+access style
+output devices
+audio boards
+linear stream
+network devices
+addressing characteristics
+operating systerns
+including unix
+network interface
+wall socket
+electrical appliance
+socket interface
+local socket
+remote address
+socket created
+remote application
+receive packets
+returns information
+packet waiting
+busy waiting
+functions encapsulate
+essential behaviors
+distributed applications
+underlying network
+network hardware
+protocol stack
+interprocess communication
+network communication
+interface card
+network protocols
+long history
+proving ground
+network technology
+half-duplex pipes
+full-duplex fifos
+full-duplex streams
+message queues
+sockets information
+hardware clocks
+basic functions
+trigger operation
+timesensitive applications
+trigger operations
+periodic interrupts
+periodic flushing
+dirty cache
+cache buffers
+network subsystem
+cancel operations
+network congestion
+user processes
+timer requests
+timer hardware
+hardware chan11els
+virtual clocks
+timer device
+interrupts wanted
+user requests
+earliest-time-first order
+earliest tince
+timer interrupts
+kernel signals
+interrupt rate
+rate generated
+hardware clock
+execute hundreds
+coarse resolution
+timer ticks
+system time-of-day
+system clock
+highfrequency counter
+highresolution clock
+generate interrupts
+accurate measurements
+system-call interface
+interface relates
+application issues
+run queue
+call completes
+resumes execution
+values returned
+physical actions
+actions performed
+unpredictable amount
+blocking system
+blocking application
+nonblocking application
+user-level processes
+user interface
+mouse input
+displaying data
+video application
+application writer
+overlap execution
+multithreaded application
+continue executing
+solaris developers
+user-level library
+nonblocking call
+return value
+nonblocking system
+asynchronous system
+asynchronous call
+call returns
+application continues
+software interrupt
+call-back routine
+linear control
+control flow
+nonblocking read
+available-the full
+full number
+bytes requested
+asynchronous read
+call requests
+nonblocking behavior
+call takes
+maximum waiting
+network activity
+kernel user
+user user
+user kernel
+introduces extra
+multiple-read call
+desired reads
+kernels provide
+services related
+device reservation
+devicedriver infrastructure
+errant processes
+malicious users
+requests means
+good order
+applications issue
+choice scheduling
+share device
+illustrate suppose
+issue blocking
+blocking read
+read calls
+disk application
+ann travels
+operating-system developers
+developers implement
+implement scheduling
+scheduler rearranges
+system efficiency
+device-status table
+application receives
+poor service
+give priority
+priority service
+delay-sensitive requests
+memory subsystem
+application requests
+kernel supports
+kernel manages
+table entry
+subsystem improves
+storage space
+memory area
+stores data
+application buffering
+speed mismatch
+stream suppose
+main mernory
+bytes received
+entire buffer
+single operation
+disk write
+additional incoming
+incoming data
+modem fills
+first buffer
+disk writes
+relaxing timing
+timing requirements
+enormous differences
+typical computer
+provide adaptations
+data-transfer sizes
+computer networking
+sending side
+large message
+small network
+network packets
+receiving side
+side places
+reassembly buffer
+source data
+support copy
+copy semantics
+semantics suppose
+systemcalt providing
+data written
+application system
+system calt
+calt independent
+guarantee copy
+bus hype
+l.i band
+sun enterprise
+device-transfer rates
+kernel buffer
+returning control
+application buffer
+effect copying
+application data
+data space
+operation introduces
+clean semantics
+copy-on-write page
+page protection
+fast memory
+holds copies
+data access
+cached copy
+running process
+cached ilc
+primary caches
+existing copy
+data item
+faster storage
+distinct functions
+preserve copy
+efficient scheduling
+maill memory
+hold disk
+reread rapidly
+kernel receives
+physical disk
+efficient write
+write schedules
+delayilcg writes
+remote file
+holds output
+ilcterleaved data
+data streams
+output mixed
+system solves
+separate disk
+disk file
+application finishes
+spooling system
+correspondilcg spool
+spool file
+system copies
+queued spool
+spool files
+system daemon
+daemon process
+in-kernel thread
+control interface
+enables users
+system administrators
+unwanted jobs
+jobs print
+suspend printing
+multiple concurrent
+concurrent applications
+applications spooling
+coordinate concurrent
+concurrent output
+concurrent device
+explicit facilities
+including vms
+provide support
+exclusive device
+idle device
+longer needed
+systems enforce
+open file
+file handle
+provide functions
+enable processes
+exclusive access
+device object
+concurrent threads
+avoid deadlock
+error handling
+application errors
+complete system
+system failure
+usual result
+mechanical glitch
+glitch devices
+transient reasons
+permanent reasons
+defective operating
+transient failures
+failure results
+network send
+error results
+res end
+important component
+component experiences
+permanent failure
+general rule
+unix operating
+additional integer
+named errno
+error code-one
+general nature
+bad pointer
+detailed error
+error information
+current operating
+scsi device
+hardware error
+illegal request
+bad command
+command parameter
+self-test failure
+hardware subsystem
+subsystem failed
+scsi devices
+devices maintain
+internal pages
+error-log information
+host-but seldom
+protection errors
+user process
+normal operation
+prevent users
+user program
+program executes
+system perform
+monitor mode
+monitor kernel
+kernel perform
+program figure
+port memory
+memory locations
+user access
+memory-protection system
+system note
+graphics games
+video editing
+playback software
+memory-mapped graphics
+controller memory
+case provide
+locking mechanism
+kernel data
+state information
+in-kernel data
+open-file table
+table structure
+similar structures
+track network
+network connections
+character-device communications
+file-system access
+user files
+raw devices
+address spaces
+entities supports
+semantics differ
+user file
+request size
+disk sector
+sector boundary
+process image
+uniform structure
+object-oriented teclucique
+open-file record
+system-wide open-file
+file-system record
+inode pointer
+write functions
+select function
+ple pointer
+ioctl function
+function file
+descriptor .,_
+close function
+user-process memory
+memory networking
+network info
+function pointer
+f..un ction
+kernel memory
+memory figure
+kernel structure
+dispatch table
+holds pointers
+object-oriented methods
+message-passing implementation
+message contents
+message-passing approach
+procedural techniques
+shared data
+adds flexibility
+subsystem summary
+subsystem coordinates
+extensive collection
+subsystenc supervises
+devices access
+access control
+devices operation
+operation control
+file-system space
+allocation device
+device allocation
+device-status monitoring
+failure recovery
+recovery device-driver
+device-driver configuration
+upper levels
+subsystem access
+access devices
+uniform interface
+interface provided
+system connects
+application request
+network wires
+specific disk
+application refers
+file-system directories
+file-access table
+entry tells
+inode number
+space-allocation information
+connection made
+hardware port
+memory-mapped controller
+controller registers
+simple operating
+first part
+ms-dos file
+specific hardware
+primary hard
+specific port
+device table
+colon separator
+separation makes
+extra functionality
+invoke spooling
+regular file-system
+normal file-system
+provided automatically
+files stored
+unix represents
+represents device
+device names
+unix path
+clear separation
+device portion
+device unix
+associates prefixes
+path names
+specific device
+mount table
+longest ncatchilcg
+ncatchilcg prefix
+file-system directory
+directory structures
+minor device
+device number
+m.ajor device
+number identifies
+device-table entry
+memory-mapped address
+systems obtain
+significant flexibility
+multiple stages
+lookup tables
+physical device
+pass requests
+load device
+typical life
+life cycle
+read request
+figure suggests
+operation requires
+tremendous number
+cpu cycles
+process issues
+system-call code
+kernel checks
+subsystem sends
+driver depending
+subroutine call
+in-kernel message
+driver allocates
+allocates kernel
+buffer space
+driver sends
+sends commands
+controller operates
+device hardware
+transfer completes
+correct interrupt
+handler receives
+interruptvector table
+driver receives
+kernel transfers
+return codes
+requesting process
+call device-controller
+device-controller commands
+commands user
+process kernel
+subsystem kernel
+subsystem device
+driver interrupt
+handler device
+controller return
+call interrupt
+queue unblocks
+scheduler assigns
+process resumes
+interesting mechanism
+full-duplex connection
+user-level process
+stream user
+streams modules
+streams structure
+driver end
+write queue
+queue message
+message passing
+transfer data
+modules provide
+streams processing
+serial-port device
+handle input
+input editing
+adjacent modules
+adjacent queue
+flow control
+queue accepts
+adjacent module
+queue supporting
+supporting flow
+control buffers
+buffers messages
+accept messages
+sufficient buffer
+process involves
+involves exchanges
+control messages
+process writes
+writes data
+call writes
+writes raw
+raw data
+stream head
+head copies
+messages continues
+process reads
+reads data
+ordinary data
+unstructured byte
+byte stream
+process communicates
+flow controt
+message likewise
+driver end-like
+data drivers
+support flow
+dropping incoming
+incoming messages
+network card
+input buffer
+ample buffer
+store incoming
+incremental approach
+writing device
+protocols modules
+networking module
+ethernet network
+wireless network
+treating character-device
+message boundaries
+unix variants
+variants support
+support streams
+preferred method
+writing protocols
+solaris implement
+socket mechanism
+major factor
+heavy demands
+device-driver code
+schedule processes
+resulting context
+switches stress
+hardware caches
+interrupt-handling mechanisms
+data copies
+durilcg copies
+space coping
+major concerns
+computer architect
+expensive task
+state change
+restore state
+state programmed
+cycles spent
+full overhead
+context switch
+network traffic
+high context-switch
+context-switch rate
+remote login
+character typed
+local machine
+remote machine
+keyboard interrupt
+local kernel
+network layers
+network packet
+network device
+driver transfers
+network controller
+remote system
+hardware receives
+network daemon
+daemon identifies
+login session
+state switches
+receiver echoes
+approach doubles
+developers reimplemented
+in-kernel threads
+threads sun
+sun estimates
+improvement sending
+sending system
+system receiving
+receiving system
+system figure
+lntercomputer communications
+maximum number
+network logins
+large server
+interrupt burden
+remote terminals
+large computer
+special-purpose cpu
+cpu found
+high-end systems
+data flowing
+cpu remains
+dma controllers
+controllers found
+smaller computers
+sophisticated programs
+smart controllers
+increase concurrency
+dma-knowledgeable controllers
+simple data
+data copying
+move processing
+processing primitives
+bus operation
+balance cpu
+devices vary
+mouse movements
+button clicks
+numeric values
+mouse device
+functionality provided
+disk device
+individual disks
+raid arrays
+write request
+coordinated set
+data-recovery algorithms
+optimize disk
+application software
+progression depicted
+application level
+application bugs
+system crashes
+developing code
+reload device
+application-level implementation
+internal kernel
+device code
+device functionality
+functionality progression
+kernel functionality
+efficient in-kernel
+in-kernel messaging
+application-level algorithm
+development effort
+operating-system kernel
+complex software
+software system
+in-kernel implementation
+avoid data
+data corruption
+highest performance
+specialized implementation
+hardware implementation
+implementation include
+fixing bugs
+increased development
+decreased flexibility
+hardware raid
+raid controller
+individual block
+block reads
+special information
+basic hardware
+elements involved
+moving data
+kernel module
+basic categories
+including block
+block devices
+memory-mapped files
+programmed interval
+interval timers
+asynchronous calls
+num.erous services
+hardware devices
+symbolic file
+character-string names
+device addresses
+bus controllers
+separate device
+data passing
+cpu consumption
+layers imply
+context switching
+protection boundary
+applications assume
+timer channels
+device control
+control registers
+host processor
+separate pieces
+first piece
+piece executes
+remaining piece
+single serial
+front-end processor
+termii1.al concentrator
+performance overhead
+manipulating shared
+object-oriented message
+multiprogrammed systems
+user programs
+programs access
+access memory
+access men10ry
+large number
+processor iterates
+busy-waiting loop
+interrupt describe
+hybrid strategy
+device service
+pure polling
+pure interrupts
+computing environment
+graphical user
+multitasking operating
+device preallocation
+graphics card
+direct bus
+bus connection
+give reasons
+reliable transfer
+streams abstraction
+controllers support
+support direct
+physical address
+design complicate
+cpu speed
+speed increases
+multiple interrupts
+priority scheme
+serviced discuss
+assigning priorities
+implement nonblocking
+good overview
+methods employed
+bsd unix
+sample minix
+minix operating
+includes detailed
+detailed information
+memory-mapping functionality
+processor reference
+reference manuals
+sources hennessy
+describe multiprocessor
+multiprocessor systems
+cache-consistency issues
+issues tanenbaum
+describes hardware
+low level
+address map
+ieee computer
+software raga
+good discussion
+protection mechanisms
+mechanisms control
+control access
+access permitted
+gained proper
+proper authorization
+memory segments
+resources defined
+security ensures
+system users
+information stored
+physical resources
+security system
+system prevents
+prevents unauthorized
+unauthorized access
+malicious destruction
+accidental introduction
+protection refers
+protection security
+security assurance
+protection domains
+access matrix
+language-based protection
+protection systems
+computer systems
+grown protection
+multiprogramming operating
+untrustworthy users
+common logical
+common physical
+memory modern
+modern protection
+protection concepts
+complex system
+shared resources
+provide protection
+intentional violation
+access restriction
+general importance
+program component
+system resources
+ways consistent
+stated policies
+reliable system
+improve reliability
+detecting latent
+latent errors
+component subsystems
+early detection
+interface errors
+prevent contamination
+healthy subsystem
+malfunctioning subsystem
+unprotected resource
+incompetent user
+protection-oriented system
+unauthorized usage
+policies governing
+governing resource
+individual users
+protection system
+application programmer
+guard resources
+resources created
+application subsystem
+application designers
+protection software
+policies mechanisms
+mechanisms determine
+policies decide
+flexibility policies
+worst case
+underlying mechanism
+general mechanisms
+mechanisms enables
+guiding principle
+principle simplifies
+simplifies design
+design decisions
+system consistent
+time-tested guiding
+security guard
+public areas
+minimal damage
+privilege implements
+minimum damage
+n1inimum damage
+gain maximum
+maximum privileges
+entire system
+fine-grained access
+access controls
+enable privileges
+audit trails
+privileged function
+function access
+audit trail
+systems administrator
+law-enforcement officer
+security activities
+managing users
+privilege entails
+entails creating
+separate account
+mount tapes
+files needed
+systems implement
+role-based access
+computers implemented
+computing facility
+running specific
+specific services
+specific remote
+remote hosts
+specific times
+control lists
+secure computing
+complex protection
+protection scheme
+security holes
+wrong aspects
+meaningful operations
+operations objects
+abstract data
+data types
+execute memory
+read tape
+rewound data
+data files
+program files
+need-to-know principle
+faulty process
+invokes procedure
+chapter14 allowed
+formal parameters
+parameters passed
+access files
+well-defined subset
+source file
+listing file
+private files
+optimization purposes
+privilege discussed
+security violations
+domain structure
+process operates
+domain defines
+access rights
+ordered pair
+process executing
+share access
+print object
+execute object
+dynamic protection
+static protection
+reason stems
+read access
+write access
+vice versa
+changed content
+domain content
+accessed depends
+user domain
+domain switching
+switching occurs
+user logs
+process domain
+accessed corresponds
+local variables
+variables defined
+procedure call
+discuss domain
+greater detail
+standard dual-mode
+monitor-user mode
+operating-system execution
+privileged instructions
+complete control
+nonprivileged instructions
+predefined memory
+memory space
+modes protect
+monitor domain
+multiprogrammed operating
+elaborate scheme
+influential operating
+operating systems-unix
+user switching
+domain corresponds
+user identification
+owner identification
+domain bit
+setuid bit
+user executes
+file owned
+process exits
+temporary userid
+userid change
+change ends
+change domains
+user ids
+domain definition
+privileged facility
+general user
+user population
+networking programs
+networking program
+network access
+access privilege
+powerful user
+user manages
+setuid mechanism
+place privileged
+privileged programs
+special directory
+program run
+security problem
+setuid programs
+crackers create
+obscure file
+directory names
+special techniques
+users access
+privileged facilities
+special user
+separate program
+sends requests
+tops-20 operating
+great care
+writing privileged
+total lack
+unix systems
+setuid feature
+discuss security
+mul tics
+multics system
+ring structure
+ring corresponds
+single domain
+domain rings
+rings exist
+monitor-user n1ode
+mode corresponds
+segmented address
+segm.ent description
+description includes
+ring number
+access bits
+control reading
+policy decision
+current-ring-number counter
+multics ring
+cmmot access
+multics occurs
+process crosses
+controlled mmmer
+controlled domain
+ring field
+segment descriptor
+access bracket
+gates identifies
+entry points
+current ring
+process remains
+system occurs
+fewer privileges
+designated entry
+limited access
+call procedures
+lower rings
+main disadvantage
+requirement means
+multics protection
+protection interferes
+decreases system
+process students
+similar protection
+number crunching
+utmost importance
+protection policy
+simple protection
+protection depending
+separate mechanism
+general model
+matrix represent
+represent domains
+columns represent
+represent objects
+matrix consists
+column defines
+defines objects
+access right
+entry access
+matrix shown
+objects-three files
+laser printer
+read files
+access-matrix scheme
+mechanism consists
+read read
+read execute
+read write
+write write
+write figure
+semantic properties
+outlined hold
+access-matrix entries
+implement policy
+policy decisions
+decisions involve
+last policy
+user creates
+initialization entries
+implementing strict
+strict control
+dynamic association
+control domain
+including domains
+d2 allowing
+allowing controlled
+controlled change
+entries requires
+additional operations
+read switch
+print switch
+switch switch
+switch write
+execute read
+execute execute
+copy rights
+magnetic
+tape
+operating
+system
+provide
+capabilities
+removable
+media
+data
+storage
+discussed
+section
+12.9.2
+operating-system
+support
+two
+major
+jobs
+manage
+physical
+devices
+present
+virtual
+machine
+abstraction
+applications
+chapter
+hard
+disks
+abstractions
+raw
+device
+array
+blocks
+file
+disk
+queues
+schedules
+interleaved
+requests
+job
+12.9.2.1
+application
+interface
+systems
+handle
+fixed
+blank
+cartridge
+inserted
+drive
+mounted
+formatted
+empty
+generated
+tapes
+handled
+differently
+presents
+medium
+open
+opens
+reserved
+exclusive
+exits
+closes
+exclusivity
+makes
+sense
+random
+access
+tens
+seconds
+minutes
+interleaving
+accesses
+thrashing
+presented
+file-system
+services
+decide
+instance
+program
+backs
+store
+list
+names
+sizes
+beginning
+copy
+files
+order
+easy
+problems
+arise
+rules
+organize
+full
+generally
+created
+backup
+find
+difficult
+stored
+binary
+ascii
+form
+written
+block
+concatenated
+tremendously
+long
+string
+bytes
+size
+variable
+chosen
+separately
+basic
+operations
+read
+write
+seek
+drives
+set
+locate
+operation
+precise
+positions
+specific
+logical
+entire
+track
+locating
+rewinding
+kinds
+partly
+filled
+space
+area
+sectors
+formatting
+process
+place
+final
+detern
+ined
+fly
+defective
+encountered
+writing
+bad
+skipped
+explains
+-the
+numbers
+detennined
+read_position
+returns
+number
+head
+located
+relative
+motion
+backward
+side
+effect
+logically
+erasing
+position
+practice
+means
+append-only
+updating
+middle
+effectively
+erases
+implements
+appending
+placing
+end-of-tape
+eot
+mark
+refuses
+past
+start
+doing
+overwrites
+places
+end
+principle
+implemented
+structures
+algorithms
+property
+12.9.2.2
+naming
+question
+consists
+letter
+path
+unix
+molmt
+table
+enables
+discover
+knowing
+contained
+world
+serial
+prefixed
+ensure
+require
+digits
+length
+remember
+memorize
+12-digit
+problem
+computer
+machines
+type
+kind
+difficulty
+contents
+layout
+additional
+compatible
+computers
+orders
+encodings
+letters
+pcs
+versus
+ebcdic
+mainframes
+today
+leave
+name-space
+unsolved
+depend
+users
+figure
+out
+interpret
+fortunately
+standardized
+music
+cds
+universal
+format
+understood
+formats
+usual
+driver
+programmed
+comn1on
+dvd
+fonnats
+12.9.2.3
+hierarchical
+management
+change
+human
+assistance
+technology
+backups
+jukebox
+simple
+instructs
+switch
+jukeboxes
+hold
+thousands
+cartridges
+robotic
+arms
+managing
+movement
+extends
+hierarchy
+primary
+memory
+secondary
+incorporate
+tertiary
+level
+larger
+cheaper
+slower
+extended
+straightforward
+manner
+extension
+rarely
+carried
+reason
+retrieval
+delay
+intolerable
+demand
+paging
+forms
+extend
+small
+frequently
+remain
+large
+actively
+archived
+file-archiving
+directory
+entry
+continues
+exist
+longer
+occupy
+call
+suspended
+staged
+control
+proceeds
+disk-resident
+found
+installations
+volumes
+seldom
+sporadically
+current
+work
+hsm
+includes
+extending
+move
+back
+needed
+deleted
+schedule
+policy
+sites
+save
+e-mail
+years
+destroyed
+point
+ilm
+centralizes
+knowledge
+policies
+applied
+locations
+12.9.3
+performance
+issues
+component
+important
+aspects
+tertiary-storage
+speed
+reliability
+cost
+12.9.3.1
+bandwidth
+latency
+measure
+average
+rate
+transfer-that
+divided
+transfer
+calculates
+l
+including
+cartridge-switching
+essence
+sustained
+stream
+flows
+effective
+provided
+tlce
+ranges
+megabytes
+slowest
+fastest
+similar
+range
+bandwidths
+30mb
+aspect
+faster
+essentially
+twodimensional
+bits
+simply
+moves
+ann
+selected
+cylinder
+waits
+rotational
+milliseconds
+contrast
+three-dimensional
+portion
+accessible
+buried
+hundreds
+layers
+wound
+reel
+requires
+winding
+reels
+reaches
+thousand
+times
+involved
+significantly
+higher
+changed
+stop
+spinning
+arm
+spin
+takes
+seconds-about
+hundred
+random-access
+switching
+incurs
+high
+penalty
+robotic-ann
+switched
+rewind
+ejected
+loaded
+required
+calibrate
+prepare
+i
+slow
+tape-switch
+enormously
+greater
+generalize
+expensive
+careful
+overgeneralize
+eject
+load
+fast-forward
+item
+pay
+attention
+reasonable
+focus
+terrible
+bottleneck
+first
+bandwidth-to-storage-capacity
+ratio
+library
+favorable
+hour
+situation
+respect
+illustrate
+queued
+waiting
+low
+results
+cheap
+share
+devoted
+infrequently
+satisfy
+12.9.3.2
+good
+pe1jormance
+unable
+failure
+practical
+purposes
+infinitely
+understand
+n1.ag
+netic
+reliable
+exposed
+harmful
+environmental
+conditions
+dust
+temperature
+humidity
+mechanical
+forces
+shock
+bending
+optical
+considered
+layer
+stores
+protected
+transparent
+plastic
+glass
+varies
+widely
+depending
+inexpensive
+wear
+dozen
+gentle
+millions
+reuses
+comparison
+magnetic-disk
+magnetic-tape
+weak
+spot
+flies
+close
+contact
+scrubbing
+action
+hours
+summary
+fixed-disk
+removable-disk
+weakness
+crash
+destroys
+optical-disk
+leaves
+unharmed
+12.9.3.3
+factor
+concrete
+lower
+suppose
+holds
+price
+amom1.t
+housing
+motor
+controller
+platters
+gigabyte
+manufacture
+total
+capacity
+lox
+make
+expense
+averaged
+figures
+show
+trends
+megabyte
+dram
+prices
+graphs
+lowest
+advertisements
+magazines
+wide
+web
+year
+reflect
+smallcomputer
+marketplace
+readership
+mainframe
+minicomputer
+markets
+case
+purchased
+128mb
+512mb
+2gb
+---c-19
+,8.,.-2
+98-cc4
+c8
+88---,19
+c9
+-1c
+91
+99-4
+c19l96---,19c
+-2.,-,o
+oo
+0l.04
+2oos
+fraction
+huge
+dominated
+shows
+fluctuates
+period
+crashes
+excess
+production
+caused
+glut
+periods
+shortages
+sigrtificant
+increases
+decline
+steadier
+tape-drive
+fell
+steadily
+ceased
+dramatic
+fall
+mid-range
+dat
+continued
+approaching
+72gb
+320gb
+9c-c84-1
+l98
+-88c---cc19
+90c
+c19
+--c-c19l94-c-c19l96,---.,-c19cc98-2,-jooc-c0--c2,-j.00,-,-2
+.,j
+in.expensive
+shown
+prior
+mentioned
+tracking
+targeted
+small-computer
+fallen
+dramatically
+comparing
+plummeted
+improved
+four
+magnitude
+improvement
+main
+dropped
+rapidly
+fact
+medium-sized
+libraries
+equivalent
+largely
+rendered
+obsolete
+appears
+revival
+await
+revolutionary
+breakthrough
+limited
+archival
+enormous
+greatly
+exceed
+farms
+secondary-storage
+n1.agnetic
+modern
+structured
+one-dimensional
+arrays
+attached
+ways
+local
+ports
+host
+network
+cmmection
+request
+specifies
+address
+referenced
+disk-schedliling
+improve
+response
+variance
+sstf
+scan
+c-scan
+c-look
+designed
+improvements
+strategies
+disk-queue
+ordering
+harmed
+external
+fragmentation
+utilities
+identify
+fragmented
+decrease
+defragmenting
+badly
+systenc
+reduced
+defragmentation
+progress
+sophisticated
+fast
+allocation
+reorganization
+manages
+lowlevel
+create
+hardware-new
+preformatted
+partitioned
+boot
+allocated
+bootstrap
+finally
+corrupted
+lock
+replace
+spare
+efficient
+swap
+key
+bypass
+dedicate
+partition
+user
+administrator
+decision
+providing
+options
+amount
+made
+redundant
+raid
+automatic
+recovery
+face
+organized
+levels
+combination
+rates
+write-ahead
+log
+scheme
+availability
+stable
+implement
+replicate
+information
+multiple
+nonvolatile
+independent
+modes
+update
+controlled
+recover
+built
+technologies
+magneto-optic
+requestqueue
+scheduling
+convention
+simpler
+potentially
+confusing
+identifies
+built-in
+privileged
+reading
+protect
+sensitive
+coating
+robust
+expose
+material
+damage
+lastly
+decreased
+decades
+notably
+effects
+areal
+density
+gigabits
+square
+inch
+sequential-access
+suitability
+depends
+term
+streaming
+denotes
+underway
+excluding
+overhead
+level-2
+cache
+nanoseconds
+transferred
+described
+kilobytes
+utilization
+calculate
+part
+percent
+acceptable
+compute
+smallest
+complete
+sentence
+transfers
+______
+sequentialaccess
+s1naller
+minimum
+give
+hard-disk
+typically
+terms
+quantity
+failures
+mtbf
+measured
+drive-hours
+1,000
+750,000
+describes
+occur
+farm
+century
+decade
+month
+week
+day
+minute
+mortality
+statistics
+u.s
+resident
+chance
+dying
+ages
+deduce
+20-year-olds
+convert
+expected
+lifetime
+20-year-old
+manufacturer
+guarantees
+1-million-hour
+model
+conclude
+warranty
+discuss
+maintain
+free-space
+tape-resident
+assume
+marks
+commands
+imagine
+holographic
+invented
+costs
+10,000
+40,000
+images
+image
+black-and-white
+picture
+resolution
+pixels
+pixel
+bit
+millisecond
+answer
+questions
+affect
+computing
+result
+invention
+scsi-ii
+scsi
+bus
+operates
+packet
+spins
+7,200
+rpm
+sector
+estimate
+7,000
+cylinders
+tracks
+cylinde1
+head-switch
+platter
+adjacent-cylinder
+accurate
+workload
+reads
+individual
+scattered
+queue
+algorithm
+reduce
+distance
+8-kilobyte
+pages
+reduces
+compare
+achieved
+organization
+level1
+5,000
+numbered
+serving
+previous
+pending
+fifo
+86,1470,913,1774,948,1509,1022,1750,130
+starting
+disk-scheduling
+fcfs
+elementary
+physics
+states
+object
+subjected
+constant
+acceleration
+relationship
+at2
+exercise
+accelerates
+half
+decelerates
+perform
+adjacent
+lillisecond
+full-stroke
+explain
+proportional
+root
+equation
+function
+determine
+percentage
+speedup
+saved
+original
+accelerating
+typical
+floppy
+manufactured
+mid-1980s
+constant-rate
+constantacceleration
+seek-time
+scb.edule
+rotates
+covered
+tim.e
+one-sided
+5.25-inch
+gigabit
+megabits
+1,800
+feet
+capacities
+exists
+volume
+marketable
+simulates
+modify
+include
+optimization
+remapping
+sparing
+slipping
+influence
+perfonnance
+mapped
+consisting
+kilobyte
+assuming
+choice
+advantages
+disadvantages
+uniform
+distribution
+arrival
+completion
+service
+variation
+disciplines
+fair
+starvation
+assertion
+true
+describe
+fairness
+goal
+time-sharing
+examples
+circumstances
+unfair
+comprising
+parity
+sets
+accessed
+continuous
+treats
+shared
+assigns
+reasons
+difference
+treatment
+features
+sharing
+special
+properties
+ram
+selection
+factors
+considerations
+apply
+recently
+buffer
+estimates
+terabyte
+incorporates
+10gb
+5mb
+maximum
+pure
+assumptions
+justify
+reside
+handles
+mixed
+configuration
+levell
+flexibility
+deciding
+storing
+optimize
+tradeoffs
+rereading
+code
+uniformly
+distributed
+expect
+fat
+inodes
+propose
+taking
+advantage
+hot
+fil1.d
+indirection
+dos
+throughput
+single
+contiguous
+achieve
+nonredundant
+striping
+discussions
+raids
+patterson
+detailed
+survey
+chen
+disk-system
+architectures
+high-performance
+katz
+enhancements
+wilkes
+teorey
+pinkerton
+early
+comparative
+analysis
+simulations
+linear
+crossed
+lengths
+king
+moving
+idle
+seltzer
+jacobson
+addition
+optimizations
+exploit
+lumb
+worthington
+negligible
+impact
+defect
+placement
+ruemmler
+akyurek
+salenl
+low-level
+zone
+structure
+advanced
+schindler
+gregory
+power
+douglis
+1994l
+1995l
+greenawalt
+golding
+randomness
+considerable
+ousterhout
+report
+numerous
+interesting
+characteristics
+smalt
+newly
+opened
+sequentially
+entirety
+seeks
+short
+mckusick
+berkeley
+ffs
+techniques
+obtain
+variety
+workloads
+mcvoy
+kleiman
+quinlan
+worm
+richards
+discusses
+approach
+maher
+overview
+integration
+concept
+studied
+thirty
+paper
+mattson
+mathematical
+predicting
+alt
+accommodation
+commercial
+miller
+supercomputing
+environment
+benjamin
+massive
+requirements
+eosdis
+project
+nasa
+network-attached
+programmable
+gibson
+1997b
+1997at
+riedel
+1998t
+lee
+thekkath
+subject
+article
+psaltis
+mok
+collection
+papers
+topic
+dating
+assembled
+sincerbox
+asthana
+finkelstein
+emerging
+electron
+trapping
+toigo
+in-depth
+description
+potential
+future
+processing
+cases
+incidental
+browse
+page
+edit
+interest
+enter
+role
+related
+topics
+chapters
+bring
+pieces
+paint
+basics
+hardware
+nature
+constraints
+internal
+facilities
+embodiment
+bridges
+gap
+streams
+mechanism
+assemble
+pipelines
+dynamically
+principles
+design
+explore
+subsystem
+complexities
+software
+connected
+concern
+designers
+vary
+mouse
+cd-rom
+varied
+methods
+kernet
+separates
+rest
+kernel
+exhibits
+conflicting
+hand
+increasing
+standardization
+interfaces
+trend
+helps
+11s
+generations
+existing
+increasingly
+broad
+unlike
+challenge
+met
+elements
+buses
+controllers
+accommodate
+encapsulate
+details
+oddities
+device-driver
+modules
+deviceaccess
+calls
+standard
+operate
+great
+fit
+general
+categories
+transmission
+cards
+modems
+human-interface
+screen
+keyboard
+specialized
+s11ch
+steering
+military
+fighter
+jet
+shuttle
+aircraft
+input
+flight
+joystick
+foot
+pedals
+sends
+output
+motors
+rudders
+flaps
+thrusters
+incredible
+concepts
+communicates
+sending
+signals
+cable
+air
+connection
+port
+common
+wires
+rigidly
+defined
+protocol
+messages
+electronics
+conveyed
+patterns
+electrical
+voltages
+timings
+plugs
+arrangement
+daisy
+chain
+architecture
+signaling
+connects
+processor-memory
+usb
+upper-right
+c01mected
+plugged
+interconnect
+parts
+pcie
+serial-port
+chip
+controls
+complex
+separate
+circuit
+board
+processor
+microcode
+private
+enable
+com1ection-scsi
+ata
+tasks
+bad-sector
+mapping
+prefetching
+buffering
+caching
+accomplish
+registers
+communication
+instructions
+byte
+word
+instruction
+triggers
+lines
+select
+proper
+register
+alternatively
+device-control
+cpu
+executes
+data-transfer
+memory-mapped
+addresses
+graphics
+memory558
+000-00f
+dma
+020-021
+interrupt
+040-043
+timer
+200-20f
+game
+2f8-2ff
+320-32f
+378-37f
+parallel
+3d0-3df
+3f0-3f7
+diskette-drive
+3f8-3ff
+partial
+region
+generates
+based
+technique
+issuing
+ease
+offset
+disadvantage
+fault
+incorrect
+pointer
+unintended
+vulnerable
+accidental
+modification
+risk
+status
+data-in
+data-out
+send
+command
+completed
+error
+occurred
+nlode
+chooses
+full-duplex
+half-duplex
+checking
+speeds
+supported
+chips
+expand
+burst
+receive
+13.2.1
+polling
+interaction
+intricate
+handshaking
+notion
+coordinate
+producer-consumer
+state
+busy
+recall
+clear
+working
+clears
+ready
+accept
+comm.and
+wishes
+command-ready
+execute
+writes
+coordinating
+repeatedly
+notices
+sees
+succeeded
+finished
+loop
+repeated
+step
+method
+wait
+task
+quickly
+lost
+overflow
+returning
+cpu-instruction
+cycles
+sufficient
+poll
+logical-and
+extract
+branch
+inefficient
+attempted
+finds
+remains
+undone
+instances
+arrange
+notify
+initiates
+executing
+checks
+interrupts
+resumes
+interrupted
+interrupt-driven
+cycle
+13.2.2
+works
+wire
+senses
+detects
+asserted
+signal
+line
+performs
+jumps
+handler
+determines
+restore
+return
+execution
+raises
+asserting
+catches
+dispatches
+servicing
+summarizes
+respond
+asynchronous
+event
+nlore
+interrupthandling
+ability
+defer
+handling
+critical
+dispatch
+raised
+multilevel
+distinguish
+low-priority
+degree
+urgency
+cpus
+events
+unrecoverable
+errors
+turned
+sequences
+maskable
+accepts
+selects
+interrupt-handling
+routine
+vector
+handlers
+purpose
+vectored
+search
+sources
+solve
+chaining
+element
+points
+il1.terrupt
+compromise
+inefficiency
+dispatching
+illustrates
+theinterruptvector
+intel
+pentium
+nonmaskable
+device-generated
+maskii1.g
+high-priority
+preempt
+interacts
+probes
+installs
+raise
+signify
+cornpleted
+detected
+dividing
+accessing
+nonexistent
+attempting
+mode
+trigger
+occurrences
+induce
+urgent
+self-contained
+saves
+19-31
+32-255
+breakpoint
+into-detected
+bound
+exception
+invalid
+opcode
+double
+coprocessor
+segment
+overrun
+stack
+protection
+floating-point
+alignment
+check
+i3.4
+event-vector
+suspends
+page-fault
+page-cache
+fetch
+resume
+implementation
+issue
+routines
+arguments
+build
+convey
+operand
+desired
+trap
+switches
+supervisor
+requested
+priority
+compared
+assigned
+interrupts-executilcg
+behalf
+overflows
+loses
+flow
+copying
+consuming
+urgent-it
+efficiently
+completes
+pair
+implen
+ents
+records
+starts
+occupied
+dispatched
+userlevel
+buffers
+calling
+scheduler
+threaded
+suited
+priorities
+enforce
+precedence
+background
+solaris
+executed
+threads
+housekeeping
+relationships
+thread
+lowpriority
+favor
+higher-priority
+multiprocessor
+run
+concurrently
+windows
+appendix
+summa
+supervisor-mode
+done
+faults
+heavily
+time-sensitive
+13.2.3
+direct
+wasteful
+general-purpose
+watch
+feed
+time-a
+termed
+avoid
+burdening
+pio
+offloading
+special-purpose
+initiate
+source
+destination
+count
+directly
+high-speed
+performed
+dma-request
+dma-acknowledge
+seize
+memory-address
+iia
+-acknowledge
+receives
+signat
+removes
+depicted
+seizes
+momentarily
+prevented
+items
+caches
+computation
+improves
+mercwry
+undergo
+translation
+dvma
+intervention
+protected-mode
+kernels
+prevents
+processes
+discipline
+protects
+access-control
+violations
+erroneous
+exports
+functions
+sufficiently
+underlying
+context
+kernelsoftware
+interferes
+security
+stability
+guard
+malicious
+decreasing
+told
+tells
+--
+2..c
+li.ip
+.2-j
+rc-c
+.,.,---j
+,._
+cg
+,or
+tt_ront
+steps
+13.2.4
+detail
+electronics-hardware
+systen
+review
+gave
+earlier
+reality
+poses
+implementers
+control-bit
+definitions
+protocols
+interacting
+host-and
+attach
+rewriting
+convenient
+structuring
+treated
+added
+cmnputer
+disruption
+software-engineering
+involves
+encapsulation
+layering
+specifically
+abstract
+differences
+identifying
+functions-an
+encapsulated
+drivers
+internally
+custom-tailored
+export
+portions
+hide
+behavior
+generic
+classes
+making
+simplifies
+developer
+benefits
+manufacturers
+scsi-2
+popular
+peripherals
+vendor
+develop
+unfortm1ately
+device-hardware
+standards
+ship
+drivers-for
+ms-dos
+dimensions
+illustrated
+character-stream
+unit
+sequential
+determined
+instruct
+synchronous
+predictable
+irregular
+unpredictable
+sharable
+dedicated
+gigabytes
+-write
+direction
+read-write
+hidden
+grouped
+conventional
+types
+resulting
+styles
+broadly
+applicable
+exact
+differ
+fairly
+conventions
+sockets
+time-of-day
+clock
+graphical
+display
+video
+audio
+transparently
+passes
+arbitrary
+conunands
+ioctl
+functionality
+implernented
+invent
+descriptor
+referring
+managed
+integer
+communicate
+13.3.1
+character
+captures
+block-oriented
+capture
+essen.tial
+behaviors
+block-storage
+insulated
+databasemanagement
+prefer
+systen1
+extra
+unneeded
+likewise
+locking
+regions
+contradictory
+worst
+conflicts
+raw-device
+letting
+disables
+layered
+top
+block-device
+offering
+maps
+actual
+demand-paged
+programmers-access
+offer
+commonly
+executable
+put
+line-at-a-time
+editing
+backspace
+preceding
+removed
+style
+keyboards
+mice
+produce
+spontaneously
+-that
+cam1.ot
+necessarily
+predicted
+printers
+boards
+naturally
+13.3.2
+addressing
+-seek
+systerns
+wall
+socket
+electricity
+appliance
+analogy
+connect
+remote
+listen
+plug
+packets
+servers
+received
+room
+eliminates
+essential
+networks
+facilitating
+creation
+approaches
+interprocess
+card
+c.6
+history
+proving
+ground
+pipes
+fifos
+message
+networking
+a.9
+13.3.3
+clocks
+timers
+elapsed
+timesensitive
+generate
+repeat
+periodic
+slice
+invoke
+flushing
+dirty
+cancel
+proceeding
+slowly
+congestion
+chan11els
+simulating
+maintains
+wanted
+sorted
+earliest-time-first
+earliest
+tince
+requester
+reloads
+ticks
+coarse
+precision
+maintaining
+drift
+constructed
+highfrequency
+counter
+value
+highresolution
+offers
+measurements
+intervals
+13.3.4
+blocking
+nonblocking
+system-call
+relates
+moved
+eligible
+values
+returned
+actions
+asynchronous-they
+varying
+easier
+user-level
+displaying
+frames
+simultaneously
+decompressing
+writer
+overlap
+multithreaded
+continue
+developers
+freeing
+halt
+h1.stead
+alternative
+immediately
+communicated
+setting
+triggering
+call-back
+available-the
+fewer
+argument
+activity
+introduces
+fotmd
+mach
+multiple-read
+services-scheduling
+spooling
+reservation
+handlil1.g-are
+devicedriver
+infrastructure
+responsible
+protectil1.g
+errant
+13.4.1
+begilming
+travels
+rearrangil1.g
+rearranges
+efficiency
+experienced
+device-status
+poor
+delay-sensitive
+supports
+functioning
+parameters
+teclul.iques
+13.4.2
+cope
+mismatch
+producer
+consumer
+modem
+mernory
+accumulate
+arrived
+instantaneous
+incoming
+fills
+fill
+decouples
+consun1.er
+relaxing
+timing
+decoupling
+lists
+adaptations
+disparities
+reassembly
+receiving
+semantics
+clarify
+meaning
+systemcalt
+version
+guaranteed
+calt
+subsequent
+guarantee
+hype
+ransport
+32,pair
+iii
+pci
+xpress
+lnfi
+l.i
+band
+qdr
+efigure
+sun
+enterprise
+device-transfer
+logarithmic
+clean
+obtained
+clever
+copy-on-write
+13.4.3
+copies
+cached
+running
+ilc
+copied
+definition
+resides
+distinct
+sometinces
+illstance
+preserve
+maill
+reread
+avoided
+deferred
+accumulated
+gathered
+strategy
+delayilcg
+13.4.4
+printer
+ilcterleaved
+prillter
+serve
+print
+solves
+intercepting
+spooled
+finishes
+printing
+correspondilcg
+spool
+daemon
+in-kernel
+administrators
+remove
+unwanted
+suspend
+serviced
+usefully
+multiplex
+concurrent
+deal
+explicit
+coordination
+vms
+enabling
+allocate
+deallocate
+limit
+thenlselves
+parameter
+declares
+permitted
+deadlock
+13.4.5
+minor
+glitch
+fail
+transient
+overloaded
+permanent
+compensate
+retry
+res
+experiences
+rule
+signifying
+success
+named
+errno
+code-one
+values-indicating
+highly
+reported
+illegal
+category
+self-test
+.l
+failed
+error-log
+host-but
+13.4.6
+closely
+accidentally
+purposely
+attempt
+disrupt
+normal
+systern
+mechanisms
+disruptions
+camlot
+prevent
+performing
+define
+monitor
+valid
+memory-protection
+note
+deny
+games
+playback
+representing
+window
+13.4.7
+components
+open-file
+connections
+character-device
+communications
+activities
+entities
+spaces
+probe
+aligned
+boundary
+encapsulates
+object-oriented
+teclucique
+record
+system-wide
+inode
+ple
+.,_
+user-process
+v.
+info
+write.functions
+f..un
+ction
+pointers
+extensively
+message-passing
+converted
+manager
+add
+procedural
+adds
+13.4.8
+coordinates
+extensive
+subsystenc
+supervises
+procedures
+monitoring
+initialization
+upper
+refers
+directories
+file-access
+space-allocation
+colon
+represents
+separator
+separation
+associate
+incorporated
+regular
+automatically
+ownership
+owners
+associates
+prefixes
+resolve
+mount
+longest
+ncatchilcg
+prefix
+m.ajor
+passed
+index
+device-table
+significant
+stages
+lookup
+tables
+pass
+introduce
+recompiling
+loads
+life
+suggests
+consume
+tremendous
+previously
+correctness
+irl
+scheduled
+eventually
+subroutine
+allocates
+correct
+interruptvector
+codes
+requesting
+device-controller
+-------tim_e
+unblocks
+passing
+pushed
+examplef
+push
+module
+exchanged
+occurring
+supporting
+exchanges
+orputmsg
+putmsg
+delivers
+similarly
+getmsg
+ordinary
+unstructured
+controt
+end-like
+modules-has
+triggered
+frame
+fult
+resorts
+dropping
+drop
+ample
+benefit
+framework
+modular
+incremental
+ethernet
+wireless
+treating
+boundaries
+communicating
+variants
+preferred
+heavy
+demands
+unblock
+stress
+exposes
+inefficiencies
+durilcg
+coping
+gracefully
+concerns
+architect
+internjpt-driven
+spent
+excessive
+leading
+traffic
+context-switch
+login
+typed
+transported
+construct
+unpacked
+session
+subdaemon
+receiver
+echoes
+sender
+doubles
+eliminate
+daemons
+reimplemented
+lntercomputer
+increased
+logins
+server
+terminal
+burden
+terminals
+high-end
+channel
+offload
+idea
+cham1.els
+flowing
+smoothly
+free
+smaller
+programs
+channels
+tuned
+employ
+frequency
+smart
+minimized
+increase
+concurrency
+dma-knowledgeable
+primitives
+balance
+overload
+idleness
+complexity
+movements
+button
+clicks
+numeric
+converts
+coordinated
+error-handling
+data-recovery
+-in
+observe
+progression
+initially
+experimental
+f1exible
+bugs
+developing
+reboot
+reload
+application-level
+messaging
+threading
+demonstrated
+worth
+reimplement
+development
+effort
+challenging
+debugged
+corruption
+highest
+fixing
+months
+days
+location
+perform.ed
+offloaded
+interval
+sleep
+num.erous
+symbolic
+translate
+character-string
+methodology
+stacked
+bidirectionally
+costly
+consumption
+imply
+cross
+pseudocode
+queueing
+memorymapped
+appropriately
+settings
+broken
+piece
+remaining
+front-end
+termii1.al
+concentrator
+manipulating
+pros
+cons
+multiprogrammed
+men10ry
+implications
+initiation
+waste
+iterates
+busy-waiting
+catching
+hybrid
+combines
+sleeping
+scenarios
+single-user
+multitasking
+preallocation
+combin_ation
+polled
+choices
+insufficient
+guaranteeing
+targets
+complicate
+scale
+system-bus
+assigning
+busy-wait
+vahalia
+leffler
+employed
+bsd
+milenkovic
+programming
+interprocesscommunication
+explored
+stevens
+brain
+documents
+sample
+minix
+tanenbaum
+woodhull
+custer
+hardware-level
+memory-mapping
+reference
+manuals
+motorola
+hennessy
+cache-consistency
+sargent
+shoemaker
+programmer
+guide
+ibm
+map
+march
+ieee
+raga
+discussion
+limiting
+gained
+authorization
+segments
+resources
+imposed
+enforcing
+ensures
+authentication
+integrity
+unauthorized
+destruction
+alteration
+introduction
+inconsistency
+controlling
+enforcement
+confidence
+preserved
+assurance
+broader
+goals
+domains
+combined
+matrix
+examine
+capability
+language-based
+pervasive
+grown
+originally
+conceived
+adjunct
+multiprogramming
+untrustworthy
+safely
+evolved
+obvious
+mischievous
+intentional
+violation
+restriction
+importance
+active
+consistent
+stated
+requirement
+absolute
+detecting
+latent
+subsystems
+detection
+contamination
+healthy
+malfunctioning
+unprotected
+resource
+defend
+misuse
+incompetent
+protection-oriented
+authorized
+usage
+governing
+established
+formulated
+solely
+designer
+designing
+guiding
+decisions
+time-tested
+dictates
+privileges
+passkey
+public
+areas
+guards
+minimal
+stolen
+misused
+compromised
+privilege
+n1inimum
+gain
+fine-grained
+disable
+beneficial
+audit
+trails
+trail
+prograrnmer
+law-enforcement
+officer
+trace
+entails
+creating
+account
+operator
+role-based
+rbac
+facility
+hosts
+restrictions
+disabling
+sections
+10.6.2
+secure
+core
+holes
+variant
+historically
+mind
+irtcomplete
+wrong
+leaving
+objects
+semaphores
+unique
+differentiates
+well-defined
+meaningful
+dvd-rom
+rewound
+closed
+allowed
+reso1jrces
+reqllires
+conunonly
+referred
+need-to-know
+faulty
+invokes
+procedure
+chapter14
+variables
+formal
+compiler
+compile
+arbitrarily
+subset
+listing
+compiled
+conversely
+accounting
+minimize
+risks
+14.3.1
+domain
+facilitate
+defines
+invoked
+rights
+ordered
+object-name
+rights-set
+right
+disjoint
+implying
+association
+establishing
+dynamic
+complicated
+static
+adhere
+content
+stems
+phases
+phase
+vice
+versa
+violated
+modified
+reflects
+realized
+identity
+occurs
+-generally
+logs
+corresponds
+dual-mode
+monitor-user
+nonprivileged
+predefined
+elaborate
+examining
+influential
+systems-unix
+multics
+-to
+14.3.2
+changing
+identification
+temporarily
+accomplished
+tbough
+owner
+setuid
+userid
+owned
+temporary
+ends
+ids
+population
+desirable
+causing
+powerful
+crackers
+obscure
+flexible
+restrictive
+protective
+started
+tops-20
+care
+oversight
+lack
+attacked
+people
+break
+attackers
+successful
+breached
+feature
+14.3.3
+mul
+tics
+hierarchically
+ring
+rings
+dj
+n1ode
+segmented
+segm.ent
+concerned
+current-ring-number
+cmmot
+restricted
+crosses
+mmmer
+field
+bracket
+integers
+gates
+segncent
+bl,b2
+equal
+directed
+designated
+carefully
+decreases
+weighed
+university
+students
+grades
+classwork
+crunching
+utmost
+allowing
+viewed
+abstractly
+rows
+represent
+columns
+column
+explicitly
+omit
+i,j
+objects-three
+laser
+access-matrix
+implementing
+ensuring
+semantic
+outlined
+row
+entries
+involve
+included
+last
+decided
+creates
+dictated
+creator
+cohum1
+defining
+strict
+individually
+d2
+denoted
+asterisk
+appended
+colurrm

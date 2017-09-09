@@ -1,0 +1,8 @@
+Row 1::Height 2::b-tree constraints
+Row 2::Height 1::for a node containing p-1(or p sub
+Row 3::Height 1::trees) keys,the following condition must
+Row 4::Height 1::always hold:
+Row 5::Height 1::-k1<k2<... <kp-1
+Row 6::Height 1::for any data element x in subtree pi,it
+Row 7::Height 1::should always be the case that:
+Row 8::Height 1::-ki-1<x<ki,k1<x and kp-1>x

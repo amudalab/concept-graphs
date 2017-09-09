@@ -1,0 +1,10 @@
+Row 1::Height 3::hash functions
+Row 2::Height 3::need to choose a good hash function
+Row 3::Height 1::quick to compute
+Row 4::Height 3::good hash functions are very rare - birthday paradox
+Row 5::Height 1::how to deal with hashing non-integer keys:
+Row 6::Height 1::find some ways of turning keys into integers
+Row 7::Height 1::eg. remove hyphen in 9635-8904 to get 96358904!
+Row 8::Height 1::for string, add up ascii values of the characters of
+Row 9::Height 1::your string (e.g. java.lang.string.hashcode())
+Row 10::Height 3::then use standard hash function on integers

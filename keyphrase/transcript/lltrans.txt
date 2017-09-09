@@ -1,0 +1,389 @@
+
+
+
+
+
+
+
+
+in the last lecture we looked at stacks as a data type we saw how to implement stacks using an array 
+today we are going to look at queues and linked list 
+you can also implement the queue using a linked list right 
+so we saw array to implement our queue [noise]
+the disadvantage of using an array is fixed size right
+if your queue you knew what the maximum size queue can take its okay
+but if you have no idea maximum size could be you could either use the method did in the last class were in in the size its increases what we have allotted then we double the size 
+you could either do that or you could use an implementation which uses a linked 
+list 17.12
+assume all of you familiar with linked list from your previous course 
+so what essentially blinked list 
+17.09
+it has nodes and it has pointers which are basically referring to the next nodes list 
+this is also [noise] referred to as ahead of  the list 	
+this is referred to as  the tail of list 
+and each of the node has a some element some data in it right
+if i am going to use um queue to 
+if i am go to use a linked list implement the queue then question is which this should be be the front of queue or this should be front of the queue this should be front of my queue 
+yeah which should be my front of the queue [noise]
+ahead of the list to be front of the queue right 
+the tail of this list cannot be the front of the queue can some one tell me why the tail of the list cannot be 18.18
+why cant i have my queue in the first element the second element is in third element [noise] remove exactly 
+so the problem is the removing 
+18.38
+note that i cannot remove this element the linked list does not permit me to do this 
+can i remove this element from linked list not directly why why not because to remove this element i have to change this pointer but no way of accessing it pointer yeah i cannot remove this element 
+i can remove this element no problem but i cannot remove this 
+and in a queue removal is being done in the front yes 
+we remove the element the front of the queue 
+so since i cannot remove the element which is sitting here i cannot call this as the front of the queue 
+i would like to have this as the front of my queue 19.25
+19.26
+okay 
+so lets see how we are going to implement from methods 
+so suppose i have to dequeue which means this is now the front of the queue is to your left right 
+this is the front of the queue this is going to be the rear of the queue 
+so if i have to remove the element at the front of the queue dequeue what should i do the head should now point here yeah 
+this front element will get removed 
+so i just increment just making the head point to this element now yeah 
+so in this manner i can delete the head very easily i can delete this element very easily 
+i can also insert a new element head very easily right 
+i just create a new node connected here make the head point to the new node 
+so inserting the head is also very easy right 
+everyone follows this dequeue operation right 
+this is the front of the queue i can just kind of move the head to one step right and in that manner remove the front element to the queue [noise] 20.34
+that will also need to be done okay
+if i have to add an element 
+20.44
+enqueue an element recall enqueue has to be done rear of the queue 
+this is my queue this is the rear queue 
+i need to add a new element here 
+i need to add an element 
+this pointer should now get modified to pointer this element and tail should be update to this point because this will become tail 
+and this pointer should be null right 
+i can always add an element at the tail and the question we discuss just now its difficult to remove an element 
+you cannot do in constant time right 
+because if i want to remove this node how we remove this node to remove this node i need to access the previous node 
+so the only way you can do it this kind of list to start from the beginning and go all the way to the right till you get to this and then you will be able to access the previous node [noise] 21.45
+so what is problem his question is what is the problem in removing in this node 
+21.53
+from here 
+what is the problem in removing removing this node the problem in removing this node is that after i remove this node what is the new tail of the list 
+its this node i have to make this point to here how do i get this node to here 
+how do i get to this node here 
+i need to go throw the entire list to get to this node very expensive 22.18
+i am not saying its not possible to do it it s a very expensive operation right 
+its not worth while to remove at the tail and so we will remove at the head 
+22.26
+and at the tail which means the front of our queue will be at the head and the rear of the queue would be the tail 22.38
+okay so that is the far as the queue data type is concern
+23.28
+a singly linked list is not a good idea to implement such double ended queue why because said repeatedly we cannot remove the element at the tail or it is expensive 
+so what is the good solution to this problem 23.46
+[noise] so we are going to use what are doubly linked list to implement double double ended queues 
+so first what is the doubly linked list
+a doubly linked list it has nodes with two pointers one next pointer one previous pointer right 
+we are also going to have two sentinel nodes here i will come  for the minute right 
+but each node has two pointers one pointing to the next one pointing to the previous know using such a list you can implement all the operations of double ended queue in constant time why
+now the problem is only if your recall was how do i delete this node which is at the node how do i delete this now 
+if i have so i have a pointer to trail so these are two sentinel nodes i have pointer to these nodes how do i get to this element i just follow the pointer once and get to this element 
+how do i delete this now [noise] move to the previous port and set is next pointer to trailer and sent the previous point trailer to this node perhaps applied on this okay
+so we need header and trailer nodes in a doubly linked list header
+these these nodes are called sentinel nodes dummy nodes they don t contain any data inside in it 
+they are just dare to mark the start and the end okay 
+this is useful 25.41
+how do you delete the okay 
+we come to the that in a second okay 
+so that s the answering his question 
+25.52
+how do you delete at the end right 
+so um followed it 
+so i have to delete san franchiso right out of this list 26.04
+26.07
+all i have to do is makes this pointer to here makes this pointer point to point here right 
+and then this node his out this becomes my new list [HINDI] 
+so that was the only thing i am not do in a singly linked list 26.26
+so i have shown you how to do it here and so all the other operations understand  also can be done in constant time  
+any questions right so using a doubly linked list we can implement all the operation in constant time all the operations of double ended queue 
+we can insert at the front insert at the end delete at the front or delete at the end all in constant time right
+what does constant time mean 
+time which is independent of number of elements in the list right [HINDI] your running time will not be depend upon [noise] okay
+27.17
+now double ended queue is a fairly generic data type it can used to implement other data types also right 
+suppose you had an implementation of double ended queue 
+you can use that two make a stack or make a queue 
+we see how right 
+so i have a implementation of a double ended queue sorry i have an implementation of double ended queue  
+i can use the methods of this um implementation to implement a stack right 
+so for instance the method top would correspond to lets say we keep the top of the 
+stack 28.05
+we make the top of the stack correspond to the last element of our double ended queue 
+so the method top would correspond to return given me the last element double ended queue 
+the method push would not correspond to inserting at the end of my double ended queue 
+28.24
+and the method pop correspond to deleting at the end of my double ended queue right
+is nothing sacrificing about last year i could also make this correspond to the front element of my double ended queue 
+in which case this could be have been front 
+this would have been third front and this would have been removed first 
+you could use it either way you like it
+and size just corresponds to the size of my double ended queue is empty corresponds to is empty double ended queue these are only depend upon the number of elements in the queue right 28.58
+28.59
+another data structures called circularly linked list  and its very simple in this the last element is 
+31.38
+pointing to the first element of the queue of the list right [noise] 
+so there is only one pointer which is pointing to so the no two pointers first stack head and tail only one which points to the start of this circular list and you can use this data structure to implement both queues and stack also right
+how will you use this implement the queue 
+in a queue once again this is the what is this this is front the queue the rear of the queue makes this front of the queue and the rear of the queue this right 
+when i have two when i have to insert an element to this queue i have to add an element what should i do 
+how will i add an element At the rear right
+i will add an element lets say here one i will add an element here what should i do [noise] makes this pointer point to this guy  and make the head point to [noise] yeah its not straight forward right 
+because if you do mean that how make this point to the new node you have just created that has to be done 
+[HINDI] after all what we want is we want to create a new node here right 
+so this will become the new node that you that the element your inserting will now go in to this node [noise] make it going to this node and create an new node and copy this element to the new node right
+make the head point to the new node [noise] copying is not costly because here only copying the reference yeah 
+think about this 
+its very straight forward 
+so in this manner you can insert an element at the you can insert an element in this queue  if your using this implement the queue 
+to remove an element removing an element corresponds to removing the first one right 
+how do you remove the first one 
+right if i have to just remove the this element here how do i make this point to this problem right 
+what do you do again 
+lets remove this one  lets remove this node and copy the contents of this node to here yeah
+we have to remove the rome 
+how d ii remove the rome i copy seatle to rome  
+so this now seatle as in is and i remove this node 
+so now we are going to this second part we here we will quickly look at some sequences 
+so vectors you are going to talk about vectors  you are going to talk about positions you are going to talk about list and general sequence right
+so  they we will be using the data structures that we have seen so far arrays and linked lists to be implement this data types 35.32
+35.34
+so what is the vector data type 
+vector data type is sequence of n elements its support these methods 
+so these are indicated methods these are not all the methods 
+so essentially in a vector 
+so it s a sequence where there is a notion of rank every element of this sequence right 
+so think of sequence of elements right 36.10
+seven eleven thirteen nineteen we know that seven was the first element and eleven was the second element thirteen was the third element and may be i said five as the fourth element
+so  each element there is a notion of rank right and then i can have methods like 
+36.21
+give me the element at rank r 
+so rank here corresponds to let say rank or integers 
+so first element was element at the rank one second element was at the rank two so 
+on 36.32
+so suppose i asked give me the element at rank r or replaces the element rank r by the element e 
+insert an element at the rank r insert the element rank e rank r or delete the element at rank r
+36.51
+i could have such methods yeah 
+note that when i remove the element at rank r 37.04
+[noise] great so what happen so think of rank as for instance lets say the rank of student in a particular class right 
+there is departmental rank one the departmental  rank two and departmental rank three so on 
+suppose departmental rank four does department change goes to some other department 
+now who has the department rank four now whoever had rank fifth here 
+so the same notion 
+so everyone would move up by one rank yeah 
+so lets see how to implement this data type 
+37.43
+what you think as a natural data type structure could be one data structure implement this data type 
+you can implement using arrays lets see lets see an implementation using arrays yeah 
+so what  i am going to have i am going to have this array in which i will here i will have the element with rank one element with rank two element with rank three so on and on 
+yeah and now if i have to insert an element rank  r so in think ya
+is this going as element as rank zero and lest say mean from zero 
+rank zero rank one if i have to insert an element rank r whats the think i have to do 
+i have to put an element here which means that i have to shift all these elements once step to the right 
+so that s what i am doing  here then put an element here right 
+what we are doing in a for loop we are moving first n minus one we are moving step to the right by this statement and we are doing this first n minus one then n minus two two is moved one step to the right all in all 
+r is moved to the one step right and then finally element is pushed r and the size of the thing is increased by one right
+n suppose stores the size of vector 
+similarly when i am removing an element rank r i am essentially shifting all the elements one step to the left right 
+all elements starting from they should be r two n minus two k 
+so si gets si like this one 
+the element at location r the posi the the the here i will get the element which was sitting at location r [HINDI] 
+how expensive are these operations worst case 39.43
+order n in the worst case because we might have to shift up to n elements right
+39.48
+or to the left right this implementation is expensive from this point of view 
+do these two operations insert certain rank remove certain rank i have to in the worst case order n time 
+the other operations are faster 40.05
+40.06
+element at rank r how much time its take because i just go to the rth location 
+in that array and retrive theelements sitting there replace at rank r r comma e again order one because just go to the rth location and replace with element e 40.24
+40.25
+right chart shows you the time complexity of various methods all elements all methods except inserted at rank and remove at rank take constant time these two methods could take order n time in the worst case 
+can you think of some other way of implementing this thing 40.48
+doubly linked list right doubly linked used doubly linked list vector 
+so i am showing here operation of inserting at a certain rank 
+41.03
+now what is the rank this is the header this is the element rank one 
+this is the element at rank two 
+this is the element at rank three 
+sorry this is element at rank three 
+so now suppose i want to insert an element insert at rank two what i am going to do to i have to make a new node and put it between one and three how much time does it take [noise] how much time does it take okay
+so everyone understand the process of insertion right create this node and how do i insert i make point to this node makes a previous pointer point to this node and of course [HINDI] next pointer would point to this node
+this is how i insert this what i get after insertion 
+there are two issues first if i where i have to insert then i take constant time but to find out where i have insert take order in time yes 42.13
+because if i say inserted at rank seventeen i have to step through that linked list goes seventeen position then i would know to insert this location 
+right once i have to know insert at this location in its easy in its three or four pointer changes  which i have to do to insert the element okay 
+so this would be java code
+42.39
+for inserting at a rank 
+no here i am assuming the existence of this procedure node at rank rank right
+this is the method that i am going to be finding shortly what does this method do given a rank 
+it tells me which is the node at that rank yeah 43.04
+43.05
+so for instance here to insert this node at rank two first 
+i will call this procedure with rank two 
+it will give me this node because earlier this was it will give me this node because this is the node at rank two 
+now what i have to do 
+i have to get to the previous node of this node 43.24
+43.25
+if i get to i get this node at rank two 
+i get to the previous node this node 
+this is the node at rank previous to rank two which is at rank one and the new node that i have to insert has to be between this and this right 
+so this is the i create the new node and i set its previous field to refer to the previous node and i set its next field to refer to the next node 
+this was the node at rank one
+this was the node earlier at rank two right
+so i just manner i create the new node at the appropriate place and then also need to check the previous and next field of the of this node this node that s what i am doing here right
+its not doing don t get intimated by this code 44.15
+its just doing showing here that s all all i am doing is assuming the existence of this procedure which [noise] given rank will tell me which is the node at that rank in the  original list yeah
+please don t try to copy this either 
+these slides will be available on the web 44.41
+ okay now here i show you the process of deletion 
+44.49
+so if i have to remove the element at a certain rank how do i do that 
+suppose i have to remove the element at rank three 
+so once again i will first find out the node which is at this rank 
+so i get to this node and then all i have to do is go to the next node go to the previous node and update their next and previous pointers yeah 
+so this  will now point to this and this will refer to this this manner get rid of this node 
+this i will have end 
+an similarly i can write down the java code for doing this once again i am assuming the procedure node at rank given an rank tells me which is the nodes sitting at that rank 
+okay 45.33
+45.34
+now how do i implement this procedure node at rank  well there is nothing else i can do except that array except march to the list and find out and keep incrementing my counter 
+till i reach that rank 
+so i have  done essentially that except is small improvement 
+if the rank is else than the number of the size of the list by two then i start from the header and if it is more than size by two i start from the tail just to small improvement nothing more right 
+you do such a thing yeah because if your looking if your list has hundred elements and your looking for the element rank nineteen eight then this no point to start and staring form the header 
+its better to start from the tail 46.24
+46.25
+right so that is far vector the vector data type concerned except that when i say rank  rank when i say remove the element at a particular rank rank or insert the element at a particular rank as you seen both implementation we have problem right 
+whether we usen  array or a list to do that implementation we seem to require 46.51
+order n time first case just to we able to in the list just to be able to find out where that element is [noise] where the element correspond to that rank 
+and in an array where we know the element corresponding to that rank is we have to move the elements when we insert to delete right 
+47.11
+so linked lists are better in supporting node based operation right i have to linked list 
+i tell you this node delete this node 
+you can doubly linked list you can delete that node in constant time 
+or if i say insert the node here or i say this is  a node 47.30
+insert a new node after this node i could insert a new node after constant time 
+or if i say delete the insert a node before this node again i can insert a node to do in constant time right 
+so we have the data structure which is very efficient which can do constant time operations provide we give it access to the node 
+some how i access the particular node at which we want to do insert and delete right
+47.56
+so that s why so that s what mention here you can remove at a node or you can insert after a node you can insert before or node all in constant time right 
+however when i say when i give you access to a particular node 48.17
+then in some sense what i am doing is i am also telling you how i have implemented my list right 
+whether it s a doubly linked list or a singly linked list and what are the you know what are the pointers and stuff like that 
+suppose i want to hide all the things information 
+so that you can still use node based operation right without knowing the actual implementation how the thing was done right 
+so that one can have many different implementations 
+so we are going to do this using a notion of positions 
+um so positions abstract data type which intuitively the place where certain elements is stored  right in your data structure captures [HINDI] and there is only one method which is associated with position 49.16
+and that is the element is method element 
+so given object of this data type position i can only call this method element on that object and that will return to me that will to me what is the element sitting at that particular position  right
+if this is not make much sense think of position as or reference to particular node 
+49.41
+yeah think of it as particular node your familiar with pointers 
+so think of it as a pointer as a pointer which tells you right and but all you can do using that pointer is access the element that is situated in the node and nothing 
+you cannot use that pointer to update or previous fields you don t even know this node is implemented right 
+whether the implementer has doubly linked list or singly linked list or a circular list 
+we don t need to know any of that right 
+its an abstract data type which hides all of these details yeah and you can only use the method that element element on  the abstract data type position 50.34
+50.35
+okay and with the notion of position we will have a they will be related all the positions in the case of a linked list right 
+the first element in your linked list second element and the position is referring to the position by the second or the first node50.53
+second node or the third node right 
+similarly first position the second position the third position and so on and on 
+
+so given a position there is the notion of the position before which refers to the node before that post\ition and a position after that position 
+right 
+and we can now define a list abstract datatype which uses this positions
+ruight so what would this abtstract datatype have it would have generic meythods like size and is empty it could havce query method so given a particular position io can hacve a method whoich asks is first is this the first positionoif my list if it is this will say yes and otherwise say a no and whether it is the last position of the  list i can have a\excessive methods which say first last before and after dfirst will give me a the first position last would give me the lsat position before p will give me the position before this position p and after will geive me after this postion OP i can have update methods like swap elemts become a key what does this do given a  positions P and Q it swaps the contents of these positions whatever are the elemtsn sitting at these two positions it wswaps 
+i can replace the element p at the replace the elemtn at position p with e 
+and similarly i can insert the element e at the very first  
+position yeah i can uinsert the element e at the last position and so on and onya and using a doubly linked list uu can actually implement all of these methods in constant time
+so the list abstract datatype is just u know is your same as your linked luist datastructure except that we are getting a abstract datatype implementation we are trying to caprture all of those methods that yuou ca\do on a linked list as an asbstract datatype now this datatype can be implemented using a double linked luist 
+
+methods you can do on on a linked list as an abstract data type 
+now this data type can be implement using a doubly linked list 
+it can be implement using a singly linked list except that it perhaps more efficient implement using a doubly linked list right 
+53.11
+using a singly linked list some of these methods might take linear in the worst case  53.18
+53.19
+right finally we have the notion of a sequence abstract data type 
+so we talked of the vector abstract data type where there is a notion of rank associated with each element list data type where there is notion of positions and the sequence abstract data type has both 
+it is it combines the vector and list abstract data type 
+it is it inherits both of these interfaces right 
+so its multiple inheritance and besides the method that listed for vector list abstract dat type has two additional methods which kind of suite connect from one to another right 
+given a particular rank r it will tell me 
+so the method at rank return me the position correspond this rank 
+and given a position p the rank of method will tell me the rank corresponding to this position right 
+so you could have an implementation of this kind for a sequence 
+what is this this is an array 
+okay each element of the this array refers to 
+so this is the position and this this is same as this right 
+this will given this particular given this particular location 
+i can identify what rank corresponds to looking at this element yeah 
+so now how this method implement rank of p 
+p corresponds to a position 
+a position here is one of these thing right 
+so given a particular position how do i know the rank corresponding to that position i just look in to this element that this rank corresponding to this position 
+given a particular rank how do i determine corresponding to that 
+suppose you gave me rank one 
+i follow this reference
+this is the procedure position corresponding to this rank 
+at this position there is an element store what is the element in this case newyork
+at this position besides the element there is something else which kind of provides of cross reference right    ..
+
+so at each of these positions i have an element store and a rank of that element in my sequence okay 56.02
+now suppose i had to insert an element certain rank what could i do 
+suppose i had to do 
+56.07
+insert an element at rank two yeah 
+can someone tell me what i have to do 
+so if i have to insert an element element at rank  two 
+i am going to create new position 
+the element would sit in that position and this would refer that position and of course all of us these will have to one step other 
+not only have move to right what else have to change the ranks will change rank move step to the right to go and update this 
+
+
+so again inserting at the particular rank will take order n time of the worst case 
+similarly deleting an element 
+if i had given particular position if i wanted to delete the element that position what would i do  57.15
+how do we delete delete an element at certain position in the case of of doubly linked list [noise] okay
+you need to think about this the leave as an exercise 
+so this is comparison of sequence operations you can implement a sequence using an array
+57.51
+the picture i shown you previously and you can also implement sequence using a doubly linked list 
+this would be set of in the worst case of running time 
+so as you can see in the case of an array implementation 
+if you want to insert an element ceratin rank  or you want to remove an element certain rank it will take order n time 
+now if you want to insert after or insert before a certain position yeah 
+this will also take order n time and if you need to remove an element at a certain position 
+this will also take n time right 
+not so in the case of doubly linked list 58.38
+because then you can just zap out the element from there 	 yeah 
+you can just update the pointers before and after and do the these in context time but then what 
+58.49
+becomes more expensive here because in a doubly linked list 
+you cannot figure out the rank of an element 
+i have to go entire list to get to the rank figure out the rank 
+any rank based operation will not take n order time 
+whether you want to find the rank of n element or you want to figure out the find out the 
+find out at the element at particular rank find out the position corresponding to ceratin rank all of these would now take n order time [HINDI]
+so with that we stop our class today 
+so what we learnt today where  queues 
+we learnt about double ended queues 
+we learnt about how to ise linked list and doubly linked list to implement the these data types 
+then we also looked at the vector abstract data type the list abstract data type which is essentially a concretization of the linked list data structure and we also looked at sequence data types sequence data types basically inheriting all the methods of your list data type and your vector data type yeah okay   
+
+
+
+

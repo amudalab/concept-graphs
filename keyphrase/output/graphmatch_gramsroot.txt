@@ -1,0 +1,1753 @@
+applied mathematics letters::applied mathematics letters
+www.elsevier.com graph similarity::aml graph similarity
+graph similarity scoring::graph similarity scoring
+scoring and matching::scoring and matching
+laura a zager::laura a zager
+george c verghese::george c verghese
+department of electrical::department of electrical
+engineering and computer::engineering and computer
+institute of technology::institute of technology
+united states received::united states received
+received in revised::received in revised
+abstract we outline::abstract we outline
+outline a class::outline a class
+class of graph::class of graph
+graph similarity measures::graph similarity measures
+similarity of local::similarity of local
+neighborhoods to derive::neighborhoods to derive
+derive pairwise similarity::derive pairwise similarity
+pairwise similarity scores::pairwise similarity scores
+two different graphs::two different graphs
+present a related::present a related
+related similarity measure::related similarity measure
+update to generate::update to generate
+generate both node::generate both node
+node and edge::node and edge
+edge similarity scores::edge similarity scores
+scores this measure::scores this measure
+task of graph::task of graph
+graphs and networks::graphs and networks
+networks ; graph::networks ; graph
+algorithms ; similarity::algorithms ; similarity
+measures ; graph::measures ; graph
+matching ; graph::matching ; graph
+introduction many applications::introduction many applications
+graphs a good::graphs a good
+deal of research::deal of research
+graph isomorphism problem::graph isomorphism problem
+distance and maximum::distance and maximum
+world wide web::world wide web
+web has generated::web has generated
+generated tremendous interest::generated tremendous interest
+interest in aggregate::interest in aggregate
+aggregate statistical measures::aggregate statistical measures
+measures of graph::measures of graph
+exists a class::exists a class
+class of similarity::class of similarity
+node or edge::node or edge
+element in graph::element in graph
+similar this idea::similar this idea
+idea naturally leads::idea naturally leads
+leads to iterative::leads to iterative
+methods for computing::methods for computing
+computing similarity scores::computing similarity scores
+scores for similarity::scores for similarity
+similarity between elements::similarity between elements
+set of vertices::set of vertices
+vertices or nodes::vertices or nodes
+set of edges::set of edges
+directed or undirected::directed or undirected
+undirected the aim::undirected the aim
+highlight graph similarity::highlight graph similarity
+graph similarity methods::graph similarity methods
+elds that utilize::elds that utilize
+utilize this iterative::utilize this iterative
+present a simple::present a simple
+uential iterative approach::uential iterative approach
+hits search algorithm::hits search algorithm
+search algorithm introduced::search algorithm introduced
+introduced by kleinberg::introduced by kleinberg
+web search results::web search results
+two different categories::two different categories
+sources of information::sources of information
+high-quality hubs kleinberg::high-quality hubs kleinberg
+hubs kleinberg proposed::hubs kleinberg proposed
+proposed an iterative::proposed an iterative
+algorithm for computing::algorithm for computing
+computing a hub::computing a hub
+hub and authority::hub and authority
+simply the sum::simply the sum
+nodes that point::nodes that point
+point to node::point to node
+score of node::score of node
+node n points::node n points
+lzager @ mit.edu::lzager @ mit.edu
+initial values chosen::initial values chosen
+algorithms also utilize::algorithms also utilize
+utilize the idea::utilize the idea
+recursively computing node::recursively computing node
+computing node similarity::computing node similarity
+node similarity scores::node similarity scores
+similarity scores based::similarity scores based
+scores of neighboring::scores of neighboring
+ooding algorithm proposed::ooding algorithm proposed
+proposed by melnik::proposed by melnik
+simrank algorithm proposed::simrank algorithm proposed
+proposed by jeh::proposed by jeh
+jeh and widom::jeh and widom
+method for phylogenetic::method for phylogenetic
+phylogenetic tree construction::phylogenetic tree construction
+tree construction proposed::tree construction proposed
+proposed by heymans::proposed by heymans
+heymans and singh::heymans and singh
+vertex similarity method::vertex similarity method
+method of leicht::method of leicht
+depicted in fig::depicted in fig
+equation to construct::equation to construct
+construct a similarity::construct a similarity
+two graphs blondel::two graphs blondel
+denote the similarity::denote the similarity
+similarity of node::similarity of node
+initial conditions blondel::initial conditions blondel
+choose to initialize::choose to initialize
+explore the application::explore the application
+measure to graph::measure to graph
+iterative method framework::iterative method framework
+two graph elements::two graph elements
+elements are similar::elements are similar
+neighborhoods are similar::neighborhoods are similar
+suggest one simple::suggest one simple
+construct an edge::construct an edge
+source and terminal::source and terminal
+nodes are similar::nodes are similar
+nition of edge::nition of edge
+edge similarity introduces::edge similarity introduces
+introduces a coupling::introduces a coupling
+coupling between edge::coupling between edge
+edge and node::edge and node
+denote the source::denote the source
+node of edge::node of edge
+denote the terminal::denote the terminal
+node set cardinality::node set cardinality
+edge set cardinality::edge set cardinality
+convenient to represent::convenient to represent
+represent the adjacency::represent the adjacency
+denote the node::denote the node
+node similarity score::node similarity score
+score between node::score between node
+ypq the edge::ypq the edge
+out-degree of node::out-degree of node
+equation for edge::equation for edge
+node scores takes::node scores takes
+assembled into matrices::assembled into matrices
+construction of source::construction of source
+update process represented::update process represented
+represented in eqs::represented in eqs
+introduce the vec::introduce the vec
+operator on matrices::operator on matrices
+stacks the columns::stacks the columns
+denotes the kronecker::denotes the kronecker
+product of matrices::product of matrices
+determining the score::determining the score
+matrix iteration problem::matrix iteration problem
+iteration problem concatenating::iteration problem concatenating
+concatenating these vectors::concatenating these vectors
+yields a single::yields a single
+single matrix update::single matrix update
+matrix update equation::matrix update equation
+graph similarity measure::graph similarity measure
+condition x0 chosen::condition x0 chosen
+nonnegative similarity scores::nonnegative similarity scores
+pair of nodes::pair of nodes
+pair of edges::pair of edges
+presented as theorem::presented as theorem
+matrix with perron::matrix with perron
+componentwise positive vector::componentwise positive vector
+sequence bk converges::sequence bk converges
+apply this theorem::apply this theorem
+expand the matrix::expand the matrix
+applying the requirement::applying the requirement
+graphs of fig::graphs of fig
+two directed graphs::two directed graphs
+discussed in section::discussed in section
+higher scores denote::higher scores denote
+scores denote greater::scores denote greater
+denote greater similarity::denote greater similarity
+symmetric and non-negative::symmetric and non-negative
+presented in theorem::presented in theorem
+expressions are equal::expressions are equal
+information about node::information about node
+initial condition constraint::initial condition constraint
+constraint is satis::constraint is satis
+pair of graphs::pair of graphs
+graphs in fig::graphs in fig
+presented in table::presented in table
+update of node::update of node
+cult to show::cult to show
+proof of theorem::proof of theorem
+simultaneous and sequential::simultaneous and sequential
+sequential update procedures::sequential update procedures
+procedures all yield::procedures all yield
+set of similarity::set of similarity
+iterations and expand::iterations and expand
+expand the expression::expand the expression
+node similarity update::node similarity update
+dbs + dat::dbs + dat
+das and dat::das and dat
+ned in section::ned in section
+suggested by blondel::suggested by blondel
+node adjacency matrices::node adjacency matrices
+coupled node calculation::coupled node calculation
+node calculation differs::node calculation differs
+inclusion of additional::inclusion of additional
+additional diagonal terms::additional diagonal terms
+terms that serve::terms that serve
+serve to amplify::serve to amplify
+amplify the scores::amplify the scores
+scores of nodes::scores of nodes
+matching one common::matching one common
+task in graph::task in graph
+graph theory applications::graph theory applications
+kind of optimal::kind of optimal
+nodes and edges::nodes and edges
+two graphs graph::two graphs graph
+graphs graph matching::graphs graph matching
+matching has received::matching has received
+received an enormous::received an enormous
+amount of academic::amount of academic
+matching and data::matching and data
+data mining communities::data mining communities
+cient methods exist::cient methods exist
+classes of graphs::classes of graphs
+elements and set::elements and set
+matched to element::matched to element
+common optimality criteria::common optimality criteria
+found in polynomial::found in polynomial
+authors have obtained::authors have obtained
+nding a matrix::nding a matrix
+properties and minimizes::properties and minimizes
+solves this problem::solves this problem
+almohamad and duffuaa::almohamad and duffuaa
+present a linear::present a linear
+linear programming formulation::linear programming formulation
+problem for order::problem for order
+order to obtain::order to obtain
+obtain a permutation::obtain a permutation
+apply the hungarian::apply the hungarian
+formulated by kuhn::formulated by kuhn
+computes a maximum::computes a maximum
+maximum weight matching::maximum weight matching
+node scoring method::node scoring method
+scoring method presented::scoring method presented
+previous section yields::previous section yields
+yields a matrix::yields a matrix
+matrix of similarity::matrix of similarity
+scores between nodes::scores between nodes
+nodes taken pairwise::nodes taken pairwise
+naturally suggests matching::naturally suggests matching
+matching the nodes::matching the nodes
+graphs by computing::graphs by computing
+computing a maximum::computing a maximum
+matrix of scores::matrix of scores
+identify the location::identify the location
+graph to explore::graph to explore
+explore this problem::explore this problem
+node adjacency matrix::node adjacency matrix
+nodes is denoted::nodes is denoted
+node similarity matrix::node similarity matrix
+scoring method described::scoring method described
+described in section::described in section
+algorithm is applied::algorithm is applied
+matrix to obtain::matrix to obtain
+obtain a matching::obtain a matching
+graph that maximizes::graph that maximizes
+maximizes the sum::maximizes the sum
+sum of matched::sum of matched
+generated in matlab::generated in matlab
+hungarian algorithm requires::hungarian algorithm requires
+algorithm requires padding::algorithm requires padding
+padding the matrix::padding the matrix
+matrix of node::matrix of node
+scores with extra::scores with extra
+scores are set::scores are set
+number a success::number a success
+success is counted::success is counted
+graph ; note::graph ; note
+kind of accounting::kind of accounting
+yields a lower::yields a lower
+equally good matches::equally good matches
+cation are marked::cation are marked
+marked as failures::marked as failures
+variably sized subgraphs::variably sized subgraphs
+subgraphs and variable::subgraphs and variable
+variable edge probability::variable edge probability
+sizes were generated::sizes were generated
+proportion of successful::proportion of successful
+matches was recorded::matches was recorded
+recorded the results::recorded the results
+depicts the expected::depicts the expected
+proportion of correct::proportion of correct
+assigned to nodes::assigned to nodes
+graph the computation::graph the computation
+bound is similar::bound is similar
+similar in concept::similar in concept
+matching hats problem::matching hats problem
+party guests leave::party guests leave
+leave their hats::leave their hats
+hats are stolen::hats are stolen
+leaving m remaining::leaving m remaining
+remaining the hats::remaining the hats
+subgraph matching problem::subgraph matching problem
+nodes are matched::nodes are matched
+matched to nodes::matched to nodes
+subgraph of size::subgraph of size
+function of subgraph::function of subgraph
+subgraph size plotted::subgraph size plotted
+plotted in fig::plotted in fig
+performance l.a zager::performance l.a zager
+subgraph matching performance::subgraph matching performance
+enyi random graph::enyi random graph
+graph with edge::graph with edge
+hungarian method applied::hungarian method applied
+node scores obtained::node scores obtained
+obtained from eqs::obtained from eqs
+matching scenarios described::matching scenarios described
+similarity based matching::similarity- based matching
+based matching performance::based matching performance
+performance of random::performance of random
+data of fig::data of fig
+appears that higher::appears that higher
+higher initial connectivities::higher initial connectivities
+initial connectivities lead::initial connectivities lead
+lead to poorer::lead to poorer
+performance is achieved::performance is achieved
+achieved with larger::achieved with larger
+performs the matching::performs the matching
+nodes with type::nodes with type
+graph matching applications::graph matching applications
+exists side information::exists side information
+attributes of nodes::attributes of nodes
+proteins that constitute::proteins that constitute
+constitute the nodes::constitute the nodes
+protein interaction network::protein interaction network
+type when attempting::type when attempting
+attempting to align::attempting to align
+align these networks::align these networks
+networks across species::networks across species
+proteins that share::proteins that share
+type the node::type the node
+node matching procedures::node matching procedures
+topology to identify::topology to identify
+similarities ; including::similarities ; including
+including node identity::including node identity
+node identity information::node identity information
+information to penalize::information to penalize
+penalize or reward::penalize or reward
+reward certain matches::reward certain matches
+matches may improve::matches may improve
+augment our subgraph::augment our subgraph
+subgraph matching procedure::subgraph matching procedure
+procedure by assigning::procedure by assigning
+assigning each node::assigning each node
+labels with equal::labels with equal
+probability a random::probability a random
+retaining the node::retaining the node
+labels are assigned::labels are assigned
+assigned a negative::assigned a negative
+approach are presented::approach are presented
+presented in fig::presented in fig
+number of correct::number of correct
+correct node matches::correct node matches
+trials for subgraphs::trials for subgraphs
+sizes the averages::sizes the averages
+number of labels::number of labels
+size are drawn::size are drawn
+drawn as vertical::drawn as vertical
+lines the expected::lines the expected
+expected performance results::expected performance results
+related random matching::related random matching
+random matching scenario::random matching scenario
+dashed vertical lines::dashed vertical lines
+increasing the number::increasing the number
+labels improves performance::labels improves performance
+two node labels::two node labels
+distributed with asymmetric::distributed with asymmetric
+asymmetric probabilities fig::asymmetric probabilities fig
+histograms of subgraph::histograms of subgraph
+labels are distributed::labels are distributed
+information is communicated::information is communicated
+nodes with unique::nodes with unique
+exist reference points::exist reference points
+pattern recognition problems::pattern recognition problems
+problems to model::problems to model
+model this scenario::model this scenario
+nodes is generated::nodes is generated
+nodes are labeled::nodes are labeled
+labeled with unique::labeled with unique
+ers the remaining::ers the remaining
+label a random::label a random
+carrying the node::carrying the node
+nodes the node::nodes the node
+edited by setting::edited by setting
+setting the similarity::setting the similarity
+nodes with mismatched::nodes with mismatched
+number the procedure::number the procedure
+continues as described::continues as described
+graph with connectivity::graph with connectivity
+subgraphs of size::subgraphs of size
+histogram is represented::histogram is represented
+dashed vertical line::dashed vertical line
+analogous random matching::analogous random matching
+solid vertical line::solid vertical line
+node labels distributed::node labels distributed
+solid vertical lines::solid vertical lines
+represents the performance::represents the performance
+graph the dashed::graph the dashed
+dashed horizontal lines::dashed horizontal lines
+horizontal lines represent::horizontal lines represent
+represent the expected::represent the expected
+matching performance improves::matching performance improves
+number of unique::number of unique
+labels is increased::labels is increased
+exploring the information::exploring the information
+kinds of structural::kinds of structural
+structural features common::structural features common
+inferred from patterns::inferred from patterns
+node matching procedure::node matching procedure
+applied to pairs::applied to pairs
+pairs of isomorphic::pairs of isomorphic
+graphs to generate::graphs to generate
+generate self-similarity matrices::generate self-similarity matrices
+maximum weight matches::maximum weight matches
+matches the self-similarity::matches the self-similarity
+pair of undirected::pair of undirected
+undirected bipartite graphs::undirected bipartite graphs
+represent the point::represent the point
+line incidence graphs::line incidence graphs
+set of node::set of node
+pair while projections::pair while projections
+reveal any interesting::reveal any interesting
+interesting structural information::interesting structural information
+performance using varying::performance using varying
+numbers of unique::numbers of unique
+labels the dashed::labels the dashed
+dashed lines represent::dashed lines represent
+strictly smaller eigenvalues::strictly smaller eigenvalues
+encode such information::encode such information
+kinds of graphs::kinds of graphs
+machinery of spectral::machinery of spectral
+spectral graph theory::spectral graph theory
+theory to explore::theory to explore
+explore the matrix::explore the matrix
+applications might arise::applications might arise
+recall that kleinberg::recall that kleinberg
+improved web search::improved web search
+web search tool::web search tool
+applied their method::applied their method
+method to automatic::method to automatic
+automatic synonym extraction::automatic synonym extraction
+graph another intriguing::graph another intriguing
+application of graph::application of graph
+functionally similar subgraphs::functionally similar subgraphs
+subgraphs within maps::subgraphs within maps
+maps of protein::maps of protein
+protein interactions compared::protein interactions compared
+explored the identi::explored the identi
+holme and huss::holme and huss
+vertex similarity scoring::vertex similarity scoring
+similarity scoring method::similarity scoring method
+method to predict::method to predict
+predict the function::predict the function
+function of proteins::function of proteins
+finding new applications::finding new applications
+kind of similarity::kind of similarity
+scoring might inspire::scoring might inspire
+inspire some interesting::inspire some interesting
+interesting new heuristics::interesting new heuristics
+acknowledgments this material::acknowledgments this material
+material is based::material is based
+based upon work::based upon work
+supported in part::supported in part
+national science foundation::national science foundation
+science foundation graduate::science foundation graduate
+foundation graduate research::foundation graduate research
+graduate research fellowship::graduate research fellowship
+fellowship any opinions::fellowship any opinions
+conclusions or recommendations::conclusions or recommendations
+ect the views::ect the views
+science foundation additional::science foundation additional
+foundation additional support::foundation additional support
+work was provided::work was provided
+dod afosr uri::dod afosr uri
+architectures for secure::architectures for secure
+secure and robust::secure and robust
+robust distributed infrastructures::robust distributed infrastructures
+led by stanford::led by stanford
+blondel and paul::blondel and paul
+paul van dooren::paul van dooren
+comments and discussion::comments and discussion
+algorithm for subgraph::algorithm for subgraph
+assoc comput mach::assoc comput mach
+cliques and graph::cliques and graph
+error correcting graph::error correcting graph
+correcting graph matching::correcting graph matching
+underlying cost function::underlying cost function
+ieee trans pattern::ieee trans pattern
+trans pattern anal::trans pattern anal
+pattern anal mach::pattern anal mach
+anal mach intell::anal mach intell
+graph distance metric::graph distance metric
+distance metric combining::distance metric combining
+metric combining maximum::metric combining maximum
+combining maximum common::combining maximum common
+maximum common subgraph::maximum common subgraph
+subgraph and minimum::subgraph and minimum
+minimum common supergraph::minimum common supergraph
+pattern recognit lett::pattern recognit lett
+matching free trees::matching free trees
+cliques and monotone::cliques and monotone
+monotone game dynamics::monotone game dynamics
+versatile graph matching::versatile graph matching
+graph matching algorithm::graph matching algorithm
+application to schema::application to schema
+18th international conference::18th international conference
+conference on data::conference on data
+measure of structural-context::measure of structural-context
+eighth international conference::eighth international conference
+conference on knowledge::conference on knowledge
+discovery and data::discovery and data
+deriving phylogenetic trees::deriving phylogenetic trees
+analysis of metabolic::analysis of metabolic
+similarity in networks::similarity in networks
+measure of similarity::measure of similarity
+similarity between graph::similarity between graph
+applications to synonym::applications to synonym
+extraction and web::extraction and web
+approach to weighted::approach to weighted
+weighted graph matching::weighted graph matching
+graph matching problems::graph matching problems
+linear programming approach::linear programming approach
+graph matching problem::graph matching problem
+naval research logistic::naval research logistic
+research logistic quarterly::research logistic quarterly
+central file exchange::central file exchange
+file exchange http::file exchange http
+leexchange last accessed::NNP last accessed
+caps and robbers::caps and robbers
+expect ? college::expect ? college
+similarity and matching::similarity and matching
+dept of electrical::dept of electrical
+role-similarity based functional::role-similarity based functional
+based functional prediction::based functional prediction
+prediction in networked::prediction in networked
+roy soc interface::roy soc interface
+applied mathematics::applied mathematics
+mathematics letters::mathematics letters
+graph similarity::graph similarity
+similarity scoring::similarity scoring
+matching laura::matching laura
+verghese department::verghese department
+electrical engineering::electrical engineering
+computer science::computer science
+massachusetts institute::massachusetts institute
+united states::united states
+states received::states received
+revised form::revised form
+similarity measures::similarity measures
+structural similarity::structural similarity
+local neighborhoods::local neighborhoods
+derive pairwise::derive pairwise
+pairwise similarity::pairwise similarity
+similarity scores::similarity scores
+related similarity::related similarity
+similarity measure::similarity measure
+linear update::linear update
+edge similarity::edge similarity
+graph matching::graph matching
+rights reserved::rights reserved
+graph algorithms::graph algorithms
+graph alignment::graph alignment
+applications call::applications call
+quantitative measure::quantitative measure
+good deal::good deal
+graph isomorphism::graph isomorphism
+isomorphism problem::isomorphism problem
+edit distance::edit distance
+common sub::common sub
+large graphs::large graphs
+world wide::world wide
+wide web::wide web
+tremendous interest::tremendous interest
+aggregate statistical::aggregate statistical
+statistical measures::statistical measures
+graph structure::graph structure
+degree distribution::degree distribution
+similarity methods::similarity methods
+respective neighborhoods::respective neighborhoods
+iterative methods::iterative methods
+computing similarity::computing similarity
+elements propagate::elements propagate
+neighboring elements::neighboring elements
+highlight graph::highlight graph
+iterative framework::iterative framework
+simple application::simple application
+uential iterative::uential iterative
+iterative approach::iterative approach
+hits search::hits search
+search algorithm::search algorithm
+algorithm introduced::algorithm introduced
+web search::web search
+search results::search results
+good sources::good sources
+high-quality hubs::high-quality hubs
+hubs kleinberg::hubs kleinberg
+kleinberg proposed::kleinberg proposed
+iterative algorithm::iterative algorithm
+authority score::authority score
+web graph::web graph
+hub scores::hub scores
+hub score::hub score
+authority scores::authority scores
+e-mail address::e-mail address
+l.a zager::l.a zager
+front matter::front matter
+g.c verghese::g.c verghese
+prototype hub::prototype hub
+authority graph::authority graph
+initial values::initial values
+values chosen::values chosen
+application-oriented algorithms::application-oriented algorithms
+computing node::computing node
+node similarity::node similarity
+scores based::scores based
+neighboring nodes::neighboring nodes
+ooding algorithm::ooding algorithm
+algorithm proposed::algorithm proposed
+simrank algorithm::simrank algorithm
+scoring method::scoring method
+phylogenetic tree::phylogenetic tree
+tree construction::tree construction
+construction proposed::construction proposed
+vertex similarity::vertex similarity
+similarity method::similarity method
+view kleinberg::view kleinberg
+authority nodes::authority nodes
+generalize kleinberg::generalize kleinberg
+update equation::update equation
+graphs blondel::graphs blondel
+scores byp::scores byp
+hits algorithm::hits algorithm
+odd limits::odd limits
+initial conditions::initial conditions
+conditions blondel::conditions blondel
+all-ones vector::all-ones vector
+nal score::nal score
+node scores::node scores
+coupled node::coupled node
+edge scoring::edge scoring
+iterative method::iterative method
+method framework::method framework
+graph elements::graph elements
+edge score::edge score
+respective source::respective source
+terminal nodes::terminal nodes
+similarity introduces::similarity introduces
+source node::source node
+terminal node::terminal node
+node set::node set
+set cardinality::set cardinality
+edge set::edge set
+adjacency structure::adjacency structure
+edge matrix::edge matrix
+similarity score::similarity score
+diagonal matrix::diagonal matrix
+diagonal entry::diagonal entry
+scores takes::scores takes
+frobenius norm::frobenius norm
+matrix norm::matrix norm
+edge matrices::edge matrices
+update process::update process
+process represented::process represented
+matrix form::matrix form
+kronecker product::kronecker product
+score vector::score vector
+procedure converges::procedure converges
+matrix iteration::matrix iteration
+iteration problem::iteration problem
+problem concatenating::problem concatenating
+vectors yields::vectors yields
+single matrix::single matrix
+matrix update::matrix update
+theorem summarizes::theorem summarizes
+key properties::key properties
+initial condition::initial condition
+positive constant::positive constant
+unique set::unique set
+nonnegative similarity::nonnegative similarity
+non-negative matrix::non-negative matrix
+perron root::perron root
+positive vector::positive vector
+orthogonal projector::orthogonal projector
+invariant subspace::invariant subspace
+matrix equation::matrix equation
+explicit expressions::explicit expressions
+abk kabkk2::abk kabkk2
+directed graphs::directed graphs
+higher scores::higher scores
+scores denote::scores denote
+greater similarity::greater similarity
+positive semi-de::positive semi-de
+nonnegative eigenvalues::nonnegative eigenvalues
+result presented::result presented
+applies note::applies note
+odd iterates::odd iterates
+normalization embedded::normalization embedded
+odd expressions::odd expressions
+reasonable choice::reasonable choice
+priori information::priori information
+condition constraint::condition constraint
+simultaneous update::simultaneous update
+edge scores::edge scores
+sequential update::sequential update
+analogous argument::analogous argument
+update procedures::update procedures
+iteration converge::iteration converge
+similarity update::similarity update
+iteration suggested::iteration suggested
+standard node::standard node
+node adjacency::node adjacency
+adjacency matrices::adjacency matrices
+node calculation::node calculation
+calculation differs::calculation differs
+additional diagonal::additional diagonal
+diagonal terms::diagonal terms
+common task::common task
+graph theory::graph theory
+theory applications::theory applications
+optimal matching::optimal matching
+respective elements::respective elements
+graphs graph::graphs graph
+enormous amount::enormous amount
+academic treatment::academic treatment
+pattern matching::pattern matching
+data mining::data mining
+mining communities::mining communities
+cient methods::cient methods
+methods exist::methods exist
+assignment matrix::assignment matrix
+common optimality::common optimality
+optimality criteria::optimality criteria
+obtained approximations::obtained approximations
+structural properties::structural properties
+umeyama solves::umeyama solves
+linear programming::linear programming
+programming formulation::programming formulation
+permutation matrix::permutation matrix
+hungarian algorithm::hungarian algorithm
+maximum weight::maximum weight
+weight matching::weight matching
+node scoring::node scoring
+method presented::method presented
+previous section::previous section
+section yields::section yields
+illustrative problem::illustrative problem
+larger graph::larger graph
+adjacency matrix::adjacency matrix
+random graph::random graph
+subgraph induced::subgraph induced
+similarity matrix::similarity matrix
+method described::method described
+original graph::original graph
+matched scores::matched scores
+results presented::results presented
+utilized borlin::utilized borlin
+algorithm requires::algorithm requires
+extra entries::extra entries
+ctitious scores::ctitious scores
+negative number::negative number
+subgraph node::subgraph node
+original identi::original identi
+accounting yields::accounting yields
+lower bound::lower bound
+good matches::good matches
+rst test::rst test
+sized subgraphs::sized subgraphs
+variable edge::variable edge
+edge probability::edge probability
+average proportion::average proportion
+successful matches::successful matches
+expected proportion::expected proportion
+correct matches::correct matches
+subgraph nodes::subgraph nodes
+matching hats::matching hats
+hats problem::hats problem
+party guests::party guests
+guests leave::guests leave
+randomly redistributed::randomly redistributed
+subgraph matching::subgraph matching
+matching problem::matching problem
+constant function::constant function
+subgraph size::subgraph size
+size plotted::size plotted
+performance l.a::performance l.a
+matching performance::matching performance
+15-node erd::15-node erd
+enyi random::enyi random
+edge probabilities::edge probabilities
+hungarian method::hungarian method
+method applied::method applied
+scores obtained::scores obtained
+matching scenarios::matching scenarios
+scenarios described::scenarios described
+similarity based::similarity- based
+substantial improvement::substantial improvement
+expected performance::expected performance
+random matching::random matching
+interesting features::interesting features
+higher initial::higher initial
+initial connectivities::initial connectivities
+connectivities lead::connectivities lead
+poorer performance::poorer performance
+larger subgraphs::larger subgraphs
+entire graph::entire graph
+procedure performs::procedure performs
+type labels::type labels
+matching applications::matching applications
+exists side::exists side
+side information::side information
+protein interaction::protein interaction
+interaction network::interaction network
+match proteins::match proteins
+node matching::node matching
+matching procedures::matching procedures
+preceding section::preceding section
+graph topology::graph topology
+identify similarities::identify similarities
+including node::including node
+node identity::node identity
+identity information::identity information
+improve performance::improve performance
+matching procedure::matching procedure
+equal probability::equal probability
+random subgraph::random subgraph
+node labels::node labels
+negative weight::negative weight
+performance results::performance results
+correct node::correct node
+node matches::node matches
+vertical lines::vertical lines
+related random::related random
+matching scenario::matching scenario
+dashed vertical::dashed vertical
+labels improves::labels improves
+improves performance::improves performance
+asymmetric probabilities::asymmetric probabilities
+probabilities fig::probabilities fig
+depicts histograms::depicts histograms
+unique labels::unique labels
+unique identi::unique identi
+exist reference::exist reference
+reference points::reference points
+pattern recognition::pattern recognition
+recognition problems::recognition problems
+uniquely-labeled nodes::uniquely-labeled nodes
+mismatched labels::mismatched labels
+procedure continues::procedure continues
+vertical line::vertical line
+analogous random::analogous random
+solid vertical::solid vertical
+labels distributed::labels distributed
+curve represents::curve represents
+node graph::node graph
+dashed horizontal::dashed horizontal
+horizontal lines::horizontal lines
+lines represent::lines represent
+performance improves::performance improves
+conclusions exploring::conclusions exploring
+similarity matrices::similarity matrices
+ongoing task::ongoing task
+structural features::structural features
+isomorphic graphs::isomorphic graphs
+self-similarity matrices::self-similarity matrices
+exploratory tests::exploratory tests
+isomorphic mapping::isomorphic mapping
+weight matches::weight matches
+graphs communicate::graphs communicate
+interesting information::interesting information
+bipartite graphs::bipartite graphs
+line incidence::line incidence
+incidence graphs::incidence graphs
+projective planes::projective planes
+node pair::node pair
+dominant eigenspace::dominant eigenspace
+interesting structural::interesting structural
+structural information::structural information
+varying numbers::varying numbers
+dashed lines::dashed lines
+smaller eigenvalues::smaller eigenvalues
+spectral graph::spectral graph
+natural phenomenon::natural phenomenon
+improved web::improved web
+search tool::search tool
+automatic synonym::automatic synonym
+synonym extraction::synonym extraction
+dictionary graph::dictionary graph
+intriguing application::intriguing application
+similar subgraphs::similar subgraphs
+protein interactions::protein interactions
+interactions compared::interactions compared
+work supported::work supported
+national science::national science
+science foundation::science foundation
+foundation graduate::foundation graduate
+graduate research::graduate research
+research fellowship::research fellowship
+recommendations expressed::recommendations expressed
+additional support::additional support
+dod afosr::dod afosr
+afosr uri::afosr uri
+distributed infrastructures::distributed infrastructures
+stanford university::stanford university
+vincent blondel::vincent blondel
+paul van::paul van
+van dooren::van dooren
+helpful comments::helpful comments
+j.r ullman::j.r ullman
+subgraph isomorphism::subgraph isomorphism
+assoc comput::assoc comput
+comput mach::comput mach
+replicator equations::replicator equations
+maximum cliques::maximum cliques
+neural comput::neural comput
+error correcting::error correcting
+correcting graph::correcting graph
+underlying cost::underlying cost
+cost function::cost function
+ieee trans::ieee trans
+trans pattern::trans pattern
+pattern anal::pattern anal
+anal mach::anal mach
+mach intell::mach intell
+m.l fernandez::m.l fernandez
+graph distance::graph distance
+metric combining::metric combining
+combining maximum::combining maximum
+common subgraph::common subgraph
+minimum common::minimum common
+common supergraph::common supergraph
+pattern recognit::pattern recognit
+recognit lett::recognit lett
+free trees::free trees
+maximal cliques::maximal cliques
+monotone game::monotone game
+game dynamics::game dynamics
+j.m kleinberg::j.m kleinberg
+authoritative sources::authoritative sources
+hyperlinked environment::hyperlinked environment
+versatile graph::versatile graph
+matching algorithm::matching algorithm
+18th international::18th international
+international conference::international conference
+data engineering::data engineering
+san jose::san jose
+structural-context similarity::structural-context similarity
+knowledge discovery::knowledge discovery
+phylogenetic trees::phylogenetic trees
+similarity analysis::similarity analysis
+metabolic pathways::metabolic pathways
+phys rev::phys rev
+graph vertices::graph vertices
+web searching::web searching
+siam rev::siam rev
+eigendecomposition approach::eigendecomposition approach
+weighted graph::weighted graph
+matching problems::matching problems
+programming approach::programming approach
+assignment problem::assignment problem
+naval research::naval research
+logistic quarterly::logistic quarterly
+random graphs::random graphs
+publ math::publ math
+central file::central file
+file exchange::file exchange
+exchange http::exchange http
+college math::college math
+role-similarity based::role-similarity based
+functional prediction::functional prediction
+networked systems::networked systems
+yeast proteome::yeast proteome
+roy soc::roy soc
+soc interface::soc interface
+applied::applied
+mathematics::mathematics
+letters::letters
+www.elsevier.com::aml
+graph::graph
+similarity::similarity
+scoring::scoring
+matching::matching
+laura::laura
+zager::zager
+george::george
+verghese::verghese
+department::department
+electrical::electrical
+engineering::engineering
+computer::computer
+science::science
+massachusetts::massachusetts
+institute::institute
+technology::technology
+cambridge::cambridge
+united::united
+states::states
+received::received
+november::november
+revised::revised
+form::form
+december::december
+accepted::accepted
+january::january
+abstract::abstract
+outline::outline
+class::class
+measures::measures
+structural::structural
+local::local
+neighborhoods::neighborhoods
+derive::derive
+pairwise::pairwise
+scores::scores
+nodes::nodes
+two::two
+graphs::graphs
+present::present
+related::related
+measure::measure
+linear::linear
+update::update
+generate::generate
+node::node
+edge::edge
+task::task
+cid::cid
+elsevier::elsevier
+rights::rights
+reserved::reserved
+keywords::keywords
+networks::networks
+algorithms::algorithms
+alignment::alignment
+introduction::introduction
+applications::applications
+call::call
+quantitative::quantitative
+good::good
+deal::deal
+research::research
+devoted::devoted
+isomorphism::isomorphism
+problem::problem
+generalizations::generalizations
+edit::edit
+distance::distance
+maximum::maximum
+minimum::minimum
+common::common
+sub::sub
+super::super
+e.g::e.g
+additionally::additionally
+emergence::emergence
+large::large
+world::world
+wide::wide
+web::web
+generated::generated
+tremendous::tremendous
+interest::interest
+aggregate::aggregate
+statistical::statistical
+structure::structure
+clustering::clustering
+diameter::diameter
+degree::degree
+distribution::distribution
+ends::ends
+spectrum::spectrum
+exists::exists
+methods::methods
+element::element
+considered::considered
+similar::similar
+respective::respective
+idea::idea
+naturally::naturally
+leads::leads
+iterative::iterative
+computing::computing
+elements::elements
+propagate::propagate
+neighboring::neighboring
+step::step
+consist::consist
+set::set
+vertices::vertices
+edges::edges
+directed::directed
+undirected::undirected
+aim::aim
+work::work
+highlight::highlight
+elds::elds
+utilize::utilize
+framework::framework
+simple::simple
+application::application
+extension::extension
+uential::uential
+approach::approach
+hits::hits
+search::search
+algorithm::algorithm
+introduced::introduced
+kleinberg::kleinberg
+suggested::suggested
+results::results
+divided::divided
+categories::categories
+hubs::hubs
+point::point
+sources::sources
+information::information
+query::query
+authorities::authorities
+pointed::pointed
+high-quality::high-quality
+proposed::proposed
+hub::hub
+authority::authority
+score::score
+iteration::iteration
+simply::simply
+sum::sum
+points::points
+odd::odd
+author::author
+e-mail::e-mail
+address::address
+lzager::lzager
+mit.edu::mit.edu
+l.a::l.a
+front::front
+matter::matter
+doi::doi
+g.c::g.c
+fig::fig
+prototype::prototype
+iterates::iterates
+procedure::procedure
+converge::converge
+possibly::possibly
+limits::limits
+depend::depend
+initial::initial
+values::values
+chosen::chosen
+application-oriented::application-oriented
+recursively::recursively
+based::based
+ooding::ooding
+melnik::melnik
+simrank::simrank
+jeh::jeh
+widom::widom
+method::method
+phylogenetic::phylogenetic
+tree::tree
+construction::construction
+heymans::heymans
+singh::singh
+vertex::vertex
+leicht::leicht
+blondel::blondel
+view::view
+comparison::comparison
+smaller::smaller
+depicted::depicted
+light::light
+observation::observation
+generalize::generalize
+equation::equation
+construct::construct
+denote::denote
+stage::stage
+xrs::xrs
+r,i::r,i
+normalization::normalization
+byp::byp
+general::general
+conditions::conditions
+choose::choose
+initialize::initialize
+all-ones::all-ones
+vector::vector
+nal::nal
+limit::limit
+iterations::iterations
+i,r::i,r
+j,s::j,s
+explore::explore
+coupled::coupled
+immediately::immediately
+suggest::suggest
+source::source
+terminal::terminal
+nition::nition
+introduces::introduces
+coupling::coupling
+cardinality::cardinality
+denoted::denoted
+convenient::convenient
+represent::represent
+adjacency::adjacency
+pair::pair
+matrices::matrices
+matrix::matrix
+terminus::terminus
+ned::ned
+representation::representation
+properties::properties
+das::das
+dat::dat
+ypq::ypq
+diagonal::diagonal
+out-degree::out-degree
+entry::entry
+in-degree::in-degree
+takes::takes
+ykl::ykl
+i,t::i,t
+i,s::i,s
+assembled::assembled
+frobenius::frobenius
+norm::norm
+required::required
+notation::notation
+process::process
+represented::represented
+eqs::eqs
+written::written
+concisely::concisely
+bsyk::bsyk
+introduce::introduce
+vec::vec
+operator::operator
+stacks::stacks
+columns::columns
+gxk::gxk
+expressed::expressed
+denotes::denotes
+kronecker::kronecker
+product::product
+determining::determining
+converges::converges
+concatenating::concatenating
+vectors::vectors
+yields::yields
+single::single
+msk::msk
+theorem::theorem
+summarizes::summarizes
+key::key
+condition::condition
+arbitrarily::arbitrarily
+gx0::gx0
+positive::positive
+constant::constant
+unique::unique
+nonnegative::nonnegative
+proof::proof
+first::first
+note::note
+result::result
+presented::presented
+symmetric::symmetric
+non-negative::non-negative
+perron::perron
+root::root
+componentwise::componentwise
+dimension::dimension
+provided::provided
+eigenvalue::eigenvalue
+sequence::sequence
+b0k2::b0k2
+orthogonal::orthogonal
+projector::projector
+invariant::invariant
+subspace::subspace
+apply::apply
+directly::directly
+expand::expand
+explicit::explicit
+expressions::expressions
+abk::abk
+kabkk2::kabkk2
+terms::terms
+k::-NONE-
+applying::applying
+requirement::requirement
+table::table
+discussed::discussed
+section::section
+higher::higher
+greater::greater
+observe::observe
+semi-de::semi-de
+nite::nite
+eigenvalues::eigenvalues
+applies::applies
+factor::factor
+appears::appears
+eliminated::eliminated
+embedded::embedded
+equal::equal
+row::row
+reasonable::reasonable
+choice::choice
+priori::priori
+2y0::2y0
+constraint::constraint
+satis::satis
+simultaneous::simultaneous
+sequential::sequential
+dif::dif
+cult::cult
+show::show
+analogous::analogous
+argument::argument
+procedures::procedures
+yield::yield
+focus::focus
+expression::expression
+dbs::dbs
+dbt::dbt
+standard::standard
+calculation::calculation
+differs::differs
+inclusion::inclusion
+additional::additional
+serve::serve
+amplify::amplify
+highly::highly
+connected::connected
+theory::theory
+identi::identi
+cation::cation
+kind::kind
+optimal::optimal
+i.e::i.e
+enormous::enormous
+amount::amount
+academic::academic
+treatment::treatment
+pattern::pattern
+data::data
+mining::mining
+communities::communities
+computationally::computationally
+cient::cient
+exist::exist
+classes::classes
+sought::sought
+problems::problems
+assignment::assignment
+column::column
+matched::matched
+optimality::optimality
+criteria::criteria
+found::found
+polynomial::polynomial
+authors::authors
+obtained::obtained
+approximations::approximations
+nding::nding
+minimizes::minimizes
+objective::objective
+pku::pku
+umeyama::umeyama
+solves::solves
+square::square
+almohamad::almohamad
+duffuaa::duffuaa
+doubly::doubly
+stochastic::stochastic
+programming::programming
+formulation::formulation
+order::order
+obtain::obtain
+permutation::permutation
+hungarian::hungarian
+originally::originally
+formulated::formulated
+kuhn::kuhn
+computes::computes
+weight::weight
+sets::sets
+previous::previous
+suggests::suggests
+illustrative::illustrative
+identify::identify
+location::location
+subgraph::subgraph
+larger::larger
+empirically::empirically
+generating::generating
+speci::speci
+probability::probability
+erd::erd
+enyi::enyi
+random::random
+selected::selected
+induced::induced
+computed::computed
+described::described
+finally::finally
+subset::subset
+original::original
+maximizes::maximizes
+matlab::matlab
+utilized::utilized
+borlin::borlin
+implementation::implementation
+requires::requires
+padding::padding
+extra::extra
+entries::entries
+ctitious::ctitious
+negative::negative
+number::number
+success::success
+counted::counted
+match::match
+accounting::accounting
+lower::lower
+bound::bound
+equally::equally
+matches::matches
+correspond::correspond
+marked::marked
+failures::failures
+rst::rst
+test::test
+concept::concept
+15-node::15-node
+variably::variably
+sized::sized
+subgraphs::subgraphs
+variable::variable
+connectivity::connectivity
+parameter::parameter
+value::value
+sizes::sizes
+average::average
+proportion::proportion
+successful::successful
+recorded::recorded
+depicts::depicts
+expected::expected
+correct::correct
+randomly::randomly
+assigned::assigned
+computation::computation
+hats::hats
+party::party
+guests::guests
+leave::leave
+room::room
+redistributed::redistributed
+imagine::imagine
+stolen::stolen
+leaving::leaving
+remaining::remaining
+distributed::distributed
+analogously::analogously
+size::size
+function::function
+plotted::plotted
+details::details
+performance::performance
+probabilities::probabilities
+averaging::averaging
+trials::trials
+bounds::bounds
+scenarios::scenarios
+subsections::subsections
+encouraging::encouraging
+similarity::similarity-
+substantial::substantial
+improvement::improvement
+interesting::interesting
+features::features
+observed::observed
+connectivities::connectivities
+lead::lead
+poorer::poorer
+achieved::achieved
+entire::entire
+performs::performs
+correctly::correctly
+type::type
+labels::labels
+side::side
+attributes::attributes
+proteins::proteins
+constitute::constitute
+protein::protein
+interaction::interaction
+network::network
+classi::classi
+attempting::attempting
+align::align
+species::species
+share::share
+preceding::preceding
+topology::topology
+similarities::similarities
+including::including
+identity::identity
+penalize::penalize
+reward::reward
+improve::improve
+augment::augment
+assigning::assigning
+retaining::retaining
+histograms::histograms
+out::out
+averages::averages
+drawn::drawn
+vertical::vertical
+lines::lines
+scenario::scenario
+derived::derived
+dashed::dashed
+increasing::increasing
+improves::improves
+happen::happen
+asymmetric::asymmetric
+evenly::evenly
+communicated::communicated
+label::label
+ers::ers
+reference::reference
+uniquely::uniquely
+recognition::recognition
+model::model
+labeled::labeled
+removed::removed
+carrying::carrying
+fewer::fewer
+uniquely-labeled::uniquely-labeled
+edited::edited
+setting::setting
+mismatched::mismatched
+continues::continues
+histogram::histogram
+line::line
+solid::solid
+curve::curve
+represents::represents
+varied::varied
+horizontal::horizontal
+steadily::steadily
+increased::increased
+conclusions::conclusions
+exploring::exploring
+contained::contained
+ongoing::ongoing
+kinds::kinds
+inferred::inferred
+patterns::patterns
+pairs::pairs
+isomorphic::isomorphic
+self-similarity::self-similarity
+exploratory::exploratory
+tests::tests
+mapping::mapping
+communicate::communicate
+bipartite::bipartite
+incidence::incidence
+projective::projective
+planes::planes
+projections::projections
+dominant::dominant
+eigenspace::eigenspace
+reveal::reveal
+varying::varying
+numbers::numbers
+subspaces::subspaces
+strictly::strictly
+encode::encode
+characterized::characterized
+machinery::machinery
+spectral::spectral
+worthwhile::worthwhile
+arise::arise
+natural::natural
+phenomenon::phenomenon
+recall::recall
+motivation::motivation
+improved::improved
+tool::tool
+automatic::automatic
+synonym::synonym
+extraction::extraction
+dictionary::dictionary
+intriguing::intriguing
+functionally::functionally
+maps::maps
+interactions::interactions
+compared::compared
+explored::explored
+holme::holme
+huss::huss
+predict::predict
+cerevisiae::cerevisiae
+finding::finding
+inspire::inspire
+heuristics::heuristics
+acknowledgments::acknowledgments
+material::material
+supported::supported
+part::part
+national::national
+foundation::foundation
+graduate::graduate
+fellowship::fellowship
+opinions::opinions
+ndings::ndings
+recommendations::recommendations
+publication::publication
+necessarily::necessarily
+ect::ect
+views::views
+support::support
+dod::dod
+afosr::afosr
+uri::uri
+architectures::architectures
+secure::secure
+robust::robust
+infrastructures::infrastructures
+f49620::f49620-
+01-1-0365::01-1-0365
+led::led
+stanford::stanford
+university::university
+vincent::vincent
+paul::paul
+van::van
+dooren::dooren
+helpful::helpful
+comments::comments
+discussion::discussion
+references::references
+j.r::j.r
+ullman::ullman
+assoc::assoc
+comput::comput
+mach::mach
+pelillo::pelillo
+replicator::replicator
+equations::equations
+cliques::cliques
+neural::neural
+bunke::bunke
+error::error
+correcting::correcting
+uence::uence
+underlying::underlying
+cost::cost
+ieee::ieee
+trans::trans
+anal::anal
+intell::intell
+m.l::m.l
+fernandez::fernandez
+valiente::valiente
+metric::metric
+combining::combining
+supergraph::supergraph
+recognit::recognit
+lett::lett
+free::free
+trees::trees
+maximal::maximal
+monotone::monotone
+game::game
+dynamics::dynamics
+j.m::j.m
+authoritative::authoritative
+hyperlinked::hyperlinked
+environment::environment
+acm::acm
+garcia-molina::garcia-molina
+rahm::rahm
+versatile::versatile
+schema::schema
+proceedings::proceedings
+18th::18th
+international::international
+conference::conference
+san::san
+jose::jose
+structural-context::structural-context
+eighth::eighth
+knowledge::knowledge
+discovery::discovery
+edmonton::edmonton
+deriving::deriving
+analysis::analysis
+metabolic::metabolic
+pathways::pathways
+bioinformatics::bioinformatics
+suppl::suppl
+newman::newman
+phys::phys
+rev::rev
+gajardo::gajardo
+senellart::senellart
+searching::searching
+siam::siam
+eigendecomposition::eigendecomposition
+weighted::weighted
+naval::naval
+logistic::logistic
+quarterly::quarterly
+publ::publ
+math::math
+assignprob.zip::assignprob.zip
+central::central
+file::file
+exchange::exchange
+http::http
+leexchange::NNP
+last::last
+accessed::accessed
+caps::caps
+robbers::robbers
+expect::expect
+college::college
+masters::masters
+thesis::thesis
+dept::dept
+role-similarity::role-similarity
+functional::functional
+prediction::prediction
+networked::networked
+systems::systems
+yeast::yeast
+proteome::proteome
+roy::roy
+soc::soc
+interface::interface

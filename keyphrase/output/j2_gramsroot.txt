@@ -1,0 +1,2053 @@
+java programming language::java programming language
+developed by sun::developed by sun
+initiated by james::initiated by james
+gosling and released::gosling and released
+component of sun::component of sun
+microsystems ’ java::microsystems ’ java
+java standard edition::java standard edition
+advancement of java::advancement of java
+configurations were built::configurations were built
+built to suite::built to suite
+suite various types::suite various types
+types of platforms::types of platforms
+j2ee for enterprise::j2ee for enterprise
+j2me for mobile::j2me for mobile
+mobile applications sun::mobile applications sun
+applications sun microsystems::applications sun microsystems
+microsystems has renamed::microsystems has renamed
+versions as java::versions as java
+java is guaranteed::java is guaranteed
+run anywhere java::run anywhere java
+model • platform::model • platform
+programming languages including::programming languages including
+java is compiled::java is compiled
+compiled into platform::compiled into platform
+platform specific machine::platform specific machine
+platform independent byte::platform independent byte
+independent byte code::independent byte code
+code this byte::code this byte
+code is distributed::code is distributed
+web and interpreted::web and interpreted
+interpreted by virtual::interpreted by virtual
+run • simple::run • simple
+java is designed::java is designed
+easy to learn::easy to learn
+understand the basic::understand the basic
+concept of oop,java::concept of oop,java
+easy to master::easy to master
+master • secure::master • secure
+java s secure::java s secure
+enables to develop::enables to develop
+tamper-free systems authentication::tamper-free systems authentication
+systems authentication techniques::systems authentication techniques
+techniques are based::techniques are based
+based on public-key::based on public-key
+encryption • architectural-neutral::encryption • architectural-neutral
+java compiler generates::java compiler generates
+generates an architecture-neutral::generates an architecture-neutral
+architecture-neutral object file::architecture-neutral object file
+object file format::object file format
+makes the compiled::makes the compiled
+presence of java::presence of java
+java runtime system::java runtime system
+system • portable::system • portable
+implementation dependent aspects::implementation dependent aspects
+specification makes java::specification makes java
+makes java portable::makes java portable
+java portable compiler::java portable compiler
+portable compiler injava::portable compiler injava
+injava is written::injava is written
+written in ansi::written in ansi
+clean portability boundary::clean portability boundary
+makes an effort::makes an effort
+effort to eliminate::effort to eliminate
+eliminate error prone::eliminate error prone
+error prone situations::error prone situations
+situations by emphasizing::situations by emphasizing
+compile time error::compile time error
+checking and runtime::checking and runtime
+runtime checking chapter::runtime checking chapter
+java s multithreaded::java s multithreaded
+simultaneously this design::simultaneously this design
+feature allows developers::feature allows developers
+developers to construct::developers to construct
+construct smoothly running::construct smoothly running
+smoothly running interactive::smoothly running interactive
+running interactive applications::running interactive applications
+applications • interpreted::applications • interpreted
+java byte code::java byte code
+code is translated::code is translated
+fly to native::fly to native
+native machine instructions::native machine instructions
+rapid and analytical::rapid and analytical
+incremental and lightweight::incremental and lightweight
+process • high::process • high
+java enables high::java enables high
+enables high performance::enables high performance
+performance • distributed::performance • distributed
+internet • dynamic::internet • dynamic
+java is considered::java is considered
+designed to adapt::designed to adapt
+evolving environment java::evolving environment java
+environment java programs::environment java programs
+programs can carry::programs can carry
+carry extensive amount::carry extensive amount
+amount of run-time::amount of run-time
+verify and resolve::verify and resolve
+accesses to objects::accesses to objects
+objects on run-time::objects on run-time
+history of java::history of java
+james gosling initiated::james gosling initiated
+initiated the java::initiated the java
+java language project::java language project
+project in june::project in june
+set-top box projects::set-top box projects
+projects the language::projects the language
+initially called oak::initially called oak
+tree that stood::tree that stood
+stood outside gosling::stood outside gosling
+gosling s office::gosling s office
+green and ended::green and ended
+renamed as java::renamed as java
+list of random::list of random
+random words sun::random words sun
+words sun released::words sun released
+released the first::released the first
+first public implementation::first public implementation
+implementation as java::implementation as java
+providing no-cost run-times::providing no-cost run-times
+run-times on popular::run-times on popular
+java as free::java as free
+free and open::free and open
+open source software::open source software
+gnu general public::gnu general public
+general public license::general public license
+finished the process::finished the process
+java s core::java s core
+core code free::core code free
+free and open-source::free and open-source
+portion of code::portion of code
+hold the copyright::hold the copyright
+performing the examples::performing the examples
+pentium 200-mhz computer::pentium 200-mhz computer
+system • java::system • java
+editor this tutorial::editor this tutorial
+tutorial will provide::tutorial will provide
+skills to create::skills to create
+applications using java::applications using java
+java next chapter::java next chapter
+chapter will guide::chapter will guide
+java and prepare::java and prepare
+prepare an environment::prepare an environment
+environment to develop::environment to develop
+develop java applications::develop java applications
+java applications java::java applications java
+applications java environment::applications java environment
+java environment setup::java environment setup
+java environment correctly::java environment correctly
+correctly this section::correctly this section
+download and set::download and set
+set up java::set up java
+machine please follow::machine please follow
+steps to set::steps to set
+link download java::link download java
+download a version::download a version
+operating system follow::operating system follow
+follow the instructions::follow the instructions
+instructions to download::instructions to download
+java and run::java and run
+run the .exe::run the .exe
+.exe to install::.exe to install
+set environment variables::set environment variables
+variables to point::variables to point
+point to correct::point to correct
+correct installation directories::correct installation directories
+path for windows::path for windows
+files \ java::files \ java
+java \ jdk::java \ jdk
+right-click on my::right-click on my
+properties • click::properties • click
+variables  button::variables  button
+advanced  tab::advanced  tab
+alter the path::alter the path
+path  variable::path  variable
+windows \ system32::windows \ system32
+change your path::change your path
+path to read::path to read
+jdk \ bin::jdk \ bin
+autoexec.bat  file::autoexec.bat  file
+file and add::file and add
+jdk \ bin::jdk \ bin
+bin  setting::bin  setting
+path for linux::path for linux
+environment variable path::environment variable path
+set to point::set to point
+path  chapter::path  chapter
+popular java editors::popular java editors
+write your java::write your java
+simple text editor::simple text editor
+editor like notepad::editor like notepad
+textpad • netbeans::textpad • netbeans
+open-source and free::open-source and free
+java ide developed::java ide developed
+eclipse open-source community::eclipse open-source community
+downloaded from http::downloaded from http
+chapter will teach::chapter will teach
+write and run::write and run
+run your first::run your first
+first java program::first java program
+important basic syntaxes::important basic syntaxes
+syntaxes in java::syntaxes in java
+needed for developing::needed for developing
+developing applications java::developing applications java
+applications java basic::applications java basic
+java basic syntax::java basic syntax
+collection of objects::collection of objects
+objects that communicate::objects that communicate
+communicate via invoking::communicate via invoking
+methods and instance::methods and instance
+objects have states::objects have states
+states and behaviors::states and behaviors
+dog has states-color::dog has states-color
+eating an object::eating an object
+class • class::class • class
+print that describes::print that describes
+behaviors that object::NNS that object
+support • methods::support • methods
+basically a behavior::basically a behavior
+behavior a class::behavior a class
+logics are written::logics are written
+data is manipulated::data is manipulated
+actions are executed::actions are executed
+executed • instance::executed • instance
+set of instance::set of instance
+variables an object::variables an object
+object s state::object s state
+state is created::state is created
+variables first java::variables first java
+print the words::print the words
+words hello world::words hello world
+world public class::world public class
+public class myfirstjavaprogram::public class myfirstjavaprogram
+print hello world::print hello world
+public static void::public static void
+static void main::static void main
+prints hello world::prints hello world
+save the file::save the file
+compile and run::compile and run
+run the program::run the program
+program please follow::program please follow
+follow the steps::follow the steps
+notepad and add::notepad and add
+add the code::add the code
+myfirstjavaprogram.java • open::myfirstjavaprogram.java • open
+open a command::open a command
+command prompt window::command prompt window
+saved the class::saved the class
+type  javac::type  javac
+enter to compile::enter to compile
+compile your code::compile your code
+variable is set::variable is set
+type  java::type  java
+run your program::run your program
+world  printed::world  printed
+java myfirstjavaprogram helloworld::java myfirstjavaprogram helloworld
+myfirstjavaprogram helloworld basic::myfirstjavaprogram helloworld basic
+helloworld basic syntax::helloworld basic syntax
+points • case::points • case
+java is case::java is case
+meaning in java::meaning in java
+java • class::java • class
+word s first::word s first
+case example class::case example class
+myfirstjavaclass • method::myfirstjavaclass • method
+names should start::names should start
+lower case letter::lower case letter
+case example public::case example public
+public void mymethodname::public void mymethodname
+match the class::match the class
+saving the file::saving the file
+match your program::match your program
+java program processing::java program processing
+program processing starts::program processing starts
+java program java::java program java
+program java identifiers::program java identifiers
+java components require::java components require
+components require names::components require names
+require names names::require names names
+variables and methods::variables and methods
+identifiers in java::identifiers in java
+points to remember::points to remember
+remember about identifiers::remember about identifiers
+identifiers should begin::identifiers should begin
+combination of characters::combination of characters
+identifiers are case::identifiers are case
+sensitive • examples::sensitive • examples
+examples of legal::examples of legal
+__1_value • examples::__1_value • examples
+examples of illegal::examples of illegal
+-salary java modifiers::-salary java modifiers
+categories of modifiers::categories of modifiers
+private • non-access::private • non-access
+details about modifiers::details about modifiers
+section java variables::section java variables
+type of variables::type of variables
+variables in java::variables in java
+variables • class::variables • class
+arrays are objects::arrays are objects
+objects that store::objects that store
+store multiple variables::store multiple variables
+construct and initialize::construct and initialize
+upcoming chapters java::upcoming chapters java
+chapters java enums::chapters java enums
+enums were introduced::enums were introduced
+introduced in java::introduced in java
+restrict a variable::restrict a variable
+values the values::values the values
+reduce the number::reduce the number
+number of bugs::number of bugs
+fresh juice shop::fresh juice shop
+restrict the glass::restrict the glass
+size to small::size to small
+medium and large::medium and large
+order any size::order any size
+medium or large::medium or large
+public class freshjuicetest::public class freshjuicetest
+juice.size = freshjuice.freshjuicesize.meduim::juice.size = freshjuice.freshjuicesize.meduim
+inside a class::inside a class
+defined inside enums::defined inside enums
+shows the reserved::shows the reserved
+words in java::words in java
+java these reserved::java these reserved
+constant or variable::constant or variable
+identifier names abstract::identifier names abstract
+names abstract assert::names abstract assert
+abstract assert boolean::abstract assert boolean
+assert boolean break::assert boolean break
+boolean break byte::boolean break byte
+break byte case::break byte case
+byte case catch::byte case catch
+case catch char::case catch char
+catch char class::catch char class
+char class const::char class const
+class const continue::class const continue
+const continue default::const continue default
+default do double::default do double
+double else enum::double else enum
+enum extends final::enum extends final
+final finally float::final finally float
+float for goto::float for goto
+goto if implements::goto if implements
+import instanceof int::import instanceof int
+instanceof int interface::instanceof int interface
+interface long native::interface long native
+native new package::native new package
+package private protected::package private protected
+private protected public::private protected public
+protected public return::protected public return
+public return short::public return short
+return short static::return short static
+short static strictfp::short static strictfp
+static strictfp super::static strictfp super
+strictfp super switch::strictfp super switch
+super switch synchronized::super switch synchronized
+synchronized this throw::synchronized this throw
+throw throws transient::throw throws transient
+transient try void::transient try void
+volatile while comments::volatile while comments
+comments in java::comments in java
+java java supports::java java supports
+java supports single-line::java supports single-line
+single-line and multi-line::single-line and multi-line
+comments very similar::comments very similar
+characters available inside::characters available inside
+inside any comment::inside any comment
+java compiler public::java compiler public
+compiler public class::compiler public class
+single line comment::single line comment
+java totally ignores::java totally ignores
+ignores it inheritance::ignores it inheritance
+derived from classes::derived from classes
+code you require::code you require
+code this concept::code this concept
+reuse the fields::reuse the fields
+fields and methods::fields and methods
+rewrite the code::rewrite the code
+contract between objects::contract between objects
+play a vital::play a vital
+concept of inheritance::concept of inheritance
+inheritance an interface::inheritance an interface
+defines the methods::defines the methods
+explains about objects::explains about objects
+objects and classes::objects and classes
+classes in java::classes in java
+java java object::java java object
+object & classes::object & classes
+object oriented feature::object oriented feature
+polymorphism • inheritance::polymorphism • inheritance
+inheritance • encapsulation::inheritance • encapsulation
+encapsulation • abstraction::encapsulation • abstraction
+abstraction • classes::abstraction • classes
+classes • objects::classes • objects
+objects • instance::objects • instance
+instance • method::instance • method
+method • message::method • message
+classes and objects::classes and objects
+objects • object::objects • object
+type support objects::type support objects
+objects in java::objects in java
+find many objects::find many objects
+state and behavior::state and behavior
+compare the software::compare the software
+real world object::real world object
+similar characteristics software::similar characteristics software
+characteristics software objects::characteristics software objects
+behavior a software::behavior a software
+state is stored::state is stored
+stored in fields::stored in fields
+fields and behavior::fields and behavior
+behavior is shown::behavior is shown
+shown via methods::shown via methods
+communication is done::communication is done
+done via methods::done via methods
+objects are created::objects are created
+created a sample::created a sample
+public class dog::public class dog
+breed ; int::breed ; int
+age ; string::age ; string
+color ; void::color ; void
+types • local::types • local
+variables defined inside::variables defined inside
+defined inside methods::defined inside methods
+constructors or blocks::constructors or blocks
+variables the variable::variables the variable
+declared and initialized::declared and initialized
+method has completed::method has completed
+completed • instance::completed • instance
+variables are variables::variables are variables
+method these variables::method these variables
+variables are instantiated::variables are instantiated
+class is loaded::class is loaded
+loaded instance variables::loaded instance variables
+accessed from inside::accessed from inside
+inside any method::inside any method
+constructor or blocks::constructor or blocks
+keyword a class::keyword a class
+number of methods::number of methods
+methods to access::methods to access
+access the value::access the value
+kinds of methods::kinds of methods
+methods below mentioned::methods below mentioned
+java language constructors::java language constructors
+discussing about classes::discussing about classes
+constructors every class::constructors every class
+write a constructor::write a constructor
+class the java::class the java
+java compiler builds::java compiler builds
+builds a default::builds a default
+object is created::object is created
+invoked the main::invoked the main
+rule of constructors::rule of constructors
+class a class::class a class
+public class puppy::public class puppy
+java also supports::java also supports
+supports singleton classes::supports singleton classes
+class singleton classes::class singleton classes
+classes the singleton::classes the singleton
+singleton s purpose::singleton s purpose
+control object creation::control object creation
+limiting the number::limiting the number
+number of objects::number of objects
+singleton will occur::singleton will occur
+static fields singletons::static fields singletons
+singletons often control::singletons often control
+access to resources::access to resources
+connections or sockets::connections or sockets
+driver has trouble::driver has trouble
+trouble with multithreading::trouble with multithreading
+connection is made::connection is made
+thread can access::thread can access
+access the connection::access the connection
+easiest implementation consists::easiest implementation consists
+field to hold::field to hold
+hold its result::hold its result
+static accessor method::static accessor method
+static initializer block::static initializer block
+initializer the getinstance::initializer the getinstance
+returns this instance::returns this instance
+singleton.java public class::singleton.java public class
+public class singleton::public class singleton
+private static singleton::private static singleton
+static singleton singleton::static singleton singleton
+private constructor prevents::private constructor prevents
+class from instantiating::class from instantiating
+instance  method::instance  method
+public static singleton::public static singleton
+static singleton getinstance::static singleton getinstance
+protected by singleton-ness::protected by singleton-ness
+protected static void::protected static void
+static void demomethod::static void demomethod
+demomethod for singleton::demomethod for singleton
+singletondemo.java public lasssingletondemo::singletondemo.java public lasssingletondemo
+public staticvoid main::public staticvoid main
+tmp = singleton.getinstance::tmp = singleton.getinstance
+shows a classic::shows a classic
+classic singleton design::classic singleton design
+singleton design pattern::singleton design pattern
+public class classicsingleton::public class classicsingleton
+private static classicsingleton::private static classicsingleton
+static classicsingleton instance::static classicsingleton instance
+instance = null::instance = null
+null ; protected::null ; protected
+public static classicsingleton::public static classicsingleton
+static classicsingleton getinstance::static classicsingleton getinstance
+classicsingleton class maintains::classicsingleton class maintains
+maintains a static::maintains a static
+lone singleton instance::lone singleton instance
+instance and returns::instance and returns
+returns that reference::returns that reference
+method here classicsingleton::method here classicsingleton
+classicsingleton class employs::classicsingleton class employs
+employs a technique::employs a technique
+instantiation to create::instantiation to create
+create the singleton::create the singleton
+ensures that singleton::ensures that singleton
+instances are created::instances are created
+creating an object::creating an object
+blueprints for objects::blueprints for objects
+basically an object::basically an object
+class in java::class in java
+create new objects::create new objects
+steps when creating::steps when creating
+type • instantiation::type • instantiation
+new  keyword::new  keyword
+create the object::create the object
+object • initialization::object • initialization
+constructor this call::constructor this call
+statement would create::statement would create
+create an object::create an object
+object mypuppy puppy::object mypuppy puppy
+mypuppy puppy mypuppy::mypuppy puppy mypuppy
+tommy accessing instance::tommy accessing instance
+accessing instance variables::accessing instance variables
+methods are accessed::methods are accessed
+accessed via created::accessed via created
+objects to access::objects to access
+access an instance::access an instance
+fully qualified path::fully qualified path
+call a variable::call a variable
+call a class::call a class
+access instance variables::access instance variables
+puppyage ; public::puppyage ; public
+public void setage::public void setage
+puppyage = age::puppyage = age
+public int getage::public int getage
+puppy s age::puppy s age
+mypuppy = newpuppy::mypuppy = newpuppy
+call class method::call class method
+method to set::method to set
+call another class::call another class
+access instance variable::access instance variable
+source file declaration::source file declaration
+file declaration rules::file declaration rules
+rules these rules::rules these rules
+rules are essential::rules are essential
+essential when declaring::essential when declaring
+statements and package::statements and package
+class per source::class per source
+multiple non public::multiple non public
+non public classes::non public classes
+classes simply easy::classes simply easy
+simply easy learning::simply easy learning
+appended by .java::appended by .java
+public class employee::public class employee
+class is defined::class is defined
+inside a package::inside a package
+statements are present::statements are present
+file • import::file • import
+import and package::import and package
+declare different import::declare different import
+import and package::import NN package
+source file classes::source file classes
+types of classes::types of classes
+classes ; abstract::classes ; abstract
+access modifiers chapter::access modifiers chapter
+classes and anonymous::classes and anonymous
+anonymous classes java::anonymous classes java
+classes java package::classes java package
+categorizing the classes::categorizing the classes
+classes and interfaces::classes and interfaces
+interfaces when developing::interfaces when developing
+applications in java::applications in java
+hundreds of classes::hundreds of classes
+categorizing these classes::categorizing these classes
+life much easier::life much easier
+easier import statements::easier import statements
+includes the package::includes the package
+locate the source::locate the source
+code or classes::code or classes
+classes import statement::classes import statement
+giving the proper::giving the proper
+compiler to find::compiler to find
+class for example,the::class for example,the
+example,the following line::example,the following line
+compiler to load::compiler to load
+directory java_installation import::directory io import
+simple case study::simple case study
+creating two classes::creating two classes
+employee and employeetest::employee and employeetest
+employeetest first open::employeetest first open
+first open notepad::first open notepad
+save this source::save this source
+employee.java the employee::employee.java the employee
+four instance variables::four instance variables
+designation and salary::designation and salary
+salary the class::salary the class
+explicitly defined constructor::explicitly defined constructor
+takes a parameter::takes a parameter
+parameter import java.io::parameter import java.io
+designation ; double::designation ; double
+class employee public::class employee public
+employee public employee::employee public employee
+assign the age::assign the age
+variable age public::variable age public
+age public void::age public void
+public void empage::public void empage
+age = empage::age = empage
+assign the designation::assign the designation
+public void empdesignation::public void empdesignation
+designation = empdesig::designation = empdesig
+assign the salary::assign the salary
+public void empsalary::public void empsalary
+salary = empsalary::salary = empsalary
+print the employee::print the employee
+public void printemployee::public void printemployee
+method therefore in-order::method therefore in-order
+run this employee::run this employee
+method and objects::method and objects
+creating a separate::creating a separate
+creates two instances::creates two instances
+employee and invokes::employee and invokes
+invokes the methods::invokes the methods
+object to assign::object to assign
+code in employeetest.java::code in employeetest.java
+employeetest.java file import::employeetest.java file import
+file import java.io::file import java.io
+create two objects::create two objects
+objects using constructor::objects using constructor
+empone = newemployee::empone = newemployee
+emptwo = newemployee::emptwo = newemployee
+object created empone.empage::object created empone.empage
+senior software engineer::senior software engineer
+session will discuss::session will discuss
+discuss basic data::discuss basic data
+basic data types::basic data types
+types in java::types in java
+developing java applications::developing java applications
+java basic data::java basic data
+data types variables::data types variables
+reserved memory locations::reserved memory locations
+locations to store::locations to store
+values this means::values this means
+create a variable::create a variable
+variable you reserve::variable you reserve
+reserve some space::reserve some space
+space in memory::space in memory
+operating system allocates::operating system allocates
+system allocates memory::system allocates memory
+memory and decides::memory and decides
+assigning different data::assigning different data
+types to variables::types to variables
+two data types::two data types
+primitive data types::primitive data types
+data types primitive::data types primitive
+types primitive data::types primitive data
+data types supported::data types supported
+supported by java::supported by java
+java primitive data::java primitive data
+types are predefined::types are predefined
+language and named::language and named
+data types byte::data types byte
+byte data type::byte data type
+two s complement::two s complement
+integer • minimum::integer • minimum
+space in large::space in large
+place of integers::place of integers
+four times smaller::four times smaller
+short data type::short data type
+complement integer chapter::complement integer chapter
+memory as byte::memory as byte
+type a short::type a short
+int • default::int • default
+int data type::int data type
+default data type::default data type
+type for integral::type for integral
+concern about memory::concern about memory
+long data type::long data type
+value is -9,223,372,036,854,775,808::value is -9,223,372,036,854,775,808
+range than int::range than int
+int is needed::int is needed
+needed • default::needed • default
+float data type::float data type
+single-precision 32-bit ieee::single-precision 32-bit ieee
+point • float::point • float
+memory in large::memory in large
+arrays of floating::arrays of floating
+floating point numbers::floating point numbers
+numbers • default::numbers • default
+0.0f • float::0.0f • float
+double data type::double data type
+double-precision 64-bit ieee::double-precision 64-bit ieee
+type for decimal::type for decimal
+generally the default::generally the default
+choice • double::choice • double
+currency • default::currency • default
+boolean data type::boolean data type
+data type represents::data type represents
+represents one bit::represents one bit
+bit of information::bit of information
+two possible values::two possible values
+true and false::true and false
+flags that track::flags that track
+track true conditions::track -NONE- conditions
+conditions • default::conditions • default
+value is false::value is false
+char data type::char data type
+single 16-bit unicode::single 16-bit unicode
+16-bit unicode character::16-bit unicode character
+character • minimum::character • minimum
+store any character::store any character
+reference data types::reference data types
+variables are created::variables are created
+created using defined::created using defined
+objects these variables::objects these variables
+variables are declared::variables are declared
+types of array::types of array
+reference data type::reference data type
+type • default::type • default
+variable is null::variable is null
+java programming::java programming
+programming language::programming language
+sun microsystems::sun microsystems
+james gosling::james gosling
+core component::core component
+java platform::java platform
+latest release::latest release
+java standard::java standard
+standard edition::standard edition
+widespread popularity::widespread popularity
+multiple configurations::multiple configurations
+enterprise applications::enterprise applications
+mobile applications::mobile applications
+applications sun::applications sun
+object oriented::object oriented
+object java::object java
+object model::object model
+platform independent::platform independent
+programming languages::programming languages
+languages including::languages including
+specific machine::specific machine
+independent byte::independent byte
+byte code::byte code
+virtual machine::virtual machine
+whichever platform::whichever platform
+basic concept::basic concept
+secure feature::secure feature
+tamper-free systems::tamper-free systems
+systems authentication::systems authentication
+authentication techniques::authentication techniques
+public-key encryption::public-key encryption
+java compiler::java compiler
+compiler generates::compiler generates
+architecture-neutral object::architecture-neutral object
+object file::object file
+file format::file format
+compiled code::compiled code
+java runtime::java runtime
+runtime system::runtime system
+implementation dependent::implementation dependent
+dependent aspects::dependent aspects
+specification makes::specification makes
+makes java::makes java
+java portable::java portable
+portable compiler::portable compiler
+compiler injava::compiler injava
+clean portability::clean portability
+portability boundary::portability boundary
+posix subset::posix subset
+java makes::java makes
+eliminate error::eliminate error
+error prone::error prone
+prone situations::prone situations
+error checking::error checking
+runtime checking::runtime checking
+checking chapter::checking chapter
+multithreaded feature::multithreaded feature
+write programs::write programs
+tasks simultaneously::tasks simultaneously
+design feature::design feature
+interactive applications::interactive applications
+java byte::java byte
+native machine::native machine
+machine instructions::machine instructions
+development process::development process
+lightweight process::lightweight process
+high performance::high performance
+just-in-time compilers::just-in-time compilers
+java enables::java enables
+distributed environment::distributed environment
+evolving environment::evolving environment
+environment java::environment java
+java programs::java programs
+extensive amount::extensive amount
+run-time information::run-time information
+resolve accesses::resolve accesses
+run-time history::run-time history
+java language::java language
+language project::language project
+set-top box::set-top box
+box projects::box projects
+oak tree::oak tree
+random words::random words
+words sun::words sun
+sun released::sun released
+first public::first public
+public implementation::public implementation
+no-cost run-times::no-cost run-times
+popular platforms::popular platforms
+open source::open source
+source software::source software
+gnu general::gnu general
+public license::public license
+sun finished::sun finished
+core code::core code
+small portion::small portion
+copyright tools::copyright tools
+examples discussed::examples discussed
+ram recommended::ram recommended
+operating system::operating system
+java jdk::java jdk
+microsoft notepad::microsoft notepad
+text editor::text editor
+create gui::create gui
+web applications::web applications
+obtain java::obtain java
+install java::install java
+develop java::develop java
+java applications::java applications
+applications java::applications java
+java environment::java environment
+environment setup::environment setup
+environment correctly::environment correctly
+section guides::section guides
+link download::link download
+download java::download java
+version based::version based
+system follow::system follow
+installed java::installed java
+set environment::set environment
+environment variables::environment variables
+correct installation::correct installation
+installation directories::installation directories
+program files::program files
+jdk directory::jdk directory
+my computer::my computer
+select properties::select properties
+environment variables::environment variables
+java executable::java executable
+bin setting::bin setting
+set path::set path
+variable path::variable path
+java binaries::java binaries
+shell documentation::shell documentation
+export path::export path
+popular java::popular java
+java editors::java editors
+sophisticated ides::sophisticated ides
+windows machine::windows machine
+simple text::simple text
+java ide::java ide
+downloaded fromhttp::downloaded fromhttp
+ide developed::ide developed
+eclipse open-source::eclipse open-source
+open-source community::open-source community
+first java::first java
+java program::java program
+important basic::important basic
+basic syntaxes::basic syntaxes
+java needed::java needed
+developing applications::developing applications
+basic syntax::basic syntax
+instance variables::instance variables
+type support::type support
+unique set::unique set
+values assigned::values assigned
+simple code::simple code
+public class::public class
+class myfirstjavaprogram::class myfirstjavaprogram
+public static::public static
+static void::static void
+void main::void main
+open notepad::open notepad
+command prompt::command prompt
+prompt window::prompt window
+class assume::class assume
+press enter::press enter
+java myfirstjavaprogram::java myfirstjavaprogram
+myfirstjavaprogram helloworld::myfirstjavaprogram helloworld
+case sensitivity::case sensitivity
+class names::class names
+first letter::first letter
+upper case::upper case
+class myfirstjavaclass::class myfirstjavaclass
+method names::method names
+lower case::lower case
+case letter::case letter
+public void::public void
+void mymethodname::void mymethodname
+program file::program file
+remember java::remember java
+append .java::append .java
+assume myfirstjavaprogram::assume myfirstjavaprogram
+string args::string args
+program processing::program processing
+processing starts::processing starts
+mandatory part::mandatory part
+program java::program java
+java identifiers::java identifiers
+java components::java components
+components require::components require
+require names::require names
+names names::names names
+currency character::currency character
+first character::first character
+importantly identifiers::importantly identifiers
+case sensitive::case sensitive
+legal identifiers::legal identifiers
+illegal identifiers::illegal identifiers
+-salary java::-salary java
+java modifiers::java modifiers
+modify classes::modify classes
+access modifiers::access modifiers
+non-access modifiers::non-access modifiers
+section java::section java
+java variables::java variables
+local variables::local variables
+class variables::class variables
+static variables::static variables
+non-static variables::non-static variables
+java arrays::java arrays
+store multiple::store multiple
+multiple variables::multiple variables
+upcoming chapters::upcoming chapters
+chapters java::chapters java
+java enums::java enums
+enums restrict::enums restrict
+predefined values::predefined values
+enumerated list::enumerated list
+fresh juice::fresh juice
+juice shop::juice shop
+glass size::glass size
+class freshjuice::class freshjuice
+enum freshjuicesize::enum freshjuicesize
+freshjuicesize size::freshjuicesize size
+class freshjuicetest::class freshjuicetest
+freshjuice juice::freshjuice juice
+class methods::class methods
+defined inside::defined inside
+inside enums::inside enums
+java keywords::java keywords
+list shows::list shows
+reserved words::reserved words
+identifier names::identifier names
+names abstract::names abstract
+abstract assert::abstract assert
+assert boolean::assert boolean
+boolean break::boolean break
+break byte::break byte
+byte case::byte case
+case catch::case catch
+catch char::catch char
+char class::char class
+class const::class const
+const continue::const continue
+continue default::continue default
+enum extends::enum extends
+implements import::implements import
+instanceof int::instanceof int
+int interface::int interface
+public return::public return
+short static::short static
+static strictfp::static strictfp
+strictfp super::strictfp super
+super switch::super switch
+switch synchronized::switch synchronized
+throw throws::throw throws
+throws transient::throws transient
+java java::java java
+java supports::java supports
+multi-line comments::multi-line comments
+single line::single line
+line comment::line comment
+blank lines::blank lines
+blank line::blank line
+java classes::java classes
+existing code::existing code
+existing class::existing class
+derived class::derived class
+subclass interfaces::subclass interfaces
+interfaces play::interfaces play
+vital role::vital role
+interface defines::interface defines
+deriving class::deriving class
+section explains::section explains
+clear picture::clear picture
+java object::java object
+classes java::classes java
+object-oriented language::object-oriented language
+oriented feature::oriented feature
+fundamental concepts::fundamental concepts
+message parsing::message parsing
+concepts classes::concepts classes
+support objects::support objects
+software object::software object
+real world::real world
+world object::world object
+similar characteristics::similar characteristics
+characteristics software::characteristics software
+software objects::software objects
+software development::software development
+methods operate::methods operate
+internal state::internal state
+object-to-object communication::object-to-object communication
+methods chapter::methods chapter
+blue print::blue print
+individual objects::individual objects
+class dog::class dog
+string breed::string breed
+int age::int age
+string color::string color
+void barking::void barking
+void hungry::void hungry
+void sleeping::void sleeping
+variable types::variable types
+variables defined::variables defined
+inside methods::inside methods
+loaded instance::loaded instance
+variables declared::variables declared
+static keyword::static keyword
+important topics::important topics
+language constructors::language constructors
+important subtopic::important subtopic
+compiler builds::compiler builds
+default constructor::default constructor
+main rule::main rule
+class puppy::class puppy
+public puppy::public puppy
+supports singleton::supports singleton
+singleton classes::singleton classes
+class singleton::class singleton
+control object::control object
+object creation::object creation
+singleton instance::singleton instance
+instance fields::instance fields
+static fields::static fields
+fields singletons::fields singletons
+control access::control access
+database connections::database connections
+jdbc driver::jdbc driver
+singleton makes::singleton makes
+implementing singletons::implementing singletons
+easiest implementation::easiest implementation
+implementation consists::implementation consists
+private constructor::private constructor
+static accessor::static accessor
+accessor method::accessor method
+private field::private field
+static initializer::static initializer
+initializer block::initializer block
+simply returns::simply returns
+singleton.java public::singleton.java public
+private static::private static
+static singleton::static singleton
+singleton singleton::singleton singleton
+constructor prevents::constructor prevents
+private singleton::private singleton
+static instance::static instance
+singleton getinstance::singleton getinstance
+return singleton::return singleton
+methods protected::methods protected
+void demomethod::void demomethod
+singletondemo.java public::singletondemo.java public
+public lasssingletondemo::public lasssingletondemo
+public staticvoid::public staticvoid
+staticvoid main::staticvoid main
+singleton tmp::singleton tmp
+implementation shows::implementation shows
+classic singleton::classic singleton
+singleton design::singleton design
+design pattern::design pattern
+class classicsingleton::class classicsingleton
+static classicsingleton::static classicsingleton
+classicsingleton instance::classicsingleton instance
+protected classicsingleton::protected classicsingleton
+defeat instantiation::defeat instantiation
+classicsingleton getinstance::classicsingleton getinstance
+return instance::return instance
+classicsingleton class::classicsingleton class
+class maintains::class maintains
+static reference::static reference
+lone singleton::lone singleton
+static getinstance::static getinstance
+class employs::class employs
+lazy instantiation::lazy instantiation
+technique ensures::technique ensures
+singleton instances::singleton instances
+needed creating::needed creating
+variable declaration::variable declaration
+object type::object type
+call initializes::call initializes
+object mypuppy::object mypuppy
+mypuppy puppy::mypuppy puppy
+puppy mypuppy::puppy mypuppy
+tommy accessing::tommy accessing
+accessing instance::accessing instance
+created objects::created objects
+qualified path::qualified path
+class method::class method
+access instance::access instance
+int puppyage::int puppyage
+void setage::void setage
+public int::public int
+int getage::int getage
+return puppyage::return puppyage
+call class::call class
+variable value::variable value
+tommy puppy::tommy puppy
+source file::source file
+file declaration::file declaration
+declaration rules::declaration rules
+last part::last part
+declaring classes::declaring classes
+import statements::import statements
+package statements::package statements
+public classes::public classes
+easy learning::easy learning
+class employee::class employee
+package statement::package statement
+first statement::first statement
+class declaration::class declaration
+import statement::import statement
+first line::first line
+classes present::classes present
+file classes::file classes
+access levels::access levels
+abstract classes::abstract classes
+final classes::final classes
+modifiers chapter::modifiers chapter
+mentioned types::mentioned types
+special classes::special classes
+anonymous classes::anonymous classes
+java package::java package
+makes life::makes life
+easier import::easier import
+source code::source code
+classes import::classes import
+proper location::proper location
+import java.io::import java.io
+simple case::simple case
+case study::case study
+code remember::code remember
+employee class::employee class
+defined constructor::defined constructor
+parameter import::parameter import
+string designation::string designation
+double salary::double salary
+public employee::public employee
+variable age::variable age
+void empage::void empage
+int empage::int empage
+variable designation::variable designation
+void empdesignation::void empdesignation
+string empdesig::string empdesig
+variable salary::variable salary
+void empsalary::void empsalary
+double empsalary::double empsalary
+employee details::employee details
+void printemployee::void printemployee
+main method::main method
+separate class::separate class
+employeetest class::employeetest class
+assign values::assign values
+variable save::variable save
+employeetest.java file::employeetest.java file
+file import::file import
+publicstaticvoid main::publicstaticvoid main
+employee empone::employee empone
+mary anne::mary anne
+invoking methods::invoking methods
+object created::object created
+created empone.empage::created empone.empage
+senior software::senior software
+software engineer::software engineer
+run employeetest::run employeetest
+java employeetest::java employeetest
+jamessmith age::jamessmith age
+seniorsoftwareengineer salary::seniorsoftwareengineer salary
+maryanne age::maryanne age
+softwareengineer salary::softwareengineer salary
+basic data::basic data
+data types::data types
+developing java::developing java
+types variables::types variables
+reserved memory::reserved memory
+memory locations::memory locations
+store values::store values
+memory based::memory based
+data type::data type
+system allocates::system allocates
+allocates memory::allocates memory
+store integers::store integers
+primitive data::primitive data
+types primitive::types primitive
+types supported::types supported
+types byte::types byte
+byte data::byte data
+complement integer::complement integer
+minimum value::minimum value
+maximum value::maximum value
+default value::default value
+save space::save space
+large arrays::large arrays
+short data::short data
+integer chapter::integer chapter
+save memory::save memory
+int data::int data
+default data::default data
+integral values::integral values
+long data::long data
+wider range::wider range
+-200000l float::-200000l float
+float data::float data
+floating point::floating point
+point numbers::point numbers
+precise values::precise values
+double data::double data
+decimal values::decimal values
+default choice::default choice
+boolean data::boolean data
+type represents::type represents
+simple flags::simple flags
+true char::true char
+char data::char data
+single 16-bit::single 16-bit
+16-bit unicode::16-bit unicode
+unicode character::unicode character
+char lettera::char lettera
+reference data::reference data
+reference variables::reference variables
+defined constructors::defined constructors
+access objects::access objects
+specific type::specific type
+class objects::class objects
+array variables::array variables
+declared type::declared type
+compatible type::compatible type
+animal animal::animal animal
+java::java
+programming::programming
+language::language
+originally::originally
+developed::developed
+sun::sun
+microsystems::microsystems
+initiated::initiated
+james::james
+gosling::gosling
+released::released
+core::core
+component::component
+platform::platform
+j2se::j2se
+december::december
+latest::latest
+release::release
+standard::standard
+edition::edition
+advancement::advancement
+widespread::widespread
+popularity::popularity
+multiple::multiple
+configurations::configurations
+built::built
+suite::suite
+types::types
+platforms::platforms
+j2ee::j2ee
+enterprise::enterprise
+applications::applications
+j2me::j2me
+mobile::mobile
+renamed::renamed
+versions::versions
+guaranteed::guaranteed
+write::write
+run::run
+object::object
+oriented::oriented
+easily::easily
+extended::extended
+based::based
+model::model
+independent::independent
+unlike::unlike
+languages::languages
+including::including
+compiled::compiled
+specific::specific
+machine::machine
+byte::byte
+code::code
+distributed::distributed
+web::web
+interpreted::interpreted
+virtual::virtual
+jvm::jvm
+whichever::whichever
+simple::simple
+designed::designed
+easy::easy
+learn::learn
+understand::understand
+basic::basic
+concept::concept
+oop,java::oop,java
+master::master
+secure::secure
+feature::feature
+enables::enables
+develop::develop
+virus-free::virus-free
+tamper-free::tamper-free
+systems::systems
+authentication::authentication
+techniques::techniques
+public-key::public-key
+encryption::encryption
+architectural-neutral::architectural-neutral
+compiler::compiler
+generates::generates
+architecture-neutral::architecture-neutral
+file::file
+format::format
+makes::makes
+executable::executable
+processors::processors
+presence::presence
+runtime::runtime
+system::system
+portable::portable
+implementation::implementation
+dependent::dependent
+aspects::aspects
+specification::specification
+injava::injava
+written::written
+ansi::ansi
+clean::clean
+portability::portability
+boundary::boundary
+posix::posix
+subset::subset
+robust::robust
+effort::effort
+eliminate::eliminate
+error::error
+prone::prone
+situations::situations
+emphasizing::emphasizing
+compile::compile
+checking::checking
+chapter::chapter
+multithreaded::multithreaded
+programs::programs
+tasks::tasks
+simultaneously::simultaneously
+design::design
+developers::developers
+construct::construct
+smoothly::smoothly
+running::running
+interactive::interactive
+translated::translated
+fly::fly
+native::native
+instructions::instructions
+stored::stored
+development::development
+process::process
+rapid::rapid
+analytical::analytical
+linking::linking
+incremental::incremental
+lightweight::lightweight
+high::high
+performance::performance
+just-in-time::just-in-time
+compilers::compilers
+environment::environment
+internet::internet
+dynamic::dynamic
+considered::considered
+adapt::adapt
+evolving::evolving
+carry::carry
+extensive::extensive
+amount::amount
+run-time::run-time
+information::information
+verify::verify
+resolve::resolve
+accesses::accesses
+objects::objects
+history::history
+project::project
+june::june
+set-top::set-top
+box::box
+projects::projects
+initially::initially
+oak::oak
+tree::tree
+stood::stood
+office::office
+green::green
+ended::ended
+list::list
+random::random
+words::words
+first::first
+public::public
+promised::promised
+wora::wora
+providing::providing
+no-cost::no-cost
+run-times::run-times
+popular::popular
+november::november
+free::free
+open::open
+source::source
+software::software
+terms::terms
+gnu::gnu
+general::general
+license::license
+gpl::gpl
+finished::finished
+making::making
+open-source::open-source
+small::small
+portion::portion
+hold::hold
+copyright::copyright
+tools::tools
+performing::performing
+examples::examples
+discussed::discussed
+tutorial::tutorial
+pentium::pentium
+200-mhz::200-mhz
+computer::computer
+minimum::minimum
+ram::ram
+recommended::recommended
+softwares::softwares
+linux::linux
+windows::windows
+operating::operating
+jdk::jdk
+microsoft::microsoft
+notepad::notepad
+text::text
+editor::editor
+provide::provide
+skills::skills
+create::create
+gui::gui
+networking::networking
+guide::guide
+obtain::obtain
+documentation::documentation
+finally::finally
+instructs::instructs
+install::install
+prepare::prepare
+setup::setup
+proceed::proceed
+important::important
+set::set
+correctly::correctly
+section::section
+guides::guides
+download::download
+follow::follow
+steps::steps
+freely::freely
+link::link
+version::version
+.exe::.exe
+installed::installed
+variables::variables
+point::point
+correct::correct
+installation::installation
+directories::directories
+setting::setting
+path::path
+assuming::assuming
+program::program
+files::files
+directory::directory
+right-click::right-click
+my::my
+select::select
+properties::properties
+click::click
+environment::environment
+button::button
+advanced::advanced
+tab::tab
+alter::alter
+path::path
+variable::variable
+system32::system32
+change::change
+read::read
+bin::bin
+edit::edit
+autoexec.bat::autoexec.bat
+add::add
+line::line
+end::end
+set::set
+bin::bin
+unix::unix
+solaris::solaris
+freebsd::freebsd
+binaries::binaries
+shell::shell
+trouble::trouble
+doing::doing
+bash::bash
+.bashrc::.bashrc
+export::export
+editors::editors
+sophisticated::sophisticated
+ides::ides
+market::market
+textpad::textpad
+netbeans::netbeans
+ide::ide
+downloaded::downloaded
+fromhttp::fromhttp
+eclipse::eclipse
+community::community
+http::http
+teach::teach
+syntaxes::syntaxes
+needed::needed
+developing::developing
+syntax::syntax
+defined::defined
+collection::collection
+communicate::communicate
+invoking::invoking
+methods::methods
+briefly::briefly
+class::class
+instance::instance
+states::states
+behaviors::behaviors
+dog::dog
+states-color::states-color
+breed::breed
+-wagging::-wagging
+barking::barking
+eating::eating
+print::print
+describes::describes
+behaviors::NNS
+type::type
+support::support
+method::method
+basically::basically
+behavior::behavior
+logics::logics
+data::data
+manipulated::manipulated
+actions::actions
+executed::executed
+unique::unique
+state::state
+created::created
+values::values
+assigned::assigned
+world::world
+myfirstjavaprogram::myfirstjavaprogram
+hello::hello
+output::output
+static::static
+void::void
+main::main
+string::string
+args::args
+system.out.println::system.out.println
+prints::prints
+save::save
+myfirstjavaprogram.java::myfirstjavaprogram.java
+command::command
+prompt::prompt
+window::window
+saved::saved
+assume::assume
+javac::javac
+press::press
+enter::enter
+errors::errors
+assumption::assumption
+printed::printed
+helloworld::helloworld
+mind::mind
+points::points
+case::case
+sensitivity::sensitivity
+sensitive::sensitive
+means::means
+identifier::identifier
+meaning::meaning
+names::names
+letter::letter
+upper::upper
+form::form
+word::word
+myfirstjavaclass::myfirstjavaclass
+start::start
+lower::lower
+mymethodname::mymethodname
+match::match
+saving::saving
+remember::remember
+append::append
+.java::.java
+myfirstjavaprogram::myfirstjavaprogram
+asmyfirstjavaprogram.java::asmyfirstjavaprogram.java
+processing::processing
+starts::starts
+mandatory::mandatory
+part::part
+identifiers::identifiers
+components::components
+require::require
+classes::classes
+begin::begin
+currency::currency
+character::character
+underscore::underscore
+combination::combination
+characters::characters
+keyword::keyword
+importantly::importantly
+legal::legal
+age::age
+salary::salary
+_value::_value
+__1_value::__1_value
+illegal::illegal
+123abc::123abc
+-salary::-salary
+modifiers::modifiers
+modify::modify
+two::two
+categories::categories
+access::access
+default::default
+protected::protected
+private::private
+non-access::non-access
+final::final
+abstract::abstract
+strictfp::strictfp
+details::details
+local::local
+non-static::non-static
+arrays::arrays
+store::store
+array::array
+heap::heap
+declare::declare
+initialize::initialize
+upcoming::upcoming
+chapters::chapters
+enums::enums
+introduced::introduced
+restrict::restrict
+predefined::predefined
+enumerated::enumerated
+reduce::reduce
+number::number
+bugs::bugs
+application::application
+fresh::fresh
+juice::juice
+shop::shop
+glass::glass
+size::size
+medium::medium
+large::large
+make::make
+order::order
+freshjuice::freshjuice
+enum::enum
+freshjuicesize::freshjuicesize
+meduim::meduim
+freshjuicetest::freshjuicetest
+juice.size::juice.size
+freshjuice.freshjuicesize.meduim::freshjuice.freshjuicesize.meduim
+note::note
+declared::declared
+inside::inside
+constructors::constructors
+keywords::keywords
+shows::shows
+reserved::reserved
+constant::constant
+assert::assert
+boolean::boolean
+break::break
+catch::catch
+char::char
+const::const
+continue::continue
+double::double
+extends::extends
+float::float
+goto::goto
+implements::implements
+import::import
+instanceof::instanceof
+int::int
+interface::interface
+long::long
+package::package
+return::return
+short::short
+super::super
+switch::switch
+synchronized::synchronized
+throw::throw
+throws::throws
+transient::transient
+volatile::volatile
+comments::comments
+supports::supports
+single-line::single-line
+multi-line::multi-line
+similar::similar
+comment::comment
+single::single
+blank::blank
+lines::lines
+whitespace::whitespace
+possibly::possibly
+totally::totally
+ignores::ignores
+inheritance::inheritance
+derived::derived
+derive::derive
+existing::existing
+reuse::reuse
+fields::fields
+rewrite::rewrite
+scenario::scenario
+superclass::superclass
+subclass::subclass
+interfaces::interfaces
+contract::contract
+play::play
+vital::vital
+role::role
+defines::defines
+deriving::deriving
+explains::explains
+session::session
+clear::clear
+picture::picture
+object-oriented::object-oriented
+fundamental::fundamental
+concepts::concepts
+polymorphism::polymorphism
+encapsulation::encapsulation
+abstraction::abstraction
+message::message
+parsing::parsing
+deep::deep
+real-world::real-world
+find::find
+cars::cars
+dogs::dogs
+humans::humans
+color::color
+wagging::wagging
+compare::compare
+real::real
+characteristics::characteristics
+shown::shown
+operate::operate
+internal::internal
+object-to-object::object-to-object
+communication::communication
+done::done
+blue::blue
+individual::individual
+sample::sample
+hungry::hungry
+sleeping::sleeping
+blocks::blocks
+initialized::initialized
+destroyed::destroyed
+completed::completed
+instantiated::instantiated
+loaded::loaded
+accessed::accessed
+constructor::constructor
+value::value
+kinds::kinds
+mentioned::mentioned
+topics::topics
+discussing::discussing
+subtopic::subtopic
+explicitly::explicitly
+builds::builds
+invoked::invoked
+rule::rule
+puppy::puppy
+parameter::parameter
+singleton::singleton
+purpose::purpose
+control::control
+creation::creation
+limiting::limiting
+occur::occur
+singletons::singletons
+resources::resources
+database::database
+connections::connections
+sockets::sockets
+connection::connection
+jdbc::jdbc
+driver::driver
+multithreading::multithreading
+made::made
+thread::thread
+implementing::implementing
+easiest::easiest
+consists::consists
+field::field
+result::result
+accessor::accessor
+getinstance::getinstance
+initializer::initializer
+block::block
+simply::simply
+returns::returns
+singleton.java::singleton.java
+prevents::prevents
+instantiating::instantiating
+instance::instance
+singleton-ness::singleton-ness
+demomethod::demomethod
+singletondemo.java::singletondemo.java
+lasssingletondemo::lasssingletondemo
+staticvoid::staticvoid
+tmp::tmp
+singleton.getinstance::singleton.getinstance
+tmp.demomethod::tmp.demomethod
+produce::produce
+classic::classic
+pattern::pattern
+classicsingleton::classicsingleton
+null::null
+exists::exists
+defeat::defeat
+instantiation::instantiation
+maintains::maintains
+reference::reference
+lone::lone
+employs::employs
+technique::technique
+lazy::lazy
+ensures::ensures
+instances::instances
+creating::creating
+previously::previously
+blueprints::blueprints
+declaration::declaration
+new::new
+initialization::initialization
+call::call
+initializes::initializes
+passed::passed
+statement::statement
+mypuppy::mypuppy
+tommy::tommy
+passednameis::passednameis
+accessing::accessing
+fully::fully
+qualified::qualified
+objectreference::objectreference
+objectreference.variablename::objectreference.variablename
+objectreference.methodname::objectreference.methodname
+puppyage::puppyage
+setage::setage
+getage::getage
+newpuppy::newpuppy
+mypuppy.setage::mypuppy.setage
+mypuppy.getage::mypuppy.getage
+mypuppy.puppyage::mypuppy.puppyage
+passedname::passedname
+rules::rules
+last::last
+essential::essential
+declaring::declaring
+statements::statements
+non::non
+learning::learning
+appended::appended
+.java::.java
+employee::employee
+employee.java::employee.java
+present::present
+imply::imply
+levels::levels
+explaining::explaining
+special::special
+anonymous::anonymous
+categorizing::categorizing
+hundreds::hundreds
+life::life
+easier::easier
+includes::includes
+locate::locate
+giving::giving
+proper::proper
+location::location
+example,the::example,the
+load::load
+java.io::java.io
+study::study
+employeetest::employeetest
+four::four
+designation::designation
+takes::takes
+this.name::this.name
+assign::assign
+empage::empage
+empdesignation::empdesignation
+empdesig::empdesig
+empsalary::empsalary
+printemployee::printemployee
+in-order::in-order
+separate::separate
+creates::creates
+invokes::invokes
+employeetest.java::employeetest.java
+publicclassemployeetest::publicclassemployeetest
+publicstaticvoid::publicstaticvoid
+empone::empone
+newemployee::newemployee
+smith::smith
+emptwo::emptwo
+mary::mary
+anne::anne
+empone.empage::empone.empage
+empone.empdesignation::empone.empdesignation
+senior::senior
+engineer::engineer
+empone.empsalary::empone.empsalary
+empone.printemployee::empone.printemployee
+emptwo.empage::emptwo.empage
+emptwo.empdesignation::emptwo.empdesignation
+emptwo.empsalary::emptwo.empsalary
+emptwo.printemployee::emptwo.printemployee
+jamessmith::jamessmith
+seniorsoftwareengineer::seniorsoftwareengineer
+maryanne::maryanne
+softwareengineer::softwareengineer
+discuss::discuss
+memory::memory
+locations::locations
+reserve::reserve
+space::space
+allocates::allocates
+decides::decides
+assigning::assigning
+integers::integers
+decimals::decimals
+primitive::primitive
+supported::supported
+named::named
+detail::detail
+8-bit::8-bit
+signed::signed
+complement::complement
+integer::integer
+maximum::maximum
+inclusive::inclusive
+place::place
+times::times
+smaller::smaller
+16-bit::16-bit
+-32,768::-32,768
+32,767::32,767
+32-bit::32-bit
+2,147,483,648::2,147,483,648
+2,147,483,647::2,147,483,647
+generally::generally
+integral::integral
+concern::concern
+64-bit::64-bit
+-9,223,372,036,854,775,808::-9,223,372,036,854,775,808
+9,223,372,036,854,775,807::9,223,372,036,854,775,807
+wider::wider
+range::range
+100000l::100000l
+-200000l::-200000l
+single-precision::single-precision
+ieee::ieee
+floating::floating
+numbers::numbers
+0.0f::0.0f
+precise::precise
+234.5f::234.5f
+double-precision::double-precision
+decimal::decimal
+choice::choice
+0.0d::0.0d
+represents::represents
+bit::bit
+true::true
+false::false
+flags::flags
+track::track
+true::-NONE-
+conditions::conditions
+unicode::unicode
+u0000::u0000
+uffff::uffff
+65,535::65,535
+lettera::lettera
+changed::changed
+compatible::compatible
+animal::animal
+giraffe::giraffe

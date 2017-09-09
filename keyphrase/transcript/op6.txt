@@ -1,0 +1,552 @@
+Introduction
+References:
+1. Abraham Silberschatz, Greg Gagne, and Peter Baer Galvin, "Operating System Concepts, Ninth Edition ", Chapter 1
+Just as in The Blind Men and the Elephant, this chapter looks at Operating Systems from a number of different viewpoints. No one view really shows the complete picture, but by looking from a number of different views, we can get a pretty good overall picture of what operating systems are all about.
+1.1 What Operating Systems Do - For Users, For Applications, etc.
+
+Figure 1.1 - Abstract view of the components of a computer system
+* Computer = HW + OS + Apps + Users
+* OS serves as interface between HW and ( Apps & Users )
+* OS provides services for Apps & Users
+* OS manages resources ( Government model, it doesn't produce anything. )
+* Debates about what is included in the OS - Just the kernel, or everything the vendor ships 
+( Consider the distinction between system applications and 3rd party or user apps. )
+1.2 Computer-System Organization - What are all the parts, and how do they fit together 
+
+Figure 1.2 - A modern computer system
+1.2.1 Computer-System Operation
+* Bootstrap program
+* Shared memory between CPU and I/O cards
+* Time slicing for multi-process operation
+* Interrupt handling - clock, HW, SW
+* Implementation of system calls
+
+Figure 1.3 - Interrupt timeline for a single process doing output
+1.2.2 Storage Structure
+* Main memory ( RAM )
+o Programs must be loaded into RAM to run.
+o Instructions and data fetched from RAM into registers.
+o RAM is volatile
+o "Medium" size and speed
+* Other electronic ( volatile ) memory is faster, smaller, and more expensive per bit:
+o Registers
+o CPU Cache
+* Non-volatile memory ( "permanent" storage ) is slower, larger, and less expensive per bit:
+o Electronic disks
+o Magnetic disks
+o Optical disks
+o Magnetic Tapes
+
+Figure 1.4 - Storage-device hierarchy
+1.2.3 I/O Structure
+* Typical operation involves I/O requests, direct memory access ( DMA ), and interrupt handling.
+
+Figure 1.5 - How a modern computer system works
+1.3 Computer-System Architecture - Different Operating Systems for Different Kinds of Computer Environments
+1.3.1 Single-Processor Systems
+* One main CPU which manages the computer and runs user apps.
+* Other specialized processors ( disk controllers, GPUs, etc. ) do not run user apps.
+1.3.2 Multiprocessor Systems
+1. Increased throughput - Faster execution, but not 100% linear speedup.
+2. Economy of scale - Peripherals, disks, memory, shared among processors.
+3. Increased reliability
+o Failure of a CPU slows system, doesn't crash it.
+o Redundant processing provides system of checks and balances. ( e.g. NASA )
+
+Figure 1.6 - Symmetric multiprocessing architecture
+
+Figure 1.7 - A dual-core design with two cores placed on the same chip
+1.3.3 Clustered Systems
+* Independent systems, with shared common storage and connected by a high-speed LAN, working together.
+* Special considerations for access to shared storage are required, ( Distributed lock management ), as are collaboration protocols.
+
+Figure 1.8 - General structure of a clustered system
+1.4 Operating-System Structure
+A time-sharing ( multi-user multi-tasking ) OS requires:
+* Memory management
+* Process management
+* Job scheduling
+* Resource allocation strategies
+* Swap space / virtual memory in physical memory
+* Interrupt handling
+* File system management
+* Protection and security
+* Inter-process communications
+
+Figure 1.9 - Memory layout for a multiprogramming system
+1.5 Operating-System Operations
+Interrupt-driven nature of modern OSes requires that erroneous processes not be able to disturb anything else.
+1.5.1 Dual-Mode and Multimode Operation
+* User mode when executing harmless code in user applications
+* Kernel mode ( a.k.a. system mode, supervisor mode, privileged mode ) when executing potentially dangerous code in the system kernel.
+* Certain machine instructions ( privileged instructions ) can only be executed in kernel mode.
+* Kernel mode can only be entered by making system calls. User code cannot flip the mode switch.
+* Modern computers support dual-mode operation in hardware, and therefore most modern OSes support dual-mode operation.
+
+Figure 1.10 - Transition from user to kernel mode
+* The concept of modes can be extended beyond two, requiring more than a single mode bit
+* CPUs that support virtualization use one of these extra bits to indicate when the virtual machine manager, VMM, is in control of the system. The VMM has more privileges than ordinary user programs, but not so many as the full kernel.
+* System calls are typically implemented in the form of software interrupts, which causes the hardware's interrupt handler to transfer control over to an appropriate interrupt handler, which is part of the operating system, switching the mode bit to kernel mode in the process. The interrupt handler checks exactly which interrupt was generated, checks additional parameters ( generally passed through registers ) if appropriate, and then calls the appropriate kernel service routine to handle the service requested by the system call.
+* User programs' attempts to execute illegal instructions ( privileged or non-existent instructions ), or to access forbidden memory areas, also generate software interrupts, which are trapped by the interrupt handler and control is transferred to the OS, which issues an appropriate error message, possibly dumps data to a log ( core ) file for later analysis, and then terminates the offending program.
+1.5.2 Timer
+* Before the kernel begins executing user code, a timer is set to generate an interrupt.
+* The timer interrupt handler reverts control back to the kernel.
+* This assures that no user process can take over the system.
+* Timer control is a privileged instruction, ( requiring kernel mode. )
+1.6 Process Management
+An OS is responsible for the following tasks with regards to process management:
+* Creating and deleting both user and system processes
+* Ensuring that each process receives its necessary resources, without interfering with other processes.
+* Suspending and resuming processes
+* Process synchronization and communication
+* Deadlock handling
+1.7 Memory Management
+An OS is responsible for the following tasks with regards to memory management:
+* Keeping track of which blocks of memory are currently in use, and by which processes.
+* Determining which blocks of code and data to move into and out of memory, and when.
+* Allocating and deallocating memory as needed. ( E.g. new, malloc )
+1.8 Storage Management
+1.8.1 File-System Management
+An OS is responsible for the following tasks with regards to filesystem management:
+* Creating and deleting files and directories
+* Supporting primitives for manipulating files and directories. ( open, flush, etc. )
+* Mapping files onto secondary storage.
+* Backing up files onto stable permanent storage media.
+1.8.2 Mass-Storage Management
+An OS is responsible for the following tasks with regards to mass-storage management:
+* Free disk space management
+* Storage allocation
+* Disk scheduling
+Note the trade-offs regarding size, speed, longevity, security, and re-writability between different mass storage devices, including floppy disks, hard disks, tape drives, CDs, DVDs, etc.
+1.8.3 Caching
+* There are many cases in which a smaller higher-speed storage space serves as a cache, or temporary storage, for some of the most frequently needed portions of larger slower storage areas.
+* The hierarchy of memory storage ranges from CPU registers to hard drives and external storage. ( See table below. )
+* The OS is responsible for determining what information to store in what level of cache, and when to transfer data from one level to another.
+* The proper choice of cache management can have a profound impact on system performance.
+* Data read in from disk follows a migration path from the hard drive to main memory, then to the CPU cache, and finally to the registers before it can be used, while data being written follows the reverse path. Each step ( other than the registers ) will typically fetch more data than is immediately needed, and cache the excess in order to satisfy future requests faster. For writing, small amounts of data are frequently buffered until there is enough to fill an entire "block" on the next output device in the chain.
+* The issues get more complicated when multiple processes ( or worse multiple computers ) access common data, as it is important to ensure that every access reaches the most up-to-date copy of the cached data 1.8.4 I/O Systems
+The I/O subsystem consists of several components:
+* A memory-management component that includes buffering, caching, and spooling.
+* A general device-driver interface.
+* Drivers for specific hardware devices.
+* ( UNIX implements multiple device interfaces for many types of devices, one for accessing the device character by character and one for accessing the device block by block. These can be seen by doing a long listing of /dev, and looking for a "c" or "b" in the first position. You will also note that the "size" field contains two numbers, known as the major and minor device numbers, instead of the normal one. The major number signifies which device driver handles I/O for this device, and the minor number is a parameter passed to the driver to let it know which specific device is being accessed. Where a device can be accessed as either a block or character device, the minor numbers for the two options usually differ by a single bit. )
+1.9 Protection and Security
+* Protection involves ensuring that no process access or interfere with resources to which they are not entitled, either by design or by accident. ( E.g. "protection faults" when pointer variables are misused. )
+* Security involves protecting the system from deliberate attacks, either from legitimate users of the system attempting to gain unauthorized access and privileges, or external attackers attempting to access or damage the system.
+1.10 Kernel Data Structures
+1.10.4 Bitmaps
+* A string of 1s and 0s used to keep track of the boolean state of a collection of objects, such as the free state of blocks on a disk or pages in memory..
+1.11 Computing Environments
+1.11.1 Traditional Computing
+1.11.2 Mobile Computing
+* Computing on small handheld devices such as smart phones or tablets. ( As opposed to laptops, which still fall under traditional computing. )
+* May take advantage of additional built-in sensors, such as GPS, tilt, compass, and inertial movement.
+* Typically connect to the Internet using wireless networking ( IEEE 802.11 ) or cellular telephone technology.
+* Limited in storage capacity, memory capacity, and computing power relative to a PC.
+* Generally uses slower processors, that consume less battery power and produce less heat.
+* The two dominant OSes today are Google Android and Apple iOS.
+1.11.3 Distributed Systems
+* Distributed Systems consist of multiple, possibly heterogeneous, computers connected together via a network and cooperating in some way, form, or fashion.
+* Networks may range from small tight LANs to broad reaching WANs.
+o WAN = Wide Area Network, such as an international corporation
+o MAN =Metropolitan Area Network, covering a region the size of a city for example.
+o LAN =Local Area Network, typical of a home, business, single-site corporation, or university campus.
+o PAN = Personal Area Network, such as the bluetooth connection between your PC, phone, headset, car, etc.
+* Network access speeds, throughputs, reliabilities, are all important issues.
+* OS view of the network may range from just a special form of file access to complex well-coordinated network operating systems.
+* Shared resources may include files, CPU cycles, RAM, printers, and other resources.
+1.11.4 Client-Server Computing
+* A defined server provides services ( HW or SW ) to other systems which serve as clients. ( Technically clients and servers are processes, not HW, and may co-exist on the same physical computer. )
+* A process may act as both client and server of either the same or different resources.
+* Served resources may include disk space, CPU cycles, time of day, IP name information, graphical displays ( X Servers ), or other resources.
+
+Figure 1.18 - General structure of a client-server system
+1.11.5 Peer-to-Peer Computing
+* Any computer or process on the network may provide services to any other which requests it. There is no clear "leader" or overall organization.
+* May employ a central "directory" server for looking up the location of resources, or may use peer-to-peer searching to find resources.
+* E.g. Skype uses a central server to locate a desired peer, and then further communication is peer to peer.
+
+Figure 1.19 - Peer-to-peer system with no centralized service
+1.11.6 Virtualization
+* Allows one or more "guest" operating systems to run on virtual machines hosted by a single physical machine and the virtual machine manager.
+* Useful for cross-platform development and support.
+* For example, a student could run UNIX on a virtual machine, hosted by a virtual machine manager on a Windows based personal computer. The student would have full root access to the virtual machine, and if it crashed, the underlying Windows machine should be unaffected.
+* System calls have to be caught by the VMM and translated into ( different ) system calls made to the real underlying OS.
+* Virtualization can slow down program that have to run through the VMM, but can also speed up some things if virtual hardware can be accessed through a cache instead of a physical device.
+* Depending on the implementation, programs can also run simultaneously on the native OS, bypassing the virtual machines.
+
+Figure 1.20 - VMWare
+* To run Linux on a Windows system using VMware, follow these steps:
+1. Download the free "VMware Player" tool from http://www.vmware.com/download/player and install it on your system
+2. Choose a Linux version from among hundreds of virtual machine images at http://www.vmware.com/appliances
+3. Boot the virtual machine within VMware Player.
+ 
+1.11.7 Cloud Computing
+* Delivers computing, storage, and applications as a service over a network.
+* Types of cloud computing:
+o Public cloud - Available to anyone willing to pay for the service.
+o Private cloud - Run by a company for internal use only.
+o Hybrid cloud - A cloud with both public and private components.
+o Software as a Service - SaaS - Applications such as word processors available via the Internet
+o Platform as a Service - PaaS - A software stack available for application use, such as a database server
+o Infrastructure as a Service - IaaS - Servers or storage available on the Internet, such as backup servers, photo storage, or file storage.
+o Service providers may provide more than one type of service
+* Clouds may contain thousands of physical computers, millions of virtual ones, and petabytes of total storage.
+* Web hosting services may offer ( one or more ) virtual machine(s) to each of their clients.
+
+Figure 1.21 - Cloud computing
+1.11.8 Real-Time Embedded Systems
+* Embedded into devices such as automobiles, climate control systems, process control, and even toasters and refrigerators.
+* May involve specialized chips, or generic CPUs applied to a particular task. ( Consider the current price of 80286 or even 8086 or 8088 chips, which are still plenty powerful enough for simple electronic devices such as kids toys. )
+* Process control devices require real-time ( interrupt driven ) OSes. Response time can be critical for many such devices.
+1.12 Open-Source Operating Systems
+* ( For more information on the Flourish conference held at UIC on the subject of Free Libre and Open Source Software , visit http://www.flourishconf.com )
+* Open-Source software is published ( sometimes sold ) with the source code, so that anyone can see and optionally modify the code.
+* Open-source SW is often developed and maintained by a small army of loosely connected often unpaid programmers, each working towards the common good.
+* Critics argue that open-source SW can be buggy, but proponents counter that bugs are found and fixed quickly, since there are so many pairs of eyes inspecting all the code.
+* Open-source operating systems are a good resource for studying OS development, since students can examine the source code and even change it and re-compile the changes.
+1.12.1 History
+* At one time ( 1950s ) a lot of code was open-source.
+* Later, companies tried to protect the privacy of their code, particularly sensitive issues such as copyright protection algorithms.
+* In 1983 Richard Stallman started the GNU project to produce an open-source UNIX.
+* He later published the GNU Manifesto, arguing that ALL software should be open-source, and founded the Free Software Foundation to promote open-source development.
+* FSF and GNU use the GNU General Public License which essentially states that all users of the software have full rights to copy and change the SW however they wish, so long as anything they distribute further contain the same license agreement. ( Copylefting )
+1.12.2 Linux
+* Developed by Linus Torvalds in Finland in 1991 as the first full operating system developed by GNU.
+* Many different distributions of Linux have evolved from Linus's original, including RedHat, SUSE, Fedora, Debian, Slackware, and Ubuntu, each geared toward a different group of end-users and operating environments.
+* To run Linux on a Windows system using VMware, follow these steps:
+1. Download the free "VMware Player" tool from http://www.vmware.com/download/player and install it on your system
+2. Choose a Linux version from among hundreds of virtual machine images at http://www.vmware.com/appliances
+3. Boot the virtual machine within VMware Player.
+1.12.3 BSD UNIX
+* UNIX was originally developed at ATT Bell labs, and the source code made available to computer science students at many universities, including the University of California at Berkeley, UCB.
+* UCB students developed UNIX further, and released their product as BSD UNIX in both binary and source-code format.
+* BSD UNIX is not open-source, however, because a license is still needed from ATT.
+* In spite of various lawsuits, there are now several versions of BSD UNIX, including Free BSD, NetBSD, OpenBSD, and DragonflyBSD
+* The source code is located in /usr/src.
+* The core of the Mac operating system is Darwin, derived from BSD UNIX, and is available at http://developer.apple.com/opensource/index.html
+1.13.4 Solaris
+* Solaris is the UNIX operating system for computers from Sun Microsystems.
+* Solaris was originally based on BSD UNIX, and has since migrated to ATT SystemV as its basis.
+* Parts of Solaris are now open-source, and some are not because they are still covered by ATT copyrights.
+* It is possible to change the open-source components of Solaris, re-compile them, and then link them in with binary libraries of the copyrighted portions of Solaris.
+* Open Solaris is available from http://www.opensolaris.org/os/
+* Solaris also allows viewing of the source code online, without having to download and unpack the entire package.
+1.13.5 Utility
+* The free software movement is gaining rapidly in popularity, leading to thousands of ongoing projects involving untold numbers of programmers.
+* Sites such as http://freshmeat.net/ and http://distrowatch.com/ provide portals to many of these projects.
+1.14 Summary
+ Operating-System Structures
+References:
+1. Abraham Silberschatz, Greg Gagne, and Peter Baer Galvin, "Operating System Concepts, Ninth Edition ", Chapter 2
+This chapter deals with how operating systems are structured and organized. Different design issues and choices are examined and compared, and the basic structure of several popular OSes are presented.
+2.1 Operating-System Services
+
+Figure 2.1 - A view of operating system services
+OSes provide environments in which programs run, and services for the users of the system, including:
+* User Interfaces - Means by which users can issue commands to the system. Depending on the system these may be a command-line interface ( e.g. sh, csh, ksh, tcsh, etc. ), a GUI interface ( e.g. Windows, X-Windows, KDE, Gnome, etc. ), or a batch command systems. The latter are generally older systems using punch cards of job-control language, JCL, but may still be used today for specialty systems designed for a single purpose.
+* Program Execution - The OS must be able to load a program into RAM, run the program, and terminate the program, either normally or abnormally.
+* I/O Operations - The OS is responsible for transferring data to and from I/O devices, including keyboards, terminals, printers, and storage devices.
+* File-System Manipulation - In addition to raw data storage, the OS is also responsible for maintaining directory and subdirectory structures, mapping file names to specific blocks of data storage, and providing tools for navigating and utilizing the file system.
+* Communications - Inter-process communications, IPC, either between processes running on the same processor, or between processes running on separate processors or separate machines. May be implemented as either shared memory or message passing, ( or some systems may offer both. )
+* Error Detection - Both hardware and software errors must be detected and handled appropriately, with a minimum of harmful repercussions. Some systems may include complex error avoidance or recovery systems, including backups, RAID drives, and other redundant systems. Debugging and diagnostic tools aid users and administrators in tracing down the cause of problems.
+Other systems aid in the efficient operation of the OS itself:
+* Resource Allocation - E.g. CPU cycles, main memory, storage space, and peripheral devices. Some resources are managed with generic systems and others with very carefully designed and specially tuned systems, customized for a particular resource and operating environment.
+* Accounting - Keeping track of system activity and resource usage, either for billing purposes or for statistical record keeping that can be used to optimize future performance.
+* Protection and Security - Preventing harm to the system and to resources, either through wayward internal processes or malicious outsiders. Authentication, ownership, and restricted access are obvious parts of this system. Highly secure systems may log all process activity down to excruciating detail, and security regulation dictate the storage of those records on permanent non-erasable medium for extended times in secure ( off-site ) facilities.
+2.2 User Operating-System Interface
+2.2.1 Command Interpreter
+* Gets and processes the next user request, and launches the requested programs.
+* In some systems the CI may be incorporated directly into the kernel.
+* More commonly the CI is a separate program that launches once the user logs in or otherwise accesses the system.
+* UNIX, for example, provides the user with a choice of different shells, which may either be configured to launch automatically at login, or which may be changed on the fly. ( Each of these shells uses a different configuration file of initial settings and commands that are executed upon startup. )
+* Different shells provide different functionality, in terms of certain commands that are implemented directly by the shell without launching any external programs. Most provide at least a rudimentary command interpretation structure for use in shell script programming ( loops, decision constructs, variables, etc. )
+* An interesting distinction is the processing of wild card file naming and I/O re-direction. On UNIX systems those details are handled by the shell, and the program which is launched sees only a list of filenames generated by the shell from the wild cards. On a DOS system, the wild cards are passed along to the programs, which can interpret the wild cards as the program sees fit.
+
+Figure 2.2 - The Bourne shell command interpreter in Solaris 10
+2.2.2 Graphical User Interface, GUI
+* Generally implemented as a desktop metaphor, with file folders, trash cans, and resource icons.
+* Icons represent some item on the system, and respond accordingly when the icon is activated.
+* First developed in the early 1970's at Xerox PARC research facility.
+* In some systems the GUI is just a front end for activating a traditional command line interpreter running in the background. In others the GUI is a true graphical shell in its own right.
+* Mac has traditionally provided ONLY the GUI interface. With the advent of OSX ( based partially on UNIX ), a command line interface has also become available.
+* Because mice and keyboards are impractical for small mobile devices, these normally use a touch-screen interface today, that responds to various patterns of swipes or "gestures". When these first came out they often had a physical keyboard and/or a trackball of some kind built in, but today a virtual keyboard is more commonly implemented on the touch screen.
+
+Figure 2.3 - The iPad touchscreen
+2.2.3 Choice of interface
+* Most modern systems allow individual users to select their desired interface, and to customize its operation, as well as the ability to switch between different interfaces as needed. System administrators generally determine which interface a user starts with when they first log in.
+* GUI interfaces usually provide an option for a terminal emulator window for entering command-line commands.
+* Command-line commands can also be entered into shell scripts, which can then be run like any other programs.
+
+Figure 2.4 - The Mac OS X GUI
+2.3 System Calls
+* System calls provide a means for user or application programs to call upon the services of the operating system.
+* Generally written in C or C++, although some are written in assembly for optimal performance.
+* Figure 2.4 illustrates the sequence of system calls required to copy a file:
+
+Figure 2.5 - Example of how system calls are used.
+* You can use "strace" to see more examples of the large number of system calls invoked by a single simple command. Read the man page for strace, and try some simple examples. ( strace mkdir temp, strace cd temp, strace date > t.t, strace cp t.t t.2, etc. )
+* Most programmers do not use the low-level system calls directly, but instead use an "Application Programming Interface", API. The following sidebar shows the read( ) call available in the API on UNIX based systems::
+
+
+The use of APIs instead of direct system calls provides for greater program portability between different systems. The API then makes the appropriate system calls through the system call interface, using a table lookup to access specific numbered system calls, as shown in Figure 2.6:
+
+Figure 2.6 - The handling of a user application invoking the open( ) system call
+* Parameters are generally passed to system calls via registers, or less commonly, by values pushed onto the stack. Large blocks of data are generally accessed indirectly, through a memory address passed in a register or on the stack, as shown in Figure 2.7:
+
+Figure 2.7 - Passing of parameters as a table
+2.4 Types of System Calls
+Six major categories, as outlined in Figure 2.8 and the following six subsections:
+
+( Sixth type, protection, not shown here but described below. )
+
+* Standard library calls may also generate system calls, as shown here:
+
+2.4.1 Process Control
+* Process control system calls include end, abort, load, execute, create process, terminate process, get/set process attributes, wait for time or event, signal event, and allocate and free memory.
+* Processes must be created, launched, monitored, paused, resumed,and eventually stopped.
+* When one process pauses or stops, then another must be launched or resumed
+* When processes stop abnormally it may be necessary to provide core dumps and/or other diagnostic or recovery tools.
+* Compare DOS ( a single-tasking system ) with UNIX ( a multi-tasking system ).
+o When a process is launched in DOS, the command interpreter first unloads as much of itself as it can to free up memory, then loads the process and transfers control to it. The interpreter does not resume until the process has completed, as shown in Figure 2.9:
+
+Figure 2.9 - MS-DOS execution. (a) At system startup. (b) Running a program.
+o Because UNIX is a multi-tasking system, the command interpreter remains completely resident when executing a process, as shown in Figure 2.11 below.
+* The user can switch back to the command interpreter at any time, and can place the running process in the background even if it was not originally launched as a background process.
+* In order to do this, the command interpreter first executes a "fork" system call, which creates a second process which is an exact duplicate ( clone ) of the original command interpreter. The original process is known as the parent, and the cloned process is known as the child, with its own unique process ID and parent ID.
+* The child process then executes an "exec" system call, which replaces its code with that of the desired process.
+* The parent ( command interpreter ) normally waits for the child to complete before issuing a new command prompt, but in some cases it can also issue a new prompt right away, without waiting for the child process to complete. ( The child is then said to be running "in the background", or "as a background process". )
+
+Figure 2.10 - FreeBSD running multiple programs
+2.4.2 File Management
+* File management system calls include create file, delete file, open, close, read, write, reposition, get file attributes, and set file attributes.
+* These operations may also be supported for directories as well as ordinary files.
+* ( The actual directory structure may be implemented using ordinary files on the file system, or through other means. Further details will be covered in chapters 11 and 12. )
+2.4.3 Device Management
+* Device management system calls include request device, release device, read, write, reposition, get/set device attributes, and logically attach or detach devices.
+* Devices may be physical ( e.g. disk drives ), or virtual / abstract ( e.g. files, partitions, and RAM disks ).
+* Some systems represent devices as special files in the file system, so that accessing the "file" calls upon the appropriate device drivers in the OS. See for example the /dev directory on any UNIX system.
+2.4.4 Information Maintenance
+* Information maintenance system calls include calls to get/set the time, date, system data, and process, file, or device attributes.
+* Systems may also provide the ability to dump memory at any time, single step programs pausing execution after each instruction, and tracing the operation of programs, all of which can help to debug programs.
+2.4.5 Communication
+* Communication system calls create/delete communication connection, send/receive messages, transfer status information, and attach/detach remote devices.
+* The message passing model must support calls to:
+o Identify a remote process and/or host with which to communicate.
+o Establish a connection between the two processes.
+o Open and close the connection as needed.
+o Transmit messages along the connection.
+o Wait for incoming messages, in either a blocking or non-blocking state.
+o Delete the connection when no longer needed.
+* The shared memory model must support calls to:
+o Create and access memory that is shared amongst processes ( and threads. )
+o Provide locking mechanisms restricting simultaneous access.
+o Free up shared memory and/or dynamically allocate it as needed.
+* Message passing is simpler and easier, ( particularly for inter-computer communications ), and is generally appropriate for small amounts of data.
+* Shared memory is faster, and is generally the better approach where large amounts of data are to be shared, ( particularly when most processes are reading the data rather than writing it, or at least when only one or a small number of processes need to change any given data item. )
+2.4.6 Protection
+* Protection provides mechanisms for controlling which users / processes have access to which system resources.
+* System calls allow the access mechanisms to be adjusted as needed, and for non-priveleged users to be granted elevated access permissions under carefully controlled temporary circumstances.
+* Once only of concern on multi-user systems, protection is now important on all systems, in the age of ubiquitous network connectivity.
+2.5 System Programs
+* System programs provide OS functionality through separate applications, which are not part of the kernel or command interpreters. They are also known as system utilities or system applications.
+* Most systems also ship with useful applications such as calculators and simple editors, ( e.g. Notepad ). Some debate arises as to the border between system and non-system applications.
+* System programs may be divided into these categories:
+o File management - programs to create, delete, copy, rename, print, list, and generally manipulate files and directories.
+o Status information - Utilities to check on the date, time, number of users, processes running, data logging, etc. System registries are used to store and recall configuration information for particular applications.
+o File modification - e.g. text editors and other tools which can change file contents.
+o Programming-language support - E.g. Compilers, linkers, debuggers, profilers, assemblers, library archive management, interpreters for common languages, and support for make.
+o Program loading and execution - loaders, dynamic loaders, overlay loaders, etc., as well as interactive debuggers.
+o Communications - Programs for providing connectivity between processes and users, including mail, web browsers, remote logins, file transfers, and remote command execution.
+o Background services - System daemons are commonly started when the system is booted, and run for as long as the system is running, handling necessary services. Examples include network daemons, print servers, process schedulers, and system error monitoring services.
+* Most operating systems today also come complete with a set of application programs to provide additional services, such as copying files or checking the time and date.
+* Most users' views of the system is determined by their command interpreter and the application programs. Most never make system calls, even through the API, ( with the exception of simple ( file ) I/O in user-written programs. )
+2.6 Operating-System Design and Implementation
+2.6.1 Design Goals
+* Requirements define properties which the finished system must have, and are a necessary first step in designing any large complex system.
+o User requirements are features that users care about and understand, and are written in commonly understood vernacular. They generally do not include any implementation details, and are written similar to the product description one might find on a sales brochure or the outside of a shrink-wrapped box.
+o System requirements are written for the developers, and include more details about implementation specifics, performance requirements, compatibility constraints, standards compliance, etc. These requirements serve as a "contract" between the customer and the developers, ( and between developers and subcontractors ), and can get quite detailed.
+* Requirements for operating systems can vary greatly depending on the planned scope and usage of the system. ( Single user / multi-user, specialized system / general purpose, high/low security, performance needs, operating environment, etc. )
+2.6.2 Mechanisms and Policies
+* Policies determine what is to be done. Mechanisms determine how it is to be implemented.
+* If properly separated and implemented, policy changes can be easily adjusted without re-writing the code, just by adjusting parameters or possibly loading new data / configuration files. For example the relative priority of background versus foreground tasks.
+2.6.3 Implementation
+* Traditionally OSes were written in assembly language. This provided direct control over hardware-related issues, but inextricably tied a particular OS to a particular HW platform.
+* Recent advances in compiler efficiencies mean that most modern OSes are written in C, or more recently, C++. Critical sections of code are still written in assembly language, ( or written in C, compiled to assembly, and then fine-tuned and optimized by hand from there. )
+* Operating systems may be developed using emulators of the target hardware, particularly if the real hardware is unavailable ( e.g. not built yet ), or not a suitable platform for development, ( e.g. smart phones, game consoles, or other similar devices. )
+2.7 Operating-System Structure
+For efficient performance and implementation an OS should be partitioned into separate subsystems, each with carefully defined tasks, inputs, outputs, and performance characteristics. These subsystems can then be arranged in various architectural configurations:
+2.7.1 Simple Structure
+When DOS was originally written its developers had no idea how big and important it would eventually become. It was written by a few programmers in a relatively short amount of time, without the benefit of modern software engineering techniques, and then gradually grew over time to exceed its original expectations. It does not break the system into subsystems, and has no distinction between user and kernel modes, allowing all programs direct access to the underlying hardware. ( Note that user versus kernel mode was not supported by the 8088 chip set anyway, so that really wasn't an option back then. )
+
+Figure 2.11 - MS-DOS layer structure
+The original UNIX OS used a simple layered approach, but almost all the OS was in one big layer, not really breaking the OS down into layered subsystems:
+
+Figure 2.12 - Traditional UNIX system structure
+2.7.2 Layered Approach
+* Another approach is to break the OS into a number of smaller layers, each of which rests on the layer below it, and relies solely on the services provided by the next lower layer.
+* This approach allows each layer to be developed and debugged independently, with the assumption that all lower layers have already been debugged and are trusted to deliver proper services.
+* The problem is deciding what order in which to place the layers, as no layer can call upon the services of any higher layer, and so many chicken-and-egg situations may arise.
+* Layered approaches can also be less efficient, as a request for service from a higher layer has to filter through all lower layers before it reaches the HW, possibly with significant processing at each step.
+
+Figure 2.13 - A layered operating system
+2.7.3 Microkernels
+* The basic idea behind micro kernels is to remove all non-essential services from the kernel, and implement them as system applications instead, thereby making the kernel as small and efficient as possible.
+* Most microkernels provide basic process and memory management, and message passing between other services, and not much more.
+* Security and protection can be enhanced, as most services are performed in user mode, not kernel mode.
+* System expansion can also be easier, because it only involves adding more system applications, not rebuilding a new kernel.
+* Mach was the first and most widely known microkernel, and now forms a major component of Mac OSX.
+* Windows NT was originally microkernel, but suffered from performance problems relative to Windows 95. NT 4.0 improved performance by moving more services into the kernel, and now XP is back to being more monolithic.
+* Another microkernel example is QNX, a real-time OS for embedded systems.
+
+Figure 2.14 - Architecture of a typical microkernel
+2.7.4 Modules
+* Modern OS development is object-oriented, with a relatively small core kernel and a set of modules which can be linked in dynamically. See for example the Solaris structure, as shown in Figure 2.13 below.
+* Modules are similar to layers in that each subsystem has clearly defined tasks and interfaces, but any module is free to contact any other module, eliminating the problems of going through multiple intermediary layers, as well as the chicken-and-egg problems.
+* The kernel is relatively small in this architecture, similar to microkernels, but the kernel does not have to implement message passing since modules are free to contact each other directly.
+
+Figure 2.15 - Solaris loadable modules
+2.7.5 Hybrid Systems
+* Most OSes today do not strictly adhere to one architecture, but are hybrids of several.
+2.7.5.1 Mac OS X
+* The Max OSX architecture relies on the Mach microkernel for basic system management services, and the BSD kernel for additional services. Application services and dynamically loadable modules ( kernel extensions ) provide the rest of the OS functionality:
+
+Figure 2.16 - The Mac OS X structure
+2.7.5.2 iOS
+* The iOS operating system was developed by Apple for iPhones and iPads. It runs with less memory and computing power needs than Max OS X, and supports touchscreen interface and graphics for small screens:
+
+Figure 2.17 - Architecture of Apple's iOS.
+2.7.5.3 Android
+* The Android OS was developed for Android smartphones and tablets by the Open Handset Alliance, primarily Google.
+* Android is an open-source OS, as opposed to iOS, which has lead to its popularity.
+* Android includes versions of Linux and a Java virtual machine both optimized for small platforms.
+* Android apps are developed using a special Java-for-Android development environment.
+
+Figure 2.18 - Architecture of Google's Android
+2.8 Operating-System Debugging
+Kernighan's Law
+"Debugging is twice as hard as writing the code in the first place. Therefore,
+if you write the code as cleverly as possible, you are, by definition, not smart
+enough to debug it."* Debugging here includes both error discovery and elimination and performance tuning.
+2.8.1 Failure Analysis
+* Debuggers allow processes to be executed stepwise, and provide for the examination of variables and expressions as the execution progresses.
+* Profilers can document program execution, to produce statistics on how much time was spent on different sections or even lines of code.
+* If an ordinary process crashes, a memory dump of the state of that process's memory at the time of the crash can be saved to a disk file for later analysis.
+o The program must be specially compiled to include debugging information, which may slow down its performance.
+* These approaches don't really work well for OS code, for several reasons:
+o The performance hit caused by adding the debugging ( tracing ) code would be unacceptable. ( Particularly if one tried to "single-step" the OS while people were trying to use it to get work done! )
+o Many parts of the OS run in kernel mode, and make direct access to the hardware.
+o If an error occurred during one of the kernel's file-access or direct disk-access routines, for example, then it would not be practical to try to write a crash dump into an ordinary file on the filesystem.
+* Instead the kernel crash dump might be saved to a special unallocated portion of the disk reserved for that purpose.
+2.8.2 Performance Tuning
+* Performance tuning ( debottlenecking ) requires monitoring system performance.
+* One approach is for the system to record important events into log files, which can then be analyzed by other tools. These traces can also be used to evaluate how a proposed new system would perform under the same workload.
+* Another approach is to provide utilities that will report system status upon demand, such as the unix "top" command. ( w, uptime, ps, etc. )
+* System utilities may provide monitoring support.
+
+Figure 2.19 - The Windows task manager.
+2.8.3 DTrace
+* DTrace is a special facility for tracing a running OS, developed for Solaris 10.
+* DTrace adds "probes" directly into the OS code, which can be queried by "probe consumers".
+* Probes are removed when not in use, so the DTrace facility has zero impact on the system when not being used, and a proportional impact in use.
+* Consider, for example, the trace of an ioctl system call as shown in Figure 2.22 below.
+
+Figure 2.20 - Solaris 10 dtrace follows a system call within the kernel
+* Probe code is restricted to be "safe", ( e.g. no loops allowed ), and to use a minimum of system resources.
+* When a probe fires, enabling control blocks, ECBs, are performed, each having the structure of an if-then block
+* When a consumer terminates, the ECBs associated with that consumer are removed. When no more ECBs remain interested in a particular probe, then that probe is also removed.
+* For example, the following D code monitors the CPU time of each process running with user ID of 101. The output is shown in Figure 2.23 below.
+sched:::on-cpu
+uid == 101
+{
+     self->ts = timestamp;
+}
+sched:::off-cpu
+self->ts 
+{
+     @time[execname] = sum( timestamp - self->ts );
+     self->ts = 0;
+}
+
+Figure 2.21
+* Use of DTrace is restricted, due to the direct access to ( and ability to change ) critical kernel data structures.
+* Because DTrace is open-source, it is being adopted by several UNIX distributions. Others are busy producing similar utilities.
+2.9 Operating-System Generation
+* OSes may be designed and built for a specific HW configuration at a specific site, but more commonly they are designed with a number of variable parameters and components, which are then configured for a particular operating environment.
+* Systems sometimes need to be re-configured after the initial installation, to add additional resources, capabilities, or to tune performance, logging, or security.
+* Information that is needed to configure an OS include:
+o What CPU(s) are installed on the system, and what optional characteristics does each have 
+o How much RAM is installed  ( This may be determined automatically, either at install or boot time. )
+o What devices are present  The OS needs to determine which device drivers to include, as well as some device-specific characteristics and parameters.
+o What OS options are desired, and what values to set for particular OS parameters. The latter may include the size of the open file table, the number of buffers to use, process scheduling ( priority ) parameters, disk scheduling algorithms, number of slots in the process table, etc.
+* At one extreme the OS source code can be edited, re-compiled, and linked into a new kernel.
+* More commonly configuration tables determine which modules to link into the new kernel, and what values to set for some key important parameters. This approach may require the configuration of complicated makefiles, which can be done either automatically or through interactive configuration programs; Then make is used to actually generate the new kernel specified by the new parameters.
+* At the other extreme a system configuration may be entirely defined by table data, in which case the "rebuilding" of the system merely requires editing data tables.
+* Once a system has been regenerated, it is usually required to reboot the system to activate the new kernel. Because there are possibilities for errors, most systems provide some mechanism for booting to older or alternate kernels.
+2.10 System Boot
+The general approach when most computers boot up goes something like this:
+* When the system powers up, an interrupt is generated which loads a memory address into the program counter, and the system begins executing instructions found at that address. This address points to the "bootstrap" program located in ROM chips ( or EPROM chips ) on the motherboard.
+* The ROM bootstrap program first runs hardware checks, determining what physical resources are present and doing power-on self tests ( POST ) of all HW for which this is applicable. Some devices, such as controller cards may have their own on-board diagnostics, which are called by the ROM bootstrap program.
+* The user generally has the option of pressing a special key during the POST process, which will launch the ROM BIOS configuration utility if pressed. This utility allows the user to specify and configure certain hardware parameters as where to look for an OS and whether or not to restrict access to the utility with a password.
+o Some hardware may also provide access to additional configuration setup programs, such as for a RAID disk controller or some special graphics or networking cards.
+* Assuming the utility has not been invoked, the bootstrap program then looks for a non-volatile storage device containing an OS. Depending on configuration, it may look for a floppy drive, CD ROM drive, or primary or secondary hard drives, in the order specified by the HW configuration utility.
+* Assuming it goes to a hard drive, it will find the first sector on the hard drive and load up the fdisk table, which contains information about how the physical hard drive is divided up into logical partitions, where each partition starts and ends, and which partition is the "active" partition used for booting the system.
+* There is also a very small amount of system code in the portion of the first disk block not occupied by the fdisk table. This bootstrap code is the first step that is not built into the hardware, i.e. the first part which might be in any way OS-specific. Generally this code knows just enough to access the hard drive, and to load and execute a ( slightly ) larger boot program.
+* For a single-boot system, the boot program loaded off of the hard disk will then proceed to locate the kernel on the hard drive, load the kernel into memory, and then transfer control over to the kernel. There may be some opportunity to specify a particular kernel to be loaded at this stage, which may be useful if a new kernel has just been generated and doesn't work, or if the system has multiple kernels available with different configurations for different purposes. ( Some systems may boot different configurations automatically, depending on what hardware has been found in earlier steps. )
+* For dual-boot or multiple-boot systems, the boot program will give the user an opportunity to specify a particular OS to load, with a default choice if the user does not pick a particular OS within a given time frame. The boot program then finds the boot loader for the chosen single-boot OS, and runs that program as described in the previous bullet point.
+* Once the kernel is running, it may give the user the opportunity to enter into single-user mode, also known as maintenance mode. This mode launches very few if any system services, and does not enable any logins other than the primary log in on the console. This mode is used primarily for system maintenance and diagnostics.
+* When the system enters full multi-user multi-tasking mode, it examines configuration files to determine which system services are to be started, and launches each of them in turn. It then spawns login programs ( gettys ) on each of the login devices which have been configured to enable user logins.
+o ( The getty program initializes terminal I/O, issues the login prompt, accepts login names and passwords, and authenticates the user. If the user's password is authenticated, then the getty looks in system files to determine what shell is assigned to the user, and then "execs" ( becomes ) the user's shell. The shell program will look in system and user configuration files to initialize itself, and then issue prompts for user commands. Whenever the shell dies, either through logout or other means, then the system will issue a new getty for that terminal device. )
+2.11 Summary
+
+Old 2.8 Virtual Machines ( Moved elsewhere in the 9th edition. )
+* The concept of a virtual machine is to provide an interface that looks like independent hardware, to multiple different OSes running simultaneously on the same physical hardware. Each OS believes that it has access to and control over its own CPU, RAM, I/O devices, hard drives, etc.
+* One obvious use for this system is for the development and testing of software that must run on multiple platforms and/or OSes.
+* One obvious difficulty involves the sharing of hard drives, which are generally partitioned into separate smaller virtual disks for each operating OS.
+
+Figure 16.1 - System models. (a) Nonvirtual machine. (b)Virtual machine.
+2.8.1 History
+* Virtual machines first appeared as the VM Operating System for IBM mainframes in 1972.
+2.8.2 Benefits
+* Each OS runs independently of all the others, offering protection and security benefits.
+* ( Sharing of physical resources is not commonly implemented, but may be done as if the virtual machines were networked together. )
+* Virtual machines are a very useful tool for OS development, as they allow a user full access to and control over a virtual machine, without affecting other users operating the real machine.
+* As mentioned before, this approach can also be useful for product development and testing of SW that must run on multiple OSes / HW platforms.
+2.8.3 Simulation
+* An alternative to creating an entire virtual machine is to simply run an emulator, which allows a program written for one OS to run on a different OS.
+* For example, a UNIX machine may run a DOS emulator in order to run DOS programs, or vice-versa.
+* Emulators tend to run considerably slower than the native OS, and are also generally less than perfect.
+2.8.4 Para-virtualization
+* Para-virtualization is another variation on the theme, in which an environment is provided for the guest program that is similar to its native OS, without trying to completely mimic it.
+* Guest programs must also be modified to run on the para-virtual OS.
+* Solaris 10 uses a zone system, in which the low-level hardware is not virtualized, but the OS and its devices ( device drivers ) are.
+o Within a zone, processes have the view of an isolated system, in which only the processes and resources within that zone are seen to exist.
+o Figure 2.18 shows a Solaris system with the normal "global" operating space as well as two additional zones running on a small virtualization layer.
+
+Figure 16.7 - Solaris 10 with two zones.
+2.8.5 Implementation
+* Implementation may be challenging, partially due to the consequences of user versus kernel mode.
+o Each of the simultaneously running kernels needs to operate in kernel mode at some point, but the virtual machine actually runs in user mode.
+o So the kernel mode has to be simulated for each of the loaded OSes, and kernel system calls passed through the virtual machine into a true kernel mode for eventual HW access.
+* The virtual machines may run slower, due to the increased levels of code between applications and the HW, or they may run faster, due to the benefits of caching. ( And virtual devices may also be faster than real devices, such as RAM disks which are faster than physical disks. )
+2.8.6 Examples
+2.8.6.1 VMware
+* Abstracts the 80x86 hardware platform, allowing simultaneous operation of multiple Windows and Linux OSes, as shown by example in Figure 2.19:
+
+Figure 16.9 - VMWare Workstation architecture
+2.8.6.2 The Java Virtual Machine
+* Java was designed from the beginning to be platform independent, by running Java only on a Java Virtual Machine, JVM, of which different implementations have been developed for numerous different underlying HW platforms.
+* Java source code is compiled into Java byte code in .class files. Java byte code is binary instructions that will run on the JVM.
+* The JVM implements memory management and garbage collection.
+* Java byte code may be interpreted as it runs, or compiled to native system binary code using just-in-time ( JIT ) compilation. Under this scheme, the first time that a piece of Java byte code is encountered, it is compiled to the appropriate native machine binary code by the Java interpreter. This native binary code is then cached, so that the next time that piece of code is encountered it can be used directly.
+* Some hardware chips have been developed to run Java byte code directly, which is an interesting application of a real machine being developed to emulate the services of a virtual one!
+
+Figure 16.10 - The Java virtual machine
+* The .NET framework also relies on the concept of compiling code for an intermediary virtual machine, ( Common Language Runtime, CLR ), and then using JIT compilation and caching to run the programs on specific hardware, as shown in Figure 2.21:
+
+Figure 2.21
+ 
+vS
+ 
+ 
+

@@ -1,0 +1,12 @@
+Row 1::Height 2::analysis of hashing (2)
+Row 2::Height 3::an good hash function is one which distributes
+Row 3::Height 1::keys evenly amongst the slots.
+Row 4::Height 3::an ideal hash function would pick a slot,
+Row 5::Height 1::uniformly at random and has the key into it.
+Row 6::Height 3::however, this is not a hash function since we
+Row 7::Height 1::would not know which slot to look into when
+Row 8::Height 1::searching for a key
+Row 9::Height 1::for our analysis we will ise this simple uniform
+Row 10::Height 3::hash function
+Row 11::Height 1::given hash table t with m slots holding n
+Row 12::Height 3::elements, the load factor is defined as a=n/m

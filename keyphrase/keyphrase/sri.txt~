@@ -1,0 +1,161 @@
+python pos.py osn5.txt none enable
+python grams.py osn5.txt 4 none
+python audio_features/cscore.py osn5.txt none
+python audio_features/tfidf.py "none" 4 "osn5.txt"
+python audio_features/localspan.py osn5.txt 4 "none"
+python audio_features/cue.py osn5.txt "none" 4
+python audio_features/dispersion.py osn5.txt 4 "none"
+python ml_audio/write.py osn5.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn5.txt
+
+python pos.py osn4.txt none enable
+python grams.py osn4.txt 4 none
+python audio_features/cscore.py osn4.txt none
+python audio_features/tfidf.py "none" 4 "osn4.txt"
+python audio_features/localspan.py osn4.txt 4 "none"
+python audio_features/cue.py osn4.txt "none" 4
+python audio_features/dispersion.py osn4.txt 4 "none"
+python ml_audio/write.py osn4.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn4.txt
+
+python pos.py osn3.txt none enable
+python grams.py osn3.txt 4 none
+python audio_features/cscore.py osn3.txt none
+python audio_features/tfidf.py "none" 4 "osn3.txt"
+python audio_features/localspan.py osn3.txt 4 "none"
+python audio_features/cue.py osn3.txt "none" 4
+python audio_features/dispersion.py osn3.txt 4 "none"
+python ml_audio/write.py osn3.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn3.txt
+
+python pos.py osn2.txt none enable
+python grams.py osn2.txt 4 none
+python audio_features/cscore.py osn2.txt none
+python audio_features/tfidf.py "none" 4 "osn2.txt"
+python audio_features/localspan.py osn2.txt 4 "none"
+python audio_features/cue.py osn2.txt "none" 4
+python audio_features/dispersion.py osn2.txt 4 "none"
+python ml_audio/write.py osn2.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn2.txt
+
+python pos.py osn1.txt none enable
+python grams.py osn1.txt 4 none
+python audio_features/cscore.py osn1.txt none
+python audio_features/tfidf.py "none" 4 "osn1.txt"
+python audio_features/localspan.py osn1.txt 4 "none"
+python audio_features/cue.py osn1.txt "none" 4
+python audio_features/dispersion.py osn1.txt 4 "none"
+python ml_audio/write.py osn1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn1.txt
+
+python pos.py fla2.txt none enable
+python grams.py fla2.txt 4 none
+python audio_features/cscore.py fla2.txt none
+python audio_features/tfidf.py "none" 4 "fla2.txt"
+python audio_features/localspan.py fla2.txt 4 "none"
+python audio_features/cue.py fla2.txt "none" 4
+python audio_features/dispersion.py fla2.txt 4 "none"
+python ml_audio/write.py fla2.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab fla2.txt
+
+python pos.py fla1.txt none enable
+python grams.py fla1.txt 4 none
+python audio_features/cscore.py fla1.txt none
+python audio_features/tfidf.py "none" 4 "fla1.txt"
+python audio_features/localspan.py fla1.txt 4 "none"
+python audio_features/cue.py fla1.txt "none" 4
+python audio_features/dispersion.py fla1.txt 4 "none"
+python ml_audio/write.py fla1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab fla1.txt
+
+python pos.py crypt3.txt none enable
+python grams.py crypt3.txt 4 none
+python audio_features/cscore.py crypt3.txt none
+python audio_features/tfidf.py "none" 4 "crypt3.txt"
+python audio_features/localspan.py crypt3.txt 4 "none"
+python audio_features/cue.py crypt3.txt "none" 4
+python audio_features/dispersion.py crypt3.txt 4 "none"
+python ml_audio/write.py crypt3.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab crypt3.txt
+
+python pos.py crypt2.txt none enable
+python grams.py crypt2.txt 4 none
+python audio_features/cscore.py crypt2.txt none
+python audio_features/tfidf.py "none" 4 "crypt2.txt"
+python audio_features/localspan.py crypt2.txt 4 "none"
+python audio_features/cue.py crypt2.txt "none" 4
+python audio_features/dispersion.py crypt2.txt 4 "none"
+python ml_audio/write.py crypt2.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab crypt2.txt
+
+
+
+python pos.py crypt1.txt none enable
+python grams.py crypt1.txt 4 none
+python audio_features/cscore.py crypt1.txt none
+python audio_features/tfidf.py "none" 4 "crypt1.txt"
+python audio_features/localspan.py crypt1.txt 4 "none"
+python audio_features/cue.py crypt1.txt "none" 4
+python audio_features/dispersion.py crypt1.txt 4 "none"
+python ml_audio/write.py crypt1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab crypt1.txt
+
+python pos.py crypt.txt none enable
+python grams.py crypt.txt 4 none
+python audio_features/cscore.py crypt.txt none
+python audio_features/tfidf.py "none" 4 "crypt.txt"
+python audio_features/localspan.py crypt.txt 4 "none"
+python audio_features/cue.py crypt.txt "none" 4
+python audio_features/dispersion.py crypt.txt 4 "none"
+python ml_audio/write.py crypt.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab crypt.txt
+
+python pos.py arrayn3.txt none enable
+python grams.py arrayn3.txt 4 none
+python audio_features/cscore.py arrayn3.txt none
+python audio_features/tfidf.py "none" 4 "arrayn3.txt"
+python audio_features/localspan.py arrayn3.txt 4 "none"
+python audio_features/cue.py arrayn3.txt "none" 4
+python audio_features/dispersion.py arrayn3.txt 4 "none"
+python ml_audio/write.py arrayn3.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab arrayn3.txt
+
+
+
+
+
+###python audio_features/tfidf.py "none" 4 "cg4.txt"
+
+
+python pos.py biochem2.txt none enable
+
+python grams.py biochem2.txt 4 none
+
+
+python audio_features/cscore.py biochem2.txt none
+
+ python ml_audio/write.py biochem2.txt 'cscore' '_cscore.txt' none
+
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab biochem2.txt
+
+
+
+
+
+python grams.py cg3.txt 4 none
+
+
+python audio_features/cscore.py cg3.txt none
+
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab cg3.txt
+
+
+
+python pos.py cg4.txt none enable
+
+python grams.py cg4.txt 4 none
+
+
+python audio_features/cscore.py cg4.txt none
+
+python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab cg4.txt

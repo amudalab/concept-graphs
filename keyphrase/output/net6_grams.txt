@@ -1,0 +1,7140 @@
+computer networks prof
+networks prof sujoy
+prof sujoy ghosh
+sujoy ghosh department
+department of computer
+science and engineering
+kharagpur lecture-26 introduction
+introduction to routing
+start our discussion
+discussion on routing
+talked about routing
+context of atm
+atm virtual path
+set up today
+area of routing
+specially with reference
+packets are routed
+start the introduction
+introduction with routing
+set of lectures
+data from end-to-end
+source to destination
+number of intermediate
+subnets now depending
+connection-oriented or connectionless
+talking about routing
+virtually connection oriented
+connection oriented system
+unlike data link
+data link layer
+information you require
+unlike the data
+problem with routing
+hops to reach
+reach the end
+hops the area
+globally the packet
+packet will arrive
+basic routing problem
+final destination determine
+determined for individual
+internetwork these days
+network of networks
+spanning the entire
+billions of machines
+objective of routing
+reduce the problem
+machines are grouped
+reach your destination
+destination network finding
+reached the correct
+correct destination network
+network the entire
+required is structured
+table of router
+reduce the scope
+problem from servers
+servers or pcs
+pcs to networks
+millions of networks
+millions of entries
+process the packets
+packets as fast
+number of packets
+packets are increasing
+day by day
+packets very fast
+require a lot
+lot of memory
+additionally it consumes
+lot of processing
+issues in routing
+topology changes affect
+delay and stability
+topology is changing
+change the path
+affect the delay
+problem is scalability
+number of interconnected
+networks or routers
+routers or links
+nodes to networks
+number of hops
+equal in length
+equal in cost
+incorporate the quality
+path when deciding
+consists of deciding
+deciding the route
+update the knowledge
+host or lans
+connected to router
+sort of remote
+bit of choice
+tables in routers
+sitting on router
+router c link
+router d link
+router e link
+path for connection
+two levels deep
+reach the final
+destination this means
+trees are distributed
+table of size
+size n including
+including the root
+maintain this tree
+question of forwarding
+process of building
+building routing tables
+packet and sending
+router this means
+packet actually arrives
+routing or forwarding
+two are diverged
+assume that routing
+routing and forwarding
+case forwarding requires
+forwarding requires access
+access to local
+local routing table
+table sometimes forwarding
+table is structured
+manner than routing
+table is optimized
+optimized for packet
+packet look ups
+ups routing table
+optimized for routing
+table is working
+address is version
+version four addresses
+171.69.245.10 the link
+part of setting
+add your data-link
+slightly higher level
+view of processing
+protocol which makes
+makes this table
+transmission layer protocol
+common transmission layer
+transmission layer protocols
+tcp and udp
+destination ip address
+hop and send
+send the datagram
+discussing the processing
+layer is present
+two different places
+router the jobs
+drop that packet
+router the forwarding
+originates from machine
+send the packet
+high level view
+host the main
+forwarding is enabled
+enabled on router
+router and disabled
+disabled on host
+datagram is received
+forwarding is disabled
+collection of lans
+lans or point-to-point
+links or switched
+connected by routers
+link layer view
+reach the local
+router will decide
+network of ethernet
+networks the packet
+link layer point
+point of view
+switches become visible
+number we represent
+delivery service takes
+takes the view
+view of clouds
+clouds and ignores
+ignores the data
+view that means
+means the details
+networks are shown
+shown as clouds
+clouds each network
+conditions must hold
+delivered the network
+address must correspond
+unique data link
+link layer network
+equal to lan
+lan or point-to-point
+link or switched
+network the reverse
+basically four numbers
+make the problem
+problem really big
+reduction or scaling
+specific ip addresses
+addresses of specific
+first few bits
+bits or bytes
+last few bits
+global ip addressing
+prefix the network
+unique because now-a-days
+now-a-days our network
+span the entire
+true which means
+means one data
+two different network
+routers and hosts
+common network prefix
+exchange ip datagrams
+link layer protocol
+router and host
+table which tells
+tells the router
+process an outgoing
+packet the main
+port next hop
+hop and interface
+column and routing
+tables are set
+datagram gets closer
+table ip datagrams
+delivered which means
+interface called ethernet
+means any number
+deliver the datagrams
+directly which means
+set of networks
+packet which originates
+network layer protocol
+previously we discussed
+lot of data
+link layer protocols
+require some information
+exchanged between peers
+peers this information
+processed the destination
+address is parsed
+decrement ttl i.e
+i.e we decrement
+capture a good
+good and consistent
+consistent and correct
+entire global connectivity
+picture may change
+entire global picture
+inconsistent routing table
+routing table entries
+table the loop
+router the router
+locally and send
+circulating ad infinitum
+infinitum to stop
+put some kind
+kind of restriction
+hops a packet
+intermediate router forwards
+forwards a packet
+hops whichever router
+whichever router finds
+finds a packet
+drop the packet
+details of fragmentation
+link layer technologies
+technologies some token
+kinds of networks
+suppose the source
+large but inside
+packet is broken
+sort of wider
+area the fragments
+reaches the destination
+calculate the check
+error in connection
+note and transmit
+send an icmp
+stands for internet
+internet control message
+control message protocol
+protocol the routers
+packets for communicating
+sending various messages
+router or host
+datagram it performs
+performs a routing
+routing table lookup
+key to search
+search the routing
+table the result
+prefix or host
+host ip address
+address or loopback
+default route loopback
+route loopback address
+loopback address means
+meant for local
+host is sending
+sending some packet
+network operating system
+operating system part
+part for sending
+message default route
+entries are network
+route the destination
+network or host
+host route matches
+matches the router
+arbitrary distant destination
+router to find
+find its final
+lists and loopback
+interface as outgoing
+minimize the size
+longest prefix match
+i.e we search
+routing table entry
+address it means
+i.e four bytes
+address in ipv4
+long so first
+bits and check
+identified the first
+entry that matches
+host route loopback
+route loopback entry
+bit prefix match
+match the default
+route is represented
+match that means
+suppose the destination
+parts have matched
+shown in red
+send to router
+gateway is shown
+bits with entry
+find this out
+bits are matching
+prefix match algorithm
+match algorithm permits
+permits to aggregate
+prefixes with identical
+identical next hop
+entry this contributes
+reducing the size
+tables for internet
+make the entry
+table which helps
+helps in reducing
+tables get updated
+add an interface
+adds a routing
+add a default
+gateway that means
+add a gateway
+configuration of network
+routes or host
+route is forced
+updated through routing
+update the routing
+router and sends
+sends an icmp
+icmp redirect message
+host the host
+message to update
+update its routing
+router this router
+destination please send
+kinds of icmp
+icmp router solicitation
+solicitation and icmp
+icmp router advertisement
+router is switched
+sending any message
+bootstrapping a router
+broadcasts an icmp
+solicitation it sends
+icmp and advertises
+solicits icmp messages
+routers in response
+response the router
+router advertisement message
+routers periodically broadcast
+periodically broadcast icmp
+broadcast icmp router
+router discovery protocol
+graph theory problem
+single administrative domain
+edges are interconnection
+costs are related
+related to physical
+determine minimum cost
+minimum cost path
+two different ways
+solve the minimum
+cost path problem
+manner and constraint
+robustly to topology
+routing protocol requirements
+minimize routing table
+routing table space
+minimizing the routing
+important this makes
+makes the routers
+smaller or cheaper
+cheaper or faster
+minimizing or controlling
+misroute packets loops
+loops and oscillations
+avoided finally optimal
+finally optimal paths
+approaches to routing
+centralized versus distributed
+versus distributed approach
+approach in centralized
+routing one central
+central processor collects
+processor collects information
+computes the routing
+node and distributes
+number of cases
+handle the scale
+scale in distributed
+cooperate to run
+run a distributed
+protocol to create
+create mutually consistent
+mutually consistent routing
+consistent routing tables
+tables in distributed
+distribute the local
+distribute the information
+route some kind
+hop by hop
+hop in source
+source based routing
+routing the packet
+source routed packet
+reach the destination
+source the intermediate
+router will consult
+table and find
+routing the route
+route is fixed
+beginning loose source
+loose source route
+solution in loose
+sort of islands
+intermediate between strict
+strict source routing
+routing and pure
+stochastic or deterministic
+deterministic in stochastic
+routing each router
+distribute the load
+out of order
+path the probability
+probability of choosing
+end the packets
+packets may reach
+order please remember
+service the network
+layer is providing
+important to understand
+reliable which means
+interim some router
+router may drop
+drop a packet
+guaranteed another thing
+packet may reach
+two different paths
+idea for breaking
+link layer sending
+single versus multiple
+versus multiple paths
+maintains one primary
+alternate paths single
+paths single path
+single path routing
+internet to reduce
+reduce routing table
+routing table size
+table size multiple
+size multiple paths
+premium multiple paths
+networks as routes
+easily be deciphered
+state dependent versus
+dependent versus state
+versus state independent
+state independent routing
+independent routing state
+routing state independent
+independent or static
+static routing pre-computes
+pre-computes the routes
+ignoring the network
+state and state
+dependent or dynamic
+current measured network
+measured network state
+loading or health
+determine the current
+packet is proceeding
+proceeding it requires
+requires more overhead
+find better routes
+change in response
+traffic or topology
+topology in dynamic
+short distance charging
+distance charging area
+central switch sets
+exchange for trunk
+calls the central
+central switch forwards
+forwards the setup
+maintains a primary
+primary and alternate
+long distance charging
+goals of routing
+minimize average end-to-end
+average end-to-end packet
+end-to-end packet delay
+viewpoint of network
+desirable from viewpoint
+minimize average number
+give both low
+delay and high
+kind of broadcast
+shortest possible route
+copy will reach
+reach but multiple
+copies will reach
+sort of choke
+choke other parts
+count or keeping
+previously flooded packets
+avoid generating infinite
+generating infinite number
+flow based routing
+topology and load
+load for routing
+routing the traffic
+line capacity matrix
+algorithm is assumed
+network is calculated
+set of routing
+net average traffic
+link is calculated
+multi path routing
+destination several choices
+router are enumerated
+path is chosen
+routing may yield
+yield more stable
+talked about dynamic
+dynamic routing versus
+routing versus centralized
+versus centralized routing
+meaning it lacks
+lacks some fault
+tolerance if routing
+algorithm like distributed
+algorithm with distributed
+distributed global data
+couple of lectures
+lectures computer networks
+networks prof sujay
+prof sujay ghosh
+sujay ghosh department
+engineering iit kharagpur
+iit kharagpur lecture
+discussion on terrestrial
+terrestrial wireless networks
+kind of wireless
+two very important
+rapidly expanding field
+field in networking
+terrestrial wireless networking
+discuss cellular networks
+networks the cell
+talk about wireless
+bit of wireless
+discuss about cellular
+learn some jargons
+network is organized
+covers a geographical
+base station analogous
+wireless lan technology
+transmitters and receivers
+fibre optic line
+circluar geographical location
+mobiles will communicate
+network so mobile
+mobile users attach
+attach to network
+physical and link
+protocol between mobile
+mobile and base
+stations are connected
+mobile switching center
+msc connects cells
+cells to wide
+wide area network
+network the mobile
+,mobile switching center
+center as msc
+mobile station msc
+station msc connects
+network and manages
+manages call setup
+connect to public
+public telephone network
+network can call
+stations or mss
+techniques for sharing
+question of multiple
+talked about earlier
+frequency division multiple
+division multiple access
+access in cellular
+fdma and tdma
+tdma so divide
+divide the spectrum
+spectrum in frequency
+channels and divide
+divide each channel
+divided into number
+kind of scheme
+so-called gsm utilizes
+tdma are combined
+technology is cdma
+company called volcom
+volcom in usa
+code division multiple
+details of cdma
+systems here cdma
+devices both gsm
+gsm and cdma
+service providers provide
+providers provide cdma
+provide cdma services
+offer gsm services
+discuss cellular standards
+amps in usa
+system from analog
+system in deamps
+version 2g systems
+systems are voice
+is-136 is tdma
+combined with fdma
+north america gsm
+system for mobile
+code for cdma
+lot of demand
+demand for data
+kind of multimedia
+increasing so people
+2.5g 2.5g systems
+voice and data
+general packet radio
+packet radio services
+radio services evolved
+evolved from gsm
+enhanced data rate
+rate for global
+global evolution edge
+gsm using enhanced
+enhanced modulation data
+modulation data rates
+version called cdma
+system 3g system
+includes both voice
+standard universal mobile
+universal mobile telecommunications
+mobile telecommunications service
+layering for cells
+medium access control
+radio resource control
+resource control layer
+station will cover
+cover some geographical
+cell the point
+nowadays cell phones
+popular its rate
+rate of penetration
+faster than pcs
+means a lot
+lot of people
+people have cell
+spectrum the idea
+kind of space
+space division multiple
+set of frequency
+set of users
+users the point
+power is controlled
+two different groups
+groups of users
+idea of breaking
+region into cells
+increase the number
+number of people
+kind of antenna
+stations is omni
+omni directional antenna
+area of influence
+circles are put
+solve this problem
+types of tessellations
+squares or regular
+represent a cellular
+structure a hexagonal
+traditionally for system
+big geographical area
+number of cells
+cells are dark
+cells are marked
+ranges these frequencies
+groups of people
+fiber optic domain
+number of calls
+hexagonal cellular structure
+structure is constructed
+co-channel reuse ratio
+distance between co-channel
+size the number
+cluster n determines
+determines the amount
+amount of co-channel
+number of frequency
+number of subscribers
+station could satisfy
+phones or mobile
+people who wanted
+longer the number
+number of requests
+cells and break
+clusters of users
+divided into smaller
+decrease the transmitter
+done by cell
+splitting a single
+single small cell
+small cell midway
+two co-channel cells
+small adhoc solutions
+cells we created
+created a small
+number of users
+extending the coverage
+difficult to cover
+cell ; increasing
+increasing the capacity
+density of users
+users ; increasing
+increasing the number
+number of wireless
+number of cellular
+hierarchies one set
+personal area networking
+area networking femtocells
+femtocells are small
+tens of meters
+building as picocell
+cover a range
+range of hundreds
+hundreds of meters
+areas to support
+kind of mobile
+mobile technology macro
+technology macro cells
+cells cover areas
+small town mega
+town mega cells
+cells cover nationwide
+cover nationwide areas
+picture of satellite
+service a mega
+points etc inside
+inside a building
+microcells for covering
+kinds of technologies
+ranges of cells
+spectrum same spectrum
+spectrum can support
+support multiple users
+multiple users separated
+waves with distance
+signal gets attenuated
+band of frequencies
+develop or plan
+plan a cellular
+reusing this frequency
+give the maximum
+amount of service
+service the distance
+separating the transmitters
+power transmit power
+small the cellular
+means of employing
+employing frequency reuse
+fixed channel allocation
+allocation that means
+cell is fixed
+number of channels
+channel the total
+channels per cell
+adjacent radio frequency
+radio frequency bands
+bands are assigned
+cells as shown
+shown in analog
+analog each channel
+slots or codes
+doing either tdma
+tdma or cdma
+naturally fdma tdma
+fdma tdma combine
+combine or cdma
+cdma uses spread
+spread spectrum technology
+simple to implement
+allocation is simple
+implement if traffic
+traffic is uniform
+side by side
+density is lower
+band can borrow
+channel borrowing technique
+borrowing technique high
+technique high traffic
+high traffic cells
+traffic cells borrows
+cells borrows channel
+borrows channel frequencies
+frequencies from low
+low traffic cells
+traffic cells temporary
+cells temporary channel
+temporary channel borrowing
+borrowing and static
+static channel borrowing
+central business district
+cell can give
+give out channels
+sort of giving
+suitably complex picture
+picture of gsm
+i.e the global
+tdma and fdma
+fdma are combined
+channels actually carries
+carries a series
+series of tdma
+frames is divided
+two different frequency
+slots for simultaneous
+two different channels
+problem in giving
+station is communicating
+8-slot tdm system
+remember these figures
+signal from source
+gsm = fdma
+gsm framing structure
+group for base
+base to mobile
+mobile to base
+pairs of simplex
+kilo hertz wide
+wide and supports
+station is assigned
+avoid frequency conflicts
+conflicts with neighboring
+transmitting and receiving
+transmit and receive
+frame is transmitted
+allowed to send
+send one data
+sharing the channel
+stations the gross
+gross cc i.e
+manage the system
+talking about voice
+voice channel requiring
+doing a plain
+plain vanilla pcm
+pcm that means
+encoded by sampling
+kbps the point
+advanced coding schemes
+discuss those coding
+good quality voice
+quality voice transmission
+doing your coding
+system the broadcast
+broadcast control channel
+stream of output
+status all mobile
+mobile stations monitor
+monitor their signal
+systems like cdma
+dedicated control channel
+maintains a database
+database of mobile
+needed to maintain
+maintain this database
+stations are moving
+moving they move
+schemes is collected
+important for locating
+locating a person
+common control channel
+logical sub channels
+paging sub channel
+announce incoming calls
+continuously to watch
+answer the point
+hears the page
+random access channel
+users to request
+request a slot
+two requests collide
+part of call
+put a request
+steps of call
+access grant channel
+gsm the channel
+multiplexing is fdm
+tdm slots uplink
+channel bandwidth is200
+bandwidth is200 khz
+channels are broadcast
+direct sequence spread
+sequence spread spectrum
+two frequency bands
+shared that means
+number of handsets
+handsets or number
+number of mobile
+net capacity improvement
+cdma or gsm
+phone while moving
+eventually will pass
+station and move
+previously all communication
+types of handoff
+handoff and soft
+managed in order
+order to manage
+manage the handoff
+detect that handoff
+requirement has arisen
+station has moved
+execute the handoff
+schemes for handling
+kinds of cases
+detection of handoff
+soft handoff hard
+handoff hard handoff
+handoff is break
+break before make
+means you break
+break this connection
+connection and set
+moving ms connects
+connects to base
+link with base
+difficulties in handoff
+signal strength fluctuates
+area of mobile
+mobile system design
+signal area fluctuates
+area fluctuates due
+reflection and diffraction
+results in fading
+fading and slow
+false handoff requirements
+ping pong effect
+boundary that means
+kind of ping
+number of unnecessary
+reduced because handoffs
+keeping both channels
+kinds of overheads
+number of base
+simple problem suppose
+two base stations
+strength from bs1
+strength from bs2
+move from bs1
+bs1 to bs2
+switches from bs1
+bs1 is varying
+signal is varying
+decide to move
+find that bs1
+stronger and bs2
+switch from bs2
+bs2 to bs1
+moving this mobile
+signals may start
+fading that means
+arrived from source
+out of phase
+mobile is moving
+largely fluctuating signal
+problem of handoff
+relative signal strength
+simplest first thing
+whichever is weaker
+whichever is stronger
+bs2 if signal
+signal from bs2
+bs2 is greater
+lot of ping
+effect and lot
+lot of unnecessary
+received signal strength
+base that means
+means we choose
+signal from bs1
+bs2 is stronger
+handoff another thing
+thing is rss
+rss plus hysteresis
+amount of hysteresis
+hysteresis the hysteresis
+hysteresis means base1
+means base1 persists
+stronger in base
+good handoff decision
+make before break
+means you make
+make a connection
+release the connection
+previous base station
+connects to bs2
+bs2 before connection
+connection to bs1
+discuss the merits
+merits and demerits
+demerits of soft
+soft handoff merits
+contact during handoff
+effects of ping
+pong are reduced
+easy to implement
+implement for cdma
+systems the demerits
+means your hardware
+utilizes extra resource
+resource during handoff
+question of mobility
+thing about mobile
+visiting some place
+non trivial problem
+location management access
+management access point
+network coverage area
+area and important
+important for effective
+delivery of incoming
+approach through location
+updates that means
+points of access
+database is updated
+makes an update
+location a database
+updated to reflect
+base and find
+approach to solve
+paging ? paging
+means that sort
+sort of broadcast
+broadcast means broadcast
+required to deliver
+deliver an incoming
+paged terminal enables
+enables the network
+network to locate
+thing about location
+management is location
+location information dissemination
+information dissemination procedures
+procedures to store
+store and distribute
+distribute the location
+location information related
+static location update
+update that means
+initiation of location
+update is decided
+network and location
+location area based
+area based location
+based location updates
+performs location update
+update after crossing
+crossing certain number
+cells or timer
+consume an enormous
+amount of resources
+cell that mobile
+kind of optimization
+area is collection
+collection of cells
+dynamic location update
+user and call
+pattern for location
+current state information
+number of las
+user profile based
+maintains a list
+list of las
+gathering this information
+information and keeping
+keeping this information
+based location update
+bunch of cells
+cells together form
+form a location
+cells this location
+assign a location
+location area identifier
+group of cells
+la2 bs broadcasts
+periodically la identifier
+required to listen
+identifier and make
+make an update
+effect this fellow
+fellow is moving
+eliminate this completely
+update in gsm
+gsm la identity
+takes the location
+location based approach
+based approach identity
+updates la consists
+controlled by bsc
+.circumstances upon power
+previous la identity
+crosses la boundary
+update to ensure
+sort of judgment
+two are simple
+update is current
+responds immediately advantage
+advantage is minimum
+response and disadvantage
+cells a timer
+closest cells approach
+approach first page
+page the cell
+page subsequent rings
+rings of cells
+reduce the overhead
+overhead and give
+give some data
+providers also move
+gsm family it,the
+family it,the general
+it,the general packet
+packet radio system
+radio system gprs
+gprs and cdma
+cdma to cdma2000
+overlay ? network
+network that means
+frequency bands network
+network on top
+existing gsm digital
+gsm digital circuit
+digital circuit switched
+circuit switched voice
+switched voice based
+voice based network
+tcp ip based
+based the protocol
+network using packet
+connected ? type
+type of thing
+initial ? log-on
+flat rate user
+rate user perceived
+user perceived performance
+gprs users defer
+defer to voice
+data may delay
+50kbps network resources
+bandwidth on demand
+utilization of air
+high speed frequency
+band and downlink
+services which provide
+provide high speed
+high speed packet
+speed packet data
+packet data access
+modified gsm hardware
+phones or cards
+kind of set
+set that handle
+allocated to transmit
+transmit a block
+block of data
+packet is large
+channel is shared
+number of mobiles
+base station stream
+stream the downlink
+bsc and random
+send the request
+request for data
+packet random access
+random access message
+allocates an unused
+mobile and sends
+packet access grant
+access grant message
+increasing voice capacity
+peak packet data
+packet data rate
+connectivity to ansi
+ansi -41and gsm-map
+bother various bands
+bands and bandwidths
+bandwidths of operation
+operation in support
+rtt is backward
+compatible with cdma1
+previous original cdma
+original cdma system
+cdma system improved
+system improved service
+improved service multiplexing
+multiplexing and qos
+management and variable
+variable transmission rates
+sort of move
+interim 2.5g system
+systems i cdma
+big network architecture
+architecture this converged
+converged network architecture
+discuss wireless networking
+voice and voice
+added to data
+talk about data
+data plus wires
+prof s ghosh
+dept of computer
+kharagpur lecture number
+internet protocol version
+heart of data
+kinds of communication
+communication like voice
+segments so today
+protocol is designed
+designed to connect
+managed by multiple
+organizations or people
+people the internet
+connection of network
+organizations of people
+central network layer
+connected via sequence
+sequence of arbitrary
+arbitrary intermediaries arbitrary
+intermediaries arbitrary intermediaries
+reaches its destination
+beginning we discussed
+discussed about layered
+simplify the application
+tcp connection tcp
+transport layer tcp
+layer tcp communicates
+communicate with ethernet
+protocols like ethernet
+ethernet and token
+ring that communicates
+protocol at network
+level that insures
+destination while allowing
+allowing for flexibility
+design like ftp
+application layer protocols
+two common protocols
+protocols namely tcp
+udp both integrate
+single network layer
+naturally different networks
+running different data
+discussed this earlier
+data being fed
+header this header
+protocol between peers
+layers the application
+host will communicate
+application header information
+tcp the transport
+transport layer protocol
+header gets added
+protocol is concerned
+concerned this entire
+tcp the application
+header and user
+inside the tcp
+similarly ip considers
+considers this entire
+adds a header
+overhead we incur
+thing is payload
+headers and trailers
+finally the user
+data will reach
+reach the application
+address resolution protocol
+address then finding
+finding the mac
+mac address finding
+address ip addresses
+multicasting and icmp
+icmp internet control
+internet control protocol
+control and multicasting
+summarize this ipv4
+effort connectionless protocol
+protocol that means
+pattern of communication
+communication the router
+buffer any longer
+force to drop
+drop some packets
+connectionless you remember
+remember about connection
+oriented and connectionless
+connection oriented protocol
+connectionless that means
+physical or virtual
+sending a stream
+stream of packets
+reach their destination
+datagram or packet
+packet oriented protocol
+setup or connection
+connection establishment packets
+routed using destination
+routing that means
+means the destination
+optionally specify source
+routing in internet
+remember our bgp
+bgp uses source
+general for internet
+structure each packet
+packet is routed
+independently that means
+bytes which identifies
+identifies the network
+first part identifies
+identifies the host
+network the form
+point to understand
+out in decimal
+decimal binary equivalent
+separately into bytes
+strings and put
+part which specifies
+specifies which network
+people will figure
+house or street
+important for people
+packet has reached
+types of addresses
+unicast communication unicast
+communication unicast means
+send some message
+set of hosts
+subset of hosts
+network which belong
+number is represented
+binary bit string
+valid ip address
+class a addresses
+out which class
+class a address
+byte the first
+left for network
+bits to represent
+network the host
+networks world wide
+bits which means
+bytes the first
+16,000 different class
+class b networks
+fairly big networks
+16,000 such networks
+class c network
+real small network
+million such networks
+group and class
+class a ranges
+ranges dotted quad
+valid particular address
+giving the outer
+first decimal number
+number which corresponds
+address because class
+class b address
+first the first
+range of numbers
+class of address
+number of networks
+networks and large
+number of hosts
+hosts first byte
+first byte represents
+represents the network
+last three bytes
+represent the host
+host address class
+class a network
+network addresses range
+networks and hosts
+bytes are network
+address and last
+last two bytes
+class b addresses
+16,000 such class
+networks and network
+number of network
+fewer host addresses
+special multicast addresses
+addresses the first
+bits of class
+purposes the first
+special source addresses
+addresses as part
+bootp this host
+host id part
+class c address
+0000.0.0.0 it means
+protocol you require
+last byte suppose
+suppose the last
+0.0.0.130 that means
+loop back address
+address allows applications
+host to communicate
+communicate using tcp
+means the first
+two different applications
+applications are running
+two different hosts
+two different versions
+hosts you write
+tcp ip stack
+interested to include
+include a hardware
+addresses for unicast
+broadcast and multicast
+multicast in class
+class c addresses
+talk about broadcast
+allowed to broadcast
+fraction of people
+people start broadcasting
+broadcasting some message
+swarmed with broadcast
+age of internet
+billions of people
+discussed now limited
+initialization only appears
+appears on local
+cable or collision
+domain with net
+give an address
+net directed broadcast
+directed broadcast means
+forwarded via router
+network address part
+giving the net
+host part means
+subnet directed broadcast
+talked about subnet
+means this host
+means that broadcast
+companies got class
+involved with designing
+days so people
+designed this network
+addresses these class
+institutions got class
+number but now-a-days
+millions of companies
+companies and ripped
+hundreds of thousands
+thousands of companies
+reduced to accepting
+accepting only class
+address can accommodate
+number any institution
+thousands of computers
+class b network
+address now whichever
+arp protocol works
+send a broadcast
+10,000 hosts start
+hosts start sending
+start sending broadcast
+sending broadcast messages
+broadcasts are limited
+limited to smaller
+smaller sub networks
+number of post
+network into smaller
+broadcast would enter
+enter a network
+impractical for class
+class a networks
+divide a large
+networks each address
+network subnet masks
+create many subnets
+bit string applied
+address is considered
+bit the network
+network the number
+number of bits
+mask by placing
+first two bytes
+bits will show
+show my sub
+sub network address
+network and sub
+sub network part
+out the network
+masks only tells
+first two bits
+entire network part
+address so network
+first seven bits
+bits for hosts
+rest are put
+144.97.16 and host
+end ? select
+select router based
+bits as network
+naturally for class
+network address route
+network using routing
+rip or ospf
+network the point
+pre-specified subnet mask
+mask to select
+select a subnet
+finds the subnet
+out the subnet
+subnet routing table
+table a subnet
+table is consulted
+consulted and traffic
+traffic is directed
+structure and arp
+broadcasts are contained
+thing to note
+network has grown
+follow a global
+give the address
+give internetwork address
+creates a problem
+high you run
+out of addresses
+matter of fact
+networks would grow
+earlier in assigning
+waste big addresses
+people are working
+types of solutions
+solutions to overcome
+overcome the shortage
+number of years
+years back people
+back people worked
+lecture is titled
+titled ip version
+kinds of workarounds
+big address chunk
+address and give
+classless and classless
+classless interdomain routing
+suppose some british
+universities like cambridge
+suppose the first
+people have done
+network address translation
+make an observation
+inside this class
+recognized globally assuming
+address the point
+out to communicate
+mask your private
+table and tat
+globally legal private
+legal private address
+pool of legal
+whichever is free
+address translation suppose
+address that starts
+private ip address
+box or firewall
+firewall the nating
+maintains a table
+assigns the pool
+address and send
+10.0.0.1 and send
+pool of address
+translation is done
+nating is done
+bunch of class
+assign these class
+communicate one problem
+nat box fails
+connections are lost
+lost it violates
+violates the osi
+osi layer independency
+addresses that people
+demand some applications
+insert ip addresses
+application will fail
+hard coated inside
+inside the application
+work and nat
+incompatible with secured
+secured data communication
+entire thing secured
+thing secured including
+communicating this nat
+encrypt that part
+data is laid
+out in big
+big endian order
+order that means
+means byte transmission
+byte transmission order
+network byte transition
+source ip address
+words and range
+address the data
+options are exercised
+type of service
+kind of quality
+quality in service
+service was expected
+bytes the datagram
+datagram identification field
+bit packet identification
+talk about fragmentation
+loop that means
+loop is stored
+circulating at infinitum
+hops the router
+protocol which identifies
+udp or icmp
+icmp you remember
+design which sort
+sort of concentrates
+types of networks
+networks like ethernet
+protocols like tcp
+tcp in transport
+igmp etc header
+header and source
+bits destination address
+bits and options
+starts at total
+maximum ip datagram
+kilo bytes hosts
+required to receive
+receive packets greater
+bytes that means
+datagrams the point
+network the packet
+network to handle
+done one thing
+packet the packet
+parts called fragments
+proof computer networks
+science & engineering
+engineering i.i.t kharagpur
+i.i.t kharagpur lecture
+lecture we discussed
+version of internet
+problems about ipv4
+focus and people
+people started discussing
+generation of internet
+lot of discussion
+discussion etc people
+discussion on ipv6
+talking about mobile
+limited addresses posed
+addresses posed problems
+problem using natingnetting
+machines are coming
+network these days
+deploying all kinds
+kinds of gadgets
+network and accessed
+address the pool
+inherent in addresses
+send the material
+based on networks
+chunks than hosts
+means of geographical
+geographical information inbuilt
+routing becomes easier
+table becomes smaller
+table is smaller
+smaller routing speed
+speed becomes faster
+experience had shown
+aspects of ipv4
+ipv4 were problematic
+problematic like option
+headers and fragments
+size and fragments
+simplification for ipv6
+ipv6 as mentioned
+remember that ipv4
+devices and computers
+individual address space
+number of addresses
+addresses to spare
+problem of limited
+limited address space
+assign a fixed
+headers in ipv4
+remove the header
+options were removed
+concept of extension
+header that means
+remove hop-by-hop segmentation
+hop-by-hop segmentation procedure
+procedure that means
+removed although fragmentation
+original ipv4 header
+discussed like version
+done here header
+source and destination
+destination ip addresses
+source address assuming
+previously ipv4 address
+four lines i.e
+128-bits for source
+128-bits for destination
+assign service class
+class for real
+real time networking
+doing some real
+field called flow
+flow level flow
+level flow means
+send large number
+virtual circuit identifier
+identifier like atm
+atm the virtual
+identifier and intermediate
+identifier and switch
+treating the packets
+class of service
+kinds of quality
+quality of service
+require bandwidth reservation
+include the payload
+higher layer headers
+headers like tcp
+tcp or udp
+field called hop
+earlier in ipv4
+renamed as hop
+lessons we learnt
+learnt in ipv4
+unit of transmission
+unit of control
+fragments created en-route
+en-route in ipv6
+ipv6 if message
+message is greater
+greater than mtu
+mtu the maximum
+maximum transferable unit
+kind of control
+router to host
+mtu and path
+route it encountered
+encountered a link
+accommodated in ipv6
+packet and send
+back an icmp
+reduce your packet
+size of packet
+fragment a datagram
+made into bigger
+layer is concerned
+removed the options
+situation that ipv6
+tcp the payload
+header and payload
+header for ipv6
+ipv6 routing header
+header is tcp
+headers and headers
+fast extension headers
+headers and protocols
+256-entry name space
+number of extensions
+headers should occur
+header the main
+header we talked
+header called hop-by-hop
+destination options header
+transport layer header
+two routing headers
+header is peeled
+route the packet
+routing header authentication
+header authentication header
+header etc remains
+remains you peel
+out one header
+space is unassigned
+unassigned this means
+thought it prudent
+provider based routing
+two routing based
+wise this loses
+loses the destination
+geographically the routing
+provider based addresses
+geographic based addresses
+levels of aggregation
+aggregation like top-level
+essentially a hierarchical
+hierarchical organization reflecting
+reflecting the current
+current internet architecture
+site level aggregator
+level aggregator allocated
+level or site
+local this means
+level the rest
+strictly for local
+based on eui
+ethernet mac address
+talked about unicast
+multicast any cast
+concept something similar
+similar to multicast
+send any message
+routing extension headers
+header a header
+role as source
+source routing header
+header you remember
+give the routing
+source that means
+means you determine
+determine the routing
+important for protocols
+protocols like bgp
+bgp because bgp
+dictate the route
+problem with ipv4
+out of space
+difficulty is obviated
+reaches a destination
+address is copied
+packet is forwarded
+header is removed
+header is processed
+multiple routing headers
+8-bit header length
+source routing nodes
+nodes using type
+fragment routed independently
+routed independently identification
+independently identification identifies
+identifies the original
+fragmented the offset
+fragmentation was handled
+handled in ipv4
+ipv4 the difference
+mtu that means
+fragmentation is done
+done is done
+information is carried
+header called fragment
+headers are optional
+first ipv6 header
+reaches its final
+prior routing extensions
+option the unknown
+options are discarded
+hop-by-hop options header
+destination extension header
+header is looked
+jumbo payload header
+jumbo option encodes
+encodes the true
+big packet traveling
+mark spanning trees
+trees for multicast
+multicast and real
+real time protocols
+focus security association
+talk about network
+authentication and encryption
+requires that senders
+senders and receivers
+key for encryption
+encryption and decryption
+decryption and authentication
+authentication or encryption
+set of ancillary
+sequence number field
+length and reserved
+reserved the spi
+spi is selected
+describe the security
+encrypted security payload
+security payload headers
+last unencrypted header
+data and authentication
+header esp header
+header also includes
+authentication to prevent
+tampering with encrypted
+talk in details
+details about security
+conclude this discussion
+discussion about ipv6
+scheme where people
+funny thing happened
+vendors like routers
+modified their design
+design in order
+order handle ipv6
+switch from ipv4
+ipv4 to ipv6
+people are doing
+kind of networking
+devices like refrigerator
+house is networked
+require a huge
+addresses then people
+make the move
+sort of waiting
+people to make
+topic of mobile
+mobile ip means
+network attachable devices
+laptop computers people
+people are carrying
+kinds of devices
+devices including hand
+including hand held
+hand held devices
+devices are connected
+connection is made
+made that connection
+case of mobile
+mobile the wireless
+connect a wire
+problem of mobile
+network attached device
+attached device moves
+internet are identified
+routing is performed
+location or attachment
+node must change
+point of attachment
+attachment it requires
+requires upper level
+upper level protocols
+protocols to handle
+problem this means
+sort of violates
+violates this layered
+host specific routes
+address and reach
+reach you directly
+essentially keeps track
+size the router
+routers keep track
+change their entry
+problem so handling
+billions of hosts
+out of question
+question the solution
+level of indirection
+mobile ip design
+nodes after changing
+changing its link
+link layer attachment
+layer attachment changing
+attachment is changing
+changing the attachment
+network or sub
+problem a mobile
+requirement it means
+sophisticated and special
+hand held device
+communicate with millions
+arrangement for communicating
+communicating with mobile
+sort of security
+concerned that mobile
+authentication to offer
+security against redirectment
+attacks the point
+firewall or router
+fellow has moved
+people may fake
+happen and security
+issue the number
+number of administrative
+small to save
+bandwidth and power
+overhead for doing
+impose no additional
+host or router
+node may change
+change its location
+location without changing
+continue to communicate
+constant ip address
+required in order
+order to support
+mobile ip home
+mobile nodes home
+nodes home network
+network that tunnels
+done the point
+home network router
+communication is supposed
+network the router
+router will accept
+accept that communication
+communication on behalf
+router to send
+send that communication
+require a home
+require a foreign
+agent a router
+mobile nodes visited
+nodes visited network
+visited network means
+means the network
+connected provides routing
+node is assigned
+assigned a care
+care of address
+network this address
+node this address
+foreign agents address
+finds a foreign
+communication this foreign
+agent will give
+give that care
+suppose some source
+original ip address
+network will send
+agent the home
+tunnels the communication
+agent will deliver
+deliver the message
+send this reply
+advertisement that means
+means the mobile
+agents the so-called
+so-called foreign agents
+agents and home
+agents should advertise
+advertise their services
+services that means
+agent or home
+solicit for mobility
+register its care
+agent to give
+home agent tunnels
+agent for delivery
+address the delivery
+mechanism must handle
+handle all packets
+packets including broadcast
+multicast a tunnel
+advertisement and solicitation
+router discovery icmp
+discovery icmp protocol
+protocol was adapted
+adapted for advertisement
+change was required
+details of icmp
+broadcast or multicast
+address for giving
+advertisement mobile nodes
+nodes also send
+send out solicitation
+out solicitation messages
+router to broadcast
+multicast their advertisement
+request forwarding services
+services when visiting
+visiting a foreign
+network this allocates
+allocates a local
+local foreign node
+foreign node address
+address that means
+means a care
+address is required
+required inform home
+inform home agent
+address this creates
+creates a binding
+original home address
+small but important
+bindings have lifetimes
+important because mobile
+mobile agent continues
+renew this binding
+methods of tunneling
+discuss this ip-in-ip
+encapsulation and minimal
+diagram the destination
+destination was marked
+header and datagram
+thing is considered
+destination the tunnel
+packet the original
+thing is encapsulated
+reach the foreign
+send this part
+agent the mobile
+node will receive
+require any kind
+kind of change
+software which handles
+outer ip header
+destination address identify
+identify the tunnel
+endpoints the source
+agent the outer
+address and destination
+identify the original
+sender and recipient
+thing is put
+headers for authentication
+header in order
+order to handle
+concerns some outer
+fields are copied
+recomputed like checksum
+minimal encapsulation minimal
+encapsulation minimal encapsulation
+minimal encapsulation means
+entire ip header
+retain the minimal
+construct an outer
+header the tunnel
+make some deconstruction
+deconstruction and reconstruction
+places the size
+copy inner header
+header modify protocol
+modify protocol field
+minimal encapsulation protocol
+address is replaced
+originator of message
+replace source address
+address with address
+address of encapsulator
+encapsulator then increment
+increment total length
+re-compute the checksum
+ways of handling
+protocol to exchange
+avoid this triangular
+problems with triangular
+exceed the hop
+networks are growing
+increase the hop
+reached other options
+handoffs in cellular
+case of cellular
+signal strength drops
+station automatically picks
+kind of registration
+communication remains direct
+integrated system running
+mobility with minimal
+layer the tcp
+udp and client
+client server goodgood
+server goodgood day
+discussion on transport
+transport layer protocols
+two dominant protocols
+dominant protocols udp
+udp and tcp
+lecture and tcp
+stands for user
+user datagram protocol
+creates a process-to-process
+process-to-process communication path
+connect a distant
+machine to machine
+process to process
+process is running
+job this process
+process communication path
+provide control mechanisms
+level this control
+case of udp
+unreliable transport protocol
+extra for reliability
+lot of errors
+adds process-to-process communications
+performs very limited
+limited error checking
+protocol having minimal
+point it forms
+forms the payload
+checksum is computed
+amount of error
+checking and error
+error detection done
+done by udp
+packet is lost
+source port number
+destination port number
+flow and error
+encapsulation and decapsulation
+forming of packets
+multiplexing and demultiplexing
+service that means
+means each user
+datagram it means
+source application process
+application process destined
+destination application process
+layers this means
+means a number
+number of things
+two different directions
+completely a datagram
+datagram oriented service
+datagrams may travel
+earlier may reach
+application takes place
+udp is resilient
+datagrams the user
+earlier and vice
+care to identify
+completely a connectionless
+unregulated which means
+parts one part
+vendor specific applications
+well-known port numbers
+made an http
+server will send
+1024-65,000 the number
+communication this port
+source port numbers
+controlled by iana
+mentioned some important
+file transfer protocol
+protocol uses port
+connection uses port
+hundreds of applications
+mention them telnet
+simple mail transfer
+mail transfer protocol
+tftp trivial file
+trivial file transfer
+send a short
+hyper text transfer
+text transfer protocol
+well-known port number
+post office protocol
+local mail server
+post service protocol
+protocol this type
+type of server
+mention the term
+box a hardware
+context by server
+giving the service
+kind of process
+sort of put
+process the service
+back and send
+send the result
+requests are waiting
+means the service
+service is taking
+taking one request
+non-concurrent server non-concurrent
+kind of service
+send a message
+case this non-concurrent
+service the client
+client server communication
+request may block
+case the concurrent
+preferred in concurrent
+spawns or forks
+lecture is stated
+i.i.t kharagpur lecturer
+client server good
+server good day
+discussion about transport
+protocols the udp
+creates a process
+talking about process
+side and application
+level the control
+connectionless unreliable transport
+light weight protocol
+functions of udp
+machine a number
+number of application
+programs or processes
+running this udp
+udp protocol connects
+connects one process
+layer although udp
+protocol the job
+make some virtual
+virtual communication channel
+responsible for host
+host to host
+udp is responsible
+responsible for delivery
+kind of multiplexing
+multiplexing and de-multiplexing
+server a number
+number of processes
+processes a good
+out a packet
+receiving a packet
+packet the udp
+task between tcp
+udp our computer
+packet switched network
+applications are concerned
+bother about packets
+produce a chunk
+chunk of data
+produce a stream
+stream of data
+work with packets
+layer and chop
+simpler than tcp
+tcp has higher
+reliable than udp
+care of reliability
+entire udp datagram
+datagram the udp
+address is handled
+layer that means
+talking about osi
+osi protocol stack
+stack and presentation
+layer the transport
+layer does communicate
+communicate the source
+transport layer passes
+protocol or tcp
+16-bit udp length
+machine these headers
+meant for communication
+communication between peers
+peers that means
+means the transport
+machine will communicate
+header just takes
+takes that information
+real udp header
+16-bit source port
+16-bit destination port
+port number remember
+optional 16-bit udp
+16-bit udp checksum
+optional and data
+header and data
+destination port numbers
+length and checksum
+detail the source
+source host recall
+recall the multiplexing
+de-multiplexing we discussed
+protocol namely udp
+transfer protocol tcp
+packet or udp
+processes using udp
+number the udp
+decides the process
+udp for multiplexing
+numbers and port
+number is obtained
+defines the total
+header plus data
+data o note
+size of data
+65,507 after subtracting
+bytes for udp
+entire user datagram
+includes three sections
+pseudoheader udp header
+data * part
+packet * ensures
+header is corrupted
+corrupted the user
+header gets corrupted
+host the pseudoheader
+decapsulation and forming
+sends one udp
+application process meant
+datagram oriented connectionless
+oriented connectionless service
+order which means
+means the datagram
+arrives much earlier
+datagram can travel
+path only processes
+processes sending short
+sending short messages
+udp usually udp
+send one packet
+send a stream
+packets or stream
+stream of bytes
+control is concerned
+layer the udp
+receiver may overflow
+overflow with incoming
+suppose the receiver
+number of udp
+stop or slow
+udp does encapsulation
+encapsulation and de-capsulation
+form the packets
+streams of data
+layer the data
+data is chopped
+chopped into pieces
+header is added
+udp protocol encapsulates
+encapsulates and decapsulates
+header frame header
+queue or incoming
+incoming and outgoing
+outgoing queue depending
+communication is taking
+place a port
+queue of data
+data being communicated
+udp removes message
+adds the udp
+incoming queue exists
+exists the first
+first thing udp
+sends the user
+queue the process
+process will consume
+queue and udp
+out the message
+port then udp
+discards the user
+datagram and asks
+icmp to send
+send a port
+port unreachable message
+message this means
+port is unreachable
+unreachable in order
+order to generate
+generate this icmp
+improvable port number
+reached the destination
+services of udp
+multiplexes and demultiplexes
+demultiplexes to handle
+suitable for processes
+processes that require
+require simple request-response
+simple request-response communication
+request-response communication suppose
+message as response
+kind of network
+communicating only inside
+inside the lan
+incur any extra
+cost for providing
+simple message coming
+case a simple
+simple udp protocol
+processes which include
+include internal flow
+error control mechanisms
+mechanisms that means
+handling some flow
+protocol like udp
+efficient because reliability
+case where udp
+suitable for multicasting
+multicasting and broadcasting
+simple network management
+network management protocol
+network for managing
+central network management
+network management software
+probe different network
+collect all kinds
+kinds of statistics
+simple message response
+message response kind
+kind of system
+system it asks
+asks for queries
+network by sending
+sending a message
+route updating protocols
+rip for updating
+updating the routes
+routes the routers
+examples and user
+discuss about port
+talk about client
+client server port
+server port numbers
+host and remote
+host are defined
+identifier called port
+number is required
+required to identify
+identifying the host
+identify the process
+numbers are integers
+server process requires
+client process defines
+defines a port
+port number chosen
+randomly by udp
+ephemeral port number
+ways you write
+client server paradigm
+giving different services
+web server giving
+giving you web
+services or mail
+sets of port
+selects the host
+port number selects
+selects the process
+give the destination
+selects that process
+port numbers work
+work as source
+ports ensure packets
+ensure packets reach
+reach appropriate service
+destination port field
+port field determines
+determines which service
+service the source
+source is requesting
+developers have agreed
+surfing the net
+url or network
+site is hosted
+make a request
+show the opening
+mace of routers
+running some routing
+protocol like rip
+running etc suppose
+request that means
+reach the web
+ten or fifty
+fifty other processes
+applications like ftp
+protocols the port
+numbers are fixed
+make an ftp
+destination machine port
+machine port number
+ports are assigned
+ports randomly selected
+iana which handles
+handles these port
+numbers so port
+reserved for public
+assigned to companies
+companies for marketable
+examples of well-known
+description of client
+client server programming
+socket address socket
+address socket address
+defines each client
+client and server
+udp is described
+described in rfc
+iana port numbers
+network based application
+application is listener
+listener o waits
+waits for incoming
+message o performs
+service o returns
+client application establishes
+application establishes connection
+sends the message
+client would initiate
+initiate the request
+request it initiates
+initiates the request
+make the request
+server will accede
+give the service
+return the result
+back to listening
+mode that means
+clients and servers
+servers exchange messages
+transport protocols e.g
+protocols e.g tcp
+stack and interact
+protocols specify general
+socket api api
+api api stands
+stands for application
+application program interface
+unix from university
+university of california
+california at berkeley
+berkeley as part
+sockets and socket
+vendor supplied library
+library of procedures
+functions it promotes
+promotes independent source
+independent source code
+sockets the vendors
+vendors also provide
+provide socket libraries
+bells and whistles
+socket software interface
+interface is designed
+designed to communicate
+develop an application
+write your application
+api for sockets
+data structure inside
+inside the program
+server programs communicate
+communicate via pair
+pair of sockets
+significant socket domain
+socket domain families
+internet domain sockets
+domain sockets implemented
+addresses and port
+unix domain sockets
+implemented via filenames
+novell ipx apple
+ipx apple talk
+vendor specific socket
+specific socket domains
+types of sockets
+tcp protocol stream
+protocol stream socket
+connection oriented service
+socket with udp
+socket is tcp
+protocol the type
+type of socket
+determines the type
+type of protocol
+testing anything internally
+creating a socket
+accessing the functions
+specifically that socket
+give this socket
+mention its domain
+families like pf_inet
+families we talked
+defines the communication
+communication protocol semantics
+sock_stream that means
+means connection oriented
+connection oriented stream
+stream like tcp
+connectionless unreliable udp
+accept the default
+client is initiating
+initiating a request
+message has reached
+machine the server
+program always listens
+request is coming
+makes an ftp
+downloading the file
+request which means
+sending that webpage
+kind of speed
+people are accustomed
+server that well-known
+side the response
+standard port number
+two ephemeral port
+ephemeral port numbers
+numbers that means
+means the port
+two port numbers
+numbers with source
+destination respectively depending
+two different port
+side the original
+ready to service
+part is concerned
+similar tcp server
+creates the socket
+establish the client
+accept the client
+numbers are exchanged
+side it creates
+setup a connection
+servers are similar
+servers create sockets
+sockets using sock_dgram
+require any specific
+require a special
+special ephemeral port
+port for prolonged
+message and ending
+ending the service
+connectionless communications lack
+lack a sustained
+connection several methods
+server the sequence
+sequence of calls
+create a socket
+register the port
+receive or send
+send or receive
+types of servers
+servers several clients
+clients can request
+case a server
+service one client
+requests must wait
+wait this type
+services all client
+requests are handled
+simultaneously this type
+box the hardware
+server is non-concurrent
+server process takes
+takes one request
+sock_dgram that means
+case concurrent server
+execute a fork
+piece of code
+port another request
+spawn another process
+child server processes
+numbers to communicate
+program can run
+sequentiality is imposed
+processors are scheduled
+give some milliseconds
+requests are serviced
+non-concurrent server sequence
+loop will service
+service each request
+fork it creates
+creates a child
+discuss the tcp
+today is tcp
+important transport protocol
+complex than udp
+transport layer responsibilities
+remember the transport
+packets from byte
+byte stream received
+order to multiplex
+multiplex and demultiplex
+numbers to create
+sliding window protocol
+protocol to achieve
+achieve flow control
+time-out and retransmission
+retransmission to achieve
+achieve error control
+seeks to provide
+provide a reliable
+kind of congestion
+congestion control mechanism
+thing of making
+connection between processors
+two distant nodes
+nodes possible full
+full duplex communication
+side is sending
+side the acknowledgement
+acknowledgement is coming
+initiate the termination
+connection is terminated
+data can continue
+actions are required
+required to close
+close the connection
+assume a bi-directional
+host a sends
+sends a segment
+segment announcing connection
+announcing connection termination
+termination which means
+means it sends
+sends the segment
+segment contains fin
+fin you remember
+tcp segment header
+host b sends
+acknowledging the request
+connection is closed
+finished sending data
+data it sends
+segment indicating connection
+indicating connection closure
+host a acknowledges
+acknowledges the request
+sort of allowing
+allowing the termination
+termination of connection
+things to send
+terminate the connection
+computer networks
+networks prof
+prof sujoy
+sujoy ghosh
+ghosh department
+computer science
+engineering iit
+virtual path
+major area
+routing protocols
+network layer
+carry data
+intermediate subnets
+connectionless services
+virtually connection
+connection oriented
+oriented system
+unlike data
+data link
+link layer
+immediately adjacent
+major problem
+multiple networks
+remote system
+end point
+machines connected
+network boxes
+arrive nearer
+basic routing
+routing problem
+subnet node
+final destination
+destination determine
+outgoing link
+datagram network
+individual packets
+setup packet
+entire internetwork
+giant network
+big network
+networks spanning
+entire globe
+sub networks
+huge problem
+systematic manner
+hop router
+remote router
+remote network
+destination network
+network finding
+correct destination
+entire information
+routing table
+remote location
+local hop
+naive fashion
+network traffic
+increasing day
+large table
+consumes lot
+processing power
+keeping millions
+feasible option
+affect convergence
+stability topology
+packet takes
+large number
+interconnected networks
+large problem
+larger probability
+minimum number
+minimum delay
+maximum capacity
+routing consists
+entire network
+network topology
+lans connected
+local network
+taking link
+routing tables
+preferred path
+levels deep
+local link
+ultimate destination
+implicit tree
+movable link
+implicit trees
+routing protocol
+forwarding routing
+building routing
+router forwarding
+destination address
+hop interface
+correct interface
+distinct parts
+forwarding happen
+case forwarding
+forwarding requires
+requires access
+local routing
+ups routing
+net number
+link cost
+forwarding table
+local interface
+mac address
+data-link headers
+physical layer
+higher level
+abstract view
+central thing
+static routing
+manually configured
+upper layer
+transmission layer
+layer protocol
+common transmission
+layer protocols
+regular host
+packet originates
+high level
+level view
+datagram processing
+main difference
+local system
+point-to-point links
+switched networks
+layer view
+host places
+local ethernet
+local router
+ethernet switches
+packet proceeds
+layer point
+main concern
+view att
+logical entity
+network number
+delivery service
+service takes
+actual switches
+connecting networks
+successfully delivered
+network prefix
+unique data
+layer network
+point-to-point link
+switched network
+first step
+remote routers
+specific machines
+leading part
+addressing scheme
+telephone numbering
+prefix part
+exact prefix
+network addresses
+network prefixes
+common network
+outgoing packet
+main columns
+destination addresses
+data gram
+output port
+interface columns
+network altogether
+distinctly changed
+datagrams directly
+point-to-point connection
+serial link
+global view
+header validation
+decrement ttl
+ttl i.e
+distributed fashion
+correct picture
+entire global
+global connectivity
+global picture
+correct fashion
+inconsistent routing
+table entries
+packet starts
+correct path
+vicious ring
+intermediate router
+router forwards
+router finds
+mistaken entries
+perform fragmentation
+administrative controls
+layer technologies
+token ring
+large packet
+big packet
+small fragments
+wider area
+check sum
+icmp packet
+icmp stands
+internet control
+control message
+message protocol
+icmp packets
+table lookup
+network interface
+loopback address
+default route
+route loopback
+address means
+local consumption
+network operating
+operating system
+system part
+fewer entries
+bigger router
+network address
+network routes
+host route
+interface address
+separate route
+route matches
+default gateway
+arbitrary distant
+distant destination
+smaller router
+turn send
+hop lists
+loopback interface
+outgoing interface
+longest prefix
+prefix match
+table entry
+longest match
+means search
+ipv4 address
+bit long
+first entry
+loopback entry
+bit prefix
+default router
+binary form
+match algorithm
+algorithm permits
+aggregate prefixes
+hop address
+single entry
+internet routers
+manual configuration
+manual updating
+static configuration
+host routes
+icmp messages
+router detects
+correct router
+icmp redirect
+redirect message
+icmp message
+router sees
+icmp router
+router solicitation
+router advertisement
+router broadcasts
+solicits icmp
+neighboring routers
+router sends
+advertisement message
+broadcast icmp
+router discovery
+discovery protocol
+doing things
+graph theory
+theory problem
+single administrative
+administrative domain
+interconnection links
+link costs
+physical distance
+minimum cost
+cost path
+path problem
+distributed manner
+centralized manner
+protocol requirements
+minimize routing
+table space
+networks working
+controlling messages
+important routers
+misroute packets
+packets loops
+optimal paths
+routing requirements
+centralized versus
+versus distributed
+distributed approach
+centralized routing
+central processor
+processor collects
+collects information
+small number
+entire internet
+routers cooperate
+distributed protocol
+consistent routing
+local information
+centralized algorithm
+source based
+versus hop
+packet header
+entire route
+source routed
+routed packet
+intermediate routers
+hop routing
+source routing
+beginning loose
+loose source
+source route
+intermediate solution
+entire path
+strict source
+pure hop
+stochastic routing
+router maintains
+randomly chosen
+hand packets
+source travels
+first packet
+explicit guarantee
+end application
+first place
+physical sending
+layer sending
+single versus
+versus multiple
+multiple paths
+alternate paths
+single path
+path routing
+reduce routing
+table size
+size multiple
+premium multiple
+telephone networks
+telephone numbers
+state dependent
+dependent versus
+versus state
+state independent
+independent routing
+routing state
+routing pre-computes
+routes ignoring
+network state
+dynamic routing
+measured network
+current route
+state entry
+telephone exchange
+short distance
+distance charging
+charging area
+central switch
+switch sets
+destination exchange
+trunk calls
+switch forwards
+setup request
+trunk exchange
+alternate path
+long distance
+routing algorithm
+average end-to-end
+end-to-end packet
+packet delay
+network user
+maximize throughput
+network operator
+average number
+low delay
+high throughput
+routing route
+synchronous manner
+multiple copies
+special cases
+good thing
+incoming packet
+outgoing line
+hop count
+keeping track
+flooded packets
+avoid generating
+generating infinite
+infinite number
+packets flooding
+shortest route
+flow based
+static algorithm
+traffic matrix
+line capacity
+capacity matrix
+routing entries
+net average
+average traffic
+traffic optimization
+multi path
+actual path
+stable traffic
+alternative routes
+similarly determined
+routing versus
+versus centralized
+disadvantages meaning
+fault tolerance
+routing computer
+distributed routing
+distributed algorithm
+distributed global
+global data
+lectures computer
+prof sujay
+sujay ghosh
+iit kharagpur
+kharagpur lecture
+cellular networks
+good day
+terrestrial wireless
+wireless networks
+wireless communication
+microwave repeater
+expanding field
+wireless networking
+first lecture
+cell phone
+ubiquitous nowadays
+wireless lans
+wireless mans
+cellular network
+geographical region
+base station
+access point
+wireless lan
+lan technology
+wireless line
+optic line
+geographical location
+mobile users
+users attach
+air interface
+base stations
+mobile switching
+switching center
+msc connects
+connects cells
+wide area
+area network
+,mobile switching
+mobile station
+station msc
+manages call
+call setup
+service provider
+public telephone
+telephone network
+mobile stations
+first hop
+radio spectrum
+multiple access
+frequency division
+division multiple
+cellular technology
+combine fdma
+frequency channels
+so-called gsm
+gsm utilizes
+code division
+cdma systems
+transporting data
+mobile devices
+service providers
+providers provide
+provide cdma
+cdma services
+offer gsm
+gsm services
+cellular standards
+stand today
+cellular system
+analog system
+digital system
+gsm system
+cdma version
+voice channels
+north america
+america gsm
+global system
+mobile communications
+widely deployed
+generation systems
+2.5g systems
+multimedia services
+data services
+data channels
+general packet
+packet radio
+radio services
+services evolved
+multiple channels
+enhanced data
+data rate
+global evolution
+evolution edge
+enhanced modulation
+modulation data
+data rates
+cdma system
+system includes
+standard universal
+universal mobile
+mobile telecommunications
+telecommunications service
+popular remains
+cell phones
+protocol layering
+physical channels
+medium access
+access control
+logical channels
+transport channels
+radio resource
+resource control
+control layer
+cellular systems
+geographical area
+backbone network
+basic idea
+nowadays cell
+original telephones
+cellular phones
+people talking
+frequency spectrum
+space division
+frequency band
+basic concept
+arbitrary shape
+directional antenna
+equilateral triangles
+regular hexagons
+regular hexagon
+cellular structure
+hexagonal cell
+closest approximation
+system design
+big geographical
+frequency ranges
+optic domain
+simultaneous calls
+frequency reuse
+frequency bands
+hexagonal cellular
+co-channel reuse
+reuse ratio
+co-channel cells
+cell radius
+cluster size
+co-channel interference
+area increases
+channels covered
+small town
+satisfy people
+mobile phones
+smaller cells
+transmitter power
+cell splitting
+single small
+small cell
+cell midway
+small adhoc
+adhoc solutions
+hoc solutions
+cellular hierarchy
+large cell
+high density
+wireless devices
+cellular hierarchies
+femto cells
+smallest unit
+physical range
+personal area
+area networking
+left pocket
+right pocket
+networking femtocells
+small cells
+small building
+micro cells
+urban areas
+support pcs
+technologies pcs
+mobile technology
+technology macro
+macro cells
+cover areas
+metropolitan area
+town mega
+mega cells
+nationwide areas
+mega cell
+macro cell
+pico cells
+access points
+covering communication
+scarcest resources
+employ architectures
+support multiple
+multiple users
+users separated
+signal strength
+license agreement
+cellular infrastructure
+maximum amount
+distance separating
+sufficiently large
+power transmit
+transmit power
+cellular concept
+intelligent means
+employing frequency
+fixed channel
+channel allocation
+total number
+bandwidth needed
+adjacent radio
+radio frequency
+channel corresponds
+channel carries
+naturally fdma
+fdma tdma
+tdma combine
+spread spectrum
+spectrum technology
+equal bandwidth
+user density
+adjacent cell
+channel borrowing
+borrowing technique
+high traffic
+traffic cells
+cells borrows
+borrows channel
+channel frequencies
+low traffic
+cells temporary
+temporary channel
+static channel
+permanent feature
+central business
+business district
+borrow channels
+fall drastically
+out channels
+giving channels
+complex picture
+simplex channels
+tdma frames
+frequency channel
+simultaneous communication
+technical problem
+8-slot tdm
+tdm system
+mhz range
+general scheme
+first slot
+nth slot
+tdma system
+tdma part
+gsm framing
+framing structure
+complicated scheme
+control purpose
+kilo hertz
+hertz wide
+separate connections
+active station
+channel pair
+avoid frequency
+frequency conflicts
+neighboring cells
+gsm radios
+data frame
+gross rate
+kbps divided
+kbps gross
+control channels
+voice channel
+channel requiring
+plain vanilla
+vanilla pcm
+coding scheme
+advanced coding
+coding schemes
+good quality
+quality voice
+voice transmission
+lower bandwidth
+smart fashion
+user channels
+broadcast control
+control channel
+continuous stream
+channel status
+stations monitor
+decoding purposes
+dedicated control
+location updating
+information needed
+centrally communicated
+common control
+logical sub
+sub channels
+paging sub
+sub channel
+paging channel
+announce incoming
+incoming calls
+random access
+access channel
+requests collide
+call set-up
+first part
+access grant
+grant channel
+channel multiplexing
+tdm slots
+slots uplink
+channel bandwidth
+bandwidth is200
+is200 khz
+frequency range
+channel rate
+direct sequence
+sequence spread
+reverse channel
+wide band
+orthogonal codes
+net capacity
+capacity improvement
+mobile phone
+radio connection
+simple scheme
+hard handoff
+soft handoff
+handoff requirement
+channel assignment
+path rerouting
+extra channel
+ongoing call
+simplest thing
+guard channels
+troublesome affair
+handoff hard
+handoff detection
+strength fluctuates
+challenging area
+mobile system
+signal area
+area fluctuates
+diffraction results
+slow fading
+receiving signal
+handoff requirements
+pong effect
+unnecessary handoffs
+price paid
+channels busy
+simple model
+difficult problem
+simple problem
+problem suppose
+cell boundary
+actual picture
+solid region
+direct signal
+multipath fading
+distractive interference
+short span
+fluctuating signal
+handoff decision
+relative signal
+simplest first
+first thing
+threshold base
+choose bs2
+hysteresis means
+means base1
+base1 persists
+combinations people
+good handoff
+previous base
+bs1 breaks
+handoff merits
+loose contact
+complex process
+hardware requirement
+hardware cost
+extra resource
+mobility management
+manage mobility
+fascinating thing
+mobile connection
+non trivial
+trivial problem
+location management
+management access
+network coverage
+coverage area
+effective delivery
+incoming cells
+handoff management
+location updates
+means messages
+changing points
+fixed network
+central database
+fixed part
+location information
+data base
+last point
+paging means
+broadcast means
+means broadcast
+scheme required
+incoming message
+paged terminal
+terminal enables
+information dissemination
+dissemination procedures
+information related
+location update
+static location
+means initiation
+location area
+area based
+based location
+distance based
+performs location
+enormous amount
+large area
+dynamic location
+call pattern
+current state
+state information
+distance travelled
+las crossed
+user profile
+profile based
+moment maintains
+location areas
+office hours
+area identifier
+whichever location
+location based
+based approach
+approach identity
+cells controlled
+performs update
+predetermined period
+things simultaneously
+make sort
+paging schemes
+blanket paging
+cells paging
+responds immediately
+immediately advantage
+paging response
+current cells
+closest cells
+cells approach
+first page
+page subsequent
+subsequent rings
+maximum response
+data service
+gsm family
+family it,the
+radio system
+system gprs
+packet overlay
+packet service
+bands network
+existing gsm
+gsm digital
+digital circuit
+circuit switched
+switched voice
+voice based
+based network
+protocol based
+data packets
+mobile network
+packet switching
+instant access
+flat rate
+rate user
+user perceived
+perceived performance
+gprs users
+users defer
+voice users
+network resources
+exchanged bandwidth
+high speed
+speed frequency
+packet services
+speed packet
+packet data
+data access
+modified gsm
+gsm hardware
+handle gprs
+uplink channel
+station stream
+serving bsc
+packet random
+access message
+bsc allocates
+unused channel
+packet access
+grant message
+increasing voice
+voice capacity
+peak packet
+high connectivity
+-41and gsm-map
+cdma1 system
+previous original
+original cdma
+system improved
+improved service
+service multiplexing
+qos management
+variable transmission
+transmission rates
+data demand
+network architecture
+converged network
+discuss wireless
+lan setup
+voice added
+separate issue
+ghosh dept
+engineering i.i.t
+lecture number
+internet protocol
+protocol version
+network protocol
+entire stack
+data communication
+quick review
+connect networks
+multiple organizations
+central network
+physical connections
+arbitrary intermediaries
+intermediate networks
+communication reaches
+layered approach
+application layer
+tcp connection
+connection tcp
+transport layer
+layer tcp
+tcp communicates
+integrating protocol
+single protocol
+network level
+insures packets
+hourglass design
+common protocols
+single network
+networks running
+earlier suppose
+user data
+header information
+application header
+tcp header
+entire thing
+ethernet adds
+ethernet header
+byte trailer
+first layer
+ethernet driver
+lowest level
+shown upwards
+address resolution
+resolution protocol
+address finding
+control protocol
+multicasting functions
+major part
+ipv4 protocol
+effort connectionless
+connectionless protocol
+intermediate nodes
+proper destination
+effort suppose
+receiving packets
+packets coming
+connectionless protocols
+oriented protocol
+virtual connection
+packet oriented
+connection establishment
+establishment packets
+destination routing
+internet packets
+protocol structure
+important topic
+bit address
+part identifies
+important point
+decimal separately
+decimal equivalent
+binary string
+first byte
+decimal binary
+binary equivalent
+binary strings
+postal system
+distant town
+pin code
+network part
+host part
+unicast communication
+communication unicast
+unicast means
+single host
+broadcast communication
+multicast communication
+multicast group
+bit number
+decimal representation
+binary bit
+bit string
+place value
+addresses start
+unique prefixes
+first bit
+bits left
+networks world
+world wide
+host address
+big networks
+real small
+small network
+ranges dotted
+dotted quad
+outer limits
+first decimal
+decimal number
+first digit
+first number
+byte represents
+bytes represent
+address class
+addresses range
+equal number
+host addresses
+greater number
+fewer host
+special multicast
+multicast addresses
+experimental purposes
+special source
+source addresses
+initialization procedure
+net part
+bootp protocol
+last byte
+byte suppose
+decimal value
+host number
+back address
+require tcp
+wide world
+limited fraction
+people start
+internet millions
+small fraction
+broadcast things
+broadcast addresses
+limited broadcast
+local cable
+collision domain
+address part
+part means
+directed broadcast
+local networks
+networks part
+distant network
+loop back
+designing internet
+arpanet days
+greatly successful
+big number
+global scale
+ripped hundreds
+institutions now-a-days
+broadcast domain
+whichever machine
+arp protocol
+protocol works
+hosts start
+start sending
+sending broadcast
+broadcast messages
+broadcast traffic
+smaller parts
+smaller sub
+sub network
+post offices
+post office
+large network
+smaller networks
+network subnet
+subnet masks
+network bit
+network mask
+subnet mask
+subnet address
+human communication
+individual bytes
+bit strings
+select router
+router based
+network specification
+bits route
+address route
+pre-specified subnet
+subnet part
+subnet routing
+hierarchical structure
+arp broadcasts
+mentioned class
+tremendous demand
+global standard
+local standard
+route packets
+global knob
+central body
+give internetwork
+internetwork address
+stage today
+practical purposes
+addresses left
+assigning addresses
+big addresses
+back people
+people worked
+years back
+big address
+address chunk
+classes class
+byte boundary
+classless interdomain
+interdomain routing
+starting address
+british universities
+first address
+last address
+workaround people
+common parlance
+address translation
+globally assigned
+private address
+address inside
+permission means
+recognized globally
+globally assuming
+big organization
+internal communication
+temporary table
+local address
+legal private
+legal addresses
+start communicating
+legal address
+temporary point
+translation suppose
+company lan
+company router
+packet arrives
+nat box
+firewall maintains
+world replies
+organization iit
+box fails
+osi layer
+layer independency
+people demand
+applications insert
+coated inside
+application message
+secured data
+thing secured
+big endian
+endian order
+byte transmission
+transmission order
+network byte
+byte transition
+header length
+bit filled
+bit words
+data starts
+message length
+datagram identification
+identification field
+bit packet
+packet identification
+live field
+upper limit
+routers work
+routing loop
+packet finds
+identifies tcp
+protocol identifier
+header checksum
+source address
+bits destination
+total length
+datagram size
+kilo bytes
+bytes hosts
+receive packets
+accepted ethernet
+implementation allowed
+proof computer
+i.i.t kharagpur
+last lecture
+originated thought
+people started
+ipv6 today
+design goal
+limited addresses
+addresses posed
+posed problems
+cases people
+major problems
+routing information
+postal address
+larger chunks
+geographical information
+information inbuilt
+routing speed
+option headers
+limited utility
+limited size
+basic issues
+128-bit address
+address size
+theoretical maximum
+huge number
+individual address
+address space
+limited address
+assigning numbers
+fixed format
+essential part
+initial part
+compulsory part
+extension header
+options options
+means headers
+remove hop-by-hop
+hop-by-hop segmentation
+segmentation procedure
+good idea
+fragmentation number
+original ipv4
+ipv4 header
+version header
+allowed fragmentation
+ipv6 header
+ipv4 headers
+address assuming
+previously ipv4
+lines i.e
+version number
+assign service
+service class
+flow level
+flow means
+destination pair
+level flow
+virtual circuit
+circuit identifier
+intermediate switch
+packets belonging
+service requirements
+require bandwidth
+bandwidth reservation
+payload length
+20-byte header
+ipv6 headers
+higher layer
+layer headers
+udp headers
+hop limit
+present earlier
+fragments created
+transferable unit
+path mtu
+avoid transmission
+packet size
+packet length
+end-to-end fashion
+smaller packets
+bigger packets
+routing header
+ipv6 routing
+fast extension
+extension headers
+tcp shares
+space i.e
+limited number
+order suggested
+main header
+hop-by-hop header
+destination options
+options header
+fragment header
+authentication header
+upper-layer headers
+means tcp
+layer header
+routing headers
+header remains
+header authentication
+large part
+people thought
+future requirement
+provider based
+provider wise
+destination information
+smaller ipv6
+based addresses
+top-level aggregation
+hierarchical organization
+organization reflecting
+current internet
+internet architecture
+level aggregator
+site level
+aggregator allocated
+link level
+ethernet mac
+unspecified addresses
+routing extension
+routing type
+ipv6 addresses
+ipv4 options
+datagram reaches
+destination checks
+segment left
+multiple routing
+8-bit header
+routing nodes
+fragment routed
+routed independently
+independently identification
+identification identifies
+original packet
+fragments bit
+last fragment
+source sends
+first ipv6
+packet reaches
+routing extensions
+unknown options
+hop-by-hop options
+destination extension
+intermediate hops
+jumbo payload
+payload header
+jumbo option
+option encodes
+true length
+packet traveling
+mark spanning
+spanning trees
+focus security
+security association
+network security
+put authentication
+encryption requires
+receivers agree
+encryption algorithm
+ancillary parameters
+security parameters
+sequence number
+number field
+key exchange
+encrypted security
+security payload
+payload headers
+unencrypted header
+encrypted data
+authentication data
+header esp
+esp header
+includes authentication
+prevent tampering
+funny thing
+thing happened
+hardware vendors
+order handle
+handle ipv6
+ubiquitous kind
+air conditioner
+move right
+attachable devices
+laptop computers
+computers people
+devices including
+including hand
+hand held
+held devices
+physical connection
+wireless connection
+home base
+home network
+network attached
+attached device
+device moves
+discussed nodes
+address routing
+simple point
+upper level
+level protocols
+handle address
+higher-level protocol
+layered architecture
+host specific
+specific routes
+big routers
+small routers
+handling billions
+design goals
+mobile node
+layer attachment
+attachment changing
+address remains
+held device
+special arrangement
+security concerned
+offer security
+redirectment attacks
+security arrangement
+router policy
+security concern
+administrative messages
+save bandwidth
+huge overhead
+additional constraints
+important issue
+internet nodes
+home agent
+mobile nodes
+nodes home
+tunnels datagrams
+mobile device
+supports mobile
+network router
+mobile host
+router helping
+foreign agent
+nodes visited
+visited network
+network means
+routing services
+foreign network
+foreign agents
+agents address
+mobile communication
+current location
+circuitous manner
+original communication
+entire process
+return communication
+small overview
+mobile agents
+so-called foreign
+home agents
+mobility agents
+agent tunnels
+delivering datagrams
+care-of address
+delivery mechanism
+packets including
+including broadcast
+tunnel means
+discovery icmp
+icmp protocol
+routers broadcast
+multicast kind
+advertisement mobile
+out solicitation
+solicitation messages
+request forwarding
+forwarding services
+local foreign
+foreign node
+node address
+required inform
+inform home
+current care
+home address
+original home
+last forever
+mobile agent
+agent continues
+return home
+ip-in-ip encapsulation
+minimal encapsulation
+original message
+actual address
+datagram intact
+tunnel endpoints
+tunnel destinations
+packet including
+normal packet
+header source
+address identify
+outer protocol
+original sender
+outer header
+security concerns
+header fields
+checksum length
+encapsulation means
+header intact
+minimal information
+minimal header
+bit smaller
+big deal
+header modify
+modify protocol
+protocol field
+encapsulation protocol
+tunnel exit
+replace source
+increment total
+additional header
+handling mobility
+intended host
+triangular path
+first communication
+higher overhead
+strength drops
+communication remains
+remains direct
+dynamic fashion
+integrated system
+system running
+protocol mobile
+minimal change
+significant overhead
+client server
+server goodgood
+goodgood day
+dominant protocols
+protocols udp
+udp stands
+user datagram
+datagram protocol
+process-to-process communication
+communication path
+distant machine
+machine communication
+process communication
+source machine
+application process
+application server
+application client
+provide control
+control mechanisms
+transport level
+control mechanism
+unreliable transport
+transport protocol
+unreliable protocol
+reliability making
+lightweight protocol
+overhead cost
+reasonable thing
+expect lot
+error occurs
+process-to-process communications
+limited error
+error checking
+simple protocol
+minimal overhead
+main point
+entire body
+error detection
+detection done
+providing reliability
+entire packet
+source port
+port number
+destination port
+udp operation
+connectionless service
+minimal flow
+error control
+independent datagram
+source application
+process destined
+destination application
+network layers
+datagram oriented
+oriented service
+mishaps udp
+application takes
+takes place
+user datagrams
+vice versa
+connection termination
+port number1023
+public applications
+vendor specific
+specific applications
+well-known port
+port numbers
+http request
+web server
+temporarily assigned
+number range
+ephemeral port
+fixed port
+originating host
+number larger
+good number
+important protocols
+file transfer
+transfer protocol
+terminal connection
+last part
+simple mail
+mail transfer
+trivial file
+short message
+hyper text
+text transfer
+web services
+office protocol
+local mail
+mail server
+local server
+post service
+service protocol
+pop3 protocol
+server part
+client request
+term server
+software process
+hardware box
+non-concurrent case
+user requests
+server process
+client requests
+service process
+non-concurrent server
+udp kind
+non-concurrent servers
+iterative servers
+server communication
+extended period
+concurrent server
+forks note
+video content
+kharagpur lecturer
+server good
+light weight
+weight protocol
+udp functions
+adds process
+process communications
+main advantage
+application programs
+udp protocol
+protocol connects
+virtual communication
+communication channel
+host communication
+correct process
+make connections
+common task
+computer network
+packet switched
+small packets
+protocol suite
+tcp tcp
+udp lies
+tcp serves
+network operations
+entire udp
+udp datagram
+udp data
+udp header
+remote machine
+machine means
+destination source
+protocol stack
+osi protocol
+presentation layer
+layer passes
+pseudo header
+real header
+32-bit source
+16-bit udp
+udp length
+proper header
+real udp
+16-bit source
+number remember
+32-bit destination
+16-bit destination
+optional 16-bit
+udp checksum
+odd bytes
+process running
+source host
+host recall
+discussed earlier
+machine number
+protocol tcp
+tcp packet
+udp packet
+packet meant
+udp decides
+de-multiplexing part
+multiplexing part
+destination host
+maximum size
+detect errors
+entire user
+checksum includes
+pseudoheader udp
+wrong host
+performs encapsulation
+application sends
+process meant
+oriented connectionless
+numbered meaning
+short messages
+flow control
+incoming messages
+udp packets
+silently discarded
+low overhead
+fundamental job
+packets form
+data supplied
+protocol encapsulates
+decapsulates messages
+header frame
+frame header
+similar fashion
+incoming queue
+outgoing queue
+queue depending
+taking place
+udp removes
+removes message
+udp checks
+queue exists
+thing udp
+udp sends
+put things
+udp discards
+asks icmp
+unreachable message
+error message
+improvable port
+udp multiplexes
+require simple
+request-response communication
+communication suppose
+simple request
+extra cost
+underlying network
+simple message
+message coming
+simple response
+simple udp
+internal flow
+suitable protocol
+specific examples
+management processes
+snmp snmp
+simple network
+network management
+management protocol
+managing network
+management software
+message response
+response kind
+device responds
+route updating
+updating protocols
+discussed rip
+user applications
+server port
+local host
+remote host
+host refers
+identify processes
+process requires
+client process
+process defines
+number chosen
+write applications
+network environment
+server paradigm
+servers giving
+server giving
+number selects
+numbers work
+ports ensure
+ensure packets
+packets reach
+port field
+field determines
+associate ports
+software developers
+packet bound
+ftp server
+network service
+web service
+opening page
+site displayed
+request reaches
+destination machine
+processes running
+web page
+standard applications
+ftp request
+machine port
+involve applications
+assigned ports
+specific range
+organization iana
+assigned ranges
+marketable applications
+mail box
+full description
+server programming
+socket address
+address socket
+iana port
+websites mentioned
+client-server paradigm
+network based
+based application
+server application
+performs service
+returns results
+client application
+application establishes
+establishes connection
+ito waits
+return message
+well-known service
+listening mode
+servers exchange
+exchange messages
+transport protocols
+protocols e.g
+e.g tcp
+general operations
+api specifies
+socket api
+api api
+api stands
+application program
+program interface
+facto standard
+bsd unix
+first versions
+socket libraries
+vendor supplied
+supplied library
+socket functions
+independent source
+source code
+original sockets
+provide socket
+socket software
+software interface
+user program
+intervening layer
+layer stack
+data structure
+structure inside
+server programs
+programs communicate
+significant socket
+socket domain
+domain families
+internet domain
+domain sockets
+sockets implemented
+unix domain
+novell ipx
+ipx apple
+apple talk
+specific socket
+socket domains
+tcp protocol
+protocol stream
+stream socket
+datagram socket
+sock datagram
+socket determines
+raw sockets
+int socket
+int domain
+int type
+int protocol
+socket call
+protocol families
+type defines
+communication protocol
+protocol semantics
+means connection
+oriented stream
+unreliable udp
+protocol specifies
+standard kind
+server program
+loop listening
+udp server
+short response
+user makes
+speed people
+port address
+server side
+standard port
+original server
+incoming request
+discussed tcp
+client-server part
+similar tcp
+tcp server
+register port
+client connection
+client side
+udp clients
+connectionless clients
+servers create
+create sockets
+connectionless servers
+specific handshake
+special ephemeral
+prolonged communication
+connectionless communications
+communications lack
+sustained connection
+bind command
+send data
+udp client
+request service
+handled simultaneously
+process takes
+iterative server
+case concurrent
+similar piece
+process communicate
+original process
+child server
+server processes
+strictest sense
+server machine
+scheduler inside
+service simultaneously
+serviced simultaneously
+server sequence
+request sequentially
+child process
+topic today
+important transport
+layer responsibilities
+create packets
+byte stream
+stream received
+create process
+sliding window
+window protocol
+achieve flow
+acknowledgement packet
+achieve error
+unlike udp
+tcp seeks
+reliable communication
+error free
+congestion control
+basic thing
+making connection
+distant nodes
+full duplex
+duplex communication
+sending data
+direction data
+bi-directional connection
+first host
+segment announcing
+announcing connection
+flag segments
+tcp segment
+segment header
+segment acknowledging
+segment indicating
+indicating connection
+connection closure
+computer
+networks
+prof
+sujoy
+ghosh
+department
+science
+engineering
+iit
+kharagpur
+lecture-26
+introduction
+routing
+today
+start
+discussion
+talked
+bit
+context
+specifically
+atm
+virtual
+path
+set
+major
+area
+specially
+reference
+stack
+packets
+routed
+network
+min
+protocols
+lectures
+recollect
+job
+layer
+carry
+data
+end-to-end
+source
+destination
+number
+intermediate
+subnets
+depending
+connection-oriented
+connectionless
+services
+functionalities
+incorporated
+talk
+right
+talking
+discuss
+virtually
+connection
+oriented
+system
+unlike
+link
+remember
+hop
+immediately
+adjacent
+advantages
+sense
+information
+require
+locally
+problem
+multiple
+remote
+packet
+hops
+reach
+end
+point
+serving
+large
+machines
+connected
+track
+switch
+links
+pcs
+servers
+boxes
+routers
+router
+globally
+arrive
+nearer
+basic
+subnet
+node
+final
+determine
+outgoing
+datagram
+determined
+individual
+setup
+session
+concentrate
+topology
+entire
+internetwork
+days
+internet
+giant
+big
+spanning
+globe
+divided
+sub
+billions
+user
+connect
+part
+huge
+solved
+systematic
+manner
+objective
+machine
+server
+world
+impractical
+reduce
+grouped
+idea
+finding
+easy
+arp
+protocol
+reached
+correct
+required
+structured
+table
+address
+location
+find
+local
+scope
+millions
+theoretically
+naive
+fashion
+entries
+match
+mistake
+process
+fast
+people
+speed
+traffic
+increasing
+day
+demands
+lot
+memory
+additionally
+consumes
+processing
+power
+drive
+cost
+keeping
+feasible
+option
+issues
+affect
+convergence
+delay
+stability
+nodes
+changing
+change
+takes
+stream
+scalability
+interconnected
+routes
+equal
+first
+length
+quality
+unreliable
+larger
+probability
+dropped
+minimum
+maximum
+capacity
+incorporate
+deciding
+route
+consists
+order
+knowledge
+dynamic
+update
+suppose
+host
+lans
+destined
+lan
+decide
+coming
+sort
+taking
+b,c
+choice
+mentioned
+earlier
+tables
+form
+sitting
+similarly
+tree
+root
+connects
+directly
+preferred
+kind
+bigger
+small
+two
+levels
+deep
+implicit
+distributed
+ultimate
+working
+means
+movable
+words
+trees
+size
+including
+maintain
+maintained
+question
+forwarding
+building
+sending
+interface
+arrives
+forward
+distinct
+parts
+diverged
+assume
+happen
+place
+case
+requires
+access
+optimized
+ups
+net
+version
+four
+addresses
+numbers
+171.69.245.10
+care
+setting
+wanted
+mac
+interested
+basically
+add
+data-link
+headers
+send
+physical
+slightly
+higher
+level
+abstract
+view
+module
+central
+thing
+makes
+static
+manually
+configured
+upper
+transmission
+common
+tcp
+udp
+discussing
+present
+places
+regular
+jobs
+meant
+simply
+drop
+disabled
+enabled
+originates
+out
+high
+happening
+datagrams
+similar
+main
+difference
+received
+collection
+point-to-point
+switched
+diagram
+ethernet
+eventually
+give
+switches
+token
+ring
+proceeds
+visible
+concern
+26min
+att
+logical
+entity
+represent
+cloud
+delivery
+service
+clouds
+ignores
+details
+actual
+picture
+connecting
+shown
+13min
+conditions
+hold
+successfully
+delivered
+prefix
+correspond
+unique
+reverse
+true
+fundamental
+examples
+144.16.192.53
+handle
+individually
+make
+step
+reduction
+scaling
+specific
+leading
+bits
+bytes
+last
+reserved
+global
+addressing
+scheme
+neat
+telephone
+numbering
+tells
+state
+leca
+exchange
+finally
+precisely
+exact
+now-a-days
+span
+prefixes
+hosts
+ppp
+columns
+i.e
+gram
+output
+port
+summarized
+column
+closer
+altogether
+distinctly
+changed
+deliver
+10.1.0.2
+serial
+closely
+wan
+starts
+receive
+header
+validation
+previously
+discussed
+exchanged
+peers
+concerned
+validated
+options
+processed
+parsed
+decrement
+ttl
+leave
+capture
+good
+consistent
+connectivity
+practice
+inconsistent
+lead
+things
+loop
+continue
+vicious
+circulating
+infinitum
+stop
+put
+restriction
+forwards
+whichever
+finds
+astray
+mistaken
+perform
+fragmentation
+doing
+administrative
+controls
+domains
+technologies
+kinds
+inside
+unfortunate
+done
+broken
+fragments
+wider
+reassembled
+reaches
+calculate
+check
+sum
+error
+note
+transmit
+icmp
+stands
+control
+message
+communicating
+messages
+list
+rest
+performs
+lookup
+key
+search
+result
+loopback
+default
+consumption
+back
+operating
+important
+fewer
+side
+separate
+matches
+listed
+gateway
+calling
+close
+arbitrary
+distant
+smaller
+turn
+127.0.0.1
+lists
+minimize
+longest
+entry
+integers
+ipv4
+long
+reducing
+identified
+represented
+zeros
+matched
+128.143.71.21
+red
+128.143.71
+matching
+range
+break
+binary
+algorithm
+permits
+aggregate
+identical
+single
+contributes
+significantly
+20.2.0.0
+30.1.1.0
+naturally
+helps
+updated
+configure
+adds
+manual
+configuration
+updating
+forced
+ways
+detects
+sends
+redirect
+sees
+onwards
+solicitation
+advertisement
+existence
+bootstrapping
+broadcasts
+advertises
+solicits
+neighboring
+response
+periodically
+broadcast
+discovery
+dead
+current
+graph
+theory
+domain
+edges
+interconnection
+costs
+related
+distance
+formulate
+handled
+constraints
+solve
+centralized
+constraint
+react
+quickly
+robustly
+requirements
+space
+minimizing
+cheaper
+faster
+controlling
+robust
+misroute
+loops
+oscillations
+avoided
+optimal
+paths
+approaches
+versus
+approach
+processor
+collects
+status
+computes
+distributes
+cases
+scale
+cooperate
+run
+create
+mutually
+distribute
+solution
+based
+fixed
+consult
+choose
+beginning
+loose
+islands
+strict
+pure
+stochastic
+deterministic
+maintains
+randomly
+chosen
+load
+evenly
+hand
+travels
+stochastically
+choosing
+metric
+providing
+explicitly
+understand
+reliable
+interim
+reliability
+guaranteed
+due
+reason
+explicit
+guarantee
+ordering
+application
+work
+precaution
+corrections
+breaking
+layers
+checksum
+reaching
+reliably
+primary
+alternate
+premium
+easily
+deciphered
+dependent
+independent
+pre-computes
+ignoring
+measured
+loading
+health
+proceeding
+overhead
+simple
+short
+charging
+sdca
+sets
+trunk
+calls
+request
+tax
+ldca
+goals
+average
+desirable
+viewpoint
+maximize
+throughput
+operator
+low
+flooding
+flood
+nice
+replicated
+running
+perfectly
+synchronous
+shortest
+copy
+copies
+choke
+overheads
+special
+incoming
+line
+arrived
+count
+flooded
+avoid
+generating
+infinite
+practical
+situations
+flow
+matrix
+assumed
+calculated
+algorithms
+evaluated
+mpls
+optimization
+multi
+choices
+enumerated
+yield
+stable
+alternative
+disadvantages
+meaning
+lacks
+fault
+tolerance
+bellman-ford
+detail
+couple
+sujay
+lecture
+cellular
+terrestrial
+wireless
+communication
+satellites
+microwave
+repeater
+rapidly
+expanding
+field
+networking
+cell
+phone
+ubiquitous
+nowadays
+mans
+49-04
+learn
+jargons
+organized
+cells
+covers
+geographical
+region
+base
+station
+analogous
+technology
+antenna
+transmitters
+receivers
+backbone
+fibre
+optic
+circluar
+mobiles
+communicate
+mobile
+users
+attach
+air
+stations
+switching
+center
+msc
+essentially
+wide
+referred
+,mobile
+manages
+call
+mscs
+provider
+public
+mss
+pstn
+wired
+techniques
+sharing
+radio
+spectrum
+allocated
+shared
+fdma
+frequency
+division
+tdma
+combine
+divide
+channels
+channel
+slots
+so-called
+gsm
+utilizes
+combined
+cdma
+designed
+company
+volcom
+usa
+code
+systems
+popular
+transporting
+devices
+countries
+country
+providers
+provide
+offer
+24-07
+standards
+stand
+historically
+amps
+analog
+digital
+deamps
+voice
+is-136
+north
+america
+schemes
+communications
+widely
+deployed
+generation
+20-08
+2.5g
+introduced
+promised
+crank
+extent
+demand
+multimedia
+wait
+extensions
+gprs
+general
+evolved
+enhanced
+rate
+evolution
+edge
+modulation
+rates
+384k
+24-09
+phase
+144k
+is-95
+includes
+umts
+standard
+universal
+telecommunications
+merge
+merging
+remains
+phones
+12-09
+layering
+medium
+transport
+resource
+osi
+47-12
+cover
+penetration
+original
+telephones
+accommodate
+limit
+band
+removed
+interfere
+powers
+controlled
+powerful
+interfering
+groups
+increase
+concept
+06-13
+shape
+circle
+omni
+directional
+sides
+sensitivity
+influence
+circles
+pulling
+intersect
+tessellation
+types
+tessellations
+equilateral
+triangles
+squares
+hexagons
+hexagon
+closest
+structure
+hexagonal
+approximation
+traditionally
+design
+04-14
+beehive
+notice
+carefully
+dark
+marked
+ranges
+frequencies
+reused
+fiber
+simultaneous
+shows
+reuse
+bands
+constructed
+28-14
+co-channel
+ratio
+share
+radius
+cluster
+determines
+amount
+interference
+geometry
+55-16
+subscribers
+increases
+allocation
+covered
+town
+satisfy
+serve
+longer
+requests
+denied
+clusters
+decrease
+transmitter
+splitting
+midway
+30-16
+adhoc
+solutions
+created
+existing
+hoc
+54-17
+hierarchy
+extending
+coverage
+areas
+difficult
+density
+hierarchies
+femto
+smallest
+unit
+meters
+personal
+left
+pocket
+femtocells
+picocells
+tens
+picocell
+wlan
+05-18
+micro
+hundreds
+urban
+support
+macro
+kilometers
+metropolitan
+mega
+nationwide
+possibly
+serviced
+satellite
+35-19
+tower
+pico
+points
+microcells
+covering
+05-19
+scarcest
+resources
+applications
+employ
+architectures
+separated
+efficiently
+33-20
+foundations
+attenuation
+signal
+strength
+waves
+attenuated
+stray
+license
+agreement
+distribution
+develop
+plan
+infrastructure
+reusing
+separating
+sufficiently
+intelligent
+employing
+41-21
+total
+bandwidth
+needed
+22-21
+assigned
+corresponds
+carries
+codes
+spread
+implement
+uniform
+54-23
+traffics
+lower
+borrow
+borrowing
+technique
+borrows
+temporary
+permanent
+feature
+business
+district
+busy
+evening
+fall
+drastically
+giving
+25-26
+suitably
+complex
+show
+simplex
+series
+frames
+uplinking
+downlinking
+slot
+technical
+8-slot
+tdm
+operates
+mhz
+figures
+27-27
+nth
+pushed
+progresses
+function
+khz
+portion
+framing
+framed
+complicated
+purpose
+group
+47-28
+pairs
+kilo
+hertz
+supports
+connections
+active
+pair
+supported
+conflicts
+18-30
+transmitting
+receiving
+radios
+frame
+transmitted
+microseconds
+allowed
+milliseconds
+gross
+kbps
+manage
+requiring
+plain
+vanilla
+pcm
+explained
+encoded
+sampling
+samples
+sample
+coding
+advanced
+achieved
+smart
+17-32
+bcc
+continuous
+identity
+monitor
+moved
+sensing
+identify
+crucial
+decoding
+purposes
+listened
+dedicated
+registration
+database
+moving
+move
+vicinity
+collected
+centrally
+communicated
+locating
+person
+20-33
+paging
+announce
+monitors
+continuously
+watch
+answer
+alerted
+listening
+hears
+page
+random
+collide
+garbled
+retried
+set-up
+steps
+grant
+34-33
+multiplexing
+fdm
+uplink
+is200
+dcs
+52-34
+04-34
+direct
+sequence
+orthogonal
+handsets
+improvement
+clear
+43-35
+handoff
+car
+pass
+moves
+handed
+hard
+soft
+41-36
+managed
+detect
+requirement
+arisen
+execute
+assignment
+rerouting
+problems
+section
+extra
+ongoing
+handling
+simplest
+guard
+detection
+troublesome
+affair
+34-37
+breaks
+05-37
+difficulties
+fluctuates
+challenging
+reasons
+scattering
+reflection
+diffraction
+results
+fading
+slow
+false
+boundary
+ping
+pong
+effect
+1to
+unnecessary
+handoffs
+reduced
+price
+paid
+59-38
+model
+situation
+equidistant
+ideally
+bs1
+bs2
+42-39
+varying
+vary
+plotted
+solid
+stronger
+weaker
+varies
+reflected
+scattered
+signals
+multipath
+reflections
+distances
+distractive
+strengthen
+largely
+fluctuating
+04-42
+decision
+proposed
+mention
+relative
+chose
+greater
+rss
+threshold
+hysteresis
+base1
+persists
+combinations
+22-42
+release
+previous
+51-43
+merits
+demerits
+contact
+effects
+hardware
+16-44
+mobility
+management
+fascinating
+visiting
+rajasthan
+,as
+expect
+locate
+non
+trivial
+touch
+effective
+23-45
+updates
+reflect
+22-46
+respond
+paged
+terminal
+enables
+dissemination
+procedures
+store
+27-48
+initiation
+decided
+commonly
+crossing
+timer
+elapsed
+frequently
+collecting
+consume
+enormous
+optimize
+stay
+responds
+collect
+pattern
+predict
+state-based
+travelled
+las
+crossed
+profile
+moment
+located
+office
+hours
+found
+guess
+gathering
+task
+03-49
+so,this
+bunch
+assign
+identifier
+la2
+fill
+listen
+drawback
+fellow
+2,1
+eliminate
+completely
+59-50
+bsc
+.circumstances
+compares
+22-50
+crosses
+predetermined
+period
+ensure
+simultaneously
+judgment
+interval
+automatically
+53-51
+blanket
+advantage
+disadvantage
+declare
+unreachable
+22-51
+successful
+subsequent
+rings
+so,all
+40-52
+news
+noise
+family
+it,the
+cdma2000
+overlay
+top
+circuit
+conveyed
+type
+initial
+log-on
+permanently
+54-53
+instant
+log
+flat
+perceived
+performance
+defer
+preference
+acceptable
+50kbps
+ready
+utilization
+23-53
+downlink
+modified
+cards
+dynamically
+block
+53-54
+fully
+allocates
+unused
+26-54
+peak
+ansi
+-41and
+gsm-map
+bother
+bandwidths
+operation
+expected
+rtt
+backward
+compatible
+cdma1
+improved
+qos
+variable
+future
+grow
+employed
+architecture
+converged
+slowly
+emerging
+purely
+added
+wires
+issue
+dept
+i.i.t
+heart
+turned
+video
+segments
+quick
+review
+organizations
+owned
+agree
+intermediaries
+layered
+simplify
+http
+communicates
+multiplicity
+integrating
+insures
+allowing
+flexibility
+hourglass
+ftp
+tftp
+integrate
+encapsulation
+fed
+passed
+payload
+considers
+trailer
+incur
+byte
+trailers
+stripped
+driver
+lowest
+upwards
+resolution
+igmp
+multicasting
+functions
+de-multiplexed
+summarize
+effort
+proper
+understood
+sources
+congested
+buffer
+force
+establishment
+stored
+optionally
+provision
+bgp
+limited
+restricted
+limitations
+independently
+topic
+identifies
+format
+4bytes
+read
+decimal
+separately
+144.16.19.23
+equivalent
+string
+convert
+strings
+specifies
+postal
+street
+house
+streets
+pin
+figure
+classifications
+unicast
+originating
+multicast
+subset
+belong
+xxx
+representation
+144.16.7.4
+value
+valid
+classification
+classes
+class
+irrespective
+values
+indicating
+million
+organization
+possibility
+computers
+16,000
+64,000
+fairly
+real
+experimental
+dotted
+quad
+000.0.0.0
+outer
+limits
+digit
+dictated
+represents
+initialization
+procedure
+bootp
+0.0.0
+0000.0.0.0
+referring
+0.0.0.130
+hosted
+writing
+versions
+write
+program
+include
+caveat
+fraction
+broadcasting
+swarmed
+age
+typically
+appears
+cable
+collision
+directed
+forwarded
+body
+carved
+companies
+xerox
+involved
+designing
+arpanet
+project
+blossom
+wildly
+greatly
+careful
+doling
+institutions
+ripped
+thousands
+accepting
+institution
+10,000
+parlance
+works
+city
+post
+offices
+enter
+masks
+applied
+considered
+mask
+placing
+144.97.16.132
+told
+255.255.255.192,1
+human
+converted
+144.97.16.128
+telling
+144.97.17.132
+144.97.16
+select
+specification
+rip
+ospf
+properly
+pre-specified
+looked
+consulted
+hierarchical
+contained
+grown
+tremendous
+corner
+follow
+knob
+creates
+matter
+fact
+stage
+envisaged
+assigning
+waste
+stretched
+years
+helped
+overcome
+shortage
+worked
+noticed
+titled
+implying
+finalized
+workarounds
+chunk
+classless
+interdomain
+cidr
+starting
+british
+universities
+cambridge
+workaround
+nating
+translation
+observation
+private
+permission
+recognized
+assuming
+internal
+tat
+legal
+pool
+free
+10.0.0.1
+convention
+nat
+box
+firewall
+capability
+assigns
+replies
+temporarily
+satisfactory
+fails
+lost
+violates
+independency
+insert
+fail
+coated
+content
+incompatible
+secured
+encrypt
+laid
+endian
+transition
+batches
+amounts
+filled
+exercised
+identification
+live
+die
+accumulated
+bring
+mechanism
+concentrates
+accepted
+mtu
+implementation
+proof
+originated
+thought
+focus
+started
+ipv6
+goal
+posed
+fight
+natingnetting
+deploying
+gadgets
+accessed
+inherent
+east
+material
+direction
+chunks
+inbuilt
+easier
+thirdly
+experience
+aspects
+problematic
+tos
+utility
+simplification
+128-bit
+32-bits
+128-bits
+theoretical
+spare
+intelligently
+essential
+compulsory
+sizes
+remove
+extension
+hop-by-hop
+segmentation
+segment
+traveling
+fragment
+simpler
+fields
+lines
+treating
+belonging
+reservation
+20-byte
+16-bits
+rise
+renamed
+lessons
+learnt
+en-route
+transferable
+encountered
+accommodated
+cross
+struck
+fragmented
+made
+ignore
+shares
+256-entry
+suggested
+occur
+authentication
+upper-layer
+encapsulated,payload
+peel
+peeled
+naming
+unassigned
+prudent
+envisage
+wise
+loses
+geographically
+geographic
+aggregation
+top-level
+reflecting
+aggregator
+site
+strictly
+eui
+embedded
+unspecified
+cast
+members
+member
+plays
+role
+facility
+dictate
+dozen
+difficulty
+obviated
+checks
+copied
+8-bit
+8-bits
+offset
+carried
+optional
+fragmenting
+prior
+unknown
+discarded
+jumbo
+encodes
+32-bit
+mark
+security
+association
+encryption
+senders
+decryption
+ancillary
+parameters
+lifetime
+spi
+selected
+receiver
+describe
+negotiated
+encrypted
+unencrypted
+chain
+esp
+prevent
+tampering
+conclude
+funny
+happened
+vendors
+waiting
+software
+operate
+bridge
+held
+refrigerator
+conditioner
+networked
+attachable
+laptop
+carrying
+attractive
+wire
+dominant
+trouble
+device
+home
+familiar
+url
+land
+attached
+performed
+attachment
+alternatives
+automatic
+automated
+higher-level
+importantly
+propagated
+indirection
+originally
+sophisticated
+arrangement
+redirectment
+attacks
+authenticate
+password
+policy
+aspect
+fake
+spoof
+save
+impose
+additional
+describing
+implemented
+terminology
+constant
+agent
+tunnels
+supposed
+accept
+behalf
+helping
+foreign
+visited
+physically
+registered
+register
+remaining
+belongs
+agents
+co-located
+straight
+circuitous
+reply
+nutshell
+return
+overview
+advertise
+solicit
+tunnel
+delivering
+care-of
+analogy
+adapted
+seconds
+inform
+binding
+tunneled
+renewed
+bindings
+lifetimes
+rude
+informing
+forever
+dies
+continues
+renew
+deregister
+tunneling
+methods
+ip-in-ip
+minimal
+landed
+lands
+intact
+endpoints
+destinations
+encapsulated
+handles
+normal
+sender
+recipient
+encapsulator
+concerns
+recomputed
+retain
+construct
+stuff
+deconstruction
+reconstruction
+deal
+modify
+replaced
+exit
+originator
+replace
+increment
+octets
+re-compute
+possibilities
+intended
+triangular
+exceed
+growing
+drops
+realm
+picks
+integrated
+significant
+client
+goodgood
+responsibilities
+process-to-process
+mechanisms
+presently
+mind
+making
+lightweight
+reasonable
+errors
+occurs
+checking
+forms
+computed
+decapsulation
+forming
+queuing
+demultiplexing
+operations
+treated
+directions
+differently
+travel
+mishaps
+responsibility
+granted
+resilient
+events
+relationship
+numbered
+arises
+vice
+versa
+knowing
+termination
+unregulated
+number1023
+vendor
+well-known
+web
+website
+requester
+1024-65,000
+ephemeral
+duration
+released
+iana
+file
+transfer
+telnet
+.for
+smtp
+mail
+hyper
+text
+pop
+mailbox
+desktop
+download
+mails
+pop3
+concurrent
+elaborate
+term
+non-concurrent
+queue
+sock
+iterative
+efficient
+extended
+unnecessarily
+spawns
+forks
+minit
+stated
+topics
+lecturer
+light
+weight
+programs
+processes
+responsible
+de-multiplexing
+produce
+chop
+suite
+lies
+serves
+intermediary
+derives
+presentation
+passes
+pseudo
+16-bit
+peer
+odd
+pad
+65,535
+recall
+decides
+obtained
+defines
+65,507
+subtracting
+sections
+pseudoheader
+ensures
+corrupted
+wrong
+udp.
+overflow
+overflows
+duplicated
+silently
+de-capsulation
+streams
+supplied
+chopped
+pieces
+piece
+encapsulates
+decapsulates
+decapsulated
+removes
+delivers
+exists
+discards
+asks
+exist
+generate
+improvable
+multiplexes
+demultiplexes
+suitable
+request-response
+depends
+underlying
+sufficient
+duplicate
+snmp
+managing
+probe
+statistics
+queries
+alarm
+defined
+refers
+identifying
+environment
+paradigm
+clients
+selects
+ports
+requesting
+associate
+developers
+agreed
+bound
+surfing
+browser
+click
+opening
+displayed
+mace
+ten
+fifty
+conversations
+involve
+marketable
+contents
+full
+description
+programming
+socket
+combination
+uniquely
+references
+rfcs
+described
+rfc
+websites
+client-server
+universally
+listener
+waits
+returns
+establishes
+ito
+initiate
+initiates
+accede
+mode
+e.g
+interact
+api
+facto
+origin
+bsd
+unix
+university
+california
+berkeley
+sockets
+libraries
+library
+arguments
+promotes
+bells
+whistles
+internally
+stacks
+bottom
+intervening
+families
+filenames
+novell
+ipx
+apple
+raw
+testing
+creating
+accessing
+language
+int
+pf_inet
+pf_unix
+semantics
+sock_stream
+sock_dgram
+initiating
+listens
+interaction
+prolonged
+downloading
+asked
+webpage
+respect
+accustomed
+currency
+blocked
+handshake
+sock_init
+establish
+shutting
+shut
+ending
+lack
+sustained
+sendto
+buflen
+flags
+to_addr
+tolen
+recvfrom
+from_addr
+fromlen
+bind
+command
+shutdown
+fork
+spawn
+child
+strictest
+sequential
+sequentiality
+imposed
+processors
+scheduled
+scheduler
+sequentially
+multiplex
+demultiplex
+sliding
+window
+achieve
+acknowledgement
+time-out
+retransmission
+seeks
+congestion
+duplex
+predominantly
+terminated
+actions
+bi-directional
+closed
+announcing
+fin
+syn
+flag
+acknowledging
+finished
+closure
+acknowledges
+acknowledgements
+terminate
+four-way

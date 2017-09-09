@@ -1,0 +1,10 @@
+Row 1::Height 2::searching in b+ trees
+Row 2::Height 1::generalization of binary search
+Row 3::Height 1::1. given a search key k start from the root node
+Row 4::Height 1::2. if key is present in current node than
+Row 5::Height 1::success; else
+Row 6::Height 1::3. if current node is a leaf node and key not
+Row 7::Height 1::present in node,then key not in the database
+Row 8::Height 1::4. search for a tree pointer pi such that ki-1<k
+Row 9::Height 1::<=ki
+Row 10::Height 1::5. return to step 2 to continue search

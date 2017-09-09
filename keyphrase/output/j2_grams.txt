@@ -1,0 +1,2050 @@
+java programming language
+developed by sun
+initiated by james
+gosling and released
+component of sun
+microsystems ’ java
+java standard edition
+advancement of java
+configurations were built
+built to suite
+suite various types
+types of platforms
+j2ee for enterprise
+j2me for mobile
+mobile applications sun
+applications sun microsystems
+microsystems has renamed
+versions as java
+java is guaranteed
+run anywhere java
+model • platform
+programming languages including
+java is compiled
+compiled into platform
+platform specific machine
+platform independent byte
+independent byte code
+code this byte
+code is distributed
+web and interpreted
+interpreted by virtual
+run • simple
+java is designed
+easy to learn
+understand the basic
+concept of oop,java
+easy to master
+master • secure
+java s secure
+enables to develop
+tamper-free systems authentication
+systems authentication techniques
+techniques are based
+based on public-key
+encryption • architectural-neutral
+java compiler generates
+generates an architecture-neutral
+architecture-neutral object file
+object file format
+makes the compiled
+presence of java
+java runtime system
+system • portable
+implementation dependent aspects
+specification makes java
+makes java portable
+java portable compiler
+portable compiler injava
+injava is written
+written in ansi
+clean portability boundary
+makes an effort
+effort to eliminate
+eliminate error prone
+error prone situations
+situations by emphasizing
+compile time error
+checking and runtime
+runtime checking chapter
+java s multithreaded
+simultaneously this design
+feature allows developers
+developers to construct
+construct smoothly running
+smoothly running interactive
+running interactive applications
+applications • interpreted
+java byte code
+code is translated
+fly to native
+native machine instructions
+rapid and analytical
+incremental and lightweight
+process • high
+java enables high
+enables high performance
+performance • distributed
+internet • dynamic
+java is considered
+designed to adapt
+evolving environment java
+environment java programs
+programs can carry
+carry extensive amount
+amount of run-time
+verify and resolve
+accesses to objects
+objects on run-time
+history of java
+james gosling initiated
+initiated the java
+java language project
+project in june
+set-top box projects
+projects the language
+initially called oak
+tree that stood
+stood outside gosling
+gosling s office
+green and ended
+renamed as java
+list of random
+random words sun
+words sun released
+released the first
+first public implementation
+implementation as java
+providing no-cost run-times
+run-times on popular
+java as free
+free and open
+open source software
+gnu general public
+general public license
+finished the process
+java s core
+core code free
+free and open-source
+portion of code
+hold the copyright
+performing the examples
+pentium 200-mhz computer
+system • java
+editor this tutorial
+tutorial will provide
+skills to create
+applications using java
+java next chapter
+chapter will guide
+java and prepare
+prepare an environment
+environment to develop
+develop java applications
+java applications java
+applications java environment
+java environment setup
+java environment correctly
+correctly this section
+download and set
+set up java
+machine please follow
+steps to set
+link download java
+download a version
+operating system follow
+follow the instructions
+instructions to download
+java and run
+run the .exe
+.exe to install
+set environment variables
+variables to point
+point to correct
+correct installation directories
+path for windows
+files \ java
+java \ jdk
+right-click on my
+properties • click
+variables  button
+advanced  tab
+alter the path
+path  variable
+windows \ system32
+change your path
+path to read
+jdk \ bin
+autoexec.bat  file
+file and add
+jdk \ bin
+bin  setting
+path for linux
+environment variable path
+set to point
+path  chapter
+popular java editors
+write your java
+simple text editor
+editor like notepad
+textpad • netbeans
+open-source and free
+java ide developed
+eclipse open-source community
+downloaded from http
+chapter will teach
+write and run
+run your first
+first java program
+important basic syntaxes
+syntaxes in java
+needed for developing
+developing applications java
+applications java basic
+java basic syntax
+collection of objects
+objects that communicate
+communicate via invoking
+methods and instance
+objects have states
+states and behaviors
+dog has states-color
+eating an object
+class • class
+print that describes
+behaviors that object
+support • methods
+basically a behavior
+behavior a class
+logics are written
+data is manipulated
+actions are executed
+executed • instance
+set of instance
+variables an object
+object s state
+state is created
+variables first java
+print the words
+words hello world
+world public class
+public class myfirstjavaprogram
+print hello world
+public static void
+static void main
+prints hello world
+save the file
+compile and run
+run the program
+program please follow
+follow the steps
+notepad and add
+add the code
+myfirstjavaprogram.java • open
+open a command
+command prompt window
+saved the class
+type  javac
+enter to compile
+compile your code
+variable is set
+type  java
+run your program
+world  printed
+java myfirstjavaprogram helloworld
+myfirstjavaprogram helloworld basic
+helloworld basic syntax
+points • case
+java is case
+meaning in java
+java • class
+word s first
+case example class
+myfirstjavaclass • method
+names should start
+lower case letter
+case example public
+public void mymethodname
+match the class
+saving the file
+match your program
+java program processing
+program processing starts
+java program java
+program java identifiers
+java components require
+components require names
+require names names
+variables and methods
+identifiers in java
+points to remember
+remember about identifiers
+identifiers should begin
+combination of characters
+identifiers are case
+sensitive • examples
+examples of legal
+__1_value • examples
+examples of illegal
+-salary java modifiers
+categories of modifiers
+private • non-access
+details about modifiers
+section java variables
+type of variables
+variables in java
+variables • class
+arrays are objects
+objects that store
+store multiple variables
+construct and initialize
+upcoming chapters java
+chapters java enums
+enums were introduced
+introduced in java
+restrict a variable
+values the values
+reduce the number
+number of bugs
+fresh juice shop
+restrict the glass
+size to small
+medium and large
+order any size
+medium or large
+public class freshjuicetest
+juice.size = freshjuice.freshjuicesize.meduim
+inside a class
+defined inside enums
+shows the reserved
+words in java
+java these reserved
+constant or variable
+identifier names abstract
+names abstract assert
+abstract assert boolean
+assert boolean break
+boolean break byte
+break byte case
+byte case catch
+case catch char
+catch char class
+char class const
+class const continue
+const continue default
+default do double
+double else enum
+enum extends final
+final finally float
+float for goto
+goto if implements
+import instanceof int
+instanceof int interface
+interface long native
+native new package
+package private protected
+private protected public
+protected public return
+public return short
+return short static
+short static strictfp
+static strictfp super
+strictfp super switch
+super switch synchronized
+synchronized this throw
+throw throws transient
+transient try void
+volatile while comments
+comments in java
+java java supports
+java supports single-line
+single-line and multi-line
+comments very similar
+characters available inside
+inside any comment
+java compiler public
+compiler public class
+single line comment
+java totally ignores
+ignores it inheritance
+derived from classes
+code you require
+code this concept
+reuse the fields
+fields and methods
+rewrite the code
+contract between objects
+play a vital
+concept of inheritance
+inheritance an interface
+defines the methods
+explains about objects
+objects and classes
+classes in java
+java java object
+object & classes
+object oriented feature
+polymorphism • inheritance
+inheritance • encapsulation
+encapsulation • abstraction
+abstraction • classes
+classes • objects
+objects • instance
+instance • method
+method • message
+classes and objects
+objects • object
+type support objects
+objects in java
+find many objects
+state and behavior
+compare the software
+real world object
+similar characteristics software
+characteristics software objects
+behavior a software
+state is stored
+stored in fields
+fields and behavior
+behavior is shown
+shown via methods
+communication is done
+done via methods
+objects are created
+created a sample
+public class dog
+breed ; int
+age ; string
+color ; void
+types • local
+variables defined inside
+defined inside methods
+constructors or blocks
+variables the variable
+declared and initialized
+method has completed
+completed • instance
+variables are variables
+method these variables
+variables are instantiated
+class is loaded
+loaded instance variables
+accessed from inside
+inside any method
+constructor or blocks
+keyword a class
+number of methods
+methods to access
+access the value
+kinds of methods
+methods below mentioned
+java language constructors
+discussing about classes
+constructors every class
+write a constructor
+class the java
+java compiler builds
+builds a default
+object is created
+invoked the main
+rule of constructors
+class a class
+public class puppy
+java also supports
+supports singleton classes
+class singleton classes
+classes the singleton
+singleton s purpose
+control object creation
+limiting the number
+number of objects
+singleton will occur
+static fields singletons
+singletons often control
+access to resources
+connections or sockets
+driver has trouble
+trouble with multithreading
+connection is made
+thread can access
+access the connection
+easiest implementation consists
+field to hold
+hold its result
+static accessor method
+static initializer block
+initializer the getinstance
+returns this instance
+singleton.java public class
+public class singleton
+private static singleton
+static singleton singleton
+private constructor prevents
+class from instantiating
+instance  method
+public static singleton
+static singleton getinstance
+protected by singleton-ness
+protected static void
+static void demomethod
+demomethod for singleton
+singletondemo.java public lasssingletondemo
+public staticvoid main
+tmp = singleton.getinstance
+shows a classic
+classic singleton design
+singleton design pattern
+public class classicsingleton
+private static classicsingleton
+static classicsingleton instance
+instance = null
+null ; protected
+public static classicsingleton
+static classicsingleton getinstance
+classicsingleton class maintains
+maintains a static
+lone singleton instance
+instance and returns
+returns that reference
+method here classicsingleton
+classicsingleton class employs
+employs a technique
+instantiation to create
+create the singleton
+ensures that singleton
+instances are created
+creating an object
+blueprints for objects
+basically an object
+class in java
+create new objects
+steps when creating
+type • instantiation
+new  keyword
+create the object
+object • initialization
+constructor this call
+statement would create
+create an object
+object mypuppy puppy
+mypuppy puppy mypuppy
+tommy accessing instance
+accessing instance variables
+methods are accessed
+accessed via created
+objects to access
+access an instance
+fully qualified path
+call a variable
+call a class
+access instance variables
+puppyage ; public
+public void setage
+puppyage = age
+public int getage
+puppy s age
+mypuppy = newpuppy
+call class method
+method to set
+call another class
+access instance variable
+source file declaration
+file declaration rules
+rules these rules
+rules are essential
+essential when declaring
+statements and package
+class per source
+multiple non public
+non public classes
+classes simply easy
+simply easy learning
+appended by .java
+public class employee
+class is defined
+inside a package
+statements are present
+file • import
+import and package
+declare different import
+source file classes
+types of classes
+classes ; abstract
+access modifiers chapter
+classes and anonymous
+anonymous classes java
+classes java package
+categorizing the classes
+classes and interfaces
+interfaces when developing
+applications in java
+hundreds of classes
+categorizing these classes
+life much easier
+easier import statements
+includes the package
+locate the source
+code or classes
+classes import statement
+giving the proper
+compiler to find
+class for example,the
+example,the following line
+compiler to load
+directory java_installation import
+simple case study
+creating two classes
+employee and employeetest
+employeetest first open
+first open notepad
+save this source
+employee.java the employee
+four instance variables
+designation and salary
+salary the class
+explicitly defined constructor
+takes a parameter
+parameter import java.io
+designation ; double
+class employee public
+employee public employee
+assign the age
+variable age public
+age public void
+public void empage
+age = empage
+assign the designation
+public void empdesignation
+designation = empdesig
+assign the salary
+public void empsalary
+salary = empsalary
+print the employee
+public void printemployee
+method therefore in-order
+run this employee
+method and objects
+creating a separate
+creates two instances
+employee and invokes
+invokes the methods
+object to assign
+code in employeetest.java
+employeetest.java file import
+file import java.io
+create two objects
+objects using constructor
+empone = newemployee
+emptwo = newemployee
+object created empone.empage
+senior software engineer
+session will discuss
+discuss basic data
+basic data types
+types in java
+developing java applications
+java basic data
+data types variables
+reserved memory locations
+locations to store
+values this means
+create a variable
+variable you reserve
+reserve some space
+space in memory
+operating system allocates
+system allocates memory
+memory and decides
+assigning different data
+types to variables
+two data types
+primitive data types
+data types primitive
+types primitive data
+data types supported
+supported by java
+java primitive data
+types are predefined
+language and named
+data types byte
+byte data type
+two s complement
+integer • minimum
+space in large
+place of integers
+four times smaller
+short data type
+complement integer chapter
+memory as byte
+type a short
+int • default
+int data type
+default data type
+type for integral
+concern about memory
+long data type
+value is -9,223,372,036,854,775,808
+range than int
+int is needed
+needed • default
+float data type
+single-precision 32-bit ieee
+point • float
+memory in large
+arrays of floating
+floating point numbers
+numbers • default
+0.0f • float
+double data type
+double-precision 64-bit ieee
+type for decimal
+generally the default
+choice • double
+currency • default
+boolean data type
+data type represents
+represents one bit
+bit of information
+two possible values
+true and false
+flags that track
+track true conditions
+conditions • default
+value is false
+char data type
+single 16-bit unicode
+16-bit unicode character
+character • minimum
+store any character
+reference data types
+variables are created
+created using defined
+objects these variables
+variables are declared
+types of array
+reference data type
+type • default
+variable is null
+java programming
+programming language
+sun microsystems
+james gosling
+core component
+java platform
+latest release
+java standard
+standard edition
+widespread popularity
+multiple configurations
+enterprise applications
+mobile applications
+applications sun
+object oriented
+object java
+object model
+platform independent
+programming languages
+languages including
+specific machine
+independent byte
+byte code
+virtual machine
+whichever platform
+basic concept
+secure feature
+tamper-free systems
+systems authentication
+authentication techniques
+public-key encryption
+java compiler
+compiler generates
+architecture-neutral object
+object file
+file format
+compiled code
+java runtime
+runtime system
+implementation dependent
+dependent aspects
+specification makes
+makes java
+java portable
+portable compiler
+compiler injava
+clean portability
+portability boundary
+posix subset
+java makes
+eliminate error
+error prone
+prone situations
+error checking
+runtime checking
+checking chapter
+multithreaded feature
+write programs
+tasks simultaneously
+design feature
+interactive applications
+java byte
+native machine
+machine instructions
+development process
+lightweight process
+high performance
+just-in-time compilers
+java enables
+distributed environment
+evolving environment
+environment java
+java programs
+extensive amount
+run-time information
+resolve accesses
+run-time history
+java language
+language project
+set-top box
+box projects
+oak tree
+random words
+words sun
+sun released
+first public
+public implementation
+no-cost run-times
+popular platforms
+open source
+source software
+gnu general
+public license
+sun finished
+core code
+small portion
+copyright tools
+examples discussed
+ram recommended
+operating system
+java jdk
+microsoft notepad
+text editor
+create gui
+web applications
+obtain java
+install java
+develop java
+java applications
+applications java
+java environment
+environment setup
+environment correctly
+section guides
+link download
+download java
+version based
+system follow
+installed java
+set environment
+environment variables
+correct installation
+installation directories
+program files
+jdk directory
+my computer
+select properties
+environment variables
+java executable
+bin setting
+set path
+variable path
+java binaries
+shell documentation
+export path
+popular java
+java editors
+sophisticated ides
+windows machine
+simple text
+java ide
+downloaded fromhttp
+ide developed
+eclipse open-source
+open-source community
+first java
+java program
+important basic
+basic syntaxes
+java needed
+developing applications
+basic syntax
+instance variables
+type support
+unique set
+values assigned
+simple code
+public class
+class myfirstjavaprogram
+public static
+static void
+void main
+open notepad
+command prompt
+prompt window
+class assume
+press enter
+java myfirstjavaprogram
+myfirstjavaprogram helloworld
+case sensitivity
+class names
+first letter
+upper case
+class myfirstjavaclass
+method names
+lower case
+case letter
+public void
+void mymethodname
+program file
+remember java
+append .java
+assume myfirstjavaprogram
+string args
+program processing
+processing starts
+mandatory part
+program java
+java identifiers
+java components
+components require
+require names
+names names
+currency character
+first character
+importantly identifiers
+case sensitive
+legal identifiers
+illegal identifiers
+-salary java
+java modifiers
+modify classes
+access modifiers
+non-access modifiers
+section java
+java variables
+local variables
+class variables
+static variables
+non-static variables
+java arrays
+store multiple
+multiple variables
+upcoming chapters
+chapters java
+java enums
+enums restrict
+predefined values
+enumerated list
+fresh juice
+juice shop
+glass size
+class freshjuice
+enum freshjuicesize
+freshjuicesize size
+class freshjuicetest
+freshjuice juice
+class methods
+defined inside
+inside enums
+java keywords
+list shows
+reserved words
+identifier names
+names abstract
+abstract assert
+assert boolean
+boolean break
+break byte
+byte case
+case catch
+catch char
+char class
+class const
+const continue
+continue default
+enum extends
+implements import
+instanceof int
+int interface
+public return
+short static
+static strictfp
+strictfp super
+super switch
+switch synchronized
+throw throws
+throws transient
+java java
+java supports
+multi-line comments
+single line
+line comment
+blank lines
+blank line
+java classes
+existing code
+existing class
+derived class
+subclass interfaces
+interfaces play
+vital role
+interface defines
+deriving class
+section explains
+clear picture
+java object
+classes java
+object-oriented language
+oriented feature
+fundamental concepts
+message parsing
+concepts classes
+support objects
+software object
+real world
+world object
+similar characteristics
+characteristics software
+software objects
+software development
+methods operate
+internal state
+object-to-object communication
+methods chapter
+blue print
+individual objects
+class dog
+string breed
+int age
+string color
+void barking
+void hungry
+void sleeping
+variable types
+variables defined
+inside methods
+loaded instance
+variables declared
+static keyword
+important topics
+language constructors
+important subtopic
+compiler builds
+default constructor
+main rule
+class puppy
+public puppy
+supports singleton
+singleton classes
+class singleton
+control object
+object creation
+singleton instance
+instance fields
+static fields
+fields singletons
+control access
+database connections
+jdbc driver
+singleton makes
+implementing singletons
+easiest implementation
+implementation consists
+private constructor
+static accessor
+accessor method
+private field
+static initializer
+initializer block
+simply returns
+singleton.java public
+private static
+static singleton
+singleton singleton
+constructor prevents
+private singleton
+static instance
+singleton getinstance
+return singleton
+methods protected
+void demomethod
+singletondemo.java public
+public lasssingletondemo
+public staticvoid
+staticvoid main
+singleton tmp
+implementation shows
+classic singleton
+singleton design
+design pattern
+class classicsingleton
+static classicsingleton
+classicsingleton instance
+protected classicsingleton
+defeat instantiation
+classicsingleton getinstance
+return instance
+classicsingleton class
+class maintains
+static reference
+lone singleton
+static getinstance
+class employs
+lazy instantiation
+technique ensures
+singleton instances
+needed creating
+variable declaration
+object type
+call initializes
+object mypuppy
+mypuppy puppy
+puppy mypuppy
+tommy accessing
+accessing instance
+created objects
+qualified path
+class method
+access instance
+int puppyage
+void setage
+public int
+int getage
+return puppyage
+call class
+variable value
+tommy puppy
+source file
+file declaration
+declaration rules
+last part
+declaring classes
+import statements
+package statements
+public classes
+easy learning
+class employee
+package statement
+first statement
+class declaration
+import statement
+first line
+classes present
+file classes
+access levels
+abstract classes
+final classes
+modifiers chapter
+mentioned types
+special classes
+anonymous classes
+java package
+makes life
+easier import
+source code
+classes import
+proper location
+import java.io
+simple case
+case study
+code remember
+employee class
+defined constructor
+parameter import
+string designation
+double salary
+public employee
+variable age
+void empage
+int empage
+variable designation
+void empdesignation
+string empdesig
+variable salary
+void empsalary
+double empsalary
+employee details
+void printemployee
+main method
+separate class
+employeetest class
+assign values
+variable save
+employeetest.java file
+file import
+publicstaticvoid main
+employee empone
+mary anne
+invoking methods
+object created
+created empone.empage
+senior software
+software engineer
+run employeetest
+java employeetest
+jamessmith age
+seniorsoftwareengineer salary
+maryanne age
+softwareengineer salary
+basic data
+data types
+developing java
+types variables
+reserved memory
+memory locations
+store values
+memory based
+data type
+system allocates
+allocates memory
+store integers
+primitive data
+types primitive
+types supported
+types byte
+byte data
+complement integer
+minimum value
+maximum value
+default value
+save space
+large arrays
+short data
+integer chapter
+save memory
+int data
+default data
+integral values
+long data
+wider range
+-200000l float
+float data
+floating point
+point numbers
+precise values
+double data
+decimal values
+default choice
+boolean data
+type represents
+simple flags
+true char
+char data
+single 16-bit
+16-bit unicode
+unicode character
+char lettera
+reference data
+reference variables
+defined constructors
+access objects
+specific type
+class objects
+array variables
+declared type
+compatible type
+animal animal
+java
+programming
+language
+originally
+developed
+sun
+microsystems
+initiated
+james
+gosling
+released
+core
+component
+platform
+j2se
+december
+latest
+release
+standard
+edition
+advancement
+widespread
+popularity
+multiple
+configurations
+built
+suite
+types
+platforms
+j2ee
+enterprise
+applications
+j2me
+mobile
+renamed
+versions
+guaranteed
+write
+run
+object
+oriented
+easily
+extended
+based
+model
+independent
+unlike
+languages
+including
+compiled
+specific
+machine
+byte
+code
+distributed
+web
+interpreted
+virtual
+jvm
+whichever
+simple
+designed
+easy
+learn
+understand
+basic
+concept
+oop,java
+master
+secure
+feature
+enables
+develop
+virus-free
+tamper-free
+systems
+authentication
+techniques
+public-key
+encryption
+architectural-neutral
+compiler
+generates
+architecture-neutral
+file
+format
+makes
+executable
+processors
+presence
+runtime
+system
+portable
+implementation
+dependent
+aspects
+specification
+injava
+written
+ansi
+clean
+portability
+boundary
+posix
+subset
+robust
+effort
+eliminate
+error
+prone
+situations
+emphasizing
+compile
+checking
+chapter
+multithreaded
+programs
+tasks
+simultaneously
+design
+developers
+construct
+smoothly
+running
+interactive
+translated
+fly
+native
+instructions
+stored
+development
+process
+rapid
+analytical
+linking
+incremental
+lightweight
+high
+performance
+just-in-time
+compilers
+environment
+internet
+dynamic
+considered
+adapt
+evolving
+carry
+extensive
+amount
+run-time
+information
+verify
+resolve
+accesses
+objects
+history
+project
+june
+set-top
+box
+projects
+initially
+oak
+tree
+stood
+office
+green
+ended
+list
+random
+words
+first
+public
+promised
+wora
+providing
+no-cost
+run-times
+popular
+november
+free
+open
+source
+software
+terms
+gnu
+general
+license
+gpl
+finished
+making
+open-source
+small
+portion
+hold
+copyright
+tools
+performing
+examples
+discussed
+tutorial
+pentium
+200-mhz
+computer
+minimum
+ram
+recommended
+softwares
+linux
+windows
+operating
+jdk
+microsoft
+notepad
+text
+editor
+provide
+skills
+create
+gui
+networking
+guide
+obtain
+documentation
+finally
+instructs
+install
+prepare
+setup
+proceed
+important
+set
+correctly
+section
+guides
+download
+follow
+steps
+freely
+link
+version
+.exe
+installed
+variables
+point
+correct
+installation
+directories
+setting
+path
+assuming
+program
+files
+directory
+right-click
+my
+select
+properties
+click
+environment
+button
+advanced
+tab
+alter
+path
+variable
+system32
+change
+read
+bin
+edit
+autoexec.bat
+add
+line
+end
+set
+bin
+unix
+solaris
+freebsd
+binaries
+shell
+trouble
+doing
+bash
+.bashrc
+export
+editors
+sophisticated
+ides
+market
+textpad
+netbeans
+ide
+downloaded
+fromhttp
+eclipse
+community
+http
+teach
+syntaxes
+needed
+developing
+syntax
+defined
+collection
+communicate
+invoking
+methods
+briefly
+class
+instance
+states
+behaviors
+dog
+states-color
+breed
+-wagging
+barking
+eating
+print
+describes
+type
+support
+method
+basically
+behavior
+logics
+data
+manipulated
+actions
+executed
+unique
+state
+created
+values
+assigned
+world
+myfirstjavaprogram
+hello
+output
+static
+void
+main
+string
+args
+system.out.println
+prints
+save
+myfirstjavaprogram.java
+command
+prompt
+window
+saved
+assume
+javac
+press
+enter
+errors
+assumption
+printed
+helloworld
+mind
+points
+case
+sensitivity
+sensitive
+means
+identifier
+meaning
+names
+letter
+upper
+form
+word
+myfirstjavaclass
+start
+lower
+mymethodname
+match
+saving
+remember
+append
+.java
+myfirstjavaprogram
+asmyfirstjavaprogram.java
+processing
+starts
+mandatory
+part
+identifiers
+components
+require
+classes
+begin
+currency
+character
+underscore
+combination
+characters
+keyword
+importantly
+legal
+age
+salary
+_value
+__1_value
+illegal
+123abc
+-salary
+modifiers
+modify
+two
+categories
+access
+default
+protected
+private
+non-access
+final
+abstract
+strictfp
+details
+local
+non-static
+arrays
+store
+array
+heap
+declare
+initialize
+upcoming
+chapters
+enums
+introduced
+restrict
+predefined
+enumerated
+reduce
+number
+bugs
+application
+fresh
+juice
+shop
+glass
+size
+medium
+large
+make
+order
+freshjuice
+enum
+freshjuicesize
+meduim
+freshjuicetest
+juice.size
+freshjuice.freshjuicesize.meduim
+note
+declared
+inside
+constructors
+keywords
+shows
+reserved
+constant
+assert
+boolean
+break
+catch
+char
+const
+continue
+double
+extends
+float
+goto
+implements
+import
+instanceof
+int
+interface
+long
+package
+return
+short
+super
+switch
+synchronized
+throw
+throws
+transient
+volatile
+comments
+supports
+single-line
+multi-line
+similar
+comment
+single
+blank
+lines
+whitespace
+possibly
+totally
+ignores
+inheritance
+derived
+derive
+existing
+reuse
+fields
+rewrite
+scenario
+superclass
+subclass
+interfaces
+contract
+play
+vital
+role
+defines
+deriving
+explains
+session
+clear
+picture
+object-oriented
+fundamental
+concepts
+polymorphism
+encapsulation
+abstraction
+message
+parsing
+deep
+real-world
+find
+cars
+dogs
+humans
+color
+wagging
+compare
+real
+characteristics
+shown
+operate
+internal
+object-to-object
+communication
+done
+blue
+individual
+sample
+hungry
+sleeping
+blocks
+initialized
+destroyed
+completed
+instantiated
+loaded
+accessed
+constructor
+value
+kinds
+mentioned
+topics
+discussing
+subtopic
+explicitly
+builds
+invoked
+rule
+puppy
+parameter
+singleton
+purpose
+control
+creation
+limiting
+occur
+singletons
+resources
+database
+connections
+sockets
+connection
+jdbc
+driver
+multithreading
+made
+thread
+implementing
+easiest
+consists
+field
+result
+accessor
+getinstance
+initializer
+block
+simply
+returns
+singleton.java
+prevents
+instantiating
+instance
+singleton-ness
+demomethod
+singletondemo.java
+lasssingletondemo
+staticvoid
+tmp
+singleton.getinstance
+tmp.demomethod
+produce
+classic
+pattern
+classicsingleton
+null
+exists
+defeat
+instantiation
+maintains
+reference
+lone
+employs
+technique
+lazy
+ensures
+instances
+creating
+previously
+blueprints
+declaration
+new
+initialization
+call
+initializes
+passed
+statement
+mypuppy
+tommy
+passednameis
+accessing
+fully
+qualified
+objectreference
+objectreference.variablename
+objectreference.methodname
+puppyage
+setage
+getage
+newpuppy
+mypuppy.setage
+mypuppy.getage
+mypuppy.puppyage
+passedname
+rules
+last
+essential
+declaring
+statements
+non
+learning
+appended
+.java
+employee
+employee.java
+present
+imply
+levels
+explaining
+special
+anonymous
+categorizing
+hundreds
+life
+easier
+includes
+locate
+giving
+proper
+location
+example,the
+load
+java.io
+study
+employeetest
+four
+designation
+takes
+this.name
+assign
+empage
+empdesignation
+empdesig
+empsalary
+printemployee
+in-order
+separate
+creates
+invokes
+employeetest.java
+publicclassemployeetest
+publicstaticvoid
+empone
+newemployee
+smith
+emptwo
+mary
+anne
+empone.empage
+empone.empdesignation
+senior
+engineer
+empone.empsalary
+empone.printemployee
+emptwo.empage
+emptwo.empdesignation
+emptwo.empsalary
+emptwo.printemployee
+jamessmith
+seniorsoftwareengineer
+maryanne
+softwareengineer
+discuss
+memory
+locations
+reserve
+space
+allocates
+decides
+assigning
+integers
+decimals
+primitive
+supported
+named
+detail
+8-bit
+signed
+complement
+integer
+maximum
+inclusive
+place
+times
+smaller
+16-bit
+-32,768
+32,767
+32-bit
+2,147,483,648
+2,147,483,647
+generally
+integral
+concern
+64-bit
+-9,223,372,036,854,775,808
+9,223,372,036,854,775,807
+wider
+range
+100000l
+-200000l
+single-precision
+ieee
+floating
+numbers
+0.0f
+precise
+234.5f
+double-precision
+decimal
+choice
+0.0d
+represents
+bit
+true
+false
+flags
+track
+conditions
+unicode
+u0000
+uffff
+65,535
+lettera
+changed
+compatible
+animal
+giraffe

@@ -1,0 +1,830 @@
+widely used abstract
+abstract data type
+data structure implementing
+implementing this adt
+adt that simulates
+simulates a hierarchical
+hierarchical tree structure
+value and subtrees
+subtrees of children
+set of linked
+nodes a tree
+tree data structure
+collection of nodes
+data structure consisting
+list of references
+references to nodes
+reference is duplicated
+represented and worked
+separately by node
+list of nodes
+list of edges
+edges between nodes
+represent a digraph
+data structure made
+nodes or vertices
+vertices and edges
+cycle the tree
+null or empty
+tree a tree
+potentially many levels
+levels of additional
+nodes that form
+form a hierarchy
+root the top
+parent the converse
+notion of child
+child siblings nodes
+descendant a node
+reachable by repeated
+proceeding from parent
+parent to child
+ancestor a node
+proceeding from child
+child to parent
+leaf a node
+children internal node
+node a node
+child external node
+children degree number
+number of sub
+node edge connection
+path a sequence
+sequence of nodes
+nodes and edges
+connecting a node
+level the level
+node is defined
+number of connections
+height of tree
+tree the height
+number of edges
+longest downward path
+height of node
+node the height
+depth the depth
+tree s root
+root node forest
+forest a forest
+disjoint trees data
+trees data type
+type vs data
+concrete data structure
+value and children
+tree are interpreted
+list of children
+case the list
+group of nodes
+structure actually defines
+defines a directed
+two references point
+tree that violates
+references to trees
+linked tree data
+discussed implicitly assuming
+represented by references
+type a tree
+tree is defined
+list of trees
+possibly an empty
+tree t consists
+defined in terms
+terms of values
+assumes referential transparency
+lists of values
+list possibly empty
+references possibly null
+node n consists
+data structure defines
+add a condition
+reference can point
+root in fact
+node a list
+analyzing its global
+topologically a tree
+defined below type
+abstract tree type
+abstract forest type
+terms of type
+inductive type defined
+tree with root
+generally with values
+root " direction
+underlying undirected graph
+vertices are connected
+vertex is designated
+determines the direction
+parentand the node
+node often trees
+two child nodes
+twonon-empty child nodes
+allowing empty trees
+empty trees makes
+makes some definitions
+trees are allowed
+empty trees simplify
+trees simplify defining
+simplify defining fixed
+defining fixed branching
+fixed branching factor
+empty trees allowed
+.the complete sets
+sets of operations
+operations on tree
+tree must include
+include fork operation
+fork operation terminology
+terminology a node
+value or condition
+represent a separate
+separate data structure
+trees are drawn
+parent an internal
+inode for short
+nodes the topmost
+root node depending
+depending on definition
+case all trees
+trees are non-empty
+pass from parents
+parents to children
+post-order depth-first search
+first visit leaf
+visit leaf nodes
+access the value
+value of leaf
+visit the root
+access the children
+edges or links
+node has special
+properties every node
+tree the depth
+node has depth
+nodes have height
+root and leaf
+depth and height
+descendants in t.c
+nodes thus correspond
+correspond to subtrees
+subtree it determines
+drawing trees trees
+plane ordered trees
+fixes a conventional
+arranges the child
+first incoming parent
+incoming parent edge
+first child edge
+yields an embedding
+determines an ordering
+places the root
+parents above children
+places all nodes
+terms of number
+obtains a standard
+ways to represent
+trees ; common
+common representations represent
+represent the nodes
+dynamically allocated records
+records with pointers
+list of lists
+values are lists
+value of first
+child in general
+general a node
+expanding the data
+include a pointer
+child node data
+threaded binary tree
+binary tree generalizations
+tree generalizations digraphs
+digraphs if edges
+generalized to representdirected
+graphs by removing
+removing the constraints
+cycles are allowed
+considered as pairs
+pairs of nodes
+parent and child
+source and target
+implementation strategies exist
+local data structure
+node with value
+value and list
+structures as adjacency
+lists in graph
+connected acyclic graph
+graph theory trees
+trees and graphs
+graphs are assumed
+trees and trees
+trees as data
+arbitrary undirected tree
+directed by making
+making them point
+root node producing
+producing an arborescence
+arborescence and assign
+assign an order
+nodes the result
+data structure picking
+define an ordered
+union of subtrees
+taking the subtree
+erasing the root
+subtrees are natural
+natural for recursion
+forests are natural
+natural for corecursion
+represented by root
+traversal methods main
+methods main article
+tree traversal stepping
+connections between parents
+parents and children
+walking the tree
+node a walk
+node is traversed
+children are traversed
+parents are traversed
+node s left
+finally its right
+subtree are traversed
+specifically a binary
+walk effectively performs
+performs a breadth-first
+tree ; nodes
+nodes are traversed
+level by level
+node is visited
+direct child nodes
+computer science
+abstract data
+data type
+data structure
+hierarchical tree
+tree structure
+root value
+parent node
+linked nodes
+tree data
+root node
+structure consisting
+ordered tree
+value assigned
+adjacency list
+structure made
+empty tree
+empty consists
+additional nodes
+hierarchy root
+top node
+tree parent
+converse notion
+child siblings
+siblings nodes
+parent descendant
+child ancestor
+parent leaf
+internal node
+external node
+children degree
+degree number
+sub trees
+node edge
+edge connection
+edges connecting
+descendant level
+root height
+longest downward
+downward path
+leaf height
+leaf depth
+node forest
+disjoint trees
+trees data
+concrete data
+linked list
+finite trees
+case trees
+fixed size
+branching factor
+linked tree
+references point
+single parent
+null reference
+empty list
+mutual recursion
+basic examples
+tree consists
+functional languages
+referential transparency
+simply lists
+structure defines
+directed graph,b
+global structure
+tree point
+type theory
+abstract tree
+tree type
+abstract forest
+forest type
+inductive type
+type defined
+constructors nil
+empty forest
+values attached
+rooted tree
+narrow term
+directed graph
+undirected graph
+simple path
+distinguished root
+arrows point
+edge points
+child nodes
+twonon-empty child
+binary tree
+allowing empty
+empty trees
+trees makes
+definitions simpler
+trees simplify
+trees allowed
+.the complete
+complete sets
+include fork
+fork operation
+operation terminology
+separate data
+childsparent node
+ancestor node
+branch node
+outer node
+leaf node
+terminal node
+topmost node
+node depending
+tree begin
+children note
+post-order depth-first
+depth-first search
+first visit
+visit leaf
+leaf nodes
+first access
+formal definition
+special properties
+root path
+self-balancing trees
+avl trees
+single node
+tree consisting
+node corresponds
+entire tree
+proper subtree
+proper subset
+drawing trees
+trees trees
+plane ordered
+ordered trees
+plane trees
+conventional order
+first incoming
+incoming parent
+parent edge
+first child
+child edge
+ambient isotopy
+embedding determines
+family tree
+horizontal line
+standard drawing
+left node
+represent trees
+common representations
+representations represent
+allocated records
+binary heap
+first term
+left child
+future terms
+right child
+lisp s-expressions
+stored separately
+upward links
+child node
+node data
+threaded binary
+tree generalizations
+generalizations digraphs
+special case
+representdirected graphs
+allowed edges
+terms parent
+implementation strategies
+strategies exist
+local data
+adjacency lists
+graph theory
+acyclic graph
+theory trees
+assumed undirected
+one-to-one correspondence
+undirected tree
+edges directed
+node producing
+result corresponds
+structure picking
+ordering produces
+children define
+ordered forest
+breadth-first search
+root nodes
+traversal methods
+main article
+tree traversal
+traversal stepping
+pointer arrives
+pre-order walk
+respective parents
+post-order walk
+left subtree
+right subtree
+in-order traversal
+last scenario
+level-order walk
+traversed level
+direct child
+grandchild nodes
+computer
+science
+tree
+widely
+abstract
+data
+type
+adt
+structure
+implementing
+simulates
+hierarchical
+root
+value
+subtrees
+children
+parent
+node
+represented
+set
+linked
+nodes
+defined
+recursively
+locally
+collection
+starting
+consisting
+list
+references
+constraints
+reference
+duplicated
+points
+alternatively
+abstractly
+globally
+ordered
+assigned
+perspectives
+analyzed
+mathematically
+worked
+separately
+adjacency
+edges
+represent
+digraph
+instance
+talk
+general
+possibly
+non-linear
+made
+vertices
+cycle
+null
+empty
+consists
+potentially
+levels
+additional
+form
+hierarchy
+top
+converse
+notion
+child
+siblings
+descendant
+reachable
+repeated
+proceeding
+ancestor
+leaf
+internal
+external
+degree
+number
+sub
+trees
+edge
+connection
+path
+sequence
+connecting
+level
+connections
+height
+longest
+downward
+depth
+forest
+disjoint
+distinction
+concrete
+analogous
+interpreted
+finite
+case
+required
+non-empty
+fixed
+size
+branching
+factor
+binary
+desired
+group
+defines
+directed
+graph,a
+loops
+loop
+requirement
+two
+point
+single
+fact
+violates
+corrupt
+due
+discussed
+implicitly
+assuming
+implemented
+recursive
+symbolically
+elegantly
+mutual
+recursion
+basic
+examples
+terms
+note
+definition
+values
+functional
+languages
+assumes
+referential
+transparency
+simply
+lists
+graph,b
+add
+condition
+global
+topology
+parents
+analyzing
+topologically
+theory
+functions
+nil
+axioms
+inductive
+constructors
+mathematical
+viewed
+generally
+attached
+concretely
+rooted
+direction
+narrow
+term
+arborescence
+meaning
+graph
+underlying
+undirected
+connected
+simple
+distinguished
+vertex
+designated
+determines
+arrows
+parentand
+ordering
+properly
+bounded
+outdegree
+twonon-empty
+allowing
+makes
+definitions
+simpler
+complicated
+allowed
+hand
+simplify
+defining
+.the
+complete
+sets
+operations
+include
+fork
+operation
+terminology
+separate
+convention
+drawn
+growing
+childsparent
+superior
+inode
+short
+branch
+similarly
+outer
+terminal
+topmost
+depending
+necessarily
+algorithms
+begin
+pass
+post-order
+depth-first
+search
+first
+visit
+access
+last
+i.e
+reached
+links
+formal
+unique
+diagrams
+conventionally
+heaps
+special
+properties
+subtree
+length
+commonly
+needed
+manipulation
+self-balancing
+avl
+descendants
+t.c
+correspond
+corresponds
+entire
+proper
+analogy
+subset
+drawing
+plane
+essentially
+uniquely
+fixes
+conventional
+order
+counterclockwise
+arranges
+incoming
+yields
+embedding
+ambient
+isotopy
+conversely
+places
+family
+distance
+horizontal
+line
+obtains
+standard
+left
+right
+representations
+ways
+common
+dynamically
+allocated
+records
+pointers
+items
+array
+relationships
+determined
+positions
+e.g
+heap
+head
+tail
+future
+modified
+lisp
+s-expressions
+information
+included
+expanding
+pointer
+stored
+upward
+threaded
+generalizations
+digraphs
+thought
+generalized
+representdirected
+graphs
+removing
+cycles
+considered
+pairs
+replaced
+source
+target
+implementation
+strategies
+exist
+local
+structures
+acyclic
+stated
+assumed
+one-to-one
+correspondence
+arbitrary
+arbitrarily
+pick
+make
+making
+producing
+assign
+result
+picking
+produces
+define
+union
+equivalently
+taking
+erasing
+natural
+forests
+corecursion
+breadth-first
+traversal
+methods
+main
+article
+stepping
+means
+walking
+action
+walk
+performed
+arrives
+traversed
+pre-order
+respective
+finally
+in-order
+scenario
+referring
+specifically
+level-order
+effectively
+performs
+entirety
+visited
+direct
+grandchild

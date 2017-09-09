@@ -1,0 +1,476 @@
+in today's class we will be talking about ordered dictionaries um [noise] 
+
+
+1.16
+and we also going to be look at binary search trees which is perhaps 1.21
+
+
+one of the simplest ways way of implementing ordered dictionaries so what is an ordered dictionaries um
+so it is essentially that you have dictionary functionality 
+
+
+
+
+1.28
+right so recall dictionary was that you have key elements pairs yeah and you use the to insert an element to search for an element or to delete an element 
+besides that in an ordered dictionary you have the notion of the minimum the element with the minimum key element with maximum key and the notion of predecessor successor right okay
+so when i say minimum key what that it means there is some kind of a total order of a keys right
+this is different from when we are talked about hashing when we talked about dictionary if we recall we said the only operation that will ever need to know do on the keys is to compare to keys for equality 
+given two keys we are to decide whether same or not 
+so here we we are going to the 2.24
+
+
+
+
+excepting more out of  our keys 
+here we are going to assume there is some kind of a ordering relation of the keys so that given two keys i can either decide whether they are equal if they are not equal then i can say one is less than the other one is larger than the other yeah 
+there is ordering relation keys [noise] um what are the parameters your saying to the function predecessor and successor 
+
+
+
+2.50
+have just shown s as the the ordered dictionary as one of the parameters need not be yeah 
+so in particular you could think of a predecessor taking only one parameter [noise] which is a key 
+so predecessor k would be give me the key which precedes k 3.07
+
+
+
+
+
+in in the total order [noise] 
+in the total order in the dictionary right 
+[HINDI] certain keys in dictionaries s right 
+so give me the one which precedes key k and which lies  in the dictionary [noise] exactly 
+so keys are the elements 
+
+
+
+
+3.34
+the the particular field all the part of data which on the things are ordered right there is a total ordered on the keys 
+so similarly successor function 3.44
+
+
+
+3.45
+ so what one way you can implement such a ordered dictionary 
+so two trivals doing both cases we say using list kind of data structure 
+so in unordered list would just keep all the elements in here
+so all have shown here are the key yeah 
+since it is unordered taking only constant amount of time searching will take ordered n time in the worst case because there is no order might i have to go through entire list before i found out the entire elements and deletion how much time deletion take order n because first we have to search for 4.18
+
+
+
+
+
+
+element that we are trying to delete  yeah how much time would  successor take here [noise] order n not order one because 
+
+
+
+
+4.33
+suppose i say what is the successor of twelve in this in this dictionary 
+successor of twelve is not twenty two it is fourteen right which is the key following twelve in the ordered relation 
+so the ordered relation assuming just the the order on the integers yeah
+so twelve is the smallest key fourteen is the key larger than that eighteen twenty two thirty four is the largest key in it 
+yeah given twelve from twelve i have to given the key twelve i have to run through this entire thing to find out the one which was the smallest key larger than twelve yeah 
+both successor and predecessor and min and max will all take order n time 
+so fairly inefficient  implementation 
+an ordered list on the other hand lets say we ordered the thing according to the total order of keys right 
+so now minimum takes only constant time maximum also we can organize it takes constant time 
+let say i have a pointer reference to the end in this list 5.36
+
+
+
+
+yeah um successor also take constant time because given a particular node 
+
+
+
+
+5.43
+i can just go to next one will give me the successor say predecessor takes constant 
+time 5.48
+
+
+
+
+
+[noise] yeah of course so it depends upon how you given the node when i asked for successor if you have to search for the node then of course it will take order n time because you might have to go throw this entire list to reach that node yeah
+but if i tell you where the node i gave you 
+
+
+
+
+6.03
+lets say reference to this particular node in this list
+then you can compute the successor and predecessor in constant time right 
+inserting also takes n times because you have to find out way to insert [HINDI] right
+you have to find out the correction position for insertion 
+okay searching takes n order time because again we may be the run through the entire thing 
+if we use an array searching can improve right 
+see an example we seen how to do this6.31
+
+
+
+
+6.33
+we use binary search to do that right
+if you put the elements they are ordered put them in an array then we can do binary search to find out the element logarithmic time log in time right but binary search [HINDI] if we do binary search then 	 now insertion and deletion still take order n time right 
+while we can find out what is the right place to insert 6.54
+
+
+
+
+
+an element will have to shift all the elements to the right yeah so it takes lot of time to do insertion 
+similarly for deletion we know where the element is which we trying to delete the we have to shift everything to the left yeah 
+every one follows this okay this is just had
+
+
+
+
+7.15
+to recap what binary search so you remember binary search to search for twenty two you go to middle element twenty two is larger the right twenty five smaller go to the left so on and on 
+and in that manner you will eventually end up with the array location which has twenty two or an array location  which does not have twenty two inch away case able to say whether twenty two  is their or not there 7.42
+
+
+
+
+
+
+and the number of comparisons you would take in the process only logarithmic because 
+
+
+
+
+7.49
+well at each point make a every time make a comparison size of the array which you making the search halves so you the number of time you halve n to get down in to one  only log of n and so you will take order log n time to do the searching as to recall insertion and deletion i say that will take order n time 
+any questions still this point this was the trivial way trivial's way to adopt 8.10
+
+
+
+
+
+
+
+
+to implement a ordered dictionary 
+right but we are not here to talk about trivialities 
+so we are going to look at something more interesting right
+that's called a binary search right what is the binary search binary search tree is a binary tree which has search property 
+
+
+
+
+8.32
+right recall what is the binary tree 
+binary tree is a tree in which every node has at most two  children right 
+a node can have one child two child or no children no children means it is a leaf node and now there is a search property that we are talking out 
+so each node is going to contain a key and element 
+in most of the following in that discussion follows not about talking about the element at all
+we are just interested in the keys 8.58
+
+
+
+
+
+
+so what is shown here written on the nodes are the keys right 
+now what is binary search property 
+
+
+
+
+9.05
+the binary search property says the following 
+all the keys which are less than five 
+will be in the left sub tree all keys which are larger than five will be in the right sub tree and this property holds at every node not just at the root node [HINDI] right sub tree which have keys larger than three 
+not all keys which are larger than three of course there are keys larger than three here but basically if i look at the left sub tree all the keys in the left sub tree will be less than this node 
+all the keys in the right sub tree will be larger than this node 
+similarly for this tree 
+all the keys in the right sub tree as you can see are larger than this key value 
+all the keys in the left sub tree there is no left sub tree nothing to talk about here 
+if i look at this node all keys in the left sub tree are less than seven all keys in the right sub tree larger than seven right this is called search property 10.05
+
+
+
+
+
+a binary tree in which the nodes have keys which satisfies property so the search properties is satisfied is called a binary search 
+okay
+
+is that clear
+so binary tree plus search property equals binary search tree 
+so 
+
+
+
+
+10.26
+if i have these set of keys two three five five seven eight then i can 
+this is the binary search tree  with this keys in it
+this is also another binary search tree with the same set of keys 
+you can have many different kinds of trees with the same set of keys 
+both of them are binary search tree because they both are binary satisfy the search property [noise] 10.54
+
+
+
+
+
+
+it is implementation right 
+so keys stored left sub tree of v less than or equal to k 
+now you have to somewhere put okay 
+so there are couple of features here 
+here i am assuming that you might have keys which are also two keys which two keys which are the same right
+so quite often this doesn't happen very often 
+so quite often you would be using dictionaries only in settings were the keys are unique 	 right 
+an element has a unique key 
+no two keys are the same 
+but suppose you had the setting were two keys could be the same right can happen right 
+suppose your key was your name 
+name of a student right 
+you can define total order names let say geographic order alphabetic order and then two names could be the same so you could have settings in which keys are the two keys are the same 
+now then we have to [noise] put um you know 
+
+
+
+11.54
+then we have to decide whether if a key is equal whether it should go to the left sub tree or it should go to the right sub tree and we can decide one way or other lets say we say to the left 
+we could easily have said it goes to the right  yeah
+there is no problem with that 
+um 
+here i am actually permitting it goes to both ways 
+either go to the left or go to the right 
+any problem 12.25
+
+
+
+so don't okay so for the rest of the discussion let me just assume the keys are unique right
+otherwise it necessarily complicate matters 
+so we ill just assume keys are unique do other entire discussion see if there is any need of duplicate key is what should we do then right 
+if there are duplicate keys what how do you handle that 
+suppose you want to search in a binary search right
+
+
+
+
+
+12.51
+given a particular key 
+so after all dictionary we are implementing dictionary
+so given a particular key i want to find out where the element is okay 
+so let me first show an example 12.59
+
+
+
+
+13.00
+suppose i want to search which this is my tree and i want to search for eleven right 
+i come to the root  i compare eleven to the key setting here which is five right
+eleven is larger than five 
+so search property says that eleven has to be in the right sub tree yeah
+that was the search property keys which are larger than the here will be in the right keys which are smaller will be in the left 
+so wee go to the right sub tree [HINDI] this eleven is larger than ten 
+so once again if it is there at all tree it has to be there in the right sub tree hence we go the right sub tree and we go to the right sub tree we compare eleven then with this we find eleven here 
+so we are done 
+we found eleven 
+yes  [noise] 13.52
+
+
+
+
+13.54
+that was being said here to find an element key k in a tree T 
+this is the tree 
+you are given a key k ill compare key k with the root with the key in the root 
+if k is less than k root then you search for the key in the left sub tree 
+otherwise you will search k in the right
+okay 14.21
+
+
+
+14.23
+suppose same example but now searching for six 
+so we come here six is larger 
+so we go right okay 
+then wee compare six to ten 
+six with ten 
+six is smaller 
+so we go left 
+then we compare six with seven 
+six is smaller 
+so we try to go left 
+but the left child id null 
+so its not there 14.51
+
+
+because if it were there it has to be here 
+it has to be in the right sub tree of this guy 
+
+
+
+14.56
+because six is larger than five it has to be in the left sub tree this guy because its less than ten 
+it has to be in the left sub tree of seven it is less than six less than seven 
+so if six were their to be here and since it is not here its not there 
+any questions [noise] 15.24
+
+
+
+
+
+so sorry lets see what you are trying to say just once again what what's your question 
+no question [noise]
+okay good
+so we can write the binary search this search procedure binary search tree either as a recursive procedure its an iterative procedure right
+so the the recursive procedure perhaps the simplest to understand 
+so you are searching for 
+
+
+
+
+
+16.20
+key k in a tree t right 
+so you look at the root  of T 
+lets say that its x 
+if x equals nil which means there is no root empty tree then you essentially saying that nothing is their 
+so just forget this for now 
+if the key in this node x when this root node x 
+is equal to one you searching for  then you just return the root node 
+if it is less than the key in the root node if k is less than the key in the root node then you have to recursively search in the left sub tree 
+so your are searching in the left sub tree of x 
+and what you are searching for searching for k yes [noise] 17.44
+
+
+
+okay what is the left of x doing okay
+this is all pseudo code 
+so please don't 
+
+
+
+17.48
+try to [noise] left of x let me come to what your question is 
+x is a reference to a particular node right 
+so x begin with refers to the root of the tree and then left of x is the is a reference to a left sub tree now to the root of the left sub tree 18.04
+
+
+
+
+
+
+right so its referring to that and we searching for k in there okay 
+so that's what we have to do 
+and if key is larger than key in the node then have to search for k in the right sub tree okay
+this si clear with every one 
+okay  good 
+lets go to the iterative version 
+the iterative version we are not going to make recursive calls to the search for procedure
+what we are going to do is
+just we are going to do  in as we are doing in the search we are just going keep matching down the same tree right 
+we start with x 
+
+
+
+
+18.35
+referring to the root of the tree well if x is nil which means it's a empty tree 
+and k is not the key in the root 
+then we ill do something what we ill do 
+if k is less than the key then we have to go left right
+so x now becomes the left child 
+so x now gets the value of the left child of this current node 19.00
+
+
+
+[noise] 
+is it define differently [noise] 
+okay yeah may be 
+right 
+we started of with x 
+
+
+
+
+
+
+
+
+referring to this guy and then we said if k 
+so suppose there is key k one here with searching for 
+the key k if k is less than k one then we go left 
+if k is more than k one we go right 
+yeah 
+since we go left here we are now continuing the search here 
+so x is getting 	new value which is either x dot left child either you want to call this way right or actually code just showed you now i have written it as x gets left x right 
+pseudo code i can use any one of these so this is what it gets and we continue this search
+we are basically may be the next step we go right so on and on till we reach here 
+this is were our node 
+so will keep getting modified first it will pointing to this node then its pointing to this node pointing to this node and eventually pointing to this node right keep getting modified right (board time 21.02)
+
+
+
+
+
+how much search take [noise] right 
+so if 
+so lets look at the iterative version of the [noise] search right what we did was that with each 
+
+
+
+21.15
+each time we went through this while loop which is right here we came down one level in the tree 
+we went from a node to one of its children node child nodes either the left child of the node or the right child of the node [HINDI] we can came down one level right 21.33
+
+
+
+
+we started a level zero which is the root then we came after 
+
+
+21.37
+one run of while loop we came to one level after that we came to level two level three so on 
+so 
+how many times this while loop executed the maximum number of levels in the tree and what is a maximum number of levels in a tree so the height of the tree right 
+so the height if the height of the tree is h then the running time of procedure is no more than h 
+so order h is the running time of procedure 
+everyone understand this simple 22.02
+
+
+
+
+okay now h recall can be very large 
+i might have a tree on n nodes whose height is order n yes and 
+‘
+
+
+22.20
+we will come we ill see what kind of situations happens but note that the height of the tree could be very large 
+the search time is only order h the height of the tree order the height of the tree but the height of the tree particular can be has large has the number of nodes in the tree 22.45
+
+
+
+
+22.48
+let look lets look at other procedure that of finding the minimum element in the tree right 22.58
+
+
+
+how does where does minimum element in a binary search tree [noise] why left most tree 
+left most leaf left most leaf [noise]left most node or left most tree [noise] left most leaf okay lets see why that wrong 
+
+
+
+
+
+suppose i have a tree which looks like the following [noise] 
+okay i need to put up in a so its look like a binary search tree 
+so lets put in seven five six twelve thirteen eleven ten 
+this is the binary search tree yeah okay 
+this is the smallest node 
+
+ 

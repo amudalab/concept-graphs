@@ -1,0 +1,10 @@
+Row 1::Height 2::hash-code maps (2)
+Row 2::Height 1::polynomial accumulation: for strings of a natural
+Row 3::Height 1::language, combine the character values (ascii or unicode) a0a1...an-1 by viewing them as the
+Row 4::Height 1::coefficient of a polynomial
+Row 5::Height 1::a0+a1x+...+xn-1an-1
+Row 6::Height 1::the polynomial is computer with horner's rule,
+Row 7::Height 1::ignoring overflows, at a fixed value x:
+Row 8::Height 1::a0+x(a1+...x(an-2+xan-1)..))
+Row 9::Height 1::the choice x=33,37,39, or 41	gives me atmost 6 collisions on a vocabulary of 50,000 english
+Row 10::Height 1::words.

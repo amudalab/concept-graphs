@@ -1,0 +1,4243 @@
+peter baer galvin::peter baer galvin
+operating system concepts::operating system concepts
+view really shows::view really shows
+shows the complete::shows the complete
+good overall picture::good overall picture
+system * computer::system * computer
+apps + users::apps + users
+serves as interface::serves as interface
+apps & users::apps & users
+services for apps::services for apps
+distinction between system::distinction between system
+applications and 3rd::applications and 3rd
+party or user::party or user
+fit together figure::fit together figure
+modern computer system::modern computer system
+system 1.2.1 computer-system::system 1.2.1 computer-system
+1.2.1 computer-system operation::1.2.1 computer-system operation
+operation * bootstrap::operation * bootstrap
+program * shared::program * shared
+memory between cpu::memory between cpu
+slicing for multi-process::slicing for multi-process
+operation * interrupt::operation * interrupt
+implementation of system::implementation of system
+system calls figure::system calls figure
+single process doing::single process doing
+process doing output::process doing output
+output 1.2.2 storage::output 1.2.2 storage
+1.2.2 storage structure::1.2.2 storage structure
+structure * main::structure * main
+loaded into ram::loaded into ram
+ram to run::ram to run
+run o instructions::run o instructions
+instructions and data::instructions and data
+fetched from ram::fetched from ram
+ram into registers::ram into registers
+registers o ram::registers o ram
+ram is volatile::ram is volatile
+medium " size::medium " size
+size and speed::size and speed
+memory is faster::memory is faster
+expensive per bit::expensive per bit
+registers o cpu::registers o cpu
+cache * non-volatile::cache * non-volatile
+permanent " storage::permanent " storage
+disks o magnetic::disks o magnetic
+disks o optical::disks o optical
+magnetic tapes figure::magnetic tapes figure
+1.2.3 i structure::1.2.3 -NONE- structure
+structure * typical::structure * typical
+typical operation involves::typical operation involves
+involves i requests::involves JJ requests
+direct memory access::direct memory access
+interrupt handling figure::interrupt handling figure
+computer system works::computer system works
+kinds of computer::kinds of computer
+environments 1.3.1 single-processor::environments 1.3.1 single-processor
+1.3.1 single-processor systems::1.3.1 single-processor systems
+cpu which manages::cpu which manages
+manages the computer::manages the computer
+computer and runs::computer and runs
+runs user apps::runs user apps
+run user apps::run user apps
+apps 1.3.2 multiprocessor::apps 1.3.2 multiprocessor
+1.3.2 multiprocessor systems::1.3.2 multiprocessor systems
+economy of scale::economy of scale
+shared among processors::shared among processors
+reliability o failure::reliability o failure
+cpu slows system::cpu slows system
+processing provides system::processing provides system
+system of checks::system of checks
+checks and balances::checks and balances
+symmetric multiprocessing architecture::symmetric multiprocessing architecture
+multiprocessing architecture figure::multiprocessing architecture figure
+chip 1.3.3 clustered::chip 1.3.3 clustered
+1.3.3 clustered systems::1.3.3 clustered systems
+systems * independent::systems * independent
+shared common storage::shared common storage
+storage and connected::storage and connected
+considerations for access::considerations for access
+access to shared::access to shared
+storage are required::storage are required
+distributed lock management::distributed lock management
+collaboration protocols figure::collaboration protocols figure
+structure a time-sharing::structure a time-sharing
+management * process::management * process
+management * job::management * job
+scheduling * resource::scheduling * resource
+resource allocation strategies::resource allocation strategies
+strategies * swap::strategies * swap
+memory in physical::memory in physical
+memory * interrupt::memory * interrupt
+handling * file::handling * file
+file system management::file system management
+management * protection::management * protection
+protection and security::protection and security
+security * inter-process::security * inter-process
+inter-process communications figure::inter-process communications figure
+operating-system operations interrupt-driven::operating-system operations interrupt-driven
+operations interrupt-driven nature::operations interrupt-driven nature
+nature of modern::nature of modern
+modern oses requires::modern oses requires
+requires that erroneous::requires that erroneous
+dual-mode and multimode::dual-mode and multimode
+operation * user::operation * user
+mode when executing::mode when executing
+executing harmless code::executing harmless code
+code in user::code in user
+applications * kernel::applications * kernel
+a.k.a system mode::a.k.a system mode
+executing potentially dangerous::executing potentially dangerous
+potentially dangerous code::potentially dangerous code
+executed in kernel::executed in kernel
+mode * kernel::mode * kernel
+entered by making::entered by making
+making system calls::making system calls
+system calls user::system calls user
+calls user code::calls user code
+flip the mode::flip the mode
+switch * modern::switch * modern
+modern computers support::modern computers support
+computers support dual-mode::computers support dual-mode
+support dual-mode operation::support dual-mode operation
+operation in hardware::operation in hardware
+modern oses support::modern oses support
+oses support dual-mode::oses support dual-mode
+dual-mode operation figure::dual-mode operation figure
+transition from user::transition from user
+user to kernel::user to kernel
+concept of modes::concept of modes
+single mode bit::single mode bit
+bit * cpus::bit * cpus
+cpus that support::cpus that support
+virtual machine manager::virtual machine manager
+system the vmm::system the vmm
+privileges than ordinary::privileges than ordinary
+ordinary user programs::ordinary user programs
+kernel * system::kernel * system
+form of software::form of software
+hardware s interrupt::hardware s interrupt
+handler to transfer::handler to transfer
+switching the mode::switching the mode
+bit to kernel::bit to kernel
+process the interrupt::process the interrupt
+interrupt handler checks::interrupt handler checks
+interrupt was generated::interrupt was generated
+checks additional parameters::checks additional parameters
+passed through registers::passed through registers
+kernel service routine::kernel service routine
+routine to handle::routine to handle
+handle the service::handle the service
+call * user::call * user
+programs  attempts::programs  attempts
+attempts to execute::attempts to execute
+execute illegal instructions::execute illegal instructions
+privileged or non-existent::privileged or non-existent
+access forbidden memory::access forbidden memory
+forbidden memory areas::forbidden memory areas
+generate software interrupts::generate software interrupts
+handler and control::handler and control
+control is transferred::control is transferred
+possibly dumps data::possibly dumps data
+terminates the offending::terminates the offending
+program 1.5.2 timer::program 1.5.2 timer
+kernel begins executing::kernel begins executing
+begins executing user::begins executing user
+executing user code::executing user code
+timer is set::timer is set
+set to generate::set to generate
+generate an interrupt::generate an interrupt
+timer interrupt handler::timer interrupt handler
+interrupt handler reverts::interrupt handler reverts
+handler reverts control::handler reverts control
+system * timer::system * timer
+requiring kernel mode::requiring kernel mode
+creating and deleting::creating and deleting
+deleting both user::deleting both user
+user and system::user and system
+processes * ensuring::processes * ensuring
+processes * suspending::processes * suspending
+suspending and resuming::suspending and resuming
+processes * process::processes * process
+synchronization and communication::synchronization and communication
+communication * deadlock::communication * deadlock
+blocks of memory::blocks of memory
+processes * determining::processes * determining
+determining which blocks::determining which blocks
+blocks of code::blocks of code
+code and data::code and data
+data to move::data to move
+out of memory::out of memory
+allocating and deallocating::allocating and deallocating
+memory as needed::memory as needed
+management 1.8.1 file-system::management 1.8.1 file-system
+1.8.1 file-system management::1.8.1 file-system management
+files and directories::files and directories
+directories * supporting::directories * supporting
+primitives for manipulating::primitives for manipulating
+files onto secondary::files onto secondary
+storage * backing::storage * backing
+backing up files::backing up files
+files onto stable::files onto stable
+stable permanent storage::stable permanent storage
+permanent storage media::permanent storage media
+media 1.8.2 mass-storage::media 1.8.2 mass-storage
+1.8.2 mass-storage management::1.8.2 mass-storage management
+free disk space::free disk space
+disk space management::disk space management
+management * storage::management * storage
+allocation * disk::allocation * disk
+disk scheduling note::disk scheduling note
+note the trade-offs::note the trade-offs
+trade-offs regarding size::trade-offs regarding size
+mass storage devices::mass storage devices
+including floppy disks::including floppy disks
+smaller higher-speed storage::smaller higher-speed storage
+higher-speed storage space::higher-speed storage space
+storage space serves::storage space serves
+frequently needed portions::frequently needed portions
+portions of larger::portions of larger
+larger slower storage::larger slower storage
+slower storage areas::slower storage areas
+hierarchy of memory::hierarchy of memory
+memory storage ranges::memory storage ranges
+ranges from cpu::ranges from cpu
+registers to hard::registers to hard
+drives and external::drives and external
+responsible for determining::responsible for determining
+determining what information::determining what information
+information to store::information to store
+level of cache::level of cache
+choice of cache::choice of cache
+impact on system::impact on system
+performance * data::performance * data
+drive to main::drive to main
+data being written::data being written
+path each step::path each step
+fetch more data::fetch more data
+cache the excess::cache the excess
+excess in order::excess in order
+order to satisfy::order to satisfy
+satisfy future requests::satisfy future requests
+future requests faster::future requests faster
+faster for writing::faster for writing
+amounts of data::amounts of data
+fill an entire::fill an entire
+entire " block::entire " block
+complicated when multiple::complicated when multiple
+worse multiple computers::worse multiple computers
+access common data::access common data
+important to ensure::important to ensure
+1.8.4 i systems::1.8.4 -NONE- systems
+i subsystem consists::NNP subsystem consists
+component that includes::component that includes
+general device-driver interface::general device-driver interface
+interface * drivers::interface * drivers
+drivers for specific::drivers for specific
+specific hardware devices::specific hardware devices
+unix implements multiple::unix implements multiple
+implements multiple device::implements multiple device
+multiple device interfaces::multiple device interfaces
+types of devices::types of devices
+accessing the device::accessing the device
+character by character::character by character
+block by block::block by block
+doing a long::doing a long
+size " field::size " field
+major and minor::major and minor
+minor device numbers::minor device numbers
+major number signifies::major number signifies
+signifies which device::signifies which device
+device driver handles::device driver handles
+block or character::block or character
+options usually differ::options usually differ
+security * protection::security * protection
+protection involves ensuring::protection involves ensuring
+interfere with resources::interfere with resources
+e.g " protection::e.g " protection
+variables are misused::variables are misused
+security involves protecting::security involves protecting
+protecting the system::protecting the system
+system from deliberate::system from deliberate
+attempting to gain::attempting to gain
+gain unauthorized access::gain unauthorized access
+access and privileges::access and privileges
+external attackers attempting::external attackers attempting
+attempting to access::attempting to access
+access or damage::access or damage
+damage the system::damage the system
+kernel data structures::kernel data structures
+structures 1.10.4 bitmaps::structures 1.10.4 bitmaps
+collection of objects::collection of objects
+state of blocks::state of blocks
+disk or pages::disk or pages
+pages in memory::pages in memory
+environments 1.11.1 traditional::environments 1.11.1 traditional
+1.11.1 traditional computing::1.11.1 traditional computing
+computing 1.11.2 mobile::computing 1.11.2 mobile
+1.11.2 mobile computing::1.11.2 mobile computing
+computing * computing::computing * computing
+computing on small::computing on small
+small handheld devices::small handheld devices
+phones or tablets::phones or tablets
+opposed to laptops::opposed to laptops
+fall under traditional::fall under traditional
+advantage of additional::advantage of additional
+additional built-in sensors::additional built-in sensors
+internet using wireless::internet using wireless
+cellular telephone technology::cellular telephone technology
+technology * limited::technology * limited
+limited in storage::limited in storage
+computing power relative::computing power relative
+generally uses slower::generally uses slower
+consume less battery::consume less battery
+power and produce::power and produce
+produce less heat::produce less heat
+two dominant oses::two dominant oses
+dominant oses today::dominant oses today
+today are google::today are google
+android and apple::android and apple
+ios 1.11.3 distributed::ios 1.11.3 distributed
+1.11.3 distributed systems::1.11.3 distributed systems
+systems * distributed::systems * distributed
+distributed systems consist::distributed systems consist
+consist of multiple::consist of multiple
+network and cooperating::network and cooperating
+fashion * networks::fashion * networks
+networks may range::networks may range
+range from small::range from small
+small tight lans::small tight lans
+lans to broad::lans to broad
+broad reaching wans::broad reaching wans
+wans o wan::wans o wan
+wan = wide::wan = wide
+wide area network::wide area network
+corporation o man::corporation o man
+man = metropolitan::man = metropolitan
+metropolitan area network::metropolitan area network
+covering a region::covering a region
+region the size::region the size
+lan = local::lan = local
+local area network::local area network
+campus o pan::campus o pan
+pan = personal::pan = personal
+personal area network::personal area network
+network access speeds::network access speeds
+network may range::network may range
+form of file::form of file
+access to complex::access to complex
+complex well-coordinated network::complex well-coordinated network
+well-coordinated network operating::well-coordinated network operating
+network operating systems::network operating systems
+systems * shared::systems * shared
+resources may include::resources may include
+resources 1.11.4 client-server::resources 1.11.4 client-server
+1.11.4 client-server computing::1.11.4 client-server computing
+server provides services::server provides services
+systems which serve::systems which serve
+serve as clients::serve as clients
+clients and servers::clients and servers
+servers are processes::servers are processes
+process may act::process may act
+client and server::client and server
+resources * served::resources * served
+include disk space::include disk space
+system 1.11.5 peer-to-peer::system 1.11.5 peer-to-peer
+1.11.5 peer-to-peer computing::1.11.5 peer-to-peer computing
+computer or process::computer or process
+network may provide::network may provide
+clear " leader::clear " leader
+employ a central::employ a central
+central " directory::central " directory
+directory " server::directory " server
+location of resources::location of resources
+searching to find::searching to find
+resources * e.g::resources * e.g
+server to locate::server to locate
+locate a desired::locate a desired
+communication is peer::communication is peer
+peer to peer::peer to peer
+service 1.11.6 virtualization::service 1.11.6 virtualization
+guest " operating::guest " operating
+systems to run::systems to run
+run on virtual::run on virtual
+virtual machines hosted::virtual machines hosted
+single physical machine::single physical machine
+development and support::development and support
+student could run::student could run
+windows based personal::windows based personal
+based personal computer::based personal computer
+computer the student::computer the student
+full root access::full root access
+underlying windows machine::underlying windows machine
+unaffected * system::unaffected * system
+vmm and translated::vmm and translated
+system calls made::system calls made
+virtualization can slow::virtualization can slow
+slow down program::slow down program
+things if virtual::things if virtual
+device * depending::device * depending
+bypassing the virtual::bypassing the virtual
+virtual machines figure::virtual machines figure
+system using vmware::system using vmware
+follow these steps::follow these steps
+download the free::download the free
+free " vmware::free " vmware
+player " tool::player " tool
+tool from http::tool from http
+choose a linux::choose a linux
+hundreds of virtual::hundreds of virtual
+virtual machine images::virtual machine images
+images at http::images at http
+boot the virtual::boot the virtual
+machine within vmware::machine within vmware
+player 1.11.7 cloud::player 1.11.7 cloud
+1.11.7 cloud computing::1.11.7 cloud computing
+computing * delivers::computing * delivers
+network * types::network * types
+types of cloud::types of cloud
+service o private::service o private
+company for internal::company for internal
+public and private::public and private
+components o software::components o software
+internet o platform::internet o platform
+server o infrastructure::server o infrastructure
+servers or storage::servers or storage
+storage o service::storage o service
+providers may provide::providers may provide
+type of service::type of service
+service * clouds::service * clouds
+thousands of physical::thousands of physical
+millions of virtual::millions of virtual
+petabytes of total::petabytes of total
+storage * web::storage * web
+web hosting services::web hosting services
+services may offer::services may offer
+computing 1.11.8 real-time::computing 1.11.8 real-time
+1.11.8 real-time embedded::1.11.8 real-time embedded
+real-time embedded systems::real-time embedded systems
+systems * embedded::systems * embedded
+embedded into devices::embedded into devices
+climate control systems::climate control systems
+toasters and refrigerators::toasters and refrigerators
+involve specialized chips::involve specialized chips
+generic cpus applied::generic cpus applied
+simple electronic devices::simple electronic devices
+process control devices::process control devices
+control devices require::control devices require
+devices require real-time::devices require real-time
+open-source operating systems::open-source operating systems
+flourish conference held::flourish conference held
+held at uic::held at uic
+subject of free::subject of free
+libre and open::libre and open
+open source software::open source software
+software is published::software is published
+modify the code::modify the code
+code * open-source::code * open-source
+developed and maintained::developed and maintained
+connected often unpaid::connected often unpaid
+good * critics::good * critics
+argue that open-source::argue that open-source
+counter that bugs::counter that bugs
+bugs are found::bugs are found
+found and fixed::found and fixed
+pairs of eyes::pairs of eyes
+resource for studying::resource for studying
+studying os development::studying os development
+students can examine::students can examine
+examine the source::examine the source
+lot of code::lot of code
+code was open-source::code was open-source
+protect the privacy::protect the privacy
+copyright protection algorithms::copyright protection algorithms
+richard stallman started::richard stallman started
+started the gnu::started the gnu
+project to produce::project to produce
+produce an open-source::produce an open-source
+published the gnu::published the gnu
+founded the free::founded the free
+free software foundation::free software foundation
+foundation to promote::foundation to promote
+promote open-source development::promote open-source development
+development * fsf::development * fsf
+fsf and gnu::fsf and gnu
+gnu general public::gnu general public
+general public license::general public license
+software have full::software have full
+rights to copy::rights to copy
+copy and change::copy and change
+linux * developed::linux * developed
+developed by linus::developed by linus
+torvalds in finland::torvalds in finland
+first full operating::first full operating
+full operating system::full operating system
+operating system developed::operating system developed
+developed by gnu::developed by gnu
+distributions of linux::distributions of linux
+linux have evolved::linux have evolved
+evolved from linus::evolved from linus
+linus s original::linus s original
+group of end-users::group of end-users
+end-users and operating::end-users and operating
+player 1.12.3 bsd::player 1.12.3 bsd
+1.12.3 bsd unix::1.12.3 bsd unix
+unix * unix::unix * unix
+developed at att::developed at att
+att bell labs::att bell labs
+source code made::source code made
+computer science students::computer science students
+including the university::including the university
+university of california::university of california
+california at berkeley::california at berkeley
+ucb * ucb::ucb * ucb
+ucb students developed::ucb students developed
+students developed unix::students developed unix
+released their product::released their product
+product as bsd::product as bsd
+binary and source-code::binary and source-code
+format * bsd::format * bsd
+needed from att::needed from att
+versions of bsd::versions of bsd
+including free bsd::including free bsd
+code is located::code is located
+mac operating system::mac operating system
+system is darwin::system is darwin
+derived from bsd::derived from bsd
+solaris * solaris::solaris * solaris
+unix operating system::unix operating system
+system for computers::system for computers
+computers from sun::computers from sun
+microsystems * solaris::microsystems * solaris
+based on bsd::based on bsd
+migrated to att::migrated to att
+basis * parts::basis * parts
+parts of solaris::parts of solaris
+covered by att::covered by att
+change the open-source::change the open-source
+components of solaris::components of solaris
+portions of solaris::portions of solaris
+solaris * open::solaris * open
+source code online::source code online
+download and unpack::download and unpack
+unpack the entire::unpack the entire
+package 1.13.5 utility::package 1.13.5 utility
+free software movement::free software movement
+movement is gaining::movement is gaining
+rapidly in popularity::rapidly in popularity
+leading to thousands::leading to thousands
+thousands of ongoing::thousands of ongoing
+ongoing projects involving::ongoing projects involving
+projects involving untold::projects involving untold
+involving untold numbers::involving untold numbers
+numbers of programmers::numbers of programmers
+programmers * sites::programmers * sites
+summary operating-system structures::summary operating-system structures
+operating-system structures references::operating-system structures references
+systems are structured::systems are structured
+structured and organized::structured and organized
+organized different design::organized different design
+issues and choices::issues and choices
+choices are examined::choices are examined
+examined and compared::examined and compared
+oses are presented::oses are presented
+operating-system services figure::operating-system services figure
+view of operating::view of operating
+operating system services::operating system services
+system services oses::system services oses
+services oses provide::services oses provide
+oses provide environments::oses provide environments
+users can issue::users can issue
+batch command systems::batch command systems
+generally older systems::generally older systems
+systems using punch::systems using punch
+cards of job-control::cards of job-control
+today for specialty::today for specialty
+specialty systems designed::specialty systems designed
+purpose * program::purpose * program
+load a program::load a program
+program into ram::program into ram
+run the program::run the program
+terminate the program::terminate the program
+responsible for transferring::responsible for transferring
+devices * file-system::devices * file-system
+addition to raw::addition to raw
+raw data storage::raw data storage
+responsible for maintaining::responsible for maintaining
+directory and subdirectory::directory and subdirectory
+mapping file names::mapping file names
+names to specific::names to specific
+blocks of data::blocks of data
+tools for navigating::tools for navigating
+navigating and utilizing::navigating and utilizing
+utilizing the file::utilizing the file
+system * communications::system * communications
+running on separate::running on separate
+processors or separate::processors or separate
+memory or message::memory or message
+systems may offer::systems may offer
+hardware and software::hardware and software
+detected and handled::detected and handled
+minimum of harmful::minimum of harmful
+repercussions some systems::repercussions some systems
+systems may include::systems may include
+include complex error::include complex error
+complex error avoidance::complex error avoidance
+avoidance or recovery::avoidance or recovery
+redundant systems debugging::redundant systems debugging
+debugging and diagnostic::debugging and diagnostic
+diagnostic tools aid::diagnostic tools aid
+tools aid users::tools aid users
+users and administrators::users and administrators
+administrators in tracing::administrators in tracing
+problems other systems::problems other systems
+e.g cpu cycles::e.g cpu cycles
+devices some resources::devices some resources
+resources are managed::resources are managed
+managed with generic::managed with generic
+specially tuned systems::specially tuned systems
+resource and operating::resource and operating
+environment * accounting::environment * accounting
+track of system::track of system
+activity and resource::activity and resource
+statistical record keeping::statistical record keeping
+optimize future performance::optimize future performance
+performance * protection::performance * protection
+wayward internal processes::wayward internal processes
+processes or malicious::processes or malicious
+malicious outsiders authentication::malicious outsiders authentication
+access are obvious::access are obvious
+system highly secure::system highly secure
+highly secure systems::highly secure systems
+systems may log::systems may log
+log all process::log all process
+security regulation dictate::security regulation dictate
+dictate the storage::dictate the storage
+records on permanent::records on permanent
+permanent non-erasable medium::permanent non-erasable medium
+medium for extended::medium for extended
+times in secure::times in secure
+user operating-system interface::user operating-system interface
+interface 2.2.1 command::interface 2.2.1 command
+2.2.1 command interpreter::2.2.1 command interpreter
+launches the requested::launches the requested
+program that launches::program that launches
+accesses the system::accesses the system
+system * unix::system * unix
+configured to launch::configured to launch
+automatically at login::automatically at login
+file of initial::file of initial
+settings and commands::settings and commands
+executed upon startup::executed upon startup
+provide different functionality::provide different functionality
+shell without launching::shell without launching
+launching any external::launching any external
+programs most provide::programs most provide
+rudimentary command interpretation::rudimentary command interpretation
+command interpretation structure::command interpretation structure
+shell script programming::shell script programming
+processing of wild::processing of wild
+wild card file::wild card file
+card file naming::card file naming
+re-direction on unix::re-direction on unix
+systems those details::systems those details
+details are handled::details are handled
+list of filenames::list of filenames
+cards are passed::cards are passed
+interpret the wild::interpret the wild
+program sees fit::program sees fit
+sees fit figure::sees fit figure
+bourne shell command::bourne shell command
+shell command interpreter::shell command interpreter
+interpreter in solaris::interpreter in solaris
+2.2.2 graphical user::2.2.2 graphical user
+graphical user interface::graphical user interface
+icons * icons::icons * icons
+represent some item::represent some item
+icon is activated::icon is activated
+xerox parc research::xerox parc research
+parc research facility::parc research facility
+systems the gui::systems the gui
+end for activating::end for activating
+activating a traditional::activating a traditional
+traditional command line::traditional command line
+command line interpreter::command line interpreter
+line interpreter running::line interpreter running
+true graphical shell::true graphical shell
+right * mac::right * mac
+advent of osx::advent of osx
+partially on unix::partially on unix
+command line interface::command line interface
+mice and keyboards::mice and keyboards
+keyboards are impractical::keyboards are impractical
+impractical for small::impractical for small
+small mobile devices::small mobile devices
+touch-screen interface today::touch-screen interface today
+patterns of swipes::patterns of swipes
+today a virtual::today a virtual
+touch screen figure::touch screen figure
+touchscreen 2.2.3 choice::touchscreen 2.2.3 choice
+choice of interface::choice of interface
+systems allow individual::systems allow individual
+users to select::users to select
+select their desired::select their desired
+customize its operation::customize its operation
+ability to switch::ability to switch
+interfaces as needed::interfaces as needed
+needed system administrators::needed system administrators
+administrators generally determine::administrators generally determine
+determine which interface::determine which interface
+interface a user::interface a user
+interfaces usually provide::interfaces usually provide
+provide an option::provide an option
+terminal emulator window::terminal emulator window
+window for entering::window for entering
+entering command-line commands::entering command-line commands
+commands * command-line::commands * command-line
+entered into shell::entered into shell
+calls * system::calls * system
+system calls provide::system calls provide
+provide a means::provide a means
+means for user::means for user
+user or application::user or application
+programs to call::programs to call
+assembly for optimal::assembly for optimal
+performance * figure::performance * figure
+illustrates the sequence::illustrates the sequence
+sequence of system::sequence of system
+system calls required::system calls required
+required to copy::required to copy
+copy a file::copy a file
+number of system::number of system
+system calls invoked::system calls invoked
+single simple command::single simple command
+simple command read::simple command read
+read the man::read the man
+page for strace::page for strace
+strace mkdir temp::strace mkdir temp
+strace cd temp::strace cd temp
+date > t.t::date > t.t
+strace cp t.t::strace cp t.t
+low-level system calls::low-level system calls
+application programming interface::application programming interface
+shows the read::shows the read
+api on unix::api on unix
+unix based systems::unix based systems
+direct system calls::direct system calls
+greater program portability::greater program portability
+systems the api::systems the api
+api then makes::api then makes
+system call interface::system call interface
+lookup to access::lookup to access
+access specific numbered::access specific numbered
+specific numbered system::specific numbered system
+numbered system calls::numbered system calls
+shown in figure::shown in figure
+user application invoking::user application invoking
+invoking the open::invoking the open
+call * parameters::call * parameters
+passed to system::passed to system
+calls via registers::calls via registers
+stack large blocks::stack large blocks
+memory address passed::memory address passed
+passing of parameters::passing of parameters
+types of system::types of system
+calls six major::calls six major
+outlined in figure::outlined in figure
+standard library calls::standard library calls
+generate system calls::generate system calls
+2.4.1 process control::2.4.1 process control
+control * process::control * process
+process control system::process control system
+control system calls::control system calls
+system calls include::system calls include
+calls include end::calls include end
+allocate and free::allocate and free
+memory * processes::memory * processes
+resumed,and eventually stopped::resumed,and eventually stopped
+pauses or stops::pauses or stops
+launched or resumed::launched or resumed
+provide core dumps::provide core dumps
+diagnostic or recovery::diagnostic or recovery
+tools * compare::tools * compare
+process is launched::process is launched
+launched in dos::launched in dos
+interpreter first unloads::interpreter first unloads
+free up memory::free up memory
+loads the process::loads the process
+process and transfers::process and transfers
+process has completed::process has completed
+running a program::running a program
+command interpreter remains::command interpreter remains
+remains completely resident::remains completely resident
+resident when executing::resident when executing
+executing a process::executing a process
+user can switch::user can switch
+place the running::place the running
+interpreter first executes::interpreter first executes
+fork " system::fork " system
+original command interpreter::original command interpreter
+interpreter the original::interpreter the original
+process then executes::process then executes
+exec " system::exec " system
+replaces its code::replaces its code
+child to complete::child to complete
+complete before issuing::complete before issuing
+process to complete::process to complete
+freebsd running multiple::freebsd running multiple
+running multiple programs::running multiple programs
+programs 2.4.2 file::programs 2.4.2 file
+2.4.2 file management::2.4.2 file management
+management * file::management * file
+file management system::file management system
+management system calls::management system calls
+calls include create::calls include create
+include create file::include create file
+set file attributes::set file attributes
+supported for directories::supported for directories
+actual directory structure::actual directory structure
+implemented using ordinary::implemented using ordinary
+means further details::means further details
+covered in chapters::covered in chapters
+2.4.3 device management::2.4.3 device management
+management * device::management * device
+device management system::device management system
+calls include request::calls include request
+include request device::include request device
+devices * devices::devices * devices
+e.g disk drives::e.g disk drives
+systems represent devices::systems represent devices
+devices as special::devices as special
+file " calls::file " calls
+system 2.4.4 information::system 2.4.4 information
+2.4.4 information maintenance::2.4.4 information maintenance
+maintenance * information::maintenance * information
+information maintenance system::information maintenance system
+maintenance system calls::maintenance system calls
+calls include calls::calls include calls
+attributes * systems::attributes * systems
+provide the ability::provide the ability
+ability to dump::ability to dump
+single step programs::single step programs
+step programs pausing::step programs pausing
+programs pausing execution::programs pausing execution
+tracing the operation::tracing the operation
+operation of programs::operation of programs
+programs 2.4.5 communication::programs 2.4.5 communication
+communication * communication::communication * communication
+communication system calls::communication system calls
+calls create communication::calls JJ communication
+transfer status information::transfer status information
+message passing model::message passing model
+model must support::model must support
+identify a remote::identify a remote
+process and host::process NN host
+communicate o establish::communicate o establish
+establish a connection::establish a connection
+processes o open::processes o open
+open and close::open and close
+close the connection::close the connection
+connection as needed::connection as needed
+needed o transmit::needed o transmit
+connection o wait::connection o wait
+wait for incoming::wait for incoming
+blocking or non-blocking::blocking or non-blocking
+state o delete::state o delete
+delete the connection::delete the connection
+shared memory model::shared memory model
+create and access::create and access
+shared amongst processes::shared amongst processes
+provide locking mechanisms::provide locking mechanisms
+locking mechanisms restricting::locking mechanisms restricting
+mechanisms restricting simultaneous::mechanisms restricting simultaneous
+restricting simultaneous access::restricting simultaneous access
+access o free::access o free
+free up shared::free up shared
+and dynamically allocate::-NONE- dynamically allocate
+needed * message::needed * message
+passing is simpler::passing is simpler
+simpler and easier::simpler and easier
+data * shared::data * shared
+approach where large::approach where large
+processes are reading::processes are reading
+reading the data::reading the data
+number of processes::number of processes
+protection * protection::protection * protection
+protection provides mechanisms::protection provides mechanisms
+mechanisms for controlling::mechanisms for controlling
+controlling which users::controlling which users
+processes have access::processes have access
+resources * system::resources * system
+adjusted as needed::adjusted as needed
+granted elevated access::granted elevated access
+elevated access permissions::elevated access permissions
+carefully controlled temporary::carefully controlled temporary
+controlled temporary circumstances::controlled temporary circumstances
+concern on multi-user::concern on multi-user
+age of ubiquitous::age of ubiquitous
+ubiquitous network connectivity::ubiquitous network connectivity
+programs * system::programs * system
+system programs provide::system programs provide
+provide os functionality::provide os functionality
+functionality through separate::functionality through separate
+kernel or command::kernel or command
+utilities or system::utilities or system
+systems also ship::systems also ship
+calculators and simple::calculators and simple
+border between system::border between system
+system and non-system::system and non-system
+applications * system::applications * system
+programs to create::programs to create
+generally manipulate files::generally manipulate files
+directories o status::directories o status
+utilities to check::utilities to check
+number of users::number of users
+store and recall::store and recall
+recall configuration information::recall configuration information
+applications o file::applications o file
+e.g text editors::e.g text editors
+change file contents::change file contents
+contents o programming-language::contents o programming-language
+library archive management::library archive management
+interpreters for common::interpreters for common
+support for make::support for make
+make o program::make o program
+loading and execution::loading and execution
+debuggers o communications::debuggers o communications
+programs for providing::programs for providing
+connectivity between processes::connectivity between processes
+processes and users::processes and users
+remote command execution::remote command execution
+execution o background::execution o background
+system is booted::system is booted
+system is running::system is running
+handling necessary services::handling necessary services
+services examples include::services examples include
+examples include network::examples include network
+include network daemons::include network daemons
+system error monitoring::system error monitoring
+error monitoring services::error monitoring services
+operating systems today::operating systems today
+set of application::set of application
+programs to provide::programs to provide
+provide additional services::provide additional services
+files or checking::files or checking
+users  views::users  views
+system is determined::system is determined
+make system calls::make system calls
+exception of simple::exception of simple
+design and implementation::design and implementation
+implementation 2.6.1 design::implementation 2.6.1 design
+2.6.1 design goals::2.6.1 design goals
+goals * requirements::goals * requirements
+requirements define properties::requirements define properties
+step in designing::step in designing
+designing any large::designing any large
+large complex system::large complex system
+system o user::system o user
+requirements are features::requirements are features
+features that users::features that users
+commonly understood vernacular::commonly understood vernacular
+include any implementation::include any implementation
+box o system::box o system
+requirements are written::requirements are written
+include more details::include more details
+details about implementation::details about implementation
+developers and subcontractors::developers and subcontractors
+detailed * requirements::detailed * requirements
+requirements for operating::requirements for operating
+systems can vary::systems can vary
+vary greatly depending::vary greatly depending
+scope and usage::scope and usage
+mechanisms and policies::mechanisms and policies
+policies * policies::policies * policies
+done mechanisms determine::done mechanisms determine
+separated and implemented::separated and implemented
+adjusted without re-writing::adjusted without re-writing
+re-writing the code::re-writing the code
+loading new data::loading new data
+priority of background::priority of background
+background versus foreground::background versus foreground
+versus foreground tasks::versus foreground tasks
+tasks 2.6.3 implementation::tasks 2.6.3 implementation
+oses were written::oses were written
+language this provided::language this provided
+provided direct control::provided direct control
+control over hardware-related::control over hardware-related
+platform * recent::platform * recent
+advances in compiler::advances in compiler
+oses are written::oses are written
+sections of code::sections of code
+fine-tuned and optimized::fine-tuned and optimized
+optimized by hand::optimized by hand
+developed using emulators::developed using emulators
+hardware is unavailable::hardware is unavailable
+e.g not built::e.g not built
+platform for development::platform for development
+e.g smart phones::e.g smart phones
+structure for efficient::structure for efficient
+performance and implementation::performance and implementation
+partitioned into separate::partitioned into separate
+carefully defined tasks::carefully defined tasks
+characteristics these subsystems::characteristics these subsystems
+2.7.1 simple structure::2.7.1 simple structure
+structure when dos::structure when dos
+written its developers::written its developers
+idea how big::idea how big
+big and important::big and important
+benefit of modern::benefit of modern
+modern software engineering::modern software engineering
+software engineering techniques::software engineering techniques
+exceed its original::exceed its original
+break the system::break the system
+system into subsystems::system into subsystems
+distinction between user::distinction between user
+user and kernel::user and kernel
+allowing all programs::allowing all programs
+programs direct access::programs direct access
+note that user::note that user
+user versus kernel::user versus kernel
+versus kernel mode::versus kernel mode
+nt an option::nt an option
+ms-dos layer structure::ms-dos layer structure
+structure the original::structure the original
+simple layered approach::simple layered approach
+traditional unix system::traditional unix system
+unix system structure::unix system structure
+structure 2.7.2 layered::structure 2.7.2 layered
+2.7.2 layered approach::2.7.2 layered approach
+number of smaller::number of smaller
+developed and debugged::developed and debugged
+trusted to deliver::trusted to deliver
+deliver proper services::deliver proper services
+problem is deciding::problem is deciding
+deciding what order::deciding what order
+place the layers::place the layers
+layer can call::layer can call
+situations may arise::situations may arise
+arise * layered::arise * layered
+request for service::request for service
+possibly with significant::possibly with significant
+layered operating system::layered operating system
+system 2.7.3 microkernels::system 2.7.3 microkernels
+idea behind micro::idea behind micro
+remove all non-essential::remove all non-essential
+making the kernel::making the kernel
+kernel as small::kernel as small
+small and efficient::small and efficient
+microkernels provide basic::microkernels provide basic
+provide basic process::provide basic process
+process and memory::process and memory
+security and protection::security and protection
+services are performed::services are performed
+performed in user::performed in user
+mode * system::mode * system
+adding more system::adding more system
+kernel * mach::kernel * mach
+widely known microkernel::widely known microkernel
+forms a major::forms a major
+component of mac::component of mac
+osx * windows::osx * windows
+suffered from performance::suffered from performance
+performance problems relative::performance problems relative
+relative to windows::relative to windows
+performance by moving::performance by moving
+moving more services::moving more services
+embedded systems figure::embedded systems figure
+microkernel 2.7.4 modules::microkernel 2.7.4 modules
+modules * modern::modules * modern
+modern os development::modern os development
+development is object-oriented::development is object-oriented
+small core kernel::small core kernel
+set of modules::set of modules
+linked in dynamically::linked in dynamically
+modules are similar::modules are similar
+similar to layers::similar to layers
+tasks and interfaces::tasks and interfaces
+module is free::module is free
+free to contact::free to contact
+eliminating the problems::eliminating the problems
+multiple intermediary layers::multiple intermediary layers
+similar to microkernels::similar to microkernels
+implement message passing::implement message passing
+passing since modules::passing since modules
+modules are free::modules are free
+solaris loadable modules::solaris loadable modules
+modules 2.7.5 hybrid::modules 2.7.5 hybrid
+2.7.5 hybrid systems::2.7.5 hybrid systems
+max osx architecture::max osx architecture
+osx architecture relies::osx architecture relies
+microkernel for basic::microkernel for basic
+basic system management::basic system management
+system management services::system management services
+kernel for additional::kernel for additional
+additional services application::additional services application
+services application services::services application services
+dynamically loadable modules::dynamically loadable modules
+provide the rest::provide the rest
+structure 2.7.5.2 ios::structure 2.7.5.2 ios
+ios operating system::ios operating system
+system was developed::system was developed
+developed by apple::developed by apple
+apple for iphones::apple for iphones
+iphones and ipads::iphones and ipads
+ipads it runs::ipads it runs
+memory and computing::memory and computing
+supports touchscreen interface::supports touchscreen interface
+interface and graphics::interface and graphics
+graphics for small::graphics for small
+architecture of apple::architecture of apple
+apple s ios::apple s ios
+ios 2.7.5.3 android::ios 2.7.5.3 android
+developed for android::developed for android
+smartphones and tablets::smartphones and tablets
+open handset alliance::open handset alliance
+google * android::google * android
+opposed to ios::opposed to ios
+popularity * android::popularity * android
+android includes versions::android includes versions
+versions of linux::versions of linux
+java virtual machine::java virtual machine
+machine both optimized::machine both optimized
+optimized for small::optimized for small
+platforms * android::platforms * android
+apps are developed::apps are developed
+special java-for-android development::special java-for-android development
+java-for-android development environment::java-for-android development environment
+development environment figure::development environment figure
+architecture of google::architecture of google
+google s android::google s android
+kernighan s law::kernighan s law
+law " debugging::law " debugging
+hard as writing::hard as writing
+writing the code::writing the code
+write the code::write the code
+debugging here includes::debugging here includes
+includes both error::includes both error
+discovery and elimination::discovery and elimination
+elimination and performance::elimination and performance
+tuning 2.8.1 failure::tuning 2.8.1 failure
+2.8.1 failure analysis::2.8.1 failure analysis
+analysis * debuggers::analysis * debuggers
+debuggers allow processes::debuggers allow processes
+examination of variables::examination of variables
+variables and expressions::variables and expressions
+progresses * profilers::progresses * profilers
+profilers can document::profilers can document
+document program execution::document program execution
+lines of code::lines of code
+ordinary process crashes::ordinary process crashes
+process s memory::process s memory
+compiled to include::compiled to include
+include debugging information::include debugging information
+nt really work::nt really work
+performance hit caused::performance hit caused
+caused by adding::caused by adding
+adding the debugging::adding the debugging
+run in kernel::run in kernel
+make direct access::make direct access
+kernel s file-access::kernel s file-access
+file-access or direct::file-access or direct
+direct disk-access routines::direct disk-access routines
+write a crash::write a crash
+kernel crash dump::kernel crash dump
+special unallocated portion::special unallocated portion
+purpose 2.8.2 performance::purpose 2.8.2 performance
+2.8.2 performance tuning::2.8.2 performance tuning
+tuning * performance::tuning * performance
+requires monitoring system::requires monitoring system
+monitoring system performance::monitoring system performance
+system to record::system to record
+record important events::record important events
+events into log::events into log
+tools these traces::tools these traces
+proposed new system::proposed new system
+system would perform::system would perform
+report system status::report system status
+status upon demand::status upon demand
+unix " top::unix " top
+top " command::top " command
+utilities may provide::utilities may provide
+provide monitoring support::provide monitoring support
+monitoring support figure::monitoring support figure
+windows task manager::windows task manager
+manager 2.8.3 dtrace::manager 2.8.3 dtrace
+dtrace * dtrace::dtrace * dtrace
+facility for tracing::facility for tracing
+tracing a running::tracing a running
+developed for solaris::developed for solaris
+adds " probes::adds " probes
+probes are removed::probes are removed
+ioctl system call::ioctl system call
+call as shown::call as shown
+kernel * probe::kernel * probe
+code is restricted::code is restricted
+e.g no loops::e.g no loops
+minimum of system::minimum of system
+enabling control blocks::enabling control blocks
+consumer are removed::consumer are removed
+ecbs remain interested::ecbs remain interested
+monitors the cpu::monitors the cpu
+running with user::running with user
+output is shown::output is shown
+dtrace is restricted::dtrace is restricted
+ability to change::ability to change
+critical kernel data::critical kernel data
+dtrace is open-source::dtrace is open-source
+busy producing similar::busy producing similar
+producing similar utilities::producing similar utilities
+generation * oses::generation * oses
+designed and built::designed and built
+specific hw configuration::specific hw configuration
+number of variable::number of variable
+parameters and components::parameters and components
+environment * systems::environment * systems
+add additional resources::add additional resources
+security * information::security * information
+needed to configure::needed to configure
+ram is installed::ram is installed
+install or boot::install or boot
+devices are present::devices are present
+determine which device::determine which device
+drivers to include::drivers to include
+characteristics and parameters::characteristics and parameters
+options are desired::options are desired
+values to set::values to set
+include the size::include the size
+open file table::open file table
+number of buffers::number of buffers
+disk scheduling algorithms::disk scheduling algorithms
+number of slots::number of slots
+commonly configuration tables::commonly configuration tables
+configuration tables determine::configuration tables determine
+determine which modules::determine which modules
+modules to link::modules to link
+key important parameters::key important parameters
+parameters this approach::parameters this approach
+approach may require::approach may require
+require the configuration::require the configuration
+configuration of complicated::configuration of complicated
+interactive configuration programs::interactive configuration programs
+extreme a system::extreme a system
+defined by table::defined by table
+system merely requires::system merely requires
+requires editing data::requires editing data
+editing data tables::editing data tables
+required to reboot::required to reboot
+reboot the system::reboot the system
+system to activate::system to activate
+possibilities for errors::possibilities for errors
+provide some mechanism::provide some mechanism
+mechanism for booting::mechanism for booting
+booting to older::booting to older
+older or alternate::older or alternate
+boot the general::boot the general
+interrupt is generated::interrupt is generated
+generated which loads::generated which loads
+loads a memory::loads a memory
+system begins executing::system begins executing
+begins executing instructions::begins executing instructions
+executing instructions found::executing instructions found
+address this address::address this address
+bootstrap " program::bootstrap " program
+located in rom::located in rom
+rom bootstrap program::rom bootstrap program
+program first runs::program first runs
+first runs hardware::first runs hardware
+runs hardware checks::runs hardware checks
+determining what physical::determining what physical
+resources are present::resources are present
+present and doing::present and doing
+power-on self tests::power-on self tests
+applicable some devices::applicable some devices
+option of pressing::option of pressing
+pressing a special::pressing a special
+launch the rom::launch the rom
+rom bios configuration::rom bios configuration
+bios configuration utility::bios configuration utility
+utility if pressed::utility if pressed
+pressed this utility::pressed this utility
+configure certain hardware::configure certain hardware
+access to additional::access to additional
+additional configuration setup::additional configuration setup
+configuration setup programs::configuration setup programs
+raid disk controller::raid disk controller
+graphics or networking::graphics or networking
+cards * assuming::cards * assuming
+assuming the utility::assuming the utility
+non-volatile storage device::non-volatile storage device
+depending on configuration::depending on configuration
+primary or secondary::primary or secondary
+secondary hard drives::secondary hard drives
+utility * assuming::utility * assuming
+find the first::find the first
+drive and load::drive and load
+physical hard drive::physical hard drive
+drive is divided::drive is divided
+starts and ends::starts and ends
+active " partition::active " partition
+booting the system::booting the system
+amount of system::amount of system
+first disk block::first disk block
+block not occupied::block not occupied
+table this bootstrap::table this bootstrap
+i.e the first::i.e the first
+generally this code::generally this code
+access the hard::access the hard
+load and execute::load and execute
+larger boot program::larger boot program
+boot program loaded::boot program loaded
+proceed to locate::proceed to locate
+locate the kernel::locate the kernel
+load the kernel::load the kernel
+kernel into memory::kernel into memory
+system has multiple::system has multiple
+systems may boot::systems may boot
+boot different configurations::boot different configurations
+found in earlier::found in earlier
+dual-boot or multiple-boot::dual-boot or multiple-boot
+program will give::program will give
+give the user::give the user
+user an opportunity::user an opportunity
+frame the boot::frame the boot
+program then finds::program then finds
+finds the boot::finds the boot
+runs that program::runs that program
+program as described::program as described
+previous bullet point::previous bullet point
+kernel is running::kernel is running
+user the opportunity::user the opportunity
+opportunity to enter::opportunity to enter
+enter into single-user::enter into single-user
+mode this mode::mode this mode
+enable any logins::enable any logins
+console this mode::console this mode
+primarily for system::primarily for system
+maintenance and diagnostics::maintenance and diagnostics
+system enters full::system enters full
+enters full multi-user::enters full multi-user
+full multi-user multi-tasking::full multi-user multi-tasking
+multi-user multi-tasking mode::multi-user multi-tasking mode
+examines configuration files::examines configuration files
+files to determine::files to determine
+determine which system::determine which system
+spawns login programs::spawns login programs
+configured to enable::configured to enable
+enable user logins::enable user logins
+getty program initializes::getty program initializes
+program initializes terminal::program initializes terminal
+issues the login::issues the login
+accepts login names::accepts login names
+names and passwords::names and passwords
+authenticates the user::authenticates the user
+user s password::user s password
+password is authenticated::password is authenticated
+determine what shell::determine what shell
+shell is assigned::shell is assigned
+user s shell::user s shell
+shell the shell::shell the shell
+system and user::system and user
+user configuration files::user configuration files
+files to initialize::files to initialize
+prompts for user::prompts for user
+system will issue::system will issue
+provide an interface::provide an interface
+multiple different oses::multiple different oses
+development and testing::development and testing
+testing of software::testing of software
+run on multiple::run on multiple
+platforms and oses::platforms JJ oses
+obvious difficulty involves::obvious difficulty involves
+involves the sharing::involves the sharing
+sharing of hard::sharing of hard
+separate smaller virtual::separate smaller virtual
+smaller virtual disks::smaller virtual disks
+operating os figure::operating os figure
+machine 2.8.1 history::machine 2.8.1 history
+history * virtual::history * virtual
+machines first appeared::machines first appeared
+system for ibm::system for ibm
+sharing of physical::sharing of physical
+machines were networked::machines were networked
+user full access::user full access
+affecting other users::affecting other users
+operating the real::operating the real
+platforms 2.8.3 simulation::platforms 2.8.3 simulation
+alternative to creating::alternative to creating
+creating an entire::creating an entire
+entire virtual machine::entire virtual machine
+run an emulator::run an emulator
+machine may run::machine may run
+run a dos::run a dos
+emulator in order::emulator in order
+order to run::order to run
+run dos programs::run dos programs
+vice-versa * emulators::vice-versa * emulators
+tend to run::tend to run
+run considerably slower::run considerably slower
+perfect 2.8.4 para-virtualization::perfect 2.8.4 para-virtualization
+para-virtualization * para-virtualization::para-virtualization * para-virtualization
+environment is provided::environment is provided
+modified to run::modified to run
+processes and resources::processes and resources
+exist o figure::exist o figure
+shows a solaris::shows a solaris
+normal " global::normal " global
+global " operating::global " operating
+two additional zones::two additional zones
+additional zones running::additional zones running
+small virtualization layer::small virtualization layer
+virtualization layer figure::virtualization layer figure
+zones 2.8.5 implementation::zones 2.8.5 implementation
+implementation * implementation::implementation * implementation
+consequences of user::consequences of user
+simultaneously running kernels::simultaneously running kernels
+operate in kernel::operate in kernel
+machine actually runs::machine actually runs
+runs in user::runs in user
+kernel system calls::kernel system calls
+system calls passed::system calls passed
+true kernel mode::true kernel mode
+mode for eventual::mode for eventual
+eventual hw access::eventual hw access
+machines may run::machines may run
+levels of code::levels of code
+code between applications::code between applications
+benefits of caching::benefits of caching
+faster than real::faster than real
+faster than physical::faster than physical
+examples 2.8.6.1 vmware::examples 2.8.6.1 vmware
+vmware * abstracts::vmware * abstracts
+80x86 hardware platform::80x86 hardware platform
+allowing simultaneous operation::allowing simultaneous operation
+operation of multiple::operation of multiple
+windows and linux::windows and linux
+vmware workstation architecture::vmware workstation architecture
+2.8.6.2 the java::2.8.6.2 the java
+machine * java::machine * java
+java was designed::java was designed
+developed for numerous::developed for numerous
+numerous different underlying::numerous different underlying
+underlying hw platforms::underlying hw platforms
+platforms * java::platforms * java
+java source code::java source code
+code is compiled::code is compiled
+compiled into java::compiled into java
+java byte code::java byte code
+code in .class::code in .class
+.class files java::.class files java
+files java byte::files java byte
+code is binary::code is binary
+jvm implements memory::jvm implements memory
+implements memory management::implements memory management
+management and garbage::management and garbage
+collection * java::collection * java
+compiled to native::compiled to native
+native system binary::native system binary
+system binary code::system binary code
+code using just-in-time::code using just-in-time
+piece of java::piece of java
+code is encountered::code is encountered
+native machine binary::native machine binary
+machine binary code::machine binary code
+interpreter this native::interpreter this native
+native binary code::native binary code
+piece of code::piece of code
+developed to run::developed to run
+run java byte::run java byte
+machine being developed::machine being developed
+developed to emulate::developed to emulate
+emulate the services::emulate the services
+framework also relies::framework also relies
+concept of compiling::concept of compiling
+intermediary virtual machine::intermediary virtual machine
+common language runtime::common language runtime
+compilation and caching::compilation and caching
+caching to run::caching to run
+run the programs::run the programs
+programs on specific::programs on specific
+introduction references::introduction references
+abraham silberschatz::abraham silberschatz
+greg gagne::greg gagne
+peter baer::peter baer
+baer galvin::baer galvin
+operating system::operating system
+system concepts::system concepts
+ninth edition::ninth edition
+blind men::blind men
+operating systems::operating systems
+complete picture::complete picture
+abstract view::abstract view
+computer system::computer system
+manages resources::manages resources
+government model::government model
+vendor ships::vendor ships
+system applications::system applications
+3rd party::3rd party
+user apps::user apps
+computer-system organization::computer-system organization
+modern computer::modern computer
+computer-system operation::computer-system operation
+bootstrap program::bootstrap program
+shared memory::shared memory
+multi-process operation::multi-process operation
+interrupt handling::interrupt handling
+system calls::system calls
+calls figure::calls figure
+interrupt timeline::interrupt timeline
+single process::single process
+process doing::process doing
+doing output::doing output
+storage structure::storage structure
+main memory::main memory
+data fetched::data fetched
+cpu cache::cpu cache
+non-volatile memory::non-volatile memory
+electronic disks::electronic disks
+magnetic disks::magnetic disks
+optical disks::optical disks
+magnetic tapes::magnetic tapes
+tapes figure::tapes figure
+storage-device hierarchy::storage-device hierarchy
+typical operation::typical operation
+operation involves::operation involves
+direct memory::direct memory
+memory access::memory access
+handling figure::handling figure
+system works::system works
+computer-system architecture::computer-system architecture
+computer environments::computer environments
+single-processor systems::single-processor systems
+main cpu::main cpu
+runs user::runs user
+specialized processors::specialized processors
+disk controllers::disk controllers
+run user::run user
+multiprocessor systems::multiprocessor systems
+increased throughput::increased throughput
+faster execution::faster execution
+linear speedup::linear speedup
+increased reliability::increased reliability
+cpu slows::cpu slows
+slows system::slows system
+redundant processing::redundant processing
+e.g nasa::e.g nasa
+symmetric multiprocessing::symmetric multiprocessing
+multiprocessing architecture::multiprocessing architecture
+architecture figure::architecture figure
+dual-core design::dual-core design
+clustered systems::clustered systems
+independent systems::independent systems
+shared common::shared common
+common storage::common storage
+high-speed lan::high-speed lan
+special considerations::special considerations
+shared storage::shared storage
+distributed lock::distributed lock
+lock management::lock management
+collaboration protocols::collaboration protocols
+protocols figure::protocols figure
+general structure::general structure
+clustered system::clustered system
+operating-system structure::operating-system structure
+multi-user multi-tasking::multi-user multi-tasking
+memory management::memory management
+process management::process management
+resource allocation::resource allocation
+allocation strategies::allocation strategies
+swap space::swap space
+virtual memory::virtual memory
+physical memory::physical memory
+file system::file system
+system management::system management
+inter-process communications::inter-process communications
+communications figure::communications figure
+multiprogramming system::multiprogramming system
+operating-system operations::operating-system operations
+interrupt-driven nature::interrupt-driven nature
+modern oses::modern oses
+oses requires::oses requires
+erroneous processes::erroneous processes
+multimode operation::multimode operation
+user mode::user mode
+executing harmless::executing harmless
+harmless code::harmless code
+user applications::user applications
+kernel mode::kernel mode
+a.k.a system::a.k.a system
+system mode::system mode
+supervisor mode::supervisor mode
+privileged mode::privileged mode
+dangerous code::dangerous code
+system kernel::system kernel
+machine instructions::machine instructions
+privileged instructions::privileged instructions
+making system::making system
+calls user::calls user
+user code::user code
+mode switch::mode switch
+modern computers::modern computers
+computers support::computers support
+dual-mode operation::dual-mode operation
+oses support::oses support
+support dual-mode::support dual-mode
+operation figure::operation figure
+single mode::single mode
+mode bit::mode bit
+support virtualization::support virtualization
+extra bits::extra bits
+virtual machine::virtual machine
+machine manager::machine manager
+ordinary user::ordinary user
+user programs::user programs
+full kernel::full kernel
+software interrupts::software interrupts
+interrupt handler::interrupt handler
+transfer control::transfer control
+handler checks::handler checks
+additional parameters::additional parameters
+kernel service::kernel service
+service routine::service routine
+service requested::service requested
+system call::system call
+illegal instructions::illegal instructions
+non-existent instructions::non-existent instructions
+access forbidden::access forbidden
+forbidden memory::forbidden memory
+memory areas::memory areas
+generate software::generate software
+error message::error message
+dumps data::dumps data
+offending program::offending program
+kernel begins::kernel begins
+executing user::executing user
+timer interrupt::timer interrupt
+handler reverts::handler reverts
+reverts control::reverts control
+user process::user process
+timer control::timer control
+privileged instruction::privileged instruction
+requiring kernel::requiring kernel
+system processes::system processes
+process receives::process receives
+resuming processes::resuming processes
+process synchronization::process synchronization
+deadlock handling::deadlock handling
+keeping track::keeping track
+deallocating memory::deallocating memory
+storage management::storage management
+file-system management::file-system management
+filesystem management::filesystem management
+deleting files::deleting files
+supporting primitives::supporting primitives
+manipulating files::manipulating files
+mapping files::mapping files
+secondary storage::secondary storage
+stable permanent::stable permanent
+permanent storage::permanent storage
+storage media::storage media
+mass-storage management::mass-storage management
+free disk::free disk
+disk space::disk space
+space management::space management
+storage allocation::storage allocation
+scheduling note::scheduling note
+mass storage::mass storage
+storage devices::storage devices
+including floppy::including floppy
+floppy disks::floppy disks
+hard disks::hard disks
+tape drives::tape drives
+smaller higher-speed::smaller higher-speed
+higher-speed storage::higher-speed storage
+storage space::storage space
+space serves::space serves
+temporary storage::temporary storage
+needed portions::needed portions
+larger slower::larger slower
+slower storage::slower storage
+storage areas::storage areas
+memory storage::memory storage
+storage ranges::storage ranges
+cpu registers::cpu registers
+hard drives::hard drives
+external storage::external storage
+transfer data::transfer data
+proper choice::proper choice
+cache management::cache management
+profound impact::profound impact
+system performance::system performance
+data read::data read
+migration path::migration path
+hard drive::hard drive
+reverse path::reverse path
+future requests::future requests
+requests faster::requests faster
+small amounts::small amounts
+output device::output device
+multiple processes::multiple processes
+worse multiple::worse multiple
+multiple computers::multiple computers
+common data::common data
+access reaches::access reaches
+up-to-date copy::up-to-date copy
+cached data::cached data
+subsystem consists::subsystem consists
+memory-management component::memory-management component
+general device-driver::general device-driver
+device-driver interface::device-driver interface
+specific hardware::specific hardware
+hardware devices::hardware devices
+unix implements::unix implements
+implements multiple::implements multiple
+multiple device::multiple device
+device interfaces::device interfaces
+device character::device character
+device block::device block
+long listing::long listing
+first position::first position
+minor device::minor device
+device numbers::device numbers
+major number::major number
+number signifies::number signifies
+device driver::device driver
+driver handles::driver handles
+minor number::minor number
+parameter passed::parameter passed
+specific device::specific device
+character device::character device
+minor numbers::minor numbers
+single bit::single bit
+protection involves::protection involves
+involves ensuring::involves ensuring
+process access::process access
+protection faults::protection faults
+pointer variables::pointer variables
+security involves::security involves
+involves protecting::involves protecting
+deliberate attacks::deliberate attacks
+legitimate users::legitimate users
+system attempting::system attempting
+unauthorized access::unauthorized access
+external attackers::external attackers
+attackers attempting::attackers attempting
+kernel data::kernel data
+data structures::data structures
+boolean state::boolean state
+free state::free state
+computing environments::computing environments
+traditional computing::traditional computing
+mobile computing::mobile computing
+small handheld::small handheld
+handheld devices::handheld devices
+smart phones::smart phones
+additional built-in::additional built-in
+built-in sensors::built-in sensors
+inertial movement::inertial movement
+wireless networking::wireless networking
+cellular telephone::cellular telephone
+telephone technology::telephone technology
+storage capacity::storage capacity
+memory capacity::memory capacity
+computing power::computing power
+slower processors::slower processors
+battery power::battery power
+dominant oses::dominant oses
+oses today::oses today
+google android::google android
+apple ios::apple ios
+distributed systems::distributed systems
+systems consist::systems consist
+computers connected::computers connected
+small tight::small tight
+tight lans::tight lans
+broad reaching::broad reaching
+reaching wans::reaching wans
+wide area::wide area
+area network::area network
+international corporation::international corporation
+metropolitan area::metropolitan area
+local area::local area
+single-site corporation::single-site corporation
+university campus::university campus
+personal area::personal area
+bluetooth connection::bluetooth connection
+network access::network access
+access speeds::access speeds
+important issues::important issues
+special form::special form
+file access::file access
+complex well-coordinated::complex well-coordinated
+well-coordinated network::well-coordinated network
+network operating::network operating
+shared resources::shared resources
+include files::include files
+cpu cycles::cpu cycles
+client-server computing::client-server computing
+defined server::defined server
+physical computer::physical computer
+served resources::served resources
+include disk::include disk
+graphical displays::graphical displays
+resources figure::resources figure
+client-server system::client-server system
+peer-to-peer computing::peer-to-peer computing
+provide services::provide services
+peer-to-peer searching::peer-to-peer searching
+find resources::find resources
+e.g skype::e.g skype
+central server::central server
+desired peer::desired peer
+peer figure::peer figure
+peer-to-peer system::peer-to-peer system
+centralized service::centralized service
+virtual machines::virtual machines
+machines hosted::machines hosted
+single physical::single physical
+physical machine::physical machine
+cross-platform development::cross-platform development
+run unix::run unix
+windows based::windows based
+personal computer::personal computer
+full root::full root
+root access::root access
+underlying windows::underlying windows
+windows machine::windows machine
+real underlying::real underlying
+virtual hardware::virtual hardware
+physical device::physical device
+machines figure::machines figure
+run linux::run linux
+windows system::windows system
+vmware player::vmware player
+linux version::linux version
+machine images::machine images
+cloud computing::cloud computing
+delivers computing::delivers computing
+public cloud::public cloud
+private cloud::private cloud
+hybrid cloud::hybrid cloud
+private components::private components
+word processors::word processors
+software stack::software stack
+database server::database server
+backup servers::backup servers
+photo storage::photo storage
+file storage::file storage
+service providers::service providers
+physical computers::physical computers
+total storage::total storage
+hosting services::hosting services
+clients figure::clients figure
+real-time embedded::real-time embedded
+embedded systems::embedded systems
+climate control::climate control
+control systems::control systems
+process control::process control
+specialized chips::specialized chips
+generic cpus::generic cpus
+cpus applied::cpus applied
+current price::current price
+plenty powerful::plenty powerful
+simple electronic::simple electronic
+electronic devices::electronic devices
+kids toys::kids toys
+control devices::control devices
+devices require::devices require
+oses response::oses response
+open-source operating::open-source operating
+flourish conference::flourish conference
+conference held::conference held
+free libre::free libre
+open source::open source
+source software::source software
+visit http::visit http
+open-source software::open-source software
+source code::source code
+small army::small army
+unpaid programmers::unpaid programmers
+common good::common good
+critics argue::critics argue
+proponents counter::proponents counter
+eyes inspecting::eyes inspecting
+good resource::good resource
+sensitive issues::sensitive issues
+copyright protection::copyright protection
+protection algorithms::protection algorithms
+richard stallman::richard stallman
+stallman started::stallman started
+gnu project::gnu project
+open-source unix::open-source unix
+gnu manifesto::gnu manifesto
+free software::free software
+software foundation::software foundation
+open-source development::open-source development
+gnu general::gnu general
+public license::public license
+full rights::full rights
+license agreement::license agreement
+linus torvalds::linus torvalds
+first full::first full
+full operating::full operating
+system developed::system developed
+including redhat::including redhat
+operating environments::operating environments
+bsd unix::bsd unix
+att bell::att bell
+bell labs::bell labs
+code made::code made
+computer science::computer science
+science students::science students
+ucb students::ucb students
+students developed::students developed
+developed unix::developed unix
+source-code format::source-code format
+free bsd::free bsd
+mac operating::mac operating
+unix operating::unix operating
+sun microsystems::sun microsystems
+att systemv::att systemv
+att copyrights::att copyrights
+open-source components::open-source components
+binary libraries::binary libraries
+copyrighted portions::copyrighted portions
+open solaris::open solaris
+code online::code online
+entire package::entire package
+software movement::software movement
+ongoing projects::ongoing projects
+projects involving::projects involving
+involving untold::involving untold
+untold numbers::untold numbers
+provide portals::provide portals
+summary operating-system::summary operating-system
+operating-system structures::operating-system structures
+structures references::structures references
+chapter deals::chapter deals
+design issues::design issues
+basic structure::basic structure
+popular oses::popular oses
+operating-system services::operating-system services
+services figure::services figure
+system services::system services
+services oses::services oses
+oses provide::oses provide
+provide environments::provide environments
+programs run::programs run
+user interfaces::user interfaces
+issue commands::issue commands
+system depending::system depending
+command-line interface::command-line interface
+gui interface::gui interface
+e.g windows::e.g windows
+batch command::batch command
+command systems::command systems
+older systems::older systems
+punch cards::punch cards
+job-control language::job-control language
+specialty systems::specialty systems
+systems designed::systems designed
+single purpose::single purpose
+program execution::program execution
+transferring data::transferring data
+including keyboards::including keyboards
+file-system manipulation::file-system manipulation
+raw data::raw data
+data storage::data storage
+maintaining directory::maintaining directory
+subdirectory structures::subdirectory structures
+mapping file::mapping file
+file names::file names
+specific blocks::specific blocks
+providing tools::providing tools
+processes running::processes running
+separate processors::separate processors
+separate machines::separate machines
+message passing::message passing
+error detection::error detection
+software errors::software errors
+harmful repercussions::harmful repercussions
+include complex::include complex
+complex error::complex error
+error avoidance::error avoidance
+recovery systems::recovery systems
+including backups::including backups
+raid drives::raid drives
+redundant systems::redundant systems
+systems debugging::systems debugging
+diagnostic tools::diagnostic tools
+tools aid::tools aid
+aid users::aid users
+systems aid::systems aid
+efficient operation::efficient operation
+e.g cpu::e.g cpu
+peripheral devices::peripheral devices
+generic systems::generic systems
+tuned systems::tuned systems
+operating environment::operating environment
+system activity::system activity
+resource usage::resource usage
+billing purposes::billing purposes
+statistical record::statistical record
+record keeping::record keeping
+future performance::future performance
+preventing harm::preventing harm
+internal processes::internal processes
+malicious outsiders::malicious outsiders
+outsiders authentication::outsiders authentication
+restricted access::restricted access
+obvious parts::obvious parts
+highly secure::highly secure
+secure systems::secure systems
+process activity::process activity
+excruciating detail::excruciating detail
+security regulation::security regulation
+regulation dictate::regulation dictate
+non-erasable medium::non-erasable medium
+extended times::extended times
+user operating-system::user operating-system
+operating-system interface::operating-system interface
+command interpreter::command interpreter
+user request::user request
+requested programs::requested programs
+separate program::separate program
+user logs::user logs
+configuration file::configuration file
+initial settings::initial settings
+shells provide::shells provide
+external programs::external programs
+rudimentary command::rudimentary command
+command interpretation::command interpretation
+interpretation structure::interpretation structure
+shell script::shell script
+script programming::script programming
+decision constructs::decision constructs
+interesting distinction::interesting distinction
+wild card::wild card
+card file::card file
+file naming::file naming
+unix systems::unix systems
+launched sees::launched sees
+filenames generated::filenames generated
+wild cards::wild cards
+dos system::dos system
+program sees::program sees
+sees fit::sees fit
+fit figure::fit figure
+bourne shell::bourne shell
+shell command::shell command
+graphical user::graphical user
+user interface::user interface
+desktop metaphor::desktop metaphor
+file folders::file folders
+trash cans::trash cans
+resource icons::resource icons
+icons represent::icons represent
+xerox parc::xerox parc
+parc research::parc research
+research facility::research facility
+front end::front end
+traditional command::traditional command
+command line::command line
+line interpreter::line interpreter
+interpreter running::interpreter running
+true graphical::true graphical
+graphical shell::graphical shell
+line interface::line interface
+small mobile::small mobile
+mobile devices::mobile devices
+touch-screen interface::touch-screen interface
+interface today::interface today
+physical keyboard::physical keyboard
+kind built::kind built
+virtual keyboard::virtual keyboard
+touch screen::touch screen
+screen figure::screen figure
+ipad touchscreen::ipad touchscreen
+modern systems::modern systems
+individual users::individual users
+desired interface::desired interface
+needed system::needed system
+system administrators::system administrators
+user starts::user starts
+gui interfaces::gui interfaces
+terminal emulator::terminal emulator
+emulator window::emulator window
+command-line commands::command-line commands
+shell scripts::shell scripts
+programs figure::programs figure
+calls provide::calls provide
+application programs::application programs
+optimal performance::optimal performance
+calls required::calls required
+large number::large number
+calls invoked::calls invoked
+single simple::single simple
+simple command::simple command
+command read::command read
+man page::man page
+simple examples::simple examples
+strace mkdir::strace mkdir
+mkdir temp::mkdir temp
+strace date::strace date
+low-level system::low-level system
+application programming::application programming
+programming interface::programming interface
+sidebar shows::sidebar shows
+unix based::unix based
+based systems::based systems
+direct system::direct system
+greater program::greater program
+program portability::program portability
+call interface::call interface
+table lookup::table lookup
+access specific::access specific
+specific numbered::specific numbered
+numbered system::numbered system
+user application::user application
+application invoking::application invoking
+values pushed::values pushed
+large blocks::large blocks
+memory address::memory address
+address passed::address passed
+major categories::major categories
+sixth type::sixth type
+library calls::library calls
+generate system::generate system
+control system::control system
+calls include::calls include
+include end::include end
+create process::create process
+terminate process::terminate process
+process attributes::process attributes
+signal event::signal event
+free memory::free memory
+eventually stopped::eventually stopped
+process pauses::process pauses
+processes stop::processes stop
+core dumps::core dumps
+recovery tools::recovery tools
+compare dos::compare dos
+single-tasking system::single-tasking system
+multi-tasking system::multi-tasking system
+transfers control::transfers control
+ms-dos execution::ms-dos execution
+system startup::system startup
+interpreter remains::interpreter remains
+completely resident::completely resident
+running process::running process
+background process::background process
+exact duplicate::exact duplicate
+original command::original command
+original process::original process
+cloned process::cloned process
+unique process::unique process
+child process::child process
+desired process::desired process
+command prompt::command prompt
+freebsd running::freebsd running
+running multiple::running multiple
+multiple programs::multiple programs
+file management::file management
+management system::management system
+include create::include create
+create file::create file
+delete file::delete file
+file attributes::file attributes
+ordinary files::ordinary files
+actual directory::actual directory
+directory structure::directory structure
+device management::device management
+include request::include request
+request device::request device
+release device::release device
+device attributes::device attributes
+e.g disk::e.g disk
+disk drives::disk drives
+e.g files::e.g files
+ram disks::ram disks
+systems represent::systems represent
+represent devices::represent devices
+special files::special files
+device drivers::device drivers
+unix system::unix system
+information maintenance::information maintenance
+maintenance system::maintenance system
+include calls::include calls
+system data::system data
+dump memory::dump memory
+single step::single step
+step programs::step programs
+programs pausing::programs pausing
+pausing execution::pausing execution
+debug programs::debug programs
+communication system::communication system
+communication connection::communication connection
+transfer status::transfer status
+status information::status information
+remote devices::remote devices
+passing model::passing model
+support calls::support calls
+remote process::remote process
+transmit messages::transmit messages
+incoming messages::incoming messages
+non-blocking state::non-blocking state
+longer needed::longer needed
+memory model::memory model
+access memory::access memory
+locking mechanisms::locking mechanisms
+mechanisms restricting::mechanisms restricting
+simultaneous access::simultaneous access
+inter-computer communications::inter-computer communications
+large amounts::large amounts
+small number::small number
+data item::data item
+system resources::system resources
+access mechanisms::access mechanisms
+non-priveleged users::non-priveleged users
+elevated access::elevated access
+access permissions::access permissions
+controlled temporary::controlled temporary
+temporary circumstances::temporary circumstances
+multi-user systems::multi-user systems
+ubiquitous network::ubiquitous network
+network connectivity::network connectivity
+system programs::system programs
+programs provide::programs provide
+separate applications::separate applications
+command interpreters::command interpreters
+system utilities::system utilities
+simple editors::simple editors
+e.g notepad::e.g notepad
+debate arises::debate arises
+non-system applications::non-system applications
+manipulate files::manipulate files
+data logging::data logging
+system registries::system registries
+recall configuration::recall configuration
+configuration information::configuration information
+file modification::file modification
+e.g text::e.g text
+text editors::text editors
+file contents::file contents
+programming-language support::programming-language support
+e.g compilers::e.g compilers
+library archive::library archive
+archive management::archive management
+common languages::common languages
+program loading::program loading
+dynamic loaders::dynamic loaders
+overlay loaders::overlay loaders
+interactive debuggers::interactive debuggers
+providing connectivity::providing connectivity
+including mail::including mail
+web browsers::web browsers
+remote logins::remote logins
+file transfers::file transfers
+remote command::remote command
+command execution::command execution
+background services::background services
+system daemons::system daemons
+services examples::services examples
+examples include::examples include
+include network::include network
+network daemons::network daemons
+print servers::print servers
+process schedulers::process schedulers
+system error::system error
+error monitoring::error monitoring
+monitoring services::monitoring services
+systems today::systems today
+additional services::additional services
+copying files::copying files
+make system::make system
+user-written programs::user-written programs
+operating-system design::operating-system design
+design goals::design goals
+requirements define::requirements define
+define properties::define properties
+finished system::finished system
+first step::first step
+large complex::large complex
+complex system::complex system
+user requirements::user requirements
+users care::users care
+commonly understood::commonly understood
+understood vernacular::understood vernacular
+implementation details::implementation details
+product description::product description
+sales brochure::sales brochure
+shrink-wrapped box::shrink-wrapped box
+system requirements::system requirements
+implementation specifics::implementation specifics
+performance requirements::performance requirements
+compatibility constraints::compatibility constraints
+standards compliance::standards compliance
+requirements serve::requirements serve
+planned scope::planned scope
+single user::single user
+specialized system::specialized system
+general purpose::general purpose
+policies determine::policies determine
+done mechanisms::done mechanisms
+mechanisms determine::mechanisms determine
+adjusting parameters::adjusting parameters
+configuration files::configuration files
+relative priority::relative priority
+background versus::background versus
+versus foreground::versus foreground
+foreground tasks::foreground tasks
+assembly language::assembly language
+direct control::direct control
+hardware-related issues::hardware-related issues
+recent advances::recent advances
+compiler efficiencies::compiler efficiencies
+critical sections::critical sections
+target hardware::target hardware
+real hardware::real hardware
+suitable platform::suitable platform
+e.g smart::e.g smart
+game consoles::game consoles
+similar devices::similar devices
+efficient performance::efficient performance
+separate subsystems::separate subsystems
+defined tasks::defined tasks
+performance characteristics::performance characteristics
+architectural configurations::architectural configurations
+simple structure::simple structure
+short amount::short amount
+modern software::modern software
+software engineering::software engineering
+engineering techniques::engineering techniques
+original expectations::original expectations
+kernel modes::kernel modes
+programs direct::programs direct
+direct access::direct access
+underlying hardware::underlying hardware
+user versus::user versus
+versus kernel::versus kernel
+chip set::chip set
+ms-dos layer::ms-dos layer
+layer structure::layer structure
+original unix::original unix
+layered approach::layered approach
+big layer::big layer
+layered subsystems::layered subsystems
+traditional unix::traditional unix
+system structure::system structure
+smaller layers::smaller layers
+services provided::services provided
+lower layer::lower layer
+lower layers::lower layers
+proper services::proper services
+higher layer::higher layer
+chicken-and-egg situations::chicken-and-egg situations
+layered approaches::layered approaches
+significant processing::significant processing
+step figure::step figure
+layered operating::layered operating
+basic idea::basic idea
+micro kernels::micro kernels
+non-essential services::non-essential services
+microkernels provide::microkernels provide
+basic process::basic process
+system expansion::system expansion
+major component::major component
+mac osx::mac osx
+performance problems::performance problems
+improved performance::improved performance
+systems figure::systems figure
+typical microkernel::typical microkernel
+small core::small core
+core kernel::core kernel
+solaris structure::solaris structure
+multiple intermediary::multiple intermediary
+intermediary layers::intermediary layers
+chicken-and-egg problems::chicken-and-egg problems
+implement message::implement message
+directly figure::directly figure
+loadable modules::loadable modules
+hybrid systems::hybrid systems
+max osx::max osx
+osx architecture::osx architecture
+architecture relies::architecture relies
+mach microkernel::mach microkernel
+basic system::basic system
+management services::management services
+bsd kernel::bsd kernel
+services application::services application
+application services::application services
+kernel extensions::kernel extensions
+ios operating::ios operating
+touchscreen interface::touchscreen interface
+small screens::small screens
+android smartphones::android smartphones
+open handset::open handset
+handset alliance::handset alliance
+primarily google::primarily google
+android includes::android includes
+includes versions::includes versions
+small platforms::small platforms
+android apps::android apps
+special java-for-android::special java-for-android
+java-for-android development::java-for-android development
+development environment::development environment
+environment figure::environment figure
+operating-system debugging::operating-system debugging
+first place::first place
+error discovery::error discovery
+performance tuning::performance tuning
+failure analysis::failure analysis
+executed stepwise::executed stepwise
+execution progresses::execution progresses
+document program::document program
+produce statistics::produce statistics
+ordinary process::ordinary process
+process crashes::process crashes
+memory dump::memory dump
+disk file::disk file
+include debugging::include debugging
+debugging information::debugging information
+performance hit::performance hit
+work done::work done
+error occurred::error occurred
+direct disk-access::direct disk-access
+disk-access routines::disk-access routines
+crash dump::crash dump
+ordinary file::ordinary file
+kernel crash::kernel crash
+unallocated portion::unallocated portion
+disk reserved::disk reserved
+requires monitoring::requires monitoring
+monitoring system::monitoring system
+important events::important events
+log files::log files
+provide utilities::provide utilities
+report system::report system
+system status::system status
+provide monitoring::provide monitoring
+monitoring support::monitoring support
+support figure::support figure
+windows task::windows task
+task manager::task manager
+special facility::special facility
+dtrace adds::dtrace adds
+probe consumers::probe consumers
+dtrace facility::dtrace facility
+proportional impact::proportional impact
+ioctl system::ioctl system
+probe code::probe code
+loops allowed::loops allowed
+probe fires::probe fires
+enabling control::enabling control
+control blocks::control blocks
+if-then block::if-then block
+consumer terminates::consumer terminates
+ecbs remain::ecbs remain
+code monitors::code monitors
+process running::process running
+on-cpu uid::on-cpu uid
+off-cpu self::off-cpu self-
+critical kernel::critical kernel
+similar utilities::similar utilities
+operating-system generation::operating-system generation
+specific site::specific site
+variable parameters::variable parameters
+initial installation::initial installation
+additional resources::additional resources
+tune performance::tune performance
+optional characteristics::optional characteristics
+device-specific characteristics::device-specific characteristics
+open file::open file
+file table::file table
+process scheduling::process scheduling
+disk scheduling::disk scheduling
+scheduling algorithms::scheduling algorithms
+process table::process table
+commonly configuration::commonly configuration
+configuration tables::configuration tables
+tables determine::tables determine
+key important::key important
+important parameters::important parameters
+complicated makefiles::complicated makefiles
+interactive configuration::interactive configuration
+configuration programs::configuration programs
+system configuration::system configuration
+table data::table data
+editing data::editing data
+data tables::data tables
+systems provide::systems provide
+alternate kernels::alternate kernels
+system boot::system boot
+general approach::general approach
+system powers::system powers
+program counter::program counter
+system begins::system begins
+executing instructions::executing instructions
+instructions found::instructions found
+address points::address points
+program located::program located
+rom chips::rom chips
+eprom chips::eprom chips
+rom bootstrap::rom bootstrap
+runs hardware::runs hardware
+hardware checks::hardware checks
+physical resources::physical resources
+controller cards::controller cards
+on-board diagnostics::on-board diagnostics
+special key::special key
+post process::post process
+rom bios::rom bios
+bios configuration::bios configuration
+configuration utility::configuration utility
+hardware parameters::hardware parameters
+restrict access::restrict access
+provide access::provide access
+additional configuration::additional configuration
+configuration setup::configuration setup
+setup programs::setup programs
+raid disk::raid disk
+disk controller::disk controller
+special graphics::special graphics
+networking cards::networking cards
+non-volatile storage::non-volatile storage
+storage device::storage device
+floppy drive::floppy drive
+secondary hard::secondary hard
+first sector::first sector
+fdisk table::fdisk table
+physical hard::physical hard
+logical partitions::logical partitions
+partition starts::partition starts
+small amount::small amount
+system code::system code
+first disk::first disk
+disk block::disk block
+bootstrap code::bootstrap code
+first part::first part
+larger boot::larger boot
+boot program::boot program
+single-boot system::single-boot system
+program loaded::program loaded
+hard disk::hard disk
+multiple kernels::multiple kernels
+earlier steps::earlier steps
+multiple-boot systems::multiple-boot systems
+default choice::default choice
+boot loader::boot loader
+chosen single-boot::chosen single-boot
+previous bullet::previous bullet
+bullet point::bullet point
+single-user mode::single-user mode
+maintenance mode::maintenance mode
+mode launches::mode launches
+primary log::primary log
+system maintenance::system maintenance
+system enters::system enters
+full multi-user::full multi-user
+multi-tasking mode::multi-tasking mode
+examines configuration::examines configuration
+spawns login::spawns login
+login programs::login programs
+login devices::login devices
+enable user::enable user
+user logins::user logins
+getty program::getty program
+program initializes::program initializes
+login prompt::login prompt
+accepts login::accepts login
+login names::login names
+system files::system files
+shell program::shell program
+user configuration::user configuration
+issue prompts::issue prompts
+user commands::user commands
+shell dies::shell dies
+terminal device::terminal device
+9th edition::9th edition
+independent hardware::independent hardware
+oses running::oses running
+physical hardware::physical hardware
+multiple platforms::multiple platforms
+obvious difficulty::obvious difficulty
+difficulty involves::difficulty involves
+separate smaller::separate smaller
+virtual disks::virtual disks
+system models::system models
+nonvirtual machine::nonvirtual machine
+ibm mainframes::ibm mainframes
+offering protection::offering protection
+security benefits::security benefits
+full access::full access
+users operating::users operating
+real machine::real machine
+product development::product development
+multiple oses::multiple oses
+entire virtual::entire virtual
+program written::program written
+unix machine::unix machine
+dos emulator::dos emulator
+run dos::run dos
+dos programs::dos programs
+emulators tend::emulators tend
+guest program::guest program
+guest programs::guest programs
+zone system::zone system
+low-level hardware::low-level hardware
+isolated system::isolated system
+solaris system::solaris system
+operating space::operating space
+additional zones::additional zones
+zones running::zones running
+small virtualization::small virtualization
+virtualization layer::virtualization layer
+layer figure::layer figure
+running kernels::running kernels
+loaded oses::loaded oses
+kernel system::kernel system
+true kernel::true kernel
+increased levels::increased levels
+virtual devices::virtual devices
+real devices::real devices
+physical disks::physical disks
+hardware platform::hardware platform
+simultaneous operation::simultaneous operation
+multiple windows::multiple windows
+linux oses::linux oses
+vmware workstation::vmware workstation
+workstation architecture::workstation architecture
+platform independent::platform independent
+running java::running java
+java source::java source
+java byte::java byte
+byte code::byte code
+.class files::.class files
+files java::files java
+binary instructions::binary instructions
+jvm implements::jvm implements
+implements memory::implements memory
+garbage collection::garbage collection
+native system::native system
+system binary::system binary
+binary code::binary code
+native machine::native machine
+machine binary::machine binary
+java interpreter::java interpreter
+native binary::native binary
+hardware chips::hardware chips
+run java::run java
+interesting application::interesting application
+.net framework::.net framework
+compiling code::compiling code
+intermediary virtual::intermediary virtual
+common language::common language
+language runtime::language runtime
+jit compilation::jit compilation
+introduction::introduction
+references::references
+abraham::abraham
+silberschatz::silberschatz
+greg::greg
+gagne::gagne
+peter::peter
+baer::baer
+galvin::galvin
+operating::operating
+system::system
+concepts::concepts
+ninth::ninth
+edition::edition
+chapter::chapter
+blind::blind
+men::men
+elephant::elephant
+systems::systems
+number::number
+viewpoints::viewpoints
+view::view
+shows::shows
+complete::complete
+picture::picture
+views::views
+pretty::pretty
+good::good
+users::users
+applications::applications
+figure::figure
+abstract::abstract
+components::components
+computer::computer
+apps::apps
+serves::serves
+interface::interface
+services::services
+manages::manages
+resources::resources
+government::government
+model::model
+nt::nt
+produce::produce
+debates::debates
+included::included
+kernel::kernel
+vendor::vendor
+ships::ships
+distinction::distinction
+3rd::3rd
+party::party
+user::user
+computer-system::computer-system
+organization::organization
+parts::parts
+fit::fit
+modern::modern
+1.2.1::1.2.1
+operation::operation
+bootstrap::bootstrap
+program::program
+shared::shared
+memory::memory
+cpu::cpu
+i::NNP
+cards::cards
+slicing::slicing
+multi-process::multi-process
+interrupt::interrupt
+handling::handling
+clock::clock
+implementation::implementation
+calls::calls
+timeline::timeline
+single::single
+process::process
+doing::doing
+output::output
+1.2.2::1.2.2
+storage::storage
+structure::structure
+main::main
+ram::ram
+programs::programs
+loaded::loaded
+run::run
+instructions::instructions
+data::data
+fetched::fetched
+registers::registers
+volatile::volatile
+medium::medium
+size::size
+speed::speed
+electronic::electronic
+faster::faster
+smaller::smaller
+expensive::expensive
+bit::bit
+cache::cache
+non-volatile::non-volatile
+permanent::permanent
+slower::slower
+larger::larger
+disks::disks
+magnetic::magnetic
+optical::optical
+tapes::tapes
+storage-device::storage-device
+hierarchy::hierarchy
+1.2.3::1.2.3
+i::-NONE-
+typical::typical
+involves::involves
+requests::requests
+direct::direct
+access::access
+dma::dma
+works::works
+architecture::architecture
+kinds::kinds
+environments::environments
+1.3.1::1.3.1
+single-processor::single-processor
+runs::runs
+specialized::specialized
+processors::processors
+disk::disk
+controllers::controllers
+gpus::gpus
+1.3.2::1.3.2
+multiprocessor::multiprocessor
+increased::increased
+throughput::throughput
+execution::execution
+linear::linear
+speedup::speedup
+economy::economy
+scale::scale
+peripherals::peripherals
+reliability::reliability
+failure::failure
+slows::slows
+crash::crash
+redundant::redundant
+processing::processing
+checks::checks
+balances::balances
+e.g::e.g
+nasa::nasa
+symmetric::symmetric
+multiprocessing::multiprocessing
+dual-core::dual-core
+design::design
+two::two
+cores::cores
+chip::chip
+1.3.3::1.3.3
+clustered::clustered
+independent::independent
+common::common
+connected::connected
+high-speed::high-speed
+lan::lan
+working::working
+special::special
+considerations::considerations
+required::required
+distributed::distributed
+lock::lock
+management::management
+collaboration::collaboration
+protocols::protocols
+general::general
+operating-system::operating-system
+time-sharing::time-sharing
+multi-user::multi-user
+multi-tasking::multi-tasking
+requires::requires
+job::job
+scheduling::scheduling
+resource::resource
+allocation::allocation
+strategies::strategies
+swap::swap
+space::space
+virtual::virtual
+physical::physical
+file::file
+protection::protection
+security::security
+inter-process::inter-process
+communications::communications
+layout::layout
+multiprogramming::multiprogramming
+operations::operations
+interrupt-driven::interrupt-driven
+nature::nature
+oses::oses
+erroneous::erroneous
+processes::processes
+disturb::disturb
+1.5.1::1.5.1
+dual-mode::dual-mode
+multimode::multimode
+mode::mode
+executing::executing
+harmless::harmless
+code::code
+a.k.a::a.k.a
+supervisor::supervisor
+privileged::privileged
+potentially::potentially
+dangerous::dangerous
+machine::machine
+executed::executed
+entered::entered
+making::making
+flip::flip
+switch::switch
+computers::computers
+support::support
+hardware::hardware
+transition::transition
+concept::concept
+modes::modes
+extended::extended
+requiring::requiring
+cpus::cpus
+virtualization::virtualization
+extra::extra
+bits::bits
+manager::manager
+vmm::vmm
+control::control
+privileges::privileges
+ordinary::ordinary
+full::full
+typically::typically
+implemented::implemented
+form::form
+software::software
+interrupts::interrupts
+handler::handler
+transfer::transfer
+part::part
+switching::switching
+generated::generated
+additional::additional
+parameters::parameters
+generally::generally
+passed::passed
+service::service
+routine::routine
+handle::handle
+requested::requested
+call::call
+attempts::attempts
+execute::execute
+illegal::illegal
+non-existent::non-existent
+forbidden::forbidden
+areas::areas
+generate::generate
+trapped::trapped
+transferred::transferred
+issues::issues
+error::error
+message::message
+possibly::possibly
+dumps::dumps
+log::log
+core::core
+analysis::analysis
+terminates::terminates
+offending::offending
+1.5.2::1.5.2
+timer::timer
+begins::begins
+set::set
+reverts::reverts
+back::back
+assures::assures
+instruction::instruction
+responsible::responsible
+tasks::tasks
+creating::creating
+deleting::deleting
+ensuring::ensuring
+receives::receives
+interfering::interfering
+suspending::suspending
+resuming::resuming
+synchronization::synchronization
+communication::communication
+deadlock::deadlock
+keeping::keeping
+track::track
+blocks::blocks
+determining::determining
+move::move
+out::out
+allocating::allocating
+deallocating::deallocating
+needed::needed
+malloc::malloc
+1.8.1::1.8.1
+file-system::file-system
+filesystem::filesystem
+files::files
+directories::directories
+supporting::supporting
+primitives::primitives
+manipulating::manipulating
+open::open
+flush::flush
+mapping::mapping
+secondary::secondary
+backing::backing
+stable::stable
+media::media
+1.8.2::1.8.2
+mass-storage::mass-storage
+free::free
+note::note
+trade-offs::trade-offs
+longevity::longevity
+re-writability::re-writability
+mass::mass
+devices::devices
+including::including
+floppy::floppy
+hard::hard
+tape::tape
+drives::drives
+cds::cds
+dvds::dvds
+1.8.3::1.8.3
+caching::caching
+cases::cases
+higher-speed::higher-speed
+temporary::temporary
+frequently::frequently
+portions::portions
+ranges::ranges
+external::external
+table::table
+information::information
+store::store
+level::level
+proper::proper
+choice::choice
+profound::profound
+impact::impact
+performance::performance
+read::read
+migration::migration
+path::path
+drive::drive
+finally::finally
+written::written
+reverse::reverse
+step::step
+fetch::fetch
+immediately::immediately
+excess::excess
+order::order
+satisfy::satisfy
+future::future
+writing::writing
+small::small
+amounts::amounts
+buffered::buffered
+fill::fill
+entire::entire
+block::block
+device::device
+chain::chain
+complicated::complicated
+multiple::multiple
+worse::worse
+important::important
+ensure::ensure
+reaches::reaches
+up-to-date::up-to-date
+copy::copy
+cached::cached
+1.8.4::1.8.4
+subsystem::subsystem
+consists::consists
+memory-management::memory-management
+component::component
+includes::includes
+buffering::buffering
+spooling::spooling
+device-driver::device-driver
+drivers::drivers
+specific::specific
+unix::unix
+implements::implements
+interfaces::interfaces
+types::types
+accessing::accessing
+character::character
+long::long
+listing::listing
+first::first
+position::position
+field::field
+numbers::numbers
+major::major
+minor::minor
+normal::normal
+signifies::signifies
+driver::driver
+handles::handles
+parameter::parameter
+accessed::accessed
+options::options
+differ::differ
+interfere::interfere
+entitled::entitled
+accident::accident
+faults::faults
+pointer::pointer
+variables::variables
+misused::misused
+protecting::protecting
+deliberate::deliberate
+attacks::attacks
+legitimate::legitimate
+attempting::attempting
+gain::gain
+unauthorized::unauthorized
+attackers::attackers
+damage::damage
+structures::structures
+1.10.4::1.10.4
+bitmaps::bitmaps
+string::string
+boolean::boolean
+state::state
+collection::collection
+objects::objects
+pages::pages
+computing::computing
+1.11.1::1.11.1
+traditional::traditional
+1.11.2::1.11.2
+mobile::mobile
+handheld::handheld
+smart::smart
+phones::phones
+tablets::tablets
+opposed::opposed
+laptops::laptops
+fall::fall
+advantage::advantage
+built-in::built-in
+sensors::sensors
+gps::gps
+tilt::tilt
+compass::compass
+inertial::inertial
+movement::movement
+connect::connect
+internet::internet
+wireless::wireless
+networking::networking
+ieee::ieee
+cellular::cellular
+telephone::telephone
+technology::technology
+limited::limited
+capacity::capacity
+power::power
+relative::relative
+consume::consume
+battery::battery
+heat::heat
+dominant::dominant
+today::today
+google::google
+android::android
+apple::apple
+ios::ios
+1.11.3::1.11.3
+consist::consist
+heterogeneous::heterogeneous
+network::network
+cooperating::cooperating
+fashion::fashion
+networks::networks
+range::range
+tight::tight
+lans::lans
+broad::broad
+reaching::reaching
+wans::wans
+wan::wan
+wide::wide
+area::area
+international::international
+corporation::corporation
+man::man
+metropolitan::metropolitan
+covering::covering
+region::region
+city::city
+local::local
+home::home
+business::business
+single-site::single-site
+university::university
+campus::campus
+pan::pan
+personal::personal
+bluetooth::bluetooth
+connection::connection
+phone::phone
+headset::headset
+car::car
+speeds::speeds
+throughputs::throughputs
+reliabilities::reliabilities
+complex::complex
+well-coordinated::well-coordinated
+include::include
+cycles::cycles
+printers::printers
+1.11.4::1.11.4
+client-server::client-server
+defined::defined
+server::server
+serve::serve
+clients::clients
+technically::technically
+servers::servers
+co-exist::co-exist
+act::act
+client::client
+served::served
+day::day
+graphical::graphical
+displays::displays
+1.11.5::1.11.5
+peer-to-peer::peer-to-peer
+provide::provide
+clear::clear
+leader::leader
+employ::employ
+central::central
+directory::directory
+location::location
+searching::searching
+find::find
+skype::skype
+locate::locate
+desired::desired
+peer::peer
+centralized::centralized
+1.11.6::1.11.6
+guest::guest
+machines::machines
+hosted::hosted
+cross-platform::cross-platform
+development::development
+student::student
+windows::windows
+based::based
+root::root
+crashed::crashed
+underlying::underlying
+unaffected::unaffected
+caught::caught
+translated::translated
+made::made
+real::real
+slow::slow
+things::things
+depending::depending
+simultaneously::simultaneously
+native::native
+bypassing::bypassing
+vmware::vmware
+linux::linux
+follow::follow
+steps::steps
+download::download
+player::player
+tool::tool
+http::http
+install::install
+choose::choose
+version::version
+hundreds::hundreds
+images::images
+boot::boot
+1.11.7::1.11.7
+cloud::cloud
+delivers::delivers
+public::public
+pay::pay
+private::private
+company::company
+internal::internal
+hybrid::hybrid
+saas::saas
+word::word
+platform::platform
+paas::paas
+stack::stack
+application::application
+database::database
+infrastructure::infrastructure
+iaas::iaas
+backup::backup
+photo::photo
+providers::providers
+type::type
+clouds::clouds
+thousands::thousands
+millions::millions
+petabytes::petabytes
+total::total
+web::web
+hosting::hosting
+offer::offer
+1.11.8::1.11.8
+real-time::real-time
+embedded::embedded
+automobiles::automobiles
+climate::climate
+toasters::toasters
+refrigerators::refrigerators
+involve::involve
+chips::chips
+generic::generic
+applied::applied
+task::task
+current::current
+price::price
+plenty::plenty
+powerful::powerful
+simple::simple
+kids::kids
+toys::toys
+require::require
+driven::driven
+response::response
+critical::critical
+open-source::open-source
+flourish::flourish
+conference::conference
+held::held
+uic::uic
+subject::subject
+libre::libre
+source::source
+visit::visit
+published::published
+sold::sold
+optionally::optionally
+modify::modify
+developed::developed
+maintained::maintained
+army::army
+loosely::loosely
+unpaid::unpaid
+programmers::programmers
+critics::critics
+argue::argue
+buggy::buggy
+proponents::proponents
+counter::counter
+bugs::bugs
+found::found
+fixed::fixed
+quickly::quickly
+pairs::pairs
+eyes::eyes
+inspecting::inspecting
+studying::studying
+students::students
+examine::examine
+change::change
+re-compile::re-compile
+1.12.1::1.12.1
+history::history
+1950s::1950s
+lot::lot
+companies::companies
+protect::protect
+privacy::privacy
+sensitive::sensitive
+copyright::copyright
+algorithms::algorithms
+richard::richard
+stallman::stallman
+started::started
+gnu::gnu
+project::project
+manifesto::manifesto
+arguing::arguing
+founded::founded
+foundation::foundation
+promote::promote
+fsf::fsf
+license::license
+essentially::essentially
+states::states
+rights::rights
+distribute::distribute
+agreement::agreement
+copylefting::copylefting
+1.12.2::1.12.2
+linus::linus
+torvalds::torvalds
+finland::finland
+distributions::distributions
+evolved::evolved
+original::original
+redhat::redhat
+suse::suse
+fedora::fedora
+debian::debian
+slackware::slackware
+ubuntu::ubuntu
+geared::geared
+group::group
+end-users::end-users
+1.12.3::1.12.3
+bsd::bsd
+originally::originally
+att::att
+bell::bell
+labs::labs
+science::science
+universities::universities
+california::california
+berkeley::berkeley
+ucb::ucb
+released::released
+product::product
+binary::binary
+source-code::source-code
+format::format
+spite::spite
+lawsuits::lawsuits
+versions::versions
+netbsd::netbsd
+openbsd::openbsd
+dragonflybsd::dragonflybsd
+located::located
+mac::mac
+darwin::darwin
+derived::derived
+1.13.4::1.13.4
+solaris::solaris
+sun::sun
+microsystems::microsystems
+migrated::migrated
+systemv::systemv
+basis::basis
+covered::covered
+copyrights::copyrights
+link::link
+libraries::libraries
+copyrighted::copyrighted
+viewing::viewing
+online::online
+unpack::unpack
+package::package
+1.13.5::1.13.5
+utility::utility
+gaining::gaining
+rapidly::rapidly
+popularity::popularity
+leading::leading
+ongoing::ongoing
+projects::projects
+involving::involving
+untold::untold
+sites::sites
+portals::portals
+summary::summary
+deals::deals
+structured::structured
+organized::organized
+choices::choices
+examined::examined
+compared::compared
+basic::basic
+popular::popular
+presented::presented
+means::means
+issue::issue
+commands::commands
+command-line::command-line
+csh::csh
+ksh::ksh
+tcsh::tcsh
+gui::gui
+x-windows::x-windows
+kde::kde
+gnome::gnome
+batch::batch
+command::command
+older::older
+punch::punch
+job-control::job-control
+language::language
+jcl::jcl
+specialty::specialty
+designed::designed
+purpose::purpose
+load::load
+terminate::terminate
+abnormally::abnormally
+transferring::transferring
+keyboards::keyboards
+terminals::terminals
+manipulation::manipulation
+addition::addition
+raw::raw
+maintaining::maintaining
+subdirectory::subdirectory
+names::names
+providing::providing
+tools::tools
+navigating::navigating
+utilizing::utilizing
+ipc::ipc
+running::running
+processor::processor
+separate::separate
+passing::passing
+detection::detection
+errors::errors
+detected::detected
+handled::handled
+appropriately::appropriately
+minimum::minimum
+harmful::harmful
+repercussions::repercussions
+avoidance::avoidance
+recovery::recovery
+backups::backups
+raid::raid
+debugging::debugging
+diagnostic::diagnostic
+aid::aid
+administrators::administrators
+tracing::tracing
+problems::problems
+efficient::efficient
+peripheral::peripheral
+managed::managed
+carefully::carefully
+specially::specially
+tuned::tuned
+customized::customized
+environment::environment
+accounting::accounting
+activity::activity
+usage::usage
+billing::billing
+purposes::purposes
+statistical::statistical
+record::record
+optimize::optimize
+preventing::preventing
+harm::harm
+wayward::wayward
+malicious::malicious
+outsiders::outsiders
+authentication::authentication
+ownership::ownership
+restricted::restricted
+obvious::obvious
+highly::highly
+secure::secure
+excruciating::excruciating
+detail::detail
+regulation::regulation
+dictate::dictate
+records::records
+non-erasable::non-erasable
+times::times
+off-site::off-site
+facilities::facilities
+2.2.1::2.2.1
+interpreter::interpreter
+request::request
+launches::launches
+incorporated::incorporated
+directly::directly
+commonly::commonly
+logs::logs
+accesses::accesses
+shells::shells
+configured::configured
+launch::launch
+automatically::automatically
+login::login
+changed::changed
+fly::fly
+configuration::configuration
+initial::initial
+settings::settings
+startup::startup
+functionality::functionality
+terms::terms
+shell::shell
+launching::launching
+rudimentary::rudimentary
+interpretation::interpretation
+script::script
+programming::programming
+loops::loops
+decision::decision
+constructs::constructs
+interesting::interesting
+wild::wild
+card::card
+naming::naming
+re-direction::re-direction
+details::details
+launched::launched
+sees::sees
+list::list
+filenames::filenames
+dos::dos
+interpret::interpret
+bourne::bourne
+2.2.2::2.2.2
+desktop::desktop
+metaphor::metaphor
+folders::folders
+trash::trash
+cans::cans
+icons::icons
+represent::represent
+item::item
+respond::respond
+icon::icon
+activated::activated
+early::early
+xerox::xerox
+parc::parc
+research::research
+facility::facility
+front::front
+end::end
+activating::activating
+line::line
+background::background
+true::true
+right::right
+traditionally::traditionally
+provided::provided
+advent::advent
+osx::osx
+partially::partially
+mice::mice
+impractical::impractical
+touch-screen::touch-screen
+responds::responds
+patterns::patterns
+swipes::swipes
+gestures::gestures
+keyboard::keyboard
+trackball::trackball
+kind::kind
+built::built
+touch::touch
+screen::screen
+ipad::ipad
+touchscreen::touchscreen
+2.2.3::2.2.3
+individual::individual
+select::select
+customize::customize
+ability::ability
+determine::determine
+starts::starts
+option::option
+terminal::terminal
+emulator::emulator
+window::window
+entering::entering
+scripts::scripts
+assembly::assembly
+optimal::optimal
+illustrates::illustrates
+sequence::sequence
+strace::strace
+examples::examples
+large::large
+invoked::invoked
+page::page
+mkdir::mkdir
+temp::temp
+date::date
+t.t::t.t
+t.2::t.2
+low-level::low-level
+api::api
+sidebar::sidebar
+apis::apis
+greater::greater
+portability::portability
+makes::makes
+lookup::lookup
+numbered::numbered
+shown::shown
+invoking::invoking
+values::values
+pushed::pushed
+indirectly::indirectly
+address::address
+register::register
+categories::categories
+outlined::outlined
+subsections::subsections
+sixth::sixth
+described::described
+standard::standard
+library::library
+2.4.1::2.4.1
+abort::abort
+create::create
+attributes::attributes
+wait::wait
+event::event
+signal::signal
+allocate::allocate
+created::created
+monitored::monitored
+paused::paused
+resumed,and::resumed,and
+eventually::eventually
+stopped::stopped
+pauses::pauses
+stops::stops
+resumed::resumed
+stop::stop
+compare::compare
+single-tasking::single-tasking
+unloads::unloads
+loads::loads
+transfers::transfers
+resume::resume
+completed::completed
+ms-dos::ms-dos
+remains::remains
+completely::completely
+resident::resident
+place::place
+executes::executes
+fork::fork
+creates::creates
+exact::exact
+duplicate::duplicate
+clone::clone
+parent::parent
+cloned::cloned
+child::child
+unique::unique
+exec::exec
+replaces::replaces
+waits::waits
+issuing::issuing
+prompt::prompt
+waiting::waiting
+freebsd::freebsd
+2.4.2::2.4.2
+delete::delete
+close::close
+write::write
+reposition::reposition
+supported::supported
+actual::actual
+chapters::chapters
+2.4.3::2.4.3
+release::release
+logically::logically
+attach::attach
+detach::detach
+partitions::partitions
+2.4.4::2.4.4
+maintenance::maintenance
+dump::dump
+pausing::pausing
+debug::debug
+2.4.5::2.4.5
+messages::messages
+status::status
+remote::remote
+identify::identify
+host::host
+communicate::communicate
+establish::establish
+transmit::transmit
+incoming::incoming
+blocking::blocking
+non-blocking::non-blocking
+longer::longer
+threads::threads
+locking::locking
+mechanisms::mechanisms
+restricting::restricting
+simultaneous::simultaneous
+dynamically::dynamically
+simpler::simpler
+easier::easier
+inter-computer::inter-computer
+approach::approach
+reading::reading
+2.4.6::2.4.6
+controlling::controlling
+adjusted::adjusted
+non-priveleged::non-priveleged
+granted::granted
+elevated::elevated
+permissions::permissions
+controlled::controlled
+circumstances::circumstances
+concern::concern
+age::age
+ubiquitous::ubiquitous
+connectivity::connectivity
+interpreters::interpreters
+utilities::utilities
+ship::ship
+calculators::calculators
+editors::editors
+notepad::notepad
+debate::debate
+arises::arises
+border::border
+non-system::non-system
+divided::divided
+rename::rename
+print::print
+manipulate::manipulate
+check::check
+logging::logging
+registries::registries
+recall::recall
+modification::modification
+text::text
+contents::contents
+programming-language::programming-language
+compilers::compilers
+linkers::linkers
+debuggers::debuggers
+profilers::profilers
+assemblers::assemblers
+archive::archive
+languages::languages
+make::make
+loading::loading
+loaders::loaders
+dynamic::dynamic
+overlay::overlay
+interactive::interactive
+mail::mail
+browsers::browsers
+logins::logins
+daemons::daemons
+booted::booted
+schedulers::schedulers
+monitoring::monitoring
+copying::copying
+checking::checking
+determined::determined
+exception::exception
+user-written::user-written
+2.6.1::2.6.1
+goals::goals
+requirements::requirements
+define::define
+properties::properties
+finished::finished
+designing::designing
+features::features
+care::care
+understand::understand
+understood::understood
+vernacular::vernacular
+similar::similar
+description::description
+sales::sales
+brochure::brochure
+shrink-wrapped::shrink-wrapped
+box::box
+developers::developers
+specifics::specifics
+compatibility::compatibility
+constraints::constraints
+standards::standards
+compliance::compliance
+contract::contract
+customer::customer
+subcontractors::subcontractors
+detailed::detailed
+vary::vary
+greatly::greatly
+planned::planned
+scope::scope
+2.6.2::2.6.2
+policies::policies
+done::done
+properly::properly
+separated::separated
+policy::policy
+easily::easily
+re-writing::re-writing
+adjusting::adjusting
+priority::priority
+versus::versus
+foreground::foreground
+2.6.3::2.6.3
+hardware-related::hardware-related
+inextricably::inextricably
+tied::tied
+recent::recent
+advances::advances
+compiler::compiler
+efficiencies::efficiencies
+recently::recently
+sections::sections
+compiled::compiled
+fine-tuned::fine-tuned
+optimized::optimized
+hand::hand
+emulators::emulators
+target::target
+unavailable::unavailable
+suitable::suitable
+game::game
+consoles::consoles
+partitioned::partitioned
+subsystems::subsystems
+inputs::inputs
+outputs::outputs
+characteristics::characteristics
+arranged::arranged
+architectural::architectural
+configurations::configurations
+2.7.1::2.7.1
+idea::idea
+big::big
+short::short
+amount::amount
+benefit::benefit
+engineering::engineering
+techniques::techniques
+gradually::gradually
+grew::grew
+exceed::exceed
+expectations::expectations
+break::break
+allowing::allowing
+layer::layer
+layered::layered
+breaking::breaking
+2.7.2::2.7.2
+layers::layers
+rests::rests
+relies::relies
+solely::solely
+lower::lower
+debugged::debugged
+independently::independently
+assumption::assumption
+trusted::trusted
+deliver::deliver
+problem::problem
+deciding::deciding
+higher::higher
+chicken-and-egg::chicken-and-egg
+situations::situations
+arise::arise
+approaches::approaches
+filter::filter
+significant::significant
+2.7.3::2.7.3
+microkernels::microkernels
+micro::micro
+kernels::kernels
+remove::remove
+non-essential::non-essential
+implement::implement
+enhanced::enhanced
+performed::performed
+expansion::expansion
+adding::adding
+rebuilding::rebuilding
+mach::mach
+widely::widely
+microkernel::microkernel
+forms::forms
+suffered::suffered
+improved::improved
+moving::moving
+monolithic::monolithic
+qnx::qnx
+2.7.4::2.7.4
+modules::modules
+object-oriented::object-oriented
+linked::linked
+module::module
+contact::contact
+eliminating::eliminating
+intermediary::intermediary
+loadable::loadable
+2.7.5::2.7.5
+strictly::strictly
+adhere::adhere
+hybrids::hybrids
+2.7.5.1::2.7.5.1
+max::max
+extensions::extensions
+rest::rest
+2.7.5.2::2.7.5.2
+iphones::iphones
+ipads::ipads
+supports::supports
+graphics::graphics
+screens::screens
+2.7.5.3::2.7.5.3
+smartphones::smartphones
+handset::handset
+alliance::alliance
+primarily::primarily
+lead::lead
+java::java
+platforms::platforms
+java-for-android::java-for-android
+kernighan::kernighan
+law::law
+cleverly::cleverly
+definition::definition
+discovery::discovery
+elimination::elimination
+tuning::tuning
+2.8.1::2.8.1
+stepwise::stepwise
+examination::examination
+expressions::expressions
+progresses::progresses
+document::document
+statistics::statistics
+spent::spent
+lines::lines
+crashes::crashes
+saved::saved
+work::work
+reasons::reasons
+hit::hit
+caused::caused
+unacceptable::unacceptable
+single-step::single-step
+people::people
+occurred::occurred
+file-access::file-access
+disk-access::disk-access
+routines::routines
+practical::practical
+unallocated::unallocated
+portion::portion
+reserved::reserved
+2.8.2::2.8.2
+debottlenecking::debottlenecking
+events::events
+analyzed::analyzed
+traces::traces
+evaluate::evaluate
+proposed::proposed
+perform::perform
+workload::workload
+report::report
+demand::demand
+top::top
+uptime::uptime
+2.8.3::2.8.3
+dtrace::dtrace
+adds::adds
+probes::probes
+queried::queried
+probe::probe
+consumers::consumers
+removed::removed
+proportional::proportional
+trace::trace
+ioctl::ioctl
+safe::safe
+allowed::allowed
+fires::fires
+enabling::enabling
+ecbs::ecbs
+if-then::if-then
+consumer::consumer
+remain::remain
+interested::interested
+monitors::monitors
+sched::sched
+on-cpu::on-cpu
+uid::uid
+self::self-
+timestamp::timestamp
+off-cpu::off-cpu
+execname::execname
+sum::sum
+due::due
+adopted::adopted
+busy::busy
+producing::producing
+generation::generation
+site::site
+variable::variable
+re-configured::re-configured
+installation::installation
+add::add
+capabilities::capabilities
+tune::tune
+configure::configure
+installed::installed
+optional::optional
+present::present
+device-specific::device-specific
+buffers::buffers
+slots::slots
+extreme::extreme
+edited::edited
+re-compiled::re-compiled
+tables::tables
+key::key
+makefiles::makefiles
+case::case
+editing::editing
+regenerated::regenerated
+reboot::reboot
+activate::activate
+possibilities::possibilities
+mechanism::mechanism
+booting::booting
+alternate::alternate
+powers::powers
+points::points
+rom::rom
+eprom::eprom
+motherboard::motherboard
+power-on::power-on
+tests::tests
+post::post
+applicable::applicable
+controller::controller
+on-board::on-board
+diagnostics::diagnostics
+pressing::pressing
+bios::bios
+pressed::pressed
+restrict::restrict
+password::password
+setup::setup
+assuming::assuming
+primary::primary
+sector::sector
+fdisk::fdisk
+logical::logical
+partition::partition
+ends::ends
+active::active
+occupied::occupied
+i.e::i.e
+os-specific::os-specific
+slightly::slightly
+single-boot::single-boot
+proceed::proceed
+opportunity::opportunity
+stage::stage
+earlier::earlier
+dual-boot::dual-boot
+multiple-boot::multiple-boot
+give::give
+default::default
+pick::pick
+frame::frame
+finds::finds
+loader::loader
+chosen::chosen
+previous::previous
+bullet::bullet
+point::point
+enter::enter
+single-user::single-user
+enable::enable
+console::console
+enters::enters
+examines::examines
+turn::turn
+spawns::spawns
+gettys::gettys
+getty::getty
+initializes::initializes
+accepts::accepts
+passwords::passwords
+authenticates::authenticates
+authenticated::authenticated
+assigned::assigned
+execs::execs
+initialize::initialize
+prompts::prompts
+dies::dies
+logout::logout
+moved::moved
+9th::9th
+believes::believes
+testing::testing
+difficulty::difficulty
+sharing::sharing
+models::models
+nonvirtual::nonvirtual
+appeared::appeared
+ibm::ibm
+mainframes::mainframes
+benefits::benefits
+offering::offering
+networked::networked
+affecting::affecting
+mentioned::mentioned
+simulation::simulation
+alternative::alternative
+simply::simply
+vice-versa::vice-versa
+tend::tend
+considerably::considerably
+perfect::perfect
+2.8.4::2.8.4
+para-virtualization::para-virtualization
+variation::variation
+theme::theme
+mimic::mimic
+modified::modified
+para-virtual::para-virtual
+zone::zone
+virtualized::virtualized
+isolated::isolated
+exist::exist
+global::global
+zones::zones
+2.8.5::2.8.5
+challenging::challenging
+consequences::consequences
+operate::operate
+simulated::simulated
+eventual::eventual
+levels::levels
+2.8.6::2.8.6
+2.8.6.1::2.8.6.1
+abstracts::abstracts
+80x86::80x86
+workstation::workstation
+2.8.6.2::2.8.6.2
+beginning::beginning
+jvm::jvm
+implementations::implementations
+numerous::numerous
+byte::byte
+.class::.class
+garbage::garbage
+interpreted::interpreted
+just-in-time::just-in-time
+jit::jit
+compilation::compilation
+scheme::scheme
+piece::piece
+encountered::encountered
+emulate::emulate
+.net::.net
+framework::framework
+compiling::compiling
+runtime::runtime
+clr::clr

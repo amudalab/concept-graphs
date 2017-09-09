@@ -1,0 +1,761 @@
+
+Lecture - 5
+                         Systems analysis and Design
+                              Prof.V.Rajaraman
+              Department of Super computer education & Research
+                Indian Institute of Science (IISc), Bangalore
+
+we will consider this time as  the  first  part  of  my  talk  qualities  of
+information
+quality is a concept which is not very precisely definable
+it is some something like a beauty of a person
+but one one one sees the quality the person knows that it is a good  quality
+
+so the exact definition is not really there
+but on the other hand if there are certain  properties which  the  resulting
+information after processing follows and if  you  are  make  sure  that  the
+method of collecting data as well as passing  data  follow  certain  minimum
+standards required standards then the resulting effort will be  that  of  an
+information of good  quality
+we have been emphasizing  right  from  the  beginning  that  information  is
+processed data
+so in order to ensure the quality of information you have  to  first  ensure
+the correctness of data and you have  to  also  ensure  the  correctness  of
+processing
+so the most important part or the basic requirement is accuracy in terms  of
+the correct data input and correct processing rules which you follow
+normally processing rules  are really incorporated in some kind of program
+so the program has to be correct in order to be  able  to  ensure  that  the
+processed data and information is also correct
+that is very whole saying in data processing called gigo g i g o garbage  in
+garbage out
+what it really means is  that  if  the  data  input  is  incorrect  whatever
+processing you may do the output is going to be incorrect or  not  of  right
+quality
+this [3.52...] every thing
+you may have the best possible recipe to make the dish like upma
+but if you give input where the [4.07..] which is given  is full of sand
+whatever you make in  terms  of  correct  recipe  following  and  doing  the
+correct process in cooking the output will be not so edible
+so this is always important to make sure that the input data is correct
+now a number of  methods  of  ensuring  that  whatever  data  you  input  is
+reasonably correct
+you have to make sure and
+in fact later on in this course you will see in fact  whole  lot  of  almost
+whole lecture i will do it later on to see how to  ensure  the  accuracy  of
+input data which gets into a system
+the reason i am emphasizing it again  and  again  is  that  when  you  write
+programs in a class room or small projects  and  so  on  [refer  slide  time
+5.07]
+
+[pic]
+
+the volume of data you deal with is not very very large
+volume of data is may be at the  most  hundred  or  two  hundred  data  data
+points you work with
+but in real data processing  systems  the  volume  of  data  you  handle  is
+enormous
+for instance if you are going to process the examination results of c e t
+c e t is taken by lakhs of candidates and  so  the  number  of   input  data
+which get into the program to be  processed will run into several lakhs
+so when the volume becomes very large it is much more  difficult  to  ensure
+correctness at every point
+so that is the reason why one has to have special methods of  ensuring  data
+correctness when you are dealing with large volumes of data
+because typically most real life data  processing  systems  will  deal  with
+laksh and lakhs of data
+not a small amount of data
+of course the correctness of program is different issue
+there is a lot of work which is going going on  in  terms  of  ensuring  the
+correctness of program
+that is from the given  specifications to get to the right program  do  that
+it is itself is  a major challenge in a soft ware design and lot of time  is
+spend on various methods of ensuring the quality of correctness of  programs
+or processing rules in this case
+so first thing is accuracy
+but that is not sufficient
+because quality has a pointed out is a not a quantified one single scalar
+it depends upon a number of different aspects or  the  information  you  get
+out with
+just like you know beauty is not a single thing
+because when you say about beauty of a girl you don't really say  say  about
+how her face looks
+but you also look at the way  she  reports  herself  various  other  aspects
+which are there
+it is not a single quantity which defines a necessary thing like beauty
+so there are other aspects which you have also to  consider  and  the  other
+most list many of them and i will explain  what  each  one  of  them  really
+means
+at the end  whatever  processing  you  do  to  provide  information  to  the
+management or to people to use it information
+what i mean by management is  that you may be actually looking at  operation
+day to day data processing
+or you may be let you  know  tactical  information  to  come  out   of  this
+operational  information  or   strategic   information   whatever   be   the
+information which you present
+all of them have to adhere to these quality standards and um
+so the important second aspect of a quality is what i  call completeness
+by completeness you mean in processing all the data which are  relevant  for
+that processing should be taken into account or incorporated
+you should not by mistake leave out some part of the data which is there
+imagine c e t  research processing where you forgot to include one  sentence
+data completely
+the sentence data is not included when  you  do  the  processing  ultimately
+what you get is these certain students who took the  exam  in  a  particular
+centre are not in the results
+so there will be fearer all over the place
+so this is situation where the input data is not is  not  complete  in  some
+part it is missed
+may be due to carelessness may be what ever it is you really  have  to  make
+sure what ever data has to be   taken  into  account  has  been  taken  into
+account
+there must be  timely  what  i  mean  by  timely  is  information  which  is
+presented too late is not much use
+therefore for instance you expect a newspaper to come every morning to  give
+you news of what happened in previous day and so on
+people read news paper every morning to be able to  be  informed  about  the
+current events and if suppose it is delivered at one day late then  that  is
+as good as doing throw in an waste basket
+some thing which is not coming on time is very often not  use  full  at  all
+for any purpose [refer slide time 10.44]
+[pic]
+
+
+so timeliness  means when the information is required at that time you got
+to present it
+there is no point in delaying it
+for doing  for instance day to day  stock taking the result of what is the
+stock at the end of the day should be known at the end of the day
+there is no point of talking about what stock was there only for
+[11.16....]
+so if you take a long termed process and your results are always out of
+date then the decisions you take will not be correct
+because that will be based on out dated information
+so every thing has got to be timely
+there is also quality called trustworthiness
+trustworthiness is some thing  different from completeness
+completeness means you include all data items
+trustworthiness means intentionally you should not leave out certain data
+so that the results is good okay
+so you cannot trust that information if it happens that you have a you have
+not included unpleasant information
+for instance if you are presenting to a visiting group about the
+performance of your company and if you remove from that presentation many
+transactions where effectively you made a loss then the result you give are
+not trustworthy
+soon or later to be find out that what has been given is incorrect and is
+been done intentionally then of course it's also an offence
+um in fact there are reason past many such situations of a reason that your
+companies have hidden information which are not pleasant like certain kind
+of losses which company made you are not made known to the stock holders
+and so they come up in fact in america  with new law which punishes people
+who hide information intentionally and some of them are actually going to
+jail
+similar things are happening all over the world
+that is the because of computer processing information people and also
+because of the fact the volume of data is increasing in leafs and  pounds
+[13.37...] to get into every aspect is very difficult
+so certain amount of trust is based on management and so trust the the
+management which looks after the company should ensure that whatever they
+do is trustworthy
+the other quality is what we call is relevance
+that is relevance means some thing which is necess which is useful for a
+person and if it is something which is not useful it is called irrelevant
+take a very simple example when you open your e mail box every morning  you
+find a few letters which are essentially meant for you
+but whole lot of other letters come which are advertisements trying to sell
+things like that and many people call it spam
+in fact it is called spam
+and all that spam hides the real information which you require namely the
+letters which are written  for you
+so the relevance of what you get from the e mail system is not very good
+unless you have a some kind of a what is known as filter which filters out
+all the unknown or spam information
+it presents only the wanted mail to you and that is an important part of
+any relevance
+in fact this has taken a greater and greater importance with the coming of
+the automated search engines on the internet
+search engines people use all the times like google now a days is commonly
+used by students and everybody to be able to search the web to get um
+information which is relevant
+you may like to find out for instance um what is the latest speed of a
+durian [16.01...] ship which is made by which ever company that is the
+fastest it is being made in the world today and um
+you put a query which you have say d rams speed and so on
+but many of these system will retrieve so much data that is a way through
+that to really find out what is the one you really wanted
+so it is like searching for a needle in a [16.33..] face pack take a long
+time [refer slide time 16.33 ]
+
+ [pic]
+
+so many people in fact do not go to a search engine for a simple reason
+that they will get two thousand heads  what they call heads two thousand
+outputs when they really require only two or three outputs
+so the relevance measurement in this case is that it is ninety eight
+percent of what what you got is not relevant
+only two percent is relevant
+so that that means if that is  relevant information you have to look
+actually wasting your time
+so relevant information is essentially what any management needs for many
+information system
+of course i broaden my um broaden my area of information system to include
+system such as google because after all it is also an information system
+which searches the web
+and in fact today's world it is important information system which every
+body uses
+so the better some body comes with the better so called search engine which
+gives you higher relevance ratio that is what you get out of the net if
+suppose ninety eight percent is relevant only two percent is relevant then
+you normally switch that kind of an engine okay
+of course there is no engine which is  you can really give you  hundred
+percent
+because very often people don't even know very clearly what they want
+so they kind of put the search terms in a  very careless way and under you
+pick a lot of whole of junk information coming on your screen
+so relevance is very important from point your any system
+brief summarize summarize information that is relevant summarize
+information is very useful because brevity is the the say the the sole of
+good writing as well as good systems
+you um brevity essentially ensures that you get the essence of what you
+require and a lot of inessential things are being left out
+so briefness becomes much more important as you go up in the hierarchy of
+any organization
+ the higher the level of the manager in the organization the briefer will
+be the information presented to him
+because the higher level managers are highly paid for lot of things to do
+and they don't have the time to do whole lot of  irrelevant saying which is
+not um presented with brevity
+or brief
+so it is very important as you go along
+in fact strategic information is suppose to be the briefest a lot and of
+course operational information is quite detail
+but even there i think a lot of operational information may not be all that
+useful
+so may like to kind of make sure that what you present is necessary and
+sufficient for the purpose for which it is designed
+another idea of quality is what is known as up to date
+up to date and timeliness are two different concepts
+what is meant by up to date is that all data up to the last minute is
+included
+like for instance if you take a news paper for example again
+news paer may be timely
+you will get in the morning first thing in the morning
+but if the information contained in it the news contained in it is only old
+or old news then it is not up to date even though it is timely
+same way if you are processing data and you are leaving out current data
+that is data of a um which happened in the very recent past i have included
+all the data which happened in the earlier then what you are really getting
+is not up to date
+so um the advantage of using computers is  the speed which the machines can
+process data
+so this speed irrelevant is what you get out of the computer is not up to
+date
+so the speed has got to be matched with the the to the fact that you should
+able to  include all the data within time you might say within quotes um
+the the data is fed to the machine okay
+so the this is important or as you have seen the newspapers up to press
+time
+when they go to the press time what ever news come in they include that and
+sometimes they put it to the late news and saying that and in t v channels
+and so on the the they have a breaking news saying that up to date the new
+news is coming up
+and they up date up date all the time
+so between two channels t v channels channel which is able to break news
+faster is considered a better channel whereas the channel which um is not
+able to give new s immediately [refer slide time 22.34]
+
+[pic]
+
+
+but it can be delay right
+so up to date ness is an important  quality
+significance is another idea
+that is significance is that when when something presented to you you
+should be able to understand what really means
+like for instance at the end of the year the finance minister presents his
+budget
+and the budget in a whole lot of numbers
+those numbers do not make much sense to common man
+but normally they give a pi chart circle
+a chart in which they say out of the income i have received so much of
+income has come from income tax
+so they will show a pi that is thirty percent of income has come from
+income tax some forty percent has come from indirect taxes and some part
+has come from loans and so on
+they show a chart and as soon as you look at the chart your quality in
+terms of where the money has come from
+similarly the budget is also going to say where the money is going to be
+spend
+so the same chart they will say that is this much percentage say thirty
+percent is being spend on defense five percent on education ten percent on
+health care and so on
+and forty percent on fifty percent on salaries
+people may really wake up saying that you are spending lot of money on
+salaries
+for people and not enough money on improving the education or improving the
+infrastructure and so on
+so by in large when you look at chart like that you can understand
+immediately the relevance of what is being presented
+and this this same point arises in day to day information processing also
+because the budget is not only the budget of a country
+but for a company they have to make a budget every year
+and in that budget you have to say how much are you from which areas of
+operation of the company are you getting highest percentage of money
+so in this case i  will put more emphasis on that area which is um giving
+me a lot lot of income
+then i can ask the question which area is giving the higher profitability
+so then in the profitable and loss account i have another chart which items
+in the company's manufacture made the maximum percentage profit
+then i would like to emphasize on producing more of that okay
+so that is a these  kind of if you understand  significance of information
+then you can take a decision which people call informed decision okay
+informed decision in the long run make the  company go very very profitable
+otherwise the company will start loosing money okay
+so primarily then we talked about all the aspects of um quality
+so quality considerations are important regardless of the time information
+your designing
+varieties information for operational reasons operational  information or
+tactical or strategic any all of them require that quality
+there you may emphasis on certain type of qualities for certain types of
+information like for strategic decision making it is much more important to
+be able to give information which is whose significance is understood and
+also brief okay
+and for operational information you require make sure that it is complete
+that is trustworthy and you also make sure that it is up to date and timely
+these are things which are essential for operational information
+that doesn't mean that it is not relevant for or or  important for others
+strategic information is also got to be up to date and timely
+but what  i am trying to say is that some of the quality parts are lot more
+important as you go higher up in the hierarchy than the others
+by in large all these parameters of quality has to be satisfied in
+designing any information system and you have to make sure of that
+so having  talked about quality of  information and various um you also
+look at different parts of a company and so on
+now you get into the types of information systems which are normally
+designed for for use
+um the reason why i am going to talk about the types of information system
+or varieties varieties of information systems is because each of them has a
+certain role to play and they have they have got different names for that
+reason
+is always a very lot of lot of confusion in minds of people about the
+terminology
+i would like to divide the terminology of variety into three broad
+categories
+one is business data processing
+business data processing primarily is day to day processing of large
+volumes of data   and that is the one for instance which every company has
+to do
+so business data processing is an essential part of any system
+you cannot avoid it
+but it is all routine
+once you have that then people confuse this business data processing with
+what is known as management information system which is very often
+abbreviated as m i s system or m i s
+m i s is reason why it is confused with data processing is that both of
+them are used by managers
+so management information system is um  is also  based on the type of data
+processing systems
+but i would like to kind of look at it from the point of view of our
+classification of tactical information
+that is operational information is luminous as i said
+tactical information is based on the tactical information and further
+processing of operational information to get some amount of brevity and
+relevance which is of use to middle managers for taking their tactical
+decisions day to day
+so the input from m i  s is the output of the business data processing
+system
+so the input is one and the output is m i s
+management management information systems
+a system which whose output is tactical information
+next level next higher level is often called decision support system
+as the new  employees this system is to ensure good decision making by tact
+management of any company
+so decision making is very often done by both middle managers and by top
+managers
+[refer slide time 31.24]
+[pic]
+
+but more more often  m i s results are presented to the  top  management  by
+the middle management and use this [31.39..] results  to  be  able  to  make
+some decisions using a system called decision support system
+the nature of decision support  system  is  some  what  different  from  the
+nature of a business data operating system
+this i will explain as i go along
+later on we will have greater explanation of what d  s  s  means  and  books
+have been written on d s s because it is a fairly interesting area  of  data
+processing and very challenging area of data processing um and so getting  a
+decision support system very often is  very  important  for  a  company  and
+general feeling among the community  of  people  who  do  soft  ware  system
+design and so on is that we have not reached the stage very  good  stage  of
+being able to give very good d s s
+still lots of decision taken by companies particularly  strategic  decisions
+taken by management top management is not only based on the  data  presented
+by the by using or by massaging m i s operational system and so on
+who ever about this they have to use a lot their own what is what  is  known
+as great point data
+that is data and things like that which i hear as a  [33.33..]  whole  rumor
+and stuff like that and they use their general long term view where  economy
+is going where the country is going and so they  they  bring  upon  whatever
+facts and figures are presented to them also what is known as judgement
+you know judgement and use this judgement combined with facts of figures  to
+arrive that decisions which consider is a decision  which  will  lead  to  a
+profitable in the long run
+and these strategic decisions which are suppose to come from d s s  are  not
+always um correct
+very very very  large  number  of  companies  have  gone  into  difficulties
+because they  took  long  strategic  decisions  by  reading  the  market  or
+situations  some what incorrect
+one very interesting examples which occurred  in the  very  recent  past  is
+that two two which has happened
+one is i b m for instance sold their  entire  p  c  business  to  a  Chinese
+company called lenovo and one may ask see p c is a very large area
+lot of people use p c's
+why should that company which really invented that p c gave up their  entire
+business to chinese company
+there is a strategic decision
+what what the top management feels is that may be the days of p c is  coming
+to an end
+some other technology is going  to come
+the other important thing which which of course made them base  decision  is
+that if you are looking for  profitability  the  amount  of  money  invested
+amount of human resource invested the profitability of p c's is very small
+because the margin you get in the sale of p  c's  is  very  very  small  few
+percent
+the competitors like dell and so on who are able to  cut  cost  which  large
+company find difficult to cut cost
+so high use of profitability on p c's are going down
+whereas profitability in another area like servers  which  for  higher  uses
+for the number of servers they sell the percentage money they  get  is  much
+more
+so even the volume may be very low but the percentage volume may  be high
+so in the balance sheet they find the  contribution  which  comes  from  the
+server is higher
+so may be if you emphasize  on  that  spend  our  money  as  well  as  human
+resource and every thing on that and sell this off and  get  as  much  money
+you can get from that and plunk it into other area
+so  this  is  kind  of  a  decision  based  decision  support  system  which
+effectively gave them this chart giving the profitability of  servers  which
+is profitability of p c's
+of course this only one what i would call numerical aspect which you had
+but all the other aspect is that why itself gut feeling feeling that may  be
+in the long run is going to be a um going to be some kind  of  a  saturation
+or profits going down things like that
+on the other hand [37.32] acquired a p c company called compact and  made  a
+larger company
+and they found having done that they are loosing money
+so that is gain
+similar decision in one case they sold off their p c business in the   other
+case they acquired a p c business
+so but the what what is happened is that  the  acquisition  about  the  p  c
+business by h p made their profits go down
+immediately the stock holders or the people share holders were very  unhappy
+and what they did was sat sat with the person who took the decision
+that is the top management top manager of h p and because  of  taking  wrong
+decision strategic decision he lost the job okay
+so in other words these are what i would  say  the  judgement  is  incorrect
+okay
+but partly it is based on data because Compaq is making good  money
+but probably they didn't look at they didn't  look  at  the  possibility  of
+competition and so on
+so strategic decisions is also some times bad fact on the other hand
+but inform decision support systems are correct information fed  to  d  s  s
+helps a lot in terms of coming up with  a type of a decision
+let us sta start with the lowest of run of  the  information  system  namely
+business data processing systems
+business data processing system as i said is a typical example  of  business
+data processing system would be a system to process the c e t results
+as i pointed out the input is lakhs and lakhs of data
+so all this data enters the processing system
+and now you have to make sure that the data which is being fed  to  whatever
+program you have written is complete and it is correct
+so you have to make sure that errors are removed
+so it is called editing
+in the editing you use a lot of rules lot of rules toms   as  well  as  real
+rules and sometimes if you [40.37....] proper editing that  data  that  gets
+in is corrected or in correct
+the results would be would be very bad
+see unnecessarily some some student may loose opportunity because  of  wrong
+data entry
+so it is the responsibility of data being entered to make sure
+so edit edit programs do that
+simple example of an editing is i have given as like say in c e t there  may
+be three subjects or four subjects or whatever number it may take
+so if it turns out that after data entry  you  find  that  a    student  got
+ninety and ninety in two subjects  and  got  zero  and  zero  in  two  other
+subjects
+the probability that that data is wrong or very high
+so the  system  in  the  edit  stage  should  be  able  to  point  out  such
+discrepancies so that one can go back and check whether in correct  data  is
+entered and correct it at that point itself
+so checking or editing programs are very very very  important  part  of  any
+data processing system
+in fact i remember that  in  companies  which  use  to  do  a  massive  data
+processing like for instance seeing  the  results  results  of  examinations
+like um  you  know  matriculation  examination  s  s  l  c  examination  pre
+university examination and so on
+those companies use to spend a lot  of  effort  and  time  in  writing  edit
+programs
+and very often when a student joins a company as a trainee one of job  given
+to that person was to write the edit programs
+to kind of make sure that the student should understand  the  importance  of
+data getting into system is being correct [refer slide time 42.48]
+[pic]
+
+later on in this course we will look at  in  great  detail  the  methods  of
+variety
+and editing there are two aspects of editing of course removing  in  correct
+data
+the other aspect of editing is that including all data
+what i as  i  pointed  out  is  if  you  lost  if  you  didn't  include  one
+particular centre then what you end up with is a very bad result
+similarly in a single centre suppose say fifty five students took  the  test
+and you entered only fifty four data then you miss one
+there must be some method of checking completeness
+so this is called control
+so at the end of a batch say  fifty five you put one  control  which  counts
+and says i have really read so many input data and that  number  is  smaller
+than the number of students who took the exams they  immediately  know  that
+it is in complete
+so editing and controls to say see whether it is complete also reasonable
+for example if you are you are processing data of a class and  you  look  at
+the [44.18....] and for a for a say class ten in a school you  find  an  age
+to be thirty five immediately you have to  have  a  doubt  whether  data  is
+entered correctly or not
+so this is what is meant by reasonable decision
+you have to be you have to be a reasonableness about what is being entered
+so apart from the um from the what i mean by see in correct data entry  very
+often leads to unreasonable things
+so that that is some thing which comes out with control things
+so you have bend  to that means what you really do is input  data  is  being
+taken and your polishing it or sending it to a laundry to clean  it  up  and
+take out all the in correct data correct all of it and what ultimately  gets
+into the system is normally stored in what is known as the data base
+so before things get into the data base you have to make sure  what  is  put
+into data base is correct in complete
+so the organization of data base is only how to really  organize  all  those
+massive volume of data
+but what gets into that is what comes out of the  earlier  part  of  a  data
+processing system namely editing control jacks and so on
+and also certain aspects which are spot audit  if  you  do  spot  audit  you
+find out anything which is which  intentionally  has  been  changed  whether
+those things are also done
+we will look at  in detail as soon in later of the course [refer slide  time
+46.17]
+
+[pic]
+
+in data processing itself there are two broad methods of data processing
+one is called the online transaction data processing the  other  is  called
+batch processing
+see the examination processing which i talked  about  is  an  example  of  a
+batch processing
+because you bunch all the result all the data
+that is having taken the examination marks are assigned and the  end   marks
+of each student with  roll numbers and so on
+you are taking as i said lakhs and lakhs of these data together as  a  batch
+and process it as a batch
+these are routine data processing day to day
+what i mean by day to day c e t is not day to day
+c e t is a periodic say c e t is once a year
+the other types of data batch processing which are periodic like pay roll
+if you are doing a pay roll processing at the  end  of  the  month  to  give
+salary to your employees you have to get the records of  all  the  employees
+their salaries reductions all those things and process it and to  create  an
+account and find out how much money is to be credited to  the  bank  account
+of that employee and automatically that amount is credited to the bank
+so this a periodic periodic type of a data processing
+so pay roll is an example
+there is also frequency can be daily pay roll is once a month
+daily frequency is something like at the end of the day if you  are  finding
+out the inventory in a company like if you are running a large retail  store
+like food world something like that at the end of the day you would like  to
+have the idea of the current stock position and the current  stock  position
+is got to be there that you have to process at the end of the day
+that is caught to be there
+um depends upon um what you know the the methods may differ
+but by in large it periodic data processing or if you doing cash  collection
+at the end of the day you have to find out how much cash you have collected
+so you add up all the cash whatever was entered in the cash register and  go
+on up date you know adding up all that and give the cash at the end  of  the
+day okay
+so then at  the end month total monthly cash in flow
+so these are things which are data processed
+i mean batch processing
+there is then the whole t p is something some what different it's called  on
+line give up transaction processing
+what is meant by online
+it is being done immediately after the event
+like for instance if you are  going  to  book  the  railway  ticket  at  the
+reservation counter you are being processed online
+because as soon as you give your request for a  ticket  that  form  whatever
+information is entered in the form is entered by the clerk  and  immediately
+that gets into the system
+and while you are waiting the result comes out telling  you  whether  ticket
+is available and if ticket is available your  ticket  is  also  printed  and
+given to you
+so online that sense that it is it is working while you are waiting
+transaction means the slip you gave requesting for a for a seat in  a  train
+once it is entered it is a transaction
+one one one entry as you made and this triggers number of  other  things  in
+the back ground
+you know this this particular input will trigger look up in  the  data  base
+to find out if there is a ticket available and create this ticket out
+the reason why the term transaction process is being used  because  it  came
+from the banking area
+when you go to a bank and look present a cheque whatever is  in  the  cheque
+is entered on the p c right away and there  is  a  transaction  there  is  a
+money transaction
+and the money transaction leads to a reduction  your  account  and  that  is
+being debit in your account and you get money out
+another very common example of online transaction processing  is  all  a  t
+m's
+a t m's are processing all over the place are really transaction  processing
+machines
+because you go  there  put  in  your  card  and  that  card  is  read  as  a
+transaction and it triggers an action
+the action triggering an action leads to a cash coming at your end
+one of other issues  which comes with online transaction  processing  which
+makes it some what challenging to design such systems um which is  primarily
+the these challenges come because of  the  fact  that  there  could  be  two
+transactions coming simultaneously on the same data and we have to  able  to
+make sure that one of them is committed before the other one is committed
+because both of them cannot conflict
+i will give you a simple example
+you may be with drawing money from a bank
+at the same time your you may be given a t m your wife may doing your a t  m
+transaction on the same account and so if there is not enough money if  both
+of them are done without proper committing what i mean by committing  is  as
+soon as one transaction is over your balance should go down
+doesn't gone down the balance should remain the same
+the other transaction also takes place then you get money which not in  your
+bank
+not in your account
+so there is a mistake occurred
+so this kind of a serializing of transactions becomes  important  in  online
+transaction processing systems
+of course batch processing i already talked about various  batch  processing
+methods [refer slide time 54.12]
+
+[pic]
+
+in online transaction processing data base or master as is called  available
+online like in ticket booking situation for you to be able to do  the  work
+immediately
+request in specified format accepted by from the requestor  has  a  form  or
+something like that [refer slide time 54.38]
+[pic]
+
+and check the request for validity retrieve record from data base  and  take
+appropriate action either  giving  your  tickets  or  not  not  giving  your
+tickets tell you dividing less or whatever
+so every trans online transaction process has got this  [refer  slide  time
+54.56]
+[pic]
+
+
+
+Where as in batch processing you collect batch of requests key  in  validate
+or [55.06...] create request file
+so in this batch you create a file [refer slide time 55.14]
+
+[pic]
+
+and this file  is  called  transaction  file  because  you  bunched  up  all
+together as a file
+and update master file using transaction file
+in one one in [55.26...] the in other words the  transaction  file  gets  in
+and one by one it goes in check the data base entries up dates it
+at the end of the file the master file or  master  transaction  master  data
+base gets updated
+that's a new new state and then create the result file
+like if you have a pay roll the result file will be a set of cheques  to  be
+printed
+and print responses for requests like exam exam processing also
+in the case of requests is the is the the results of examination after  c  e
+t create a result file
+result file is printed and you get your big sheets of results which you  pin
+on the board or put it in the paper whatever for the students to  understand
+or know [refer slide time 56.20]
+[pic]
+
+
+in the difference between batch and [noise]  o  l  t  p  in  o  l  t  p  the
+requirement is that the the response time should be very fast
+what is  meant  by  response  time  is  from  the  time  you  initiate  your
+transaction to time to get your result of transaction the lapse time  should
+be small for obvious reasons
+see while you are waiting in a queue to get you served for your ticket
+you don't want to be wait half an hour for a ticket
+as soon as you get first in the queue and you present your form very happy
+you already stood for may be half an hour in  the  queue  and  now  you  are
+happy that you got your turn
+when you got  your  turn  to  take   another  half  an  hour  you  will  get
+frustrated
+the people don't like what you know waiting in queues and waiting so on  for
+a simple reason that they think it's a waste of time
+even that isn't waste of time and no body wants to be kind of  unnecessarily
+stand on online and waste time okay
+so the response time is very very important and response time should be  not
+more than a minute or two okay [refer slide time 57.43]
+
+[pic]
+
+
+ it if it goes beyond five minutes people start fiddling around
+response time also depends upon situation
+while using up a computer p c and then you enter some thing and  the  result
+doesn't come out and you waiting at that little hour  clock  goes  on  round
+and round and round  you get very frustrated because response  time  is  not
+good
+when you are working on a terminal on a  p  c  you  would  like  to  have  a
+response time of a few seconds two or three seconds
+other wise you feel you know start fidgeting
+fidgeting may be the computer is down  or  may  be  some  problem  with  the
+machine
+on the other hand the machine may be slow okay
+so the point really is in any kind of online situation  is  very  important
+to be able to get a quick response
+in a batch processing system the requirement  is  not  immediate  processing
+because any how  you have bunched up many tings together
+see c e t examination results after you get the examination results  in  and
+input the data require a lot of time because that is may be  manual  and  so
+on
+the computer time to process is not all that it  is  only  only  very  small
+fraction of the total time
+the time you give examination the time your result is declared
+so that part what is more important is from the point of  view  of  computer
+the computer's time  should be presented [refer slide time 59.36]
+
+[pic]
+
+so in other words the throughput the efficiency at which  it  get  processed
+in the computer to reduce or minimize zip your  time becomes important
+so throughput is important consideration for a batch processing system
+in fact this throughput for is a response is a recurring  theme  in  lot  of
+computer computer in fact entire computer science
+when you do design for a computer for instance you can design a computer  to
+maximize throughput
+particularly there is you know designing  a  server  which  serves  mutilple
+terminals on multiple p c's in a server from the point  of  view  of  person
+who is get into your server from your p c you would like to have very  quick
+response
+so from individual point of view response is important
+but from the person who manages that  server  he  has  to  get  the  maximum
+utilization of that server to get as much work done as possible without  any
+ideal time of the server
+so from his point of view the throughput is important
+so this kind of a design of a system you try to  balance  the  two  response
+time versus throughput
+if you try to improve the throughput the response goes  down
+if you make response very good then throughput goes down
+so this scale off is always there and  of  course  in  data  processing  you
+really look at two different types of systems
+o l t p the bench marks which are used or to asses the  performance  of  the
+computer is quite different from what what you use in a batch
+so at that time you know  very  clearly  that  one  is  um  one  is  minimum
+response system other is a minimum throughput system
+i think this is right time to kind of a stop this  talk  and  next  time  we
+will continue with the discussion
+
+

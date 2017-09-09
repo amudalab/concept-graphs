@@ -1,0 +1,3696 @@
+lists in chapter
+disadvantages as data
+data storage structures
+searching is slow
+insertion is slow
+kinds of arrays
+deletion is slow
+data storage structure
+structure that solves
+problems the linked
+linked list linked
+list linked lists
+commonly used generalpurpose
+generalpurpose storage structures
+structures after arrays
+arrays the linked
+versatile mechanism suitable
+kinds of general
+general purpose databases
+replace an array
+stacks and queues
+queues in fact
+frequent random access
+access to individual
+index linked lists
+linked lists aren
+data storage problems
+investigate their strengths
+strengths and weaknesses
+simple linked lists
+doubly linked lists
+lists with iterators
+approach to random
+access to list
+examine the idea
+idea of abstract
+abstract data types
+viewed as adts
+implemented as linked
+item is embedded
+link a link
+list a field
+link this relationship
+relationship is shown
+shown in figure
+linked lists linked
+lists linked list
+list first data
+first data link
+link next data
+link next null
+link class link
+public int idata
+int idata data
+idata data public
+data public double
+public double ddata
+double ddata data
+ddata data public
+data public link
+link next reference
+kind of class
+two data items
+link an int
+social security number
+items class link
+inventoryitem ii object
+object holding data
+holding data public
+references and basic
+easily get confused
+confused about references
+context of linked
+put a field
+field of type
+type link inside
+inside the class
+compiler be confused
+out how big
+big to make
+make a link
+big a link
+java a link
+link object doesn
+object a reference
+number that refers
+object s address
+computer s memory
+number that tells
+compiler to figure
+big this field
+construct an entire
+entire link object
+link object note
+int and double
+double are stored
+differently than objects
+fields containing primitive
+actual numerical values
+definition like double
+creates a space
+space in memory
+memory and puts
+puts the number
+object like link
+alink = somelink
+puts a reference
+object of type
+alink the somelink
+isn t moved
+create an object
+somelink field doesn
+doesn t hold
+hold an object
+reference the object
+differently than java
+field like link
+referential class definition
+put a pointer
+link in class
+link a pointer
+pointer is similar
+mind how java
+java handles objects
+objects this usage
+counter intuitive links
+objects and references
+references in memory
+linked lists differ
+differ from arrays
+array each item
+position this position
+row of houses
+chain of elements
+harry where bob
+bob is harry
+jane saw bob
+leave the office
+sally s cell
+phone she dropped
+linked lists alink
+lists alink somelink
+alink somelink object
+type link memory
+link memory alink
+alink and somelink
+type link peter
+peter s office
+access a data
+items to locate
+linklist workshop applet
+applet the linklist
+delete a data
+key these operations
+array workshop applet
+applet in chapter
+general purpose database
+purpose database application
+database application figure
+list the linklist
+applet the insert
+press the ins
+prompted to enter
+enter a key
+presses will generate
+generate a link
+press on ins
+ins will redraw
+redraw the list
+newly inserted link
+inserted link lines
+links this redrawing
+doesn t represent
+represent anything happening
+makes the display
+display neater figure
+link being inserted
+inserted the find
+button the find
+find a link
+value when prompted
+continue to press
+press the button
+red arrow move
+link a message
+finds the link
+type a non
+non existent key
+existent key value
+arrow will search
+list before reporting
+found the delete
+delete a key
+repeatedly press del
+arrow will move
+removes that link
+link and connects
+connects the arrow
+previous link straight
+links are removed
+removed the reference
+link is changed
+changed to point
+link a final
+final keypress redraws
+redraws the picture
+evenly spaced links
+links for aesthetic
+reasons the length
+doesn t correspond
+note the linklist
+applet can create
+create both unsorted
+unsorted and sorted
+sorted lists unsorted
+applet for sorted
+lists a simple
+simple linked list
+list our first
+first example program
+demonstrates a simple
+list are inserting
+inserting an item
+deleting the item
+list to display
+display its contents
+contents these operations
+easy to carry
+complete linklist.java program
+link and linklist
+classes the link
+complete class definition
+class definition class
+definition class link
+idata data item
+data item public
+item public double
+ddata data item
+item public link
+link in list
+list public link
+initialize data ddata
+set to null
+public void displaylink
+end class link
+link in addition
+displays the link
+link s data
+object to naming
+naming this method
+spirit of polymorphism
+makes the listing
+listing somewhat harder
+harder to understand
+forgotten whether current
+initializes the data
+null value means
+means it doesn
+link is connected
+made the storage
+provide public methods
+methods to access
+require extra code
+making the listing
+longer and harder
+harder to read
+restrict link object
+link object access
+access to methods
+default access specifier
+give the data
+data package access
+restricted to classes
+makes it clear
+isn t private
+link class private
+private the linklist
+class the linklist
+item a reference
+list this reference
+information the list
+links it finds
+chain of references
+references from first
+field class linklist
+link first ref
+ref to first
+link on list
+list public void
+public void linklist
+first = null
+null no items
+items on list
+public boolean isempty
+true if list
+list is empty
+constructor for linklist
+first to null
+null this isn
+references are set
+explicit constructor makes
+begins when first
+fact to determine
+empty the insertfirst
+method the insertfirst
+method of linklist
+place to insert
+insert a link
+link because first
+first already points
+link to insert
+newly created link
+link to point
+link this situation
+situation is shown
+link in insertfirst
+begin by creating
+passed as arguments
+change the link
+insert at start
+start of list
+public void insertfirst
+make new link
+link link newlink
+newlink old first
+first = newlink
+newlink first newlink
+last two statements
+symbolized by arrows
+statements with figure
+figure this kind
+kind of reference
+heart of linked
+linked list algorithms
+algorithms the deletefirst
+method the deletefirst
+reverse of insertfirst
+disconnects the first
+link by rerouting
+first to point
+link is found
+first link public
+link public link
+public link deletefirst
+delete first item
+list not empty
+temp = first
+first save reference
+reference to link
+first = first.next
+return temp return
+temp return deleted
+return deleted link
+remove the first
+list we choose
+return the link
+temp before deleting
+return the value
+value of temp
+shows how first
+first is rerouted
+rerouted to delete
+delete the object
+worry about deleting
+deleting the link
+garbage collection process
+process will destroy
+assumes the list
+empty before calling
+program should verify
+verify this fact
+linked lists figure
+deleting a link
+link the displaylist
+method to display
+display the list
+start at first
+follow the chain
+references from link
+link to link
+link a variable
+variable current points
+link in turn
+turn it starts
+starts off pointing
+pointing to first
+holds a reference
+link the statement
+current = current.next
+current.next changes current
+current to point
+method public void
+public void displaylist
+start at beginning
+beginning of list
+end of list
+print data current
+last link pointing
+pointing to null
+null it started
+link was created
+deletion first first
+first first null
+first null null
+condition to terminate
+reaches the end
+shows how current
+current.next current figure
+calls the displaylink
+display the data
+link the linklist.java
+linklist.java program listing
+shows the complete
+linklist.java program linklist.java
+program linklist.java demonstrates
+linklist.java demonstrates linked
+demonstrates linked list
+list to run
+run this program
+program c java
+java linklistapp class
+linklistapp class link
+class link class
+link class linklist
+list public linklist
+continued public void
+end class linklist
+class linklist class
+linklist class linklistapp
+public static void
+static void main
+make new list
+insert four items
+four items thelist.insertfirst
+alink = thelist.deletefirst
+delete link system.out.print
+display it alink.displaylink
+end class linklistapp
+linked lists listing
+continued in main
+four new links
+remove the items
+empty the empty
+output from linklist.java
+finding and deleting
+deleting specified links
+program adds methods
+methods to search
+search a linked
+delete an item
+applet the complete
+complete linklist2.java program
+program is shown
+shown in listing
+linklist2.java program linklist2.java
+program linklist2.java demonstrates
+linklist2.java demonstrates linked
+java linklist2app class
+linklist2app class link
+class link finding
+null no links
+links on list
+first it points
+newlink now first
+public link find
+assumes non empty
+non empty list
+return null didn
+didn t find
+return current found
+public link delete
+search for link
+link link previous
+previous = current
+previous.next = current.next
+bypass it return
+linklist class linklist2app
+make list thelist.insertfirst
+display list link
+link with key
+key + f.idata
+key + d.idata
+end class linklist2app
+linklist2app the main
+makes a list
+inserts four items
+displays the resulting
+item with key
+deletes the item
+displays the list
+method the find
+program the reference
+current initially points
+links by setting
+repeatedly to current.next
+link s key
+key is found
+link if find
+list without finding
+finding the desired
+null the delete
+method the delete
+method is similar
+similar to find
+maintain a reference
+preceding the current
+deletes the current
+connect the preceding
+link is located
+current is set
+set to current.next
+previous is set
+set to current
+link preceding current
+current to delete
+delete the current
+link is set
+link a special
+special case arises
+link is pointed
+linklist s first
+case the link
+link is deleted
+deleted by changing
+point to first.next
+code that covers
+two possibilities found
+current.next bypass link
+link other methods
+methods to insert
+insert and delete
+item and delete
+method could find
+value and insert
+talk about list
+current next null
+null first null
+first null previous
+null previous current
+double ended lists
+lists a double
+double ended list
+list is similar
+ordinary linked list
+feature a reference
+lists first last
+list the reference
+last link permits
+ordinary single ended
+single ended list
+list by iterating
+reach the end
+approach is inefficient
+makes the double
+ended list suitable
+situation is implementing
+implementing a queue
+demonstrates a doubleended
+don t confuse
+confuse the double
+doubly linked list
+firstlastlist.java program firstlastlist.java
+program firstlastlist.java demonstrates
+firstlastlist.java demonstrates list
+list with first
+first and last
+references to run
+java firstlastapp class
+firstlastapp class link
+public long ddata
+long ddata data
+display this link
+link class firstlastlist
+first link private
+link private link
+private link last
+link last ref
+ref to last
+last link public
+link public firstlastlist
+list yet last
+last = null
+insert at front
+front of list
+last = newlink
+newlink newlink last
+newlink last newlink.next
+public void insertlast
+insert at end
+newlink else last.next
+last.next = newlink
+newlink old last
+last newlink last
+public long deletefirst
+delete first link
+temp = first.ddata
+item double ended
+null null last
+null last first
+end class firstlastlist
+class firstlastlist class
+firstlastlist class firstlastapp
+list firstlastlist thelist
+insert at rear
+first two items
+two items thelist.deletefirst
+end class firstlastapp
+continued for simplicity
+reduced the number
+number of data
+makes it easier
+easier to display
+display the link
+inserts three items
+deletes the first
+items and displays
+notice how repeated
+reverse the order
+preserve the order
+order the double
+ended list class
+firstlastlist as discussed
+null the class
+list this process
+process involves modifying
+involves modifying last.next
+last.next to point
+last to point
+insertion first last
+list the insertion
+insertion and deletion
+routines are similar
+routines must watch
+link if inserting
+beginning with insertfirst
+first is set
+set to point
+end with insertlast
+last is set
+point to null
+making a list
+list double ended
+double ended doesn
+delete the last
+changed to null
+link were deleted
+traverse the entire
+list to find
+find the last
+linked list efficiency
+list efficiency insertion
+fast they involve
+specific item requires
+item requires searching
+half the items
+list this requires
+comparisons an array
+item is inserted
+inserted or deleted
+deleted the increased
+takes much longer
+advantage of linked
+lists over arrays
+expand to fill
+memory the size
+array is fixed
+leads to inefficiency
+out of room
+solve this problem
+expand in fixed
+fixed sized increments
+doubling the size
+linked list abstract
+list abstract data
+gears and discuss
+discuss a topic
+general than linked
+linked lists abstract
+lists abstract data
+adt roughly speaking
+data structure focusing
+linked lists stacks
+queues are examples
+examples of adts
+implemented using arrays
+discussion of adts
+implemented using linked
+lists this discussion
+discussion will demonstrate
+demonstrate the abstract
+nature of stacks
+implementation a stack
+created a stack
+stack in chapter
+ordinary java array
+array to hold
+hold the stack
+stack s data
+data the stack
+stack s push
+out by array
+data and data
+data = arr
+list to hold
+hold a stack
+case the push
+out by operations
+operations like thelist.insertfirst
+data = thelist.deletefirst
+stack class calls
+class calls push
+items without knowing
+stack is implemented
+linked list listing
+class called linkstack
+purists would argue
+stack because users
+linkstack.java program linkstack.java
+program linkstack.java demonstrates
+demonstrates a stack
+java linkstackapp class
+linkstackapp class link
+item on list
+list yet public
+return temp.ddata return
+temp.ddata return deleted
+linklist class linkstack
+private linklist thelist
+linklist thelist public
+thelist public linkstack
+public void push
+item on top
+top of stack
+public long pop
+item from top
+true if stack
+stack is empty
+public void displaystack
+end class linkstack
+class linkstack class
+linkstack class linkstackapp
+make stack abstract
+stack abstract data
+push items thestack.push
+display stack thestack.push
+display stack thestack.pop
+pop items thestack.pop
+end class linkstackapp
+linkstackapp the main
+creates a stack
+pushes two items
+displays the stack
+two more items
+pops two items
+program the main
+linkstackapp class relates
+class the linkstack
+linkstack class relates
+communication between main
+statement in main
+calls the push
+method in turn
+turn calls insertfirst
+display the stack
+code in main
+list based linkstack
+based linkstack class
+array based stack
+based stack class
+shows a queue
+double ended linked
+ended linked list
+linkqueue.java program linkqueue.java
+program linkqueue.java demonstrates
+linkqueue.java demonstrates queue
+demonstrates queue implemented
+implemented as double
+java linkqueueapp class
+linkqueueapp class link
+first item private
+item private link
+last item public
+item public firstlastlist
+firstlastlist class linkqueue
+private firstlastlist thelist
+firstlastlist thelist public
+thelist public linkqueue
+ended list public
+list public boolean
+true if queue
+queue is empty
+public void insert
+rear of queue
+public long remove
+front of queue
+public void displayqueue
+end class linkqueue
+class linkqueue class
+linkqueue class linkqueueapp
+insert items thequeue.insert
+display queue thequeue.insert
+display queue thequeue.remove
+remove items thequeue.remove
+creates a queue
+inserts two items
+removes two items
+operations the queue
+queue is displayed
+class are implemented
+substituted a linked
+implement the queue
+linkstack.java and linkqueue.java
+linkqueue.java programs emphasize
+emphasize that stacks
+queues are conceptual
+implementations a stack
+stack is abstract
+continued the push
+implement these operations
+list as opposed
+stack or queue
+queue one consideration
+predict the amount
+amount of data
+isn t clear
+major consideration data
+consideration data types
+types and abstraction
+term abstract data
+abstract data type
+data type part
+return to abstract
+types the phrase
+phrase data type
+data type covers
+covers a lot
+lot of ground
+applied to built
+built in types
+hear the term
+things a data
+characteristics and permissible
+type int variables
+variables in java
+type s permissible
+understanding the type
+type means understanding
+understanding what operations
+advent of object
+object oriented programming
+types using classes
+data types represent
+types represent numerical
+represent numerical quantities
+similar to primitive
+define a class
+fields for hours
+class for fractions
+numerator and denominator
+class for extra
+extra long numbers
+represent the digits
+added and subtracted
+subtracted like int
+methods with functional
+notation like add
+quantity oriented classes
+applied to classes
+classes that don
+aspect in fact
+represents a data
+class is made
+queue is represented
+type a stack
+arrangement of data
+set of operations
+linked lists abstraction
+abstraction the word
+word abstract means
+abstract means considered
+specifications or implementation
+implementation an abstraction
+essence or important
+office of president
+occupy that office
+office the powers
+powers and responsibilities
+individual office holders
+considered without regard
+list of operations
+operations specifically excluded
+out their tasks
+told what methods
+methods to call
+work the meaning
+meaning of abstract
+applied to data
+means the data
+data is stored
+stored become invisible
+store the data
+work the user
+tree the interface
+interface an adt
+class user sees
+similar methods form
+form the interface
+interface adt lists
+list a list
+group of items
+string or houses
+street lists support
+support certain fundamental
+insert an item
+read an item
+confuse the adt
+chapter a list
+list is defined
+interface the specific
+arrays and linked
+lists the list
+data structures abstract
+structures abstract data
+tool the adt
+software design process
+last item inserted
+inserted the first
+key an item
+answering such questions
+represent the data
+code the methods
+methods that access
+access the data
+data by decoupling
+decoupling the specification
+simplify the design
+make it easier
+easier to change
+change the implementation
+implementation without breaking
+breaking the user
+user s code
+underlying data structure
+chosen to make
+operations as efficient
+access to element
+linked list representation
+list representation isn
+good because random
+random access isn
+array note remember
+conceptual tool data
+tool data storage
+adts a linked
+implement another data
+queue a linked
+array type structure
+context sorted lists
+requirement that data
+data be stored
+stored in order
+maintain the data
+data in sorted
+items are arranged
+arranged in sorted
+order by key
+key value deletion
+array the advantages
+array are speed
+speed of insertion
+list can expand
+lists available memory
+array is limited
+difficult to implement
+application for sorted
+sorted lists sorting
+lists sorting data
+data a sorted
+implement a priority
+implementation the linklist
+workshop applet introduced
+chapter demonstrates sorted
+sorted lists work
+button to create
+button the result
+list with data
+button to insert
+traverses the links
+finds the correct
+press of ins
+redrawn to regularize
+regularize its appearance
+button and delete
+del button java
+button java code
+code to insert
+list to insert
+place to put
+put the item
+link and changing
+cases the link
+code public void
+insert in order
+previous = null
+first link current
+current = first
+first until end
+null && key
+previous.next = newlink
+newlink old prev
+prev newlink newlink.next
+newlink.next = current
+newlink old current
+maintain a previous
+modify the previous
+field to point
+link after creating
+linked lists prepare
+prepare to search
+point by setting
+current to first
+previous to null
+null this step
+step is important
+value to determine
+loop is similar
+condition the loop
+key is inserted
+loop also terminates
+terminates if current
+current is null
+element is null
+empty to begin
+case we set
+field to current
+value the sortedlist.java
+program the sortedlist.java
+sortedlist.java example shown
+presents a sortedlist
+class with insert
+counterpart in non
+non sorted lists
+sorted lists listing
+sortedlist.java program sortedlist.java
+program sortedlist.java demonstrates
+sortedlist.java demonstrates sorted
+demonstrates sorted list
+java sortedlistapp class
+sortedlistapp class link
+link class sortedlist
+list public sortedlist
+return & delete
+save first first
+delete first return
+first return temp
+temp return value
+end class sortedlist
+class sortedlist class
+sortedlist class sortedlistapp
+create new list
+list sortedlist thesortedlist
+display list thesortedlist.insert
+display list thesortedlist.remove
+remove an item
+end class sortedlistapp
+sortedlistapp in main
+insert two items
+items with key
+values are inserted
+routine correctly handles
+handles these special
+remove one item
+list is displayed
+output from sortedlist.java
+efficiency of sorted
+sorted linked lists
+linked lists insertion
+deletion of arbitrary
+sorted linked list
+linked list require
+found by stepping
+application frequently accesses
+accesses the minimum
+fast insertion isn
+isn t critical
+choice a priority
+list insertion sort
+sort a sorted
+fairly efficient sorting
+efficient sorting mechanism
+sorting mechanism suppose
+array of unsorted
+unsorted data items
+array and insert
+sorted order automatically
+list and put
+sorted this type
+type of sort
+substantially more efficient
+usual insertion sort
+described in chapter
+process because inserting
+inserting each item
+sorted list involves
+list involves comparing
+average of half
+items to insert
+item is copied
+shows the listinsertionsort.java
+items of type
+listinsertionsort.java program listinsertionsort.java
+program listinsertionsort.java demonstrates
+listinsertionsort.java demonstrates sorted
+sorting to run
+java listinsertionsortapp class
+listinsertionsortapp class link
+initialize list public
+null initialize list
+copy array insert
+null && k.ddata
+prev k k.next
+k.next = current
+class sortedlist sorted
+sortedlist sorted lists
+continued class listinsertionsortapp
+array of links
+array with links
+random number int
+make link linkarray
+put in array
+display array contents
+array contents system.out.print
+initialized with array
+array sortedlist thesortedlist
+links from list
+list to array
+end class listinsertionsortapp
+listinsertionsortapp this program
+displays the values
+sample output unsorted
+output unsorted array
+continued the output
+values are generated
+constructor for sortedlist
+takes an array
+array of link
+argument and inserts
+inserts the entire
+newly created list
+list by doing
+helps make things
+make things easier
+made a change
+accepts a link
+store link objects
+create each link
+long value passed
+argument the downside
+array based insertion
+based insertion sort
+memory the array
+array and linked
+linked list class
+list class handy
+arrays that aren
+large doubly linked
+examine another variation
+list a potential
+problem with ordinary
+ordinary linked lists
+difficult to traverse
+list a statement
+statement like current
+previous link depending
+limitation could pose
+imagine a text
+store the text
+text each text
+screen is stored
+string object embedded
+editor s user
+moves the cursor
+link to manipulate
+manipulate or display
+link this isn
+make a single
+single step upward
+list the secret
+link this type
+type of list
+list is shown
+list the beginning
+public link previous
+link previous previous
+previous previous link
+insert or delete
+delete a link
+two two attachments
+linked list doesn
+keeping a reference
+show the complete
+doublylinkedlist class traversal
+traversal two display
+two display methods
+display methods demonstrate
+methods demonstrate traversal
+list the displayforward
+lists the displaybackward
+similar but starts
+list and proceeds
+element s previous
+field this code
+code fragment shows
+process works link
+works link current
+current = last
+start at end
+current = current.previous
+move to previous
+last next prev
+prev next prev
+prev null null
+terms like previous
+substitute directionneutral terms
+left and right
+included several insertion
+class the insertfirst
+link this process
+process is shown
+first link prev
+null new link
+last else first.previous
+first.previous = newlink
+newlink the insertlast
+image of insertfirst
+bit more complicated
+found this procedure
+procedure is handled
+last next current
+null null figure
+field must point
+last must point
+code that deals
+newlink.next = null
+null newlink null
+newlink null last
+newlink.next = current.next
+current.next.previous = newlink
+newlink.previous = current
+current old current
+current newlink current.next
+current.next = newlink
+two dot operators
+single dot operator
+operator the expression
+expression current.next.previous means
+means the previous
+link current deletion
+deletion routines deletefirst
+straightforward in deletekey
+key being deleted
+deleted is current
+assuming the link
+field of current.previous
+point to current.next
+field of current.next
+current.next is set
+point to current.previous
+current.previous this disconnects
+disconnects the current
+two statements carry
+current.previous.next = current.next
+current.next.previous = current.previous
+current.previous doubly linked
+first current.prev last
+prev prev prev
+null null current
+null current current.next
+current current.next figure
+deleting an arbitrary
+arbitrary link special
+link special cases
+special cases arise
+first or last
+list because first
+code from deletekey
+dealing with link
+first = current.next
+first old previous
+last item last
+last = current.previous
+current.previous old previous
+last old previous
+current.previous the doublylinked.java
+doublylinked.java program listing
+complete doublylinked.java program
+routines just discussed
+doublylinked.java program doublylinked.java
+program doublylinked.java demonstrates
+demonstrates doubly linked
+java doublylinkedapp class
+doublylinkedapp class link
+link class doublylinkedlist
+item public doublylinkedlist
+linked lists public
+lists public boolean
+last newlink newlink.previous
+newlink.previous = last
+last old last
+last else first.next.previous
+first.next.previous = null
+public link deletelast
+delete last link
+link doubly linked
+temp = last
+null else last.previous.next
+last.previous.next = null
+null old previous
+previous null last
+last = last.previous
+last.previous old previous
+previous last return
+last return temp
+key public boolean
+public boolean insertafter
+match is found
+return false didn
+current newlink return
+newlink return true
+return true found
+public link deletekey
+current.previous return current
+return current return
+current return value
+public void displayforward
+display data current
+public void displaybackward
+end class doublylinkedlist
+class doublylinkedlist class
+doublylinkedlist class doublylinkedapp
+list doublylinkedlist thelist
+list forward thelist.displaybackward
+display list backward
+list backward thelist.deletefirst
+first item thelist.deletelast
+delete last item
+last item thelist.deletekey
+list forward thelist.insertafter
+end class doublylinkedapp
+doublylinkedapp in main
+insert some items
+display the items
+forward and backward
+delete the first
+isn t empty
+simplicity we don
+don t show
+list before attempting
+attempting such insertions
+insertions and deletions
+deletions doubly linked
+list as basis
+basis for deques
+list can find
+method the method
+list and examines
+examines each link
+finds one matching
+matching the search
+key other operations
+link or inserting
+don t give
+give the user
+user any control
+suppose you wanted
+wanted to traverse
+traverse a list
+performing some operation
+imagine a personnel
+personnel file stored
+increase the wages
+paid minimum wage
+minimum or suppose
+list of mailorder
+decided to delete
+delete all customers
+operations are easy
+increment the index
+index to point
+fixed index numbers
+provide a list
+list s user
+repeatedly use find
+requires many comparisons
+comparisons to find
+find each link
+efficient to step
+step from link
+meets certain criteria
+criteria and performing
+examine or modify
+modify the link
+increment the reference
+access the link
+assuming we create
+installed one possibility
+access a link
+link using current
+current and increment
+current to move
+link one problem
+user to create
+object oriented language
+natural to embed
+embed each reference
+object this object
+class an iterator
+iterator class objects
+objects containing references
+references to items
+items in data
+traverse these structures
+commonly called iterators
+private link current
+link the iterator
+iterator currently points
+user might create
+create a list
+create an iterator
+letting the list
+create the iterator
+iterator is easier
+pass the iterator
+iterator certain information
+add a getiterator
+class this method
+returns a suitable
+suitable iterator object
+user would invoke
+invoke an iterator
+iterator public static
+make list listiterator
+list listiterator iter1
+iter1 = thelist.getiterator
+linked lists link
+lists link alink
+alink = iter1.getcurrent
+link at iterator
+made the iterator
+link it points
+statements we call
+call the iterator
+iterator object iter1
+iter1 to emphasize
+make more iterators
+iterator always points
+shows two iterators
+two iterators pointing
+pointing to links
+null current list
+current list iterator
+linked list current
+list current list
+list iterators additional
+iterators additional iterator
+additional iterator features
+previous field made
+field made performing
+performing certain operations
+change the value
+list s first
+field for instance
+access a private
+list one solution
+list to pass
+pass a reference
+creates the iterator
+iterator this reference
+reference is stored
+iterator the list
+iterator to change
+first these linklist
+introduces an element
+element of risk
+class that incorporates
+incorporates these additional
+methods class listiterator
+link current reference
+reference to current
+current link private
+private link previous
+link previous reference
+reference to previous
+previous link private
+link private linklist
+private linklist ourlist
+linklist ourlist reference
+reference to parent
+parent list public
+public void reset
+set to start
+current = ourlist.getfirst
+current first previous
+null previous null
+public void nextlink
+current set previous
+provided by making
+making the iterator
+class a friend
+armor of data
+data hiding iterator
+hiding iterator methods
+iterator methods additional
+methods additional methods
+methods can make
+make the iterator
+iterator a flexible
+flexible and powerful
+class all operations
+operations previously performed
+class that involve
+sets the iterator
+moves the iterator
+returns the link
+deletes the link
+iterator the user
+user can position
+position the iterator
+iterator using reset
+list with atend
+operations shown deciding
+deciding which tasks
+easy an insertbefore
+handled with getcurrent
+iterator the interiterator.java
+program the interiterator.java
+interiterator.java program includes
+includes an interactive
+interface that permits
+permits the user
+user to control
+control the iterator
+started the program
+actions by typing
+letter s show
+show the list
+contents r reset
+reset the iterator
+link b insert
+link a insert
+link d delete
+current link listing
+complete interiterator.java program
+interiterator.java program listing
+interiterator.java program interiterator.java
+program interiterator.java demonstrates
+interiterator.java demonstrates iterators
+listlistiterator to run
+java interiterapp import
+interiterapp import java.io
+data item iterators
+public link getfirst
+value of first
+public void setfirst
+public listiterator getiterator
+return new listiterator
+linklist class listiterator
+link current current
+current current link
+ourlist our linked
+linked list public
+list public listiterator
+ourlist = list
+public boolean atend
+true if last
+public link getcurrent
+public void insertafter
+current link link
+current = newlink
+public void insertbefore
+newlink.next = ourlist.getfirst
+newlink.next = previous.next
+public long deletecurrent
+item at current
+value = current.ddata
+end class listiterator
+class listiterator class
+listiterator class interiterapp
+iter long value
+long value iter1.insertafter
+insert items iter1.insertafter
+enter first letter
+letter of show
+choice = getchar
+user s option
+case s show
+case r reset
+case n advance
+value = iter1.getcurrent
+returned + value
+case b insert
+insert before current
+value to insert
+value = getint
+case a insert
+insert after current
+case d delete
+delete current item
+value = iter1.deletecurrent
+deleted + value
+break default system.out.println
+public static string
+static string getstring
+public static char
+static char getchar
+public static int
+static int getint
+end class interiterapp
+interiterapp the main
+user to interact
+resets the iterator
+forward two links
+list again enter
+delete r enter
+delete n enter
+delete g returned
+delete b enter
+delete a enter
+program will give
+class is deciding
+iterator should point
+item with deletecurrent
+end up pointing
+keeping the iterator
+item is convenient
+out other operations
+reset the list
+list s previous
+move the iterator
+deleted the item
+iterator is set
+list following calls
+calls to insertbefore
+return with current
+newly inserted item
+item the atend
+last valid link
+iterator points past
+past the last
+list becomes awkward
+perform an operation
+link before checking
+terminating the loop
+singly linked list
+careful when writing
+writing a loop
+loop that iterates
+linked lists iterative
+lists iterative operations
+traverse the list
+fragment that displays
+list s displaylist
+first long value
+.ddata display link
+display link system.out.println
+display it system.out.println
+check with isempty
+delete all items
+items with keys
+insert links iter1.insertafter
+display list iter1.reset
+first link link
+link link alink
+interiterapp we insert
+insert five links
+links and display
+deleting those links
+links with keys
+important to check
+linked lists
+data storage
+storage structures
+unordered array
+ordered array
+storage structure
+linked list
+list linked
+generalpurpose storage
+versatile mechanism
+general purpose
+purpose databases
+frequent random
+random access
+individual items
+index linked
+lists aren
+storage problems
+popular structures
+doubleended lists
+sorted lists
+list elements
+abstract data
+data types
+arrays links
+data item
+similar links
+makes sense
+separate class
+link object
+first link
+lists linked
+first data
+data link
+null figure
+class link
+link class
+public int
+int idata
+idata data
+public double
+double ddata
+ddata data
+public link
+class definition
+data items
+typical application
+personnel record
+social security
+security number
+items class
+public inventoryitem
+object holding
+holding data
+basic types
+type link
+link inside
+odd wouldn
+compiler doesn
+object doesn
+magic number
+entire link
+object note
+primitive types
+objects fields
+actual numerical
+numerical values
+variable definition
+double salary
+link alink
+somelink puts
+somelink object
+link somelink
+somelink field
+field doesn
+handle objects
+referential class
+java handles
+handles objects
+counter intuitive
+intuitive links
+memory relationship
+major ways
+lists differ
+item occupies
+index number
+human relations
+harry doesn
+thinks jane
+jane jane
+bob leave
+cell phone
+dropped bob
+lists alink
+alink somelink
+link memory
+memory alink
+link peter
+first item
+linklist workshop
+workshop applet
+list operations
+array workshop
+purpose database
+database application
+application figure
+insert button
+unlucky number
+link press
+ins button
+key value
+subsequent presses
+simplest approach
+insert links
+final press
+inserted link
+link lines
+redrawing doesn
+display neater
+neater figure
+find button
+existing link
+red arrow
+arrow move
+message informs
+arrow finds
+non existent
+existent key
+delete button
+value type
+repeatedly press
+press del
+previous link
+link straight
+preceding link
+final keypress
+keypress redraws
+spaced links
+aesthetic reasons
+arrows doesn
+program note
+lists unsorted
+operations allowed
+list deleting
+list iterating
+complete linklist.java
+linklist.java program
+important parts
+linklist classes
+data part
+complete class
+definition class
+list public
+initialize data
+data ddata
+public void
+void displaylink
+end class
+object purists
+method displaylink
+linklist object
+constructor initializes
+null value
+value means
+storage type
+link fields
+public methods
+extra code
+listing longer
+restrict link
+object access
+linklist class
+inheritance relationship
+default access
+access specifier
+data package
+package access
+access restricted
+demo programs
+public specifier
+data isn
+data fields
+class private
+permanent information
+list maintains
+field class
+class linklist
+private link
+void linklist
+public boolean
+boolean isempty
+linklist sets
+explicit constructor
+constructor makes
+first begins
+value null
+linklist inserts
+easiest place
+created link
+null null
+data passed
+link references
+noted insert
+void insertfirst
+link link
+link newlink
+first first
+first field
+upstream connections
+reference manipulation
+list algorithms
+link public
+link deletefirst
+delete first
+assumes list
+link temp
+first save
+save reference
+first.next delete
+return temp
+temp return
+return deleted
+deleted link
+temp figure
+similar languages
+garbage collection
+collection process
+responsibility notice
+method assumes
+lists figure
+variable current
+current points
+technically refers
+entire displaylist
+void displaylist
+first last
+print data
+current.next move
+last link
+link pointing
+first null
+list figure
+current steps
+current.next current
+current figure
+method calls
+program listing
+routine listing
+program linklist.java
+linklist.java demonstrates
+java linklistapp
+linklistapp class
+public linklist
+class linklistapp
+public static
+static void
+void main
+linklist thelist
+display list
+delete link
+end main
+lists listing
+empty list
+linklist.java list
+program adds
+adds methods
+operations carried
+complete linklist2.java
+linklist2.java program
+program linklist2.java
+linklist2.java demonstrates
+java linklist2app
+linklist2app class
+link finding
+first points
+link find
+int key
+find link
+assumes non
+return null
+null didn
+current found
+link delete
+first search
+first.next change
+current.next bypass
+class linklist2app
+make list
+list link
+find item
+found link
+delete item
+routine makes
+resulting list
+output list
+method works
+desired link
+returns null
+current link
+link preceding
+continued figure
+preceding current
+special case
+case arises
+possibilities found
+bypass link
+delete items
+list methods
+list iterators
+chapter finding
+previous current
+null previous
+double ended
+ended lists
+ended list
+additional feature
+first figure
+link permits
+ordinary single
+single ended
+entire list
+inefficient access
+beginning makes
+handle efficiently
+technique works
+section listing
+firstlastlist.java program
+doubleended list
+program firstlastlist.java
+firstlastlist.java demonstrates
+demonstrates list
+last references
+java firstlastapp
+firstlastapp class
+public long
+long ddata
+class firstlastlist
+last ref
+public firstlastlist
+newlink newlink
+last newlink.next
+void insertlast
+last newlink
+long deletefirst
+long temp
+last first
+first.next first
+firstlastlist class
+class firstlastapp
+list firstlastlist
+firstlastlist thelist
+rear thelist.insertlast
+link contents
+program inserts
+repeated insertions
+list reverse
+end preserve
+list class
+last item
+last point
+process involves
+insertion figure
+deletion routines
+insertion routines
+link deleting
+ended doesn
+list efficiency
+efficiency insertion
+specific item
+item requires
+increased efficiency
+copy takes
+important advantage
+small vectors
+expandable arrays
+sized increments
+list abstract
+shift gears
+lists abstract
+data structure
+structure focusing
+lists stacks
+abstract nature
+stack implemented
+ordinary java
+java array
+array operations
+insert data
+stack class
+class calls
+list listing
+class shouldn
+linkstack.java program
+program linkstack.java
+linkstack.java demonstrates
+java linkstackapp
+linkstackapp class
+return temp.ddata
+temp.ddata return
+class linkstack
+private linklist
+public linkstack
+void push
+put item
+long pop
+void displaystack
+top bottom
+linkstack class
+class linkstackapp
+linkstack thestack
+make stack
+stack abstract
+push items
+display stack
+stack thestack.pop
+pop items
+routine creates
+stack object
+output stack
+class relates
+turn calls
+calls insertfirst
+calls deletefirst
+calls displaylist
+class user
+writing code
+list based
+based linkstack
+array based
+based stack
+stack.java program
+queue implemented
+adt implemented
+continued listing
+linkqueue.java program
+program linkqueue.java
+linkqueue.java demonstrates
+demonstrates queue
+java linkqueueapp
+linkqueueapp class
+class linkqueue
+private firstlastlist
+public linkqueue
+return thelist.isempty
+void insert
+long remove
+void displayqueue
+front rear
+linkqueue class
+class linkqueueapp
+linkqueue thequeue
+insert items
+display queue
+queue thequeue.insert
+remove items
+program creates
+output queue
+methods insert
+queue.java program
+linkqueue.java programs
+programs emphasize
+conceptual entities
+underlying mechanism
+major consideration
+consideration data
+term abstract
+data type
+type part
+phrase data
+type covers
+primitive type
+permissible operations
+type int
+int variables
+number values
+inseparable part
+identity understanding
+type means
+means understanding
+object oriented
+oriented programming
+types represent
+numerical quantities
+denominator fields
+extra long
+long numbers
+string represent
+functional notation
+quantity oriented
+oriented classes
+quantitative aspect
+class represents
+lists abstraction
+word abstract
+abstract means
+detailed specifications
+important characteristics
+office remain
+individual office
+office holders
+class considered
+methods carry
+data structures
+user users
+methods work
+user doesn
+adt specification
+user sees
+similar methods
+methods form
+interface adt
+adt lists
+linear list
+items arranged
+linear order
+street lists
+lists support
+fundamental operations
+adt list
+specific methods
+including arrays
+structures abstract
+design tool
+adt concept
+software design
+design process
+store data
+item inserted
+position answering
+questions leads
+implementation details
+user relates
+adt interface
+underlying data
+list representation
+representation isn
+access isn
+efficient operation
+array note
+note remember
+conceptual tool
+tool data
+implement adts
+list interface
+array type
+type structure
+basic structure
+context sorted
+sorted order
+sorted list
+value deletion
+sorted array
+elements don
+fixed size
+lists sorting
+sorting data
+priority queue
+common implementation
+applet introduced
+chapter demonstrates
+unsorted lists
+lists work
+sorted button
+item type
+list watch
+algorithm traverses
+insertion place
+correct location
+del button
+button java
+java code
+algorithm finds
+special cases
+code public
+long key
+null start
+link current
+key current.ddata
+key current
+current current
+prev newlink
+current newlink
+end insert
+previous reference
+lists prepare
+insertion point
+added condition
+loop terminates
+usual case
+last element
+sortedlist.java program
+sortedlist class
+non sorted
+program sortedlist.java
+sortedlist.java demonstrates
+java sortedlistapp
+sortedlistapp class
+class sortedlist
+public sortedlist
+first return
+return value
+class sortedlistapp
+list sortedlist
+sortedlist thesortedlist
+list thesortedlist.insert
+item thesortedlist.displaylist
+key values
+sortedlist.java list
+continued efficiency
+lists insertion
+arbitrary items
+list require
+minimum value
+minimum item
+fast insertion
+insertion isn
+effective choice
+list insertion
+insertion sort
+efficient sorting
+sorting mechanism
+mechanism suppose
+unsorted data
+order automatically
+sort turns
+usual insertion
+simple sorting
+fewer copies
+list involves
+copies compares
+copies listing
+listinsertionsort.java program
+unsorted items
+array listing
+program listinsertionsort.java
+listinsertionsort.java demonstrates
+java listinsertionsortapp
+listinsertionsortapp class
+initialize list
+null initialize
+copy array
+array insert
+k.ddata current.ddata
+sortedlist sorted
+continued class
+class listinsertionsortapp
+int size
+create array
+links link
+fill array
+random number
+number int
+make link
+link linkarray
+newlink put
+display array
+array contents
+unsorted array
+list initialized
+array sortedlist
+array linkarray
+program displays
+sorting operation
+sample output
+output unsorted
+initial values
+generated randomly
+sortedlist takes
+link objects
+entire contents
+created list
+make things
+store link
+routine create
+long value
+value passed
+based insertion
+class handy
+sort arrays
+potential problem
+traverse backward
+current.next steps
+link depending
+pose problems
+text editor
+text line
+string object
+object embedded
+user moves
+cursor downward
+program steps
+cursor upward
+single step
+step upward
+ordinary lists
+previous previous
+extra reference
+list doesn
+complete listing
+doublylinked.java program
+doublylinkedlist class
+class traversal
+display methods
+methods demonstrate
+demonstrate traversal
+previous field
+code fragment
+fragment shows
+process works
+works link
+last start
+current.previous move
+prev null
+preferred direction
+directionneutral terms
+right insertion
+method inserts
+link prev
+link figure
+last field
+first.previous field
+first newlink.next
+process applied
+mirror image
+current prev
+arbitrary location
+null newlink
+newlink null
+current.next newlink
+dot operators
+natural extension
+single dot
+dot operator
+current.next.previous means
+link referred
+current deletion
+routines deletefirst
+fairly straightforward
+current assuming
+statements carry
+current.next current.next.previous
+first current.prev
+prev prev
+null current
+current.next figure
+arbitrary link
+cases arise
+link connections
+current.next first
+previous last
+complete doublylinked.java
+discussed listing
+program doublylinked.java
+doublylinked.java demonstrates
+java doublylinkedapp
+doublylinkedapp class
+class doublylinkedlist
+public doublylinkedlist
+link deletelast
+delete last
+previous null
+last return
+key public
+boolean insertafter
+return false
+false didn
+newlink return
+return true
+true found
+link deletekey
+current.previous return
+current return
+void displayforward
+display data
+void displaybackward
+class doublylinkedapp
+list doublylinkedlist
+doublylinkedlist thelist
+list backward
+last items
+continued list
+deletion methods
+method assume
+list isn
+preceding chapter
+capability iterators
+method starts
+search key
+methods don
+item suppose
+personnel file
+file stored
+minimum wage
+affecting employees
+mailorder customers
+array index
+suitable candidate
+links don
+fixed index
+index numbers
+approach requires
+link pointed
+reference assuming
+array indices
+oriented language
+class object
+list object
+iterator class
+class objects
+java classes
+preliminary idea
+class listiterator
+current field
+term points
+generic sense
+iterator object
+list create
+method returns
+suitable iterator
+abbreviated code
+iterator public
+list listiterator
+listiterator iter1
+make iter
+lists link
+access link
+iterator iter1.nextlink
+move iter
+object iter1
+iterators pointing
+current list
+list iterator
+additional iterator
+iterator features
+field made
+private field
+change first
+linklist methods
+additional fields
+methods class
+current reference
+linklist ourlist
+ourlist reference
+parent list
+void reset
+current first
+first previous
+void nextlink
+current set
+current.next set
+friend classes
+data hiding
+hiding iterator
+iterator methods
+additional methods
+powerful class
+involve iterating
+iterator includes
+methods reset
+list nextlink
+link getcurrent
+iterator atend
+returns true
+iterator insertbefore
+iterator deletecurrent
+operations shown
+shown deciding
+interiterator.java program
+program includes
+interactive interface
+iterator directly
+list contents
+link listing
+complete interiterator.java
+program interiterator.java
+interiterator.java demonstrates
+demonstrates iterators
+linked listlistiterator
+java interiterapp
+interiterapp import
+import java.io
+item iterators
+link getfirst
+void setfirst
+public listiterator
+listiterator getiterator
+return iterator
+linklist list
+list reset
+boolean atend
+void insertafter
+newlink iterators
+current.next current.next
+newlink nextlink
+void insertbefore
+previous.next previous.next
+newlink current
+long deletecurrent
+listiterator class
+class interiterapp
+throws ioexception
+value iter1.insertafter
+first letter
+int choice
+option switch
+show list
+break case
+current item
+.ddata system.out.println
+current system.out.print
+enter value
+delete current
+break default
+default system.out.println
+invalid entry
+end switch
+static string
+string getstring
+inputstreamreader isr
+continued bufferedreader
+static char
+char getchar
+static int
+int getint
+routine inserts
+sample interaction
+user displays
+enter first
+continued enter
+iterator moves
+delete links
+iterator point
+design issues
+iterator end
+previous item
+list keeping
+deleted item
+inserted item
+iterator points
+last valid
+valid link
+first approach
+loop condition
+approach doesn
+longer point
+lists iterative
+iterative operations
+performing operations
+first long
+.ddata display
+display link
+link system.out.println
+calling getcurrent
+code shows
+revised main
+iter iter1.insertafter
+list iter1.reset
+calling deletecurrent
+linked
+lists
+chapter
+arrays
+disadvantages
+data
+storage
+structures
+unordered
+array
+searching
+slow
+ordered
+insertion
+kinds
+deletion
+size
+changed
+created
+structure
+solves
+problems
+list
+commonly
+generalpurpose
+versatile
+mechanism
+suitable
+general
+purpose
+databases
+replace
+basis
+stacks
+queues
+fact
+cases
+frequent
+random
+access
+individual
+items
+index
+aren
+solution
+surprisingly
+conceptually
+simpler
+popular
+trees
+investigate
+strengths
+weaknesses
+simple
+doubleended
+sorted
+doubly
+iterators
+approach
+elements
+examine
+idea
+abstract
+types
+adts
+viewed
+implemented
+links
+item
+embedded
+link
+object
+class
+similar
+makes
+sense
+separate
+distinct
+reference
+field
+first
+relationship
+shown
+figure
+null
+part
+definition
+public
+int
+idata
+double
+ddata
+kind
+referential
+case
+type
+show
+two
+typical
+application
+personnel
+record
+address
+social
+security
+number
+title
+salary
+fields
+inventoryitem
+holding
+references
+basic
+easily
+confused
+context
+review
+work
+put
+inside
+odd
+wouldn
+compiler
+out
+big
+make
+doesn
+answer
+java
+refers
+computer
+memory
+don
+value
+treat
+magic
+tells
+system
+matter
+problem
+construct
+entire
+note
+primitive
+stored
+differently
+objects
+actual
+numerical
+values
+variable
+creates
+space
+puts
+alink
+somelink
+located
+isn
+moved
+statement
+create
+hold
+languages
+handle
+write
+pointer
+programmers
+mind
+handles
+usage
+counter
+intuitive
+position
+major
+ways
+differ
+occupies
+directly
+accessed
+row
+houses
+find
+house
+element
+follow
+chain
+human
+relations
+harry
+bob
+thinks
+jane
+leave
+office
+sally
+call
+cell
+phone
+dropped
+peter
+relationships
+locate
+start
+linklist
+workshop
+applet
+operations
+insert
+search
+key
+delete
+explored
+database
+shows
+started
+initially
+button
+unlucky
+press
+ins
+prompted
+enter
+subsequent
+presses
+generate
+version
+inserted
+beginning
+simplest
+final
+redraw
+newly
+lines
+redrawing
+represent
+happening
+program
+display
+neater
+existing
+preferably
+middle
+continue
+red
+arrow
+move
+message
+informs
+finds
+non
+existent
+end
+reporting
+found
+repeatedly
+del
+simply
+removes
+connects
+previous
+straight
+removed
+preceding
+point
+keypress
+redraws
+picture
+evenly
+spaced
+aesthetic
+reasons
+length
+arrows
+correspond
+unsorted
+default
+discuss
+linklist.java
+demonstrates
+allowed
+inserting
+deleting
+iterating
+contents
+fairly
+easy
+carry
+stack
+complete
+important
+parts
+classes
+constructor
+initialize
+automatically
+set
+void
+displaylink
+ourself
+system.out.print
+addition
+method
+displays
+format
+purists
+naming
+arguing
+shorter
+spirit
+polymorphism
+listing
+harder
+understand
+current.display
+forgotten
+current
+initializes
+explicitly
+clarity
+means
+situation
+connected
+made
+private
+provide
+methods
+require
+extra
+code
+making
+longer
+read
+ideally
+restrict
+inheritance
+convenient
+specifier
+keyword
+give
+package
+restricted
+directory
+effect
+demo
+programs
+occupy
+clear
+permanent
+information
+maintains
+location
+ref
+boolean
+isempty
+true
+empty
+return
+sets
+noted
+explicit
+begins
+determine
+insertfirst
+inserts
+easiest
+place
+points
+change
+begin
+creating
+passed
+arguments
+newlink
+newlink.next
+comments
+last
+statements
+downstream
+upstream
+connections
+symbolized
+compare
+manipulation
+heart
+algorithms
+deletefirst
+reverse
+disconnects
+rerouting
+assumes
+temp
+save
+first.next
+deleted
+remove
+choose
+convenience
+user
+rerouted
+worry
+disconnected
+garbage
+collection
+process
+destroy
+future
+responsibility
+notice
+calling
+verify
+displaylist
+technically
+turn
+starts
+pointing
+holds
+current.next
+current.displaylink
+print
+system.out.println
+loop
+condition
+terminate
+reaches
+steps
+stepping
+calls
+components
+main
+routine
+run
+linklistapp
+continued
+static
+string
+args
+thelist
+thelist.insertfirst
+four
+thelist.displaylist
+thelist.isempty
+thelist.deletefirst
+alink.displaylink
+displayed
+output
+finding
+adds
+carried
+linklist2.java
+linklist2app
+current.idata
+match
+didn
+previous.next
+bypass
+thelist.find
+f.idata
+thelist.delete
+d.idata
+resulting
+searches
+deletes
+works
+setting
+checks
+returns
+desired
+maintain
+connect
+cycle
+special
+arises
+pointed
+changing
+covers
+possibilities
+imagine
+insertafter
+talk
+ended
+ordinary
+additional
+feature
+permits
+single
+reach
+inefficient
+situations
+efficiently
+implementing
+queue
+technique
+section
+firstlastlist.java
+incidentally
+confuse
+explore
+firstlastapp
+long
+firstlastlist
+front
+insertlast
+last.next
+first.ddata
+thelist.insertlast
+rear
+simplicity
+reduced
+easier
+remember
+repeated
+insertions
+order
+preserve
+discussed
+involves
+modifying
+routines
+watch
+prior
+conveniently
+traverse
+efficient
+efficiency
+fast
+involve
+takes
+specific
+requires
+average
+half
+comparisons
+faster
+increased
+significant
+copy
+comparison
+advantage
+expand
+fill
+fixed
+leads
+inefficiency
+large
+running
+room
+small
+vectors
+expandable
+solve
+extent
+sized
+increments
+doubling
+overflow
+shift
+gears
+topic
+adt
+roughly
+speaking
+focusing
+ignoring
+job
+examples
+discussion
+demonstrate
+nature
+considered
+separately
+implementation
+push
+pop
+arr
+top
+knowing
+needing
+linkstack
+argue
+users
+shouldn
+linkstack.java
+linkstackapp
+temp.ddata
+displaystack
+bottom
+thestack
+thestack.push
+thestack.displaystack
+thestack.pop
+pushes
+finally
+pops
+organization
+relates
+communication
+specifically
+operation
+similarly
+writing
+difference
+based
+stack.java
+linkqueue.java
+linkqueueapp
+linkqueue
+displayqueue
+thequeue
+thequeue.insert
+thequeue.displayqueue
+thequeue.remove
+substituted
+implement
+queue.java
+emphasize
+conceptual
+entities
+implementations
+equally
+underlying
+opposed
+consideration
+accurately
+predict
+amount
+flexibility
+speed
+abstraction
+term
+phrase
+lot
+ground
+applied
+built
+hear
+referring
+things
+characteristics
+permissible
+variables
+2,147,483,648
+2,147,483,647
+operators
+inseparable
+identity
+understanding
+performed
+advent
+oriented
+programming
+quantities
+define
+hours
+minutes
+seconds
+fractions
+numerator
+denominator
+numbers
+characters
+digits
+added
+subtracted
+functional
+notation
+add
+sub
+fit
+naturally
+quantity
+quantitative
+aspect
+represents
+extension
+represented
+referred
+defined
+arrangement
+word
+detailed
+specifications
+essence
+president
+powers
+responsibilities
+remain
+holders
+regard
+description
+instructions
+excluded
+details
+tasks
+told
+results
+expect
+meaning
+extended
+fundamentals
+invisible
+store
+exist
+tree
+interface
+specification
+sees
+form
+mention
+linear
+group
+arranged
+lined
+beads
+street
+support
+fundamental
+discussing
+interact
+including
+design
+tool
+concept
+aid
+software
+answering
+questions
+completely
+decoupling
+simplify
+breaking
+designed
+carefully
+chosen
+representation
+good
+divided
+cleanly
+wrapped
+act
+determined
+requirement
+applications
+characteristic
+limited
+smallest
+largest
+advantages
+difficult
+sorting
+priority
+heap
+heaps
+common
+introduced
+click
+result
+fall
+algorithm
+traverses
+correct
+redrawn
+regularize
+appearance
+larger
+usual
+current.ddata
+prev
+modify
+prepare
+step
+terminates
+examined
+smaller
+appropriately
+sortedlist.java
+presents
+sortedlist
+counterpart
+sortedlistapp
+thesortedlist
+thesortedlist.insert
+thesortedlist.displaylist
+thesortedlist.remove
+showing
+correctly
+removal
+arbitrary
+n
+minimum
+frequently
+accesses
+critical
+effective
+choice
+sort
+suppose
+back
+turns
+substantially
+described
+fewer
+copies
+comparing
+copied
+compares
+favorably
+listinsertionsort.java
+places
+listinsertionsortapp
+linkarr
+argument
+linkarr.length
+k.ddata
+k.next
+linkarray
+java.lang.math.random
+.ddata
+initialized
+afterward
+sample
+initial
+generated
+randomly
+doing
+helps
+client
+accepts
+downside
+compared
+handy
+variation
+potential
+backward
+depending
+limitation
+pose
+text
+editor
+line
+screen
+moves
+cursor
+downward
+manipulate
+upward
+equivalent
+capability
+forward
+secret
+deal
+attachments
+bigger
+necessarily
+keeping
+include
+doublylinked.java
+doublylinkedlist
+traversal
+displayforward
+displaybackward
+proceeds
+fragment
+current.previous
+people
+view
+preferred
+direction
+terms
+inappropriate
+prefer
+substitute
+directionneutral
+left
+right
+included
+first.previous
+mirror
+image
+bit
+complicated
+procedure
+handled
+assuming
+deals
+current.next.previous
+newlink.previous
+unfamiliar
+dot
+expression
+natural
+operator
+deletelast
+deletekey
+straightforward
+disconnection
+current.previous.next
+current.prev
+arise
+dealing
+includes
+doublylinkedapp
+first.next.previous
+last.previous.next
+last.previous
+false
+thelist.displayforward
+thelist.displaybackward
+thelist.deletelast
+thelist.deletekey
+thelist.insertafter
+assume
+attempting
+deletions
+deques
+deque
+mentioned
+examines
+matching
+looked
+control
+wanted
+performing
+file
+increase
+wages
+employees
+paid
+wage
+affecting
+mailorder
+customers
+decided
+months
+track
+operate
+increment
+candidate
+analogous
+checking
+meets
+criteria
+installed
+possibility
+indices
+language
+embed
+iterator
+enumerators
+preliminary
+listiterator
+pointers
+generic
+letting
+pass
+getiterator
+abbreviated
+invoke
+iter1
+thelist.getiterator
+iter
+iter1.getcurrent
+iter1.nextlink
+iter2
+features
+instance
+getfirst
+setfirst
+weakness
+introduces
+risk
+revised
+incomplete
+incorporates
+reset
+nextlink
+ourlist
+parent
+ourlist.getfirst
+connection
+typically
+provided
+friend
+controversial
+chink
+armor
+hiding
+flexible
+powerful
+previously
+getcurrent
+atend
+insertbefore
+deletecurrent
+check
+perform
+deciding
+interiterator.java
+interactive
+actions
+typing
+letter
+listlistiterator
+interiterapp
+import
+java.io
+ourlist.isempty
+ourlist.setfirst
+throws
+ioexception
+iter1.insertafter
+iter1.insertbefore
+system.out.flush
+getchar
+option
+switch
+break
+iter1.reset
+advance
+iter1.atend
+returned
+getint
+iter1.deletecurrent
+invalid
+entry
+getstring
+inputstreamreader
+isr
+system.in
+bufferedreader
+br.readline
+char
+s.charat
+integer.parseint
+waits
+interaction
+resets
+experimenting
+feeling
+issues
+vicinity
+chances
+carrying
+task
+question
+valid
+past
+iterate
+awkward
+terminating
+late
+couldn
+singly
+careful
+iterates
+iterative
+keys
+multiples
+alink.ddata
+divisible

@@ -1,0 +1,1534 @@
+cs140 operating systems
+operating systems instructors
+mazieres ` cas
+jayesh yerrapragada stanford
+yerrapragada stanford university
+administrivia class web
+class web page
+lecture notes on-line
+notes on-line textbook
+operating system concepts
+haven t looked
+class from textbook
+make lecture slides
+slides the primary
+slides contain links
+reading about topics
+slides from class
+staff mailing list
+mail staff list
+15wi-cs140 is main
+main discussion forum
+discussion forum key
+forum key dates
+15pm exams open
+exams open note
+materials except textbook
+electronic devices permitted
+lecture videos lectures
+televised for scpd
+miss a lecture
+temptation to miss
+miss a bunch
+bunch of lectures
+lectures and watch
+lecture in person
+conveniently at end
+end of work
+parking spaces don
+don t require
+4pm other notes
+notes for scpd
+exams in person
+group to find
+find project partners
+threads & processes
+concurrency & synchronization
+synchronization scheduling virtual
+scheduling virtual memory
+memory i disks
+network file systems
+file systems protection
+protection & security
+security virtual machines
+virtual machines note
+current and future
+oses heavily influenced
+influenced by unix
+windows is exception
+computer without interacting
+effective programmer cover
+programmer cover important
+cover important systems
+important systems concepts
+concepts in general
+deal with larger
+larger software systems
+assignments much larger
+majority of people
+graduate os classes
+programming assignments implement
+assignments implement parts
+parts of pintos
+pintos operating system
+built for x86
+emulator one setup
+friday four implementation
+four implementation projects
+file system lab
+distributed at end
+section this friday
+friday for project
+overview implement projects
+projects in groups
+pick your partners
+lecture will end
+grading no incompletes
+talk to instructors
+run into real
+based on exams
+midterm + final
+grade from projects
+based on passing
+passing test cases
+based on design
+design and style
+style most people
+people s projects
+pass most test
+turn in working
+credit here means
+matter a lot
+large software systems
+producing working code
+code other people
+people can understand
+style must turn
+project s design
+design doc cas
+manually inspect code
+code for correctness
+implement the design
+handle corner cases
+handle malloc failure
+points for error-prone
+code w errors
+variables if automatic
+automatic ones suffice
+names for variables
+easy to read
+uniform coding style
+match existing code
+comments on structure
+don t leave
+leave in reams
+reams of commented-out
+commented-out garbage code
+people s solutions
+solutions to projects
+reserve the right
+right to run
+moss on present
+present and past
+solutions in violation
+copy other oses
+cite any code
+code that inspired
+inspired your code
+undermines the assignment
+assignment projects due
+projects due fridays
+fridays at noon
+noon ask cs140-staff
+cs140-staff for extension
+run into trouble
+operating system layer
+layer between applications
+applications and hardware
+hardware makes hardware
+abstractions for applications
+manages and hides
+details of hardware
+unavailable to applications
+study operating systems
+operating systems operating
+systems operating systems
+handful of mature
+people to switch
+switch operating systems
+issues as oses
+oses resource consumption
+hard to achieve
+foundation new smart
+oses web browsers
+browsers increasingly face
+face os issues
+primitive operating systems
+library of standard
+interface above hardware-specific
+runs one program
+users or programs
+idle while waiting
+waiting for disk
+program to finish
+run another process
+memory to make
+make them fail
+mechanisms to address
+address these problems
+preemption take cpu
+memory protection protect
+protection protect process
+process s memory
+oses many oses
+oses use protection
+protection to serve
+distrustful users idea
+demands for cpu
+win by giving
+resources to users
+users are gluttons
+total memory usage
+memory usage greater
+slowdown with increasing
+mechanisms that isolate
+isolate bad programs
+programs and people
+application a resource
+application and stuff
+track all pieces
+pieces that application
+table to check
+check that access
+access legal privileged
+privileged & unprivileged
+modes in cpus
+unprivileged user mode
+privileged supervisor mode
+done in privileged
+typical os structure
+structure user kernel
+user kernel driver
+kernel driver device
+sockets tcp system
+tcp system file
+system file console
+file console disk
+console disk device
+disk device driver
+device driver driver
+driver driver device
+driver device network
+network vm scheduler
+ipc most software
+runs as user-level
+runs in privileged
+access to hardware
+system calls applications
+applications can invoke
+kernel through system
+special instruction transfers
+instruction transfers control
+control to kernel
+hundred syscall handlers
+privileged kernel code
+kernel code kernel
+code kernel supplies
+kernel supplies well-defined
+supplies well-defined system
+well-defined system call
+system call interface
+set up syscall
+arguments and trap
+trap to kernel
+kernel performs operation
+operation and returns
+returns result higher-level
+result higher-level functions
+higher-level functions built
+built on syscall
+call example standard
+standard library implemented
+implemented in terms
+terms of syscalls
+printf in libc
+privileges as application
+write in kernel
+bits out serial
+out serial port
+unix file system
+file system calls
+calls applications open
+applications open files
+open files int
+files int open
+char * path
+create the file
+file if non-existent
+create if file
+truncate the file
+writing from end
+end of file
+returns file descriptor
+i to file
+open fails returns
+system calls return
+kind of error
+error in global
+global int errno
+errno # include
+file or directory
+eacces permission denied
+permission denied perror
+denied perror function
+perror function prints
+function prints human-readable
+prints human-readable message
+operations on file
+file descriptors int
+descriptors int read
+number of bytes
+bytes at end
+error int write
+returns previous file
+previous file offset
+error int close
+file descriptor numbers
+numbers file descriptors
+descriptors are inherited
+inherited by processes
+fds by default
+stdin in ansi
+printf in ansi
+perror in ansi
+attached to terminal
+prints the contents
+file to stdout
+type.c void typefile
+char * filename
+nread ; char
+nread = read
+contexts a system
+contexts user-level cpu
+cpu in user
+user mode running
+mode running application
+running application kernel
+application kernel process
+kernel process context
+running kernel code
+code on behalf
+performing system call
+executing a kernel-only
+network file server
+context switch code
+switch code changing
+code changing address
+changing address spaces
+address spaces idle
+transitions between contexts
+contexts user kernel
+user kernel process
+fault user context
+context interrupt handler
+hardware process context
+context user switch
+return process context
+process context context
+context context switch
+sleep context switch
+switch user context
+cpu preemption protection
+preemption protection mechanism
+mechanism to prevent
+prevent monopolizing cpu
+monopolizing cpu e.g
+kernel programs timer
+timer to interrupt
+mode to write
+re-program interval timer
+interval timer kernel
+timer kernel sets
+kernel sets interrupt
+interrupt to vector
+back to kernel
+control whenever interval
+interval timer fires
+mode to set
+set interrupt entry
+interrupt entry points
+code to hijack
+hijack interrupt handler
+interrupt handler result
+cpu with infinite
+cpu use multiple
+wedge most oses
+oses with int
+creating more processes
+processes until system
+out of proc
+slots other techniques
+processes per user
+reboot and yell
+yell at annoying
+address translation protect
+translation protect memory
+program from actions
+locations a program
+addresses in process
+process address space
+address of real
+virtual to physical
+physical addresses translation
+addresses translation done
+load and store
+hardware for speed
+ensure one process
+process s translations
+don t include
+memory protection cpu
+cpu allows kernel-only
+kernel-only virtual addresses
+kernel typically part
+handle system call
+touch kernel memory
+kernel memory cpu
+memory cpu lets
+lets os disable
+catch and halt
+halt buggy program
+program that makes
+makes wild accesses
+make virtual memory
+memory seem bigger
+bigger than physical
+bring a page
+enforced read-only virtual
+read-only virtual addresses
+sharing of code
+pages between processes
+optimizations cpu enforced
+cpu enforced execute
+enforced execute disable
+disable of vas
+makes certain code
+code injection attacks
+injection attacks harder
+allocation & performance
+performance multitasking permits
+multitasking permits higher
+permits higher resource
+higher resource utilization
+resource utilization simple
+process downloading large
+downloading large file
+file mostly waits
+waits for network
+play a game
+game while downloading
+downloading the file
+higher cpu utilization
+downloading complexity arises
+arises with cost
+cost of switching
+disk 1,000 times
+1,000 times slower
+slower than memory
+memory in machine
+processes by swapping
+out to disk
+faster to run
+properties to exploit
+basis behind cache
+big fast memory
+fast memory past
+memory past predicts
+past predicts future
+a.k.a temporal locality
+entry to replace
+least-recently-used entry note
+entry note conflict
+conflict between fairness
+fairness & throughput
+fewer cache misses
+running same process
+cpu and give
+cs140 operating
+operating systems
+systems instructors
+adam belay
+ali mashtizadeh
+david mazieres
+michael chang
+peter johnston
+yutian liu
+rush moody
+rasmus rygaard
+jayesh yerrapragada
+yerrapragada stanford
+stanford university
+administrivia class
+class web
+web page
+lecture notes
+on-line textbook
+operating system
+system concepts
+8th edition
+9th edition
+ween class
+optional goal
+make lecture
+lecture slides
+primary reference
+pdf slides
+download slides
+staff mailing
+mailing list
+mail staff
+staff list
+google group
+main discussion
+discussion forum
+forum key
+key dates
+gates b01
+open note
+open book
+bring notes
+printed materials
+electronic devices
+devices permitted
+lecture videos
+videos lectures
+scpd students
+resist temptation
+attend lecture
+work day
+parking spaces
+spaces don
+require permit
+attend exams
+find project
+project partners
+topics threads
+processes concurrency
+synchronization scheduling
+virtual memory
+file systems
+network file
+systems protection
+virtual machines
+machines note
+future oses
+goals introduce
+effective programmer
+programmer cover
+important systems
+systems concepts
+memory management
+protection teach
+larger software
+software systems
+programming assignments
+people report
+assignments implement
+implement parts
+pintos operating
+x86 hardware
+hardware emulator
+setup homework
+due friday
+implementation projects
+user processes
+file system
+system lab
+attend section
+overview implement
+implement projects
+partners today
+instructors asap
+real problems
+grade based
+score based
+passing test
+test cases
+projects pass
+working code
+means design
+style matter
+large software
+producing working
+produce code
+group projects
+design document
+design doc
+doc cas
+inspect code
+handle corner
+corner cases
+handle malloc
+malloc failure
+deduct points
+error-prone code
+global variables
+deceptive names
+variables code
+indent code
+uniform coding
+coding style
+existing code
+put comments
+structure members
+commented-out garbage
+garbage code
+assignment requirements
+run moss
+past submissions
+honor code
+worst case
+assignment projects
+due fridays
+system layer
+hardware makes
+makes hardware
+hides details
+accesses hardware
+study operating
+systems operating
+maturing field
+mature oses
+switch operating
+high-performance servers
+oses resource
+resource consumption
+battery life
+radio spectrum
+achieve security
+solid foundation
+smart devices
+oses web
+web browsers
+primitive operating
+standard services
+standard interface
+hardware-specific drivers
+simplifying assumptions
+system runs
+bad users
+bad assumption
+poor utilization
+cpu idle
+human user
+multitasking idea
+process blocks
+user input
+process problem
+ill-behaved process
+infinite loop
+relinquish cpu
+processes memory
+looping process
+memory protection
+protection protect
+protect process
+multi-user oses
+users demands
+giving resources
+total memory
+memory usage
+usage greater
+super-linear slowdown
+increasing demand
+protection mechanisms
+isolate bad
+bad programs
+give application
+application allowed
+legal privileged
+unprivileged modes
+applications unprivileged
+unprivileged user
+user mode
+protection operations
+privileged mode
+structure user
+user kernel
+kernel driver
+driver device
+system file
+file console
+console disk
+disk device
+device driver
+driver driver
+device network
+scheduler ipc
+software runs
+user-level processes
+kernel runs
+system calls
+calls applications
+invoke kernel
+special instruction
+instruction transfers
+transfers control
+syscall handlers
+things app
+unprivileged mode
+library call
+privileged kernel
+kernel code
+code kernel
+kernel supplies
+well-defined system
+system call
+call interface
+applications set
+syscall arguments
+kernel performs
+performs operation
+returns result
+result higher-level
+higher-level functions
+functions built
+syscall interface
+user-level code
+standard library
+library implemented
+calls write
+send bits
+serial port
+open files
+files int
+int flags
+file exists
+start writing
+final argument
+creat returns
+file descriptor
+error returns
+open fails
+fails returns
+calls return
+specific kind
+global int
+int errno
+eacces permission
+permission denied
+denied perror
+perror function
+function prints
+human-readable message
+file descriptors
+descriptors int
+int nbytes
+returns number
+bytes read
+error int
+int write
+bytes written
+previous file
+file offset
+int close
+descriptor numbers
+process spawns
+default descriptors
+special meaning
+standard input
+standard output
+standard error
+type.c void
+void typefile
+char buf
+system contexts
+user-level cpu
+mode running
+running application
+application kernel
+kernel process
+process context
+running kernel
+performing system
+mem fault
+numeric exception
+kernel-only process
+file server
+timer interrupt
+device interrupt
+linux-specific terms
+context switch
+switch code
+code changing
+changing address
+address spaces
+spaces idle
+powerdown cpu
+page fault
+context interrupt
+interrupt handler
+hardware process
+return process
+context context
+sleep context
+cpu preemption
+preemption protection
+protection mechanism
+prevent monopolizing
+monopolizing cpu
+cpu e.g
+kernel programs
+programs timer
+supervisor mode
+user code
+interval timer
+timer kernel
+kernel sets
+regains control
+timer fires
+interrupt entry
+entry points
+handler result
+cpu-hungry processes
+multiple processes
+int main
+proc slots
+chill program
+technical solution
+limit processes
+annoying users
+pass laws
+good idea
+address translation
+translation protect
+protect memory
+address space
+memory locations
+virtual address
+process address
+physical address
+real memory
+physical addresses
+addresses translation
+translation done
+modern cpus
+speed idea
+translations don
+protection cpu
+kernel-only virtual
+virtual addresses
+typically part
+handle system
+ensure apps
+touch kernel
+kernel memory
+memory cpu
+cpu lets
+halt buggy
+buggy program
+code pages
+enforced execute
+code injection
+injection attacks
+resource allocation
+performance multitasking
+multitasking permits
+higher resource
+resource utilization
+utilization simple
+process downloading
+large file
+higher cpu
+cpu utilization
+downloading complexity
+complexity arises
+switch processes
+context switching
+memory absorbs
+fast memory
+big fast
+memory past
+past predicts
+temporal locality
+cache entry
+past future
+least-recently-used entry
+entry note
+note conflict
+higher throughput
+fewer cache
+cache misses
+cs140
+operating
+systems
+instructors
+adam
+belay
+ali
+mashtizadeh
+david
+mazieres
+cas
+michael
+chang
+peter
+johnston
+yutian
+liu
+rush
+moody
+rasmus
+rygaard
+jayesh
+yerrapragada
+stanford
+university
+administrivia
+class
+web
+page
+http
+assignments
+handouts
+lecture
+notes
+on-line
+textbook
+system
+concepts
+8th
+edition
+silberschatz
+galvin
+gagne
+9th
+expensive
+haven
+looked
+ween
+optional
+goal
+make
+slides
+primary
+reference
+talk
+pdf
+links
+reading
+topics
+download
+staff
+mailing
+list
+cs140-staff
+scs.stanford.edu
+mail
+individuals
+google
+group
+15wi-cs140
+main
+discussion
+forum
+key
+dates
+lectures
+30pm
+gates
+b01
+section
+fridays
+tbd
+midterm
+monday
+feb
+final
+thursday
+march
+15pm
+exams
+open
+note
+book
+bring
+printed
+materials
+electronic
+devices
+permitted
+videos
+televised
+scpd
+students
+watch
+miss
+review
+resist
+temptation
+bunch
+attend
+person
+conveniently
+end
+work
+day
+parking
+spaces
+don
+require
+permit
+4pm
+feel
+free
+find
+project
+partners
+threads
+processes
+concurrency
+synchronization
+scheduling
+virtual
+memory
+i
+disks
+file
+network
+protection
+security
+machines
+unix
+current
+future
+oses
+heavily
+influenced
+windows
+exception
+quarter
+ignore
+goals
+introduce
+hard
+computer
+interacting
+understanding
+makes
+effective
+programmer
+cover
+important
+general
+caching
+management
+teach
+deal
+larger
+software
+programming
+courses
+warning
+people
+past
+majority
+report
+prepare
+graduate
+classes
+cs240
+a-z
+implement
+parts
+pintos
+built
+x86
+hardware
+emulator
+setup
+homework
+lab
+due
+friday
+four
+implementation
+projects
+user
+distributed
+week
+overview
+groups
+pick
+today
+early
+grading
+incompletes
+asap
+run
+real
+problems
+grade
+based
+quantity
+max
+score
+passing
+test
+cases
+remaining
+design
+style
+pass
+turn
+working
+code
+credit
+means
+matter
+lot
+large
+producing
+produce
+understand
+document
+supply
+templates
+doc
+manually
+inspect
+correctness
+e.g
+handle
+corner
+malloc
+failure
+deduct
+points
+error-prone
+errors
+global
+variables
+automatic
+suffice
+deceptive
+names
+easy
+read
+indent
+lines
+functions
+short
+uniform
+coding
+match
+existing
+put
+comments
+structure
+members
+globals
+leave
+reams
+commented-out
+garbage
+assignment
+requirements
+solutions
+reserve
+right
+moss
+present
+submissions
+publish
+violation
+honor
+copy
+linux
+cite
+inspired
+long
+cheating
+worst
+case
+undermines
+noon
+extension
+trouble
+done
+left
+finish
+layer
+applications
+abstractions
+manages
+hides
+details
+accesses
+interfaces
+unavailable
+prevents
+clobbering
+study
+maturing
+field
+handful
+mature
+switch
+impact
+high-performance
+servers
+issue
+face
+issues
+resource
+consumption
+battery
+life
+radio
+spectrum
+achieve
+solid
+foundation
+smart
+browsers
+increasingly
+primitive
+library
+standard
+services
+interface
+hardware-specific
+drivers
+simplifying
+assumptions
+runs
+program
+bad
+users
+programs
+assumption
+problem
+poor
+utilization
+cpu
+idle
+waiting
+disk
+human
+wait
+multitasking
+idea
+process
+blocks
+input
+ill-behaved
+infinite
+loop
+relinquish
+scribble
+fail
+mechanisms
+address
+preemption
+looping
+protect
+multi-user
+serve
+distrustful
+times
+slower
+demands
+bursty
+win
+giving
+resources
+wrong
+gluttons
+policies
+total
+usage
+greater
+machine
+virtualize
+super-linear
+slowdown
+increasing
+demand
+thrashing
+isolate
+pre-emption
+give
+application
+needed
+place
+stuff
+track
+pieces
+allowed
+table
+access
+check
+legal
+privileged
+unprivileged
+modes
+cpus
+mode
+operations
+typical
+kernel
+driver
+device
+sockets
+console
+scheduler
+ipc
+user-level
+1-4
+shaded
+calls
+invoke
+special
+instruction
+transfers
+control
+dispatches
+hundred
+syscall
+handlers
+continued
+things
+app
+call
+supplies
+well-defined
+set
+arguments
+trap
+performs
+operation
+returns
+result
+higher-level
+printf
+scanf
+close
+write
+implemented
+terms
+syscalls
+libc
+privileges
+send
+bits
+out
+serial
+port
+files
+int
+char
+path
+flags
+rdonly
+wronly
+rdwr
+creat
+create
+non-existent
+excl
+exists
+trunc
+truncate
+append
+start
+writing
+argument
+descriptor
+error
+fails
+invalid
+return
+specific
+kind
+errno
+include
+values
+enoent
+directory
+eacces
+permission
+denied
+perror
+function
+prints
+human-readable
+message
+initfile
+descriptors
+void
+buf
+nbytes
+number
+bytes
+const
+written
+lseek
+pos
+previous
+offset
+numbers
+inherited
+spawns
+fds
+default
+meaning
+stdin
+ansi
+output
+stdout
+stderr
+attached
+terminal
+type.c
+contents
+typefile
+filename
+nread
+o_rdonly
+sizeof
+contexts
+generally
+running
+context
+behalf
+performing
+mem
+fault
+numeric
+executing
+kernel-only
+server
+timer
+interrupt
+hardclock
+softirqs
+tasklets
+linux-specific
+changing
+powerdown
+transitions
+handler
+sleep
+mechanism
+prevent
+monopolizing
+supervisor
+registers
+re-program
+interval
+sets
+vector
+back
+regains
+fires
+entry
+hijack
+monopolize
+cpu-hungry
+multiple
+years
+wedge
+fork
+creating
+proc
+slots
+techniques
+chill
+typically
+solved
+combination
+technical
+solution
+limit
+social
+reboot
+yell
+annoying
+laws
+debatable
+good
+translation
+actions
+definitions
+space
+locations
+addresses
+physical
+map
+load
+store
+modern
+speed
+touch
+ensure
+translations
+part
+apps
+lets
+disable
+invalidate
+catch
+halt
+buggy
+wild
+bigger
+accessed
+enforced
+read-only
+sharing
+pages
+optimizations
+execute
+vas
+injection
+attacks
+harder
+allocation
+performance
+permits
+higher
+simple
+downloading
+waits
+play
+game
+complexity
+arises
+cost
+switching
+1,000
+swapping
+faster
+properties
+exploit
+skew
+absorbs
+references
+basis
+cache
+fast
+slow
+big
+predicts
+a.k.a
+temporal
+locality
+replace
+least-recently-used
+conflict
+fairness
+throughput
+fewer
+misses
+periodically
+preempt

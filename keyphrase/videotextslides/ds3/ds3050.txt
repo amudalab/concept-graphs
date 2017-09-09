@@ -1,0 +1,12 @@
+Row 1::Height 3::queues (3)
+Row 2::Height 1::these support methods should not be
+Row 3::Height 1::defined:
+Row 4::Height 1::size(s:adt):integer
+Row 5::Height 1::isempty(s:adt):boolean
+Row 6::Height 1::axioms
+Row 7::Height 3::front(enqueue(new(),v)) = v
+Row 8::Height 3::dequeque(enqueue(new(),v)) = new()
+Row 9::Height 3::front(enqueue(enqueue(q,w)),v)) =
+Row 10::Height 3::front(enqueue(q,w))
+Row 11::Height 3::dequeue(enqueue(enqueue(q,w),v)) =
+Row 12::Height 3::enqueue(dequeue(enqueue(q,w),v))

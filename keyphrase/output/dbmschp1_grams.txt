@@ -1,0 +1,4918 @@
+collection of interrelated
+set of programs
+programs to access
+access those data
+data the collection
+collection of data
+enterprise the primary
+store and retrieve
+retrieve database information
+convenient and efficient
+efficient database systems
+systems are designed
+designed to manage
+manage large bodies
+bodies of information
+management of data
+involves both defining
+structures for storage
+storage of information
+information and providing
+manipulation of information
+information in addition
+system must ensure
+ensure the safety
+crashes or attempts
+attempts at unauthorized
+access if data
+system must avoid
+avoid possible anomalous
+results because information
+scientists have developed
+developed a large
+body of concepts
+concepts and techniques
+techniques for managing
+data these concepts
+form the focus
+book this chapter
+chapter briefly introduces
+introduces the principles
+principles of database
+database-system applications databases
+enterprise information sales
+purchase information accounting
+accounting information human
+information human resources
+information about employees
+generation of paychecks
+production of items
+items in factories
+inventories of items
+inwarehouses and stores
+orders for items
+introduction online retailers
+sales data noted
+online order tracking
+generation of recommendation
+maintenance of online
+online product evaluations
+evaluations ? banking
+banking and finance
+banking transactions credit
+transactions credit card
+credit card transactions
+purchases on credit
+cards and generation
+generation of monthly
+monthly statements finance
+information about holdings
+purchases of financial
+stocks and bonds
+storing real-time market
+real-time market data
+data to enable
+enable online trading
+trading by customers
+customers and automated
+firm ? universities
+addition to standard
+standard enterprise information
+resources and accounting
+reservations and schedule
+schedule information airlines
+geographically distributed manner
+manner ? telecommunication
+records of calls
+generating monthly bills
+balances on prepaid
+prepaid calling cards
+form an essential
+types of information
+last four decades
+grewin all enterprises
+directly with database
+interacted with databases
+credit card statements
+tellers and airline
+airline reservation agents
+agents then automated
+automated teller machines
+directly with databases
+databases phone interfaces
+interfaces to computers
+interactive voice-response systems
+users to deal
+caller could dial
+dial a number
+press phone keys
+keys to enter
+select alternative options
+flight arrival times
+register for courses
+university the internet
+1990s sharply increased
+sharply increased direct
+increased direct user
+direct user access
+access to databases
+databases organizations converted
+interfaces to databases
+databases into web
+made a variety
+variety of services
+services and information
+information available online
+online for instance
+access an online
+bookstore and browse
+browse a book
+book or music
+accessing data stored
+enter an order
+order is stored
+database.when you access
+access a bankweb
+site and retrieve
+retrieve your bank
+balance and transaction
+information is retrieved
+system.when you access
+access aweb site
+purpose of database
+database to select
+select which advertisements
+user interfaces hide
+interfaces hide details
+details of access
+accessing databases forms
+forms an essential
+today the importance
+importance of database
+database system vendors
+vendors like oracle
+largest software companies
+database systems form
+form an important
+line of microsoft
+microsoft and ibm
+database systems database
+systems database systems
+database systems arose
+arose in response
+methods of computerized
+management of commercial
+operating system files
+users to manipulate
+manipulate the information
+number of application
+programs that manipulate
+manipulate the files
+add new students
+courses ? register
+students for courses
+courses and generate
+generate class rosters
+rosters ? assign
+grades to students
+compute grade point
+grade point averages
+generate transcripts system
+transcripts system programmers
+system programmers wrote
+wrote these application
+programs to meet
+university new application
+programs are added
+decides to create
+.as a result
+creates a newdepartment
+newdepartment and creates
+creates new permanent
+information to existing
+write new application
+programs to deal
+deal with rules
+major new application
+written to handle
+handle new rules
+acquires more files
+programs this typical
+typical file-processing system
+system is supported
+conventional operating system
+system the system
+system stores permanent
+stores permanent records
+programs to extract
+files before database
+database management systems
+organizations usually stored
+systems keeping organizational
+keeping organizational information
+number of major
+introduction ? data
+redundancy and inconsistency
+create the files
+files and application
+programs may bewritten
+music and mathematics
+address and telephone
+file that consists
+consists of student
+records of students
+department this redundancy
+leads to higher
+storage and access
+cost in addition
+lead to data
+datamayno longer agree
+changed student address
+music department records
+system ? difficulty
+difficulty in accessing
+accessing data suppose
+out the names
+students who live
+area the clerk
+asks the data-processing
+department to generate
+anticipate this request
+program on hand
+hand to meet
+program to generate
+generate the list
+students the university
+obtain the list
+students and extract
+extract the needed
+programmer to write
+program both alternatives
+program is written
+trim that list
+list to include
+hours as expected
+preceding two options
+satisfactory the point
+conventional file-processing environments
+convenient and efficientmanner
+efficientmanner more responsive
+responsive data-retrieval systems
+systems are required
+required for general
+isolation because data
+data are scattered
+writing new application
+programs to retrieve
+data is difficult
+difficult ? integrity
+problems the data
+data values stored
+database must satisfy
+satisfy certain types
+types of consistency
+consistency constraints suppose
+suppose the university
+maintains an account
+records the balance
+enforce these constraints
+system by adding
+adding appropriate code
+constraints are added
+difficult to change
+change the programs
+programs to enforce
+problem is compoundedwhen
+compoundedwhen constraints involve
+involve several data
+files ? atomicity
+problems a computer
+subject to failure
+state that existed
+program to transfer
+balance of department
+system failure occurs
+department a butwas
+butwas not credited
+inconsistent database state
+essential to database
+credit and debit
+difficult to ensure
+conventional file-processing system
+system ? concurrent-access
+system and faster
+systems allow multiple
+users to update
+update the data
+largest internet retailers
+millions of accesses
+accesses per day
+data by shoppers
+interaction of concurrent
+result in inconsistent
+data consider department
+two department clerks
+department clerks debit
+debit the account
+executions may leave
+leave the budget
+executing on behalf
+reduce that value
+write the result
+two programs run
+read the value
+writes the value
+system must maintain
+maintain some form
+form of supervision
+supervision but supervision
+supervision is difficult
+difficult to provide
+provide because data
+suppose a registration
+registration program maintains
+maintains a count
+count of students
+order to enforce
+number of students
+registered.when a student
+reads the current
+stores the count
+suppose two students
+two students register
+two program executions
+students successfully registered
+case both students
+students ? security
+access to information
+information about academic
+enforcing such security
+constraints is difficult
+introduction these difficulties
+prompted the development
+development of database
+concepts and algorithms
+algorithms that enable
+enable database systems
+systems to solve
+solve the problems
+problems with file-processing
+typical data-processing application
+view of data
+data a database
+users to access
+access and modify
+modify these data
+data a major
+hides certain details
+data are stored
+stored and maintained
+maintained 1.3.1 data
+1.3.1 data abstraction
+retrieve data efficiently
+efficiency has led
+complex data structures
+structures to represent
+hide the complexity
+complexity from users
+levels of abstraction
+users ? interactions
+level the lowest
+level of abstraction
+stored the physical
+physical level describes
+level describes complex
+describes complex low-level
+complex low-level data
+low-level data structures
+structures in detail
+detail ? logical
+level the next-higher
+describes what data
+data the logical
+level thus describes
+describes the entire
+database in terms
+structures although implementation
+level may involve
+involve complex physical-level
+complex physical-level structures
+physical data independence
+data independence database
+independence database administrators
+decide what information
+abstraction ? view
+level the highest
+describes only part
+level uses simpler
+variety of information
+database many users
+database the view
+exists to simplify
+simplify their interaction
+system may provide
+provide many views
+shows the relationship
+abstraction an analogy
+concept of data
+types in programming
+languages may clarify
+clarify the distinction
+distinction among levels
+abstraction many high-level
+high-level programming thesumit67.blogspot.com
+logical level physical
+level physical level
+level ? view
+view n view
+view level figure
+levels of data
+data abstraction languages
+abstraction languages support
+support the notion
+describe a record
+instructor = record
+type called instructor
+fields each field
+including ? department
+credits ? student
+block of consecutive
+consecutive storage locations
+locations the compiler
+hides this level
+level of detail
+detail from programmers
+database system hides
+lowest-level storage details
+details from database
+database programmers database
+programmers database administrators
+data 1the actual
+1the actual type
+actual type declaration
+type declaration depends
+struct declarations java
+record is described
+previous code segment
+types is defined
+programming language work
+administrators usually work
+set of application
+database are defined
+database user sees
+views in addition
+addition to hiding
+views also provide
+provide a security
+mechanism to prevent
+users from accessing
+accessing certain parts
+university registrar office
+information about students
+information about salaries
+salaries of instructors
+instructors 1.3.2 instances
+instances and schemas
+schemas databases change
+information is inserted
+inserted and deleted
+deleted the collection
+collection of information
+database schema schemas
+schemas are changed
+concept of database
+schemas and instances
+understood by analogy
+programming language.adatabase schema
+language.adatabase schema corresponds
+program each variable
+instant the values
+database schema database
+schema database systems
+abstraction the physical
+physical schema describes
+describes the database
+logical schema describes
+level a database
+describe different views
+effect on application
+programmers construct applications
+schema the physical
+schema is hidden
+beneath the logical
+easily without affecting
+affecting application programs
+application programs application
+programs application programs
+exhibit physical data
+languages for describing
+schemas after introducing
+introducing the notion
+notion of data
+section 1.3.3 data
+1.3.3 data models
+data models underlying
+underlying the structure
+collection of conceptual
+tools for describing
+constraints a data
+describe the design
+view levels thesumit67.blogspot.com
+text the data
+four different categories
+model the relational
+collection of tables
+tables to represent
+represent both data
+data each table
+table has multiple
+unique name tables
+relations the relational
+record-based model record-based
+model record-based models
+database is structured
+structured in fixed-format
+types each table
+table contains records
+type each record
+record type defines
+defines a fixed
+number of fields
+attributes the columns
+type the relational
+relational data model
+widely used data
+majority of current
+current database systems
+systems are based
+relational model chapters
+cover the relational
+model in detail
+detail ? entity-relationship
+model the entity-relationship
+collection of basic
+objects an entity
+objects the entity-relationship
+detail ? object-based
+object-based data model.object-oriented
+data model.object-oriented programming
+dominant software-development methodology
+methodology this led
+object-oriented data model
+extending the e-r
+model with notions
+notions of encapsulation
+identity the object-relational
+object-relational data model
+data model combines
+model combines features
+model and relational
+data model chapter
+examines the object-relational
+model ? semistructured
+semistructured data model
+model the semistructured
+data model permits
+permits the specification
+specification of data
+data where individual
+individual data items
+sets of attributes
+data models mentioned
+models mentioned earlier
+set of attributes
+attributes the extensible
+extensible markup language
+represent semistructured data
+semistructured data chapter
+network data model
+hierarchical data model
+data model preceded
+preceded the relational
+model these modelswere
+complicated the task
+task of modeling
+online in appendices
+languages a database
+language to express
+express database queries
+queries and upthesumit67
+dates in practice
+data-definition and data-manipulation
+two separate languages
+simply form parts
+single database language
+widely used sql
+language 1.4.1 data-manipulation
+1.4.1 data-manipulation language
+language a data-manipulation
+language that enables
+access or manipulate
+data as organized
+model the types
+types of access
+retrieval of information
+database ? insertion
+database ? deletion
+deletion of information
+database ? modification
+modification of information
+basically two types
+procedural dmls require
+require a user
+data are needed
+data ? declarative
+data declarative dmls
+easier to learn
+out an efficient
+means of accessing
+data a query
+requesting the retrieval
+information the portion
+dml that involves
+involves information retrieval
+terms query language
+language and data-manipulation
+data-manipulation language synonymously
+number of database
+database query languages
+commercially or experimentally.we
+widely used query
+languages in chapter
+discussed in section
+defining or structuring
+access to data
+data at higher
+humans to interact
+system the query
+query processor component
+study in chapters
+translates dml queries
+queries into sequences
+sequences of actions
+system 1.4.2 data-definition
+1.4.2 data-definition language
+set of definitions
+structure and access
+set of statements
+type of ddl
+storage and definition
+language these statements
+define the implementation
+users the data
+satisfy certain consistency
+negative the ddl
+ddl provides facilities
+constraints the database
+database system checks
+checks these constraints
+database is updated
+updated in general
+arbitrary predicate pertaining
+costly to test
+database systems implement
+systems implement integrity
+implement integrity constraints
+testedwith minimal overhead
+constraints a domain
+declaring an attribute
+form of integrity
+item is entered
+database ? referential
+value that appears
+attributes also appears
+dept name value
+dept name attribute
+department relation database
+relation database modifications
+violations of referential
+integrity.when a referential-integrity
+constraint is violated
+reject the action
+action that caused
+caused the violation
+violation ? assertions
+assertions an assertion
+satisfy domain constraints
+constraints and referential-integrity
+constraints are special
+forms of assertions
+offered every semester
+assertion is created
+assertion is valid
+database is allowed
+violated ? authorization
+type of access
+database these differentiations
+differentiations are expressed
+expressed in terms
+terms of authorization
+data ; insert
+modification of existing
+data ; update
+deletion of data
+assign the user
+types of authorization
+introduction the ddl
+input some instructions
+generates some output
+output the output
+dictionary,which contains metadata
+data about data
+data the data
+dictionary is considered
+type of table
+accessed and updated
+database system consults
+consults the data
+dictionary before reading
+reading or modifying
+modifying actual data
+databases a relational
+database is based
+includes a dml
+dml and ddl
+ddl in chapter
+present a gentle
+model most commercial
+commercial relational database
+relational database systems
+database systems employ
+employ the sql
+cover in great
+detail in chapters
+discuss other influential
+languages 1.5.1 tables
+tables each table
+unique name figure
+presents a sample
+sample relational database
+relational database comprising
+comprising two tables
+details of university
+departments the first
+instructor named einstein
+department is located
+departments and instructors
+text to illustrate
+concepts a larger
+online the relational
+stored in files
+files for instance
+records the relational
+relational model hides
+hides such low-level
+low-level implementation details
+developers and users
+unnecessarily duplicated information
+suppose we store
+store the department
+dept name salary
+katz comp sci
+kim elec eng
+srinivasan comp sci
+brandt comp sci
+instructor table dept
+dept name building
+building budget comp
+budget comp sci
+comp sci taylor
+elec eng taylor
+department table figure
+department in chapter
+distinguish good schema
+good schema designs
+designs from bad
+bad schema designs
+designs 1.5.2 data-manipulation
+1.5.2 data-manipulation language
+language the sql
+sql query language
+language is nonprocedural
+nonprocedural a query
+takes as input
+input several tables
+returns a single
+query that finds
+finds the names
+instructor.name from instructor
+instructor where instructor.dept
+rows fromthe table
+fromthe table instructor
+historymust be retrieved
+result of executing
+executing this query
+single column thesumit67.blogspot.com
+set of rows
+instructor whose dept
+query is run
+table in figure
+result will consist
+queries may involve
+table for instance
+finds the instructor
+department with budget
+budget of greater
+95,000 select instructor.id
+department where instructor.dept
+query were run
+tables in figure
+system would find
+departments with budget
+95,000 ? computer
+science and finance
+1.5.3 data-definition language
+data-definition language sql
+sql ddl statement
+ddl statement defines
+defines the department
+create table department
+dept name char
+ddl statement creates
+creates the department
+specific data type
+it.we discuss data
+discuss data types
+detail in chapter
+ddl statement updates
+updates the data
+metadata 1.5.4 database
+1.5.4 database access
+access from application
+application programs sql
+universal turing machine
+general-purpose programming language
+input from users
+output to displays
+network such computations
+computations and actions
+embedded sql queries
+queries that access
+access the data
+database application programs
+programs are programs
+system are programs
+students to register
+calculate student gpa
+generate payroll checks
+access the database
+providing an application
+application program interface
+set of procedures
+database and retrieve
+retrieve the results
+results the open
+open database connectivity
+commonly used application
+program interface standard
+standard the java
+java database connectivity
+extending the host
+host language syntax
+syntax to embed
+embed dml calls
+host language program
+special character prefaces
+character prefaces dml
+prefaces dml calls
+converts the dml
+statements to normal
+normal procedure calls
+database design database
+design database systems
+information these large
+exist in isolation
+enterprise whose end
+device or service
+supporting role database
+role database design
+design mainly involves
+involves the design
+schema the design
+complete database application
+database application environment
+environment that meets
+enterprise being modeled
+modeled requires attention
+set of issues
+writing of database
+design of database
+database schemas chapter
+process of application
+design 1.6.1 design
+1.6.1 design process
+process a high-level
+high-level data model
+designerwith a conceptual
+structured to fulfill
+fulfill these requirements
+requirements the initial
+phase of database
+fully the data
+prospective database users
+users the database
+extensively with domain
+experts and users
+users to carry
+out this task
+task the outcome
+specification of user
+chooses a data
+applying the concepts
+translates these requirements
+database the schema
+enterprise the designer
+reviews the schema
+schema to confirm
+examine the design
+design to remove
+remove any redundant
+features the focus
+describing the data
+physical storage details
+details in terms
+conceptual-design process involves
+process involves decisions
+group these attributes
+attributes to form
+basically a business
+principally two ways
+ways to tackle
+tackle the problem
+problem the first
+employ a set
+set of algorithms
+input the set
+attributes and generates
+generates a set
+set of tables
+fully developed conceptual
+developed conceptual schema
+specification of functional
+describe the kinds
+kinds of operations
+data example operations
+operations include modifying
+modifying or updating
+retrieving specific data
+stage of conceptual
+designer can review
+review the schema
+schema to ensure
+ensure it meets
+meets functional requirements
+requirements the process
+process of moving
+abstract data model
+two final design
+final design phases
+maps the high-level
+high-level conceptual schema
+implementation data model
+resulting system-specific database
+system-specific database schema
+subsequent physical-design phase
+include the form
+form of file
+internal storage structures
+discussed in chapter
+1.6.2 database design
+organization to illustrate
+illustrate the design
+designed the initial
+based on interviews
+organization the description
+description that arises
+design phase serves
+university is organized
+organized into departments
+departments each department
+department is identified
+list of courses
+courses it offers
+prerequisites ? instructors
+instructors are identified
+salary ? students
+students are identified
+total credit hours
+hours the student
+maintains a list
+list of classrooms
+taught each section
+section is identified
+list of teaching
+sections the instructor
+instructor is teaching
+student course registrations
+real university database
+understand conceptual ideas
+lost in details
+1.6.3 the entity-relationship
+considered as entities
+entities are described
+budget may describe
+department entity set
+salary may describe
+describe an instructor
+entity.2 the extra
+identify an instructor
+unique instructor identifier
+number the u.s
+u.s government assigns
+unique identifier arelationship
+member relationship associates
+associates an instructor
+department the set
+type are termed
+termed an entity
+set and relationship
+draw these diagrams
+unified modeling language
+based on uml
+diagram is represented
+2the astute reader
+reader will notice
+dropped the attribute
+describing the instructor
+instructor entity set
+error in chapter
+provide a detailed
+salary department dept_name
+department dept_name building
+dept_name building budget
+building budget member
+budget member figure
+sample e-r diagram
+diagram ? entity
+sets are represented
+connecting a pair
+pair of related
+related entity sets
+inside the diamond
+university database consisting
+consisting of instructors
+diagram the e-r
+two entity sets
+instructor and department
+attributes as outlined
+earlier the diagram
+diagram also shows
+shows a relationship
+member between instructor
+department in addition
+addition to entities
+entities and relationships
+e-r model represents
+represents certain constraints
+database must conform
+conform one important
+constraint is mapping
+express the number
+number of entities
+model can express
+express that constraint
+constraint the entity-relationship
+detail 1.6.4 normalization
+normalization another method
+method for designing
+designing a relational
+normalization the goal
+generate a set
+set of relation
+information without unnecessary
+retrieve information easily
+easily the approach
+form to determine
+desirable normal forms
+cover in section
+bad database design
+repetition of information
+information ? inability
+inability to represent
+represent certain information
+discuss these problems
+modified database design
+university example suppose
+two separate tables
+separate tables instructor
+combines the information
+shown in figure
+rows in faculty
+building and budget
+budget the repetition
+design is undesirable
+undesirable repeating information
+repeating information wastes
+information wastes space
+updating the database
+change the budget
+46,800 this change
+rows ; contrast
+requires an update
+perform the update
+department is updated
+database will show
+two different budget
+shift our attention
+information ? suppose
+alternative design above,we
+directly the information
+faculty table require
+table require values
+salary this means
+newly created department
+instructor is hired
+department one solution
+introduce null values
+values the null
+value does exist
+value actually exists
+values are difficult
+difficult to handle
+deal with null
+itemof department information
+delete this information
+situation is undesirable
+original database design
+resorting to null
+values an extensive
+theory of normalization
+developed that helps
+helps formally define
+define what database
+designs are undesirable
+obtain desirable designs
+desirable designs chapter
+covers relational-database design
+storage and querying
+querying a database
+system is partitioned
+partitioned into modules
+modules that deal
+system the functional
+query processor components
+components the storage
+manager is important
+important because databases
+databases typically require
+require a large
+amount of storage
+storage space corporate
+space corporate databases
+corporate databases range
+range in size
+size from hundreds
+hundreds of gigabytes
+terabytes of data
+data a gigabyte
+memory of computers
+information is stored
+stored on disks
+data are moved
+moved between disk
+storage and main
+memory as needed
+movement of data
+disk is slow
+central processing unit
+database system structure
+structure the data
+data between disk
+disk and main
+memory the query
+processor is important
+helps the database
+system to simplify
+simplify and facilitate
+data the query
+processor allows database
+users to obtain
+obtain good performance
+burdened with understanding
+understanding the physical-level
+system to translate
+updates and queries
+sequence of operations
+level 1.7.1 storage
+1.7.1 storage manager
+manager the storage
+low-level data stored
+programs and queries
+system the storage
+manager is responsible
+manager the raw
+file system provided
+storage manager translates
+statements into low-level
+low-level file-system commands
+file-system commands thesumit67.blogspot.com
+responsible for storing
+database the storage
+storage manager components
+manager components include
+authorization and integrity
+satisfaction of integrity
+constraints and checks
+checks the authority
+authority of users
+data ? transaction
+state despite system
+concurrent transaction executions
+transaction executions proceed
+proceed without conflicting
+conflicting ? file
+manages the allocation
+allocation of space
+space on disk
+represent information stored
+stored on disk
+disk ? buffer
+manager,which is responsible
+responsible for fetching
+data from disk
+storage into main
+deciding what data
+data to cache
+cache in main
+memory the buffer
+enables the database
+database to handle
+handle data sizes
+size of main
+memory the storage
+storage manager implements
+implements several data
+structures as part
+physical system implementation
+store the database
+database ? indices
+provide fast access
+index provides pointers
+index to find
+find the instructor
+alternative to indexing
+cases we discuss
+discuss storage media
+management in chapter
+methods of accessing
+efficiently via indexing
+indexing or hashing
+hashing are discussed
+1.7.2 the query
+processor the query
+processor components include
+ddl interpreter,which interprets
+interpreter,which interprets ddl
+interprets ddl statements
+statements and records
+records the definitions
+dictionary ? dml
+dml compiler,which translates
+compiler,which translates dml
+translates dml statements
+evaluation plan consisting
+consisting of low-level
+query evaluation engine
+evaluation engine understands
+engine understands thesumit67.blogspot.com
+introduction a query
+number of alternative
+alternative evaluation plans
+result the dmlcompiler
+dmlcompiler also performs
+performs query optimization
+picks the lowest
+lowest cost evaluation
+cost evaluation plan
+alternatives ? query
+executes low-level instructions
+low-level instructions generated
+dml compiler query
+compiler query evaluation
+evaluation is covered
+covered in chapter
+chapter 12,while themethods
+bywhich the query
+query optimizer chooses
+strategies are discussed
+form a single
+single logical unit
+unit of work
+transfer must happen
+atomicity in addition
+funds transfer preserve
+preserve the consistency
+balances of aand
+preserved this correctness
+balances of accounts
+possibility of system
+failure this persistence
+durability a transaction
+collection of operations
+operations that performs
+performs a single
+single logical function
+application each transaction
+atomicity and consistency
+require that transactions
+violate any databaseconsistency
+database was consistent
+transaction successfully terminates
+lead to difficulty
+responsibility to define
+preserves the consistency
+transaction to transfer
+account of department
+two separate programs
+otherwill indeed preserve
+transform the database
+ensuring the atomicity
+atomicity and durability
+absence of failures
+atomicity is achieved
+types of failure
+complete its execution
+ensure the atomicity
+transaction in question
+question started executing
+executing the database
+perform failure recovery
+detect system failures
+failures and restore
+restore the database
+update the database
+consistency of data
+longer be preserved
+transaction is correct
+manager to control
+control the interaction
+ensure the consistency
+database the transaction
+transaction manager consists
+manager the basic
+concepts of transaction
+processing are covered
+management of concurrent
+transactions is covered
+covers failure recovery
+recovery in detail
+detail the concept
+broadly in database
+systems and applications
+applications in telecommunication
+management of long-duration
+design or administrative
+workflows these broader
+concept are discussed
+position to provide
+provide a single
+underlying computer system
+database system runs
+system runs database
+runs database systems
+server machine executes
+machine executes work
+work on behalf
+behalf of multiple
+multiple client machines
+client machines database
+machines database systems
+designed to exploit
+exploit parallel computer
+parallel computer architectures
+computer architectures distributed
+architectures distributed databases
+distributed databases span
+databases span multiple
+multiple geographically separated
+geographically separated machines
+machines in chapter
+cover the general
+structure of modern
+modern computer systems
+computer systems chapter
+implemented to exploit
+exploit parallel processing
+parallel processing chapter
+presents a number
+number of issues
+issues that arise
+issue the issues
+atomicity of transactions
+transactions that execute
+execute at multiple
+perform concurrency control
+provide high availability
+presence of failures
+failures distributed query
+distributed query processing
+processing and directory
+chapter most users
+database system today
+differentiate between client
+remote database users
+database users work
+system runs thesumit67.blogspot.com
+introduction database applications
+invokes database system
+database system functionality
+machine through naive
+query processor storage
+processor storage manager
+storage manager disk
+manager disk storage
+disk storage indices
+storage indices data
+indices data statistical
+data statistical data
+statistical data data
+data data dictionary
+data dictionary application
+dictionary application programmers
+application programmers application
+programmers application interfaces
+application interfaces application
+interfaces application program
+application program object
+program object code
+object code compiler
+compiler and linker
+linker buffer manager
+buffer manager file
+manager file manager
+file manager authorization
+integrity manager transaction
+manager transaction manager
+transaction manager dml
+manager dml compiler
+compiler and organizer
+organizer query evaluation
+evaluation engine dml
+engine dml queries
+dml queries ddl
+queries ddl interpreter
+ddl interpreter application
+interpreter application programs
+application programs query
+programs query tools
+query tools administration
+tools administration tools
+administration tools sophisticated
+tools sophisticated users
+administrators use write
+system structure thesumit67.blogspot.com
+mining and information
+user application database
+application database system
+database system network
+two-tier architecture client
+architecture client server
+client server user
+server user application
+user application client
+application client database
+client database system
+system network application
+network application server
+three-tier architecture figure
+two-tier and three-tier
+three-tier architectures query
+architectures query language
+query language statements
+language statements application
+statements application program
+program interface standards
+standards like odbc
+odbc and jdbc
+server in contrast
+client machine acts
+direct database calls
+client end communicates
+interface the application
+server in turn
+system to access
+data the business
+actions to carry
+distributed across multiple
+multiple clients three-tier
+clients three-tier applications
+applications that run
+retrieval the term
+term data mining
+data mining refers
+semiautomatically analyzing large
+analyzing large databases
+databases to find
+find useful patterns
+patterns like knowledge
+discovery in artificial
+data mining attempts
+attempts to discover
+rules and patterns
+patterns from data
+data mining differs
+differs from machine
+learning and statistics
+deals with large
+volumes of data
+primarily on disk
+data mining deals
+discovery in databases
+types of knowledge
+set of rules
+young womenwith annual
+womenwith annual incomes
+annual incomes greater
+people to buy
+buy small sports
+small sports cars
+knowledge are represented
+represented by equations
+relating different variables
+mechanisms for predicting
+types of patterns
+find different types
+patterns in chapter
+examples of patterns
+component to data
+consisting of preprocessing
+postprocessing of discovered
+patterns to find
+type of pattern
+needed to pick
+pick useful types
+process in real
+description we concentrate
+aspect of mining
+businesses have begun
+begun to exploit
+exploit the burgeoning
+burgeoning data online
+online to make
+make better decisions
+items to stock
+customers to increase
+sql several techniques
+techniques and tools
+support several tools
+tools for data
+analysis allow analysts
+analysts to view
+ways other analysis
+analysis tools precompute
+tools precompute summaries
+amounts of data
+order to give
+give fast responses
+responses to queries
+queries the sql
+standard contains additional
+constructs to support
+support data analysis
+data analysis large
+analysis large companies
+companies have diverse
+sources of data
+making business decisions
+decisions to execute
+companies have built
+built data warehouses
+data warehouses data
+warehouses data warehouses
+warehouses gather data
+data from multiple
+provide the user
+user a single
+single uniform interface
+interface to data
+data textual data
+grown explosively textual
+explosively textual data
+data is unstructured
+rigidly structured data
+data in relational
+relational databases querying
+querying of unstructured
+unstructured textual data
+data is referred
+information retrieval information
+retrieval information retrieval
+information retrieval systems
+common with database
+storage and retrieval
+retrieval of data
+data on secondary
+field of information
+concentrating on issues
+based on keywords
+relevance of documents
+indexing of documents
+documents in chapters
+cover decision support
+including online analytical
+online analytical processing
+databases several application
+areas for database
+systems are limited
+researchers have developed
+developed several datamodels
+datamodels to deal
+including object-based data
+object-based data models
+models and semistructured
+semistructured data models
+data models thesumit67.blogspot.com
+users and administrators
+1.11.1 object-based data
+data models object-oriented
+models object-oriented programming
+object identity inheritance
+methods to provide
+provide an interface
+interface to objects
+concepts of object-oriented
+applications in data
+modeling the object-oriented
+model also supports
+supports a rich
+rich type system
+structured and collection
+database systems based
+model were developed
+developed the major
+major database vendors
+vendors presently support
+support the object-relational
+model that combines
+datamodel and relational
+model it extends
+extends the traditional
+traditional relational model
+variety of features
+object orientation chapter
+model 1.11.2 semistructured
+1.11.2 semistructured data
+data models semistructured
+models semistructured data
+data models permit
+permit the specification
+attributes the xml
+adding markup information
+information to text
+data exchange xml
+deal of flexibility
+flexibility in structuring
+structuring of data
+kinds of nontraditional
+nontraditional data chapter
+describes the xml
+ways of expressing
+queries on data
+represented in xml
+transforming xml data
+administrators a primary
+store new information
+people who work
+categorized as database
+users or database
+administrators 1.12.1 database
+1.12.1 database users
+users and user
+four different types
+types of database-system
+expect to interact
+system different types
+types of user
+types of users
+users are unsophisticated
+users who interact
+system by invoking
+instructor to thesumit67.blogspot.com
+department a invokes
+invokes a program
+hire this program
+asks the clerk
+salary the typical
+typical user interface
+user can fill
+simply read reports
+read reports generated
+class registration period
+wishes to register
+web application program
+program that runs
+server the application
+application first verifies
+verifies the identity
+access a form
+enters the desired
+information the form
+adds the student
+database ? application
+programmers are computer
+professionalswho write application
+write application programs
+programs application programmers
+programmers can choose
+choose frommany tools
+tools to develop
+develop user interfaces
+user interfaces rapid
+interfaces rapid application
+rapid application development
+tools are tools
+tools that enable
+enable an application
+programmer to construct
+reportswith minimal programming
+minimal programming effort
+effort ? sophisticated
+sophisticated users interact
+system without writing
+form their requests
+database query language
+data analysis software
+analysis software analysts
+analysts who submit
+queries to explore
+category ? specialized
+users are sophisticated
+write specialized database
+specialized database applications
+traditional data-processing framework
+applications are computer-aided
+computer-aided design systems
+knowledgebase and expert
+systems that store
+data with complex
+complex data types
+data and audio
+environment-modeling systems chapter
+applications 1.12.2 database
+1.12.2 database administrator
+dbmss is tohave
+tohave central control
+programs that access
+data a person
+definition the dba
+creates the original
+original database schema
+schema by executing
+executing a set
+set of data
+data definition statements
+ddl ? storage
+structure and access-method
+definition ? schema
+schema and physical-organization
+physical-organization modification thedbacarries
+schema and physical
+organization to reflect
+reflect the changing
+alter the physical
+organization to improve
+improve performance thesumit67.blogspot.com
+history of database
+granting of authorization
+authorization for data
+access by granting
+granting different types
+administrator can regulate
+regulate which parts
+database various users
+users can access
+access the authorization
+special system structure
+attempts to access
+system ? routine
+routine maintenance examples
+routine maintenance activities
+loss of data
+data in case
+case of disasters
+free disk space
+upgrading disk space
+space as required
+required monitoring jobs
+monitoring jobs running
+database and ensuring
+ensuring that performance
+expensive tasks submitted
+database systems information
+systems information processing
+information processing drives
+drives the growth
+growth of computers
+days of commercial
+computers in fact
+automation of data
+data processing tasks
+processing tasks predates
+tasks predates computers
+predates computers punched
+computers punched cards
+invented by herman
+century to record
+record u.s census
+u.s census data
+process the cards
+cards and tabulate
+tabulate results punched
+results punched cards
+means of entering
+data into computers
+techniques for data
+storage and processing
+processing have evolved
+tapes were developed
+developed for data
+data storage data
+storage data processing
+payroll were automated
+stored on tapes
+processing of data
+consisted of reading
+tapes and writing
+input from punched
+punched card decks
+output to printers
+raises were processed
+processed by entering
+entering the raises
+raises on punched
+cards and reading
+reading the punched
+punched card deck
+deck in synchronization
+tape containing themaster
+themaster salary details
+details the records
+order the salary
+master tape tapes
+sizeswere much larger
+larger than main
+data processing programs
+programs were forced
+forced to process
+reading and merging
+merging data fromtapes
+fromtapes and card
+decks ? late
+late 1960s changed
+changed the scenario
+scenario for data
+hard disks allowed
+disks allowed direct
+allowed direct access
+data the position
+position of data
+data on disk
+disk was immaterial
+location on disk
+tens of milliseconds
+freed from thesumit67.blogspot.com
+introduction the tyranny
+tyranny of sequentiality.with
+network and hierarchical
+created that allowed
+allowed data structures
+lists and trees
+programmers could construct
+construct and manipulate
+manipulate these data
+structures a landmark
+paper by codd
+defined the relational
+model and nonprocedural
+ways of querying
+relational databaseswere born
+born the simplicity
+possibility of hiding
+hiding implementation details
+programmer were enticing
+enticing indeed codd
+codd later won
+won the prestigious
+association of computing
+computing machinery turing
+machinery turing award
+perceived performance disadvantages
+disadvantages ; relational
+databases could notmatch
+notmatch the performance
+performance of existing
+databases that changed
+changed with system
+project at ibm
+research that developed
+efficient relational database
+relational database system
+database system excellent
+system excellent overviews
+overviews of system
+provided by astrahan
+fully functional system
+system r prototype
+led to ibm
+first relational database
+relational database product
+university of california
+california at berkeley
+berkeley it led
+initial commercial relational
+played a major
+role in advancing
+techniques for efficient
+processing of declarative
+hierarchical database systems
+area of performance
+performance relational databases
+eventually replaced network
+databases ; programmers
+databases were forced
+forced to deal
+code their queries
+efficiency in mind
+mind when designing
+designing their programs
+involved a lot
+lot of effort
+effort in contrast
+tasks are carried
+leaving the programmer
+free to work
+level since attaining
+model has reigned
+supreme among data
+research on parallel
+parallel and distributed
+work on object-oriented
+language was designed
+primarily for decision
+decision support applications
+mainstay of databases
+1980s was transaction-processing
+update-intensive decision support
+support and querying
+major application area
+area for databases
+tools for analyzing
+analyzing large amounts
+data saw large
+growths in usage
+usage many database
+database vendors introduced
+vendors introduced parallel
+introduced parallel database
+parallel database products
+period database vendors
+vendors also began
+began to add
+add object-relational support
+database-management system
+interrelated data
+information relevant
+primary goal
+retrieve database
+database information
+efficient database
+database systems
+large bodies
+information management
+data involves
+defining structures
+providing mechanisms
+database system
+information stored
+system crashes
+unauthorized access
+anomalous results
+computer scientists
+large body
+managing data
+techniques form
+database-system applications
+applications databases
+representative applications
+enterprise information
+information sales
+purchase information
+information accounting
+account balances
+accounting information
+information human
+human resources
+payroll taxes
+paychecks manufacturing
+supply chain
+tracking production
+items inwarehouses
+introduction online
+online retailers
+sales data
+data noted
+online order
+order tracking
+recommendation lists
+online product
+product evaluations
+finance banking
+customer information
+banking transactions
+transactions credit
+credit card
+card transactions
+credit cards
+monthly statements
+statements finance
+storing information
+financial instruments
+real-time market
+market data
+enable online
+online trading
+automated trading
+student information
+standard enterprise
+schedule information
+information airlines
+distributed manner
+keeping records
+calls made
+generating monthly
+monthly bills
+maintaining balances
+prepaid calling
+calling cards
+communication networks
+list illustrates
+databases form
+essential part
+enterprise today
+twentieth century
+databases grewin
+early days
+people interacted
+printed reports
+card statements
+bank tellers
+airline reservation
+reservation agents
+automated teller
+teller machines
+users interact
+databases phone
+phone interfaces
+interactive voice-response
+voice-response systems
+allowed users
+press phone
+phone keys
+enter information
+alternative options
+find flight
+internet revolution
+direct user
+user access
+databases organizations
+organizations converted
+web interfaces
+online bookstore
+music collection
+accessing data
+data stored
+order online
+bankweb site
+bank balance
+transaction information
+access aweb
+aweb site
+informathesumit67 blogspot.com
+web accesses
+user interfaces
+interfaces hide
+hide details
+accessing databases
+databases forms
+life today
+system vendors
+largest software
+software companies
+systems form
+important part
+product line
+systems database
+systems arose
+early methods
+computerized management
+commercial data
+university organization
+operating system
+system files
+application programs
+including programs
+register students
+generate class
+class rosters
+assign grades
+compute grade
+grade point
+point averages
+generate transcripts
+transcripts system
+system programmers
+programmers wrote
+university decides
+computer science
+university creates
+permanent files
+adds information
+existing files
+record information
+degree requirements
+system acquires
+typical file-processing
+file-processing system
+conventional operating
+system stores
+stores permanent
+permanent records
+extract records
+add records
+database management
+management systems
+stored information
+systems keeping
+organizational information
+major disadvantages
+data redundancy
+programmers create
+long period
+programming languages
+double major
+telephone number
+student records
+music department
+mathematics department
+redundancy leads
+higher storage
+access cost
+data inconsistency
+datamayno longer
+longer agree
+changed student
+student address
+department records
+data suppose
+university clerks
+postal-code area
+clerk asks
+data-processing department
+original system
+application program
+university clerk
+needed information
+unsatisfactory suppose
+credit hours
+conventional file-processing
+file-processing environments
+needed data
+responsive data-retrieval
+data-retrieval systems
+data isolation
+integrity problems
+data values
+consistency constraints
+constraints suppose
+university maintains
+balance amount
+account suppose
+university requires
+account balance
+developers enforce
+compoundedwhen constraints
+constraints involve
+data items
+atomicity problems
+computer system
+failure occurs
+consistent state
+system failure
+inconsistent database
+database state
+database consistency
+debit occur
+funds transfer
+ensure atomicity
+concurrent-access anomalies
+faster response
+multiple users
+data simultaneously
+largest internet
+internet retailers
+concurrent updates
+inconsistent data
+department clerks
+clerks debit
+concurrent executions
+state suppose
+programs executing
+withdrawal read
+amount beingwithdrawn
+result back
+programs run
+correct value
+coordinated previously
+registration program
+program maintains
+students registered
+enforce limits
+student registers
+program reads
+current count
+database suppose
+program executions
+incorrect increase
+registration limit
+security problems
+payroll personnel
+financial information
+academic records
+hoc manner
+security constraints
+difficult thesumit67.blogspot.com
+enable database
+file-processing systems
+typical data-processing
+data-processing application
+major purpose
+provide users
+abstract view
+system hides
+data abstraction
+retrieve data
+data efficiently
+led designers
+complex data
+data structures
+represent data
+database-system users
+computer trained
+developers hide
+simplify users
+physical level
+lowest level
+abstraction describes
+level describes
+complex low-level
+low-level data
+logical level
+next-higher level
+relationships exist
+entire database
+small number
+simple structures
+complex physical-level
+physical-level structures
+physical data
+data independence
+independence database
+database administrators
+view level
+highest level
+simpler structures
+complexity remains
+large database
+abstraction exists
+database figure
+data types
+high-level programming
+programming thesumit67.blogspot.com
+level figure
+abstraction languages
+languages support
+structured type
+type instructor
+code defines
+record type
+record types
+student record
+consecutive storage
+storage locations
+compiler hides
+lowest-level storage
+storage details
+database programmers
+programmers database
+physical organization
+actual type
+type declaration
+declaration depends
+struct declarations
+declarations java
+simple class
+effect thesumit67.blogspot.com
+type definition
+previous code
+code segment
+programming language
+language work
+computer users
+database user
+user sees
+hiding details
+security mechanism
+prevent users
+university registrar
+registrar office
+access information
+schemas databases
+databases change
+database schema
+schema schemas
+database schemas
+program written
+programming language.adatabase
+language.adatabase schema
+schema corresponds
+variable declarations
+type definitions
+schema database
+physical schema
+schema describes
+database design
+logical schema
+programmers construct
+construct applications
+hidden beneath
+affecting application
+programs application
+study languages
+describing schemas
+data models
+models underlying
+data model
+conceptual tools
+describing data
+data relationships
+data semantics
+view levels
+levels thesumit67.blogspot.com
+database languages
+relational model
+multiple columns
+record-based model
+record-based models
+fixed-format records
+type defines
+fixed number
+table correspond
+relational data
+vast majority
+current database
+model chapters
+entity-relationship model
+basic objects
+real world
+object-based data
+model.object-oriented programming
+dominant software-development
+software-development methodology
+object-oriented data
+e-r model
+object identity
+object-relational data
+model combines
+combines features
+model chapter
+semistructured data
+model permits
+individual data
+models mentioned
+data item
+extensible markup
+markup language
+data chapter
+network data
+hierarchical data
+model preceded
+underlying implementation
+modeling data
+database code
+outlined online
+interested readers
+data-definition language
+data-manipulation language
+express database
+database queries
+upthesumit67 blogspot.com
+introduction dates
+data-manipulation languages
+separate languages
+simply form
+form parts
+single database
+database language
+sql language
+enables users
+manipulate data
+procedural dmls
+dmls require
+declarative dmls
+nonprocedural dmls
+efficient means
+statement requesting
+involves information
+information retrieval
+query language
+common practice
+terms query
+language synonymously
+database query
+query languages
+experimentally.we study
+structuring data
+manipulating data
+define algorithms
+efficient access
+higher levels
+emphasize ease
+query processor
+processor component
+translates dml
+dml queries
+definitions expressed
+special language
+additional properties
+data thesumit67.blogspot.com
+storage structure
+access methods
+special type
+data storage
+definition language
+statements define
+implementation details
+system checks
+arbitrary predicate
+predicate pertaining
+arbitrary predicates
+systems implement
+implement integrity
+integrity constraints
+testedwith minimal
+minimal overhead
+domain constraints
+integer types
+character types
+domain acts
+elementary form
+integrity constraint
+referential integrity
+department listed
+department relation
+relation database
+database modifications
+referential integrity.when
+referential-integrity constraint
+normal procedure
+satisfy domain
+referential-integrity constraints
+special forms
+courses offered
+system tests
+future modification
+read authorization
+insert authorization
+existing data
+update authorization
+delete authorization
+authorization thesumit67.blogspot.com
+data dictionary,which
+regular user
+system consults
+actual data
+relational databases
+relational database
+gentle introduction
+commercial relational
+systems employ
+great detail
+influential languages
+database comprising
+shows details
+university instructors
+university departments
+first table
+instructor table
+instructor named
+named einstein
+physics department
+annual salary
+biology department
+watson building
+real-world university
+small tables
+illustrate concepts
+special character
+new-line character
+delimit records
+model hides
+low-level implementation
+database developers
+create schemas
+duplicated information
+department budget
+instructor record
+einstein physics
+katz comp
+comp sci
+kim elec
+elec eng
+crick biology
+srinivasan comp
+califieri history
+brandt comp
+mozart music
+gold physics
+singh finance
+table dept
+building budget
+budget comp
+sci taylor
+biology watson
+eng taylor
+music packard
+finance painter
+history painter
+physics watson
+department table
+table figure
+good schema
+schema designs
+bad schema
+sql query
+query takes
+single table
+history department
+select instructor.name
+query specifies
+table instructor
+single column
+column thesumit67.blogspot.com
+introduction labeled
+califieri queries
+involve information
+query finds
+language sql
+rich ddl
+define tables
+sql ddl
+ddl statement
+statement defines
+create table
+table department
+building char
+statement creates
+specific data
+data type
+it.we discuss
+discuss data
+statement updates
+database access
+programs sql
+universal turing
+turing machine
+general-purpose programming
+sql sql
+support actions
+host language
+embedded sql
+sql queries
+database application
+fashion thesumit67.blogspot.com
+university system
+calculate student
+student gpa
+generate payroll
+payroll checks
+dml statements
+program interface
+send dml
+ddl statements
+open database
+database connectivity
+interface standard
+java database
+java language
+language syntax
+embed dml
+dml calls
+language program
+character prefaces
+prefaces dml
+dml precompiler
+procedure calls
+design database
+end product
+database plays
+supporting role
+role database
+complete database
+application environment
+modeled requires
+requires attention
+broader set
+schemas chapter
+application design
+design process
+high-level data
+database designerwith
+conceptual framework
+data requirements
+database users
+initial phase
+prospective database
+database designer
+domain experts
+user requirements
+designer chooses
+chosen datamodel
+conceptual schema
+schema developed
+conceptual-design phase
+detailed overview
+designer reviews
+redundant thesumit67.blogspot.com
+introduction features
+physical storage
+conceptual-design process
+process involves
+involves decisions
+business decision
+computer-science problem
+functional requirements
+users describe
+operations include
+updating data
+deleting data
+conceptual design
+abstract data
+database proceeds
+final design
+design phases
+logical-design phase
+designer maps
+high-level conceptual
+implementation data
+system-specific database
+subsequent physical-design
+physical-design phase
+physical features
+features include
+file organization
+internal storage
+storage structures
+initial specification
+design phase
+phase serves
+conceptual structure
+major characteristics
+major department
+total credit
+student earned
+room number
+room capacity
+class meets
+teaching assignments
+real university
+university database
+preceding design.howeverwe
+simplified model
+conceptual ideas
+complex design
+bank accounts
+entities entities
+attributes dept
+form attributes
+department entity
+entity set
+extra attribute
+unique instructor
+instructor identifier
+united states
+social-security number
+unique number
+u.s government
+government assigns
+unique identifier
+identifier arelationship
+member relationship
+relationship associates
+relationship set
+logical structure
+modeling language
+e-r diagram
+astute reader
+attribute dept
+attributes describing
+instructor entity
+detailed explanation
+case thesumit67.blogspot.com
+introduction instructor
+salary department
+department dept_name
+dept_name building
+budget member
+member figure
+sample e-r
+entity sets
+rectangular box
+attributes listed
+relationship sets
+diamond connecting
+related entity
+database consisting
+outlined earlier
+relationship member
+model represents
+important constraint
+mapping cardinalities
+single department
+relation schemas
+store information
+unnecessary redundancy
+retrieve information
+information easily
+design schemas
+normal form
+relation schema
+desirable normal
+normal forms
+additional information
+real-world enterprise
+common approach
+functional dependencies
+bad database
+undesirable properties
+bad design
+information thesumit67.blogspot.com
+salary dept
+faculty table
+modified database
+separate tables
+tables instructor
+repeated information
+alternative design
+undesirable repeating
+repeating information
+information wastes
+wastes space
+budget amount
+original design
+single row
+alternative database
+tuple pertaining
+budget values
+design above,we
+table require
+require values
+created department
+first instructor
+null values
+null value
+unknown value
+itemof department
+department information
+last instructor
+department departs
+original database
+extensive theory
+database designs
+desirable designs
+designs chapter
+relational-database design
+including normalization
+functional components
+storage manager
+processor components
+large amount
+storage space
+corporate databases
+databases range
+largest databases
+trillion bytes
+main memory
+disks data
+disk storage
+slow relative
+central processing
+processing unit
+system structure
+move data
+facilitate access
+good performance
+physical-level details
+translate updates
+queries written
+nonprocedural language
+efficient sequence
+queries submitted
+file manager
+raw data
+file system
+system provided
+manager translates
+low-level file-system
+file-system commands
+commands thesumit67.blogspot.com
+manager components
+components include
+integrity manager
+access data
+transaction manager
+database remains
+system failures
+concurrent transaction
+transaction executions
+executions proceed
+represent information
+fetching data
+buffer manager
+critical part
+handle data
+data sizes
+manager implements
+physical system
+system implementation
+data files
+stores metadata
+fast access
+database index
+instructor records
+discuss storage
+storage media
+file structures
+buffer management
+interpreter,which interprets
+interprets ddl
+data dictionary
+compiler,which translates
+evaluation plan
+plan consisting
+low-level instructions
+query evaluation
+evaluation engine
+engine understands
+understands thesumit67.blogspot.com
+alternative evaluation
+evaluation plans
+lowest cost
+cost evaluation
+instructions generated
+dml compiler
+compiler query
+12,while themethods
+query optimizer
+optimizer chooses
+evaluation strategies
+transaction management
+database form
+single logical
+logical unit
+department account
+all-or-none requirement
+correctness requirement
+successful execution
+persistence requirement
+logical function
+databaseconsistency constraints
+transaction started
+successfully terminates
+temporary inconsistency
+transfer funds
+separate programs
+debits account
+credits account
+transactions ensuring
+durability properties
+recovery manager
+transactions complete
+database architecture
+execution successfully
+atomicity property
+failed transaction
+question started
+started executing
+perform failure
+failure recovery
+detect system
+transactions update
+individual transaction
+concurrency-control manager
+concurrent transactions
+manager consists
+basic concepts
+transaction processing
+covers failure
+financial applications
+real-time applications
+long-duration activities
+product design
+administrative workflows
+broader applications
+transaction concept
+single picture
+underlying computer
+system runs
+runs database
+server machine
+machine executes
+executes work
+multiple client
+client machines
+machines database
+parallel computer
+computer architectures
+architectures distributed
+distributed databases
+databases span
+separated machines
+general structure
+modern computer
+computer systems
+systems chapter
+query processing
+parallel processing
+processing chapter
+distributed database
+issues include
+store data
+multiple sites
+perform concurrency
+concurrency control
+high availability
+failures distributed
+distributed query
+directory systems
+system today
+remote database
+users work
+server machines
+runs thesumit67.blogspot.com
+introduction database
+database applications
+two-tier architecture
+application resides
+client machine
+invokes database
+system functionality
+naive users
+web users
+processor storage
+manager disk
+storage indices
+indices data
+statistical data
+data data
+dictionary application
+application programmers
+programmers application
+application interfaces
+interfaces application
+program object
+object code
+code compiler
+linker buffer
+manager file
+manager authorization
+manager transaction
+manager dml
+organizer query
+engine dml
+queries ddl
+ddl interpreter
+interpreter application
+programs query
+query tools
+tools administration
+administration tools
+tools sophisticated
+sophisticated users
+structure thesumit67.blogspot.com
+data mining
+user application
+application database
+system network
+architecture client
+client server
+server user
+application client
+client database
+network application
+application server
+three-tier architecture
+architecture figure
+three-tier architectures
+architectures query
+language statements
+statements application
+interface standards
+machine acts
+front end
+direct database
+database calls
+client end
+end communicates
+forms interface
+turn communicates
+business logic
+multiple clients
+clients three-tier
+three-tier applications
+large applications
+term data
+mining refers
+large databases
+knowledge discovery
+artificial intelligence
+machine learning
+statistical analysis
+mining attempts
+discover rules
+mining differs
+large volumes
+mining deals
+knowledge discovered
+young womenwith
+annual incomes
+small sports
+sports cars
+introduction degrees
+equations relating
+predicting outcomes
+manual component
+preprocessing data
+discovered patterns
+manual interaction
+semiautomatic process
+real life
+automatic aspect
+mining businesses
+burgeoning data
+data online
+target customers
+increase sales
+decision support
+data analysis
+view data
+analysis tools
+tools precompute
+precompute summaries
+large amounts
+fast responses
+sql standard
+additional constructs
+support data
+large companies
+diverse sources
+making business
+business decisions
+execute queries
+diverse data
+built data
+data warehouses
+warehouses data
+gather data
+multiple sources
+unified schema
+single site
+single uniform
+uniform interface
+textual data
+grown explosively
+structured data
+databases querying
+retrieval information
+retrieval systems
+secondary storage
+information systems
+querying based
+cover decision
+including online
+analytical processing
+data warehousing
+specialty databases
+application areas
+application domains
+models thesumit67.blogspot.com
+object-oriented programming
+identity inheritance
+information hiding
+key concepts
+found applications
+data modeling
+rich type
+type system
+collection types
+systems based
+major database
+database vendors
+presently support
+object-oriented datamodel
+traditional relational
+object orientation
+orientation chapter
+models semistructured
+models permit
+xml language
+adding markup
+markup information
+text documents
+data exchange
+exchange xml
+nested structure
+great deal
+nontraditional data
+expressing queries
+data represented
+transforming xml
+xml data
+database people
+unsophisticated users
+written previously
+introduction department
+program asks
+typical user
+user interface
+read reports
+reports generated
+class registration
+registration period
+web interface
+user connects
+web application
+web server
+desired information
+form information
+retrieving information
+class roster
+write application
+choose frommany
+frommany tools
+develop user
+interfaces rapid
+rapid application
+application development
+application programmer
+construct forms
+minimal programming
+programming effort
+writing programs
+analysis software
+software analysts
+submit queries
+explore data
+database fall
+specialized users
+specialized database
+traditional data-processing
+data-processing framework
+computer-aided design
+design systems
+expert systems
+graphics data
+audio data
+environment-modeling systems
+database administrator
+main reasons
+tohave central
+central control
+dba include
+schema definition
+dba creates
+data definition
+definition statements
+access-method definition
+physical-organization modification
+modification thedbacarries
+improve performance
+performance thesumit67.blogspot.com
+data access
+authorization information
+special system
+routine maintenance
+maintenance examples
+maintenance activities
+remote servers
+prevent loss
+flooding ensuring
+free disk
+disk space
+normal operations
+upgrading disk
+required monitoring
+monitoring jobs
+jobs running
+expensive tasks
+tasks submitted
+systems information
+information processing
+processing drives
+earliest days
+commercial computers
+data processing
+processing tasks
+tasks predates
+predates computers
+computers punched
+punched cards
+record u.s
+u.s census
+census data
+mechanical systemswere
+tabulate results
+results punched
+entering data
+computers techniques
+magnetic tapes
+storage data
+tapes processing
+data consisted
+reading data
+writing data
+tape data
+punched card
+card decks
+salary raises
+card deck
+themaster salary
+salary details
+sorted order
+salary read
+master tape
+tape tapes
+processing programs
+process data
+merging data
+data fromtapes
+hard disks
+disks allowed
+direct access
+milliseconds data
+sequentiality.with disks
+hierarchical databases
+allowed data
+disk programmers
+landmark paper
+nonprocedural ways
+querying data
+relational databaseswere
+databaseswere born
+hiding implementation
+prestigious association
+computing machinery
+machinery turing
+turing award
+perceived performance
+performance disadvantages
+existing network
+groundbreaking project
+ibm research
+developed techniques
+efficient relational
+system excellent
+excellent overviews
+functional system
+prototype led
+database product
+ingres system
+commercial product
+initial commercial
+ibm db2
+dec rdb
+major role
+advancing techniques
+efficient processing
+declarative queries
+competitivewith network
+hierarchical database
+replaced network
+procedural fashion
+low-level tasks
+attaining dominance
+reigned supreme
+initial work
+object-oriented databases
+support applications
+transaction-processing applications
+update-intensive decision
+major application
+application area
+databases tools
+large growths
+vendors introduced
+parallel database
+database products
+period database
+object-relational support
+database-management
+system
+dbms
+collection
+interrelated
+data
+set
+programs
+access
+referred
+database
+information
+relevant
+enterprise
+primary
+goal
+provide
+store
+retrieve
+convenient
+efficient
+systems
+designed
+manage
+large
+bodies
+management
+involves
+defining
+structures
+storage
+providing
+mechanisms
+manipulation
+addition
+ensure
+safety
+stored
+crashes
+attempts
+unauthorized
+shared
+users
+avoid
+anomalous
+results
+important
+organizations
+computer
+scientists
+developed
+body
+concepts
+techniques
+managing
+form
+focus
+book
+chapter
+briefly
+introduces
+principles
+database-system
+applications
+databases
+widely
+representative
+sales
+customer
+product
+purchase
+accounting
+payments
+receipts
+account
+balances
+assets
+human
+resources
+employees
+salaries
+payroll
+taxes
+benefits
+generation
+paychecks
+manufacturing
+supply
+chain
+tracking
+production
+items
+factories
+inventories
+inwarehouses
+stores
+orders
+thesumit67.blogspot.com
+introduction
+online
+retailers
+noted
+order
+recommendation
+lists
+maintenance
+evaluations
+banking
+finance
+accounts
+loans
+transactions
+credit
+card
+purchases
+cards
+monthly
+statements
+storing
+holdings
+financial
+instruments
+stocks
+bonds
+real-time
+market
+enable
+trading
+customers
+automated
+firm
+universities
+student
+registrations
+grades
+standard
+airlines
+reservations
+schedule
+first
+geographically
+distributed
+manner
+telecommunication
+keeping
+records
+calls
+made
+generating
+bills
+maintaining
+prepaid
+calling
+communication
+networks
+list
+illustrates
+essential
+part
+today
+types
+common
+enterprises
+specific
+category
+last
+four
+decades
+twentieth
+century
+grewin
+early
+days
+people
+interacted
+directly
+realizing
+indirectly
+printed
+reports
+agents
+bank
+tellers
+airline
+reservation
+teller
+machines
+interact
+phone
+interfaces
+computers
+interactive
+voice-response
+allowed
+deal
+caller
+dial
+number
+press
+keys
+enter
+select
+alternative
+options
+find
+flight
+times
+register
+courses
+university
+internet
+revolution
+late
+1990s
+sharply
+increased
+direct
+user
+converted
+web
+variety
+services
+instance
+bookstore
+browse
+music
+accessing
+database.when
+bankweb
+site
+balance
+transaction
+retrieved
+system.when
+aweb
+informathesumit67
+blogspot.com
+purpose
+tion
+advertisements
+accesses
+hide
+details
+aware
+dealing
+forms
+life
+importance
+judged
+vendors
+oracle
+largest
+software
+companies
+world
+line
+microsoft
+ibm
+arose
+response
+methods
+computerized
+commercial
+typical
+1960s
+organization
+instructors
+students
+departments
+offerings
+operating
+files
+manipulate
+application
+including
+add
+generate
+class
+rosters
+assign
+compute
+grade
+point
+averages
+gpa
+transcripts
+programmers
+wrote
+meet
+added
+arises
+suppose
+decides
+create
+major
+science
+.as
+result
+creates
+newdepartment
+permanent
+adds
+existing
+record
+department
+degree
+requirements
+write
+rules
+written
+handle
+acquires
+file-processing
+supported
+conventional
+extract
+dbmss
+introduced
+organizational
+disadvantages
+redundancy
+inconsistency
+long
+period
+bewritten
+programming
+languages
+duplicated
+places
+double
+mathematics
+address
+telephone
+file
+consists
+leads
+higher
+cost
+lead
+copies
+datamayno
+longer
+agree
+changed
+reflected
+difficulty
+clerks
+out
+names
+live
+postal-code
+area
+clerk
+asks
+data-processing
+designers
+original
+anticipate
+request
+program
+hand
+two
+choices
+obtain
+needed
+manually
+programmer
+alternatives
+unsatisfactory
+trim
+include
+hours
+expected
+exist
+preceding
+satisfactory
+environments
+efficientmanner
+responsive
+data-retrieval
+required
+general
+isolation
+scattered
+formats
+writing
+difficult
+integrity
+problems
+values
+satisfy
+consistency
+constraints
+maintains
+amount
+requires
+fall
+developers
+enforce
+adding
+code
+change
+problem
+compoundedwhen
+involve
+atomicity
+device
+subject
+failure
+crucial
+occurs
+restored
+consistent
+state
+existed
+prior
+transfer
+execution
+removed
+butwas
+credited
+resulting
+inconsistent
+debit
+occur
+funds
+atomic
+happen
+entirety
+concurrent-access
+anomalies
+sake
+performance
+faster
+multiple
+update
+simultaneously
+millions
+day
+shoppers
+environment
+interaction
+concurrent
+updates
+10,000
+executions
+leave
+budget
+incorrect
+executing
+behalf
+withdrawal
+read
+reduce
+value
+beingwithdrawn
+back
+run
+concurrently
+depending
+writes
+correct
+guard
+possibility
+maintain
+supervision
+accessed
+coordinated
+previously
+registration
+count
+registered
+limits
+registered.when
+registers
+reads
+current
+verifies
+limit
+leading
+increase
+successfully
+case
+violation
+security
+personnel
+academic
+hoc
+enforcing
+difficulties
+prompted
+development
+algorithms
+solve
+running
+view
+modify
+abstract
+hides
+maintained
+1.3.1
+abstraction
+usable
+efficiently
+efficiency
+led
+complex
+represent
+trained
+complexity
+levels
+simplify
+interactions
+physical
+level
+lowest
+describes
+low-level
+detail
+logical
+next-higher
+relationships
+entire
+terms
+small
+simple
+implementation
+physical-level
+independence
+administrators
+decide
+highest
+simpler
+remains
+exists
+views
+figure
+shows
+relationship
+analogy
+concept
+clarify
+distinction
+high-level
+support
+notion
+structured
+type
+describe
+instructor
+char
+dept
+salary
+numeric
+8,2
+end
+defines
+fields
+field
+building
+title
+credits
+tot
+cred
+described
+block
+consecutive
+locations
+compiler
+similarly
+lowest-level
+1the
+actual
+declaration
+depends
+language
+struct
+declarations
+java
+defined
+effect
+definition
+previous
+segment
+interrelationship
+work
+finally
+sees
+hiding
+mechanism
+prevent
+parts
+registrar
+office
+1.3.2
+instances
+schemas
+inserted
+deleted
+moment
+design
+schema
+infrequently
+understood
+language.adatabase
+corresponds
+variable
+definitions
+instant
+variables
+correspond
+partitioned
+subschemas
+construct
+hidden
+beneath
+easily
+affecting
+exhibit
+depend
+rewritten
+study
+describing
+introducing
+models
+section
+1.3.3
+underlying
+structure
+model
+conceptual
+tools
+semantics
+cover
+text
+classified
+categories
+relational
+tables
+table
+columns
+column
+unique
+relations
+record-based
+named
+fixed-format
+fixed
+attributes
+vast
+majority
+based
+chapters
+entity-relationship
+e-r
+basic
+objects
+entities
+andrelationships
+entity
+thing
+object
+real
+distinguishable
+explores
+object-based
+model.object-oriented
+dominant
+software-development
+methodology
+object-oriented
+extending
+notions
+encapsulation
+functions
+identity
+object-relational
+combines
+features
+examines
+semistructured
+permits
+specification
+individual
+sets
+contrast
+mentioned
+earlier
+item
+extensible
+markup
+xml
+covers
+historically
+network
+hierarchical
+preceded
+modelswere
+tied
+closely
+complicated
+task
+modeling
+service
+outlined
+appendices
+interested
+readers
+data-definition
+data-manipulation
+express
+queries
+upthesumit67
+dates
+practice
+separate
+simply
+single
+sql
+1.4.1
+dml
+enables
+organized
+retrieval
+insertion
+deletion
+modification
+basically
+procedural
+dmls
+require
+declarative
+nonprocedural
+easier
+learn
+means
+query
+statement
+requesting
+portion
+technically
+synonymously
+commercially
+experimentally.we
+inchapters
+discussed
+apply
+structuring
+manipulating
+define
+emphasize
+ease
+humans
+processor
+component
+translates
+sequences
+actions
+1.4.2
+expressed
+special
+ddl
+additional
+properties
+negative
+facilities
+checks
+updated
+constraint
+arbitrary
+predicate
+pertaining
+database.however
+predicates
+costly
+test
+implement
+testedwith
+minimal
+overhead
+domain
+attribute
+integer
+character
+declaring
+acts
+elementary
+tested
+entered
+referential
+cases
+appears
+relation
+listed
+precisely
+modifications
+violations
+integrity.when
+referential-integrity
+violated
+normal
+procedure
+reject
+action
+caused
+assertions
+assertion
+condition
+offered
+semester
+created
+tests
+validity
+valid
+future
+authorization
+differentiate
+permitted
+differentiations
+reading
+insert
+delete
+combination
+input
+instructions
+generates
+output
+dictionary,which
+metadata
+dictionary
+considered
+regular
+consults
+modifying
+includes
+present
+gentle
+fundamentals
+employ
+great
+discuss
+influential
+1.5.1
+presents
+sample
+comprising
+einstein
+member
+physics
+annual
+95,000
+biology
+located
+watson
+90,000
+real-world
+illustrate
+larger
+hard
+delimit
+new-line
+note
+unnecessarily
+history
+katz
+comp
+sci
+kim
+elec
+eng
+crick
+srinivasan
+califieri
+brandt
+mozart
+gold
+singh
+taylor
+packard
+painter
+distinguish
+good
+designs
+bad
+1.5.2
+takes
+possibly
+returns
+finds
+instructor.name
+instructor.dept
+specifies
+rows
+fromthe
+historymust
+displayed
+specifically
+labeled
+consist
+greater
+instructor.id
+department.dept
+department.budget
+1.5.3
+rich
+12,2
+it.we
+1.5.4
+powerful
+universal
+turing
+machine
+computations
+general-purpose
+displays
+host
+embedded
+fashion
+examples
+calculate
+executed
+ways
+interface
+procedures
+send
+open
+connectivity
+odbc
+commonly
+jdbc
+syntax
+embed
+prefaces
+preprocessor
+precompiler
+converts
+operation
+plays
+supporting
+role
+complete
+meets
+modeled
+attention
+broader
+issues
+initially
+discusses
+process
+1.6.1
+designerwith
+framework
+fulfill
+initial
+phase
+characterize
+fully
+prospective
+designer
+extensively
+experts
+carry
+outcome
+chooses
+applying
+chosen
+datamodel
+conceptual-design
+detailed
+overview
+reviews
+confirm
+satisfied
+conflict
+examine
+remove
+redundant
+decisions
+capture
+group
+business
+decision
+computer-science
+principally
+tackle
+1.6.3
+collectively
+normalization
+1.6.4
+functional
+kinds
+operations
+performed
+updating
+searching
+retrieving
+deleting
+stage
+review
+moving
+proceeds
+final
+phases
+logical-design
+maps
+system-specific
+subsequent
+physical-design
+internal
+1.6.2
+interviews
+analysis
+description
+serves
+basis
+characteristics
+identified
+offers
+prerequisites
+total
+earned
+classrooms
+room
+capacity
+classes
+sections
+taught
+sec
+year
+slot
+teaching
+assignments
+design.howeverwe
+simplified
+understand
+ideas
+lost
+person
+entity.2
+extra
+identify
+uniquely
+identifier
+assigned
+united
+states
+social-security
+u.s
+government
+assigns
+arelationship
+association
+associates
+termed
+graphically
+diagram
+draw
+diagrams
+popular
+unified
+uml
+notation
+represented
+2the
+astute
+reader
+notice
+dropped
+error
+explanation
+dept_name
+rectangular
+box
+header
+diamond
+connecting
+pair
+related
+inside
+illustration
+consisting
+represents
+contents
+conform
+mapping
+cardinalities
+iswidely
+method
+designing
+unnecessary
+approach
+determine
+desirable
+dependencies
+wrong
+undesirable
+repetition
+inability
+faculty
+modified
+shown
+repeated
+repeating
+wastes
+space
+complicates
+50,000
+46,800
+row
+perform
+tuple
+show
+shift
+issue
+creating
+above,we
+newly
+hired
+solution
+introduce
+null
+unknown
+missing
+preferable
+resort
+itemof
+departs
+situation
+resorting
+extensive
+theory
+helps
+formally
+relational-database
+querying
+modules
+responsibilities
+components
+broadly
+divided
+manager
+typically
+corporate
+range
+size
+hundreds
+gigabytes
+terabytes
+gigabyte
+approximately
+megabytes
+billion
+bytes
+terabyte
+million
+trillion
+main
+memory
+disks
+moved
+disk
+movement
+slow
+relative
+speed
+central
+processing
+unit
+imperative
+minimize
+move
+facilitate
+burdened
+understanding
+job
+translate
+sequence
+1.7.1
+submitted
+responsible
+raw
+provided
+file-system
+commands
+satisfaction
+authority
+ensures
+failures
+proceed
+conflicting
+manages
+allocation
+buffer
+manager,which
+fetching
+deciding
+cache
+critical
+sizes
+implements
+indices
+fast
+index
+textbook
+pointers
+hold
+hashing
+indexing
+media
+1.7.2
+interpreter,which
+interprets
+compiler,which
+evaluation
+plan
+engine
+understands
+translated
+plans
+give
+dmlcompiler
+performs
+optimization
+picks
+executes
+generated
+covered
+12,while
+themethods
+bywhich
+optimizer
+strategies
+debited
+all-or-none
+requirement
+preserve
+sum
+aand
+preserved
+correctness
+successful
+persist
+persistence
+durability
+function
+violate
+databaseconsistency
+started
+terminates
+temporarily
+done
+temporary
+responsibility
+properly
+preserves
+composed
+debits
+otherwill
+consistency.however
+transform
+ensuring
+recovery
+absence
+achieved
+architecture
+property
+failed
+question
+detect
+restore
+occurrence
+concurrency-control
+control
+applied
+long-duration
+activities
+administrative
+workflows
+position
+picture
+connections
+greatly
+influenced
+runs
+centralized
+client-server
+server
+client
+exploit
+parallel
+architectures
+span
+separated
+modern
+implemented
+arise
+execute
+sites
+concurrency
+high
+availability
+presence
+directory
+connect
+remote
+two-tier
+resides
+invokes
+functionality
+naive
+statistical
+linker
+organizer
+interpreter
+administration
+sophisticated
+analysts
+mining
+three-tier
+standards
+front
+communicates
+turn
+logic
+conditions
+clients
+worldwideweb
+term
+refers
+loosely
+semiautomatically
+analyzing
+patterns
+knowledge
+discovery
+artificial
+intelligence
+learning
+discover
+differs
+statistics
+deals
+volumes
+primarily
+discovered
+rule
+stated
+informally
+young
+womenwith
+incomes
+buy
+sports
+cars
+universally
+true
+degrees
+confidence
+equations
+relating
+predicting
+outcomes
+automatically
+derived
+manual
+preprocessing
+acceptable
+postprocessing
+pattern
+pick
+reason
+semiautomatic
+concentrate
+automatic
+aspect
+businesses
+begun
+burgeoning
+make
+stock
+target
+extracted
+precompute
+summaries
+amounts
+responses
+constructs
+diverse
+sources
+making
+built
+warehouses
+gather
+uniform
+textual
+grown
+explosively
+unstructured
+unlike
+rigidly
+secondary
+emphasis
+concentrating
+keywords
+relevance
+documents
+classification
+analytical
+warehousing
+specialty
+areas
+limited
+restrictions
+researchers
+datamodels
+domains
+1.11.1
+inheritance
+key
+found
+supports
+1980s
+presently
+extends
+traditional
+orientation
+1.11.2
+permit
+exchange
+nested
+flexibility
+nontraditional
+expressing
+transforming
+categorized
+1.12.1
+differentiated
+expect
+unsophisticated
+invoking
+hire
+fill
+wishes
+connects
+enters
+desired
+determines
+roster
+professionalswho
+choose
+frommany
+develop
+rapid
+rad
+reportswith
+effort
+requests
+submit
+explore
+specialized
+fit
+computer-aided
+knowledgebase
+expert
+graphics
+audio
+environment-modeling
+1.12.2
+administrator
+reasons
+tohave
+thedata
+dba
+access-method
+physical-organization
+thedbacarries
+reflect
+changing
+alter
+improve
+granting
+regulate
+routine
+periodically
+backing
+tapes
+servers
+loss
+disasters
+flooding
+free
+upgrading
+monitoring
+jobs
+degraded
+expensive
+tasks
+drives
+growth
+earliest
+fact
+automation
+predates
+punched
+invented
+herman
+hollerith
+beginning
+census
+mechanical
+systemswere
+tabulate
+entering
+evolved
+years
+1950s
+magnetic
+consisted
+tape
+decks
+printers
+raises
+processed
+deck
+synchronization
+themaster
+sorted
+master
+sequentially
+sizeswere
+forced
+merging
+fromtapes
+1970s
+widespread
+scenario
+immaterial
+location
+tens
+milliseconds
+freed
+tyranny
+sequentiality.with
+trees
+landmark
+paper
+codd
+databaseswere
+born
+simplicity
+completely
+enticing
+won
+prestigious
+computing
+machinery
+award
+academically
+interesting
+perceived
+notmatch
+groundbreaking
+project
+research
+construction
+excellent
+overviews
+astrahan
+chamberlin
+prototype
+ingres
+california
+berkeley
+db2
+dec
+rdb
+played
+advancing
+competitivewith
+easy
+eventually
+replaced
+importantly
+mind
+involved
+lot
+carried
+leaving
+attaining
+dominance
+reigned
+supreme
+query-intensive
+mainstay
+transaction-processing
+update-intensive
+re-emerged
+growths
+usage
+products
+began

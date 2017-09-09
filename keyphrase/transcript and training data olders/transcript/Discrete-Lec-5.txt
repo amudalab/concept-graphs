@@ -1,0 +1,323 @@
+Transcriptor Name: Karthick
+     Proof Reader Name: G.Sathis Kumar
+
+DISCRETE MATHEMATICAL STRUCTURES
+Dr.kamala Krithivasan
+Dept of Computer Science and Engineering
+IIT, Madras 
+ Lecture-# 5
+LOGICAL INFERENCE  
+
+
+in the last clause we saw about logical operator quantifiers universal quantifier and existential quantifier and how to use them what are the rules regarding them whether you can interchange the order in which they are occurring and so on 
+in any logical system you have some axioms and rules of inference making use of the rules of inference from the axiom you try to derive true statements about the system 
+and if you use the rules in the proper manner you arrive at a correct argument and if you use the rules in improper manner the argument will be invalid 
+so next we shall see how to find out whether an argument is correct or wrong starting from the axioms and rules of inference 
+now in the towards the end of the last lecture we saw some rules of inference we have also seen them as logical identities earlier let us recall those rules 
+from P you can conclude P or Q this is called addition and from P and Q you can conclude P this is called simplification (Refer Slide Time 02:20 min)
+
+
+
+from P implies Q AND P you can conclude Q this is called Modus ponens 
+from P implies Q AND NOT Q you can conclude NOT P that is called modue tollens 
+and from P OR Q and not P you can conclude Q this is called disjunctive syll syllogism (Refer Slide Time 02:50 min)
+
+                  
+
+And from P implies Q AND Q implies R you can conclude P implies R this is called hypothetical syllogism 
+and from P AND Q you can conclude P AND Q this is called conjunction 
+then from P implies Q  AND r implies S  AND P OR R you can conclude Q OR S this is called constructive dilemma (Refer Slide Time 03:17 min)
+
+                   
+
+
+and from P implies Q AND R implies S AND NOT Q or NOT S you can conclude NOT P or NOT R this is called destructive dile dilemma  
+mostly we will be using the two rules Modus ponens and Modus tollens in an arguments 
+let us see how we can prove whether an argument is correct or whether an argument is wrong and so on 
+let us take this example it may look a very silly argument (Refer Slide Time 04:37 min)
+
+
+
+but given the premises and the conclusion is the argument correct this is what we want to check 
+it is like this if horse is fly or cows eat grass then the mosquito is the national bird 
+if mosquito is the national bird then peanut butter tastes good on hot dogs 
+but peanut butter tastes terrible on hot dogs 
+therefore cows don’t eat grass 
+is this argument correct or not let us see how we go about this is an correct argument 
+and even though it look very silly let us see how we go about proving this
+let us denote horses fly by H cows eat grass by G 
+mosquito is the national bird by M peanut butter tastes good on hot dogs by P (Refer Slide Time 7:14)
+
+so in the logical representation how do we represent these statements 
+if horses fly or cows eat grass then mosquito is the national bird 
+so that will be denoted by if horses fly or cows eat grass then mosquito is the national bird 
+then second statement is if mosquito is the national bird then peanut butter tastes good on hot dogs that is denoted by this 
+but peanut butter tastes terrible on hot dogs that is denoted by NOT P 
+so the conclusion is therefore cows don’t eat grass therefore NOT of this is the argument the argument you can represent in logical notation in this form 
+there are three premises and this is the conclusion 
+does the conclusion logically follow from the premises 
+are we using the correct rules of inference and arriving at the conclusion this is what we want to check 
+let us see whether from these three premises we will be able to prove the conclusion 
+now look at statement one and two and if you use from one and two if you use hypothetical syllogism what do you get H OR R implies M and M implies P so from that you can conclude H OR G implies P H OR G implies P (Refer Slide Time 9:14 min) 
+
+
+let us call it as statement four fourth assertion which we have arrived 
+now from four and three what is three three is NOT P so from H OR G implies p and not p what can you conclude by using Modus tollens you can conclude NOT of H OR G 
+let us call it as statement five and from statement  five use Demorgons laws this you can expand as NOT H AND NOT G call it as statement six 
+then from six by simplification you get NOT of G so you are able to arrive at the conclusion from the premises by using proper rules of inference 
+so even though this sentences and all may not convey any meaning it may look as silly argument but still from the premises using the rules of inference you can arrive at the conclusion 
+so this argument is a valid argument 
+now let us see some more arguments 
+it is not the case that IBM or Xerox will take over the copier market if RCA returns the computer market then IBM will take over the copier market hence rca will  not return to the computer market  
+let us see whether this argument is correct it is correct let us see how it is 
+so again IBM will return IBM will take over copier market denote it by I I it is not the cases (Refer Slide Time 10:56 min)
+
+Xerox Xerox will take over the copier market denote it by X
+RCA will return to the computer market will return to computer market
+now how do you represent the statements in logical notation it is not the case that IBM or Xerox will take over the  copier market  NOT I OR X that is the first statement  (Refer Slide Time 13:27 min) 
+
+
+if RCA returns the copier market then IBM will return to the copier market 
+R implies I so the conclu conclusion is therefore NOT of R 
+is this the correct argument there are two premises here and this is the conclusion 
+can you derive the conclusion from the premises assuming the premises to be correct again let us see how we derive the conclusion from the premises from one by Demorgons laws this will be NOT I AND NOT X 
+then let us call as the statement three from two and three from okay three alone by using simplification you will get NOT I call this as statement four
+then from two and four R implies I and NOT I if you use Modus tollens you will get NOT which is the conclusion okay
+so you are able to arrive at the conclusion from the premises and this is a valid argument now let us see one more example if today is Tuesday then i have a test in computer science or a test in economics 
+if my economics professor is sick then i will not a have a test in economics 
+today is Tuesday and my economics professor is sick 
+therefore i have a test in computer science 
+obviously this is much more simple than the other one this looks a correct argument let us see how we can prove it from the starting from the premises  (Refer Slide Time 14:10 min) 
+
+
+
+so let us see today is Tuesday denote by T
+i have test in CS by CS (Refer Slide Time 14:42 min) 
+
+
+i have test in economics by E economics professor is sick by S
+then how will you represent the statements in logical notation 
+the first statement is if today is Tuesday  (Refer Slide Time 18:15 min) 
+
+
+
+then i have a test in computer science or in economics okay 
+and second statement is if my economics professor is sick then i will not have a test in economics if my economics professor is sick then i will not have a test in economics 
+and third statement says today is Tuesday and my economics professor is sick  
+so these three are the premises and from the  conclusion is therefore i have a test in computer science 
+now let us see whether this is a correct argument and how do we arrive at the conclusion from the premises 
+now from three by simplification you can get T and you can get S 
+and from one and four T implies CS OR E AND T by using Modus ponnens you will get CS OR E 
+similarly from two and five s implies NOT E and S by again using Modus ponnens you will get NOT E this is again by the application of Modus ponnens to two and five 
+now you have CS OR E and NOT E so from six and seven use disjunctive syllogism disjunctive syllogism it is from CS OR E and NOT E you can conclude CS which is the conclusion this is the conclusion 
+so starting from the premises by the application of proper rules of inference you are able to get the conclusion and the argument is valid okay 
+so this is a sort of a proof you give saying that this argument is correct or not
+now if some argument is not correct you must give a counter example what do you mean by that 
+there will be some premises and conclusion and if you want to show that  the argument is  not correct you must give truth values to the statements involved to the assertions involved such that the premises become true and the conclusion is false
+usually people make two types of fallacies frequently and let us see what they are 
+one is called the fallacy of affirming affirming the consequence ( Refer Slide Time 21:45 min) 
+
+
+
+
+so from P implies Q and Q you cannot conclude anything for Modus ponnens from P implies Q and P 
+you can conclude Q for Modus tollens from p implies q AND NOT Q you can conclude NOT P
+but from P implies Q and Q you cannot conclude anything
+suppose if you have make an argument like this if the butlers is nervous then he committed the murder or if the or i will put it this way if the butler committed the murder he will be very nervous 
+the butler is nervous so he committed the murder is this the argument correct 
+this is not a correct argument because here the statement is if the butler  committed the murder he is nervous he will be nervous and because he is nervous he committed the murder that is a wrong statement 
+because when the police interrogated the butler just because seeing the police itself he must he might have become nervous 
+so it is not necessary he should have committed the butler just because seeing the police itself he must  he might have become nervous 
+so it is not necessary that he should have committed the murder this is a wrong argument this sort of an argument is called the fallacy of affirming the consequence  
+similarly you also have another fall fallacy which is called the fallacy of denying the antecedent that is  from P implies Q and NOT P you cannot conclude anything   
+so again some argument like this if the butlers hands are covered with blood then he committed the murder 
+the butlers hands are  clean therefore he did not commit the murder this is not a correct argument 
+because you are trying to deny the antecedent the butler could have washed his hands after committing the murder 
+so just because his hands are clean you cannot conclude that he did not commit the murder  okay
+so this sort of fallacies may occur during your argument and we have to be careful against  not allowing for fallacies 
+so if you use some such fal um wrong argument wrong applications of rules of the inference then the argument will not be correct 
+and if you want to show that some argument is not correct you have to give counter example that is you have to give values for the assertions truth values for the assertions which will make the premise premises true and the conclusion false 
+now in all these cases we have used proposition variables or single statements proposition that may be occasion were we have to use quantifiers in arguments
+so what are the rules of inference related to quantifiers 
+let us see some rules of inference involving quantifiers
+now if you have P of C for an arbitrary element C an arbitrary element C on an arbitrary element C of U of the underlying universe ( Refer Slide Time 25:23 min) 
+
+
+
+
+see C is an arbitrary element then from this you can conclude therefore for all of x P of x and this is called universal universal generalization this rule is called universal generalization 
+and from for all of x P of x you can conclude P of C where C is an arbitrary element of the universe this sort of a root is called universal instantiation this is called universal instantiation 
+now if you have P of C for some C belonging to the universe it is not arbitrary but for some C belonging to the universe if you have P of C then from that you can conclude there exist x P of x this is called existential generalization this rule is called existential generalization 
+and from there exist x P of x  you can conclude therefore P of C where C is some element some element not arbitrary belonging to the universe this rule is called existential instantiation ( Refer Slide Time 26:50 min) 
+
+
+
+so for using quantifiers we have four types of rules universal generalization where if you have P of C for some arbitrary element you can conclude for all of x P of x 
+then you have universal instantiation where from all of x P of x you can conclude P of C where C is an arbitrary element of the universe 
+if P of C is true for some C belonging to the universe then you can  conclude therefore there exist P of x and this rule is called existential generalization 
+and from there exist x P of x you can conclude P of C and this rule is called where C is some element this rule is called existential instantiation
+now let us see how we can give some arguments using quantifiers 
+now let us see some arguments involving quantifiers the first example which is very common stated in all logic books is like this 
+all men are mortal there socretes is a man therefore socretes is mortal obviously is correct argument and how do we prove this ( Refer Slide Time 28:05 min)
+ 
+now man of x denotes X is a man X is a man mortal of x denotes X is mortal 
+so the argument is like this if you transfer to logical notation it will be like this for all of x man of x implies mortal of x 
+then man socretes is a man man socretes conclusion is therefore socretes is mortal mortal socretes 
+this is the argument let us see how you prove it 
+there are two premises and the conclusion so from first using universal instantiation universal from using one and from using universal instantiation you get man socretes implies mortal socretes that is x is taking the value of socretes and the rule applied is universal instantiation  
+and call this as statement three then from three and two by using Modus ponnens that is p implies q and p you can conclude p so from this you can conclude mortal socretes so this is the way you have to give the arguments ( Refer Slide Time 30:55 min)
+
+now let us take some more examples and how we can prove statements some argument are not correct by this using universal quantifiers and existential quantifiers 
+now let me take this is an argument which we proved that it is correct
+let us take some argument which is not correct 
+look at this one some trigonometric functions are continuous some continuous functions are periodic therefore some trigonometric functions are periodic  ( Refer Slide Time 33:30 min)
+
+
+
+see please remember that we are only looking at an argument the premises we take to be true and we want to check whether we can derive the  conclusion from the premises using rules of inference that is what we want to check  
+actually if you look at this in this case all the three statements are really true 
+but whether the conclusion which is some trigonometric functions are periodic will follow from the premises the premise here are some trigonometric functions are continuous and some continuous functions are periodic  
+so if you denote by trigonometric function x is a trigonometric function T of x x is trigonometric function 
+and C of x continuous function x is a continuous function 
+P of x x is a periodic function 
+the statements will be there exist x T of x AND C of x this is the premise 
+and the second statement is there exist x C of x AND P of x  
+the conclusion will be there exist x T of x AND P of x this is the conclusion 
+but you can see that this will not follow from this by the rules of inference in this case you can give a counter example like this 
+some trigonometric functions are continuous using the Venn diagram this may represent something like this some trigonometric functions are continuous the intersection is non empty the intersection of this is non empty ( Refer Slide Time 34:41 min)
+
+
+
+then the second statement is some continuous functions are periodic so if you denote the periodic functions like this the intersection of C and P is non empty there are some functions which are continuous and periodic  
+so the first two statements may represent a situation like this [noise]
+but you can see that this does not mean that T and P intersect the intersection of T and P may be empty also by this argument by this argument we cannot conclude that some trigonometric functions are periodic 
+so if you want to show that some argument is wrong then in that case you can draw a proper Venn diagram and show that it is correct 
+but for proving it is not enough if you just draw the Venn diagram you have to also use proper logical argument
+let us see how you do this in this case first i shall show you can check whether the argument is correct by drawing a Venn diagram but then you have to give the proper argument for this 
+babies are illogical so if you denote B of x to be x is a baby and Il of x x is illogical
+(Refer Slide Time 37:15 min)
+	
+
+D of x x is despised and M of x x can manage a crocodile
+using Venn diagram how will you represent this 
+babies are illogical so babies will be inside illogical 
+and all illogical people are despised so that will be inside D 
+and nobody you can manage a crocodile is despised that is the intersection of M and D is empty that means babies cannot manage croco[dile] that is B and M are disjoint 
+that is true from this diagram 
+so this argument is the correct argument you can very with  by drawing the Venn diagram but that is not the proof  you have to prove step by step 
+but if you want to show that some argument is not correct it is enough if you draw the Venn diagram and show that there is a situation where the premises may be true but the conclusion is not true
+let me prove this now babies are illogical for all of x B of x implies Il of x ( Refer Slide Time 39:54 min)
+
+
+
+illogical people are despised for all of x Il of Il of x implies D of x 
+and no body is despised who can manage a crocodile NOT there exist x M of x AND D of x
+therefore for all of x B of x implies NOT M of x if you write in logical notation this is the way it should be written 
+so denote by one two three like this and let us use Universal instantiation um before that before using Universal instantiation we can use for first and second but the third one we can convert in the usual notation bringing the NOT inside 
+so before this let us see that from three you can write it for all of x NOT of M of x and D of x and this you can write as for all of x NOT of M of NOT of D of x OR NOT of M of x bringing the not inside and will become or using Demorgans law and here when you bring the not inside there exist will become for all ( Refer Slide Time 42:12 min)
+
+
+
+so the third state statement you can write like this and you can also write it as for all of x D of x implies NOT of M of x because NOT P OR Q is equivalent to saying P implies Q so the third one can be written in this form i will write it as four so using [noise] Universal instantiation taking an arbitrary C taking an arbitrary C you can write these statements one two and four in the following manner B of c implies Il of c Il of c implies D of c and D of c implies NOT M of c 
+and using hypothetical syllogism for these two you will get using hypothetical syllogism using hypothetical syllogism this will become B of c implies D of c 
+and from these two again using hypothetical syllogism you will get B of c implies NOT M of c using this and this and using hypothetical syllogism you get B of c implies NOT M of c 
+because you have B of c implies D of c and D of c implies NOT of M of c you will get B of c implies NOT of M of c 
+and here from this use Universal Universal generalization you will get the conclusion for all of x B of x implies NOT of M of x 
+let us consider some more examples in logical inference take this problem prove or disprove the validity of the following arguments ( Refer Slide Time 42:41 min)
+
+
+
+
+take the first one a every living thing is a plant or animal 
+davids dog is alive and it is not a plant 
+all animals have heart hence davids dog has a heart 
+let us see whether this argument is correct by writing it in logical notation 
+let L of x denote x is a living thing  ( Refer Slide Time 43:07 min)
+
+
+
+and P of x denote x is a plant A of x denote x is an animal and H of x denote x has an heart 
+and Davids dog let it be denoted by d now what is the first sentence the first sentence is every living thing is a plant or animal you can write it in this way for all of x L of x implies P of x OR A of x 
+the second statement what is the second statement davids dog is alive and it is not a plant ( Refer Slide Time 46:59 min)
+
+
+
+L of d and NOT P of d because d denotes davids dog 
+third sentence is all animals have hearts for all of x A of x implies H of x from this you have to conclude that therefore what is the conclusion davids dog has a heart H d is the conclusion you have to get 
+now statement one and three have Universal quantifies statement two does not have a quantifier and the conclusion does not have a quantifier 
+now you have to see whether you can infer this from this 
+now you can use Universal instantiation for these two and try to use the other rules of inference 
+so from one using using Universal instantiation what do you get see i can replace x here by any arbitrary value from the universe this here you have to take the Universe as a set of living things  
+so L d implies P d or A d i am just taking it to be d de be for any for any arbitrary value it should hold because its universal quantifier taking it to be d because rest of the statements involve d 
+then from two what is the rule you use you can use simplification and get two statements you can get L d and you can also get NOT P d using simplification simplification of two from two that is simplification you get them separately 
+then again this you can use Universal instantiation so from three by using Universal instantiation you will get A d implies H d i can choose any arbitrary value for x i am choosing it as d this is again Universal instantiation from three 
+now from five and four four and five use Modus ponnens from five and four by Modus ponnens what do you get Modus ponnens rule is P AND P implies Q gives you Q ( Refer Slide Time 49:16 min)
+
+
+
+so P AND P implies Q gives you this so you will get P d OR A d 
+now the sixth statement is NOT P d from NOT P d and the eigth statement P d OR A d from this that is from six and eight by disjunctive syllogism what do you get disjunctive syllogism 
+what is disjunctive syllogism that is if you have P OR Q and NOT P by disjunctive syllogism you will get Q so this is what we are going to use now 
+so six is NOT P of d and eight is P of d or A d so from six and eight by using disjunctive syllogism you will get A d 
+and what is seven seven is A d implies H d seventh statement is A d implies H d so from A d and A d implies H d that is from seven and nine by Modus ponens you get H d so this is the conclusion 
+so you are arriving at a conclusion from the premises so this argument is correct 
+in a similar we can prove this part b also 
+all clear explanations are satisfactory some excuses are unsatisfactory 
+hence some excuses are not clear explanations this is a correct argument ( Refer Slide Time 42:41 min)   
+look at these two things the following propositions involve predicates that define sets use the properties to conclude relationships between these sets use Venn diagram to check the validity of the arguments     ( Refer Slide Time 49:48 min)
+
+
+so you can use the Venn diagram to show that some thing is not correct some argument is not correct 
+consider the  first one some scientists are not engineers some 
+astronauts are not engineers hence some scientists are not astronauts 
+let me draw a Venn diagram if you draw a Venn diagram which will satisfy the premises but not the conclusion then the argument canno[t] is not correct the conclusion cannot be inferred from the premises 
+now the first statement is some scientists are not engineers  you can have something like this ( Refer Slide Time 51:20 min)
+	
+
+there are some scientists are not engineers the second statement is some astronauts are not engineers you can have something like this some astronauts are not engineers 
+this diagram satisfies both the premises some scientists are not engineers some astronauts are not engineers both of them are satisfied 
+but from this you cannot conclude some scientists are not astronauts okay 
+so because here all scientists are astronauts so this diagram um from the diagram you cannot infer the conclusion or from the given premises you cannot infer the conclusion the argument is not correct 
+for such things you can use then Venn diagram and show that the argument is not correct and this is known as giving a counter example ( Refer Slide Time 49:48 min) 
+whenever an argument is correct  you have to write step by step the proof to show that the argument is valid 
+but when you want to show something is not correct you have to use a counter example in ordinary propositional calculus you have to give values to the premise to the variable such that the premises are true but the conclusion is false 
+in the case of arguments like this we can draw the Venn diagram and from the Venn diagram we can show that the premise can be satisfied from the conclusion does not follow from that 
+so we have seen how to give an argument how to show that whether an argument is correct or not and so on 
+such rules of inference are very useful in the logic programming language prolog prolog uses what is known as a resolution principle we shall see in a moment or may be  in the next lecture what is a resolution principle 
+for that we have to write the premises in a proper form which is called clause form and in order to know what is a clause form we have to see some normal forms of Boolean expressions or propositional expressions or well formed formula of the propositional logic
+we have to write them in a proper logical form which are called normal forms 
+so let us see what are normal forms there is one called conjunctive normal form Or the CNF 
+there is another normal form called Disjunctive normal form or DNF 
+any well formed formula you can write either in DNF or  in CNF and that is what we are going to see  now 
+now let us see what is CNF and what is DNF 
+  (Refer Slide Time 53:47 min)    
+
+
+
+let us look at these definitions a variable or the negation of a variable is called a literal something like P or NOT P this is called a literal  ( Refer Slide Time 54:07 min)   
+
+
+
+a disjunction of literals is called a sum something like P one OR P two OR P three OR NOT P four each one of these is a literal a disjunction of this is called a sum 
+a conjunction of literals is called a product look at this P one AND P two AND NOT P three each one is a literal and the conjunction of this is called a product
+a sum of products is called a disjunctive normal form  something like this is called a disjunctive normal form P one AND P two AND NOT P three OR NOT P four AND P five ( Refer Slide Time 56:26 min)   
+
+
+
+this is a disjunction this is the sum of products each one is a products and you have a sum of products this is called disjunctive normal form 
+any expression well formed formula of the propositional logic you can bring into disjunctive normal form 
+let us take an example P and P implies Q how will you bring it to disjunctive normal form you can write it as P AND NOT P OR Q 
+and use distributive laws this will become P AND NOT P OR P AND Q 
+this is the disjunctive normal form for this expression you see that it is a sum of product each one is a product and you have a sum of products this is called disjunctive normal form 
+similarly you have conjunctive normal form which is called product of sums 
+for example something like this is a conjunctive normal form P one OR P two AND P three OR NOT P four OR P five
+look at this each one is a sum this is a sum this is a sum and you have a product of sums such an expression is called conjunctive normal form 
+and any well formed formula we can bring into conjunctive normal form 
+for example P AND P implies Q how will you bring into conjunctive normal form ( Refer Slide Time 57:38 min)   
+
+
+P AND this one you can write as NOT P OR Q so this is a single sum this is another sum you have product of sum so this is the conjunctive normal form for this 
+so any well formed formula you can bring into conjunctive normal form 
+so we have seen what is mean by a conjunctive normal form and disjunctive normal form we will see how to make use of this and write the argument in a different way and that is called Resolution  principle  and this is very much used in the logic programming language PROLOG 
+there we make use of this conjunctive normal form and try to write the argument by using what is known as resolution 
+and this is very useful in logic programming languages like  PROLOG and we shall see how to go about it in the next lecture

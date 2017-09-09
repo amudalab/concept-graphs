@@ -1,0 +1,6975 @@
+computer networks prof
+prof dr sujoy
+sujoy ghosh department
+department of computer
+science and engineering
+engineering iit kharagpur
+iit kharagpur lecture
+error control good
+control good day
+data link layer
+layer namely framing
+error control error
+control error control
+error control means
+control means error
+means error detection
+error detection correction
+talking about error
+data is transmitted
+changed or corrupted
+due to noise
+distortion or attenuation
+things may happen
+burst of noise
+similarly the data
+sending some data
+assume that data
+condition and error
+errors do occur
+bits were transmitted
+kind of error
+change has occurred
+lot of noise
+lot of data
+kind of transmission
+random errors change
+errors change bits
+change bits unpredictably
+unpredictably each bit
+changed these errors
+caused by thermal
+higher thermal noise
+level of thermal
+number of bits
+bits in succession
+caused by faults
+faults in electrical
+errors as inevitable
+frame the rate
+rate of error
+high or low
+probability of error
+single bit error
+error called bit
+bit error rate
+undetected bit errors
+detected bit errors
+detect which bits
+error detection scheme
+detecting it specifically
+error rate probability
+errors are sort
+sort of independent
+case with burst
+noise will introduce
+introduce an error
+error will creep
+frame and higher
+higher pb leads
+leads to lower
+specification for isdn
+remember isdn means
+isdn means integrated
+means integrated service
+integrated service data
+service data network
+observed 1-minute intervals
+1-minute intervals suppose
+undetected bit error
+error should occur
+occur per day
+number of frames
+transmitted per day
+desired frame error
+frame error rate
+orders of magnitude
+magnitude too large
+large to meet
+meet our requirements
+requirements that means
+fairly good error
+good error rate
+frames in error
+probability we require
+faulty data frame
+frame per day
+transmission line directly
+starting a car
+out some kind
+kind of electrical
+starting a machine
+give some kind
+mixer or grinder
+house may give
+error all kinds
+kinds of sources
+detect such errors
+redundancy that means
+means you put
+kind of redundancy
+system in order
+reliability of optical
+form of extra
+purpose of error
+detection and correction
+correction so edc
+redundant that means
+protected by error
+include header fields
+detect the error
+error error detection
+protocol may miss
+miss some errors
+level of errors
+figure the larger
+larger edc fields
+edc fields yield
+yield better detection
+put larger redundancy
+coming we add
+add some extra
+extra bits edc
+bit error prone
+error prone link
+run some algorithm
+method for finding
+so-called hamming distance
+two bit patterns
+details of hamming
+hamming distance suppose
+two code words
+words by hamming
+order to find
+xor the two
+count the number
+two corresponding bits
+number of positions
+code words differ
+set of code
+two hamming distance
+minimum hamming distance
+bit has flipped
+word will move
+received code word
+set of keywords
+correct the error
+nearest code word
+distance is minimum
+simplest error detection
+check it appends
+appends a parity
+block of data
+sort of added
+kinds of parity
+parity odd number
+number of bit
+detected why odd
+due to error
+error an undetected
+undetected error occurs
+occurs the technique
+high data rates
+bit is suppose
+original bit pattern
+make the number
+add a bit
+added parity bit
+data plus parity
+odd in odd
+valid code words
+number of position
+two different code
+valid code word
+original intended transmitted
+intended transmitted code
+hamming distance minimum
+two valid code
+transmitted as invalid
+error has occurred
+original transmitted code
+detect an error
+case of parity
+kind of scheme
+mentioned that odd
+number of points
+number of errors
+single parity bit
+parity bit error
+bit error checking
+error checking running
+running the parity
+xors and invert
+device can work
+character by counting
+counting the number
+character and parity
+drawback with parity
+parity testing errors
+two errors occur
+bits are changed
+extension of parity
+block parity testing
+blocks of bits
+bits a parity
+add a parity
+blocks the parity
+parity is calculated
+calculate the parity
+side we calculate
+row the parity
+test will fail
+correct a single
+correct single errors
+errors in block
+kind of parity
+transverse parity bits
+kind of trouble
+columns which show
+show parity error
+column will match
+error detecting codes
+error correcting codes
+comparing error detection
+detection and error
+correcting codes require
+require more number
+detecting an error
+correct an error
+cds use error
+codes to ensure
+ensure high-quality sound
+high-quality sound reproduction
+error correcting code
+code to handle
+block parity check
+correct more number
+suppose some alphabet
+error got introduced
+invalid code word
+odd parity kind
+kind of thing
+number and odd
+request for retransmission
+efficiency may improve
+send more bits
+sort of losing
+amount of error
+checking for errors
+checksum this checksum
+fields for accounting
+order you sum
+occur during transmission
+transmission then checksum
+data will differ
+data may arrive
+case the checksum
+match so checksum
+calculated by adding
+checksum is longer
+transmitted but checksum
+so-called cyclic redundancy
+cyclic redundancy code
+type of checksum
+undetected a lot
+types of errors
+errors are caught
+technique may sound
+calculating a crc
+crc is easy
+implemented in hardware
+hardware using linear
+linear shift registers
+kind of circuit
+crc is preferred
+data link protocols
+essentially the data
+data is regarded
+long binary number
+adding the header
+add some place
+place holder digits
+polynomial using modulo
+kind of division
+division only thing
+block of bits
+frame check sequence
+number the receiver
+divides the incoming
+number ; find
+find the crc
+crc ; add
+number this longer
+number is supposed
+crc bits computed
+pattern is represented
+kind of operation
+sort of exhaust
+linear feedback shift
+feedback shift register
+register the lfsr
+divides a message
+suitably chosen divisor
+chosen divisor polynomial
+constitutes the fcs
+commonly used divisor
+bit binary number
+cover a lot
+numbers of errors
+detect a lot
+cases of error
+ccitt = x16
+x16 + x12
+polynomials will give
+people have found
+out some properties
+out some good
+lot of errors
+errors so hdlc
+kind of errors
+slightly higher level
+talking about errors
+errors and error
+parity and crc
+detection or error
+error correction kind
+kind of schemes
+garble the data
+error correction scheme
+correction and error
+error detection schemes
+detection or correction
+correction we require
+require some higher-level
+higher layer data
+layer data link
+unrestricted simplex protocol
+stop and wait
+protocol ; stop
+noisy channel means
+means that arq
+stands for acknowledgement
+request that means
+means an acknowledgement
+acknowledgement is expected
+expected one bit
+bit sliding window
+sliding window protocol
+similar to stop
+back n arq
+window with selective
+selective reject arq
+first is unrestricted
+sender to fetch
+fetch a packet
+construct a frame
+send the frame
+sending without bothering
+receives a frame
+frame from physical
+layer and passes
+passes the packet
+packet to network
+layer the faulty
+responsibility of higher
+higher layer systems
+higher layer application
+bits are bad
+sequence of frames
+errors can occur
+fails to arrive
+noise burst destroying
+destroying the frame
+frame beyond recognition
+recognizable frame arriving
+error a frame
+lost see sender
+receiver the sender
+sender is sending
+sending a number
+frame n frame
+make the worst
+worst case assumptions
+control is concerned
+concerned with insuring
+possibly in order
+required are acknowledgment
+timer and sequence
+typically reliable delivery
+delivery is achieved
+acknowledgments with retransmission
+retransmission ? paradigm
+returns a special
+indicating the correct
+means the receiver
+send an acknowledgment
+receiver also returns
+returns a negative
+incorrectly received frame
+retransmit a frame
+timer to expire
+expire the point
+two way communication
+communication the sender
+sending the frames
+receiver is sending
+sending the acknowledgments
+send a negative
+send any acknowledgment
+acknowledgment or negative
+arrived the receiver
+taking this bit
+bit by bit
+make it simpler
+thing we require
+timer one problem
+problem simple acknowledgment
+negative acknowledgment schemes
+acknowledgment schemes fail
+fail to address
+address is recovering
+fails to solicit
+solicit an acknowledgment
+acknowledgment becomes lost
+lost ? retransmission
+produce an acknowledgement
+acknowledgement when sending
+sending a frame
+schedule a timer
+retransmit the frame
+clock was started
+system has transmission
+receiver to process
+reach the sender
+out that means
+sends the frame
+suppose the frame
+acknowledgment was lost
+acknowledgement was lost
+send this frame
+kind of protocol
+frames were supposed
+so-called sequence number
+number so retransmission
+introduces the possibility
+possibility of duplicate
+frames to suppress
+add sequence number
+receiver can distinguish
+frames are numbered
+happened the sender
+stated are referred
+automatic repeat request
+turn an unreliable
+unreliable data link
+versions of arq
+wait flow control
+flow control technique
+technique the source
+source station transmits
+transmits a single
+acknowledgment to arrive
+stations reply arrives
+repeat the frame
+sender which fetches
+fetches a packet
+packet from network
+frame to physical
+buffer in whichever
+system is handling
+handling this data
+data link control
+side also waits
+receive a frame
+pass a packet
+continue our discussion
+continue this discussion
+wait protocol good
+protocol good day
+discussing about stop
+wait protocol .we
+finish our discussion
+sender station sends
+sends one packet
+case the sender
+case that means
+retransmit that frame
+frame retransmit whichever
+retransmit whichever frame
+point to note
+point to point
+point to multi
+multi point communication
+high level data
+level data link
+protocol or hdlc
+hdlc in short
+level any longer
+hdlc is important
+important data link
+data link protocol
+protocol this hdlc
+link control protocols
+suggest three types
+types of stations
+kind of information
+general data link
+examples of data
+examples of mac
+kinds of networks
+error and data
+widely used systems
+type of communication
+mac is done
+networks prof sujoy
+prof sujoy ghosh
+sujoy ghosh dept
+dept of computer
+computer science& engineering
+science& engineering iit
+protection and restoration
+employed in optical
+schemes of protection
+outline of presentation
+network is unreliable
+failures can occur
+node may fail
+link may fail
+fiber optic line
+line may cut
+digging a hole
+node might fail
+failures at nodes
+deploy optical networks
+network the core
+service provider attempts
+attempts to give
+give a high
+level of service
+service although failures
+failures are unavoidable
+unavoidable in real
+give some reliability
+network in order
+order to achieve
+mechanism to recover
+recover from network
+prevent the lot
+talking about protection
+low physical level
+layers like data
+protection is sort
+sort of implemented
+implemented at higher
+tolerate a small
+amount of data
+provide reliable communication
+reliable communication service
+fast and routes
+provide more efficient
+routes or additional
+techniques for protection
+protect a path
+protect a link
+protection this depends
+considerations and tradeoffs
+support for fast
+talking about earlier
+calling them client
+tolerate some small
+loss so depending
+service will fail
+protection or restoration
+layer we require
+require some switching
+layer ? hardware
+put in order
+support for low
+low priority traffic
+priority traffic supported
+bandwidth ; traffic
+dropped in case
+order to give
+give some protection
+naturally the redundant
+network to carry
+carry the low
+naturally the provision
+support for mesh
+topologies ? mesh
+topologies are bandwidth
+fast signaling mechanism
+flexibility in choice
+choice of routes
+routes by preplanned
+matter of fact
+remember our discussion
+types of topologies
+ring and mesh
+set a point-to-point
+kind of reliability
+sonet a sonet
+form of ring
+mutually touching rings
+telecom people put
+rings through fiber
+fiber optic networks
+networks the rings
+easy to handle
+discuss the protection
+mechanism in ring
+wider geographical area
+geographical area ring
+mesh a mesh
+nodes are connected
+giving proper protection
+two alternatives paths
+give protection giving
+protection giving protection
+protection in mesh
+considerations are maintenance
+maintenance of large
+large distributed routing
+distributed routing tables
+date topology maps
+thing as links
+recomputed and stored
+failure for mesh
+talk about path
+path to guarantee
+guarantee that data
+show the primary
+channel our communication
+link please note
+backup or secondary
+share any link
+primary path fails
+ways to protect
+ways of provisioning
+provisioning the extra
+extra bandwidth capacity
+divided as dedicated
+dedicated path protection
+shared path protection
+path protection dedicated
+protection dedicated path
+protection and shared
+signal is coming
+two different links
+switch the switch
+determines which signal
+top one fails
+kind of hot
+source of information
+primary one fails
+give an alternate
+dedicate path protection
+dedicated alternative path
+shared mode protection
+carrying any signal
+source is passing
+switch will flip
+signal under normal
+share this path
+mode of protection
+line is sharing
+mode of operation
+operation this part
+switch could switch
+switch the signal
+carrying the signal
+switch may sense
+carrying some low
+low priority data
+fiber would switch
+switch to give
+give the services
+experienced a link
+protection that means
+number of paths
+give a protection
+link has failed
+dedicated link protection
+shared link protection
+protection is practical
+implemented this link
+protection may fail
+compare between path
+switching and line
+scheme and line
+switching is finer
+span protection span
+two edge connected
+edge connected i.e
+two edge disjoint
+edge disjoint paths
+pair of nodes
+single edge failure
+failure can disconnect
+disconnect the network
+ring simple minded
+simple minded scheme
+edge or node
+node disjoint paths
+paths and provisioning
+double the number
+wise mutually node
+node or edge
+lot of extra
+problem of coordination
+cycles in mesh
+layer and mesh
+protection of mesh
+networks to protect
+protect the mesh
+single unit pre-computed
+unit pre-computed routes
+pre-computed routes means
+routes and alternative
+routes are pre-computed
+protection is protection
+route per light
+route per failure
+on-the-fly route computation
+centralized route computation
+computation and coordination
+coordination route computation
+coordination are done
+done at end
+nodes or distributed
+distributed route computations
+path this alternate
+path please note
+switch the entire
+path you switch
+takes a diversion
+re-compute the path
+talked about protection
+form a cycle
+cycle ? cycle
+cycle of provisioning
+provisioning of light
+link in-between breaks
+form these cycles
+ready and pre-computed
+working and protection
+fibers the working
+shown in solid
+lines whereas protection
+shown with dashed
+level of protection
+network ; depending
+put your protection
+unidirectional light path
+path from node
+link bc fails
+path is rerouted
+rerouted by nodes
+point in coming
+doing line protection
+point i continue
+taking a local
+case of failure
+taking a global
+entire global picture
+node is coming
+erroneous connection due
+nodes as link
+so-called race condition
+two different failures
+kinds of things
+happen after node
+fails ? node
+connected to node
+invoke line protection
+line protection independently
+differently as failure
+failure of link
+lead to race
+advantages and disadvantages
+disadvantages of protection
+bit of restoration
+protection is simple
+require much extra
+ring would sort
+back in action
+higher layer protocols
+recover from single
+single link faults
+multiple link faults
+kinds of funny
+usage of resource
+lot of resources
+restoration and link
+compute the path
+resource is reserved
+current actual situation
+protocol for keeping
+compute some root
+reserve the path
+restore the original
+path is discovered
+practical than path
+link restoration path
+restoration path restoration
+path restoration means
+means the path
+out an alternative
+find an alternative
+disadvantages of restoration
+recover from multiplex
+multiplex element faults
+protocol to exchange
+find the current
+situation and form
+form the alternatives
+usage of resources
+requires extra process
+set up path
+path or reserve
+comparison between protection
+protection the resources
+resources are reserved
+restoration the resources
+dynamically computed resource
+computed resource efficiency
+protection is short
+restoration can survive
+survive under multiple
+survivable after multiple
+services so restoration
+handle multiple faults
+multiple faults implementation
+simple and restoration
+naturally more complex
+talk about physical
+links we talk
+talk about virtual
+virtual wavelength paths
+paths also routing
+controlled or distributed
+distributed ; resource
+reservation are done
+topic of fault
+management in ring
+ubiquitous in wan
+people will love
+love these things
+give very high
+kind of topology
+kind of protection
+two different cases
+unidirectional path switch
+path switch rings
+rings and bidirectional
+bidirectional line switch
+line switch rings
+rings or upsr
+upsr and blsr
+diagram of upsr
+protection fiber working
+fiber working fiber
+direction and protection
+counter clockwise direction
+protection fiber part
+unidirectional path switched
+path switched ring
+limitations of upsr
+reuse the fiber
+nodes are side
+side by side
+sort of covered
+spatially reuse fiber
+reuse fiber capacity
+ring each bidirectional
+bidirectional sonet sdh
+sonet sdh connection
+wavelength the entire
+adms of sonet
+efficient for lower-speed
+lower-speed access networks
+link the relays
+bidirectional line switched
+line switched rings
+rings or blsr
+talking about blsr
+spatial reuse capabilities
+capabilities and additional
+additional protection mechanisms
+mechanisms and adopts
+four-fiber bidirectional line
+line switched ring
+two working fibers
+two protection fibers
+two such working
+communicate both ways
+communication so spatial
+talking about bidirectional
+bidirectional traffic supports
+pre-compute a span
+case of line
+version of blsr
+fibers are working
+fibers that means
+give the protection
+fiber that means
+reserve the resource
+sense a failure
+adjust the switch
+span or working
+transmission receiver pair
+reuse in upsr
+capacity is equal
+working capacity link
+capacity link failure
+failure is path
+case of upsr
+upsr or span
+span or line
+blsr in case
+direction node failure
+protection and line
+line protection restoration
+restoration is faster
+faster in upsr
+slower in blsrs
+blsrs and restoration
+complexity is low
+high and high
+high another thing
+thing we talked
+deploy your network
+failure is acceptable
+two different hubs
+hubs take independent
+destination this shows
+shows a dual
+homing to handle
+hub on node
+ring you communicate
+communicate with hub
+communicating with hub
+mentioned this point
+protection mechanism built
+wdm link carrying
+link carrying sonet
+carrying sonet traffic
+working fiber pair
+pair and protection
+protection fiber pair
+pair please note
+multiple virtual links
+link is cut
+traffic is restored
+layer that means
+assign new wavelengths
+sonet is riding
+sonet on top
+top of sonet
+sonet line terminal
+line terminal equipment
+reroute the traffic
+protections at multiple
+sort of cancel
+layers are sort
+protocol and give
+redo some part
+duplicating the work
+protection at multiple
+advantage of optical
+optical layer protection
+protection ? speed
+speed and efficiency
+traffic in units
+units of light
+path the granularity
+giving the protection
+level of granularity
+conditions when optical
+optical and client
+dimension to play
+wdm that means
+wavelength path selection
+select two independent
+two independent light
+independent light paths
+signal is bridged
+protection and working
+signal in case
+operational light path
+revertive or non
+non revertive switching
+signaling is required
+form of entire
+form of light
+paths or wavelengths
+pre-computed and pre-reserved
+case of restoration
+critical the problem
+critical the application
+multiple access good
+access good day
+day so today
+talk about multiple
+stack the top
+presentation session transport
+session transport network
+transport network link
+link and physical
+networks we sort
+sort of ventured
+coordinates competing request
+competing request request
+medium that means
+object of contention
+medium access control
+access control protocol
+sharing of link
+link and transport
+transport of data
+general the description
+share a link
+question of committing
+question of transport
+connected the nodes
+computers routers switches
+two networking nodes
+cable copper cable
+link that means
+question of reliable
+transfer of data
+free space transmission
+question of sharing
+sharing this medium
+discussion about topology
+topology of networks
+number of nodes
+nodes are hanging
+communication is taking
+kind of competition
+competition or sharing
+thing so examples
+examples of contention
+based or aloha
+aloha and slotted
+talk about satellite
+csma it stands
+stands for carrier
+carrier sense multiple
+sense multiple access
+access or csma
+access with collision
+carrier science multiple
+science multiple access
+avoidance and things
+aloha slotted aloha
+aloha for satellite
+satellite csma csma
+specific specifically csma
+contention based mac
+mac and round
+token based protocols
+two very common
+bus and token
+discussing these computer
+kharagpur lecture-18 satellite
+lecture-18 satellite communication
+component of world
+world wide communication
+communication through satellite
+fairly mature technology
+improvements are taking
+taking place satellite
+place satellite communication
+wide communication infrastructure
+media access control
+handled in satellite
+electro magnetic field
+satellite communication satellite
+big microwave repeater
+microwave repeater repeater
+repeats the signal
+signal it takes
+sends it back
+transponders transponders listen
+spectrum each transponder
+transponder is listening
+spectrum it amplifies
+amplifies the incoming
+signal and broadcasts
+back to earth
+broadcast it back
+back so satellite
+strength of satellite
+signal can reach
+kinds of satellites
+orbit they travel
+takes to rotate
+satellite it amplifies
+signal and sends
+facing the satellite
+satellite and tracking
+tracking the satellite
+receives the signal
+horn this signal
+earth stations communicate
+stations communicate signals
+signals to satellite
+earth or base
+ground the satellite
+satellite then repeats
+repeats these signals
+link this feature
+feature is attractive
+attractive for distribution
+coming through cable
+coming from satellite
+back the signal
+receive the signal
+kind of applications
+applications like distribution
+distribution of television
+applications these signals
+signals and data
+distances for weather
+communication and global
+global positioning system
+satellite the space
+divided into sections
+bands have names
+ghz this part
+spectrum is reserved
+ghz for downlink
+ghz for uplink
+bandwidth for downlink
+bandwidth for uplink
+high by today
+compare with fiber
+medium of communication
+communication across continents
+continents the capacity
+capacity is low
+weather is bad
+kinds of extraneous
+lot of strong
+component of communication
+communication these days
+set of transponders
+accommodate greater number
+number of transponders
+uplink rain interference
+band c band
+sort of dish
+antenna for receiving
+receiving satellite signal
+size is smaller
+smaller and pizza
+rain and terrestrial
+band different parts
+parts of electromagnetic
+susceptible to interference
+interference and noise
+band has higher
+transponders are needed
+needed the equipment
+covers a greater
+transfer large volume
+volume of data
+data ; voice
+data and communication
+video conference satellite
+broadcast ; satellite
+point-to-point and point-to-multi-point
+communication are supported
+broadcast is supported
+supported point-to-multi-point communication
+video conference broadcast
+conference broadcast services
+broadcast services include
+services include television
+reach a large
+large geographical area
+cheaper than wiring
+covering long distance
+inherent high capacity
+fiber optic cable
+situations satellite retains
+retains its advantage
+transmit to places
+applications where satellites
+kind of system
+reachable and road
+kind of communication
+cover any area
+point in favor
+favor of satellite
+deployed at multiple
+mobile technology nowadays
+nowadays the first
+first thing people
+nearest base station
+satellite so mobility
+mobility and accessibility
+accessibility to places
+difficult to reach
+points of satellite
+high initial cost
+build the satellite
+launch vehicle involves
+vehicle involves high
+involves high investments
+investments but laying
+case by case
+basis and determine
+level about susceptibility
+susceptibility to noise
+noise and interference
+kinds of noises
+place and crowding
+crowding this shared
+significant disadvantage compared
+compared to terrestrial
+satellites are thousands
+thousands of miles
+miles above earth
+signal is travelling
+speed of light
+back down takes
+takes significant amount
+lot of implications
+implications like delay
+quality of service
+disadvantage and security
+medium is open
+data through satellite
+people to listen
+measure like encryption
+talk about encryption
+types of satellites
+types of orbits
+circular or elliptical
+orbits the circular
+orbits will centre
+foci at earth
+orbits above earth
+poles other orbits
+orbits are referred
+earth have significant
+implication in terms
+signal to travel
+classes of satellites
+geostationary orbit satellites
+geos ; medium
+medium earth orbit
+earth orbit satellites
+low earth orbits
+require high power
+reaches the satellite
+lot of power
+power in order
+order to power
+difficult to power
+battery that kind
+kind of battery
+reach a geostationary
+satellite the mobility
+mobility becomes difficult
+bandwidth ; medium
+kind of power
+kind of latency
+leo has low
+power and latency
+number of satellites
+means very small
+talk about vsat
+vsats have small
+main base station
+antenna is put
+put in place
+talk about geostationary
+type of satellite
+35,000 odd kilometres
+plane these satellites
+earth is moving
+satellite is moving
+satellite is stationary
+calculate this distance
+distance by finding
+equation and calculate
+put a satellite
+send a beam
+reasonable solid angle
+cover a large
+cover the entire
+sufficient to handle
+handle the bandwidth
+require these days
+band in space
+two such satellites
+signals will start
+two geostationary satellites
+satellites the geostationary
+crowded some nations
+put the satellite
+reserved some parking
+slots these parking
+good tracking properties
+properties that means
+weakens over great
+large the propagation
+talk in terms
+terms of milliseconds
+forced to talk
+terms of seconds
+northern and southern
+slide19 geo satellite
+satellite provides universal
+footprint its footprint
+means the area
+area of earth
+footprint it covers
+covers universal connectivity
+satellite parking slots
+crowded wide beams
+beams are circular
+vsats for point-to-point
+kind of distance
+distance that requires
+requires large transmitter
+large transmitter power
+transmitter power making
+making them large
+large and expensive
+considerable space delay
+delay and large
+large cell size
+means smaller number
+number of channels
+point in greater
+discuss terrestrial wireless
+terrestrial wireless communication
+amount of bandwidth
+bandwidth for communication
+voice channels require
+transponder can handle
+covering a large
+number of people
+people are constrained
+channels a large
+means a smaller
+number of channel
+density on earth
+transponder can carry
+voice channels fdm
+frequency division multiplexing
+early satellites nowadays
+satellites nowadays tdm
+mixture of tdm
+tdm and fdm
+cost of transmission
+transmission is independent
+independent of distance
+cost is constant
+security and privacy
+pose a problem
+problem as mentioned
+earlier so encryption
+encryption is essential
+achievable and setup
+require any setup
+middle earth orbit
+global wireless communication
+wireless communication coverage
+coverage they maintain
+miles from earth
+earth the moment
+head any longer
+meos and leos
+satellite is coming
+satellite will move
+happen with meos
+orbits around earth
+satellites are needed
+handoffs are required
+satellite has moved
+link will break
+break in order
+handoff of communication
+two end points
+points can continue
+required as satellite
+orbit and transmit
+transmit data rate
+kbps transmission delay
+low earth orbiting
+earth orbiting satellites
+flock of birds
+birds you require
+require a lot
+lot of satellites
+satellites is visible
+point in earth
+give continuous coverage
+satellites this cell
+order to cover
+orbiting at constant
+travel very fast
+fast to avoid
+avoid gravity forces
+kbps it travels
+mobile voice low
+low and high-speed
+data ; internet
+access via mobile
+phones and pdas
+pdas and gps
+so-called sat phones
+dual linked due
+require to reach
+reach the satellite
+standard cell phone
+give lower space
+lower space delay
+satellites keep moving
+set of satellites
+offered mobile telephony
+paging and data
+out of service
+service what happened
+sat phone services
+kinds of technology
+technology like fiber
+terrestrial wireless technology
+wireless technology developed
+market was captured
+moving very fast
+handoff from satellite
+satellite to satellite
+satellite to make
+make it low
+communication infrastructure majority
+terrestrial wireless nearby
+efforts to revive
+revive this company
+bankrupt at present
+ambitious ongoing project
+project called teledesic
+teledesic in leo
+satellites to provide
+provide low-cost high-speed
+low-cost high-speed internet
+high-speed internet access
+networking and teleconferencing
+delay is lower
+comparable to terrestrial
+battery powered handheld
+powered handheld devices
+devices however cell
+giving a total
+channels or total
+globally because terrestrial
+terrestrial service providers
+service providers give
+providers give millions
+millions of channels
+project went bankrupt
+talk about vsats
+watt transmitter power
+speed for point-to-point
+communicate the communication
+delay is doubled
+satellite modem kind
+usual two hubs
+combinations of tdm
+handling the mac
+gps satellite constellation
+force another gps
+satellites are visible
+locate any position
+application of gps
+put that antenna
+car as shown
+measuring the car
+places in europe
+reach the final
+advantages of avl
+automatic vehicle location
+despatch ; customer
+service ; safety
+safety and security
+security ; digital
+messaging ; dynamic
+dynamic route optimization
+optimization and driver
+shows a mobile
+mobile gps unit
+gps unit located
+truck with gps
+give faster dispatch
+dispatch of goods
+deliver a lot
+lot of goods
+lot of warehouses
+put these goods
+service and similar
+enhanced and sophisticated
+service through gps
+slide33 in conclusion
+communication will continue
+continue to serve
+serve where broadcasting
+broadcasting is essential
+terrain is hostile
+niche where rapid
+kind of situation
+set up disaster
+recovery and relief
+satellite because satellite
+combination with terrestrial
+terrestrial radio links
+radio links fiber
+hold the advantage
+works for satellite
+class of media
+access control technique
+random access protocol
+mentioned random access
+random access protocols
+talked about token
+talked about random
+access protocol random
+protocol random access
+packet to transmit
+transmit at full
+full channel data
+channel data rate
+doing the random
+knowledge or consideration
+people are doing
+two transmitting stations
+messages are garbled
+sort of backup
+important this backing
+backing a random
+random number generated
+two different numbers
+two different points
+issue to ensure
+ensure the random
+transmitting nodes start
+nodes start transmitting
+collision random access
+random access mac
+access mac protocol
+mac protocol specifies
+recover from collisions
+aloha or slotted
+kind of random
+examples like csma
+csma csmacd csmaca
+examples of random
+access mac protocols
+mac protocols aloha
+csmacd and csmaca
+developed for packet
+system with uncoordinated
+uncoordinated users competing
+carrier sensing carrier
+sensing carrier sensing
+carrier sensing means
+strange at first
+media for satellites
+due to space
+milliseconds space delay
+channel is quiet
+handle the mac
+medium to find
+pure aloha protocol
+bit has collided
+garbled and lost
+detecting by listening
+listening to broadcast
+absence of acknowledgement
+user waits random
+waits random length
+mentioned various collision
+collision resolution algorithms
+transmit new frame
+transmitted the station
+station is stuck
+performance all frames
+divided into equal
+equal size slots
+transmit one frame
+receivers are synchronised
+slot so nodes
+start to transmit
+beginning of slots
+nodes are synchronized
+nodes detect collision
+making the slots
+ready to transmit
+node obtains fresh
+obtains fresh frame
+frame it transmits
+frame to send
+slot no collision
+node can send
+send new frame
+retransmits the frame
+slot with probability
+nodes ? nodes
+wanted to transmit
+transmit they start
+slot went empty
+slot is empty
+collision affected efficiency
+slotted aloha pros
+pros a single
+single active node
+rate of channel
+transmitting one active
+decentralized only slots
+slots in nodes
+efficiency ? efficiency
+long run fraction
+fraction of successful
+frames to send
+suppose n nodes
+send each transmitting
+probability that first
+node has success
+slot is equal
+.hence this value
+maximum theoretical efficiency
+achieve in slotted
+pure or unslotted
+frame first arrives
+immediately so collision
+probability actually increases
+increases a frame
+takes one unit
+things may collide
+frame will overlap
+node is equal
+node transmits multiplied
+letting n tend
+efficiency for transmission
+computer network developed
+number of competing
+competing lan technologies
+technologies but today
+dominate a lan
+newly emerging wireless
+emerging wireless part
+lan nowadays people
+people are talking
+talking about ethernet
+metropolitan network area
+talk about ethernet
+dominant data link
+link layer technology
+slide51 the multiple
+multiple access scheme
+scheme of ethernet
+ethernet is csmacd
+vary from system
+system to system
+means a network
+network to network
+bus we put
+put two nodes
+two extreme ends
+extreme ends suppose
+suppose now packet
+suppose the propagating
+packet for moving
+signal at end
+.so b starts
+.so the collision
+collision bus starts
+bus starts transmitting
+back the jam
+jam signal .so
+tau to reach
+noise so collision
+computer networks prof.sujoy
+networks prof.sujoy ghosh
+prof.sujoy ghosh lecturer
+good day today
+ubiquitous lan technology
+lan technology today
+newly emerging world
+emerging world spot
+metropolitan area network
+network also ethernet
+dominating data link
+ethernet ? first
+single communication channel
+kind of medium
+common physical organizations
+organizations of ethernet
+machines were connected
+unlike the satellite
+advancement the multiple
+multiple access technique
+technique of ethernet
+small geographical area
+machine are received
+machine is received
+give the destination
+frame is meant
+machines are supposed
+so-called same collision
+machines are sending
+packets will collide
+packet to send
+bus the packet
+travels both ways
+copy the frame
+compare the destination
+receive the packets
+i.e the mode
+operation is broadcasting
+address a packet
+subset of machines
+multicasting this mode
+end of spectrum
+multicast ; meaning
+receivers in order
+receivers can receive
+give a special
+kind of address
+discussion on satellite
+protocol called aloha
+versions of aloha
+data to send
+pure aloha scheme
+number of attempts
+attempts per packet
+gee of pure
+maximum slotted aloha
+considerably better performance
+similar that means
+means we broadcast
+kind of aloha
+local area network
+sense the carrier
+refrain from sending
+sensing we discussed
+discussed this earlier
+sensing in satellites
+long time back
+lan the timeframes
+medium and find
+reduces the collision
+doing carrier sensing
+number of collisions
+compared to pure
+detect the collision
+part the full
+full mac protocol
+dynamic channel allocation
+channel allocation technology
+moved to fast
+collision and switched
+access we improve
+improve the performance
+introduce carrier sensing
+sensing each hosts
+data being transmitted
+hear any data
+finishes an inter
+inter frame gap
+allowed to pass
+host starts transmitting
+transmitting its frame
+propagation delay propagation
+delay propagation delay
+propagation delay means
+means two nodes
+entire packet transmission
+naturally the distance
+distance and propagation
+role to play
+suppose this node
+node b starts
+carrier to sense
+started in terms
+terms of absolute
+starts its transmission
+transmission is lost
+probability of collision
+probability will depend
+frame to reach
+takes a finite
+listen before transmit
+channel is sensed
+persistent csma means
+csma means retry
+immediately when channel
+channel becomes idle
+csma that means
+node is ready
+gap and start
+collision to subside
+kind of instability
+csma we call
+call a strategy
+strategy as pure
+persist that means
+ready to send
+interval he generates
+generates some random
+numbers and decides
+stations may sense
+sense the channel
+delay in case
+case of collision
+group of protocols
+significant space delay
+csma is good
+csma and non-persistent
+non-persistent csma non-persistent
+csma non-persistent means
+draw the throughput
+throughput versus load
+versus load curve
+kind of curve
+throughput will depend
+low persistent csma
+steeply like aloha
+csma ; collision
+collision is detected
+transmissions are aborted
+reducing channel wastage
+detection is easy
+easy in wired
+measures signal strengths
+strengths and compares
+transmitted and received
+detect a collision
+complicated in wireless
+discuss wireless lans
+detection is difficult
+dominant lan technology
+cost and today
+ethernet is cheap
+cheap ethernet network
+ethernet network interface
+network interface card
+interface card costs
+widely used lan
+simpler and cheaper
+cheaper than token
+lans and atm
+mbps ethernet started
+standard today people
+giga bit ethernet
+backbones of lans
+couple of years
+reached some desktop
+desktop so ethernet
+widely used technology
+diagram to show
+transceiver will tap
+basically the nic
+discussed the basic
+technology already ethernet
+assumes a bus
+station has equal
+network is idle
+idle before transmitting
+network to sense
+workstation is transmitting
+station will transmit
+stations will listen
+listen and sense
+sense an idle
+transmit a message
+station must perform
+perform collision detection
+detection to detect
+message was destroyed
+detecting station broadcasts
+broadcasts a collision
+collision or jam
+signal to alert
+alert other stations
+collision has occurred
+occurred each transmission
+station then waits
+waits a random
+attempting the transmission
+step by step
+step ; adapter
+adapter gets datagram
+layer and creates
+creates a frame
+frame that means
+means it adds
+adds a header
+header to create
+create a frame
+channel is idle
+starts to transmit
+transmit the frame
+channel is busy
+transmits the entire
+frame without detecting
+detecting another transmission
+adapter is done
+detects another transmission
+transmission while transmitting
+aborts the transmission
+transmission and sends
+sends a jam
+forget about collision
+collision that means
+collision that collision
+collision after sending
+frame which collided
+nearby started transmitting
+collision to happen
+enters an exponential
+exponential back-off algorithm
+network is busy
+make the network
+network less loaded
+wait for longer
+generate this random
+exponentially increasing period
+higher random number
+chooses a random
+returns to step
+times it waits
+jam signal makes
+transmitters are aware
+collision we send
+send a jam
+detects a collision
+collision and backs
+calculate the amount
+amount it backs
+i.e it waits
+adapt retransmission attempts
+attempts to estimated
+estimated current load
+load is heavy
+people in general
+general should refrain
+aim is increasing
+collisions is increasing
+allowed to increase
+node will choose
+choose a larger
+reducing the load
+system and increasing
+increasing the throughput
+slots or frames
+frames or idle
+defines this ethernet
+token bus token
+bus token ring
+couple of variants
+variants of ethernet
+excepting for minor
+describes the format
+type of encoding
+kind of encoding
+transmitting the frame
+frame the minimum
+length of frames
+varied from network
+suitable minimum length
+minimum length remember
+frame has reached
+reached whatever destination
+supposed to reach
+two other nodes
+frame has collided
+decipher the address
+frame the collided
+garbled the standard
+standard also makes
+makes some suggestions
+type of cabling
+suppose this propagation
+medium the collision
+minimum frame length
+length to ensure
+node has finished
+sending it ethernet
+defines a minimum
+minimum frame size
+i.e no frame
+bytes of payload
+payload remember payload
+link layer receives
+size is related
+type of media
+number of repeaters
+reach the furthest
+enhances the signal
+weaker and weaker
+amplified a repeater
+takes some incoming
+signal and amplifies
+repeaters might introduce
+introduce some delay
+collision comes back
+media and distance
+define a value
+starting to transmit
+transmit a frame
+frame and receiving
+receiving the first
+bits to last
+bus lan transmits
+lan transmits data
+mbps the speed
+speed of signal
+round-trip propagation delay
+station is pumping
+bits the frame
+round trip propagation
+trip propagation delay
+propagation delay divided
+bits this calculation
+bytes a margin
+margin of error
+related two nodes
+nodes are communicating
+ethernet and frame
+bytes the propagation
+calculate the distance
+calculate the propagation
+trip = tframe
+tprop so tprop
+distance is calculated
+kind of minimum
+bytes this standard
+lan reaches lengths
+bus lans longer
+composed of multiple
+multiple segments joined
+joined by in-line
+in-line passive repeaters
+travels down transmission
+put a repeater
+kind of repeater
+hub in-line passive
+cable the signals
+out the minimum
+passive repeater introduces
+introduces a delay
+segment four repeaters
+remember our propagation
+sender to detect
+frame all information
+network is organized
+organized into frames
+sending adapter encapsulates
+encapsulates ip datagram
+network layer protocol
+layer protocol packet
+packet in ethernet
+start of frame
+data may vary
+code which ethernet
+bytes we require
+bytes the minimum
+add this header
+header and trailer
+header the source
+source address destination
+address destination address
+length is required
+version of ethernet
+layer protocol type
+details quickly sending
+quickly sending adapter
+datagram ethernet frame
+frame ; preamble
+byte with pattern
+bytes of pattern
+receiver and sender
+sender clock rates
+frame with matching
+matching destination address
+address resolution protocol
+lecture it passes
+net layer protocol
+discards the frame
+address and source
+form the type
+higher layer protocol
+ipx and apple
+talk what type
+type of network
+link layer protocol
+supporting a number
+number of network
+network layer protocols
+multiplexing and de-multiplexing
+two different network
+type is mentioned
+de-multiplexing properly crc
+crc or cyclic
+code is checked
+error is detected
+thing to understand
+unreliable connectionless service
+handshaking between sending
+sending and receiving
+connectionless the sender
+sender simply sends
+sends some packet
+two the actual
+quality of connections
+quality of distance
+physical layer parameters
+communication is reliable
+shows some error
+drop the packet
+send any acknowledgement
+sender the sender
+packet is dropped
+dropped that frame
+frame is dropped
+acks or negative
+adapter the stream
+stream of datagrams
+passed to network
+handle these gaps
+couple of words
+addresses ? remember
+addresses every network
+unique 46-bit serial
+46-bit serial number
+addresses are distributed
+distributed by ieee
+ieee a manufacturer
+manufacturer who manufactures
+manufactures ethernet nic
+means ethernet network
+network interface cards
+apply to ieee
+chunk of addresses
+block of addresses
+put these addresses
+centrally from ieee
+two mac addresses
+two network interface
+two ethernet cards
+addresses being distributed
+ieee ieee allocates
+allocates these numbers
+numbers to network
+network card manufacturers
+destination and source
+source address fields
+set aside remember
+bit is set
+means that frames
+medium is broadcast
+special address starting
+bits are set
+frames are broadcast
+meant to match
+source and destination
+connectionless and unreliable
+care for reliability
+host is guaranteed
+send its frame
+probability of doing
+find it busy
+happen an indefinite
+number of times
+times becomes lower
+lower and lower
+send your frame
+host to transmit
+transmit its frames
+real-time computing application
+bus type network
+demand that data
+data be transmitted
+suppose each station
+acquires the channel
+calculation of channel
+transmit mean frame
+sending a large
+channel efficiency increases
+send in small
+smaller this plot
+number of stations
+versions of ethernet
+ethernet like switched
+networks are connected
+computer networks lecture
+engineering i.i.t kharagpur
+i.i.t kharagpur modern
+kharagpur modern internet
+discussion about ethernet
+basic data link
+popular and nowadays
+widely used system
+approach to ethernet
+basic ethernet protocol
+people are sort
+sort of shifting
+things like switches
+speed of network
+shift in emphasis
+emphasis in modern
+switched ethernet kind
+kind of concept
+speed is increasing
+bit about ethernet
+discuss the modern
+ethernet is evolved
+ethernet the topology
+pattern of workstations
+cables and repeaters
+two primary limitations
+accuracy and end-to-end
+transmission time transmission
+transmission accuracy means
+means that ethernet
+protocol in sense
+lot of acknowledgement
+acknowledgement or negative
+acknowledgement and things
+essentially the transmission
+distance for accurate
+transmission is determined
+determined by signal
+kind of cable
+things this end-to-end
+rate or things
+things to move
+ethernet physical layer
+physical layer standards
+mbps base band
+base band transmission
+thick coaxial cables
+base band transmissions
+channel or frequency
+versions of utp
+cable like categories
+maximum segment length
+fibre optic cable
+fibre optic components
+components became cheap
+people have moved
+rate the point
+longer than copper
+avoid copper cable
+cable most times
+mention the distance
+distance the nodes
+nodes per segment
+topic of nodes
+constraint these days
+networked for completeness
+make a mention
+maximum cable length
+thin coaxial cable
+classical bus topology
+bus topology repeaters
+multiple segments repeater
+segments repeater repeats
+repeater repeats bits
+physical layer device
+strengthening the signal
+network adapter pushes
+pushes some signal
+transmitted packet travels
+thick coaxial cable
+unit and protocol
+protocol control firmware
+physical layer kind
+kind of device
+regenerates the signal
+flexibility in network
+extend your lan
+sort of increase
+putting another segment
+side of repeater
+extend the distance
+signal may travel
+repeater is ethernet
+hub a hub
+provide a collision
+domain and replace
+replace the cable
+means it regenerates
+signal this connects
+hub it connects
+ethernet cable segments
+segment were allowed
+allowed to exceed
+exceed the maximum
+number of attached
+quality would deteriorate
+put this repeater
+increase the total
+pair of segments
+repeater to provide
+provide signal amplification
+amplification and regeneration
+regeneration to restore
+restore a good
+good signal level
+level before sending
+essentially physical layer
+physical layer repeaters
+repeaters ; bits
+hub adapters detect
+detect the collisions
+collisions and provide
+provide net management
+net management functionality
+passive its active
+component is restricted
+amplifies and regenerates
+intelligence is concerned
+two signals coming
+two different ports
+collision domain inside
+inside the hub
+provide some net
+functionality that means
+kinds of devices
+devices the point
+kind of entity
+user has put
+things which connect
+device is functioning
+switches and managed
+central network station
+station may interrogate
+interrogate and find
+hubs are costlier
+costlier than unmanaged
+picture of hub
+co-axial cable coming
+joint is feeding
+number of ports
+number of segments
+part is concerned
+unshielded twisted pair
+twisted pair cable
+dominant physical medium
+varying technology today
+today for local
+local area networks
+cable data transmission
+distance the impedance
+cable the transmission
+m time delay
+involved the first
+first segment delay
+middle segment delay
+last segment delay
+delays really add
+data in tabular
+types of cables
+fibre optic kind
+kind of cables
+demand for bandwidth
+lan it moved
+moved much faster
+faster when lan
+wanted to move
+ethernet one thing
+pair or utp
+cables are preferred
+connection from end
+end to end
+unlike the coaxial
+connected at intermediate
+put a connector
+kind of connector
+two end point
+end point connections
+two machines network
+support fast ethernet
+order of magnitude
+decrease so depending
+reduce the bandwidth
+transmission encoding data
+mbps using manchester
+encoding would create
+create a bit
+mhz of analog
+cable is rated
+keeping some margin
+transmitting a signal
+multiple or multilevel
+encoding to reduce
+scheme is required
+multiple level encoding
+level encoding scheme
+multiple level transition
+mhz the encoding
+types from low
+low to high
+levels or multiple
+levels of signals
+signals this reduces
+reduces the net
+net analog bandwidth
+analog bandwidth requirement
+speed was achieved
+infrastructure so bandwidth
+required for mlt
+half the bandwidth
+two-level scheme half
+figure long stream
+stream of zeros
+line to hold
+hold a constant
+voltage and lose
+read the signal
+pattern 4b5b encoding
+sequence we introduce
+introduce a 5-bit
+synchronization this pushes
+four twisted pairs
+pairs will transmit
+station for collisions
+signal is transmitted
+signal is broken
+broken into 8-bit
+sequence is represented
+requirement of speed
+techniques were developed
+ethernet could move
+existing physical infrastructure
+infrastructure like wiring
+developed fast ethernet
+ethernet is done
+done with cabling
+100base-t4 with category
+people are conservative
+conservative and limit
+advantages the advantage
+station a maximum
+increase the distance
+hub for upgrading
+hubs or switches
+ports to handle
+10base-t ; nics
+ports that handle
+handle either auto
+auto sensing ports
+ports an nic
+senses the network
+supports a rate
+nic will operate
+end can handle
+hubs for connecting
+maximum two hubs
+people have migrated
+migrated from hubs
+hubs to switches
+topic about hubs
+hubs and switches
+era of gigabit
+ethernet the gigabit
+routinely get gigabit
+connected with gigabit
+two computers connected
+computers connected straight
+hub which operates
+operates at gigabit
+links and shared
+shared broadcast channels
+standard ethernet frame
+ethernet frame format
+mode is full
+full duplex mode
+common one connected
+connected to computers
+configuration all lines
+lines are buffered
+port is buffered
+contention is impossible
+makes no sense
+talking about moving
+copper and fibre
+encoding the ethernet
+ethernet is moving
+moving really fast
+upgrading quite fast
+possibility of moving
+amazing for gigabit
+shows the multimode
+maximum segment size
+1000base-lx uses single
+single or multimode
+shielded twisted pair
+shared media lan
+stations must wait
+limitation of latency
+latency and congestion
+congestion with hubs
+switches packet switches
+give you improved
+improved security users
+users ? data
+control who receives
+receives what information
+information that means
+create a work
+group and make
+make users members
+lans these virtual
+management and limit
+limit the impact
+impact of network
+problems this switch
+give you full
+full duplex communication
+duplex one side
+half duplex channel
+work as full
+full duplex channel
+channel a hub
+simulates a single
+simulates a bridged
+computer per segment
+two different computers
+switch will buffer
+collision so collision
+switch may connect
+connect to hub
+hub may connect
+switches 10baset switches
+increasingly being replaced
+switches with auto
+auto sensing codes
+codes 100base-tx switches
+common these days
+hub would cost
+economy have improved
+improved gigabit ethernet
+gigabit ethernet switches
+advantages of switches
+number of ethernet
+limit on size
+size of switched
+networks you remember
+base tx hubs
+people moved to100base-tx
+moved from hubs
+delay and things
+switches have buffers
+number of switches
+connected to switches
+ethernet without collisions
+pairs or distinct
+pairs of people
+people can communicate
+two distinct pairs
+pairs of machines
+essentially a multi-interface
+filtering using lan
+addresses ; lan
+addresses mean mac
+mac addresses presently
+number of interfaces
+interfaces a modern
+hundreds of ports
+hundreds of machines
+switches can connect
+hierarchy or daisy
+two stations suppose
+make a loop
+connecting two ports
+create a lot
+lot of problem
+stations or switches
+ethernet frame switch
+frame switch plug-in
+switch plug-in card
+card it checks
+frame is copied
+grouped into small
+card this line
+card is similar
+ethernet a switch
+plug in card
+card is destined
+fabric this backplane
+active or passive
+backbone typically runs
+gbps backplane switch
+support a lot
+lot of machines
+two machines attached
+card transmit frames
+line card line
+destined to line
+handled one possibility
+card are wired
+form a local
+lan this lan
+local on-card lan
+csma may operate
+transmission per card
+made that line
+transmitting in parallel
+parallel each card
+frames are stored
+cards on board
+ports to receive
+receive or transmit
+full duplex operation
+talked about buffers
+buffers in packet
+switches we mentioned
+mentioned how buffers
+side and distributed
+out the switch
+point of view
+view of handling
+head of line
+full duplex transmission
+making a local
+allowing some kind
+kind of collision
+kind of switch
+frame is destined
+term called cut
+cut through switching
+forwarded from input
+input to output
+port without waiting
+bits are transmitted
+reduction in latency
+combinations of shared
+mbps or giga
+giga bit ports
+ports for uplinking
+hubs are remaining
+hubs will give
+computers are connected
+switch this switch
+switch might connect
+constitutes the lan
+pcs or machines
+connect their lans
+network of networks
+lot of networks
+millions of networks
+machines are connected
+internet this internet
+slightly more abstract
+connected these nodes
+adapters that means
+means the network
+adapter these nodes
+nodes may communicate
+focus our attention
+means the destination
+address is distributed
+adapters buy blocks
+blocks of addresses
+addresses from ieee
+bytes this card
+blocks from ieee
+sharing this lan
+adapter on lan
+unique lan address
+number of lan
+number of adapters
+kinds of addresses
+layer to decide
+order to reach
+reach its destination
+kind of relationship
+relationship with geography
+hardware or mac
+32-bit ip addresses
+network layer addresses
+ethernet or hardware
+physically connected interface
+48-bit mac address
+analogy of mac
+social security number
+address the question
+address ? address
+determine the mac
+two interrelated questions
+addresses from mac
+mac addresses address
+addresses address translation
+static or dynamic
+dynamic ; static
+static translation means
+static table static
+table static translation
+static translation requires
+requires a lot
+lot of book-keeping
+work from system
+protocol or automatic
+automatic resolution protocol
+so-called arp protocol
+dynamic address translation
+address translation scheme
+destination ip address
+local arp cache
+cache ? arp
+address to mac
+mac address mapping
+address will match
+arp table entries
+entries are cached
+automatically wash out
+arp uses layer
+node on lan
+arp table arp
+table arp table
+send a datagram
+address that means
+pay load form
+form a frame
+broadcasts an arp
+arp query packet
+address all machines
+machines on lan
+receive the arp
+query b receives
+receives the arp
+packet ; replies
+mac address pair
+table until information
+information that times
+arp is plug
+plug and play
+automatically nodes create
+create their arp
+table without intervention
+receive the request
+nodes may update
+transaction the cache
+cache is required
+required since broadcast
+talk about networks
+doing the broadcast
+broadcast is limited
+connected through routers
+specifically discuss bridges
+talking about local
+topic of today
+today is local
+internetworking ? internetworking
+internetworking is connection
+term internet today
+connecting different networks
+domains and networks
+set of nodes
+require the broadcast
+discover the mac
+computer networks
+networks prof
+sujoy ghosh
+ghosh department
+computer science
+engineering iit
+iit kharagpur
+kharagpur lecture
+error control
+control good
+good day
+last lecture
+data link
+link layer
+control error
+control means
+means error
+error detection
+detection correction
+data errors
+signal distortion
+wireless channel
+loose contact
+transmission line
+perfect condition
+transmitted bits
+data error
+transmission medium
+random errors
+errors change
+change bits
+bits unpredictably
+bit transmitted
+thermal noise
+higher thermal
+low level
+burst errors
+electrical equipment
+neighboring things
+electrical interference
+transmission errors
+transmitted frame
+finite probability
+single bit
+bit error
+error rate
+frame arrives
+bit errors
+undetected bit
+detected bit
+detection scheme
+rate probability
+longer frame
+defined specification
+isdn connections
+remember isdn
+isdn means
+integrated service
+service data
+data network
+digital service
+telephone lines
+1-minute intervals
+intervals suppose
+million bits
+error suppose
+frame length
+frames transmitted
+desired frame
+frame error
+thousand times
+good error
+thousand frames
+faulty frame
+higher probability
+faulty data
+data frame
+line directly
+wireless transmission
+electrical noise
+grinder running
+error rates
+general principle
+greater reliability
+optical networks
+extra bits
+correction bits
+original part
+introduced suppose
+data protected
+error checking
+include header
+header fields
+error error
+low figure
+larger edc
+edc fields
+fields yield
+larger redundancy
+datagram coming
+bits edc
+error prone
+prone link
+so-called hamming
+hamming distance
+bit patterns
+hamming codes
+distance suppose
+code words
+code word
+bit positions
+words differ
+minimum hamming
+interesting situation
+single error
+receiving end
+position assuming
+received code
+whichever value
+changed code
+valid code
+transmitted code
+nearest code
+coding scheme
+hamming code
+simplest error
+parity check
+parity bit
+extra bit
+odd parity
+odd number
+undetected error
+error occurs
+noise impulses
+high data
+data rates
+original bit
+bit pattern
+original pattern
+added parity
+minimum number
+distance minimum
+worst case
+bits flipped
+simple kind
+bit stream
+single parity
+checking running
+parity testing
+receiving device
+testing errors
+errors occur
+remains undetected
+block parity
+works suppose
+long stream
+first pattern
+parity bits
+parity test
+row intercept
+detect errors
+single errors
+transverse parity
+show parity
+parity error
+error detecting
+detecting codes
+error correcting
+correcting codes
+comparing error
+codes require
+high-quality sound
+sound reproduction
+slightly damaged
+correcting code
+noisy channel
+invalid code
+parity kind
+error correction
+optimal amount
+control purpose
+arbitrary order
+number calculated
+received data
+transmitted checksum
+simple checksum
+last number
+so-called cyclic
+cyclic redundancy
+redundancy code
+sophisticated type
+practice calculating
+linear shift
+shift registers
+link protocols
+long binary
+binary number
+crc purpose
+place holder
+holder digits
+generator polynomial
+bit block
+transmitter generates
+bit sequence
+frame check
+check sequence
+resulting frame
+predetermined number
+receiver divides
+incoming frame
+longer number
+receiver side
+data bits
+crc bits
+generated polynomial
+so-called polynomial
+divisible modulo
+crc process
+linear feedback
+feedback shift
+shift register
+lfsr divides
+message polynomial
+chosen divisor
+remainder constitutes
+divisor polynomials
+bit binary
+sixteenth position
+fifteen position
+0th position
+polynomial chosen
+odd numbers
+crc ccitt
+8-bit thing
+eighth position
+first position
+atm crc
+error coverage
+good properties
+good polynomials
+higher level
+lower levels
+lower level
+small amount
+correction kind
+vast noise
+correction scheme
+detection schemes
+undetected errors
+higher-level schemes
+parity crc
+higher layer
+layer data
+unrestricted simplex
+simplex protocol
+wait protocol
+wait arq
+channel means
+arq stands
+acknowledgement request
+bit sliding
+sliding window
+window protocol
+selective reject
+reject arq
+simplest situation
+network layer
+physical layer
+receiver end
+receiver waits
+faulty things
+layer systems
+layer application
+voice channel
+lost frame
+frame fails
+noise burst
+burst destroying
+recognizable frame
+frame arriving
+case assumptions
+items required
+sequence number
+reliable delivery
+receiver returns
+special acknowledgment
+sender indicating
+correct receipt
+negative acknowledgment
+received frame
+damaged frame
+simpler suppose
+frame number
+problem simple
+simple acknowledgment
+acknowledgment schemes
+schemes fail
+retransmission timers
+resend frames
+duplicated depending
+similar frames
+receiving side
+duplicated frame
+so-called sequence
+retransmission introduces
+duplicate frames
+suppress duplicates
+add sequence
+sender sends
+mechanisms stated
+automatic repeat
+repeat request
+unreliable data
+wait flow
+flow control
+control technique
+source station
+station transmits
+single frame
+data frames
+destination stations
+timer runs
+whichever system
+link control
+simple protocol
+efficiency problem
+lecture lecture
+protocol good
+protocol .we
+sender station
+station sends
+negative acknowledgement
+frame retransmit
+retransmit whichever
+whichever frame
+major techniques
+general version
+discussed ppp
+point protocol
+point communication
+multi point
+high level
+level data
+important protocol
+important data
+link protocol
+control protocols
+primary station
+typical protocol
+general data
+token bus
+data control
+similar approach
+higher layers
+class onwards
+satellite communication
+prof sujoy
+ghosh dept
+computer science&
+science& engineering
+restoration mechanisms
+general outline
+optic line
+power failures
+important places
+network connects
+grave consequences
+service provider
+provider attempts
+real life
+redundant capacity
+achieve protection
+network failure
+data loss
+prevent lot
+optical level
+transport level
+low physical
+physical level
+transport layer
+protection mechanism
+tight case
+end user
+application layer
+general goal
+reliable communication
+communication service
+primary mechanism
+secondary mechanism
+efficient routes
+additional resilience
+path protection
+link protection
+fast protection
+client layer
+bottom layer
+switching technologies
+implement protection
+dedicated hardware
+hardware protection
+low priority
+priority traffic
+traffic supported
+protection bandwidth
+protection capability
+redundant link
+normal circumstances
+providing protection
+mesh topologies
+bandwidth efficient
+signaling mechanism
+preplanned routes
+point-to-point connection
+point-to-point link
+discussed sonet
+sonet gear
+touching rings
+telecom people
+people put
+sonet rings
+optic networks
+geographical area
+area ring
+feasible due
+connected graph
+proper protection
+biconnected graph
+alternatives paths
+give protection
+protection giving
+giving protection
+mesh networks
+important consideration
+important considerations
+routing tables
+precomputed routes
+date topology
+topology maps
+dynamic thing
+distributed fashion
+failure modes
+node failure
+ring networks
+ring failures
+6-node graph
+dashed line
+primary path
+primary connection
+backup route
+backup link
+secondary path
+path fails
+backup path
+extra bandwidth
+bandwidth capacity
+dedicated path
+shared path
+protection dedicated
+equal power
+switch determines
+protection link
+hot redundancy
+redundant source
+destination side
+alternate path
+dedicate path
+dedicated alternative
+alternative path
+shared mode
+mode protection
+working fiber
+protection fiber
+hot standby
+destination switch
+final destination
+protection line
+normal mode
+bigger switch
+input port
+single link
+link fails
+working fibers
+priority data
+important traffic
+link failure
+link level
+large number
+good idea
+dedicated link
+shared link
+node fails
+path switching
+line switching
+coarser scheme
+finer scheme
+span protection
+protection span
+line protection
+edge connected
+connected i.e
+edge disjoint
+disjoint paths
+single edge
+edge failure
+mesh network
+ring simple
+simple minded
+minded scheme
+pair wise
+edge disjointed
+extra provisioning
+protection cycles
+mesh net
+path layer
+mesh protection
+single unit
+pre-computed routes
+routes means
+alternative routes
+protection route
+light path
+costly alternative
+on-the-fly route
+route computation
+centralized route
+coordination route
+end nodes
+distributed route
+route computations
+normal operation
+entire path
+pre-computed path
+node coming
+entire length
+local nodes
+slight diversion
+light paths
+in-between breaks
+form cycles
+protection edge
+working edge
+protection fibers
+solid lines
+dashed lines
+partially protected
+unidirectional light
+doing line
+local decision
+global picture
+small graph
+entire global
+global pictures
+intermediate nodes
+erroneous connection
+adjacent nodes
+so-called race
+race condition
+local decisions
+funny situation
+invoke line
+protection independently
+actual failure
+independent actions
+race conditions
+restoration protection
+extra process
+important part
+sonet ring
+layer protocols
+link faults
+multiple link
+funny things
+inefficient usage
+dedicated protection
+path restoration
+link restoration
+current actual
+actual situation
+keeping track
+present situation
+original service
+software parts
+software aspect
+failed link
+restoration path
+restoration means
+multiplex element
+element faults
+exchange information
+current situation
+efficient usage
+reserve resources
+main difference
+two route
+dynamically computed
+computed resource
+resource efficiency
+comparatively high
+longer reliability
+single fault
+multiple faults
+global view
+handle multiple
+faults implementation
+physical links
+virtual wavelength
+wavelength paths
+resource reservation
+forward reservation
+backward reservation
+all-important topic
+fault management
+common kind
+chief attractions
+ring topology
+redundancy in-built
+unidirectional path
+path switch
+switch rings
+bidirectional line
+line switch
+fiber working
+counter clockwise
+clockwise direction
+fiber part
+outer ring
+protection purpose
+protection path
+path switched
+switched ring
+fiber capacity
+wrong direction
+wdm systems
+wdm system
+side things
+reuse fiber
+unidirectional ring
+bidirectional sonet
+sonet sdh
+sdh connection
+previous picture
+entire ring
+lower-speed access
+access networks
+bidirectional lines
+line switched
+switched rings
+spatial reuse
+reuse capabilities
+additional protection
+protection mechanisms
+adopts span
+four-fiber bidirectional
+four-fiber system
+bidirectional traffic
+traffic supports
+alternative span
+line fails
+alternative line
+two-fiber version
+opposite directions
+line failure
+bidirectional thing
+healing rings
+local action
+working span
+protection side
+heal automatically
+entire thing
+fiber pairs
+transmission receiver
+receiver pair
+production capacity
+working capacity
+capacity link
+direction node
+protection restoration
+restoration speed
+node complexity
+dual homing
+dual home
+independent paths
+handle hub
+end node
+hubs fails
+network consists
+mechanism built
+wdm link
+link carrying
+carrying sonet
+sonet traffic
+sonet adm
+fiber pair
+simplex line
+protected scheme
+virtual links
+optical layer
+electronic layer
+sonet lte
+sonet line
+terminal equipment
+multiple protections
+multiple layers
+protection unnecessarily
+layer protection
+efficiency limitation
+protects traffic
+client layers
+wavelength path
+path selection
+independent light
+protection kind
+receiver chooses
+destination switches
+operational link
+operational light
+revertive switching
+original link
+essential idea
+entire fibers
+failure occurs
+multiple access
+access good
+osi stack
+presentation session
+session transport
+transport network
+network link
+hired layers
+lecture onwards
+medium access
+competing request
+request request
+contention meaning
+access control
+control protocol
+committing request
+link link
+computers routers
+routers switches
+networking nodes
+cable copper
+shared medium
+free space
+reliable transfer
+space transmission
+taking place
+contention based
+slotted aloha
+carrier sense
+sense multiple
+collision detection
+carrier science
+science multiple
+collision avoidance
+aloha slotted
+satellite csma
+csma csma
+specifically csma
+cellular communication
+based mac
+round robin
+based protocols
+important component
+world wide
+wide communication
+mature technology
+place satellite
+communication infrastructure
+media access
+communication medium
+magnetic field
+communication satellite
+big microwave
+microwave repeater
+repeater repeater
+incoming signal
+transponders transponders
+transponders listen
+wider band
+earth satellites
+avoid interference
+incoming signals
+relay signals
+long distance
+geostationary satellites
+geosynchronous orbit
+earth takes
+uplink station
+downlink station
+satellite receives
+reflected part
+earth stations
+stations communicate
+communicate signals
+base stations
+television channels
+wider area
+television programming
+transmit signals
+long distances
+weather forecasting
+internet communication
+global positioning
+positioning system
+space orbit
+surface coverage
+band communication
+ghz bandwidth
+higher frequency
+transoceanic fibers
+chief medium
+terrestrial interference
+extraneous sources
+electromagnetic noise
+strong points
+greater number
+uplink rain
+rain interference
+higher capacity
+dish antenna
+satellite signal
+base station
+1-meter antenna
+antenna size
+pizza shaped
+higher bandwidth
+problems faced
+electromagnetic spectrum
+uplink transponders
+equipment needed
+greater bandwidth
+point-to-point transmission
+large volume
+voice data
+video conference
+conference satellite
+point-to-point communication
+point-to-multi-point communication
+standard broadcast
+data communication
+conference broadcast
+broadcast services
+services include
+include television
+large geographical
+high bandwidth
+inherent high
+high capacity
+optic cable
+situations satellite
+satellite retains
+undoubted advantage
+wired kind
+remote area
+strong point
+technology deployed
+multiple sites
+mobile technology
+technology nowadays
+first thing
+thing people
+cellular phone
+nearest base
+standard communication
+high initial
+initial cost
+launch vehicle
+vehicle involves
+high investments
+laying fibers
+case basis
+physical media
+propagation delay
+significant disadvantage
+disadvantage compared
+terrestrial communication
+electromagnetic signal
+significant amount
+potential disadvantage
+sensitive data
+elliptical orbits
+circular orbits
+elliptical orbit
+equatorial orbits
+geostationary satellite
+satellite pass
+inclined orbits
+significant implication
+geostationary orbit
+orbit satellites
+medium earth
+earth orbit
+low earth
+earth orbits
+high power
+important point
+long latency
+important issues
+signal reaches
+transmitter power
+require lot
+battery power
+power angle
+important issue
+medium kind
+latency leo
+low power
+smaller footprint
+small aperture
+ground equipment
+small apertures
+private wans
+smaller antenna
+main base
+larger antenna
+common type
+satellite today
+circular orbit
+odd kilometres
+equatorial plane
+satellites remain
+centripetal force
+exact distance
+angular velocity
+good thing
+reasonable solid
+solid angle
+large portion
+entire surface
+minimum distance
+parking slots
+crowded today
+good tracking
+tracking properties
+signal weakens
+great distance
+polar regions
+southern hemispheres
+slide19 geo
+geo satellite
+universal connectivity
+footprint means
+satellite parking
+spot beams
+large transmitter
+power making
+considerable space
+space delay
+large cell
+cell size
+smaller number
+greater detail
+terrestrial wireless
+wireless communication
+voice channels
+channels require
+kbps rate
+channel density
+typical satellite
+mhz bandwidth
+channels fdm
+frequency division
+division multiplexing
+early satellites
+satellites nowadays
+nowadays tdm
+entire footprint
+privacy pose
+mentioned earlier
+essential mobility
+interesting application
+middle earth
+global wireless
+communication coverage
+maintain orbit
+stars move
+back depends
+hours depending
+satellites orbit
+communication link
+satellite disappears
+end points
+transmit data
+data rate
+kbps transmission
+transmission delay
+earth orbiting
+orbiting satellites
+large flock
+short duration
+continuous coverage
+entire earth
+satellites orbiting
+constant altitude
+avoid gravity
+gravity forces
+lower orbit
+circles earth
+mobile voice
+voice low
+high-speed data
+internet access
+mobile phones
+so-called sat
+sat phones
+handheld device
+standard cell
+cell phone
+individually cheaper
+lower space
+ground stations
+quick handoffs
+iridium set
+mobile telephony
+sat phone
+phone services
+fiber technology
+wireless technology
+technology developed
+major part
+cheaper rate
+complicated handoff
+handled device
+remote places
+infrastructure majority
+wireless nearby
+ambitious ongoing
+ongoing project
+leo satellites
+low-cost high-speed
+high-speed internet
+terrestrial lines
+battery powered
+handheld devices
+cell sizes
+terrestrial cells
+iridium system
+terrestrial service
+service providers
+providers give
+give millions
+cost turned
+small terminals
+watt transmitter
+downlink capacity
+uplink speed
+central hub
+big antenna
+mac part
+satellite modem
+modem kind
+considerable delay
+important application
+gps satellite
+satellite constellation
+air force
+gps system
+drawing board
+orbital planes
+common application
+trilateration suppose
+picture suppose
+relevant parameters
+distance measurements
+accurate position
+central database
+give information
+alternative paths
+precise information
+automatic vehicle
+vehicle location
+customer service
+digital messaging
+dynamic route
+route optimization
+driver compliance
+mobile gps
+gps unit
+unit located
+gps satellites
+faster dispatch
+courier service
+similar services
+sophisticated level
+sparsely populated
+rapid deployment
+extremely critical
+battlefield kind
+communication network
+disaster recovery
+relief operations
+mobile units
+terrestrial radio
+radio links
+links fiber
+interesting part
+mac works
+random access
+access protocol
+mentioned random
+access protocols
+protocol random
+full channel
+channel data
+random thing
+priori coordination
+transmitting stations
+random amount
+fixed amount
+random number
+number generated
+stay communicating
+transmitting nodes
+nodes start
+collision random
+access mac
+mac protocol
+protocol specifies
+detect collisions
+delayed retransmissions
+satellite protocol
+simplest kind
+csma csmacd
+csmacd csmaca
+mac protocols
+protocols aloha
+original grandfather
+aloha protocol
+packet radio
+uncoordinated users
+users competing
+shared channel
+carrier sensing
+sensing carrier
+sensing means
+crowded media
+milliseconds space
+milliseconds earlier
+remain quiet
+significant impact
+pure aloha
+users transmit
+first bit
+frame collides
+last bit
+collision detecting
+broadcast channel
+collision occurs
+user waits
+waits random
+random length
+collision resolution
+resolution algorithms
+successfully transmitted
+equal size
+size slots
+send frames
+transmit frames
+slots nodes
+nodes detect
+detect collision
+sixth slot
+node obtains
+fresh frame
+collision node
+node retransmits
+subsequent slot
+attains success
+collision occurred
+long period
+fourth slot
+empty node
+collision affected
+affected efficiency
+aloha pros
+single active
+active node
+full rate
+highly decentralized
+idle slots
+low efficiency
+long run
+run fraction
+successful slots
+send suppose
+transmitting slots
+first node
+node sends
+maximum efficiency
+theoretical efficiency
+high figure
+low load
+unslotted aloha
+collision probability
+frame takes
+big interval
+node transmits
+choosing optimum
+computer network
+network developed
+competing lan
+lan technologies
+today ethernet
+emerging wireless
+wireless part
+lan nowadays
+nowadays people
+metropolitan network
+network area
+dominant data
+layer technology
+access scheme
+shared bus
+extreme ends
+ends suppose
+packet starts
+transmit suppose
+collision bus
+bus starts
+starts transmitting
+jam signal
+signal .so
+prof.sujoy ghosh
+ghosh lecturer
+day today
+ubiquitous lan
+lan technology
+technology today
+dominate lan
+emerging world
+world spot
+metropolitan area
+area network
+dominating data
+first lecture
+broad outline
+broadcast network
+single communication
+communication channel
+common broadcasts
+early days
+common physical
+physical organizations
+coaxial cable
+satellite technology
+send data
+access technique
+lan environment
+small geographical
+means packets
+short messages
+destination address
+ethernet header
+collision domain
+collide suppose
+common bus
+packet travels
+machines receive
+special kind
+aloha scheme
+versus gee
+maximum slotted
+local area
+small network
+small lan
+naturally leads
+doing carrier
+reduced number
+collisions compared
+full mac
+dynamic channel
+channel allocation
+allocation technology
+ethernet nowadays
+reduced collision
+switched ethernet
+simple network
+introduce carrier
+hosts listens
+frame finishes
+inter frame
+frame gap
+host starts
+delay propagation
+delay means
+entire packet
+packet transmission
+strong role
+starts transmission
+garbled bits
+hashed figure
+finite amount
+defer transmission
+persistent csma
+csma means
+means retry
+considerable amount
+pure persistent
+non-persistent csma
+random interval
+random numbers
+channel idle
+vulnerable window
+round-trip delay
+area sensing
+significant space
+performance improves
+non-persistent means
+throughput versus
+versus load
+load curve
+exact throughput
+idealized figures
+low persistent
+high throughput
+channel utilization
+colliding transmissions
+reducing channel
+channel wastage
+wired lan
+signal strengths
+compares transmitted
+received signals
+wireless lans
+discuss wireless
+dominant lan
+ethernet line
+great advantage
+huge market
+cheap ethernet
+ethernet network
+network interface
+interface card
+card costs
+mbps card
+token lans
+speed rates
+mbps ethernet
+ethernet started
+standard today
+today people
+giga bit
+bit ethernet
+making inroads
+original ethernet
+interface cable
+so-called ethernet
+basic technology
+bus topology
+equal access
+idle network
+perform collision
+detecting station
+station broadcasts
+transmission station
+algorithm step
+adapter senses
+adapter transmits
+entire frame
+interesting point
+frame transmission
+inadvertent collision
+adapter enters
+exponential back-off
+back-off algorithm
+large degree
+increasing period
+higher random
+larger amount
+mth collision
+adapter chooses
+adapter waits
+bit times
+signal makes
+exponential back
+adapt retransmission
+retransmission attempts
+current load
+random wait
+people backing
+first collision
+bit transmission
+heavier load
+successful transmission
+contention slots
+idle period
+ethernet protocol
+bus token
+token ring
+dixie ethernet
+minor differences
+transmitting frames
+frame format
+suitable minimum
+minimum length
+length remember
+collision detected
+address field
+collided frame
+collided frames
+bus lans
+starts sending
+collision bursts
+starts traveling
+starts travelling
+minimum frame
+transmitting node
+ethernet defines
+frame size
+payload remember
+remember payload
+layer receives
+upper layer
+network spans
+furthest part
+lan repeater
+signal travels
+wave shipping
+added remember
+find out
+ethernet slot
+jam sequence
+bus lan
+lan transmits
+transmits data
+standard rate
+earlier standard
+signal propagation
+transmission speed
+propagation speed
+round-trip propagation
+transmitting station
+pumping data
+round trip
+trip propagation
+delay divided
+calculation brings
+minimum size
+closely related
+speed transmission
+fast ethernet
+light calculate
+tround trip
+maximum distance
+propagation velocity
+minimum requirement
+start worrying
+lan reaches
+reaches lengths
+multiple segments
+segments joined
+in-line passive
+passive repeaters
+hub in-line
+signals received
+longer lans
+delays caused
+passive repeater
+repeater introduces
+coaxial cables
+nodes means
+ethernet frame
+frame contents
+sending adapter
+adapter encapsulates
+layer protocol
+protocol packet
+source address
+maximum length
+payload part
+trailer part
+address destination
+type field
+protocol type
+details quickly
+quickly sending
+datagram ethernet
+frame delimiter
+synchronize receiver
+sender clock
+clock rates
+adapter receives
+matching destination
+broadcast address
+arp packet
+address resolution
+resolution protocol
+passes data
+net layer
+adapter discards
+novell ipx
+apple talk
+de-multiplexing properly
+properly crc
+simply dropped
+unreliable connectionless
+connectionless service
+receiving adapters
+actual reliability
+ambient noise
+layer parameters
+ethernet layer
+special care
+receiver sees
+crc shows
+receiving adapter
+send acks
+negative acknowledgements
+datagrams passed
+transmission protocol
+byte addresses
+network card
+unique 46-bit
+46-bit serial
+serial number
+mac address
+manufactures ethernet
+interface cards
+network cards
+network addresses
+contiguous addresses
+mac addresses
+ethernet cards
+ieee ieee
+ieee allocates
+card manufacturers
+address fields
+mac frame
+bits set
+2-bit discrepancy
+16-bit address
+significant bit
+ordinary address
+group address
+hosts remember
+special address
+address starting
+destination field
+ethernet address
+significant bits
+destination hosts
+make out
+non-deterministic network
+good probability
+indefinite number
+collisions rises
+real-time computing
+computing application
+bus type
+type network
+assembly line
+real-time applications
+potentially dangerous
+high-speed network
+last word
+discussion suppose
+contention slot
+station acquires
+contention interval
+channel efficiency
+slot duration
+large frame
+efficiency increases
+1024-byte frames
+small frames
+modern versions
+networks lecture
+engineering i.i.t
+i.i.t kharagpur
+kharagpur modern
+modern internet
+previous lectures
+basic data
+ethernet ethernet
+lan area
+earlier days
+basic ethernet
+discussed people
+technology develops
+slight shift
+modern ethernet
+ethernet kind
+earlier versions
+network refers
+primary limitations
+transmission accuracy
+end-to-end transmission
+accuracy means
+unreliable protocol
+fairly tolerable
+accurate transmission
+signal attenuation
+layer standards
+mbps base
+base band
+band transmission
+cable length
+thick ethernet
+thick coaxial
+band transmissions
+higher channel
+frequency channel
+cable line
+utp cable
+maximum segment
+segment length
+optic components
+mbps rate
+copper cables
+open space
+avoid copper
+electric interference
+network segment
+completeness sake
+thin coaxial
+classical bus
+topology repeaters
+segments repeater
+repeater repeats
+repeats bits
+layer device
+figure showing
+thin cable
+network adapter
+adapter pushes
+transmitted packet
+mac unit
+protocol control
+control firmware
+repeaters repeater
+layer kind
+network design
+distance limitation
+ethernet hub
+repeater function
+ethernet cable
+cable segments
+media type
+internet segment
+maximum number
+attached systems
+signal quality
+cable segment
+total distance
+computers connected
+simple repeater
+signal amplification
+good signal
+signal level
+layer repeaters
+frame buffering
+hub adapters
+adapters detect
+net management
+management functionality
+active device
+active component
+detecting collisions
+signals coming
+co-axial cable
+domain inside
+managed hub
+dispersed kind
+central network
+passive things
+managed switches
+managed hubs
+network station
+unmanaged hubs
+cable coming
+physical part
+twisted pair
+dominant physical
+physical medium
+varying technology
+area networks
+cable data
+data transmission
+frequency range
+10baset repeaters
+first segment
+segment delay
+middle segment
+last segment
+transceiver delay
+repeater delay
+10baset delay
+work properly
+tabular form
+optic kind
+maximum lengths
+receiver delay
+people moved
+bandwidth grew
+lan bandwidth
+thing preferred
+utp category
+mbps operation
+utp cables
+intermediate points
+rj45 kind
+end point
+point connections
+machine straight
+machines network
+network device
+mbps hub
+utp part
+magnitude jump
+medium depending
+transmission encoding
+encoding data
+manchester encoding
+analog bandwidth
+kind encoding
+multilevel encoding
+encoding scheme
+multiple level
+level encoding
+level transition
+bandwidth required
+encoded suppose
+downward direction
+mlt encodes
+multiple levels
+net analog
+bandwidth requirement
+ten-fold increase
+physical infrastructure
+two-level scheme
+scheme half
+rough figure
+constant voltage
+4-bit sequence
+5-bit sequence
+bit rate
+mhz category
+twisted pairs
+fourth pair
+three-level signal
+8-bit sequence
+level signals
+network today
+increasing requirement
+fibre optics
+full duplex
+existing category
+repeater delays
+end station
+multiple hubs
+mbps ports
+auto sensing
+sensing ports
+nic senses
+end supports
+opposite end
+varying connection
+mbps port
+big advantage
+maximum span
+big problem
+mbps hubs
+obsolete people
+gigabit ethernet
+gigabit ports
+desktop computer
+two-station ethernet
+gigabit speed
+point-to-point links
+broadcast channels
+short distance
+standard ethernet
+duplex mode
+central switch
+right-hand side
+buffered distributors
+operation today
+1000-fold increase
+short span
+multimode fibre
+segment size
+shared media
+media lan
+shared domain
+big limitation
+switches packet
+packet switches
+improved security
+security users
+poor security
+work group
+make users
+users members
+virtual lans
+packet filtering
+network problems
+duplex communication
+side effect
+receiving mode
+half duplex
+duplex channel
+hub simulates
+switch simulates
+bridged lan
+ethernet switches
+highly scalable
+sensing codes
+higher performance
+10baset hub
+years ago
+improved gigabit
+farthest stations
+distance limit
+switched networks
+moved to100base-tx
+switches connected
+individual hosts
+place simultaneously
+telephone switch
+distinct pairs
+packet switch
+multi-interface bridge
+frame forwarding
+lan addresses
+addresses presently
+modern switch
+daisy chain
+stations suppose
+single path
+loop connecting
+frame switch
+switch plug-in
+plug-in card
+small groups
+line card
+line cards
+lines coming
+32-port switch
+switch plug
+high-speed backbone
+destinations card
+distinct destination
+switching fabric
+high-end switch
+gbps backplane
+backplane switch
+high-speed switch
+machines attached
+card transmit
+card handles
+card line
+frames arrived
+on-card lan
+lan card
+local on-card
+card forms
+network independent
+incoming frames
+input ports
+duplex operation
+single channel
+input side
+output side
+switch fabric
+handling head
+small buffer
+duplex transmission
+distant port
+proper card
+frame forwarded
+output port
+slight reduction
+mbps interfaces
+bit ports
+main backbone
+typical lan
+legacy system
+mbps connection
+mail server
+higher speed
+www server
+web server
+individual desktops
+lan part
+great network
+external internet
+typical picture
+abstract view
+lan address
+hardware address
+adapters buy
+buy blocks
+6-byte addresses
+arbitrary bytes
+small problem
+source node
+central agency
+ethernet addresses
+unique lan
+unique address
+total route
+layer addresses
+connected interface
+48-bit mac
+lans burned
+adapter rom
+social security
+security number
+postal address
+address translation
+router determine
+interrelated questions
+addresses address
+static translation
+translation means
+static table
+translation requires
+book-keeping work
+system administration
+automatic resolution
+so-called arp
+arp protocol
+dynamic address
+translation scheme
+local arp
+arp cache
+local machine
+address mapping
+broadcast query
+host addresses
+arp table
+table entries
+wash out
+entries communicate
+communicating machine
+fresh arp
+table arp
+lan nodes
+datagram addressed
+net address
+pay load
+load form
+send datagram
+address suppose
+arp query
+query packet
+cache saves
+address pair
+times out
+soft state
+refreshed arp
+automatically nodes
+node administrator
+hosts receive
+expensive proposition
+packet transfer
+important question
+interconnected nodes
+broadcast domain
+domain networks
+discuss bridges
+local internetworking
+term internet
+internet today
+term internetworking
+broadcast domains
+crucial reason
+computer
+networks
+prof
+sujoy
+ghosh
+department
+science
+engineering
+iit
+kharagpur
+lecture
+error
+control
+good
+day
+last
+functionalities
+data
+link
+layer
+framing
+talking
+means
+detection
+correction
+errors
+transmitted
+cable
+channel
+chance
+bits
+changed
+corrupted
+due
+noise
+signal
+distortion
+attenuation
+things
+happen
+suppose
+wireless
+suddenly
+burst
+garbled
+similarly
+attenuated
+loose
+contact
+received
+sending
+communication
+transmission
+line
+assume
+reach
+side
+perfect
+condition
+deal
+handle
+occur
+change
+kind
+knew
+position
+correct
+reverse
+faulty
+trick
+find
+out
+occurred
+lot
+fashion
+depend
+medium
+random
+unpredictably
+bit
+probability
+caused
+thermal
+general
+present
+higher
+low
+level
+number
+succession
+faults
+electrical
+equipment
+interference
+neighboring
+major
+inevitable
+resulting
+frame
+rate
+high
+finite
+notations
+single
+arrives
+undetected
+detected
+detect
+scheme
+detecting
+specifically
+remember
+assuming
+sort
+independent
+case
+introduce
+creep
+longer
+leads
+lower
+numbers
+illustrative
+defined
+specification
+isdn
+connections
+integrated
+service
+network
+digital
+telephone
+lines
+64-kbps
+observed
+1-minute
+intervals
+million
+continuously
+length
+frames
+desired
+orders
+magnitude
+large
+meet
+requirements
+thousand
+times
+fairly
+end
+work
+multiplying
+point
+require
+prepared
+necessitates
+bring
+environment
+directly
+difficult
+source
+starting
+car
+give
+machine
+mixer
+grinder
+running
+house
+kinds
+sources
+coming
+rates
+discuss
+principle
+greater
+reliability
+redundancy
+put
+system
+order
+optical
+form
+extra
+send
+purpose
+edc
+redundant
+original
+part
+introduced
+protected
+checking
+include
+header
+fields
+protecting
+depends
+protocol
+payload
+reliable
+miss
+figure
+larger
+yield
+datagram
+add
+prone
+run
+algorithm
+method
+finding
+concept
+so-called
+hamming
+distance
+two
+patterns
+codes
+details
+code
+words
+shown
+word
+positions
+simply
+xor
+count
+note
+differ
+set
+differs
+equal
+peers
+minimum
+values
+interesting
+situation
+flipped
+happened
+move
+receiving
+sides
+first
+immediately
+keywords
+showed
+whichever
+value
+transmuted
+valid
+member
+likelihood
+nearest
+practically
+done
+coding
+schemes
+idea
+simplest
+parity
+check
+appends
+block
+added
+odd
+explain
+inverted
+occurs
+technique
+foolproof
+impulses
+long
+destroy
+pattern
+make
+depending
+originally
+made
+intended
+worst
+middle
+invalid
+sense
+simple
+back
+earlier
+mentioned
+points
+stream
+easy
+xors
+invert
+testing
+device
+character
+counting
+drawback
+remain
+remains
+improvement
+efficient
+extension
+works
+break
+blocks
+group
+four
+calculated
+matrix
+calculate
+column
+characters
+row
+test
+fail
+intercept
+cell
+changing
+flip
+referring
+transmitter
+diagram
+reason
+cases
+transverse
+compute
+trouble
+rows
+columns
+show
+match
+correcting
+comparing
+problem
+cds
+ensure
+high-quality
+sound
+reproduction
+slightly
+damaged
+music
+techniques
+alphabet
+noisy
+left
+thing
+request
+retransmission
+approach
+efficiency
+improve
+area
+losing
+optimal
+amount
+checksum
+borrowed
+accounting
+sum
+arbitrary
+arrive
+adding
+transmit
+restricted
+typically
+widely
+cyclic
+crc
+sophisticated
+type
+extremely
+types
+caught
+complicated
+practice
+calculating
+implemented
+hardware
+linear
+shift
+registers
+circuit
+easily
+fast
+preferred
+protocols
+essentially
+regarded
+binary
+string
+mixed
+interpreted
+interpret
+place
+holder
+digits
+divided
+generator
+polynomial
+modulo
+division
+remainder
+generates
+sequence
+fcs
+consisting
+divisible
+predetermined
+receiver
+divides
+incoming
+assumes
+supposed
+computed
+formula
+generated
+represented
+ultimately
+operation
+exhaust
+divisions
+process
+lfsr
+feedback
+register
+message
+suitably
+chosen
+divisor
+constitutes
+commonly
+polynomials
+x16
+sixteenth
+fifteen
+0th
+rest
+cover
+previously
+systems
+ccitt
+x12
+8-bit
+eighth
+zeroth
+atm
+crcs
+coverage
+people
+found
+properties
+hdlc
+fddi
+showing
+levels
+small
+possibly
+vast
+garble
+badly
+unrecognizable
+infallible
+possibility
+bad
+question
+higher-level
+addition
+talked
+unrestricted
+simplex
+stop
+wait
+arq
+stands
+acknowledgement
+expected
+sliding
+window
+similar
+selective
+reject
+sends
+sender
+fetch
+packet
+construct
+physical
+bothering
+happening
+waits
+event
+receives
+passes
+responsibility
+care
+application
+bother
+voice
+lost
+fails
+destroying
+recognition
+recognizable
+arriving
+assumptions
+concerned
+insuring
+eventually
+delivered
+destination
+items
+required
+acknowledgment
+timer
+delivery
+achieved
+acknowledgments
+paradigm
+returns
+special
+ack
+indicating
+receipt
+negative
+incorrectly
+hint
+retransmit
+right
+waiting
+expire
+arrived
+taking
+simpler
+acknowledged
+rightly
+retransmitted
+argument
+address
+recovering
+totally
+result
+solicit
+timers
+resend
+produce
+schedule
+returned
+clock
+started
+account
+thrown
+reached
+duplicated
+understand
+duplicate
+absolutely
+unknown
+introduces
+suppress
+duplicates
+distinguish
+copies
+numbered
+sequentially
+discard
+collectively
+mechanisms
+stated
+referred
+automatic
+repeat
+objective
+turn
+unreliable
+versions
+standardized
+based
+flow
+station
+transmits
+stations
+reply
+automatically
+fetches
+runs
+stored
+locally
+buffer
+handling
+receive
+pass
+continue
+discussion
+preview
+discussing
+.we
+performance
+finish
+transit
+discussed
+version
+ppp
+multi
+short
+considered
+important
+variations
+places
+generic
+variant
+basis
+suggest
+primary
+responsible
+design
+reference
+formats
+flavor
+information
+typical
+exchange
+examples
+mac
+token
+bus
+ring
+layers
+talk
+specific
+class
+onwards
+satellite
+.so
+topic
+dept
+science&
+protection
+restoration
+start
+employed
+57-00
+08-01
+comparison
+outline
+presentation
+19-01
+failures
+node
+cut
+fiber
+optic
+in-between
+digging
+hole
+power
+nodes
+deploy
+core
+connects
+vital
+services
+severely
+disrupted
+grave
+consequences
+provider
+attempts
+unavoidable
+real
+life
+combating
+failure
+recover
+restored
+replacement
+capacity
+achieve
+20-03
+mechanism
+difference
+parts
+26-03
+clear
+prevent
+loss
+transport
+tolerate
+limit
+tight
+play
+nice
+user
+sitting
+top
+notice
+goal
+13-05
+provide
+19-05
+routes
+preplanned
+secondary
+additional
+resilience
+40-06
+protect
+path
+built
+12-06
+considerations
+tradeoffs
+support
+dictated
+client
+clubbed
+calling
+constraint
+bottom
+switching
+technologies
+13-07
+implement
+dedicated
+software
+34-07
+priority
+traffic
+consideration
+supported
+bandwidth
+dropped
+capability
+build
+naturally
+idle
+normal
+circumstances
+provision
+carry
+providing
+discontinued
+46-09
+mesh
+topologies
+signaling
+flexibility
+choice
+matter
+fact
+star
+tree
+point-to-point
+connection
+dominate
+wan
+communicate
+making
+sonet
+gear
+rings
+touch
+mutually
+touching
+telecom
+wider
+geographical
+feasible
+reasons
+recall
+graph
+connected
+giving
+proper
+biconnected
+communicating
+alternatives
+paths
+linked
+17-11
+maintenance
+distributed
+routing
+tables
+precomputed
+date
+topology
+maps
+maintain
+dynamically
+dynamic
+links
+recomputed
+modes
+55-13
+guarantee
+successfully
+6-node
+dashed
+snap
+backup
+route
+share
+requirement
+intact
+switch
+06-13
+ways
+provisioning
+40-13
+shared
+51-15
+splitter
+split
+halves
+carried
+determines
+switches
+hot
+alternate
+dedicate
+alternative
+costly
+32-16
+mode
+expect
+replaced
+working
+unlike
+standby
+cold
+carrying
+passing
+final
+meaning
+58-19
+generalizing
+sharing
+inputs
+destinations
+bigger
+input
+port
+feeds
+1,2
+flowing
+feed
+failed
+fibers
+stopped
+experienced
+potentially
+concentrate
+21-20
+44-21
+practical
+lead
+complication
+10-21
+compare
+coarser
+finer
+span
+29-21
+edge
+i.e
+disjoint
+pair
+disconnect
+necessity
+cost
+effective
+58-22
+minded
+double
+wise
+disjointed
+coordination
+cycles
+net
+43-23
+unit
+pre-computed
+light
+on-the-fly
+computation
+centralized
+computations
+possibilities
+25-24
+fly
+wavelengths
+combined
+04-24
+diagrams
+entire
+live
+52-25
+section
+takes
+diversion
+provided
+re-compute
+local
+slight
+51-25
+cycle
+arc
+breaks
+direction
+ready
+38-27
+pairs
+directions
+04-27
+solid
+realize
+sensitive
+partially
+51-29
+unidirectional
+rerouted
+doing
+wanted
+decision
+pre
+global
+picture
+eyes
+pictures
+finally
+intermediate
+41-31
+erroneous
+treated
+adjacent
+race
+perceive
+decisions
+funny
+invoke
+independently
+actual
+perceived
+differently
+actions
+conditions
+58-32
+advantages
+disadvantages
+quick
+milliseconds
+benchmark
+action
+51-33
+multiple
+inefficient
+usage
+resource
+resources
+08-33
+20-33
+reserved
+current
+keeping
+track
+root
+reserve
+restore
+processed
+aspect
+00-34
+discovered
+quickly
+26-34
+multiplex
+element
+complex
+slower
+requires
+54-35
+main
+comparatively
+20-35
+fault
+survive
+survivable
+view
+implementation
+56-36
+virtual
+wavelength
+centrally
+controlled
+reservation
+forward
+backward
+22-37
+all-important
+management
+ubiquitous
+love
+common
+chief
+attractions
+in-built
+bidirectional
+upsr
+blsr
+16-39
+counter
+clockwise
+outer
+provisioned
+switched
+23-40
+limitations
+spatially
+reuse
+wrong
+wdm
+covered
+occupied
+sdh
+previous
+30-40
+adms
+45-40
+lower-speed
+access
+multipoint
+51-41
+delays
+relays
+remedy
+spatial
+capabilities
+adopts
+28-42
+four-fiber
+space
+27-43
+supports
+distances
+pre-compute
+11-44
+two-fiber
+opposite
+round
+blocked
+25-46
+healing
+programmed
+adjust
+internally
+heal
+production
+faster
+blsrs
+speed
+complexity
+dual
+homing
+21-47
+mission
+critical
+acceptable
+hubs
+home
+shows
+hub
+51-48
+reminder
+consists
+15-49
+adm
+detector
+assign
+electronic
+52-51
+riding
+lte
+terminal
+senses
+reroute
+protections
+cancel
+disadvantage
+coordinated
+redo
+unnecessarily
+duplicating
+59-52
+advantage
+limitation
+protects
+units
+granularity
+coarse
+gbps
+35-53
+dimension
+selection
+select
+bridged
+chooses
+operational
+revertive
+non
+revert
+29-53
+deployed
+essential
+pre-reserved
+approaches
+choose
+today
+59-57
+osi
+stack
+session
+ventured
+hired
+coordinates
+competing
+object
+contention
+description
+committing
+reserving
+computers
+routers
+networking
+copper
+free
+hop
+transfer
+hanging
+competition
+aloha
+slotted
+57-59
+refers
+csma
+carrier
+collision
+variance
+avoidance
+ethernet
+situations
+cellular
+robin
+lecture-18
+component
+world
+wide
+mature
+technology
+improvements
+infrastructure
+media
+handled
+electro
+magnetic
+field
+looked
+big
+microwave
+repeater
+repeats
+amplifies
+transponders
+listen
+portion
+spectrum
+transponder
+listening
+band
+broadcasts
+frequency
+earth
+satellites
+amplify
+broadcast
+avoid
+signals
+slide3
+relay
+strength
+angle
+geostationary
+equator
+miles
+approximately
+geosynchronous
+orbit
+travel
+rotate
+uplink
+listened
+downlink
+dish
+facing
+tracking
+reflected
+horn
+amplified
+base
+ground
+feature
+attractive
+distribution
+programmes
+television
+channels
+beaming
+receivers
+popular
+applications
+programming
+weather
+forecasting
+internet
+positioning
+surface
+sections
+bands
+names
+downlinks
+uplinks
+ghz
+3,7
+standard
+transoceanic
+continents
+terrestrial
+extraneous
+electromagnetic
+interfere
+strong
+days
+accommodate
+rain
+crowded
+antenna
+1-meter
+size
+smaller
+pizza
+shaped
+inches
+problems
+faced
+susceptible
+needed
+expensive
+covers
+volume
+video
+conference
+point-to-multi-point
+cheaper
+wiring
+covering
+inherent
+economy
+favor
+retains
+undoubted
+wired
+remote
+reachable
+road
+established
+sky
+difficulties
+sites
+location
+mobile
+nowadays
+phone
+backbone
+roaming
+visible
+mobility
+accessibility
+initial
+launch
+vehicle
+involves
+investments
+laying
+determine
+susceptibility
+noises
+crowding
+propagation
+delay
+significant
+compared
+thousands
+travelling
+implications
+quality
+issue
+potential
+security
+open
+measure
+encryption
+orbits
+circular
+elliptical
+centre
+foci
+equatorial
+poles
+inclined
+altitude
+implication
+terms
+classes
+geos
+meos
+leos
+geo
+latency
+issues
+reaches
+battery
+meo
+leo
+footprint
+vsat
+aperture
+vsats
+apertures
+private
+wans
+meter
+23,000
+22,000
+kilometres
+35,000
+plane
+rotates
+slide14
+moving
+stationary
+head
+sacrosanct
+35,785
+centripetal
+force
+gravitation
+equation
+exact
+angular
+velocity
+fixed
+beam
+reasonable
+sufficient
+parked
+close
+interfering
+parking
+slots
+internationally
+decided
+nations
+fourth
+weakens
+great
+seconds
+forced
+hard
+polar
+regions
+northern
+southern
+hemispheres
+slide19
+universal
+connectivity
+beams
+spot
+focused
+broadcasting
+no.20
+considerable
+detail
+assigned
+kbps
+constrained
+necessarily
+density
+mhz
+fdm
+multiplexing
+early
+tdm
+mixture
+constant
+privacy
+pose
+achievable
+setup
+gps
+moment
+stars
+horizon
+hours
+parameters
+handoffs
+handoff
+moved
+disappears
+altogether
+considerably
+orbiting
+launched
+flock
+birds
+duration
+continuous
+footprints
+gravity
+forces
+fall
+travels
+hour
+circles
+minutes
+high-speed
+phones
+pdas
+sat
+handheld
+hand
+individually
+nearer
+iridium
+offered
+telephony
+paging
+developed
+extent
+market
+captured
+majority
+users
+nearby
+price
+uncompetitive
+efforts
+revive
+company
+bankrupt
+ambitious
+ongoing
+project
+teledesic
+includes
+low-cost
+teleconferencing
+globe
+comparable
+powered
+devices
+sizes
+cells
+total
+183,000
+globally
+providers
+millions
+turned
+terminals
+watt
+persons
+central
+doubled
+modem
+usual
+half
+combinations
+tdma
+fdma
+constellation
+operated
+air
+drawing
+board
+consortium
+orbital
+planes
+height
+20,200
+locate
+tracked
+trilateration
+ship
+measuring
+relevant
+readings
+measurements
+measured
+precisely
+accurately
+accurate
+database
+europe
+precise
+avl
+despatch
+customer
+safety
+messaging
+optimization
+driver
+compliance
+located
+truck
+dispatch
+goods
+deliver
+warehouses
+courier
+enhanced
+slide33
+conclusion
+serve
+terrain
+hostile
+sparsely
+populated
+niche
+rapid
+deployment
+battlefield
+rapidly
+disaster
+recovery
+relief
+operations
+flood
+flooded
+combination
+radio
+hold
+slide34
+full
+transmitting
+lucky
+knowledge
+priori
+collide
+messages
+backing
+lapse
+backoff
+stay
+specifies
+collisions
+delayed
+retransmissions
+csmacd
+csmaca
+grandfather
+1970s
+applicable
+uncoordinated
+sensing
+strange
+quiet
+impact
+pure
+backs
+collides
+finishing
+collided
+absence
+resolution
+algorithms
+stuck
+slot
+transmitters
+synchronised
+beginning
+synchronized
+sixth
+obtains
+fresh
+retransmits
+subsequent
+attains
+success
+backed
+empty
+randomly
+period
+successful
+succeeds
+affected
+pros
+active
+highly
+decentralized
+sync
+cons
+fraction
+slide45
+maximum
+maximizes
+.hence
+theoretical
+transmissions
+load
+unslotted
+synchronization
+increases
+interval
+overlap
+multiplied
+choosing
+optimum
+letting
+tend
+slides
+lan
+excepting
+newly
+emerging
+man
+metropolitan
+dominant
+slide51
+vary
+extreme
+ends
+starts
+propagating
+jam
+tau
+.soa
+prof.sujoy
+lecturer
+dominating
+broad
+conceived
+machines
+supposedly
+organizations
+coaxial
+advancement
+refinement
+packets
+recipients
+meant
+domain
+simultaneously
+puts
+copy
+nic
+ignore
+absorb
+subset
+multicasting
+multicast
+remind
+throughput
+versus
+gee
+refrain
+timeframes
+reduces
+reduced
+allocation
+greatly
+hosts
+listens
+host
+hear
+finishes
+inter
+gap
+allowed
+wasted
+role
+cone
+plot
+absolute
+hashed
+sensed
+busy
+defer
+persistent
+retry
+instability
+pounce
+subside
+elapsed
+persisting
+grow
+call
+strategy
+persist
+non-persistent
+finds
+decides
+exist
+vulnerable
+round-trip
+behave
+curves
+improves
+draw
+curve
+idealized
+figures
+falling
+steeply
+utilization
+deferral
+colliding
+aborted
+reducing
+wastage
+measures
+strengths
+compares
+lans
+shut
+huge
+drove
+cheap
+interface
+card
+costs
+mbps
+10,100
+giga
+inroads
+backbones
+couple
+years
+desktop
+terminated
+tapped
+transceiver
+tap
+connect
+controller
+basically
+basic
+workstation
+perform
+destroyed
+alert
+ranging
+attempting
+step
+adapter
+creates
+adds
+create
+detects
+aborts
+forget
+presumed
+inadvertent
+aborting
+enters
+exponential
+back-off
+degree
+loaded
+generate
+exponentially
+increasing
+mth
+0,1,2
+makes
+aware
+msec
+adapt
+estimated
+heavy
+aim
+increase
+range
+heavier
+states
+ieee
+defines
+llc
+variants
+dixie
+mention
+minor
+differences
+describes
+format
+encoding
+varied
+suitable
+decipher
+suggestions
+cabling
+bursts
+traveling
+completely
+finished
+bytes
+upper
+pad
+related
+spans
+repeaters
+furthest
+enhances
+weaker
+wave
+shipping
+instantaneously
+define
+longest
+tprop
+fit
+sec
+pumping
+megabits
+trip
+calculation
+brings
+margin
+closely
+meters
+recognize
+tround
+tframe
+pumped
+multiply
+1,500
+worrying
+lengths
+composed
+segments
+joined
+in-line
+passive
+output
+amplifier
+segment
+cables
+rise
+organized
+formed
+contents
+encapsulates
+preamble
+byte
+trailer
+padding
+alternating
+delimiter
+synchronize
+matching
+arp
+unicast
+discards
+novell
+ipx
+apple
+supporting
+de-multiplexing
+properly
+checked
+connectionless
+handshaking
+adapters
+standards
+meticulously
+ambient
+sees
+drop
+acks
+acknowledgements
+datagrams
+passed
+gaps
+filled
+tcp
+addresses
+unique
+46-bit
+serial
+trillion
+manufacturer
+manufactures
+cards
+apply
+chunk
+produced
+sell
+india
+beijing
+contiguous
+guaranteed
+distinct
+pool
+allocates
+manufacturers
+encode
+firmware
+encoded
+2-bit
+discrepancy
+16-bit
+rarely
+ordinary
+non-deterministic
+theoretically
+indefinite
+rises
+dramatically
+real-time
+computing
+assembly
+demand
+undesirable
+dangerous
+acquires
+maximized
+tending
+1024-byte
+modern
+i.i.t
+lectures
+evolved
+shifting
+develops
+emphasis
+workstations
+accuracy
+end-to-end
+tolerable
+determined
+factor
+10base5
+thick
+obsolete
+10base2
+modulate
+10baset
+utp
+categories
+100base-tx
+10base-t
+fibre
+10base-fl
+10base-f
+components
+buildings
+electric
+networked
+completeness
+sake
+thin
+classical
+hears
+amplification
+strengthening
+connectors
+pushes
+connecting
+cumbersome
+regenerates
+extend
+putting
+purposes
+replace
+function
+exceed
+attached
+deteriorate
+regeneration
+buffering
+functionality
+electronics
+intelligence
+ports
+co-axial
+collapsed
+inside
+managed
+geographically
+dispersed
+entity
+complaint
+remotely
+functioning
+interrogate
+health
+costlier
+unmanaged
+joint
+feeding
+100baset
+100mbps
+unshielded
+twisted
+varying
+category
+impedance
+ohm
+nanoseconds
+involved
+100-m
+tabular
+grew
+connector
+rj45
+straight
+100base-t
+jump
+achievement
+decrease
+reduce
+manchester
+analog
+rated
+multilevel
+mlt3
+transition
+sharply
+context
+downward
+mlt
+encodes
+ten-fold
+two-level
+rough
+zeros
+voltage
+lose
+clocking
+read
+4-bit
+5-bit
+4b5b
+125mbps
+for100base-tx
+10base-tx
+three-level
+100base-t4
+minimised
+broken
+existing
+100base-fx
+outdated
+optics
+conservative
+duplex
+upgrading
+nics
+auto
+operate
+upgrade
+rewire
+shorter
+migrated
+development
+era
+gigabit
+servers
+routinely
+depiction
+two-station
+operates
+802.3z
+configuration
+buffered
+right-hand
+impossible
+distributors
+lasers
+1gbps
+1000-fold
+amazing
+1000base-sx
+multimode
+1000base
+1000base-lx
+upto
+shielded
+1000baset
+congestion
+improved
+poor
+members
+filtering
+effect
+body
+simulates
+eliminated
+scalable
+10base
+increasingly
+ago
+limits
+farthest
+to100base-tx
+buffers
+individual
+communications
+multi-interface
+bridge
+forwarding
+presently
+interfaces
+hundreds
+arranged
+hierarchy
+daisy
+chain
+loop
+plug-in
+checks
+destined
+copied
+grouped
+groups
+32-port
+plug
+backplane
+fabric
+gigabits
+high-end
+handles
+on-card
+instant
+parallel
+forms
+blocking
+allowing
+distant
+directed
+separate
+term
+forwarded
+fully
+reduction
+uplinking
+remaining
+legacy
+mail
+server
+www
+web
+desktops
+pcs
+standing
+router
+external
+abstract
+focus
+attention
+buy
+6-byte
+1a23f9
+1a23f9cd069b
+88b22a
+relationship
+agency
+decide
+geography
+32-bit
+physically
+48-bit
+burned
+rom
+analogy
+social
+postal
+person
+translation
+interrelated
+questions
+translator
+static
+table
+book-keeping
+administration
+cache
+mapping
+query
+entries
+cached
+refreshed
+firmly
+shifted
+wash
+leave
+forgotten
+addressed
+23.1.1.1
+pay
+replies
+saves
+older
+soft
+state
+washed
+intervention
+administrator
+responds
+update
+transaction
+proposition
+interconnected
+limited
+bridges
+internetworking
+domains
+crucial
+discover

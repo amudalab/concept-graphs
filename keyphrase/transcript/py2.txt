@@ -1,0 +1,1374 @@
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+May 26 2011
+Administration
+  Office hours
+  Held in BA 2200 at T12-2, F2-4
+  If this changes, will be posted on announcements.
+  Twice as many people in Thursday tutorials.
+  Consider switching if you can.
+  Class in BA1170 on June 23rd and July 14th.
+  Website typo in info sheet, there is no trailing h.
+  A redirect has been added.
+  My e-mail is quellan@cs.toronto.edu
+  Not quellan@cdf.toronto.edu
+Assignment 1
+  This is a short and simple assignment.
+  It has been posted.
+  Needs to be done on your own.
+  You can write it wherever, but before you
+submit, make sure that it runs on the CDF
+machines.
+  No questions about it will be accepted after
+June 2nd
+.
+May 26 2011
+Programs can be adaptive.
+  Last time we compared programs to
+recipes.
+  Not entirely accurate.
+  Programs can behave differently
+depending on the situation.
+  We saw a very brief snippet of this last week.
+May 26 2011
+Booleans: A new type.
+  Can have two values True, False.
+  Have three operations: not, and, or.
+  not changes a True to a False and vice
+versa.
+  and returns False unless all the
+arguments are True.
+  or returns True unless all the arguments
+are False.
+May 26 2011
+Truth Tables
+  A way of representing boolean
+expressions.
+x y not x not y x and y x or y
+True True False False True True
+True False False True False True
+False True True False False True
+False False True True False False
+May 26 2011
+What if we want to adapatively assign
+Boolean values.
+  We can use relational operators.
+  <,>,<=,>=,!=, ==
+  These are all comparison operators that
+return True or False.
+  == is the equality operator.
+  != is not equals.
+May 26 2011
+Boolean Expressions and
+Representation
+  Can combine boolean operators (and, or,
+not) and relational operators (<,>,etc) and
+arithmetic operators (+,-,*, etc).
+  5+7<4*3 or 1-2 >2-4 and 15==4 is a legal
+expression.
+  Arithmetic goes before relational goes before
+boolean.
+  False is represented as 0, and True is
+represented as 1.
+  Can lead to weirdness. Best to avoid exploiting
+this.
+May 26 2011
+Short Circuit Evaluation
+  Python only evaluates a boolean
+expression as long as the answer is not
+clear.
+  It will stop as soon as the answer is clear.
+  This, combined with the nature of boolean
+representation can lead to strange
+behaviour.
+  Exploiting these behaviours is bad style.
+May 26 2011
+How to use boolean variables
+  Recall that we want to make our code
+adaptive.
+  To use boolean variables to selectively
+execute blocks of code, we use if
+statements.
+May 26 2011
+If statement
+  The general form of an if statement is:
+if condition:
+ block
+  Example:
+if grade >=50:
+ print “pass”
+May 26 2011
+If statement
+  The general form of an if statement is:
+if condition:
+ block
+  The condition is a boolean expression.
+  Recall that a block is a series of python
+statements.
+  If the condition evaluates to true the block
+is executed.
+May 26 2011
+Other Forms of if statement
+  If we want to execute different lines of
+code based on the outcome of the
+boolean expression we can use:
+if condition:
+ block
+else:
+ block
+  The block under the else is executed if the
+condition evaluates to false.
+May 26 2011
+More general if statement.
+if condition1:
+ block
+elif condition2:
+ block
+elif condition3:
+ block
+else:
+ block
+  Python evalutates the
+conditions in order.
+  It executes the block of
+the first (and only the
+first) condition that is
+true.
+  The final else is
+optional.
+May 26 2011
+Style advice for booleans.
+  If you are unsure of precedence, use
+parentheses.
+  Will make it easier for a reader.
+  Also use parentheses for complicated
+expressions.
+  Simplify your Boolean expressions.
+  Get rid of double negatives, etc.
+May 26 2011
+Break, the first
+May 26 2011
+Review of Functions
+  We started by looking at some of python's
+native functions.
+  We saw how to call functions.
+  Saw how to define our own.
+May 26 2011
+Why functions 
+  Allow us to reuse bits of code, which
+makes updating and testing much easier.
+  Only need to test and update the function,
+rather than every place that we use it.
+  Chunking! Allows us to parse information
+much better.
+  Human mind is pretty limited in what it can
+do.
+  Function names allow us to have a shorthand
+for what a function does.
+May 26 2011
+Return vs. Print
+  Recall that functions end if they see a return
+statement, and return the value of the expression after
+the keyword return.
+  If there is no return statement, the function returns
+None.
+  We've also seen snippets of the print statement.
+  Print takes one or more expressions separated by a
+comma, and prints them to the screen.
+  This is different than a return statement, but looks
+identical in the shell.
+May 26 2011
+Multiple Function calls
+  Sometimes we want to have functions
+calling other functions.
+  f(g(4))
+  In this case, we use the 'inside out' rule,
+that is we apply g first, and then we apply f
+to the result.
+  If the functions can have local variables,
+this can get complicated.
+May 26 2011
+How does python choose variables 
+  Python has local and global variables.
+  Local variables are defined inside of
+functions, global variables are defined
+outside of functions.
+  What happens if a local variable is the
+same as a global variable 
+May 26 2011
+Generally python will...
+  First, check local variables defined in a
+function.
+  Then check local variables in an enclosing
+function.
+  That is for f(g(4)) it will check g's local
+variables first, and then f's local variables.
+  Then it will check global variables.
+  Finally it will check built-in variables.
+May 26 2011
+How to think about scope.
+  We use namespaces.
+  A name space is an area in which a
+variable is defined.
+  Each time we call a function, we create a
+local namespace.
+  We refer to that first, and go down to the
+enclosing functions name space or global
+namespace as necessary.
+May 26 2011
+Style conventions for Functions.
+  As we've seen, python allows us to be
+somewhat careless in where we initialise
+and call variables.
+  Exploiting this is bad style.
+  It makes code hard to read and prone to
+errors.
+May 26 2011
+Designing Functions
+  Need to choose parameters.
+  Ask “what does the function need to know”.
+  Everything it needs to know should be
+passed as a parameter.
+  Do not rely on global parameters.
+  Need to choose whether to return or not to
+return.
+  Functions that return information to code should
+return, those that show something to the user
+shouldn't (print, media.show(), etc).
+May 26 2011
+Break, the second.
+May 26 2011
+Function Documentation
+  Recall that we can use the built-in function
+help() to get information on functions or
+modules.
+  We can do this on functions that we've
+defined as well, but it doesn't give much
+information.
+  We can add useful documentation with
+docstrings.
+  A docstring is surrounded by ''' and must be
+the first line of a module or function.
+May 26 2011
+Docstrings
+  If the first line of a function or module is a
+string, we call it a docstring.
+  Short for documentation string.
+  Python saves the string to return if the
+help function is called.
+  Convention: Leave a blank line after but
+not before a docstring.
+  All functions should have docstrings.
+May 26 2011
+Why Docstrings 
+  If you write the docstring first, you have an
+instant sanity check.
+  That is, you can be sure that the function is
+doing what you want it to do.
+  Makes portability and updating easier.
+  Allows other people to know what your
+functions do and how to use them, without
+having get into the code.
+  Allows for good chunking.
+May 26 2011
+Writing Good Docstrings.
+  '''A sunset module.'''
+  '''Changes into a sunset.'''
+  These are terrible docstrings.
+  They are vague and ambiguous. The don't
+tell us what the function expects or what it
+does.
+  How can we make it better 
+May 26 2011
+Writing Good Docstrings.
+  Describes what a function does.
+  '''Changes into a sunset.'''
+  '''Makes a picture look like it was taken at
+sunset.'''
+  '''Makes a picture look like it was taken at
+sunset by decreasing the green and blue
+by 70%.'''
+May 26 2011
+Writing Good Docstrings.
+  Describes what a function does.
+  '''Changes into a sunset.'''
+  '''Makes a picture look like it was taken
+at sunset.'''
+  '''Makes a picture look like it was taken
+at sunset by decreasing the green and
+blue by 70%.'''
+May 26 2011
+Writing Good Docstrings.
+  Does not describe how a function works.
+  More useful for chunking, and it's
+unnecessary information if we're using the
+function.
+  '''Makes a picture look like it was taken at
+sunset.'''
+  '''Makes a picture look like it was taken at
+sunset by decreasing the green and blue
+by 70%.'''
+May 26 2011
+Writing Good Docstrings.
+  Does not describe how a function works.
+  More useful for chunking, and it's
+unnecessary information if we're using the
+function.
+  '''Makes a picture look like it was taken
+at sunset.'''
+  '''Makes a picture look like it was taken at
+sunset by decreasing the green and blue
+by 70%.'''
+May 26 2011
+Writing Good Docstrings.
+  Makes the purpose of every parameter
+clear and refers to the parameter by
+name.
+  '''Makes a picture look like it was taken at
+sunset.'''
+  '''Takes a given picture and makes it look
+like it was taken at sunset.'''
+  '''Takes a picture pic and makes it look like
+it was taken at sunset.'''
+May 26 2011
+Writing Good Docstrings.
+  Makes the purpose of every parameter
+clear and refers to the parameter by
+name.
+  '''Makes a picture look like it was taken at
+sunset.'''
+  '''Takes a given picture and makes it look
+like it was taken at sunset.'''
+  '''Takes a picture pic and makes it look
+like it was taken at sunset.'''
+May 26 2011
+Writing Good Docstrings.
+  Be clear if a function returns a value, and
+if so, what.
+Consider average_red(pic)
+  '''Computer the average amount of red in a
+picture.'''
+  '''Returns the average amount of red (a
+float) in a picture pic.'''
+May 26 2011
+Writing Good Docstrings.
+  Make sure to explicitly state any
+assumptions the function has.
+Def decrease_red(pic,percent)
+  '''Decreases the amount of red per pixel in
+picture pic by int percent. percent must be
+between 0 and 100.'''
+May 26 2011
+Writing Good Docstrings.
+  Be concise and grammatically correct.
+  Use commands rather than descriptions.
+  '''Takes a picture pic and makes it appear
+as it if was taken at sunset.'''
+  '''Take picture pic and make it appear to
+have been taken at sunset.'''
+May 26 2011
+Writing Good Docstrings.
+  Describes what a function does.
+  Does not describe how a function works.
+  Makes the purpose of every parameter clear and
+refers to the parameter by name.
+  Be clear if a function returns a value, and if so, what.
+  Make sure to explicitly state any assumptions the
+function has.
+  Be concise and grammatically correct.
+  Use commands rather than descriptions.
+May 26 2011
+Boolean Docstrings.
+  def: is_odd(x):
+return (x%2)==1
+  The docstring for this might look like
+'''Return True if int x is odd, and False
+otherwise.'''
+  Commonly shortened to:
+  '''Return True iff int x is odd.
+May 26 2011
+IFF
+  iff stands for if and only if.
+  So in fact we wrote:
+  '''Return True if int x is odd and only iff int x
+is odd.'''
+  We didn't specify what to do if x is not odd.
+  But for boolean functions, it is understood
+that we are to return False if we're not
+returning True.
+May 26 2011
+Writing Good Docstrings.
+  Docstrings do not include definitions or
+hints.
+  The docstring for sqrt is not:
+'''Return the sqrt of (x). The sqrt of x is a
+number, that when multiplied by itself
+evaluates to x'.
+  Is it simply:
+  Return the square root of x.
+
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+June 2 2011
+Administration
+  Questions on the assignment at the end.
+  There were some questions about the memory
+model from last week.
+  Accordingly, there will be a file posted to the
+lectures page that will go through the example line
+by line.
+  When it is posted, will be posted on the
+Announcements.
+June 2 2011
+Assignment 1
+  Find_factor()
+  Between 0 and 100 is exclusive, means 1<=x<=99
+  We are counting non-prime factors, so 4 is an
+acceptable answer.
+  1 is not considered a factor, unless the input is 1.
+  Find intercept()
+  Don't need to worry about lines that don't have
+intercepts.
+  In general, don't need to worry about inputs for
+which there is no answer.
+June 2 2011
+What if we don't want numbers 
+  So far we've seen ints, reals and booleans
+  Allow for number manipulation and logic
+manipulation
+  But what if we want to use text 
+  Then we need to use a new type – strings.
+June 2 2011
+Strings
+  Sequences of characters.
+  Two types str and unicode.
+  We'll use str in this course.
+  It contains the roman alphabet, numbers a few
+symbols.
+  Unicode is larger, contains more accented letters,
+Chinese characters, and more.
+  Strings are denoted by single or double quotes.
+  Quote type must match!
+June 2 2011
+String operations.
+  Strings can be 'added'.
+  We call this concatenation.
+  “str” + “ing” results in “string”.
+  Can also be multiplied, sort of.
+  You can't multiply a string with itself, but the
+multiplication operator functions as a copy.
+  So “copy”*3 results in “copycopycopy”.
+  Can also compare strings using relational operators.
+  Can check if substrings are in a string using in.
+  Long strings that span multiple lines can be made using '''.
+June 2 2011
+Escape Characters
+  Denoted by a backslash, they indicate to python
+that the next character is a special character.
+  \n - a new line
+  \' - a single quote
+  \” - a double quote
+  \\ - a backslash
+  \t - a tab.
+  Aside len(string) will return an int that is
+the number of characters in the string.
+June 2 2011
+Converting types to strings.
+  If we have a variable that is not a string and we
+want to add it to a string, we need to convert it.
+  We use str(x) to convert x to a string.
+  Print will display the variable, and can display
+mixed types.
+  They must be separated with a comma.
+  print “string”, x, “ “, real_num
+  Can be awkward.
+  print “Person“, name, “has height”,
+height, “age“, age, “weight“, weight
+June 2 2011
+Can use string formatting instead.
+  Can use special characters to tell python to
+insert a type into a string.
+  print “My age is %d.” % age
+  The %d tells python to take age, and format it
+as an integer.
+  %s says to take a value and format it as a
+string.
+  %f says to take a value and format it as a float.
+  %.2f says to pad the float to 2 decimal places.
+June 2 2011
+Multiple variables.
+  What if we want multiple variables in our string 
+  print “Person“, name, “has height”, \
+ height, “age“, age, “weight“, weight
+  We put them in parentheses separated by
+commas.
+  print “Person %s has weight %.2f \
+ and age %d and height %d.“ \
+ % (name, weight, age, height)
+June 2 2011
+User input.
+  Here we mean the user as the person who is
+using a program while it is running.
+  Thus far, the only way we've had of giving input
+to a program is to hardcode it in the code.
+  Inefficient and not user-friendly.
+  Python allows us to ask for user input using
+raw_input().
+  Returns a string!
+  So it may need to be converted.
+June 2 2011
+Break, the first
+June 2 2011
+Modules.
+  Sometimes we want to use other people's code.
+  Or make our own code available for use.
+  It's convenient if we can bundle up related
+functions in one file.
+  Modules allow us to do this.
+  A Module is a group of related functions and
+variables.
+June 2 2011
+Using modules.
+  To use a module, one needs to import it.
+  Importing a module causes python to run each
+line of code in the module.
+  It it is just function definitions this doesn't cause
+much trouble.
+  But it can be annoying if there is code that you don't
+care about in the module.
+  To use a function in a module one uses.
+ module_name.function_name()
+  We can also run a module. Then we just use
+function_name()
+June 2 2011
+__name__
+  In addition to variables that are defined in the
+module, each module has a variable that is
+called __name__.
+  If we import a module called module_m, then
+module_m.__name__ == “module_m”
+  But if we run a module, then
+  __name__ == “__main__”
+  Recall that if we are running a module, we don't
+need the module name as a prefix.
+June 2 2011
+Another way to import things.
+  from module_name import fn_name1(), fn_name2()
+  Will import fn_name1 and fn_name 2
+  Can be referred to by just fn_name1()
+  Can also use * as a wildcard to import all the
+functions.
+  from module_name import *
+  What if two modules have a function with the
+same name 
+  The most recent one stays.
+June 2 2011
+Methods.
+  We've seen that modules can have their own
+functions.
+  A similar thing is true of values.
+  Values contain ways that you can modify them.
+We call these methods.
+  These are called by value.fn_name()
+  Or, if we've assigned a value to a variable we
+can use variable_name.fn_name()
+  We can call help(type) to figure out what
+methods a type has available to it.
+June 2 2011
+String methods.
+  Can find them by using help(str).
+  Useful ones include:
+  s.replace(old, new) - return a new string
+that is a copy of s with all instances of old
+replaced by new.
+  string.count(substr) – return the number
+of instances of substr in the string.
+  string.lower() - shift to lower case letters.
+  string.upper() - shift to capitalised letters.
+June 2 2011
+Getting method information
+  Most direct way is to use help().
+  But help isn't searchable. Can use dir() to
+browse.
+  Sometimes you know what you want, and you think
+it might already exist.
+  An alternative is to check the standard library:
+  http://docs.python.org/library/
+  Being able to browse this is useful skill.
+June 2 2011
+Remember!
+  Functions belong to modules.
+  Methods belong to objects.
+  All of the basic types in python are objects.
+  We will learn how to make our own later.
+  This is covered in greater detail in 148.
+  len(str) is a function
+  str.lower() is a method.
+  Subtle but important distinction.
+June 2 2011
+Break, the second.
+June 2 2011
+Repetition
+  Often times in programs we want to do the
+same thing over and over again.
+  For example, we may want to add a number to
+a variable until it reaches some number.
+  Or we may want to execute a block of code until
+some condition is true.
+  Ages ago, this was done with a goto statement.
+  This lead to unreadable 'spaghetti' code.
+  Python has no goto statement.
+June 2 2011
+The while loop
+  Instead Python uses loops.
+  We will cover the for loop next week.
+  The while loop has the form:
+while condition:
+ block
+  The condition is checked first. If it evaluates to
+True, the block executes, otherwise the block is
+skipped, and the next line of code is executed. 
+June 2 2011
+Why loops 
+  While loops can be used if:
+  You want to repeat an action indefinitely
+  You want to repeat an action until a condition is met.
+  You want to repeat an action a fixed number of
+times.
+June 2 2011
+Assignment Questions
+
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+July 7 2011
+Administration
+  Assignment 3 is out.
+  We've got the assignment 2 autograder and are
+working on grading it.
+July 7 2011
+Testing.
+  Testing is key to developing good software.
+  Tests should be easy to access, and easy to
+reuse.
+  They should be separate from the code you are
+testing.
+  I.e. when you test code, you should test it based on
+the docstrings, not based on the actual code that
+you're writing.
+  This means that you can test what the user will see.
+July 7 2011
+Testing.
+  Two main aspects of testing:
+  Figuring out what you're going to test.
+  The tools used to run tests.
+  This first aspect is largely language
+independent.
+  Not entirely, because some languages might allow
+different types of input.
+  The second less so.
+  There's a reasonably common paradigm for how to
+test code, but some languages have built-in tools
+for it.
+July 7 2011
+Test cases.
+  What do we test 
+  We can't test all inputs.
+  So we need to choose a subset that is
+representative.
+  We can have 'typical inputs'.
+  We can test things where we might suspect
+programmer error.
+  We can test 'boundary conditions' that we suspect
+might have been overlooked.
+July 7 2011
+Test cases.
+  It is useful to think 'adversarially' when picking
+test cases.
+  That is, try to picture yourself as an adversary trying
+to break a program.
+  But do so without cheating, so if the docstring
+specifies some kind of input, limit yourself to those
+inputs.
+  But within those inputs try and choose as bad inputs
+as you can.
+July 7 2011
+Test cases.
+  We want all of our test cases to be
+independent.
+  That is, we want to be certain of the source of a
+failure.
+  So having lots of test cases that build on
+eachother is not a great idea.
+  Note that this is different from having test cases
+that test functions that build on other functions.
+July 7 2011
+What do we test 
+  Ideally one tests each function individually.
+  This is called unit testing.
+  Once all the smaller functions have been
+tested, then you test the larger functions that
+call the smaller ones.
+  When you make any changes, you want to run
+all the tests again.
+  This is called regression testing.
+July 7 2011
+When do we test 
+  It is best if you test a function right after writing
+it.
+  It is easiest to fix things at this point.
+  Often it is useful to come up with test cases
+before you actually write any code.
+  This means that you think of the structure of the
+program and what each function does before you
+write the code.
+  This means that you can really write the tests in a
+black-box fashion, because you don't know what the
+code will be yet.
+July 7 2011
+When do we test 
+  Professional coders often write test cases
+before writing code.
+  Thinking about tests cases while designing is
+also a useful design tool, because it can inform
+your design.
+  Makes for more robust code.
+July 7 2011
+Testing Summary.
+  Want individual Unit tests.
+  These should be independent of eachother.
+  There should be some generic ones, and some
+chosen 'adversarially'.
+  Want to design tests before writing code.
+  Makes for more robust code and better style tests.
+  Want to rerun tests when we change code.
+  How do we do all this 
+July 7 2011
+Break, the first.
+July 7 2011
+Testing in Python.
+  So we have a lot of constraints in Python
+testing.
+  And it's hard to satisfy all of them.
+  Thus far we've been testing in shell, and it's a
+lot of work to do regression testing that way.
+  We could store all of our old tests in a file, but
+then we have to write specific code for opening
+files and dealing with them.
+  Luckily python has a module called Nose that
+helps us with a lot of these things.
+July 7 2011
+Testing with Nose.
+  The context for testing with Nose is that we
+have a module named mod.
+  We want to test some or all of the functions in it.
+  To do this we create a module called
+test__mod.
+  In this module we import nose and we
+import mod.
+  For each function func we want to test, we
+have a test__func() function.
+July 7 2011
+Testing with Nose.
+  We have:
+if __name__ == '__main__':
+ nose.runmodule()
+  In the body of test__func() we have assert statements.
+  assert (boolean condition) will do nothing if the
+condition is true, but will throw an error if it's false.
+  So test__func() has a bunch of statements like:
+assert func(input) == (expected_output)
+  Nose runs these and produces output.
+July 7 2011
+Nose Output.
+  The first line of output tells us the result of the
+tests.
+  a dot means pass, an F means fail, an E means an
+error.
+  So, a failure is incorrect output, an error is an
+exception of some kind.
+  Each failure or error produces information about
+that failure or error.
+  The last bit tells us the number of tests passes, the
+number of tests failed, and the number of errors.
+July 7 2011
+Nose Output
+  The information about the errors so far is just
+the error information that python gives back to
+us.
+  If we fail a test we can an 'AssertionError'.
+  If we want to add some information to this, we
+can put in a string after a comma in the assert
+statement.
+assert (condition), "Some String."
+July 7 2011
+Testing Summary.
+  Want individual Unit tests.
+  These should be independent of eachother.
+  There should be some generic ones, and some
+chosen 'adversarially'.
+  Want to design tests before writing code.
+  Makes for more robust code and better style tests.
+  Want to rerun tests when we change code.
+  How does Nose do this 
+July 7 2011
+Nose and Testing.
+  Unit Tests.
+  Each test in nose is its own function, so we can
+write a function for each unit test we want.
+  Designing Tests Early.
+  All we need to write test in nose is the specifiction
+for the function.
+  The tests treat functions as a black box.
+  Regression Testing.
+  Nose makes it quite easy to run all the tests we
+have whenever we want.
+July 7 2011
+So you have an error.
+  If you find an error, you need to debug it, a
+process that is often painful.
+  There are a few ways to mitigate this pain.
+  Test early! Test Often.
+  Find the first point that the code differs from what
+you think it would be.
+  Run through the code in your head to make sure
+that if everything goes the way you think, the code
+will work.
+  Read the error information, and use it to see if the
+code is correct at the point of the error.
+July 7 2011
+Break, the second.
+July 7 2011
+Assignment 2 Solution.
+  Conceptually is in several parts.
+  The functions to and from algebraic notation are
+their own parts.
+  game_summary and strip_tag_info are their
+own part.
+  strip_tag_info is the function that game
+summary calls to do it's work.
+July 7 2011
+Assignment 2 solution.
+  For the rest, the problem of recording the
+moves and boards state are intertwined. But it's
+two big of a problem to do on it's own, so we
+have to break it down into component chunks.
+  Chunk one: parsing the input into little moves.
+  Done by get_move_lst and get_move_str.
+July 7 2011
+Assignment 2 solution
+  For each individual move text, we need to
+extract a bunch of possible bit of information
+from this.
+  Done with a bunch of functions: check, mate,
+get_fin_sq, get_piece_type, etc.
+  For each move though, this isn't enough. We
+also need to keep track of the board, and
+update it accordingly.
+  For this we have update_board(), get_init_move,
+move_piece.
+July 7 2011
+Assignment 2 solution
+  Other things:
+  We keep the board as a nested list, in the format
+that we're supposed to return it.
+  When trying to find where a piece started, rather
+than looking at all possible place a piece could
+move to; we look at all possible pieces that could
+move to a place and try and find which one could do
+so legally.
+  This code relies very heavily on the correctness of
+the file.
+July 7 2011
+Assignment 3 Comments and Questions.
+
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+June 9 2011
+Administration
+  Just to be clear, it's okay to ask questions about
+the assignment at office hours, even if it's in the
+last 24 hours.
+  Assignment 2 will come out over the weekend,
+and the deadline will be moved to the 27th
+.
+  Office hours will be held Monday instead of
+Tuesday that week.
+  The midterm will be held June 30th at the
+regular lecture time and regular lecture room.
+June 9 2011
+Administration
+  There is a request for a volunteer note-taker.
+  There is a student in this class who requires a volunteer
+notetaker as an accommodation for a disability. By signing
+up and posting your notes, you can make a significant
+difference for this individual's capacity to fully participate in
+this course. Go to:
+http://www.studentlife.utoronto.ca/accessibility/pcourselist.aspx
+ or come in person to Accessibility Services 215 Huron St.
+Suite 939.
+  Many students notice the quality of their notetaking
+improves through volunteering.
+  You will also receive a certificate of recognition.
+June 9 2011
+Immutable objects.
+  So far all we've seen are immutable objects.
+  That is objects don't change.
+  Instead of making an old int into a new one, we
+make a new int, and throw the old one away.
+June 9 2011
+Immutable objects.
+  What if we want to change an immutable
+object 
+  It's a lot of work, we need to make a new object
+that is identical to the old one except for our
+changes.
+  This is fine for small things like ints and strings,
+but takes a lot of time for large things like
+images.
+June 9 2011
+Mutable Objects.
+  If we want to change a really large object
+without keeping the original, then making a big
+copy, modifying it and tossing the rest is
+wasteful.
+  Instead, we can use a mutable object, that
+we're allowed to change.
+  This also allows us to define functions that
+change objects, rather than return new ones.
+June 9 2011
+Aliasing
+  Consider:
+x=10
+y=x
+x=5
+print x, y
+  We know this will print 5 10 to the screen,
+because ints are immutable.
+June 9 2011
+Aliasing
+  Let pic be an already initialised picture and
+consider:
+x = pic
+y = x
+#sets the green to 0.
+for pixel in x:
+media.set_green(pixel,0)
+media.show(y)
+  Pics are mutable, so this will show a picture
+with no green.
+June 9 2011
+Aliasing and functions.
+  When one calls a function, one is effectively
+beginning with a bunch of assignment
+statements.
+  That is, the parameters are assigned to the local
+variables.
+  But with mutable objects, these assignment
+statements mean that the local variable refers
+to a mutable object that it can change.
+  This is why functions can change mutable
+objects, but not immutable ones.
+June 9 2011
+Break, the first.
+June 9 2011
+Lists
+  Recall from the assignment that you had to
+refer to each co-ordinate by a variable.
+  This is annoying, and can easily be really slow in
+high-dimensional spaces.
+  Python has a way of grouping similar items
+called a list.
+  Denoted by:
+list_name = [list_elt0,
+list_elt1, ..., list_eltn]
+June 9 2011
+Lists
+  To get to the i-th element of a list we use:
+list_name[i-1]
+  We use i-1 because lists are indexed from 0.
+  This means to refer to the elements of a 4
+element list named list_name we use
+list_name[0], list_name[1],
+list_name[2], list_name[3]
+  Lists are mutable.
+June 9 2011
+Lists
+  You can also have an empty list: [].
+  You can index into lists from the back.
+  list_name[-i] returns the ith element from the
+back.
+  Lists are heterogeneous:
+  That is, the elements in a list need not be the same
+type, can have ints and strings.
+  Can even have lists themselves.
+June 9 2011
+Lists: Functions
+  Lists come with lots of useful functions and
+methods.
+  len(list_name), as with strings, returns the
+length of the list.
+  min(list_name) and max(list_name)
+return the min and max so long as the list is
+well defined.
+  sum(list_name) returns the sum of elements
+so long as they're numbered.
+  Not defined for lists of strings.
+June 9 2011
+Lists: Methods
+  append(value) – adds the value to the end of
+the list.
+  sort() - sorts the list so long as this is well
+defined. (need consistent notions of > and ==)
+  insert(index, value) – inserts the
+element value at the index specified.
+  remove(value) – removes the first instance
+of value.
+  count(value) – counts the number of
+instances of value in the list.
+June 9 2011
+Looping over Lists.
+  Often we want to do a similar operation to every
+element of the list.
+  Python allows us to do this using for loops.
+for item in list:
+ block
+  This is equivalent to:
+item = list[0]
+block
+item = list [1]
+block
+...
+June 9 2011
+Looping over Lists.
+  Loops can be tricky with immutable objects
+for item in list:
+ block
+  Here, item is immutable, so we can't alter the
+list elements.
+  If we want to alter the list elements, we need to
+refer to the indices of the list.
+June 9 2011
+Looping over Lists
+  To do that, we use the range() function.
+  range(i) returns an ordered list of ints ranging
+from 0 to i-1.
+  range(i,j) returns an ordered list of ints ranging
+from i to j-1 inclusive.
+  range(i,j,k) returns a list of ints ranging from i
+to j-1 with a step of at least k between ints.
+  So range(i,k)==range(i,k,1)
+  To modify a list element by element we use:
+for i in range(len(list)):
+block
+June 9 2011
+List slicing.
+  Sometimes we want to perform operations on a
+sublist.
+  To refer to a sublist we use list slicing.
+  y=x[i:j] gives us a list y with the elements
+from i to j-1 inclusive.
+  x[:] makes a list that contains all the elements of the original.
+  x[i:] makes a list that contains the elements from i to the end.
+  x[:j] makes a list that contains the elements from the beginning
+to j-1.
+  y is a new list, so that it is not aliased with x.
+June 9 2011
+Break, the second.
+June 9 2011
+Tuples.
+  Sometimes we want our lists to be immutable.
+  Can help if we're worried about aliasing
+carelessness.
+  To do that we can make a tuple.
+  tuple_name=(item0,item1,item2,...)
+  Items are referenced by tuple_name[i] not
+tuple_name(i)
+  Single element tuples must be defined with a
+comma to avoid ambiguity
+– (8+3) vs. (8+3,)
+June 9 2011
+Strings revisted.
+  Strings can be considered tuples of individual
+characters. (since they are immutable).
+  In particular, this means that we can use the list
+knowlege that we gained, an apply it to strings.
+  Can reference individual characters by string[+/-i].
+  Strings are not heterogenous, they can only contain
+characters.
+  min() and max() defined on strings, but sum() is not.
+  You can slice strings just as you can lists.
+June 9 2011
+String methods revisted.
+  Now that we know that we can index into
+strings, we can look at some more string
+methods.
+  find(substring): give the index of the first character
+in a matching the substring from the left or -1 if no
+such character exists.
+  rfind(substring): same as above, but from the right.
+  find(substring,i,j): same as find(), but looks only in
+string[i:j].
+June 9 2011
+Nested Lists
+  Because lists are heterogeneous, we can have
+lists of lists.
+  This is useful if we want matrices, or to
+represent a grid or higher dimenstional space.
+  We then reference elements by list_name[i][j] if
+we want the jth element of the ith list.
+  So then naturally, if we wish to loop over all the
+elements we need nested loops:
+for item in list_name:
+ for item2 in item:
+ block
+
+CSC 108H: Introduction to Computer
+Programming
+Summer 2011
+Marek Janicki
+June 9 2011
+Administration
+  Just to be clear, it's okay to ask questions about
+the assignment at office hours, even if it's in the
+last 24 hours.
+  Assignment 2 will come out over the weekend,
+and the deadline will be moved to the 27th
+.
+  Office hours will be held Monday instead of
+Tuesday that week.
+  The midterm will be held June 30th at the
+regular lecture time and regular lecture room.
+June 9 2011
+Administration
+  There is a request for a volunteer note-taker.
+  There is a student in this class who requires a volunteer
+notetaker as an accommodation for a disability. By signing
+up and posting your notes, you can make a significant
+difference for this individual's capacity to fully participate in
+this course. Go to:
+http://www.studentlife.utoronto.ca/accessibility/pcourselist.aspx
+ or come in person to Accessibility Services 215 Huron St.
+Suite 939.
+  Many students notice the quality of their notetaking
+improves through volunteering.
+  You will also receive a certificate of recognition.
+June 9 2011
+Immutable objects.
+  So far all we've seen are immutable objects.
+  That is objects don't change.
+  Instead of making an old int into a new one, we
+make a new int, and throw the old one away.
+June 9 2011
+Immutable objects.
+  What if we want to change an immutable
+object 
+  It's a lot of work, we need to make a new object
+that is identical to the old one except for our
+changes.
+  This is fine for small things like ints and strings,
+but takes a lot of time for large things like
+images.
+June 9 2011
+Mutable Objects.
+  If we want to change a really large object
+without keeping the original, then making a big
+copy, modifying it and tossing the rest is
+wasteful.
+  Instead, we can use a mutable object, that
+we're allowed to change.
+  This also allows us to define functions that
+change objects, rather than return new ones.
+June 9 2011
+Aliasing
+  Consider:
+x=10
+y=x
+x=5
+print x, y
+  We know this will print 5 10 to the screen,
+because ints are immutable.
+June 9 2011
+Aliasing
+  Let pic be an already initialised picture and
+consider:
+x = pic
+y = x
+#sets the green to 0.
+for pixel in x:
+media.set_green(pixel,0)
+media.show(y)
+  Pics are mutable, so this will show a picture
+with no green.
+June 9 2011
+Aliasing and functions.
+  When one calls a function, one is effectively
+beginning with a bunch of assignment
+statements.
+  That is, the parameters are assigned to the local
+variables.
+  But with mutable objects, these assignment
+statements mean that the local variable refers
+to a mutable object that it can change.
+  This is why functions can change mutable
+objects, but not immutable ones.
+June 9 2011
+Break, the first.
+June 9 2011
+Lists
+  Recall from the assignment that you had to
+refer to each co-ordinate by a variable.
+  This is annoying, and can easily be really slow in
+high-dimensional spaces.
+  Python has a way of grouping similar items
+called a list.
+  Denoted by:
+list_name = [list_elt0,
+list_elt1, ..., list_eltn]
+June 9 2011
+Lists
+  To get to the i-th element of a list we use:
+list_name[i-1]
+  We use i-1 because lists are indexed from 0.
+  This means to refer to the elements of a 4
+element list named list_name we use
+list_name[0], list_name[1],
+list_name[2], list_name[3]
+  Lists are mutable.
+June 9 2011
+Lists
+  You can also have an empty list: [].
+  You can index into lists from the back.
+  list_name[-i] returns the ith element from the
+back.
+  Lists are heterogeneous:
+  That is, the elements in a list need not be the same
+type, can have ints and strings.
+  Can even have lists themselves.
+June 9 2011
+Lists: Functions
+  Lists come with lots of useful functions and
+methods.
+  len(list_name), as with strings, returns the
+length of the list.
+  min(list_name) and max(list_name)
+return the min and max so long as the list is
+well defined.
+  sum(list_name) returns the sum of elements
+so long as they're numbered.
+  Not defined for lists of strings.
+June 9 2011
+Lists: Methods
+  append(value) – adds the value to the end of
+the list.
+  sort() - sorts the list so long as this is well
+defined. (need consistent notions of > and ==)
+  insert(index, value) – inserts the
+element value at the index specified.
+  remove(value) – removes the first instance
+of value.
+  count(value) – counts the number of
+instances of value in the list.
+June 9 2011
+Looping over Lists.
+  Often we want to do a similar operation to every
+element of the list.
+  Python allows us to do this using for loops.
+for item in list:
+ block
+  This is equivalent to:
+item = list[0]
+block
+item = list [1]
+block
+...
+June 9 2011
+Looping over Lists.
+  Loops can be tricky with immutable objects
+for item in list:
+ block
+  Here, item is immutable, so we can't alter the
+list elements.
+  If we want to alter the list elements, we need to
+refer to the indices of the list.
+June 9 2011
+Looping over Lists
+  To do that, we use the range() function.
+  range(i) returns an ordered list of ints ranging
+from 0 to i-1.
+  range(i,j) returns an ordered list of ints ranging
+from i to j-1 inclusive.
+  range(i,j,k) returns a list of ints ranging from i
+to j-1 with a step of at least k between ints.
+  So range(i,k)==range(i,k,1)
+  To modify a list element by element we use:
+for i in range(len(list)):
+block
+June 9 2011
+List slicing.
+  Sometimes we want to perform operations on a
+sublist.
+  To refer to a sublist we use list slicing.
+  y=x[i:j] gives us a list y with the elements
+from i to j-1 inclusive.
+  x[:] makes a list that contains all the elements of the original.
+  x[i:] makes a list that contains the elements from i to the end.
+  x[:j] makes a list that contains the elements from the beginning
+to j-1.
+  y is a new list, so that it is not aliased with x.
+June 9 2011
+Break, the second.
+June 9 2011
+Tuples.
+  Sometimes we want our lists to be immutable.
+  Can help if we're worried about aliasing
+carelessness.
+  To do that we can make a tuple.
+  tuple_name=(item0,item1,item2,...)
+  Items are referenced by tuple_name[i] not
+tuple_name(i)
+  Single element tuples must be defined with a
+comma to avoid ambiguity
+– (8+3) vs. (8+3,)
+June 9 2011
+Strings revisted.
+  Strings can be considered tuples of individual
+characters. (since they are immutable).
+  In particular, this means that we can use the list
+knowlege that we gained, an apply it to strings.
+  Can reference individual characters by string[+/-i].
+  Strings are not heterogenous, they can only contain
+characters.
+  min() and max() defined on strings, but sum() is not.
+  You can slice strings just as you can lists.
+June 9 2011
+String methods revisted.
+  Now that we know that we can index into
+strings, we can look at some more string
+methods.
+  find(substring): give the index of the first character
+in a matching the substring from the left or -1 if no
+such character exists.
+  rfind(substring): same as above, but from the right.
+  find(substring,i,j): same as find(), but looks only in
+string[i:j].
+June 9 2011
+Nested Lists
+  Because lists are heterogeneous, we can have
+lists of lists.
+  This is useful if we want matrices, or to
+represent a grid or higher dimenstional space.
+  We then reference elements by list_name[i][j] if
+we want the jth element of the ith list.
+  So then naturally, if we wish to loop over all the
+elements we need nested loops:
+for item in list_name:
+ for item2 in item:
+ block

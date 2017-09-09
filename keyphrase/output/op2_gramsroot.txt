@@ -1,0 +1,1536 @@
+cs140 operating systems::cs140 operating systems
+operating systems instructors::operating systems instructors
+mazieres ` cas::mazieres ` cas
+jayesh yerrapragada stanford::jayesh yerrapragada stanford
+yerrapragada stanford university::yerrapragada stanford university
+administrivia class web::administrivia class web
+class web page::class web page
+lecture notes on-line::lecture notes on-line
+notes on-line textbook::notes on-line textbook
+operating system concepts::operating system concepts
+haven t looked::haven t looked
+class from textbook::class from textbook
+make lecture slides::make lecture slides
+slides the primary::slides the primary
+slides contain links::slides contain links
+reading about topics::reading about topics
+slides from class::slides from class
+staff mailing list::staff mailing list
+mail staff list::mail staff list
+15wi-cs140 is main::15wi-cs140 is main
+main discussion forum::main discussion forum
+discussion forum key::discussion forum key
+forum key dates::forum key dates
+15pm exams open::15pm exams open
+exams open note::exams open note
+materials except textbook::materials except textbook
+electronic devices permitted::electronic devices permitted
+lecture videos lectures::lecture videos lectures
+televised for scpd::televised for scpd
+miss a lecture::miss a lecture
+temptation to miss::temptation to miss
+miss a bunch::miss a bunch
+bunch of lectures::bunch of lectures
+lectures and watch::lectures and watch
+lecture in person::lecture in person
+conveniently at end::conveniently at end
+end of work::end of work
+parking spaces don::parking spaces don
+don t require::don t require
+4pm other notes::4pm other notes
+notes for scpd::notes for scpd
+exams in person::exams in person
+group to find::group to find
+find project partners::find project partners
+threads & processes::threads & processes
+concurrency & synchronization::concurrency & synchronization
+synchronization scheduling virtual::synchronization scheduling virtual
+scheduling virtual memory::scheduling virtual memory
+memory i disks::memory -NONE- disks
+network file systems::network file systems
+file systems protection::file systems protection
+protection & security::protection & security
+security virtual machines::security virtual machines
+virtual machines note::virtual machines note
+current and future::current and future
+oses heavily influenced::oses heavily influenced
+influenced by unix::influenced by unix
+windows is exception::windows is exception
+computer without interacting::computer without interacting
+effective programmer cover::effective programmer cover
+programmer cover important::programmer cover important
+cover important systems::cover important systems
+important systems concepts::important systems concepts
+concepts in general::concepts in general
+deal with larger::deal with larger
+larger software systems::larger software systems
+assignments much larger::assignments much larger
+majority of people::majority of people
+graduate os classes::graduate os classes
+programming assignments implement::programming assignments implement
+assignments implement parts::assignments implement parts
+parts of pintos::parts of pintos
+pintos operating system::pintos operating system
+built for x86::built for x86
+emulator one setup::emulator one setup
+friday four implementation::friday four implementation
+four implementation projects::four implementation projects
+file system lab::file system lab
+distributed at end::distributed at end
+section this friday::section this friday
+friday for project::friday for project
+overview implement projects::overview implement projects
+projects in groups::projects in groups
+pick your partners::pick your partners
+lecture will end::lecture will end
+grading no incompletes::grading no incompletes
+talk to instructors::talk to instructors
+run into real::run into real
+based on exams::based on exams
+midterm + final::midterm + final
+grade from projects::grade from projects
+based on passing::based on passing
+passing test cases::passing test cases
+based on design::based on design
+design and style::design and style
+style most people::style most people
+people s projects::people s projects
+pass most test::pass most test
+turn in working::turn in working
+credit here means::credit here means
+matter a lot::matter a lot
+large software systems::large software systems
+producing working code::producing working code
+code other people::code other people
+people can understand::people can understand
+style must turn::style must turn
+project s design::project s design
+design doc cas::design doc cas
+manually inspect code::manually inspect code
+code for correctness::code for correctness
+implement the design::implement the design
+handle corner cases::handle corner cases
+handle malloc failure::handle malloc failure
+points for error-prone::points for error-prone
+code w errors::code -NONE- errors
+variables if automatic::variables if automatic
+automatic ones suffice::automatic ones suffice
+names for variables::names for variables
+easy to read::easy to read
+uniform coding style::uniform coding style
+match existing code::match existing code
+comments on structure::comments on structure
+don t leave::don t leave
+leave in reams::leave in reams
+reams of commented-out::reams of commented-out
+commented-out garbage code::commented-out garbage code
+people s solutions::people s solutions
+solutions to projects::solutions to projects
+reserve the right::reserve the right
+right to run::right to run
+moss on present::moss on present
+present and past::present and past
+solutions in violation::solutions in violation
+copy other oses::copy other oses
+cite any code::cite any code
+code that inspired::code that inspired
+inspired your code::inspired your code
+undermines the assignment::undermines the assignment
+assignment projects due::assignment projects due
+projects due fridays::projects due fridays
+fridays at noon::fridays at noon
+noon ask cs140-staff::noon ask cs140-staff
+cs140-staff for extension::cs140-staff for extension
+run into trouble::run into trouble
+operating system layer::operating system layer
+layer between applications::layer between applications
+applications and hardware::applications and hardware
+hardware makes hardware::hardware makes hardware
+abstractions for applications::abstractions for applications
+manages and hides::manages and hides
+details of hardware::details of hardware
+unavailable to applications::unavailable to applications
+study operating systems::study operating systems
+operating systems operating::operating systems operating
+systems operating systems::systems operating systems
+handful of mature::handful of mature
+people to switch::people to switch
+switch operating systems::switch operating systems
+issues as oses::issues as oses
+oses resource consumption::oses resource consumption
+hard to achieve::hard to achieve
+foundation new smart::foundation new smart
+oses web browsers::oses web browsers
+browsers increasingly face::browsers increasingly face
+face os issues::face os issues
+primitive operating systems::primitive operating systems
+library of standard::library of standard
+interface above hardware-specific::interface above hardware-specific
+runs one program::runs one program
+users or programs::users or programs
+idle while waiting::idle while waiting
+waiting for disk::waiting for disk
+program to finish::program to finish
+run another process::run another process
+memory to make::memory to make
+make them fail::make them fail
+mechanisms to address::mechanisms to address
+address these problems::address these problems
+preemption take cpu::preemption take cpu
+memory protection protect::memory protection protect
+protection protect process::protection protect process
+process s memory::process s memory
+oses many oses::oses many oses
+oses use protection::oses use protection
+protection to serve::protection to serve
+distrustful users idea::distrustful NNS idea
+demands for cpu::demands for cpu
+win by giving::win by giving
+resources to users::resources to users
+users are gluttons::users are gluttons
+total memory usage::total memory usage
+memory usage greater::memory usage greater
+slowdown with increasing::slowdown with increasing
+mechanisms that isolate::mechanisms that isolate
+isolate bad programs::isolate bad programs
+programs and people::programs and people
+application a resource::application a resource
+application and stuff::application and stuff
+track all pieces::track all pieces
+pieces that application::pieces that application
+table to check::table to check
+check that access::check that access
+access legal privileged::access legal privileged
+privileged & unprivileged::privileged & unprivileged
+modes in cpus::modes in cpus
+unprivileged user mode::unprivileged user mode
+privileged supervisor mode::privileged JJ mode
+done in privileged::done in privileged
+typical os structure::typical os structure
+structure user kernel::structure user kernel
+user kernel driver::user kernel driver
+kernel driver device::kernel driver device
+sockets tcp system::sockets -NONE- system
+tcp system file::-NONE- system file
+system file console::system file console
+file console disk::file console disk
+console disk device::console disk device
+disk device driver::disk device driver
+device driver driver::device driver driver
+driver driver device::driver driver device
+driver device network::driver device network
+network vm scheduler::network vm scheduler
+ipc most software::ipc most software
+runs as user-level::runs as user-level
+runs in privileged::runs in privileged
+access to hardware::access to hardware
+system calls applications::system calls applications
+applications can invoke::applications can invoke
+kernel through system::kernel through system
+special instruction transfers::special instruction transfers
+instruction transfers control::instruction transfers control
+control to kernel::control to kernel
+hundred syscall handlers::hundred syscall handlers
+privileged kernel code::privileged kernel code
+kernel code kernel::kernel code kernel
+code kernel supplies::code kernel supplies
+kernel supplies well-defined::kernel supplies well-defined
+supplies well-defined system::supplies well-defined system
+well-defined system call::well-defined system call
+system call interface::system call interface
+set up syscall::set up syscall
+arguments and trap::arguments and trap
+trap to kernel::trap to kernel
+kernel performs operation::kernel performs operation
+operation and returns::operation and returns
+returns result higher-level::returns result higher-level
+result higher-level functions::result higher-level functions
+higher-level functions built::higher-level functions built
+built on syscall::built on syscall
+call example standard::call example standard
+standard library implemented::standard library implemented
+implemented in terms::implemented in terms
+terms of syscalls::terms of syscalls
+printf in libc::printf in libc
+privileges as application::privileges as application
+write in kernel::write in kernel
+bits out serial::bits out serial
+out serial port::out serial port
+unix file system::unix file system
+file system calls::file system calls
+calls applications open::calls applications open
+applications open files::applications open files
+open files int::open files int
+files int open::files int open
+char * path::char * path
+create the file::create the file
+file if non-existent::file if non-existent
+create if file::create if file
+truncate the file::truncate the file
+writing from end::writing from end
+end of file::end of file
+returns file descriptor::returns file descriptor
+i to file::-NONE- to file
+open fails returns::open fails returns
+system calls return::system calls return
+kind of error::kind of error
+error in global::error in global
+global int errno::global int errno
+errno # include::errno # include
+file or directory::file or directory
+eacces permission denied::eacces permission denied
+permission denied perror::permission denied perror
+denied perror function::denied perror function
+perror function prints::perror function prints
+function prints human-readable::function prints human-readable
+prints human-readable message::prints human-readable message
+operations on file::operations on file
+file descriptors int::file descriptors int
+descriptors int read::descriptors int read
+number of bytes::number of bytes
+bytes at end::bytes at end
+error int write::error int write
+returns previous file::returns previous file
+previous file offset::previous file offset
+error int close::error int close
+file descriptor numbers::file descriptor numbers
+numbers file descriptors::numbers file descriptors
+descriptors are inherited::descriptors are inherited
+inherited by processes::inherited by processes
+fds by default::fds by default
+stdin in ansi::stdin in ansi
+printf in ansi::printf in ansi
+perror in ansi::perror in ansi
+attached to terminal::attached to terminal
+prints the contents::prints the contents
+file to stdout::file to stdout
+type.c void typefile::type.c void typefile
+char * filename::char * filename
+nread ; char::nread ; char
+nread = read::nread = read
+contexts a system::contexts a system
+contexts user-level cpu::contexts user-level cpu
+cpu in user::cpu in user
+user mode running::user mode running
+mode running application::mode running application
+running application kernel::running application kernel
+application kernel process::application kernel process
+kernel process context::kernel process context
+running kernel code::running kernel code
+code on behalf::code on behalf
+performing system call::performing system call
+executing a kernel-only::executing a kernel-only
+network file server::network file server
+context switch code::context switch code
+switch code changing::switch code changing
+code changing address::code changing address
+changing address spaces::changing address spaces
+address spaces idle::address spaces idle
+transitions between contexts::transitions between contexts
+contexts user kernel::contexts user kernel
+user kernel process::user kernel process
+fault user context::fault NN context
+context interrupt handler::context interrupt handler
+hardware process context::hardware process context
+context user switch::context JJ switch
+return process context::return process context
+process context context::process context context
+context context switch::context context switch
+sleep context switch::sleep context switch
+switch user context::switch NN context
+cpu preemption protection::cpu preemption protection
+preemption protection mechanism::preemption protection mechanism
+mechanism to prevent::mechanism to prevent
+prevent monopolizing cpu::prevent monopolizing cpu
+monopolizing cpu e.g::monopolizing cpu e.g
+kernel programs timer::kernel programs timer
+timer to interrupt::timer to interrupt
+mode to write::mode to write
+re-program interval timer::re-program interval timer
+interval timer kernel::interval timer kernel
+timer kernel sets::timer kernel sets
+kernel sets interrupt::kernel sets interrupt
+interrupt to vector::interrupt to vector
+back to kernel::back to kernel
+control whenever interval::control whenever interval
+interval timer fires::interval timer fires
+mode to set::mode to set
+set interrupt entry::set interrupt entry
+interrupt entry points::interrupt entry points
+code to hijack::code to hijack
+hijack interrupt handler::hijack interrupt handler
+interrupt handler result::interrupt handler result
+cpu with infinite::cpu with infinite
+cpu use multiple::cpu use multiple
+wedge most oses::wedge most oses
+oses with int::oses with int
+creating more processes::creating more processes
+processes until system::processes until system
+out of proc::out of proc
+slots other techniques::slots other techniques
+processes per user::processes per user
+reboot and yell::reboot and yell
+yell at annoying::yell at annoying
+address translation protect::address translation protect
+translation protect memory::translation protect memory
+program from actions::program from actions
+locations a program::locations a program
+addresses in process::addresses in process
+process address space::process address space
+address of real::address of real
+virtual to physical::virtual to physical
+physical addresses translation::physical addresses translation
+addresses translation done::addresses translation done
+load and store::load and store
+hardware for speed::hardware for speed
+ensure one process::ensure one process
+process s translations::process s translations
+don t include::don t include
+memory protection cpu::memory protection cpu
+cpu allows kernel-only::cpu allows kernel-only
+kernel-only virtual addresses::kernel-only virtual addresses
+kernel typically part::kernel typically part
+handle system call::handle system call
+touch kernel memory::touch kernel memory
+kernel memory cpu::kernel memory cpu
+memory cpu lets::memory cpu lets
+lets os disable::lets os disable
+catch and halt::catch and halt
+halt buggy program::halt buggy program
+program that makes::program that makes
+makes wild accesses::makes wild accesses
+make virtual memory::make virtual memory
+memory seem bigger::memory seem bigger
+bigger than physical::bigger than physical
+bring a page::bring a page
+enforced read-only virtual::enforced read-only virtual
+read-only virtual addresses::read-only virtual addresses
+sharing of code::sharing of code
+pages between processes::pages between processes
+optimizations cpu enforced::optimizations cpu enforced
+cpu enforced execute::cpu enforced execute
+enforced execute disable::enforced execute disable
+disable of vas::disable of vas
+makes certain code::makes certain code
+code injection attacks::code injection attacks
+injection attacks harder::injection attacks harder
+allocation & performance::allocation & performance
+performance multitasking permits::performance multitasking permits
+multitasking permits higher::multitasking permits higher
+permits higher resource::permits higher resource
+higher resource utilization::higher resource utilization
+resource utilization simple::resource utilization simple
+process downloading large::process downloading large
+downloading large file::downloading large file
+file mostly waits::file mostly waits
+waits for network::waits for network
+play a game::play a game
+game while downloading::game while downloading
+downloading the file::downloading the file
+higher cpu utilization::higher cpu utilization
+downloading complexity arises::downloading complexity arises
+arises with cost::arises with cost
+cost of switching::cost of switching
+disk 1,000 times::disk 1,000 times
+1,000 times slower::1,000 times slower
+slower than memory::slower than memory
+memory in machine::memory in machine
+processes by swapping::processes by swapping
+out to disk::out to disk
+faster to run::faster to run
+properties to exploit::properties to exploit
+basis behind cache::basis behind cache
+big fast memory::big fast memory
+fast memory past::fast memory past
+memory past predicts::memory past predicts
+past predicts future::past predicts future
+a.k.a temporal locality::a.k.a temporal locality
+entry to replace::entry to replace
+least-recently-used entry note::least-recently-used entry note
+entry note conflict::entry note conflict
+conflict between fairness::conflict between fairness
+fairness & throughput::fairness & throughput
+fewer cache misses::fewer cache misses
+running same process::running same process
+cpu and give::cpu and give
+cs140 operating::cs140 operating
+operating systems::operating systems
+systems instructors::systems instructors
+adam belay::adam belay
+ali mashtizadeh::ali mashtizadeh
+david mazieres::david mazieres
+michael chang::michael chang
+peter johnston::peter johnston
+yutian liu::yutian liu
+rush moody::rush moody
+rasmus rygaard::rasmus rygaard
+jayesh yerrapragada::jayesh yerrapragada
+yerrapragada stanford::yerrapragada stanford
+stanford university::stanford university
+administrivia class::administrivia class
+class web::class web
+web page::web page
+lecture notes::lecture notes
+on-line textbook::on-line textbook
+operating system::operating system
+system concepts::system concepts
+8th edition::8th edition
+9th edition::9th edition
+ween class::ween class
+optional goal::optional goal
+make lecture::make lecture
+lecture slides::lecture slides
+primary reference::primary reference
+pdf slides::pdf slides
+download slides::download slides
+staff mailing::staff mailing
+mailing list::mailing list
+mail staff::mail staff
+staff list::staff list
+google group::google group
+main discussion::main discussion
+discussion forum::discussion forum
+forum key::forum key
+key dates::key dates
+gates b01::gates b01
+open note::open note
+open book::open book
+bring notes::bring notes
+printed materials::printed materials
+electronic devices::electronic devices
+devices permitted::devices permitted
+lecture videos::lecture videos
+videos lectures::videos lectures
+scpd students::scpd students
+resist temptation::resist temptation
+attend lecture::attend lecture
+work day::work day
+parking spaces::parking spaces
+spaces don::spaces don
+require permit::require permit
+attend exams::attend exams
+find project::find project
+project partners::project partners
+topics threads::topics threads
+processes concurrency::processes concurrency
+synchronization scheduling::synchronization scheduling
+virtual memory::virtual memory
+file systems::file systems
+network file::network file
+systems protection::systems protection
+virtual machines::virtual machines
+machines note::machines note
+future oses::future oses
+goals introduce::goals introduce
+effective programmer::effective programmer
+programmer cover::programmer cover
+important systems::important systems
+systems concepts::systems concepts
+memory management::memory management
+protection teach::protection teach
+larger software::larger software
+software systems::software systems
+programming assignments::programming assignments
+people report::people report
+assignments implement::assignments implement
+implement parts::implement parts
+pintos operating::pintos operating
+x86 hardware::x86 hardware
+hardware emulator::hardware emulator
+setup homework::setup homework
+due friday::due friday
+implementation projects::implementation projects
+user processes::user processes
+file system::file system
+system lab::system lab
+attend section::attend section
+overview implement::overview implement
+implement projects::implement projects
+partners today::partners today
+instructors asap::instructors asap
+real problems::real problems
+grade based::grade based
+score based::score based
+passing test::passing test
+test cases::test cases
+projects pass::projects pass
+working code::working code
+means design::means design
+style matter::style matter
+large software::large software
+producing working::producing working
+produce code::produce code
+group projects::group projects
+design document::design document
+design doc::design doc
+doc cas::doc cas
+inspect code::inspect code
+handle corner::handle corner
+corner cases::corner cases
+handle malloc::handle malloc
+malloc failure::malloc failure
+deduct points::deduct points
+error-prone code::error-prone code
+global variables::global variables
+deceptive names::deceptive names
+variables code::variables code
+indent code::indent code
+uniform coding::uniform coding
+coding style::coding style
+existing code::existing code
+put comments::put comments
+structure members::structure members
+commented-out garbage::commented-out garbage
+garbage code::garbage code
+assignment requirements::assignment requirements
+run moss::run moss
+past submissions::past submissions
+honor code::honor code
+worst case::worst case
+assignment projects::assignment projects
+due fridays::due fridays
+system layer::system layer
+hardware makes::hardware makes
+makes hardware::makes hardware
+hides details::hides details
+accesses hardware::accesses hardware
+study operating::study operating
+systems operating::systems operating
+maturing field::maturing field
+mature oses::mature oses
+switch operating::switch operating
+high-performance servers::high-performance servers
+oses resource::oses resource
+resource consumption::resource consumption
+battery life::battery life
+radio spectrum::radio spectrum
+achieve security::achieve security
+solid foundation::solid foundation
+smart devices::smart devices
+oses web::oses web
+web browsers::web browsers
+primitive operating::primitive operating
+standard services::standard services
+standard interface::standard interface
+hardware-specific drivers::hardware-specific drivers
+simplifying assumptions::simplifying assumptions
+system runs::system runs
+bad users::bad users
+bad assumption::bad assumption
+poor utilization::poor utilization
+cpu idle::cpu idle
+human user::human user
+multitasking idea::multitasking idea
+process blocks::process blocks
+user input::user input
+process problem::process problem
+ill-behaved process::ill-behaved process
+infinite loop::infinite loop
+relinquish cpu::relinquish cpu
+processes memory::processes memory
+looping process::looping process
+memory protection::memory protection
+protection protect::protection protect
+protect process::protect process
+multi-user oses::multi-user oses
+users demands::users demands
+giving resources::giving resources
+total memory::total memory
+memory usage::memory usage
+usage greater::usage greater
+super-linear slowdown::super-linear slowdown
+increasing demand::increasing demand
+protection mechanisms::protection mechanisms
+isolate bad::isolate bad
+bad programs::bad programs
+give application::give application
+application allowed::application allowed
+legal privileged::legal privileged
+unprivileged modes::unprivileged modes
+applications unprivileged::applications unprivileged
+unprivileged user::unprivileged user
+user mode::user mode
+protection operations::protection operations
+privileged mode::privileged mode
+structure user::structure user
+user kernel::user kernel
+kernel driver::kernel driver
+driver device::driver device
+system file::system file
+file console::file console
+console disk::console disk
+disk device::disk device
+device driver::device driver
+driver driver::driver driver
+device network::device network
+scheduler ipc::scheduler ipc
+software runs::software runs
+user-level processes::user-level processes
+kernel runs::kernel runs
+system calls::system calls
+calls applications::calls applications
+invoke kernel::invoke kernel
+special instruction::special instruction
+instruction transfers::instruction transfers
+transfers control::transfers control
+syscall handlers::syscall handlers
+things app::things app
+unprivileged mode::unprivileged mode
+library call::library call
+privileged kernel::privileged kernel
+kernel code::kernel code
+code kernel::code kernel
+kernel supplies::kernel supplies
+well-defined system::well-defined system
+system call::system call
+call interface::call interface
+applications set::applications set
+syscall arguments::syscall arguments
+kernel performs::kernel performs
+performs operation::performs operation
+returns result::returns result
+result higher-level::result higher-level
+higher-level functions::higher-level functions
+functions built::functions built
+syscall interface::syscall interface
+user-level code::user-level code
+standard library::standard library
+library implemented::library implemented
+calls write::calls write
+send bits::send bits
+serial port::serial port
+open files::open files
+files int::files int
+int flags::int flags
+file exists::file exists
+start writing::start writing
+final argument::final argument
+creat returns::creat returns
+file descriptor::file descriptor
+error returns::error returns
+open fails::open fails
+fails returns::fails returns
+calls return::calls return
+specific kind::specific kind
+global int::global int
+int errno::int errno
+eacces permission::eacces permission
+permission denied::permission denied
+denied perror::denied perror
+perror function::perror function
+function prints::function prints
+human-readable message::human-readable message
+file descriptors::file descriptors
+descriptors int::descriptors int
+int nbytes::int nbytes
+returns number::returns number
+bytes read::bytes read
+error int::error int
+int write::int write
+bytes written::bytes written
+previous file::previous file
+file offset::file offset
+int close::int close
+descriptor numbers::descriptor numbers
+process spawns::process spawns
+default descriptors::default descriptors
+special meaning::special meaning
+standard input::standard input
+standard output::standard output
+standard error::standard error
+type.c void::type.c void
+void typefile::void typefile
+char buf::char buf
+system contexts::system contexts
+user-level cpu::user-level cpu
+mode running::mode running
+running application::running application
+application kernel::application kernel
+kernel process::kernel process
+process context::process context
+running kernel::running kernel
+performing system::performing system
+mem fault::mem fault
+numeric exception::numeric exception
+kernel-only process::kernel-only process
+file server::file server
+timer interrupt::timer interrupt
+device interrupt::device interrupt
+linux-specific terms::linux-specific terms
+context switch::context switch
+switch code::switch code
+code changing::code changing
+changing address::changing address
+address spaces::address spaces
+spaces idle::spaces idle
+powerdown cpu::powerdown cpu
+page fault::page fault
+context interrupt::context interrupt
+interrupt handler::interrupt handler
+hardware process::hardware process
+return process::return process
+context context::context context
+sleep context::sleep context
+cpu preemption::cpu preemption
+preemption protection::preemption protection
+protection mechanism::protection mechanism
+prevent monopolizing::prevent monopolizing
+monopolizing cpu::monopolizing cpu
+cpu e.g::cpu e.g
+kernel programs::kernel programs
+programs timer::programs timer
+supervisor mode::supervisor mode
+user code::user code
+interval timer::interval timer
+timer kernel::timer kernel
+kernel sets::kernel sets
+regains control::regains control
+timer fires::timer fires
+interrupt entry::interrupt entry
+entry points::entry points
+handler result::handler result
+cpu-hungry processes::cpu-hungry processes
+multiple processes::multiple processes
+int main::int main
+proc slots::proc slots
+chill program::chill program
+technical solution::technical solution
+limit processes::limit processes
+annoying users::annoying users
+pass laws::pass laws
+good idea::good idea
+address translation::address translation
+translation protect::translation protect
+protect memory::protect memory
+address space::address space
+memory locations::memory locations
+virtual address::virtual address
+process address::process address
+physical address::physical address
+real memory::real memory
+physical addresses::physical addresses
+addresses translation::addresses translation
+translation done::translation done
+modern cpus::modern cpus
+speed idea::speed idea
+translations don::translations don
+protection cpu::protection cpu
+kernel-only virtual::kernel-only virtual
+virtual addresses::virtual addresses
+typically part::typically part
+handle system::handle system
+ensure apps::ensure apps
+touch kernel::touch kernel
+kernel memory::kernel memory
+memory cpu::memory cpu
+cpu lets::cpu lets
+halt buggy::halt buggy
+buggy program::buggy program
+code pages::code pages
+enforced execute::enforced execute
+code injection::code injection
+injection attacks::injection attacks
+resource allocation::resource allocation
+performance multitasking::performance multitasking
+multitasking permits::multitasking permits
+higher resource::higher resource
+resource utilization::resource utilization
+utilization simple::utilization simple
+process downloading::process downloading
+large file::large file
+higher cpu::higher cpu
+cpu utilization::cpu utilization
+downloading complexity::downloading complexity
+complexity arises::complexity arises
+switch processes::switch processes
+context switching::context switching
+memory absorbs::memory absorbs
+fast memory::fast memory
+big fast::big fast
+memory past::memory past
+past predicts::past predicts
+temporal locality::temporal locality
+cache entry::cache entry
+past future::past future
+least-recently-used entry::least-recently-used entry
+entry note::entry note
+note conflict::note conflict
+higher throughput::higher throughput
+fewer cache::fewer cache
+cache misses::cache misses
+cs140::cs140
+operating::operating
+systems::systems
+instructors::instructors
+adam::adam
+belay::belay
+ali::ali
+mashtizadeh::mashtizadeh
+david::david
+mazieres::mazieres
+cas::cas
+michael::michael
+chang::chang
+peter::peter
+johnston::johnston
+yutian::yutian
+liu::liu
+rush::rush
+moody::moody
+rasmus::rasmus
+rygaard::rygaard
+jayesh::jayesh
+yerrapragada::yerrapragada
+stanford::stanford
+university::university
+administrivia::administrivia
+class::class
+web::web
+page::page
+http::http
+assignments::assignments
+handouts::handouts
+lecture::lecture
+notes::notes
+on-line::on-line
+textbook::textbook
+system::system
+concepts::concepts
+8th::8th
+edition::edition
+silberschatz::silberschatz
+galvin::galvin
+gagne::gagne
+9th::9th
+expensive::expensive
+haven::haven
+looked::looked
+ween::ween
+optional::optional
+goal::goal
+make::make
+slides::slides
+primary::primary
+reference::reference
+talk::talk
+pdf::pdf
+links::links
+reading::reading
+topics::topics
+download::download
+staff::staff
+mailing::mailing
+list::list
+cs140-staff::cs140-staff
+scs.stanford.edu::scs.stanford.edu
+mail::mail
+individuals::individuals
+google::google
+group::group
+15wi-cs140::15wi-cs140
+main::main
+discussion::discussion
+forum::forum
+key::key
+dates::dates
+lectures::lectures
+30pm::30pm
+gates::gates
+b01::b01
+section::section
+fridays::fridays
+tbd::tbd
+midterm::midterm
+monday::monday
+feb::feb
+final::final
+thursday::thursday
+march::march
+15pm::15pm
+exams::exams
+open::open
+note::note
+book::book
+bring::bring
+printed::printed
+materials::materials
+electronic::electronic
+devices::devices
+permitted::permitted
+videos::videos
+televised::televised
+scpd::scpd
+students::students
+watch::watch
+miss::miss
+review::review
+resist::resist
+temptation::temptation
+bunch::bunch
+attend::attend
+person::person
+conveniently::conveniently
+end::end
+work::work
+day::day
+parking::parking
+spaces::spaces
+don::don
+require::require
+permit::permit
+4pm::4pm
+feel::feel
+free::free
+find::find
+project::project
+partners::partners
+threads::threads
+processes::processes
+concurrency::concurrency
+synchronization::synchronization
+scheduling::scheduling
+virtual::virtual
+memory::memory
+i::-NONE-
+disks::disks
+file::file
+network::network
+protection::protection
+security::security
+machines::machines
+unix::unix
+current::current
+future::future
+oses::oses
+heavily::heavily
+influenced::influenced
+windows::windows
+exception::exception
+quarter::quarter
+ignore::ignore
+goals::goals
+introduce::introduce
+hard::hard
+computer::computer
+interacting::interacting
+understanding::understanding
+makes::makes
+effective::effective
+programmer::programmer
+cover::cover
+important::important
+general::general
+caching::caching
+management::management
+i::NNP
+teach::teach
+deal::deal
+larger::larger
+software::software
+programming::programming
+courses::courses
+warning::warning
+people::people
+past::past
+majority::majority
+report::report
+prepare::prepare
+graduate::graduate
+classes::classes
+cs240::cs240
+a-z::a-z
+implement::implement
+parts::parts
+pintos::pintos
+built::built
+x86::x86
+hardware::hardware
+emulator::emulator
+setup::setup
+homework::homework
+lab::lab
+due::due
+friday::friday
+four::four
+implementation::implementation
+projects::projects
+user::user
+distributed::distributed
+week::week
+overview::overview
+groups::groups
+pick::pick
+today::today
+early::early
+grading::grading
+incompletes::incompletes
+asap::asap
+run::run
+real::real
+problems::problems
+grade::grade
+based::based
+quantity::quantity
+max::max
+score::score
+passing::passing
+test::test
+cases::cases
+remaining::remaining
+design::design
+style::style
+pass::pass
+turn::turn
+working::working
+code::code
+credit::credit
+means::means
+matter::matter
+lot::lot
+large::large
+producing::producing
+produce::produce
+understand::understand
+document::document
+supply::supply
+templates::templates
+doc::doc
+manually::manually
+inspect::inspect
+correctness::correctness
+e.g::e.g
+handle::handle
+corner::corner
+malloc::malloc
+failure::failure
+deduct::deduct
+points::points
+error-prone::error-prone
+errors::errors
+global::global
+variables::variables
+automatic::automatic
+suffice::suffice
+deceptive::deceptive
+names::names
+easy::easy
+read::read
+indent::indent
+lines::lines
+functions::functions
+short::short
+uniform::uniform
+coding::coding
+match::match
+existing::existing
+put::put
+comments::comments
+structure::structure
+members::members
+globals::globals
+leave::leave
+reams::reams
+commented-out::commented-out
+garbage::garbage
+assignment::assignment
+requirements::requirements
+solutions::solutions
+reserve::reserve
+right::right
+moss::moss
+present::present
+submissions::submissions
+publish::publish
+violation::violation
+honor::honor
+copy::copy
+linux::linux
+cite::cite
+inspired::inspired
+long::long
+cheating::cheating
+worst::worst
+case::case
+undermines::undermines
+noon::noon
+extension::extension
+trouble::trouble
+done::done
+left::left
+finish::finish
+layer::layer
+applications::applications
+abstractions::abstractions
+manages::manages
+hides::hides
+details::details
+accesses::accesses
+interfaces::interfaces
+unavailable::unavailable
+prevents::prevents
+clobbering::clobbering
+study::study
+maturing::maturing
+field::field
+handful::handful
+mature::mature
+switch::switch
+impact::impact
+high-performance::high-performance
+servers::servers
+issue::issue
+face::face
+issues::issues
+resource::resource
+consumption::consumption
+battery::battery
+life::life
+radio::radio
+spectrum::spectrum
+achieve::achieve
+solid::solid
+foundation::foundation
+smart::smart
+browsers::browsers
+increasingly::increasingly
+primitive::primitive
+library::library
+standard::standard
+services::services
+interface::interface
+hardware-specific::hardware-specific
+drivers::drivers
+simplifying::simplifying
+assumptions::assumptions
+runs::runs
+program::program
+bad::bad
+users::users
+programs::programs
+assumption::assumption
+problem::problem
+poor::poor
+utilization::utilization
+cpu::cpu
+idle::idle
+waiting::waiting
+disk::disk
+human::human
+wait::wait
+multitasking::multitasking
+idea::idea
+process::process
+blocks::blocks
+input::input
+ill-behaved::ill-behaved
+infinite::infinite
+loop::loop
+relinquish::relinquish
+scribble::scribble
+fail::fail
+mechanisms::mechanisms
+address::address
+preemption::preemption
+looping::looping
+protect::protect
+multi-user::multi-user
+serve::serve
+distrustful::distrustful
+users::NNS
+times::times
+slower::slower
+demands::demands
+bursty::bursty
+win::win
+giving::giving
+resources::resources
+wrong::wrong
+gluttons::gluttons
+policies::policies
+total::total
+usage::usage
+greater::greater
+machine::machine
+virtualize::virtualize
+super-linear::super-linear
+slowdown::slowdown
+increasing::increasing
+demand::demand
+thrashing::thrashing
+isolate::isolate
+pre-emption::pre-emption
+give::give
+application::application
+needed::needed
+place::place
+stuff::stuff
+track::track
+pieces::pieces
+allowed::allowed
+table::table
+access::access
+check::check
+legal::legal
+privileged::privileged
+unprivileged::unprivileged
+modes::modes
+cpus::cpus
+mode::mode
+operations::operations
+typical::typical
+kernel::kernel
+driver::driver
+device::device
+sockets::sockets
+console::console
+scheduler::scheduler
+ipc::ipc
+user-level::user-level
+1-4::1-4
+shaded::shaded
+calls::calls
+invoke::invoke
+special::special
+instruction::instruction
+transfers::transfers
+control::control
+dispatches::dispatches
+hundred::hundred
+syscall::syscall
+handlers::handlers
+continued::continued
+things::things
+app::app
+call::call
+supplies::supplies
+well-defined::well-defined
+set::set
+arguments::arguments
+trap::trap
+performs::performs
+operation::operation
+returns::returns
+result::result
+higher-level::higher-level
+printf::printf
+scanf::scanf
+close::close
+write::write
+implemented::implemented
+terms::terms
+syscalls::syscalls
+libc::libc
+privileges::privileges
+send::send
+bits::bits
+out::out
+serial::serial
+port::port
+files::files
+int::int
+char::char
+path::path
+flags::flags
+rdonly::rdonly
+wronly::wronly
+rdwr::rdwr
+creat::creat
+create::create
+non-existent::non-existent
+excl::excl
+exists::exists
+trunc::trunc
+truncate::truncate
+append::append
+start::start
+writing::writing
+argument::argument
+descriptor::descriptor
+error::error
+fails::fails
+invalid::invalid
+return::return
+specific::specific
+kind::kind
+errno::errno
+include::include
+values::values
+enoent::enoent
+directory::directory
+eacces::eacces
+permission::permission
+denied::denied
+perror::perror
+function::function
+prints::prints
+human-readable::human-readable
+message::message
+initfile::initfile
+descriptors::descriptors
+void::void
+buf::buf
+nbytes::nbytes
+number::number
+bytes::bytes
+const::const
+written::written
+lseek::lseek
+pos::pos
+previous::previous
+offset::offset
+numbers::numbers
+inherited::inherited
+spawns::spawns
+fds::fds
+default::default
+meaning::meaning
+stdin::stdin
+ansi::ansi
+output::output
+stdout::stdout
+stderr::stderr
+attached::attached
+terminal::terminal
+type.c::type.c
+contents::contents
+typefile::typefile
+filename::filename
+nread::nread
+o_rdonly::o_rdonly
+sizeof::sizeof
+contexts::contexts
+generally::generally
+running::running
+context::context
+behalf::behalf
+performing::performing
+mem::mem
+fault::fault
+numeric::numeric
+executing::executing
+kernel-only::kernel-only
+server::server
+timer::timer
+interrupt::interrupt
+hardclock::hardclock
+softirqs::softirqs
+tasklets::tasklets
+linux-specific::linux-specific
+changing::changing
+powerdown::powerdown
+transitions::transitions
+handler::handler
+sleep::sleep
+mechanism::mechanism
+prevent::prevent
+monopolizing::monopolizing
+supervisor::supervisor
+registers::registers
+re-program::re-program
+interval::interval
+sets::sets
+vector::vector
+back::back
+regains::regains
+fires::fires
+entry::entry
+hijack::hijack
+monopolize::monopolize
+cpu-hungry::cpu-hungry
+multiple::multiple
+years::years
+wedge::wedge
+fork::fork
+creating::creating
+proc::proc
+slots::slots
+techniques::techniques
+chill::chill
+typically::typically
+solved::solved
+combination::combination
+technical::technical
+solution::solution
+limit::limit
+social::social
+reboot::reboot
+yell::yell
+annoying::annoying
+laws::laws
+debatable::debatable
+good::good
+translation::translation
+actions::actions
+definitions::definitions
+space::space
+locations::locations
+addresses::addresses
+physical::physical
+map::map
+load::load
+store::store
+modern::modern
+speed::speed
+touch::touch
+ensure::ensure
+translations::translations
+part::part
+apps::apps
+lets::lets
+disable::disable
+invalidate::invalidate
+catch::catch
+halt::halt
+buggy::buggy
+wild::wild
+bigger::bigger
+accessed::accessed
+enforced::enforced
+read-only::read-only
+sharing::sharing
+pages::pages
+optimizations::optimizations
+execute::execute
+vas::vas
+injection::injection
+attacks::attacks
+harder::harder
+allocation::allocation
+performance::performance
+permits::permits
+higher::higher
+simple::simple
+downloading::downloading
+waits::waits
+play::play
+game::game
+complexity::complexity
+arises::arises
+cost::cost
+switching::switching
+1,000::1,000
+swapping::swapping
+faster::faster
+properties::properties
+exploit::exploit
+skew::skew
+absorbs::absorbs
+references::references
+basis::basis
+cache::cache
+fast::fast
+slow::slow
+big::big
+predicts::predicts
+a.k.a::a.k.a
+temporal::temporal
+locality::locality
+replace::replace
+least-recently-used::least-recently-used
+conflict::conflict
+fairness::fairness
+throughput::throughput
+fewer::fewer
+misses::misses
+periodically::periodically
+preempt::preempt

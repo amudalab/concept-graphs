@@ -1,0 +1,871 @@
+
+Transcript by P.Sasikala
+
+                         SYSTEMS ANALYSIS AND DESIGN
+                                     By
+                              Prof..V.Rajaraman
+                         Systems Analysis and Design
+                               IISc. Bangalore
+
+                                Lecture - 12
+                  Systems analysis and design (TIME 01:17)
+
+last time we were looking at the development of s r s namely system
+requirement specifications and various parts of the systems requirement
+specification which include the data flow diagrams as well as document flow
+diagrams and we explained how these things are derived
+now that is not the end of the development of s r s because as i point out
+at very beginning the uh process of getting at the requirements is not uh
+linear process its an heteratic process towards you have to turn back and
+refine system requirement specification based on some further inputs uh
+particularly the method we are going to use to meet the system requirement
+which have been given by the management
+so to very quickly review i have put up this picture here
+uh you start with the study start with the study of a current system
+
+
+
+
+[pic]
+
+current system or if it is a existing current system and then start abolish
+here with the specifications of  system given by the user
+again you design the logical system what we have been trying to do
+and you get a new system model
+and user stated requirement which are used in the design and working new
+system model
+but then what happens this at this stage you are not complete the hole
+thing
+because you really have to look at weather the system which you have
+proposed is feasible
+i will explain what is meant by feasibility that is going to major part of
+this lecture and we had modified this system model and get the new system
+requirement specifications which are feasible and which satisfies the
+requirement of the organization
+so you have to end with coming up with new d f ds and new processing rules
+and also described statement of what information will  provide
+particularly operational practical  tactical and strategy and
+they is a set of data items require to be able to meet the requirements
+so this is what you finally end up with
+so the s r s document will
+
+refer slide time (04:33)
+
+
+[pic]
+
+consist of document flow diagram as many as needed depending upon the
+company
+i give you one sample but in a larger case there will be many many sample
+which will be require infact i would urge you to read the chapter four
+chapter four and look analysis and design of system has a detailed case
+study where number different flow diagram are given for um particular
+example or case study of developing a hostel information system
+and we also some details about what i have given the favor in terms of the
+books and organization receiving goods and sending for inspection and
+finding out discrepancy between what you have ordered and what was
+delivered and that part only part of it because its a lot of chain after
+that
+a chain after that inspection will inspect the items and that stage also
+the may reject some items and accept some items
+what ever is accepted they will send document to the stores saying that
+this items have been accepted will come to the store and for physically
+they send items to the store along with the document saying what items are
+going to come to the store and as soon as things are receiving the store
+the store has to intimate accounts
+saying that these items have been taken into stock and so payment is due to
+the end
+so they will send document saying that this vendor has against this order
+given this many items which have been accepted and found satisfactory you
+can go ahead and pay
+and accounts officer has to create a proper kind of a sacred case invoice
+to the vendor
+and the prices so on which earlier on negotiated based on the order which
+is placed
+and create a check nowadays checks are also either printed in the computer
+and check sent physically by mail or courier what have you or
+nowadays also have a method of debiting the bank account directly and
+creating the bank account  of the customer which all need paper moving from
+the company to the vendor
+depends upon kind of agreement to vendor and so on
+plus nowadays banks prefer with using so called electronic leading service
+where you directly send or debit note to your account and create note to
+the vendors account and it is automatically done
+so these are all successive stages in a entire development so for look at
+the hole pictures
+the hole picture you can farley large in complex
+and later on we will probably look at one such case with a data flow
+diagram and giving the processes which are being done in that
+i rarely gave favors at this time but the details worked out later which we
+will do
+now the s r s document consists of the document flow diagram as i said as
+many as needed and data flow diagrams also there will be large set of
+processes and large set of data flows and so on
+      and it is fairly large so there is need to kind of split that part
+between the  number of parts these parts have looked at some care
+infact real systems runs into hundreds of thousands of  lines of code in a
+in a company
+so the small which we are going to discuss only give you a idea how these
+thing are done
+of course not a single person will not hundreds of thousands of  lines of
+code so on
+in split between number of people in a teams
+so we had to have method to split the entire data flow diagram in to a
+smaller part into a leveling which we will look at later on and so that the
+smaller diagrams are once implemented then they got to have linkages
+putting all these diagrams
+and data elements which are there in data flow and data store
+later on we have to look at how to organize all those data in the files and
+what is known as a data base
+and there are number of important principles you have to take into account
+while organizing this data in a data base
+so that when you do an update there is no errors is keeping unknowingly or
+when you delete some some parts unknowingly some other a parts or not
+deleted so these are the issues which will be important when it comes to
+the design of the data base
+i am only talking about some files but very large whenever a company looks
+at data resources data resources will go into a database
+and something known as database management system which in computer science
+curriculum it is a full fledged course which is normally taught later later
+on in the curriculum but we will give you a general idea of what this all
+about
+and passing rules carried out with each circle of the
+
+refer slide time (10:55)
+[pic]
+
+
+data flow diagram as a same the processing rules will giving either as a
+structured English algorithm or as decision table and we look at them in
+greater detail later on
+and descriptive statement of operational tactical and strategic information
+will be provided
+also in done we cannot avoid writing some descriptive statement that means
+you have to write carefully what you have done because of read by mangers
+uh and pictures that data flow diagram  document flow diagrams are only
+aids to understanding
+but the word statement or write up is quite important and that is why i
+think we are taught a communication skills a both written communication and
+oral communication
+here we had to able to clearly and precisely specify the  operational
+tactical and  strategic information as a descriptive note
+that means it is a one or two page write up which one has to able to read
+data dictionary which consolidated all data elements which are data store
+ so the next module we are going to look at
+
+
+refer slide time (12:16)
+
+[pic]
+
+
+is known as feasibility analysis now i wanted to first understand what is
+feasibility really mean from a dictionary point of view
+so normally when a new words comes up it is good idea to go and look at the
+dictionary
+because all the general meaning lot of people described
+so i went and looked at the dictionary and the dictionary the feasibility
+is explain the mean is given the investigation to determine weather a
+particular system is desirable and can also be uh actually made otherwise
+weather it is desirable or it is practical ok
+so there are two issues feasibility at the end of feasibility weather
+deriving the system the idea is able to tell the management that what  you
+have designing is practical it can be implemented ok
+and that it is also desirable what you are going to do is can be useful
+and not only useful it can be implemented
+the end of this feasibility study has to make sure you have to convince
+that management that whatever system you have proposing is practical and
+can be implemented and it will be a desirable system as the company is
+concerned
+so this particular module we have to we look at the the question i said
+there are two  keywords which i used one is practical and one is desirable
+ok
+and the question of desirability is based on the what kind of goals you
+want to attain ok
+so you have to look at how to formulate the project goals and of the goals
+also have to be quantified
+what you meant by quantified is qualitated statement will not always do i
+will explain in wider length in this lectures
+the difference between what is meant by a quantification and qualitative
+description
+as a engineers we normally always look at numbers or something which is
+quantifiable ok
+because that gives us more confident
+Quantification is very important also from the  management point of view to
+attainment by that the system is practical
+and you have to look at the alternative solution because many ways of
+obtain the solution
+Americans say that there are many ways getting the cat
+but i dont like that term there are are many ways are cooking potatoes i
+might say
+there are so many ways are cooking potatoes each one has got some good
+features and some bad features alrigtht
+so you have to pick the particular right way of the cooking
+to get what you deserve ok
+some people may desire setting method of cooking because their goal may be
+different
+if a person is looking at very low oil content or fat content in what you
+cook the potatoes then he will normally steam it and not putting the oil in
+it
+somebody is looking something which is crisp and so on and he will fry it
+and put a lot of oil
+so that may be alright for some people it may not be alright for some
+people
+so the point we are going to make is what is good what is considered good
+in certain situation may not be good in some other situation
+so they have to cooked at some ultimate decision maker is
+the person is going to eat the potato ok
+similarly the ultimate decision maker in the case of a system is going to
+develop is that the person is going to use that system
+so he has to tell you
+which of these alternate solutions is preferable based on number of factors
+
+like feasibility technical feasibility technically do i have the where the
+to be able to implement it
+operationally can i do that
+and economically that means money
+infact i have to explain in length what is meant by technical feasibility
+what is meant by operational feasibility
+and what is meant by economic feasibility
+these are the things you are going to learn
+and the cost benefit analysis
+what is meant by cost benefit analysis is there could be many ways of
+cooking potatoes
+each one may require a different cost ok
+we just steam it it doesnt need oil or things like that
+but if you fry it you can use oil and masala and stuff like that
+so the cost is going to go up
+so the benefit one has to decide
+so the question of cost benefit is in terms of how much is going to cost
+and what benefits i am going to get
+again benefit is going to be quantified
+and just if you say that it will be good for you that doesn't satisfy
+people
+so you have to look at the quantification of the cost benefit is generally
+regarding the quantification cost is known
+so many  fees we are paying for  doing the system and what is the profit i
+am going to get
+benefit is normally in terms of savings
+there are many types benefits one can thing about and i look at what
+benefits
+because sometimes money may not be only issue
+it could be customer satisfaction may be an issue
+so certain terms benefits are not entirely quantifiable but you can
+generally understand but ultimately you try to do
+ultimately you bring up the point where you try as soon as possible
+quantified because people dont like un quantified specifications of
+benefits ok
+and what are the documents feasibility  report the end of this phase
+and once the document the hole at the end of the game at the end of
+feasibility analysis we really come up with the particular method of
+meeting the require mental system
+for srs is already developed and the particular method you have come now
+so you may in the process find it s end requirements can be met
+but only met at very high cost and so you may not decide to do that or you
+may find out that certain requirement is specified may not be possible to
+make it technically because of lack of equipment or technology is not at
+there to do it ok
+similarly operational we may not have people to do it or you may not have
+program ability to do it
+so all these issues again have to looked at
+so that ultimately you go back to s rs
+and only come up with the what is feasible and what document also cost
+benefit so then the development phase
+when you develop the deliver the system the uh user can compare what you
+promise against what you actually gets doing the evaluation phase and
+beside weather you have done a good job or not ok
+and that is the whole idea of reworking the s r s after the feasibility
+
+refer slide time (20:37)
+
+
+
+[pic]
+
+the motivation for looking at the feasibility study is before management
+decide to implement a computer based system they should know the goals
+which will be met by the system
+what will be the goals met by the system and i cannot describe this
+entirely in a vacuum you have to take specific cases i look at particular
+case with some details to really talk about the goals
+because goals depend on system these goals must be quantitative goals
+so that when the system is implemented it is possible to compare
+quantitatively the achievements that is the goals which are set
+so the achievements of goals that is that comparison is that much which add
+
+
+
+refer slide time (21:32)
+
+
+
+
+
+[pic]
+
+
+essentially explains to you how it is done
+the analyst should able to estimate what hardware and human resources will
+be needed to implement a system to meet the goals
+so that is essentially require
+require to be able to find about cost
+because the cost of people cost of equipment and so on
+analyst must examine methods to implement system and the resource needs
+because different methods have said or possible and each one may cost
+different amount ok
+and the cost benefit analysis should be carried out for each alternative
+you got multiple alternatives three or four ways of doing it
+you say this way is going to cost this much and this going to benefit and
+you compare and based on the cost benefit the ultimately the user will
+decide which one he wants
+
+
+refer slide time (22:39)
+
+
+
+
+[pic]
+
+um this analysis will be essential for a management to decide which
+solution they would like to implement ok
+so that they said the multiple solutions are given which one they can
+actually implement
+and the feasibility of meeting goals with the available technology and
+human resources cost benefit are important parameters for informed
+management decision making
+so the determination of feasibility meeting the goals
+and also the uh uh  uh as i said human resource requirement and available
+technology and there are various parameters which ultimately go to make up
+this study feasibility study
+
+refer slide time (23:31)
+
+
+[pic]
+so the primarily we are going to learn how to formulate the goals to be met
+by the information system to be designed
+how do you come up with the goals
+how do quantify the goals and how to obtain the alternative solutions to
+satisfy the goals
+so these are three important learning goals and besides that
+how to access the feasibility of implementing alternative solution thus
+many solution are there to look at the feasibility or or of each of those
+how to compute the cost benefits of which alternative feasible solution and
+then how to prepare the system proposal of potential user of a system so
+these are the primarily learning goals of this particular module
+
+refer slide time (24:19)
+
+[pic]
+
+
+
+now at the end of the information gathering phase which we discussed
+earlier you find out the deficiency of current system and consensus arrived
+at on requirements and s r s document is prepared that is what we saw
+and the deficiency of the current system the example i took was that of a
+hostel information system where i said the warden  that the deficiency of
+current system is that the daily rate for the student is going
+because there is no proper control for inventories or the amount of
+purchase which is made and vegetables and so on perishable if they buy
+excess they go waste
+so the actual cost of student of goes up
+so he only says that the reference the cost is too high
+the other reference he says is that the students don't pay their bills in
+time
+when they dont pay the bills in time we have perpetual problem of trying to
+meet our budget ok
+we dont have money to go buy things so on
+so we had a some methods of being showed is the student being on time
+so these are the things kind of problems which he pointed out
+one more thing he pointed out that is we dont consolidate our requirements
+so that we can reduce the number of trips to go and buy it
+if we consolidate then we can reduce the number of trips and that will
+reduce the total cost
+so number of these efficiencies in the current system was pointed out and
+urge you to go back and study chapter four in detail to where the interview
+the wardens are given at the end of that the deficiency is pointed out more
+in terms of a certain statements of anything which is  in terms of the
+quantification and the consensus is arrived at
+the consensus which is arrived at in that particular case that means
+agreement arrived at is that it is important to be able to uh do two things
+one is that reduce inventory
+and reduce the daily rate
+and make sure the daily rates do not vary from month to month ok
+suppose the daily rate about fifteen rupees this month per day fifteen
+rupees per day
+next month it should not become twenty five rupees
+because student cannot budget
+so you really have to have some thing which is plus or minus two or three
+percent within that it should keep it
+and one more um um um consensus was that one should be able to actually
+find out this students are perpetually delaying payments
+so the warden should be able to have a list in front of him
+saying these students are delayed payment beyond five days or ten days
+whatever that decision has to be made about number of days about number of
+days
+so you can call the student and request him to pay or take some action
+so the payment is made
+the consensus is also found that the important part is in terms of the mess
+
+there is a cost of the daily rate
+the prom collection of bills and so on
+but it is not very important this time to have a database of students and
+room allotments and so on that is the later priority
+and said to transfer about the case study
+so based on that prioritization you arrive at what you want to implement
+that what meant by consensus and system requirement specification documents
+prepared
+so note down deficiencies in the current system
+
+refer slide time (28:50)
+
+[pic]
+
+
+found while preparing the s rs document
+and set the goals to remove deficiencies
+and quantify this goals
+and find alternative solutions to meet this goals
+so this is actually what we have discussed and we have to follow
+and evaluate feasibility of alternative solution taking into account
+constrain the resources
+rank order all the alternatives and discuss with user
+prepare a system proposal by management approval base on the rank order
+
+
+refer slide time (28:50)
+
+[pic]
+
+define the goals and sub goals of the proposed system
+
+refer slide time (29:33)
+
+
+[pic]
+
+so verbal statement you have to quantify into goals
+example given here send a bill soon after a month end is un quantified
+where as quantified statement is send bill within five days or the end of
+the month ok
+and un quantified thing is what keep the mess bill reasonably constant from
+month to month month
+quantified thing would be  keep the mess bill at fifteen rupees per per day
+plus minus one rupee that is quantified plus minus one rupee is the
+quantification of a reasonably close to fifteen rupees because reasonably
+close mean fifty paisa or five rupees says that is not un quantified
+so quantified means exactly what what you try to achieve in terms of
+numbers
+so in fact in every example you have to able to come with specific numbers
+and that is meant by quantification of goals
+
+
+refer slide time (29:33)
+
+[pic]
+
+find out weather it is possible to meet these goals
+find out the cost of meeting each goal
+and find the cost benefit analysis
+and benefit is going to be quantified also what is the game name by benefit
+quantify in the case of mess bill fifteen rupees approximately plus minus
+one rupees is a quantified goal
+what is the benefit
+only benefit you can say as the intangible benefit intangible in the sense
+that students are happy
+bills do not vary vary widely what other benefit is there which can be
+quantified
+only other quantification  of the benefit may be the because of a control
+of inventory and so on
+the mess bill it self it come down
+so if you say that the mess bill being twenty rupees to in a month has come
+down to fifteen rupees that's you can say quantifying the benefit means of
+the twenty rupees i will bring it down o fifteen rupees by the method i am
+going to follow
+so that means i have benefited five rupees for every twenty rupees
+and whatever money i spend
+to achieve this must be compensate with the reduction in five rupees of the
+bill
+so this is the kind of point
+so the one can be just satisfaction once it can come fifteen rupees
+satisfied
+but then quantification is in terms of the fact that the total cost of the
+system inventory and so on it kept come down
+the pinpointing missing functions unsatisfactory performance and excessive
+cost of operations
+what we really mean by   these things a missing functions unsatisfactory
+performance
+excessive cost of operations
+uh missing function in a existing system a missing function may be in the
+case of  hostel information system the function which has missed was the
+fact that
+
+
+the current system does not have any means of filing out who are the
+habitual offenders of not giving their bills in time
+so they there is missing on current system has no way
+in which you can find out otherwise it doesn't have the means of finding
+out
+who has not paid ok
+so this function is missing
+un satisfactory performance that the current system of mess bill is not
+being kept cost at fifteen rupees
+it is widely varying so performance is not satisfactory
+so i want to have performance which is to keep that bill with in a certain
+range excessive cost of operation again it is related
+excessive cost of operation against
+spending say five thousand rupees and buying vegetables every month which i
+estimate i come out i am spending seven thousand rupees because lot of
+vegetable being wasted
+so excessive cost of operations is because of the fact that there is no
+proper control
+so the whole idea of the new system must be remove the missing functions
+there is have some means of sending out the bill in time and getting this
+getting the list of students not paid and so on
+and to remove the unsatisfactory performance you need to have to keep the
+mess bill cost plus minus one rupee as i said and extra cost of operation
+bring down the mess bill
+because the vegetable cost is gone down
+your bill rate is also go down that is what meant by excessive cost of
+operation reduced
+
+
+refer slide time (35:33)
+
+[pic]
+
+set goals to remove deficiency and provide competitive advantage so the
+goals this case may be the goals quantitative goals may be to bring down
+the mess bill twenty five rupees to fifteen rupees that is a quantified
+goals a quantified goal may be that bring down to a vegetable cost from
+seven thousand rupees  to five thousand rupees a month so these are all
+goals which is required to meet and to meet these deficiencies are given
+there
+
+refer slide time (36:02)
+
+[pic]
+
+as i said goal the characteristics of goal is should be quantified it
+should not be just uh uh lazy
+actually realizable within the constrain and organization system
+what you mean the realizable that means you have the methodology of being
+able to meet this goal
+for instance suppose you say i want to bring down the mess bill to twenty
+five rupees to ten rupees it may not be realizable
+because the here if you take minimal amount of menu reduced menu and
+variety and so on cost the basic cost of the items which you buy may such
+that it is impossible bring down to ten rupees
+so it is un realizable goal
+but all the goal which within the constrains of cost of items in the market
+
+cost of milk cost of vegetable and so on is something which you can meet
+so the levels which has been realistic
+ you can not just say  because the analyst in the beginning tells the
+warden you can computerization or bring down the mess bill from twenty five
+rupees to ten rupees
+first of all we wont believe you
+just by computerize how can bring down the bill basic cost is so much all
+the items
+and everyday the items cost are going up so always inflation ok
+the point is that one should not promise some thing which is not realizable
+and then you had break in to up sub goals regards what is meant by sub
+goals is that a major goal may be bring down the mess bill ok
+but how to achieve it
+you have to have sub goals one way of achieving that is that you had to
+reduce the inventory
+there is a reduce inventory uh again you have to quantify the reducing the
+inventory
+that means you say that current inventory cost is  x rupees
+i will bring down the inventory cost to point nine x rupees ten percent i
+will reduce it so it is sub goal which will ultimately lead to main goal of
+reduce to daily rate ok
+ans similarly i can say which is total vegetable cost is five rupees i will
+bring down vegetable cost from five rupees to may be point eight y ok
+and these are points what is meant by breaking down the major goal into sub
+goal and you can meet each of sub goal
+each sub goal must also be quantified and it should agreeable to all
+concerned
+
+refer slide time (39:02)
+
+[pic]
+
+
+that is sub goal to bring down to mess bill fifteen rupees from twenty five
+rupees
+but i end up giving everyday potatoes and no other vegetables and so on it
+may not be agreeable see
+if you keep your menu balanced and not much of a change the original menu
+just given in the hostel
+and yet  be able to meet the reduce cost so that is a point
+it will be agreeable you must have the consensus also from the ultimate
+consumers in this case students saying that i will give you the balance
+menu
+and i will not going on repeating menus going on day after day i will have
+proper kind of menu planning and yet i will bring down the cost
+so that is essentially what you meant by something which agreed to
+everybody
+in general goals must not only remove a deficiency but also give a system
+which is superior to those of the competitors of the organization
+otherwords
+because this is a general point
+so i am now going little bit  beyond my simple case study when you are in
+the real field in go to company
+refer slide time (40:29)
+
+
+
+
+
+
+
+
+
+
+
+                                    ,
+[pic]
+
+
+like for us to take a you are going to a go to a  hotel and say i am going
+to implement a hotel management system you will have some method of doing
+it you get goals and sub goals and  you essentially say at the time of
+proposal you give only a brief proposal
+because you don't want to spend lot of money and time and doing that here
+doing proposal based on the conversation you had
+your competitor also giving pre proposal so ultimately many competitors
+will be there for the particular contract of computerize in the hotel
+system
+so your goals must your system must not only meet all the goals which are
+quantified
+but also meet it in a superior way compare to the competitors who are given
+ok
+what have you mean by superior way there are two way in which you can talk
+about superiority and so on
+so in any situation like many people go to a hotel and say that they will
+implement their their computerized system for their management to the hotel
+there are many issue in a hotel like booking the rooms planning the menus
+and preparing bills collecting reservations whole lot of issues are
+involved and you have to give goals of each of them and after giving each
+of them you have to able to quantify by putting that computer how much are
+they are going to save
+in terms of operations of the hotel and you also have to specify
+what is the cost you are going to what charges you are going to charge to
+that hotel will be able to implement the system
+there are two cost involved here
+one is the cost of equipment they have to buy may be pc s and so on       `
+which the hotel may have to buy and networking all infrastructure they have
+to buy
+all above  that they also have to buy the software things like Microsoft
+some accounting systems or some other accounting system must may be there
+in the market
+so that software cost also included is there hardware cost and then
+software cost that is resulting what company has to pay that the hotel has
+to pay
+besides that they have to allocate people   to work with you doing the
+system development
+so their cost is also involved so that there is  all the cost of company
+plus they have to pay you your fees for you analysis your programming
+your
+effort your implementation making satisfactory to them and so on so give a
+certain quotation and also certain time constraints say that i will charge
+you x rupee
+and i will finish the job in four months time or something like that
+your competitor may charge something else and finish the job in three
+months time
+his charge may be higher but he finish faster so the benefit the hotel may
+think that they want it faster they willing to pay more
+so the point really is you had to have system which is superior superiority
+can be in terms of the function which it means
+and the flexibility it has got apart from the cost and quality ok
+many software companies win contracts based on not only the cost
+ but based on their quality which you assure ok
+and the special goals the meet which some other competitor can not meet
+so the point is that a good system software analyst must be able to very
+clearly examine the important goals and sub goals and make a quotation to
+meet the goals and sub goals which are somewhat better than his competitor
+so even if your costs are little higher
+they may be willing to give the contract because your system is superior
+so this is what meant by a document  generally remove deficiency but a
+superior system to compare to what is being given by your competitors
+
+refer slide time (45:41)
+
+[pic]
+
+so now let me get back to my case
+we in the case we said that the miss expenses are divided among students on
+a daily rate of derived
+this is what i have been saying all along and there is student and chief
+warden who kind of managing the  entire hostel but there is a student
+committee which besides in the menu
+and besides on what should be a daily rate stuff like that student can
+afford
+i am taking example of a our institution where the mess is  run by students
+and not by contractors ok
+many of the good organization our students running it
+reason why student  run it is normally it is lower cost and they get better
+food
+and its also a good idea for students run the mess because they get
+experience of the real life system of how the mess operate how to deal with
+people and different levels so on
+and it is also good idea for computer science students to kind of get
+involved themselves in this activity to be able to computerize in fact many
+of the iits and so on
+the mess system is actually implement by the students computer science
+students ok
+and they give a good service that is a good experience for them of
+developing a system
+and mess bill has to be prepared and to send of promptly to the end of each
+month
+so the when they say promptly there is something which is not quantified
+and in the case of mistake stores requirement not forecast
+the inventory not only say inventory levels is  very high
+so cost is going up and so the missing function is that the requirement of
+stores is not forecast that  you can buy an amount which is necessary and
+sufficient ok
+and you don't run out of items and you dont have excess items in fact
+inventory control is very important in all companies
+because inventory is dead investment
+what you meant by dead invest meant it is there you don't have to paid for
+it and we dont use it
+that means your interest cost for that is gone
+so you always try to reduce the total inventory within the constraint being
+able to meet the meet the requirements ok
+and purchases are not consolidated
+many trips are made to the city and that in creases the cost of system and
+so on it is another point which is during the discussion with the students
+
+
+
+refer slide time (48:53)
+[pic]
+
+and daily rate calculation not frequently updated in other words see the
+daily rate one of the goals was to keep the daily rate at fifteen rupees
+plus minus one ok
+if you wait till the end of the month to calculate the daily rate it may
+turn out that certain things are gone out of control where as if you update
+day by day you find about one week
+your  daily rate is gone up beyond one rupee then you may try reduce or buy
+cheaper vegetables or reduce inventory and so on and go on a economy dry to
+try to bring down the cost
+so at the end of the month you have a you meet your goal ok
+so you have frequent update while you are actually buying and so on ok
+that is the missing function currently
+menu not planned for balanced nutrition and low cost
+currently menu has has occur arbitrary  ok
+and we would like to use a computer have a balanced nutrition and low cost
+
+refer slide time (50:09)
+
+[pic]
+
+
+deficiencies are bad performance and unsatisfactory performance billing is
+not accurate and prompt that is one thing which is having mention  again
+and again
+student bills are not itemized that is student are giving bills but it
+better to itemize
+and what is meant by itemization students may bring guest on a certain date
+
+so you say that you brought two guest an sixteenth of march and these
+amount of money which is for that guest
+you got something extra on this day you ordered extra milk or extra eggs
+and so on on this day  so that is itemized
+student also kind of knows that extras which has been charged in his mess
+bill is as per the what he actually get
+there is a saying amount of  itemization giving a confidence to student is
+not being overcharged
+
+refer slide time (51:11)
+[pic]
+
+stores are issued to cooks arbitrary  that current system the stores are
+the items are given to the cooks in a not in control way
+suppose he is going to cook for hundred student there is requirement of
+certain amount of rice
+if you give currently it has to the cooks were being taking out what ever
+the require
+but if you want to control the bill you have to have clear idea of how much
+of rice is require for hundred students only issue that
+and make sure that the rice the total rice doesnt go down or you know there
+is wastages is not there
+so that again we have the quantification in the computer you can date the
+exact issue of items based on the number
+number may vary in fact  the example i have given is that the student is
+going to be not using the mess for five days in a at a stretch he is given
+a rebate
+so at the even time all hundred students need not be there
+Particularly if it is a holidays some three four holidays coming together
+many may have gone to gone of
+in this case reduction must be there in what is a issue on based on the
+number of people there in fact many hotels and other organiasations we will
+make sure about the number of guests and only issue based on that
+because otherwise there is no control that means that the possibility of
+preference which is always there in a system
+payment to vendors are not prompt
+if vendors are paid in time after you buy items within ten days you pay
+then your cost will not be high
+if you dont pay for the month is going to increase your cost saying that
+this is not a good fellow he has to pay so
+because his money is tied up ok
+large variation in the mess bill every month
+these are deficiencies is which i have been pointing out fifteen rupees or
+on month or twenty rupees next month and thinks like that
+
+refer slide time (53:28)
+
+[pic]
+
+un paid and long out standing bills from students
+students are not paying in time
+extras and rebates not reflected in the stores issues
+other wise the extra guest on particular day then you had issue more
+so of course normally in some hostels they are going to bring a number of
+guests you had to inform them one day ahead of time
+that tomorrow i am going to bring five guests or six guests so that they
+can actually plan on that and issue
+so these are items which are deficiencies high operational cost
+
+
+refer slide time (53:28)
+[pic]
+
+frequent small purchases due to  high cost
+high transport cost due to not consolidating stores requirements
+
+refer slide time (54:15)
+
+[pic]
+
+so once you come with this once you have the all deficiencies just not them
+as you know one two three four
+saying starting with one and you can see one point one and one point two
+and so on
+there is the reason why i have  done that
+one it is going to lead to certain methodology are certain goal
+and to meet deficiency of two
+two point one two point two as i have to set another goal
+to meet three and so on i got to meet third goal
+that is a way in which we note down one two three and sub goals within that
+
+and then we go to formulation of the essential main goals based on these
+deficiency
+the main goals are based on medium deficiencies and that essentially what
+we will be doing i think i will go in to a much greater detail next time
+before that
+i would like you to read chapter four again
+refresh your mind about that hostel case study because many of things i am
+going to saying may look very strange to to you unless you studied it and
+the advantage having a book like this there is description of this case is
+there in great length
+so chapter four have this book analysis and design of inventory system
+if you read this then next lecture will be able to follow much better and
+also could read chapter six or feasibility analysis so that you prepared
+when you come to this lectures
+thank you
+

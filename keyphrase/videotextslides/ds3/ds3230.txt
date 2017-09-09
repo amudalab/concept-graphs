@@ -1,0 +1,12 @@
+Row 1::Height 2::array-based implementation
+Row 2::Height 1::algorithm insertatrank(r,e):
+Row 3::Height 1::for i = n-1 downto r do
+Row 4::Height 1::s[i+1] <- s[i]
+Row 5::Height 1::s[r] <- e
+Row 6::Height 1::n <- n+1
+Row 7::Height 1::algorithm removeatrank(r)
+Row 8::Height 1::e <- s[r]
+Row 9::Height 1::for i=r to n-2 do
+Row 10::Height 1::s[i] <- s[i+1]
+Row 11::Height 1::n <- n+1
+Row 12::Height 1::return

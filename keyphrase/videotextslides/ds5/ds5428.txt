@@ -1,0 +1,10 @@
+Row 1::Height 2::lookup in linear probing
+Row 2::Height 1::to search for a key k we go to (k mod 13) and
+Row 3::Height 1::continue looking at successive locations till we
+Row 4::Height 1::find k or encounter an empty location
+Row 5::Height 1::successful search:to search for 31 we go to
+Row 6::Height 1::(31 mod 13) = 5 and continue onto 6,7,8,.. till we
+Row 7::Height 1::find 31 at location 10
+Row 8::Height 1::unsuccessful search: to search for 33 we go to
+Row 9::Height 1::(33 mod 5 = 7) and continue till we encounter an
+Row 10::Height 1::empty location (12)

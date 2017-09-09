@@ -1,0 +1,6248 @@
+hms annotated reference::hms annotated reference
+reference with examples::reference with examples
+examples granville barne::examples granville barne
+barne ! luca::barne ! luca
+luca del tongo::luca del tongo
+del tongo data::del tongo data
+tongo data structures::tongo data structures
+structures and algorithms::structures and algorithms
+examples first edition::examples first edition
+first edition copyright::first edition copyright
+book is made::book is made
+place for .net::place for .net
+big oh notation::big oh notation
+1.2.2 imperative programming::1.2.2 imperative programming
+imperative programming language::imperative programming language
+1.2.3 object oriented::1.2.3 object oriented
+object oriented concepts::object oriented concepts
+tips for working::tips for working
+singly linked list::singly linked list
+traversing the list::traversing the list
+list in reverse::list in reverse
+doubly linked list::doubly linked list
+2.2.3 reverse traversal::2.2.3 reverse traversal
+binary search tree::binary search tree
+finding the parent::finding the parent
+attaining a reference::attaining a reference
+finding the smallest::finding the smallest
+smallest and largest::smallest and largest
+double ended queue::double ended queue
+attaining the greatest::attaining the greatest
+greatest common denominator::greatest common denominator
+computing the maximum::computing the maximum
+reversing the order::reversing the order
+order of words::order of words
+detecting a palindrome::detecting a palindrome
+counting the number::counting the number
+number of words::number of words
+determining the number::determining the number
+number of repeated::number of repeated
+rst matching character::rst matching character
+a.1 iterative algorithms::a.1 iterative algorithms
+a.2 recursive algorithms::a.2 recursive algorithms
+recursive vs iterative::recursive vs iterative
+c.1 activation records::c.1 activation records
+c.2 some problems::c.2 some problems
+problems are recursive::problems are recursive
+recursive in nature::recursive in nature
+d.1 what constitutes::d.1 what constitutes
+constitutes a unit::constitutes a unit
+write my tests::write my tests
+view my test::view my test
+d.5 the structuring::d.5 the structuring
+structuring of tests::structuring of tests
+d.6 code coverage::d.6 code coverage
+preface every book::preface every book
+simply this book::simply this book
+series of emails::series of emails
+nt we create::nt we create
+present our pseudocode::present our pseudocode
+grown into pseudocode::grown into pseudocode
+listings with chunks::listings with chunks
+chunks of text::chunks of text
+structure or algorithm::structure or algorithm
+algorithm in question::algorithm in question
+point we thought::point we thought
+make this thing::make this thing
+side by side::side by side
+actual library implementation::actual library implementation
+writing this book::writing this book
+explanations as simple::explanations as simple
+maintaining a moder::maintaining a moder-
+degree of precision::degree of precision
+eager minded reader::eager minded reader
+minded reader happy::minded reader happy
+diagrams to demystify::diagrams to demystify
+challenging to visualise::challenging to visualise
+concise and self-explanatory::concise and self-explanatory
+self-explanatory pseudocode listings::self-explanatory pseudocode listings
+mainstream imperative programming::mainstream imperative programming
+imperative programming languages::imperative programming languages
+normal " implementations::normal " implementations
+opinion that choice::opinion that choice
+great thing read::great thing read
+read our book::read our book
+algorithms in question::algorithms in question
+book we hope::book we hope
+necessity of under::necessity of under-
+standing which data::standing which data
+concerned with performance::concerned with performance
+emphasis on real-time::emphasis on real-time
+wrong data structure::wrong data structure
+deal of performance::deal of performance
+run time complexity::run time complexity
+complexity and space::complexity and space
+explain the theoretical::explain the theoretical
+amazing optimisation phases::amazing optimisation phases
+optimisation phases speci::optimisation phases speci
+targeted at recursion::targeted at recursion
+make a fast::make a fast
+fast algorithm slow::fast algorithm slow
+concerns about languages::concerns about languages
+languages that target::languages that target
+target virtual machines::target virtual machines
+actual various implementation::actual various implementation
+guage s compiler::guage s compiler
+book that focuses::book that focuses
+gospel ; verify::gospel ; verify
+hope you enjoy::hope you enjoy
+reading this book::reading this book
+granville barnett luca::granville barnett luca
+barnett luca del::barnett luca del
+del tongo acknowledgements::del tongo acknowledgements
+tongo acknowledgements writing::tongo acknowledgements writing
+writing this short::writing this short
+fun and rewarding::fun and rewarding
+kapoor generously hosted::kapoor generously hosted
+hosted our book::hosted our book
+rst draft received::rst draft received
+received over thirteen::received over thirteen
+thirteen thousand downloads::thirteen thousand downloads
+generosity this book::generosity this book
+people jon skeet::people jon skeet
+jon skeet provided::jon skeet provided
+number of suggestions::number of suggestions
+eternally grateful jon::eternally grateful jon
+jon also edited::jon also edited
+edited this book::edited this book
+provided the odd::provided the odd
+suggestion via email::suggestion via email
+feedback was listened::feedback was listened
+publicise this book::publicise this book
+book from microsoft::book from microsoft
+microsoft s channel::microsoft s channel
+bloggers who helped::bloggers who helped
+spread the word::spread the word
+word you gave::word you gave
+book the program::book the program-
+program ming community::program- ming community
+community never ceases::community never ceases
+ceases to amaze::ceases to amaze
+authors granville barnett::authors granville barnett
+granville barnett granville::granville barnett granville
+candidate at queensland::candidate at queensland
+university of technology::university of technology
+working on parallelism::working on parallelism
+microsoft qut eresearch::microsoft qut eresearch
+qut eresearch centre1::qut eresearch centre1
+holds a degree::holds a degree
+degree in computer::degree in computer
+mvp his main::mvp his main
+languages and compilers::languages and compilers
+del tongo luca::del tongo luca
+science at flo::science at flo-
+rence his main::rence his main
+main interests vary::main interests vary
+vary from web::vary from web
+development to research::development to research
+mining and computer::mining and computer
+computer vision luca::computer vision luca
+luca also maintains::luca also maintains
+maintains an italian::maintains an italian
+found at http::found at http
+page intentionally left::page intentionally left
+intentionally left blank::intentionally left blank
+nt this book::nt this book
+book provides implementations::book provides implementations
+implementations of common::implementations of common
+common and uncommon::common and uncommon
+algorithms in pseudocode::algorithms in pseudocode
+theory of data::theory of data
+part this book::part this book
+book presents implementations::book presents implementations
+presents implementations devised::presents implementations devised
+authors themselves based::authors themselves based
+algorithms are based::algorithms are based
+considered the norm::considered the norm
+notation to depict::notation to depict
+depict the run::depict the run
+complexity of algorithms::complexity of algorithms
+written this book::written this book
+book as concise::book as concise
+concise and approachable::concise and approachable
+reader is familiar::reader is familiar
+concepts 1.2.1 big::concepts 1.2.1 big
+notation for run::notation for run
+concepts to determine::concepts to determine
+judge the performance::judge the performance
+performance of algorithms::performance of algorithms
+run time expansion::run time expansion
+times to demonstrate::times to demonstrate
+demonstrate how important::demonstrate how important
+run times cubic::run times cubic
+cubic and exponential::cubic and exponential
+big oh notations::big oh notations
+adding a node::adding a node
+maintain a pointer::maintain a pointer
+complexity is proportionate::complexity is proportionate
+algorithms that break::algorithms that break
+break the problem::break the problem
+problem into smaller::problem into smaller
+searching a binary::searching a binary
+algorithm that breaks::algorithm that breaks
+breaks the problem::breaks the problem
+takes the results::takes the results
+chunks and stitches::chunks and stitches
+e.g quick sort::e.g quick sort
+e.g bubble sort::e.g bubble sort
+review the design::review the design
+algorithm while prototyp::algorithm while prototyp-
+prototyp ing algorithm::prototyp- ing algorithm
+ing algorithm designs::ing algorithm designs
+intention of solving::intention of solving
+solving the problem::solving the problem
+fast it works::fast it works
+review your algorithm::review your algorithm
+design and optimise::design and optimise
+cient run times::cient run times
+asset that big::asset that big
+es sentially discard::es- sentially discard
+sentially discard things::sentially discard things
+things like hardware::things like hardware
+two sorting algorithms::two sorting algorithms
+large this applies::large this applies
+isolates a key::isolates a key
+factor in algorithm::factor in algorithm
+growth an algorithm::growth an algorithm
+run time grows::run time grows
+notation also acts::notation also acts
+communication tool picture::communication tool picture
+picture the scene::picture the scene
+discussing prototype algorithms::discussing prototype algorithms
+algorithms for node::algorithms for node
+discovery in massive::discovery in massive
+discussed your respective::discussed your respective
+fast each respective::fast each respective
+high level algorithm::high level algorithm
+level algorithm design::level algorithm design
+replay the scene::replay the scene
+talking about algorithm::talking about algorithm
+design each respective::design each respective
+respective developer states::respective developer states
+states the asymptotic::states the asymptotic
+good general idea::good general idea
+make better choices::make better choices
+selecting an algorithm::selecting an algorithm
+budgets per feature::budgets per feature
+feature each feature::feature each feature
+budget that represents::budget that represents
+represents its up::represents its up-
+permost time bound::permost time bound
+nt necessarily give::nt necessarily give
+remaining features imagine::remaining features imagine
+developing the routines::developing the routines
+application is started::application is started
+invoked during start::invoked during start
+strive for optimal::strive for optimal
+taking a quantitative::taking a quantitative
+software development properties::software development properties
+properties will make::properties will make
+work is critical::work is critical
+critical to success::critical to success
+language all examples::language all examples
+pseudo-imperative coding format::pseudo-imperative coding format
+imperative mainstream programming::imperative mainstream programming
+mainstream programming language::mainstream programming language
+language to port::language to port
+port the examples::port the examples
+languages in mind::languages in mind
+requirement is simple::requirement is simple
+mentations are based::mentations are based
+imperative thinking style::imperative thinking style
+apply various aspects::apply various aspects
+paradigm to produce::paradigm to produce
+solutions with respect::solutions with respect
+machines which provide::machines which provide
+provide various things::provide various things
+things like security::things like security
+security sand boxing::security sand boxing
+management via garbage::management via garbage
+garbage collection algorithms::garbage collection algorithms
+trivial to port::trivial to port
+port our imple::port our imple-
+languages when porting::languages when porting
+describe a linked::describe a linked
+linked list node::linked list node
+interpret the reference::interpret the reference
+amount of experience::amount of experience
+language these subtleties::language these subtleties
+subtleties will present::subtleties will present
+present no is::present no is-
+language in order::language in order
+port the pseudo::port the pseudo-
+user is familiar::user is familiar
+familiar with primitive::familiar with primitive
+primitive imperative language::primitive imperative language
+imperative language constructs::imperative language constructs
+constructs before reading::constructs before reading
+lost some algo::lost some algo-
+algo rithms presented::algo- rithms presented
+confusing to follow::confusing to follow
+provide data structures::provide data structures
+structures or algorithms::structures or algorithms
+algorithms that work::algorithms that work
+work on generic::work on generic
+order to make::order to make
+make the samples::make the samples
+samples as easy::samples as easy
+easy to follow::easy to follow
+familiar with interfaces::familiar with interfaces
+target uses interfaces::target uses interfaces
+pseudocode to describe::pseudocode to describe
+describe our solutions::describe our solutions
+interpreting the pseudocode::interpreting the pseudocode
+pseudocode is trivial::pseudocode is trivial
+things to point::things to point
+represent the result::represent the result
+result of applying::result of applying
+data struc ture::data struc- ture
+ture d chapter::ture d chapter
+type of parameters::type of parameters
+parameters is inferred::parameters is inferred
+primitive language constructs::primitive language constructs
+begun and ended::begun and ended
+sake of brevity::sake of brevity
+book require parameters::book require parameters
+assign no explicit::assign no explicit
+parameters the type::parameters the type
+type is inferred::type is inferred
+parameter usually acts::parameter usually acts
+type for instance::type for instance
+number of bits::number of bits
+e.g a vector::e.g a vector
+last major point::last major point
+point of reference::point of reference
+end a language::end a language
+construct for instance::construct for instance
+close the scope::close the scope
+explicitly state end::explicitly state end
+leaving the interpretation::leaving the interpretation
+scopes are closed::scopes are closed
+reader while implicit::reader while implicit
+implicit scope closure::implicit scope closure
+scope closure works::scope closure works
+lead to ambiguity::lead to ambiguity
+simple algorithm signature::simple algorithm signature
+signature we list::signature we list
+list any pre::list any pre
+pre or post::pre or post
+post condi tions::post condi- tions
+value to compute::value to compute
+compute the factorial::compute the factorial
+describes an algorithm::describes an algorithm
+takes a single::takes a single
+single numeric parameter::single numeric parameter
+pre and post::pre and post
+post conditions follow::post conditions follow
+follow the algorithm::follow the algorithm
+enforce the pre-conditions::enforce the pre-conditions
+algorithm when porting::algorithm when porting
+language of choice::language of choice
+pre-conidition is critical::pre-conidition is critical
+algorithms opera tion::algorithms opera- tion
+items the post-condition::items the post-condition
+post-condition mainly describes::post-condition mainly describes
+sorted in ascending::sorted in ascending
+describe is language::describe is language
+non-conformance to pre::non-conformance to pre-
+cases we provide::cases we provide
+provide a message::provide a message
+algorithm has failed::algorithm has failed
+failed to execute::failed to execute
+book you work::book you work
+pen and paper::pen and paper
+paper to track::paper to track
+things like variable::things like variable
+work through algorithms::work through algorithms
+give each variable::give each variable
+update these columns::update these columns
+visualise the mutations::visualise the mutations
+working through algorithms::working through algorithms
+intuitively map relationships::intuitively map relationships
+relationships between data::relationships between data
+values on paper::values on paper
+head we suggest::head we suggest
+suggest you put::suggest you put
+trivial some variables::trivial some variables
+variables and calculations::variables and calculations
+dealing with recursive::dealing with recursive
+recursive algorithm traces::recursive algorithm traces
+traces we recommend::traces we recommend
+table that records::table that records
+records function calls::records function calls
+out an elaborate::out an elaborate
+map of function::map of function
+calls with arrows::calls with arrows
+simply makes things::simply makes things
+things more complex::things more complex
+complex to follow::complex to follow
+simple and systematic::simple and systematic
+studying the implementations::studying the implementations
+implementations far easier::implementations far easier
+split this book::split this book
+discussion and pseudo-implementations::discussion and pseudo-implementations
+pseudo-implementations of common::pseudo-implementations of common
+common and uncom::common and uncom-
+uncom mon data::uncom- mon data
+mon data structures::mon data structures
+algorithms of varying::algorithms of varying
+purposes from sorting::purposes from sorting
+sorting to string::sorting to string
+read the book::read the book
+sequentially from beginning::sequentially from beginning
+beginning to end::beginning to end
+read each chapter::read each chapter
+reading the section::reading the section
+chapter that describes::chapter that describes
+describes the algorithm::describes the algorithm
+chapters on data::chapters on data
+data structures present::data structures present
+initially the algorithms::initially the algorithms
+algorithms con cerned::algorithms con- cerned
+searching the previous::searching the previous
+previous list represents::previous list represents
+majority of cases::majority of cases
+respective data structure::respective data structure
+readers we recommend::readers we recommend
+meaning one keyword::meaning one keyword
+light as return::light as return
+method to exit::method to exit
+exit and returns::exit and returns
+returns each value::returns each value
+caller with yield::caller with yield
+control only returns::control only returns
+values to return::values to return
+test driven development::test driven development
+driven development style::driven development style
+style on paper::style on paper
+out the pseudocode::out the pseudocode
+transcribe these tests::transcribe these tests
+tests into unit::tests into unit
+unit tests satisfying::unit tests satisfying
+algorithm suitably tested::algorithm suitably tested
+fairly obvious cases::fairly obvious cases
+complex to satisfy::complex to satisfy
+out the test::out the test
+portions of pseudocode::portions of pseudocode
+algorithm that satisfy::algorithm that satisfy
+satisfy that respective::satisfy that respective
+intuitively identify areas::intuitively identify areas
+algorithms imple mentation::algorithms imple- mentation
+cases will yield::cases will yield
+yield an overwhelming::yield an overwhelming
+list of concerns::list of concerns
+hinder your ability::hinder your ability
+ability to design::ability to design
+design an algorithm::design an algorithm
+amount of concerns::amount of concerns
+sub-divide the problem::sub-divide the problem
+smaller problems solving::smaller problems solving
+solving the smaller::solving the smaller
+task than clouding::task than clouding
+clouding your mind::clouding your mind
+type of testing::type of testing
+book are unit::book are unit
+tests because unit::tests because unit
+unit tests contribute::unit tests contribute
+piece of creating::piece of creating
+software we invite::software we invite
+invite the reader::invite the reader
+reader to view::reader to view
+provide any code::provide any code
+maintain an open::maintain an open
+open source project1::open source project1
+project1 that houses::project1 that houses
+listed the project::listed the project
+project is named::project is named
+named data structures::named data structures
+hope you digest::hope you digest
+embark on reading::embark on reading
+algorithms on paper::algorithms on paper
+paper to understand::paper to understand
+achieve their outcome::achieve their outcome
+follow these key::follow these key
+readers are encouraged::readers are encouraged
+encouraged to provide::encouraged to provide
+improve our implementations::improve our implementations
+part i data::part i data
+linked lists linked::linked lists linked
+lists linked lists::lists linked lists
+high level perspective::high level perspective
+series of nodes::series of nodes
+nodes each node::nodes each node
+node s case::node s case
+case a null::case a null
+null pointer representing::null pointer representing
+dsa our implementations::dsa our implementations
+implementations of linked::implementations of linked
+lists always maintain::lists always maintain
+head and tail::head and tail
+head or tail::head or tail
+constant time operation::constant time operation
+operation random insertion::operation random insertion
+insertion is excluded::insertion is excluded
+lists in dsa::lists in dsa
+insertion in dsa::insertion in dsa
+dsa we chose::dsa we chose
+performing a traditional::performing a traditional
+operation an exception::operation an exception
+rule is performing::rule is performing
+performing an insertion::performing an insertion
+head nor tail::head nor tail
+order to add::order to add
+traverse the linked::traverse the linked
+node s current::node s current
+predecessor this traversal::predecessor this traversal
+structure is trivial::structure is trivial
+incurs no copy::incurs no copy
+array or vector::array or vector
+list singly linked::list singly linked
+singly linked lists::singly linked lists
+primitive data structures::primitive data structures
+book each node::book each node
+node that makes::node that makes
+linked list consists::linked list consists
+list node figure::list node figure
+linked list populated::linked list populated
+populated with integers::populated with integers
+integers 2.1.1 insertion::integers 2.1.1 insertion
+insertion in general::insertion in general
+general when people::general when people
+talk about insertion::talk about insertion
+insertion with respect::insertion with respect
+respect to linked::respect to linked
+general purpose method::general purpose method
+method that adds::method that adds
+adds a node::adds a node
+adding the node::adding the node
+case the node::case the node
+append our node::append our node
+updating the tail::updating the tail
+value to add::value to add
+algorithm consider adding::algorithm consider adding
+quence of integers::quence of integers
+2.1.2 searching searching::2.1.2 searching searching
+searching a linked::searching a linked
+list is straightforward::list is straightforward
+traverse the list::traverse the list
+checking the value::checking the value
+list the algorithm::list the algorithm
+traversal in x2.1.4::traversal in x2.1.4
+value to search::value to search
+2.1.3 deletion deleting::2.1.3 deletion deleting
+deleting a node::deleting a node
+list is empty::list is empty
+node to remove::node to remove
+removing the head::removing the head
+removing the tail::removing the tail
+item to remove::item to remove
+algorithm whose cases::algorithm whose cases
+described will remove::described will remove
+remove a node::remove a node
+node from any::node from any-
+linked list deletion::linked list deletion
+value to remove::value to remove
+value is removed::value is removed
+n.value = value::n.value = value
+head = tail::head = tail
+n.next = tail::n.next = tail
+conditional on line::conditional on line
+remove 2.1.4 traversing::remove 2.1.4 traversing
+list and continue::list and continue
+exhausted all nodes::exhausted all nodes
+update the node::update the node
+simple while loop::simple while loop
+loop to check::loop to check
+traverse 2.1.5 traversing::traverse 2.1.5 traversing
+reverse order traversing::reverse order traversing
+left to right::left to right
+simple as demonstrated::simple as demonstrated
+demonstrated in x2.1.4::demonstrated in x2.1.4
+wanted to traverse::wanted to traverse
+traverse the nodes::traverse the nodes
+algorithm to perform::algorithm to perform
+acquire a reference::acquire a reference
+nodes that make::nodes that make
+linked list make::linked list make
+nding its predecessor::nding its predecessor
+backwards the cost::backwards the cost
+algorithm being applied::algorithm being applied
+traversed in reverse::traversed in reverse
+reversetraversal this algorithm::reversetraversal this algorithm
+doubly linked lists::doubly linked lists
+make reverse list::make reverse list
+reverse list traversal::reverse list traversal
+list traversal simple::list traversal simple
+shown in x2.2.3::shown in x2.2.3
+list doubly linked::list doubly linked
+linked list figure::linked list figure
+list node chapter::list node chapter
+remember to bind::remember to bind
+bind the previous::bind the previous
+previous tail node::previous tail node
+end add figure::end add figure
+list after adding::list after adding
+adding the sequence::adding the sequence
+sequence of integers::sequence of integers
+integers 2.2.2 deletion::integers 2.2.2 deletion
+guessed the cases::guessed the cases
+ned in x2.1.3::ned in x2.1.3
+x2.1.3 like insertion::x2.1.3 like insertion
+task of binding::task of binding
+binding an additional::binding an additional
+value = head.value::value = head.value
+remove 2.2.3 reverse::remove 2.2.3 reverse
+traversal singly linked::traversal singly linked
+forward only design::forward only design
+reverse traversal algorithm::reverse traversal algorithm
+ned in x2.1.5::ned in x2.1.5
+required some creative::required some creative
+invention doubly linked::invention doubly linked
+linked lists make::linked lists make
+lists make reverse::lists make reverse
+make reverse traversal::make reverse traversal
+traversal as simple::traversal as simple
+simple as forward::simple as forward
+node and update::node and update
+update the pointers::update the pointers
+shows the reverse::shows the reverse
+algorithm in action::algorithm in action
+linked list reverse::linked list reverse
+list reverse traversal::list reverse traversal
+list to traverse::list to traverse
+summary linked lists::summary linked lists
+lists are good::lists are good
+number of items::number of items
+items to store::items to store
+array would require::array would require
+size up front::size up front
+front ; exceeding::front ; exceeding
+exceeding that size::exceeding that size
+size involves invoking::size involves invoking
+invoking a resizing::invoking a resizing
+list to maintain::list to maintain
+maintain a constant::maintain a constant
+requires maintaining pointers::requires maintaining pointers
+overhead will pay::overhead will pay
+performing many times::performing many times
+nodes by index::nodes by index
+maintain a count::maintain a count
+variable that tracks::variable that tracks
+items are contained::items are contained
+insertion and deletion::insertion and deletion
+performing basic in::performing basic in-
+basic in sertions::basic in- sertions
+sertions in general::sertions in general
+general doubly linked::general doubly linked
+accommodating for non-trivial::accommodating for non-trivial
+forwards and backwards::forwards and backwards
+cases this requirement::cases this requirement
+requirement is present::requirement is present
+recursive descent fashion::recursive descent fashion
+backtrack in order::backtrack in order
+order to create::order to create
+create the correct::create the correct
+correct parse tree::correct parse tree
+design makes bi-directional::design makes bi-directional
+makes bi-directional traversal::makes bi-directional traversal
+traversal much simpler::traversal much simpler
+simpler and quicker::simpler and quicker
+singly linked chapter::singly linked chapter
+search tree binary::search tree binary
+tree binary search::tree binary search
+binary search trees::binary search trees
+simple to understand::simple to understand
+understand we start::understand we start
+node with value::node with value
+nodes with values::nodes with values
+subtree contains nodes::subtree contains nodes
+nodes whose values::nodes whose values
+rules with respect::rules with respect
+respect to nodes::respect to nodes
+important to note::important to note
+tree data structure::tree data structure
+properties see avl::properties see avl
+alias that root::alias that root
+simple unbalanced binary::simple unbalanced binary
+unbalanced binary search::unbalanced binary search
+insertion as mentioned::insertion as mentioned
+mentioned previously insertion::mentioned previously insertion
+value has passed::value has passed
+passed custom type::passed custom type
+custom type checks::custom type checks
+checks for type::checks for type
+node to start::node to start
+value < current.value::value < current.value
+insertnode the insertion::insertnode the insertion
+algorithm is split::algorithm is split
+core base case::core base case
+tree is empty::tree is empty
+create our root::create our root
+cases we invoke::cases we invoke
+invoke the recursive::invoke the recursive
+recursive insertnode algorithm::recursive insertnode algorithm
+rst appropriate place::rst appropriate place
+tree to put::tree to put
+put value note::put value note
+stage we perform::stage we perform
+perform a binary::perform a binary
+choose to recurse::choose to recurse
+right by comparing::right by comparing
+totally ordered type::totally ordered type
+satisfy the conditions::satisfy the conditions
+conditions to place::conditions to place
+searching a bst::searching a bst
+simpler than insertion::simpler than insertion
+insertion the pseudocode::insertion the pseudocode
+pseudocode is self-explanatory::pseudocode is self-explanatory
+previously about insertion::previously about insertion
+subtree containing values::subtree containing values
+inserting when searching::inserting when searching
+searching the rules::searching the rules
+rules are made::rules are made
+root.value = value::root.value = value
+value < root.value::value < root.value
+inspect the left::inspect the left
+subtree of root::subtree of root
+root for value::root for value
+value > root.value::value > root.value
+inspect the right::inspect the right
+end contains chapter::end contains chapter
+removing a node::removing a node
+cases to con::cases to con-
+case we promote::case we promote
+promote the largest::promote the largest
+tree this case::tree this case
+bst a value::bst a value
+value may occur::value may occur
+subtree no left::subtree no left
+subtree no right::subtree no right
+subtree and left::subtree and left
+left subtree figure::left subtree figure
+search tree deletion::search tree deletion
+tree deletion cases::tree deletion cases
+cases the remove::cases the remove
+two further helper::two further helper
+helper algorithms named::helper algorithms named
+algorithms named findp::algorithms named findp
+named findp arent::named findp arent
+removed if found::removed if found
+case yields true::case yields true
+nodetoremove.right = null::nodetoremove.right = null
+nodetoremove.value < parent.value::nodetoremove.value < parent.value
+subtree of nodetoremove::subtree of nodetoremove
+set the parents::set the parents
+parents  right::parents  right
+pointer of largestv::pointer of largestv
+end remove chapter::end remove chapter
+node the purpose::node the purpose
+algorithm is simple::algorithm is simple
+return a reference::return a reference
+performing extensive tree::performing extensive tree
+extensive tree transforma::extensive tree transforma-
+tree transforma tions::tree transforma- tions
+node of value::node of value
+value if found::value if found
+value = root.value::value = root.value
+root.left.value = value::root.left.value = value
+root.right.value = value::root.right.value = value
+findparent a special::findparent a special
+case we return::case we return
+node this algorithm::node this algorithm
+returning a reference::returning a reference
+returns a reference::returns a reference
+end findnode astute::end findnode astute
+findnode astute readers::findnode astute readers
+node not true::node not true
+true or false::true or false
+false given findnode::false given findnode
+findnode and compare::findnode and compare
+compare the return::compare the return
+subtree the opposite::subtree the opposite
+nding the largest::nding the largest
+bst both algorithms::bst both algorithms
+simply for completeness::simply for completeness
+reached the last::reached the last
+bst is located::bst is located
+end findmin chapter::end findmin chapter
+employed to traverse::employed to traverse
+traverse the items::traverse the items
+choice of strategy::choice of strategy
+node visitation order::node visitation order
+order you require::order you require
+traversals that dsa::traversals that dsa
+structures that derive::structures that derive
+derive from binarysearcht::derive from binarysearcht
+visit the root::visit the root
+traverse the left::traverse the left
+traverse the right::traverse the right
+traversal is shown::traversal is shown
+shown in figure::shown in figure
+visited in preorder::visited in preorder
+preorder 3.7.2 postorder::preorder 3.7.2 postorder
+postorder this algorithm::postorder this algorithm
+node is yielded::node is yielded
+yielded after traversing::yielded after traversing
+traversing both subtrees::traversing both subtrees
+visited in postorder::visited in postorder
+end postorder chapter::end postorder chapter
+preorder visit binary::preorder visit binary
+visit binary search::visit binary search
+tree example chapter::tree example chapter
+postorder visit binary::postorder visit binary
+inorder another variation::inorder another variation
+traversing the left::traversing the left
+inorder visit binary::inorder visit binary
+visited in inorder::visited in inorder
+beauties of inorder::beauties of inorder
+values are yielded::values are yielded
+traversing a populated::traversing a populated
+breadth first traversing::breadth first traversing
+traversing a tree::traversing a tree
+tree in breadth::tree in breadth
+rst order yields::rst order yields
+yields the values::yields the values
+par ticular depth::par- ticular depth
+visit the values::visit the values
+nodes to visit::nodes to visit
+traversal is implemented::traversal is implemented
+re sizeable array::re- sizeable array
+store the values::store the values
+visited in breadth::visited in breadth
+queue to store::queue to store
+store those nodes::store those nodes
+breadth first visit::breadth first visit
+first visit binary::first visit binary
+summary a binary::summary a binary
+custom rules inherent::custom rules inherent
+type with logarithmic::type with logarithmic
+ecient traversal remains::ecient traversal remains
+traversal remains linear::traversal remains linear
+visit the nodes::visit the nodes
+trees are recursive::trees are recursive
+recursive data structures::recursive data structures
+algorithms that operate::algorithms that operate
+tree are recursive::tree are recursive
+run times presented::run times presented
+chapter are based::chapter are based
+pretty big assumption::pretty big assumption
+tree s left::tree s left
+attain logarithmic run::attain logarithmic run
+logarithmic run times::logarithmic run times
+algorithms presented earlier::algorithms presented earlier
+true a binary::true a binary
+pathologically unbalanced tree::pathologically unbalanced tree
+tree become linear::tree become linear
+examine an avl::examine an avl
+tree that enforces::tree that enforces
+enforces self-balancing properties::enforces self-balancing properties
+heap a heap::heap a heap
+simple tree data::simple tree data
+heap usually employs::heap usually employs
+heap each strategy::heap each strategy
+determines the properties::determines the properties
+choose the min::choose the min
+min heap strategy::min heap strategy
+tree the opposite::tree the opposite
+opposite is true::opposite is true
+max heap strategy::max heap strategy
+employs the min::employs the min
+unlike other tree::unlike other tree
+tree data structures::tree data structures
+nodes the nodes::nodes the nodes
+two children figure::two children figure
+heap data structure::heap data structure
+array the array::array the array
+array in figure::array in figure
+simply adding values::simply adding values
+left-to-right fashion figure::left-to-right fashion figure
+notion of representing::notion of representing
+representing a tree::representing a tree
+property is key::property is key
+key to understanding::key to understanding
+understanding this chapter::understanding this chapter
+shows a step::shows a step
+step by step::step by step
+process to represent::process to represent
+represent a tree::represent a tree
+run time behaviour::run time behaviour
+internal data structures::internal data structures
+dynamic data structure::dynamic data structure
+array for scenarios::array for scenarios
+upper storage limit::upper storage limit
+storage limit required::storage limit required
+data structure encapsulates::data structure encapsulates
+structure encapsulates resizing::structure encapsulates resizing
+encapsulates resizing algorithms::encapsulates resizing algorithms
+algorithms to grow::algorithms to grow
+grow the array::grow the array
+array as required::array as required
+required at run::required at run
+data structure figure::data structure figure
+handle adding null::handle adding null
+adding null references::adding null references
+heap this varies::heap this varies
+varies from case::varies from case
+case to case::case to case
+values are prohibited::values are prohibited
+resolve this ambiguity::resolve this ambiguity
+studied your requirements::studied your requirements
+sake of clarity::sake of clarity
+avoid the issue::avoid the issue
+issue by prohibiting::issue by prohibiting
+prohibiting null values::prohibiting null values
+calculate the index::calculate the index
+node the required::node the required
+node at index::node at index
+represents the calculation::represents the calculation
+calculates the index::calculates the index
+designing an algorithm::designing an algorithm
+algorithm for heap::algorithm for heap
+insertion is simple::insertion is simple
+ensure that heap::ensure that heap
+order is preserved::order is preserved
+post-insertion operation inserting::post-insertion operation inserting
+inserting a value::inserting a value
+array is simple::array is simple
+inserting our value::inserting our value
+validating heap order::validating heap order
+case of min-heap::case of min-heap
+ordering this requires::ordering this requires
+swap the values::swap the values
+converting a tree::converting a tree
+array counterpart chapter::array counterpart chapter
+calculating node properties::calculating node properties
+properties the run::properties the run
+ciency for heap::ciency for heap
+product of verifying::product of verifying
+verifying heap order::verifying heap order
+shows the steps::shows the steps
+steps of inserting::steps of inserting
+inserting the values::inserting the values
+store the heap::store the heap
+heap has preserved::heap has preserved
+preserved min heap::preserved min heap
+min heap ordering::min heap ordering
+minheapify the design::minheapify the design
+min heapify algorithm::min- heapify algorithm
+condition of entering::condition of entering
+loop is changed::loop is changed
+deleting an item::deleting an item
+item involves ensuring::item involves ensuring
+ensuring that heap::ensuring that heap
+ordering is preserved::ordering is preserved
+preserved the algorithm::preserved the algorithm
+algorithm for deletion::algorithm for deletion
+value to delete::value to delete
+put the last::put the last
+item to delete::item to delete
+verify heap ordering::verify heap ordering
+include the value::include the value
+right are updated::right are updated
+value is located::value is located
+heap and removed::heap and removed
+left < count::left < count
+count and heap::count and heap
+promote smallest key::promote smallest key
+key from subtree::key from subtree
+end remove figure::end remove figure
+shows the remove::shows the remove
+default the removed::default the removed
+heap for reference::heap for reference
+free that memory::free that memory
+null that empty::null that empty
+collector can reclaim::collector can reclaim
+reclaim that memory::reclaim that memory
+null that hole::null that hole
+nt be garbage::nt be garbage
+searching a heap::searching a heap
+matter of traversing::matter of traversing
+traversing the items::traversing the items
+x3.7.4 to visit::x3.7.4 to visit
+heap to check::heap to check
+search the heap::search the heap
+nt take advantage::nt take advantage
+backing heap array::backing heap array
+optimise the search::optimise the search
+algorithm by including::algorithm by including
+logic which makes::logic which makes
+node being inspected::node being inspected
+provide an answer::provide an answer
+answer without traversing::answer without traversing
+traversing the rest::traversing the rest
+level of nodes::level of nodes
+back to inspecting::back to inspecting
+heap the optimisation::heap the optimisation
+loop is justi::loop is justi
+prevent the expensive::prevent the expensive
+expensive worse case::expensive worse case
+worse case run::worse case run
+algorithm is speci::algorithm is speci
+min-heap to tailor::min-heap to tailor
+tailor the algorithm::tailor the algorithm
+two comparison operations::two comparison operations
+start < count::start < count
+nodes + start::nodes + start
+count and start::count and start
+start < end::start < end
+value = heap::value = heap
+value > parent::value > parent
+value < heap::value < heap
+count = nodes::count = nodes
+heap by checking::heap by checking
+checking whether count::checking whether count
+heap to determine::heap to determine
+traversing the nodes::traversing the nodes
+ned holds true::ned holds true
+traversal as mentioned::traversal as mentioned
+array data structure::array data structure
+implementation is based::implementation is based
+result you traverse::result you traverse
+traverse the array::traverse the array
+initial array index::initial array index
+visit each value::visit each value
+reached the upper::reached the upper
+actual physical bound::actual physical bound
+allocated array count::allocated array count
+partition the conceptual::partition the conceptual
+actual array implementation::actual array implementation
+bits of data::bits of data
+result of heap::result of heap
+heap after inspecting::heap after inspecting
+inspecting the nodes::inspecting the nodes
+nodes of level::nodes of level
+living and dead::living and dead
+heap backing array::heap backing array
+advice we gave::advice we gave
+mutated several times::mutated several times
+form of default::form of default
+value for items::value for items
+items no longer::items no longer
+count garbage values::count garbage values
+heap array data::heap array data
+structure the garbage::structure the garbage
+vary from platform::vary from platform
+platform to platform::platform to platform
+platform to make::platform to make
+make things simple::make things simple
+simple the garbage::simple the garbage
+shows a heap::shows a heap
+mutated many times::mutated many times
+point the items::point the items
+items in indexes::items in indexes
+references to live::references to live
+objects of type::objects of type
+disambiguate separate objects::disambiguate separate objects
+traversing the heap::traversing the heap
+property only holds::property only holds
+traversing a heap::traversing a heap
+requires some creative::requires some creative
+implement priority queues::implement priority queues
+facilitate heap sort::facilitate heap sort
+sort as discussed::sort as discussed
+x4.1 and deletion::x4.1 and deletion
+deletion x4.2 sections::deletion x4.2 sections
+sections a heap::sections a heap
+heap maintains heap::heap maintains heap
+maintains heap order::maintains heap order
+selected ordering strategy::selected ordering strategy
+strategy these strategies::strategy these strategies
+strategies are referred::strategies are referred
+parent is greater::parent is greater
+told what strategy::told what strategy
+strategy it enforces::strategy it enforces
+state this explicitly::state this explicitly
+explicitly the heap::explicitly the heap
+algorithms the cost::algorithms the cost
+deletion we invoke::deletion we invoke
+run time complexities::run time complexities
+cost of maintaining::cost of maintaining
+maintaining the strategy::maintaining the strategy
+cost of dynamic::cost of dynamic
+dynamic array expansion::dynamic array expansion
+outgrows the space::outgrows the space
+heap s backing::heap s backing
+interest to research::interest to research
+research a good::research a good
+good initial starting::good initial starting
+initial starting size::initial starting size
+assist in minimising::assist in minimising
+minimising the impact::minimising the impact
+impact of dynamic::impact of dynamic
+dynamic array resizing::dynamic array resizing
+sets a set::sets a set
+number of values::number of values
+order the values::order the values
+set are distinct::set are distinct
+generally set implementations::generally set implementations
+set implementations tend::set implementations tend
+tend to check::tend to check
+set before adding::set before adding
+avoiding the issue::avoiding the issue
+issue of repeated::issue of repeated
+cover set theory::cover set theory
+theory in depth::theory in depth
+values of sets::values of sets
+nes a set::nes a set
+values are listed::values are listed
+ning a set::ning a set
+stating its members::stating its members
+members is tiresome::members is tiresome
+importantly the set::importantly the set
+providing a series::providing a series
+series of properties::series of properties
+set must satisfy::set must satisfy
+right hand side::right hand side
+natural numbers set::natural numbers set
+introduction to sets::introduction to sets
+cover set intersection::cover set intersection
+intersection and union::intersection and union
+formed on sets::formed on sets
+sets the union::sets the union
+demonstrates set intersection::demonstrates set intersection
+union and intersection::union and intersection
+case in .net::case in .net
+exist as extension::exist as extension
+ned in system.linq.enumerable::ned in system.linq.enumerable
+adding each item::adding each item
+union of set1::union of set1
+item in set1::item in set1
+item in set2::item in set2
+union the run::union the run
+set this runtime::set this runtime
+sets that exhibit::sets that exhibit
+trivial to implement::trivial to implement
+major thing worth::major thing worth
+thing worth pointing::thing worth pointing
+traverse the set::traverse the set
+items to add::items to add
+smallerset are sets::smallerset are sets
+intersection of set1::intersection of set1
+set1.count < set2.count::set1.count < set2.count
+item in smallerset::item in smallerset
+intersection the run::intersection the run
+algorithm a linear::algorithm a linear
+attained when operating::attained when operating
+enforce the explicit::enforce the explicit
+libraries provide implementations::libraries provide implementations
+implementations of unordered::implementations of unordered
+set and ordered::set and ordered
+set and cover::set and cover
+cient data structure::cient data structure
+insertion an unordered::insertion an unordered
+backing data structure::backing data structure
+structure as mentioned::structure as mentioned
+add an item::add an item
+good the hashing::good the hashing
+hash tables employ::hash tables employ
+cient general purpose::cient general purpose
+general purpose hashing::general purpose hashing
+purpose hashing algorithms::purpose hashing algorithms
+library of choice::library of choice
+similar in terms::similar in terms
+ordered an ordered::ordered an ordered
+set is similar::set is similar
+members are distinct::members are distinct
+ordered set enforces::ordered set enforces
+enforces some prede::enforces some prede
+members to produce::members to produce
+produce a set::produce a set
+set whose members::set whose members
+members are ordered::members are ordered
+internal backing data::internal backing data
+set from versions::set from versions
+onwards we replaced::onwards we replaced
+replaced the binary::replaced the binary
+primarily because avl::primarily because avl
+avl is balanced::avl is balanced
+realised by performing::realised by performing
+performing an inorder::performing an inorder
+backing tree data::backing tree data
+structure which yields::structure which yields
+yields the correct::yields the correct
+correct ordered sequence::correct ordered sequence
+sequence of set::sequence of set
+set in dsa::set in dsa
+simply a wrapper::simply a wrapper
+tree contains unique::tree contains unique
+summary sets provide::summary sets provide
+collection of unique::collection of unique
+ordered or unordered::ordered or unordered
+implementing a set::implementing a set
+key to select::key to select
+select the correct::select the correct
+correct backing data::correct backing data
+item to determine::item to determine
+table this check::table this check
+complexity ordered sets::complexity ordered sets
+ordered sets cost::ordered sets cost
+structure is acceptable::structure is acceptable
+property of sets::property of sets
+approach we describe::approach we describe
+favourably fast look-up::favourably fast look-up
+fast look-up times::fast look-up times
+check before inser::check before inser-
+table this run::table this run
+constant ordered sets::constant ordered sets
+sets as described::sets as described
+stage when searching::stage when searching
+yielding a logarithmic::yielding a logarithmic
+sets to facilitate::sets to facilitate
+facilitate many algorithms::facilitate many algorithms
+set to assist::set to assist
+algorithm that determines::algorithm that determines
+determines the number::determines the number
+essential data structure::essential data structure
+found in vast::found in vast
+amounts of soft::amounts of soft-
+ware from user::ware from user
+mode to kernel::mode to kernel
+kernel mode applications::kernel mode applications
+fundamentally they honour::fundamentally they honour
+access the item::access the item
+queue that item::queue that item
+places an item::places an item
+queue ; dequeue::queue ; dequeue
+retrieves the item::retrieves the item
+queue ; peek::queue ; peek
+queue without removing::queue without removing
+demonstrate the behaviour::demonstrate the behaviour
+previously mentioned methods::previously mentioned methods
+methods observ ing::methods observ- ing
+ing the mutations::ing the mutations
+queue data structure::queue data structure
+describes the operations::describes the operations
+queue in figure::queue in figure
+queue a queue::queue a queue
+section in dsa::section in dsa
+provide a standard::provide a standard
+queue because queues::queue because queues
+core data structure::core data structure
+cient queue data::cient queue data
+queue the queue::queue the queue
+complexities the reason::complexities the reason
+complexity for deletion::complexity for deletion
+front of queues::front of queues
+simply a case::simply a case
+case of returning::case of returning
+returning the value::returning the value
+modifying the head::modifying the head
+node the run::node the run
+complexity for searching::complexity for searching
+searching a queue::searching a queue
+unlike a standard::unlike a standard
+queue where items::queue where items
+items are ordered::items are ordered
+ordered in terms::ordered in terms
+priority queue determines::priority queue determines
+determines the order::determines the order
+form of custom::form of custom
+queue being ordered::queue being ordered
+ordered by priority::ordered by priority
+priority it remains::priority it remains
+returning the item::returning the item
+item at index::item at index
+array a heap::array a heap
+ability to construct::ability to construct
+construct a priority::construct a priority
+unlike the queues::unlike the queues
+chapter a double::chapter a double
+access the items::access the items
+queue a double::queue a double
+applies no prioritization::applies no prioritization
+items are added::items are added
+added in order::added in order
+front of back::front of back
+deque are denoted::deque are denoted
+utilising the data::utilising the data
+data structures exposed::data structures exposed
+structures exposed interface::structures exposed interface
+queue mutations chapter::queue mutations chapter
+deque s provide::deque s provide
+versions of common::versions of common
+common queue operations::common queue operations
+enqueue an item::enqueue an item
+lines of enqueuefront::lines of enqueuefront
+supported by deque::supported by deque
+shows a deque::shows a deque
+translation in terms::translation in terms
+cases the set::cases the set
+set of algorithms::set of algorithms
+algorithms that add::algorithms that add
+structures must adhere::structures must adhere
+implement an interface::implement an interface
+interface which requires::interface which requires
+requires the data::requires the data
+structure to expose::structure to expose
+expose a standard::expose a standard
+standard add method::standard add method
+respect to algorithmic::respect to algorithmic
+complexities a deque::complexities a deque
+enqueueing an item::enqueueing an item
+enqueuing an item::enqueuing an item
+wrapper data structure::wrapper data structure
+structure would require::structure would require
+require the pro::require the pro-
+array up front::array up front
+provide an obvious::provide an obvious
+state the maxi::state the maxi-
+maxi mum number::maxi- mum number
+items the deque::items the deque
+result the backing::result the backing
+incur the expense::incur the expense
+expense of invoking::expense of invoking
+leave the library::leave the library
+library developer chapter::library developer chapter
+deque data structure::deque data structure
+array minimization techniques::array minimization techniques
+amount of memory::amount of memory
+memory an algorithm::memory an algorithm
+harder to gauge::harder to gauge
+issues a deque::issues a deque
+baking data structure::baking data structure
+two pointers consumes::two pointers consumes
+consumes more memory::consumes more memory
+array item counterpart::array item counterpart
+counterpart it makes::counterpart it makes
+expensive resizing algorithms::expensive resizing algorithms
+data structure increases::data structure increases
+increases in size::increases in size
+language that targets::language that targets
+targets a garbage::targets a garbage
+garbage collected virtual::garbage collected virtual
+collected virtual machine::collected virtual machine
+virtual machine memory::virtual machine memory
+machine memory reclamation::machine memory reclamation
+longer ref erenced::longer ref- erenced
+erenced become unreachable::erenced become unreachable
+marked for collection::marked for collection
+garbage collection algorithm::garbage collection algorithm
+explicit memory allocation::explicit memory allocation
+allocation and deallocation::allocation and deallocation
+programmer to decide::programmer to decide
+memory that stores::memory that stores
+stores the object::stores the object
+summary with normal::summary with normal
+rst are dealt::rst are dealt
+windows cpu scheduler::windows cpu scheduler
+priority of process::priority of process
+process to determine::process to determine
+process to utilise::process to utilise
+utilise the cpu::utilise the cpu
+quantum normal queues::quantum normal queues
+queues have constant::queues have constant
+deletion run times::deletion run times
+run times searching::run times searching
+exposed on queues::exposed on queues
+typically the run::typically the run
+times for insertion::times for insertion
+natural data structure::natural data structure
+make many problems::make many problems
+problems a lot::problems a lot
+x3.7.4 makes extensive::x3.7.4 makes extensive
+adelson-velsky and e.m::adelson-velsky and e.m
+e.m landis invented::e.m landis invented
+rst self balancing::rst self- balancing
+self balancing binary::self- balancing binary
+balancing binary search::balancing binary search
+search tree data::search tree data
+calling it avl::calling it avl
+self-balancing condition stating::self-balancing condition stating
+forces the general::forces the general
+tree before continuing::tree before continuing
+search tree obtained::search tree obtained
+obtained by starting::obtained by starting
+tree and inserting::tree and inserting
+inserting some values::inserting some values
+bst in figure::bst in figure
+represents the worst::represents the worst
+worst case scenario::worst case scenario
+applying a balance::applying a balance
+condition we ensure::condition we ensure
+worst case running::worst case running
+values are inserted::values are inserted
+avl balance condition::avl balance condition
+node balance factor::node balance factor
+balance factor represents::balance factor represents
+represents an additional::represents an additional
+piece of information::piece of information
+restores the balance::restores the balance
+tree the inventors::tree the inventors
+technique called tree::technique called tree
+rotations a tree::rotations a tree
+tree while preserving::tree while preserving
+preserving standard bst::preserving standard bst
+standard bst properties::standard bst properties
+decrease the height::decrease the height
+bst by moving::bst by moving
+moving smaller subtrees::moving smaller subtrees
+right rotation left::right rotation left
+rotation left rotation::rotation left rotation
+left rotation figure::left rotation figure
+right rotations chapter::right rotations chapter
+node.right s left::node.right s left
+properties are preserved::properties are preserved
+node.left s right::node.left s right
+rightrotation the right::rightrotation the right
+right and left::right and left
+left rotation algorithms::left rotation algorithms
+algorithms are symmetric::algorithms are symmetric
+symmetric only pointers::symmetric only pointers
+pointers are changed::pointers are changed
+rebalancing the algorithm::rebalancing the algorithm
+perform the correct::perform the correct
+two new algorithms::two new algorithms
+algorithms that represent::algorithms that represent
+represent double rotations::represent double rotations
+algorithms are named::algorithms are named
+performs a left::performs a left
+subsequently a right::subsequently a right
+start from balancing::start from balancing
+updated while tree::updated while tree
+restored through rotations::restored through rotations
+current.height = max::current.height = max
+insertion avl insertion::insertion avl insertion
+avl insertion operates::avl insertion operates
+rst by inserting::rst by inserting
+applying rebalancing techniques::applying rebalancing techniques
+property no longer::property no longer
+right subtrees height::right subtrees height
+insert a node::insert a node
+insert the node::insert the node
+node and check::node and check
+node balancing property::node balancing property
+nt been violated::nt been violated
+rebalance the tree::rebalance the tree
+preserving tree balance::preserving tree balance
+deletion our balancing::deletion our balancing
+tree still adheres::tree still adheres
+avl balance property::avl balance property
+removing is contained::removing is contained
+step are required::step are required
+upsets the avl::upsets the avl
+removed and tree::removed and tree
+rebalanced if found::rebalanced if found
+parent = nodetoremove::parent = nodetoremove
+value < nodetoremove.value::value < nodetoremove.value
+count keeps track::count keeps track
+largestv alue.right chapter::largestv alue.right chapter
+root node check::root node check
+node check balance::node check balance
+summary the avl::summary the avl
+sophisticated self balancing::sophisticated self balancing
+unlike its older::unlike its older
+brother the avl::brother the avl
+avl tree avoids::avl tree avoids
+tree avoids worst::tree avoids worst
+avoids worst case::avoids worst case
+worst case linear::worst case linear
+case linear complexity::case linear complexity
+linear complexity runtimes::linear complexity runtimes
+avl tree guarantees::avl tree guarantees
+enforcement of balancing::enforcement of balancing
+logarithmic runtime complexity::logarithmic runtime complexity
+part ii algorithms::part ii algorithms
+chapter use data::chapter use data
+type to demonstrate::type to demonstrate
+easily be translated::easily be translated
+translated into generic::translated into generic
+generic sorting algo::generic sorting algo-
+sorting algo rithms::sorting algo- rithms
+forms of sorting::forms of sorting
+comparing each item::comparing each item
+imply this form::imply this form
+form of sorting::form of sorting
+simple form bubble::simple form bubble
+form bubble sort::form bubble sort
+sorted into values::sorted into values
+values of ascending::values of ascending
+merge sort merge::merge sort merge
+sort merge sort::sort merge sort
+space time complexity::space time complexity
+implement the algorithm::implement the algorithm
+algorithm is based::algorithm is based
+based on splitting::based on splitting
+splitting a list::splitting a list
+two similar sized::two similar sized
+similar sized lists::similar sized lists
+sorting each list::sorting each list
+merging the sorted::merging the sorted
+mergeordered simply takes::mergeordered simply takes
+takes two ordered::takes two ordered
+two ordered lists::two ordered lists
+lists and makes::lists and makes
+bubble sort iterations::bubble sort iterations
+end mergesort chapter::end mergesort chapter
+merge sort divide::merge sort divide
+divide et impera::divide et impera
+quick sort quick::quick sort quick
+sort quick sort::sort quick sort
+popular sorting algorithms::popular sorting algorithms
+sorting algorithms based::sorting algorithms based
+based on divide::based on divide
+complexity the algorithm::complexity the algorithm
+starts by picking::starts by picking
+picking an item::picking an item
+moving all smaller::moving all smaller
+main quick sort::main quick sort
+quick sort operation::quick sort operation
+repeated on lesser::repeated on lesser
+lesser and greater::lesser and greater
+greater sub lists::greater sub lists
+case the list::case the list
+element is funda::element is funda-
+mental for avoiding::mental for avoiding
+drastically reduced performance::drastically reduced performance
+pivot median strategy::pivot median strategy
+end quicksort chapter::end quicksort chapter
+insertion sort insertion::insertion sort insertion
+sort insertion sort::sort insertion sort
+sorting scheme similar::sorting scheme similar
+sorting a hand::sorting a hand
+hand of playing::hand of playing
+intent of building::intent of building
+set of cards::set of cards
+insertion sort iterations::insertion sort iterations
+unsorted < list.count::unsorted < list.count
+hold < list::hold < list
+end insertionsort chapter::end insertionsort chapter
+shell sort put::shell sort put
+put simply shell::put simply shell
+simply shell sort::simply shell sort
+variation of insertion::variation of insertion
+sort as described::sort as described
+items of varying::items of varying
+distances apart resulting::distances apart resulting
+fairly straight forward::fairly straight forward
+items to compare::items to compare
+shows shell sort::shows shell sort
+sort being ran::sort being ran
+array of integers::array of integers
+red coloured square::red coloured square
+current < list.count::current < list.count
+unlike the sorting::unlike the sorting
+sorting algorithms described::sorting algorithms described
+previously radix sort::previously radix sort
+sort uses buckets::sort uses buckets
+buckets to sort::buckets to sort
+bucket holds items::bucket holds items
+sort is performed::sort is performed
+performed these buckets::performed these buckets
+buckets are emptied::buckets are emptied
+starting the smallest::starting the smallest
+smallest key bucket::smallest key bucket
+list to sort::list to sort
+isolating a speci::isolating a speci
+rst simple version::rst simple version
+version of radix::version of radix
+hundred the number::hundred the number
+total three keys::total three keys
+shell sort chapter::shell sort chapter
+wanted to determine::wanted to determine
+thousands the number::thousands the number
+asked the question::asked the question
+pad the number::pad the number
+thing to identify::thing to identify
+simple implemen tation::simple implemen- tation
+tation of radix::tation of radix
+sort that works::sort that works
+maximum key size::maximum key size
+isolate a speci::isolate a speci
+isolate a key::isolate a key
+number = keytoaccess::number = keytoaccess
+simple example lets::simple example lets
+access the tens::access the tens
+column is key::column is key
+substitution yields key::substitution yields key
+attained by multiplying::attained by multiplying
+multiplying the last::multiplying the last
+key by ten::key by ten
+ten working left::ten working left
+manner the value::manner the value
+value of key::value of key
+algorithm to work::algorithm to work
+out the index::out the index
+array of queues::array of queues
+queues to enqueue::queues to enqueue
+enqueue the item::enqueue the item
+represents the largest::represents the largest
+largest key size::largest key size
+item in list::item in list
+end radix figure::end radix figure
+shows the members::shows the members
+members of queues::members of queues
+described above operating::described above operating
+list whose members::list whose members
+number is highlighted::number is highlighted
+highlighted omitted queues::highlighted omitted queues
+queues in figure::queues in figure
+algorithms for sorting::algorithms for sorting
+radix sort base::radix sort base
+algorithm bubble sort::algorithm bubble sort
+selecting the correct::selecting the correct
+correct sorting algorithm::correct sorting algorithm
+choose merge sort::choose merge sort
+sort over shell::sort over shell
+actual imple mentation::actual imple- mentation
+mentation some algorithms::mentation some algorithms
+implementing a linear::implementing a linear
+algorithm using recursion::algorithm using recursion
+careful when implementing::careful when implementing
+implementing recursive algorithms::implementing recursive algorithms
+algorithms see appendix::algorithms see appendix
+numeric unless stated::numeric unless stated
+alias n denotes::alias n denotes
+denotes a standard::denotes a standard
+test a simple::test a simple
+attempt to slow::attempt to slow
+base conversions dsa::base conversions dsa
+number of algorithms::number of algorithms
+algorithms that convert::algorithms that convert
+convert a base::convert a base
+octal or hexadecimal::octal or hexadecimal
+shows the algorithm::shows the algorithm
+number to convert::number to convert
+convert to binary::convert to binary
+tobinary n list::tobinary n list
+trace of tobinary::trace of tobinary
+greatest common denomina::greatest common denomina-
+common denomina tor::common denomina- tor
+fairly routine problem::fairly routine problem
+problem in mathematics::problem in mathematics
+nding the greatest::nding the greatest
+e.g the greatest::e.g the greatest
+problem is based::problem is based
+based on euclid::based on euclid
+euclid s algorithm::euclid s algorithm
+integers is calculated::integers is calculated
+end greatestcommondenominator chapter::end greatestcommondenominator chapter
+digits this algorithm::digits this algorithm
+computes the maximum::computes the maximum
+number of digits::number of digits
+system the maximum::system the maximum
+similarly the maximum::similarly the maximum
+number that consists::number that consists
+compute this maximum::compute this maximum
+determine the maximum::determine the maximum
+digits the expression::digits the expression
+represented as ffffff16::represented as ffffff16
+ffffff16 which yields::ffffff16 which yields
+actual implementation numberbase::actual implementation numberbase
+type the base::type the base
+base enumeration type::base enumeration type
+base = fbinary::base = fbinary
+16g the reason::16g the reason
+reason we provide::reason we provide
+nition of base::nition of base
+checks to determine::checks to determine
+determine the correct::determine the correct
+implementation we cast::implementation we cast
+cast the value::cast the value
+value of numberbase::value of numberbase
+extract the value::extract the value
+cast the option::cast the option
+cast is implicit::cast is implicit
+actual argument numberbase::actual argument numberbase
+value for numberbase::value for numberbase
+digits is computed::digits is computed
+attaining the factorial::attaining the factorial
+primitive mathematical operation::primitive mathematical operation
+operation many implementations::operation many implementations
+algorithm are recursive::algorithm are recursive
+problem is re::problem is re-
+cursive in nature::cursive in nature
+present an iterative::present an iterative
+solution the iterative::solution the iterative
+solution is presented::solution is presented
+similarly the factorial::similarly the factorial
+attain the factorial::attain the factorial
+number to compute::number to compute
+presented several numeric::presented several numeric
+fun to design::fun to design
+reader should gain::reader should gain
+domains to make::domains to make
+respective domain attainable::respective domain attainable
+domain attainable numeric::domain attainable numeric
+attainable numeric algorithms::attainable numeric algorithms
+computing such data::computing such data
+data as weather::data as weather
+search a simple::search a simple
+algorithm that search::algorithm that search
+inside a list::inside a list
+list it operates::list it operates
+end is reached::end is reached
+index of item::index of item
+item if found::item if found
+index < list.count::index < list.count
+list.count and list::list.count and list
+probability search probability::probability search probability
+search probability search::search probability search
+statistical sequential searching::statistical sequential searching
+sequential searching algorithm::sequential searching algorithm
+algorithm in addition::algorithm in addition
+addition to searching::addition to searching
+takes into account::takes into account
+account its frequency::account its frequency
+frequency by swapping::frequency by swapping
+complexity still remains::complexity still remains
+non-uniform items search::non-uniform items search
+reducing list scanning::reducing list scanning
+shows the resulting::shows the resulting
+list after searching::list after searching
+search probability increased::search probability increased
+item is found::item is found
+case swap founded::case swap founded
+swap founded item::swap founded item
+list.count or list::list.count or list
+cient searching algorithms::cient searching algorithms
+searching algorithms earlier::searching algorithms earlier
+instance the logarithmic::instance the logarithmic
+logarithmic searching algorithm::logarithmic searching algorithm
+algorithm that avl::algorithm that avl
+avl and bst::avl and bst
+cover a searching::cover a searching
+chop usually refers::chop usually refers
+ciency largely depends::ciency largely depends
+underlying data structure::underlying data structure
+store the data::store the data
+data for instance::data for instance
+quicker to deter::quicker to deter-
+quicker to search::quicker to search
+search a bst::search a bst
+search for data::search for data
+research the data::research the data
+primarily linear data::primarily linear data
+linear data structure::linear data structure
+lack of knowledge::lack of knowledge
+model your data::model your data
+purely because string::purely because string
+operations and transformations::operations and transformations
+frequent within programs::frequent within programs
+programs the algorithms::programs the algorithms
+presented are based::presented are based
+based on problems::based on problems
+problems the authors::problems the authors
+formulated to satisfy::formulated to satisfy
+algorithms for primitive::algorithms for primitive
+primitive string operations::primitive string operations
+operations is simple::operations is simple
+extracting a sub-string::extracting a sub-string
+algorithms that require::algorithms that require
+require more inventiveness::require more inventiveness
+reverse the characters::reverse the characters
+reverses the order::reverses the order
+string this algorithm::string this algorithm
+principal that words::principal that words
+delimited by white::delimited by white
+start and end::start and end
+words in value::words in value
+chars from start::chars from start
+nt the last::nt the last
+add some whitespace::add some whitespace
+cut the whitespace::cut the whitespace
+applied in real-life::applied in real-life
+real-life scenarios detecting::real-life scenarios detecting
+out pretty trivial::out pretty trivial
+pretty trivial algorithm::pretty trivial algorithm
+algorithm to design::algorithm to design
+complexity our algo::complexity our algo-
+pointers at opposite::pointers at opposite
+ends of string::ends of string
+character they point::character they point
+respect to value::respect to value
+shows the ispalindrome::shows the ispalindrome
+algorithm in operation::algorithm in operation
+eliot s toilet::eliot s toilet
+remove all punctuation::remove all punctuation
+right pointers marching::right pointers marching
+value is determined::value is determined
+left < right::left < right
+algorithm we call::algorithm we call
+call a method::call a method
+strip this algorithm::strip this algorithm
+algorithm discards punctuation::algorithm discards punctuation
+including white space::including white space
+heavily compacted representation::heavily compacted representation
+palindromes discard white::palindromes discard white
+discard white space::discard white space
+design a simple::design a simple
+algorithm while making::algorithm while making
+making our algorithm::making our algorithm
+algorithm fairly robust::algorithm fairly robust
+robust with respect::robust with respect
+updating the word::updating the word
+skipping white space::skipping white space
+space that delimits::space that delimits
+delimits the words::delimits the words
+string \ ben::string \ ben
+ben ate hay::ben ate hay
+distinguished via white::distinguished via white
+previously listed points::previously listed points
+string with varying::string with varying
+number of white::number of white
+white space delimiting::white space delimiting
+delimiting the words::delimiting the words
+previously listed index::previously listed index
+index keeps track::index keeps track
+hitting white space::hitting white space
+denotes a word::denotes a word
+algorithm each word::algorithm each word
+word is separated::word is separated
+occurrences of white::occurrences of white
+e.g in .net::e.g in .net
+array of characters::array of characters
+determines a delimiter::determines a delimiter
+split the characters::split the characters
+string into chunks::string into chunks
+chunks of strings::chunks of strings
+array of sub-strings::array of sub-strings
+present a string::present a string
+typically the pattern::typically the pattern
+occurrence of white::occurrence of white
+varying white space::varying white space
+white space splitting::white space splitting
+contained within value::contained within value
+skip initial white::skip initial white
+initial white space::initial white space
+whitespace and index::whitespace and index
+index < value.length::index < value.length
+string just whitespace::string just whitespace
+index = value.length::index = value.length
+value.length and value::value.length and value
+skip all whitespace::skip all whitespace
+split the words::split the words
+delimiter this algorithm::delimiter this algorithm
+algorithm is straightforward::algorithm is straightforward
+straightforward to implement::straightforward to implement
+back as elements::back as elements
+attain the number::attain the number
+number of unique::number of unique
+subtract the unique::subtract the unique
+unique word count::unique word count
+number of stings::number of stings
+operation the split::operation the split
+undesired uniques set::undesired uniques set
+desired uniques set::desired uniques set
+value is returned::value is returned
+word in words::word in words
+method we referred::method we referred
+referred to earlier::referred to earlier
+earlier in x11.1::earlier in x11.1
+x11.1 this simply::x11.1 this simply
+removes any punctuation::removes any punctuation
+word the reason::word the reason
+reason we perform::reason we perform
+perform this operation::perform this operation
+accurate unique string::accurate unique string
+unique string collection::unique string collection
+e.g \ test::e.g \ test
+minus the punctuation::minus the punctuation
+shows the undesired::shows the undesired
+undesired and desired::undesired and desired
+strings the algorithm::strings the algorithm
+algorithm to determine::algorithm to determine
+pretty trivial put::pretty trivial put
+parse the strings::parse the strings
+loop and check::loop and check
+characters thus returning::characters thus returning
+returning a non-negative::returning a non-negative
+index that represents::index that represents
+represents the location::represents the location
+occurs this approach::occurs this approach
+exhibit a run::exhibit a run
+word ; match::word ; match
+index representing match::index representing match
+representing match location::representing match location
+location if occured::location if occured
+summary we hope::summary we hope
+algorithms on string::algorithms on string
+string data types::string data types
+types are strings::types are strings
+common data type::common data type
+fascinating a simple::fascinating a simple
+simple google search::simple google search
+search on string::search on string
+nuances between languages::nuances between languages
+languages and encodings::languages and encodings
+encodings will provide::encodings will provide
+number of problems::number of problems
+appendix a algorithm::appendix a algorithm
+algorithm walkthrough learning::algorithm walkthrough learning
+design good algorithms::design good algorithms
+approach to tracing::approach to tracing
+tracing its behaviour::tracing its behaviour
+tracing an algorithm::tracing an algorithm
+algorithm only requires::algorithm only requires
+requires a single::requires a single
+structure your algorithm::structure your algorithm
+visualise the problem::visualise the problem
+ectively seeing things::ectively seeing things
+understand the problem::understand the problem
+table will store::table will store
+rithm the values::rithm the values
+attain a history::attain a history
+values each variable::values each variable
+variable has held::variable has held
+variable has contained::variable has contained
+make your algorithm::make your algorithm
+found this approach::found this approach
+approach both simple::approach both simple
+powerful by combining::powerful by combining
+combining a visual::combining a visual
+history of past::history of past
+past values generated::past values generated
+problems much easier::problems much easier
+trace the ispalindrome::trace the ispalindrome
+variables the algorithm::variables the algorithm
+actual data structure::actual data structure
+structure the algorithm::structure the algorithm
+essentially a block::essentially a block
+block of contiguous::block of contiguous
+memory that consists::memory that consists
+char data types::char data types
+array the picture::array the picture
+ispalindrome to operate::ispalindrome to operate
+string data structure::string data structure
+structure is represented::structure is represented
+visualising the data::visualising the data
+operating on value::operating on value
+value word left::value word left
+left right table::left right table
+track the ispalindrome::track the ispalindrome
+list of variables::list of variables
+right having identi::right having identi
+create a column::create a column
+table as shown::table as shown
+shown in table::shown in table
+ispalindrome algorithm execute::ispalindrome algorithm execute
+execute each statement::execute each statement
+updating the variable::updating the variable
+table appropriately table::table appropriately table
+table a.2 shows::table a.2 shows
+nal table values::nal table values
+bloated in print::bloated in print
+annotate these strings::annotate these strings
+strings with array::strings with array
+indexes to aid::indexes to aid
+aid the algorithm::aid the algorithm
+variables that change::variables that change
+promote these values::promote these values
+table for variables::table for variables
+variables whose values::variables whose values
+algorithm we recommend::algorithm we recommend
+promote the core::promote the core
+structure being operated::structure being operated
+trace for ispalindrome::trace for ispalindrome
+important such traces::important such traces
+designing your algorithm::designing your algorithm
+tables to verify::tables to verify
+verify algorithm correctness::verify algorithm correctness
+devise correct algorithms::devise correct algorithms
+correct algorithms quicker::correct algorithms quicker
+algorithms quicker visualising::algorithms quicker visualising
+visualising the problem::visualising the problem
+domain and keeping::domain and keeping
+track of changing::track of changing
+changing data makes::changing data makes
+data makes problems::data makes problems
+easier to solve::easier to solve
+working through recursive::working through recursive
+simple as walking::simple as walking
+method call returns::method call returns
+simple to follow::simple to follow
+out the recursive::out the recursive
+table based approach::table based approach
+algorithm that computes::algorithm that computes
+computes a number::computes a number
+sequence to compute::sequence to compute
+bonacci sequence number::bonacci sequence number
+jump into showing::jump into showing
+algo rithm calls::algo- rithm calls
+algorithm the algorithm::algorithm the algorithm
+cases in total::cases in total
+rst two items::rst two items
+recursive method call::recursive method call
+method call tree::method call tree
+case we etch::case we etch
+etch ever closer::etch ever closer
+base cases figure::base cases figure
+figure a.2 shows::figure a.2 shows
+shows a diagrammtic::shows a diagrammtic
+recursive call chain::recursive call chain
+a.2 the order::a.2 the order
+figure a.3 shows::figure a.3 shows
+shows the call::shows the call
+call chain annotated::call chain annotated
+callers in figure::callers in figure
+a.3 the return::a.3 the return
+values are represented::values are represented
+represented as annotations::represented as annotations
+caller upon hitting::caller upon hitting
+two base cases::two base cases
+hit a base::hit a base
+case that branch::case that branch
+branch of recursive::branch of recursive
+recursive calls ceases::recursive calls ceases
+ceases upon hitting::ceases upon hitting
+hitting a base::hitting a base
+back to appendix::back to appendix
+chain for fibonacci::chain for fibonacci
+fibonacci algorithm figure::fibonacci algorithm figure
+fibonacci algorithm appendix::fibonacci algorithm appendix
+caller and continue::caller and continue
+caller is contiued::caller is contiued
+call was made::call was made
+algorithms  recursive::algorithms  recursive
+case we make::case we make
+make two recursive::make two recursive
+two recursive calls::two recursive calls
+rst recursive call::rst recursive call
+calls have returned::calls have returned
+easier to demonstrate::easier to demonstrate
+diagrammatically as figure::diagrammatically as figure
+figure a.2 demonstrates::figure a.2 demonstrates
+recursive algorithm draw::recursive algorithm draw
+algorithm draw method::algorithm draw method
+draw method call::draw method call
+method call diagrams::method call diagrams
+diagrams to understand::diagrams to understand
+a.3 summary understanding::a.3 summary understanding
+summary understanding algorithms::summary understanding algorithms
+hard at times::hard at times
+implemen tation perspective::implemen- tation perspective
+perspective in order::perspective in order
+order to understand::order to understand
+understand an algorithm::understand an algorithm
+tables in cases::tables in cases
+sketch the recursive::sketch the recursive
+implementing an algorithm::implementing an algorithm
+algorithm works mastering::algorithm works mastering
+level is key::level is key
+key for devising::key for devising
+problem in hand::problem in hand
+appendix b translation::appendix b translation
+walkthrough the conversion::walkthrough the conversion
+conversion from pseudo::conversion from pseudo
+actual imperative language::actual imperative language
+convert the algorithm::convert the algorithm
+public static bool::public static bool
+static bool isprime::static bool isprime
+part the conversion::part the conversion
+straight forward process::straight forward process
+inject various calls::inject various calls
+algorithms to ascertain::algorithms to ascertain
+ascertain the correct::ascertain the correct
+fairly strict preconditions::fairly strict preconditions
+inject the correct::inject the correct
+code to handle::code to handle
+handle such situations::handle such situations
+situations to preserve::situations to preserve
+preserve the correctness::preserve the correctness
+handled by throwing::handled by throwing
+throwing the correct::throwing the correct
+make the translation::make the translation
+pseudo code algorithms::pseudo code algorithms
+algorithms to mainstream::algorithms to mainstream
+mainstream imperative languages::mainstream imperative languages
+languages as simple::languages as simple
+encounter a keyword::encounter a keyword
+pseudo code examples::pseudo code examples
+browse to appendix::browse to appendix
+descirbes each key::descirbes each key-
+appendix c recursive::appendix c recursive
+properties of modern::properties of modern
+modern programming languages::modern programming languages
+methods that reference::methods that reference
+biggest advantages recursive::biggest advantages recursive
+advantages recursive methods::advantages recursive methods
+recursive methods bring::recursive methods bring
+solutions to problems::solutions to problems
+ned in terms::ned in terms
+generally a recursive::generally a recursive
+two main properties::two main properties
+aspects of recursive::aspects of recursive
+run into trouble::run into trouble
+trouble the trouble::trouble the trouble
+trouble we speak::trouble we speak
+speak of manifests::speak of manifests
+talk about iterative::talk about iterative
+solutions an iterative::solutions an iterative
+iterative solution relies::iterative solution relies
+side to iterative::side to iterative
+counterparts with respect::counterparts with respect
+operation the major::operation the major
+advantage of iterative::advantage of iterative
+solutions is speed::solutions is speed
+speed most production::speed most production
+recursive algorithms whatsoever::recursive algorithms whatsoever
+prerequisite to checking::prerequisite to checking
+checking in code::checking in code
+e.g upon checking::e.g upon checking
+static analysis tool::static analysis tool
+tool may verify::tool may verify
+code the developer::code the developer
+developer is checking::developer is checking
+systems level code::systems level code
+policy for recursive::policy for recursive
+recursion for algorithms::recursion for algorithms
+trouble the growth::trouble the growth
+algorithms is high::algorithms is high
+cases such algorithms::cases such algorithms
+algorithms will lean::algorithms will lean
+heavily on techniques::heavily on techniques
+techniques like divide::techniques like divide
+divide and conquer::divide and conquer
+constantly splitting problems::constantly splitting problems
+problems into smaller::problems into smaller
+problems is good::problems is good
+spawning a lot::spawning a lot
+lot of method::lot of method
+algorithm to run::algorithm to run
+run a lot::run a lot
+slower than expected::slower than expected
+out of stack::out of stack
+exceed the allotted::exceed the allotted
+allotted stack space::allotted stack space
+thread the process::thread the process
+bigger stack size::bigger stack size
+records an activation::records an activation
+record is created::record is created
+invoke a method::invoke a method
+simply an activation::simply an activation
+stack to support::stack to support
+support method invocation::support method invocation
+method invocation activation::method invocation activation
+invocation activation records::invocation activation records
+method are pushed::method are pushed
+address is pushed::address is pushed
+index is incremented::index is incremented
+jump is made::jump is made
+recursive algorithms operating::recursive algorithms operating
+operating on large::operating on large
+large data structures::large data structures
+stack space quickly::stack space quickly
+value it creates::value it creates
+creates many recursive::creates many recursive
+case a big::case a big
+activation records start::activation records start
+call chain exit::call chain exit
+exit and return::exit and return
+record is unwound::record is unwound
+unwinding an activation::unwinding an activation
+activation record results::activation record results
+index is decremented::index is decremented
+address is popped::address is popped
+actual parameters appendix::actual parameters appendix
+support method calls::support method calls
+quickly recursive algorithms::quickly recursive algorithms
+algorithms can exhaust::algorithms can exhaust
+exhaust the stack::exhaust the stack
+stack size allocated::stack size allocated
+thread fairly fast::thread fairly fast
+dusting the cobwebs::dusting the cobwebs
+iterative vs recursive::iterative vs recursive
+beauty and pitfalls::beauty and pitfalls
+algorithm the iterative::algorithm the iterative
+job a lot::job a lot
+give the fibonacci::give the fibonacci
+algorithm an input::algorithm an input
+programmers into thinking::programmers into thinking
+cations of recursion::cations of recursion
+structures and algo::structures and algo-
+nature a perfect::nature a perfect
+structure a common::structure a common
+common tree node::common tree node
+two point ers::two point- ers
+two other nodes::two other nodes
+tree is recursive::tree is recursive
+wit each node::wit each node
+node possibly pointing::node possibly pointing
+algorithms on tree::algorithms on tree
+algorithms like merge::algorithms like merge
+algorithms are recursive::algorithms are recursive
+sense to model::sense to model
+c.3 summary recursion::c.3 summary recursion
+trade between readability::trade between readability
+recursion is great::recursion is great
+implement an algorithm::implement an algorithm
+rule of thumb::rule of thumb
+wind defensive coding::wind defensive coding
+home in recursive::home in recursive
+nature using recursion::nature using recursion
+acceptable using recursion::acceptable using recursion
+linked list traversal::linked list traversal
+overkill its iterative::overkill its iterative
+lines of code::lines of code
+point of view::point of view
+consult your compiler::consult your compiler
+compiler and run::compiler and run
+compiler recognises things::compiler recognises things
+things like tail::things like tail
+fact most commercial::fact most commercial
+amount of optimisation::amount of optimisation
+compilers can appendix::compilers can appendix
+accept certain accountability::accept certain accountability
+appendix d testing::appendix d testing
+part of software::part of software
+software development testing::software development testing
+burden of proof::burden of proof
+company who hold::company who hold
+hold test centric::hold test centric
+test centric roles::test centric roles
+provide a suite::provide a suite
+suite of unit::suite of unit
+tests that verify::tests that verify
+verify certain boundary::verify certain boundary
+thing about testing::thing about testing
+progressively a safety::progressively a safety
+add or tweak::add or tweak
+run your suite::run your suite
+suite of tests::suite of tests
+essential to maintaining::essential to maintaining
+fairly high bar::fairly high bar
+order to attain::order to attain
+platforms most modern::platforms most modern
+catalogue of testing::catalogue of testing
+targeted at jav::targeted at jav
+microsoft s common::microsoft s common
+common language runtime::common language runtime
+language runtime http::language runtime http
+boost test library::boost test library
+library that ships::library that ships
+incredibly popular boost::incredibly popular boost
+popular boost libraries::popular boost libraries
+boost libraries http::boost libraries http
+libraries doc umentation::libraries doc- umentation
+doc umentation http::doc- umentation http
+test should focus::test should focus
+single atomic property::single atomic property
+subject being tested::subject being tested
+test many things::test many things
+wanting to write::wanting to write
+write a test::write a test
+test that veri::test that veri
+amount of work::amount of work
+unit tests execute::unit tests execute
+tests execute quickly::tests execute quickly
+test suite consisting::test suite consisting
+consisting of thousands::consisting of thousands
+thousands of tests::thousands of tests
+tests to execute::tests to execute
+failure to attain::failure to attain
+number of reasons::number of reasons
+incredibly tedious waiting::incredibly tedious waiting
+waiting several minutes::waiting several minutes
+minutes to run::minutes to run
+developers local machine::developers local machine
+continuous build server::continuous build server
+developers and testers::developers and testers
+ran as part::ran as part
+employing such strategies::employing such strategies
+niggling little error::niggling little error
+source of great::source of great
+understatement to personify::understatement to personify
+years a test::years a test
+test driven approach::test driven approach
+approach to development::approach to development
+commonly the acronym::commonly the acronym
+principles of tdd::principles of tdd
+write the unit::write the unit
+watch it fail::watch it fail
+make it pass::make it pass
+pass the premise::pass the premise
+write enough code::write enough code
+satisfy the state::satisfy the state
+state based assertions::state based assertions
+based assertions made::based assertions made
+approach to provide::approach to provide
+implementation of algorithms::implementation of algorithms
+make the failing::make the failing
+failing test pass::failing test pass
+pass because tdd::pass because tdd
+makes you write::makes you write
+write the tests::write the tests
+tests up front::tests up front
+nt be bothered::nt be bothered
+bothered to write::bothered to write
+write your tests::write your tests
+mentioned that tdd::mentioned that tdd
+approach to testing::approach to testing
+describe the mantra::describe the mantra
+test has failed::test has failed
+test now passes::test now passes
+restructure our program::restructure our program
+makes more sense::makes more sense
+easier to maintain::easier to maintain
+list always occurs::list always occurs
+count the build::count the build
+initially your task::initially your task
+solely to make::solely to make
+make the test::make the test
+make the respective::make the respective
+respective test green::respective test green
+green the last::green the last
+item is based::item is based
+based around appendix::based around appendix
+program to make::program to make
+readable and maintainable::readable and maintainable
+important as tdd::important as tdd
+methodology to building::methodology to building
+building a solution::building a solution
+adhere to progressive::adhere to progressive
+cleanly structured types::cleanly structured types
+amount of respect::amount of respect
+code this ranges::code this ranges
+ranges from correct::ranges from correct
+clean code formatting::clean code formatting
+code being stored::code being stored
+source control repository::source control repository
+employing a methodology::employing a methodology
+methodology like tdd::methodology like tdd
+testing after implementing::testing after implementing
+spend a great::spend a great
+code all tests::code all tests
+structure each block::structure each block
+block of imperatives::block of imperatives
+single unit test::single unit test
+test a popular::test a popular
+create the objects::create the objects
+objects you require::objects you require
+require in order::require in order
+order to perform::order to perform
+perform the state::perform the state
+based asser tions::based asser- tions
+invoke the respective::invoke the respective
+assembled to mutate::assembled to mutate
+mutate the state::mutate the state
+expect to hold::expect to hold
+previous two steps::previous two steps
+shows a simple::shows a simple
+simple test method::simple test method
+method that employs::method that employs
+public void mytest::public void mytest
+tests structuring tests::tests structuring tests
+structuring pro duction::structuring pro- duction
+pro duction code::pro- duction code
+e.g all unit::e.g all unit
+typically all tests::typically all tests
+tests are abstracted::tests are abstracted
+abstracted from production::abstracted from production
+tests are disjoint::tests are disjoint
+two dynamic link::two dynamic link
+dynamic link libraries::dynamic link libraries
+things like inheritance::things like inheritance
+classes of tests::classes of tests
+amount of thought::amount of thought
+product of unit::product of unit
+testing are code::testing are code
+code coverage statistics::code coverage statistics
+coverage statistics code::coverage statistics code
+statistics code coverage::statistics code coverage
+portions of production::portions of production
+units tests cover::units tests cover
+cover using tdd::cover using tdd
+d.7 summary testing::d.7 summary testing
+testing is key::testing is key
+moderately stable product::moderately stable product
+product moreover unit::product moreover unit
+create a safety::create a safety
+blanket when adding::blanket when adding
+adding and removing::adding and removing
+removing features providing::removing features providing
+providing an early::providing an early
+warning for breaking::warning for breaking
+appendix e symbol::appendix e symbol
+describes the meaning::describes the meaning
+whitespace single occurrence::whitespace single occurrence
+occurrence of whitespace::occurrence of whitespace
+yield like return::yield like return
+return but builds::return but builds
+builds a sequence::builds a sequence
+majority of imperative::majority of imperative
+dsa dat::dsa dat
+hms annotated::hms annotated
+annotated reference::annotated reference
+examples granville::examples granville
+granville barne::granville barne
+luca del::luca del
+del tongo::del tongo
+tongo data::tongo data
+data structures::data structures
+first edition::first edition
+edition copyright::edition copyright
+granville barnett::granville barnett
+.net articles::.net articles
+leading minds::leading minds
+software industry::software industry
+assumed knowledge::assumed knowledge
+imperative programming::imperative programming
+programming language::programming language
+object oriented::object oriented
+oriented concepts::oriented concepts
+book outline::book outline
+final messages::final messages
+linked lists::linked lists
+linked list::linked list
+reverse order::reverse order
+reverse traversal::reverse traversal
+binary search::binary search
+search tree::search tree
+largest values::largest values
+tree traversals::tree traversals
+standard queue::standard queue
+priority queue::priority queue
+double ended::double ended
+ended queue::ended queue
+avl tree::avl tree
+tree rotations::tree rotations
+tree rebalancing::tree rebalancing
+bubble sort::bubble sort
+merge sort::merge sort
+quick sort::quick sort
+insertion sort::insertion sort
+shell sort::shell sort
+primality test::primality test
+base conversions::base conversions
+greatest common::greatest common
+common denominator::common denominator
+maximum value::maximum value
+base consisting::base consisting
+sequential search::sequential search
+probability search::probability search
+repeated words::repeated words
+rst matching::rst matching
+matching character::matching character
+iterative algorithms::iterative algorithms
+recursive algorithms::recursive algorithms
+iterative solutions::iterative solutions
+activation records::activation records
+unit test::unit test
+test suite::test suite
+code coverage::code coverage
+iii preface::iii preface
+impromptu put::impromptu put
+.net framework::.net framework
+conversation started::conversation started
+presentation style::presentation style
+fact grown::fact grown
+pseudocode listings::pseudocode listings
+text describing::text describing
+data structure::data structure
+question works::question works
+began work::began work
+book side::book side
+actual library::actual library
+library implementation::library implementation
+make explanations::make explanations
+minded reader::minded reader
+reader happy::reader happy
+inject diagrams::inject diagrams
+demystify problems::demystify problems
+algorithms worked::algorithms worked
+present concise::present concise
+self-explanatory pseudocode::self-explanatory pseudocode
+programming languages::programming languages
+key factor::key factor
+original creators::original creators
+great thing::great thing
+thing read::thing read
+absolute necessity::absolute necessity
+under standing::under- standing
+greater emphasis::greater emphasis
+real-time systems::real-time systems
+wrong data::wrong data
+great deal::great deal
+performance pain::performance pain
+space requirements::space requirements
+selected approach::selected approach
+theoretical implications::theoretical implications
+good reason::good reason
+amazing optimisation::amazing optimisation
+optimisation phases::optimisation phases
+phases speci::phases speci
+ex ample::ex- ample
+fast algorithm::fast algorithm
+vice versa::vice versa
+target virtual::target virtual
+virtual machines::virtual machines
+implementation issues::implementation issues
+lan guage::lan- guage
+concise book::concise book
+key issues::key issues
+nal note::nal note
+barnett luca::barnett luca
+tongo acknowledgements::tongo acknowledgements
+acknowledgements writing::acknowledgements writing
+short book::short book
+rewarding experience::rewarding experience
+sonu kapoor::sonu kapoor
+rst draft::rst draft
+draft received::draft received
+thirteen thousand::thirteen thousand
+thousand downloads::thousand downloads
+people jon::people jon
+jon skeet::jon skeet
+skeet provided::skeet provided
+alarming number::alarming number
+eternally grateful::eternally grateful
+grateful jon::grateful jon
+odd suggestion::odd suggestion
+weekly show::weekly show
+program ming::program- ming
+ming community::ming community
+authors granville::authors granville
+barnett granville::barnett granville
+ph.d candidate::ph.d candidate
+queensland university::queensland university
+microsoft qut::microsoft qut
+qut eresearch::qut eresearch
+eresearch centre1::eresearch centre1
+computer science::computer science
+microsoft mvp::microsoft mvp
+main interests::main interests
+compilers granville::compilers granville
+personal website::personal website
+tongo luca::tongo luca
+masters degree::masters degree
+flo rence::flo- rence
+web development::web development
+data mining::data mining
+computer vision::computer vision
+vision luca::vision luca
+italian blog::italian blog
+vii page::vii page
+left blank::left blank
+uncommon algorithms::uncommon algorithms
+language independent::language independent
+easy porting::easy porting
+nitive book::nitive book
+book presents::book presents
+presents implementations::presents implementations
+implementations devised::implementations devised
+respective algorithms::respective algorithms
+book alongside::book alongside
+formal proofs::formal proofs
+book appeals::book appeals
+larger audience::larger audience
+complexity analysis::complexity analysis
+general concepts::general concepts
+abstract measurement::abstract measurement
+mathematical proofs::mathematical proofs
+algorithmic run::algorithmic run
+expansion figure::expansion figure
+run times::run times
+cient algorithm::cient algorithm
+exponential algorithms::exponential algorithms
+small problems::small problems
+list explains::list explains
+common big::common big
+e.g adding::e.g adding
+tail node::tail node
+smaller chunks::smaller chunks
+e.g searching::e.g searching
+e.g quick::e.g quick
+prototyp ing::prototyp- ing
+ing algorithm::ing algorithm
+algorithm designs::algorithm designs
+problem irrespective::problem irrespective
+algorithm design::algorithm design
+loops chapter::loops chapter
+recursive calls::recursive calls
+cient run::cient run
+biggest asset::biggest asset
+discard things::discard things
+sorting algorithms::sorting algorithms
+quadratic run::quadratic run
+logarithmic run::logarithmic run
+logarithmic algorithm::logarithmic algorithm
+data set::data set
+suitably large::suitably large
+ma chine::ma- chine
+notation isolates::notation isolates
+algorithm analysis::algorithm analysis
+quadratic algorithm::quadratic algorithm
+communication tool::communication tool
+tool picture::tool picture
+fellow developers::fellow developers
+product group::product group
+discussing prototype::discussing prototype
+prototype algorithms::prototype algorithms
+node discovery::node discovery
+massive networks::massive networks
+minutes elapse::minutes elapse
+good idea::good idea
+respective algorithm::respective algorithm
+high level::high level
+level algorithm::level algorithm
+ciency replay::ciency replay
+respective developer::respective developer
+developer states::developer states
+asymptotic run::asymptotic run
+good general::good general
+general idea::general idea
+ciency data::ciency data
+feature holds::feature holds
+up permost::up- permost
+remaining features::remaining features
+features imagine::features imagine
+successful product::successful product
+optimal solutions::optimal solutions
+quantitative approach::quantitative approach
+software development::software development
+development properties::development properties
+superior programmer::superior programmer
+pseudo-imperative coding::pseudo-imperative coding
+coding format::coding format
+imperative mainstream::imperative mainstream
+mainstream programming::mainstream programming
+target languages::target languages
+java chapter::java chapter
+imple mentations::imple- mentations
+imperative thinking::imperative thinking
+thinking style::thinking style
+functional programmer::functional programmer
+functional paradigm::functional paradigm
+cient solutions::cient solutions
+functional language::functional language
+security sand::security sand
+sand boxing::sand boxing
+memory management::memory management
+garbage collection::garbage collection
+collection algorithms::collection algorithms
+list node::list node
+managed environment::managed environment
+fair amount::fair amount
+respective language::respective language
+is sue::is- sue
+imperative language::imperative language
+pseudo implementations::pseudo- implementations
+primitive imperative::primitive imperative
+language constructs::language constructs
+algo rithms::algo- rithms
+rithms presented::rithms presented
+experienced programmers::experienced programmers
+provide data::provide data
+generic types::generic types
+part interpreting::part interpreting
+post-conditions represent::post-conditions represent
+applying algorithm::applying algorithm
+primitive language::primitive language
+return type::return type
+post condition::post- condition
+book require::book require
+require parameters::require parameters
+explicit type::explicit type
+operations performed::operations performed
+biggest clue::biggest clue
+bit machine::bit machine
+resizeable array::resizeable array
+last major::last major
+major point::major point
+explicitly end::explicitly end
+language construct::language construct
+state end::state end
+implicit scope::implicit scope
+scope closure::scope closure
+closure works::closure works
+simple code::simple code
+complex cases::complex cases
+pseudocode style::pseudocode style
+algorithms start::algorithms start
+simple algorithm::simple algorithm
+algorithm signature::algorithm signature
+algorithm algorithmname::algorithm algorithmname
+end algorithmname::end algorithmname
+post condi::post condi-
+condi tions::condi- tions
+single numeric::single numeric
+numeric parameter::numeric parameter
+post conditions::post conditions
+conditions follow::conditions follow
+cover things::cover things
+actual parameter::actual parameter
+collection passed::collection passed
+algorithms operation::algorithms operation
+ascending order::ascending order
+handle pre-conditions::handle pre-conditions
+pre conditions::pre- conditions
+exceptional cases::exceptional cases
+track things::track things
+variable names::variable names
+table give::table give
+map relationships::map relationships
+recursive algorithm::recursive algorithm
+algorithm traces::algorithm traces
+records function::records function
+function calls::function calls
+elaborate map::elaborate map
+makes things::makes things
+follow track::follow track
+uncom mon::uncom- mon
+mon data::mon data
+varying purposes::varying purposes
+string operations::string operations
+structures present::structures present
+previous list::previous list
+list represents::list represents
+vast majority::vast majority
+respective data::respective data
+table listing::table listing
+return keyword::return keyword
+returns control::returns control
+yield returns::yield returns
+yield control::yield control
+minimised test::minimised test
+driven development::driven development
+development style::development style
+pseudocode algorithm::pseudocode algorithm
+unit tests::unit tests
+tests satisfying::tests satisfying
+test cases::test cases
+part algorithms::part algorithms
+obvious cases::obvious cases
+respective case::respective case
+actual problem::actual problem
+identify areas::identify areas
+overwhelming list::overwhelming list
+algorithm greatly::algorithm greatly
+vast amount::vast amount
+smaller problems::smaller problems
+problems solving::problems solving
+easier task::easier task
+tests contribute::tests contribute
+core piece::core piece
+stable software::stable software
+view appendix::view appendix
+describes testing::describes testing
+code speci::code speci
+open source::open source
+source project1::source project1
+pseudocode listed::pseudocode listed
+named data::named data
+nal messages::nal messages
+algorithm works::algorithm works
+abstract sense::abstract sense
+key points::key points
+provide suggestions::provide suggestions
+feature requests::feature requests
+lists linked::lists linked
+level perspective::level perspective
+single pointer::single pointer
+last node::last node
+null pointer::null pointer
+pointer representing::pointer representing
+maintain head::maintain head
+tail pointers::tail pointers
+operation random::operation random
+random insertion::random insertion
+linear operation::linear operation
+maintain pointers::maintain pointers
+aptly references::aptly references
+traditional insertion::traditional insertion
+designated node::designated node
+current predecessor::current predecessor
+traversal yields::traversal yields
+times make::times make
+copy penalty::copy penalty
+primitive data::primitive data
+list consists::list consists
+node figure::node figure
+list populated::list populated
+people talk::people talk
+general purpose::general purpose
+purpose method::purpose method
+list updating::list updating
+tail reference::tail reference
+algorithm add::algorithm add
+end add::end add
+previous algorithm::previous algorithm
+se quence::se- quence
+resulting list::resulting list
+searching searching::searching searching
+list checking::list checking
+algorithm listed::algorithm listed
+head node::head node
+return false::return false
+deletion deleting::deletion deleting
+list irrespective::list irrespective
+concise algorithms::concise algorithms
+list deletion::list deletion
+algorithm remove::algorithm remove
+end remove::end remove
+list traversing::list traversing
+node reference::node reference
+algorithm described::algorithm described
+rst case::rst case
+algorithm traverse::algorithm traverse
+end traverse::end traverse
+order traversing::order traversing
+forward manner::forward manner
+i.e left::i.e left
+fundamental characteristics::fundamental characteristics
+list make::list make
+expensive operation::expensive operation
+list backwards::list backwards
+algorithm reversetraversal::algorithm reversetraversal
+end reversetraversal::end reversetraversal
+real interest::real interest
+make reverse::make reverse
+reverse list::reverse list
+list traversal::list traversal
+traversal simple::traversal simple
+previous nodes::previous nodes
+list figure::list figure
+node chapter::node chapter
+previous pointer::previous pointer
+previous tail::previous tail
+rst node::rst node
+add figure::add figure
+added task::added task
+additional reference::additional reference
+correct value::correct value
+traversal algorithm::traversal algorithm
+x2.1.5 required::x2.1.5 required
+creative invention::creative invention
+lists make::lists make
+forward traversal::forward traversal
+opposite direction::opposite direction
+list reverse::list reverse
+summary linked::summary linked
+unknown number::unknown number
+size involves::size involves
+involves invoking::involves invoking
+resizing algorithm::resizing algorithm
+linear run::linear run
+remove nodes::remove nodes
+constant run::constant run
+maintaining pointers::maintaining pointers
+memory overhead::memory overhead
+accessing nodes::accessing nodes
+primitive property::primitive property
+constant operation::constant operation
+update count::update count
+deletion algorithms::deletion algorithms
+basic in::basic in-
+in sertions::in- sertions
+non-trivial operations::non-trivial operations
+require forwards::require forwards
+backwards traversal::backwards traversal
+token stream::token stream
+recursive descent::recursive descent
+descent fashion::descent fashion
+correct parse::correct parse
+parse tree::parse tree
+design makes::design makes
+bi-directional traversal::bi-directional traversal
+linked chapter::linked chapter
+tree binary::tree binary
+search trees::search trees
+root node::root node
+left subtree::left subtree
+right subtree::right subtree
+tree data::tree data
+balancing properties::balancing properties
+parameter alias::parameter alias
+previously insertion::previously insertion
+operation provided::operation provided
+algorithm insert::algorithm insert
+passed custom::passed custom
+custom type::custom type
+type checks::type checks
+correct location::correct location
+end insert::end insert
+algorithm insertnode::algorithm insertnode
+end insertnode::end insertnode
+insertion algorithm::insertion algorithm
+rst algorithm::rst algorithm
+non recursive::non- recursive
+core base::core base
+base case::base case
+recursive insertnode::recursive insertnode
+insertnode algorithm::insertnode algorithm
+put value::put value
+value note::value note
+binary chop::binary chop
+current node::current node
+ordered type::ordered type
+algorithm nonetheless::algorithm nonetheless
+case value::case value
+deletion removing::deletion removing
+con sider::con- sider
+leaf node::leaf node
+largest value::largest value
+fth case::fth case
+possibility nonetheless::possibility nonetheless
+rst occurrence::rst occurrence
+subtree figure::subtree figure
+tree deletion::tree deletion
+deletion cases::deletion cases
+remove algorithm::remove algorithm
+helper algorithms::helper algorithms
+algorithms named::algorithms named
+named findp::named findp
+findp arent::findp arent
+case yields::case yields
+largestv alue::largestv alue
+largestv alue.right::largestv alue.right
+right pointer::right pointer
+remove chapter::remove chapter
+parent node::parent node
+extensive tree::extensive tree
+tree transforma::tree transforma-
+transforma tions::transforma- tions
+algorithm findparent::algorithm findparent
+return root::return root
+return findparent::return findparent
+end findparent::end findparent
+special case::special case
+value exists::value exists
+algorithm findnode::algorithm findnode
+return findnode::return findnode
+end findnode::end findnode
+findnode astute::findnode astute
+astute readers::astute readers
+findnode algorithm::findnode algorithm
+call findnode::call findnode
+return value::return value
+smallest value::smallest value
+termi nating::termi- nating
+findmax algorithms::findmax algorithms
+node references::node references
+algorithm findmin::algorithm findmin
+end findmin::end findmin
+findmin chapter::findmin chapter
+algorithm findmax::algorithm findmax
+end findmax::end findmax
+strategy depends::strategy depends
+node visitation::node visitation
+visitation order::visitation order
+binarysearcht ree::binarysearcht ree
+preorder algorithm::preorder algorithm
+preorder traversal::preorder traversal
+algorithm preorder::algorithm preorder
+end preorder::end preorder
+postorder traversal::postorder traversal
+algorithm postorder::algorithm postorder
+end postorder::end postorder
+postorder chapter::postorder chapter
+preorder visit::preorder visit
+visit binary::visit binary
+postorder visit::postorder visit
+inorder traversal::inorder traversal
+inorder visit::inorder visit
+algorithm inorder::algorithm inorder
+end inorder::end inorder
+comparison order::comparison order
+populated bst::populated bst
+inorder strategy::inorder strategy
+yielded sequence::yielded sequence
+rst order::rst order
+order yields::order yields
+par ticular::par- ticular
+ticular depth::ticular depth
+right fashion::right fashion
+rst traversal::rst traversal
+sizeable array::sizeable array
+nodes visited::nodes visited
+breadth first::breadth first
+first visit::first visit
+algorithm breadthfirst::algorithm breadthfirst
+end breadthfirst::end breadthfirst
+good solution::good solution
+represent types::represent types
+custom rules::custom rules
+rules inherent::rules inherent
+logarithmic insertion::logarithmic insertion
+ecient traversal::ecient traversal
+traversal remains::traversal remains
+tree trees::tree trees
+recursive data::recursive data
+big assumption::big assumption
+algorithms presented::algorithms presented
+unbalanced tree::unbalanced tree
+self-balancing properties::self-balancing properties
+simple tree::simple tree
+min heap::min heap
+max heap::max heap
+strategy determines::strategy determines
+heap strategy::heap strategy
+heap employs::heap employs
+refer ences::refer- ences
+children figure::children figure
+heap data::heap data
+adding values::adding values
+left-to-right fashion::left-to-right fashion
+fashion figure::fashion figure
+shows arrows::shows arrows
+direct left::direct left
+chapter figure::chapter figure
+step process::step process
+default capacity::default capacity
+internal data::internal data
+dynamic data::dynamic data
+initial size::initial size
+upper storage::upper storage
+storage limit::storage limit
+limit required::limit required
+structure encapsulates::structure encapsulates
+encapsulates resizing::encapsulates resizing
+resizing algorithms::resizing algorithms
+array representation::array representation
+structure figure::structure figure
+direct children::direct children
+adding null::adding null
+null references::null references
+null values::null values
+non-null value::non-null value
+required expressions::required expressions
+parent index::parent index
+left child::left child
+right child::right child
+insertion designing::insertion designing
+heap insertion::heap insertion
+heap order::heap order
+post-insertion operation::post-insertion operation
+operation inserting::operation inserting
+free slot::free slot
+free index::free index
+insertion inserting::insertion inserting
+rst part::rst part
+validating heap::validating heap
+min-heap ordering::min-heap ordering
+array counterpart::array counterpart
+counterpart chapter::counterpart chapter
+calculating node::calculating node
+node properties::node properties
+verifying heap::verifying heap
+actual insertion::actual insertion
+inserting values::inserting values
+min-heap chapter::min-heap chapter
+algorithm minheapify::algorithm minheapify
+heap items::heap items
+preserved min::preserved min
+heap ordering::heap ordering
+end minheapify::end minheapify
+maxheapify algorithm::maxheapify algorithm
+min heapify::min- heapify
+heapify algorithm::heapify algorithm
+item involves::item involves
+last value::last value
+index location::index location
+verify heap::verify heap
+value chapter::value chapter
+updated alias::updated alias
+promote smallest::promote smallest
+smallest key::smallest key
+remove figure::remove figure
+backing array::backing array
+initial capacity::initial capacity
+deletion algorithm::deletion algorithm
+removed value::removed value
+heap array::heap array
+reference types::reference types
+i.e objects::i.e objects
+managed languages::managed languages
+empty hole::empty hole
+garbage collector::garbage collector
+garbage collected::garbage collected
+heap chapter::heap chapter
+case true::case true
+heap hold::heap hold
+backing heap::backing heap
+heap factoring::heap factoring
+search algorithm::search algorithm
+including logic::including logic
+properties presented::properties presented
+deterministically state::deterministically state
+current level::current level
+extra logic::extra logic
+expensive worse::expensive worse
+worse case::worse case
+case run::case run
+comparison operations::comparison operations
+algorithm determines::algorithm determines
+previous expression::previous expression
+ned holds::ned holds
+array data::array data
+heap implementation::heap implementation
+array starting::array starting
+initial array::initial array
+array index::array index
+upper bound::upper bound
+actual physical::actual physical
+physical bound::physical bound
+allocated array::allocated array
+array count::array count
+conceptual heap::conceptual heap
+actual array::actual array
+array implementation::array implementation
+heap mutation::heap mutation
+dead space::dead space
+heap backing::heap backing
+default value::default value
+count garbage::count garbage
+garbage values::garbage values
+make things::make things
+things simple::things simple
+garbage value::garbage value
+reference type::reference type
+value type::value type
+contained references::contained references
+live objects::live objects
+separate objects::separate objects
+heap property::heap property
+fashion requires::fashion requires
+creative intervention::creative intervention
+summary heaps::summary heaps
+implement priority::implement priority
+priority queues::priority queues
+sample implementation::sample implementation
+facilitate heap::facilitate heap
+heap sort::heap sort
+heap maintains::heap maintains
+maintains heap::maintains heap
+ordering strategy::ordering strategy
+strategy enforces::strategy enforces
+min-heap strategy::min-heap strategy
+heap abides::heap abides
+invoke algorithms::invoke algorithms
+dynamic array::dynamic array
+array expansion::array expansion
+heap outgrows::heap outgrows
+space allocated::space allocated
+good initial::good initial
+initial starting::initial starting
+starting size::starting size
+array resizing::array resizing
+set implementations::set implementations
+implementations tend::implementations tend
+repeated values::repeated values
+set theory::set theory
+demonstrates brie::demonstrates brie
+common operations::common operations
+curly braces::curly braces
+large number::large number
+positive integers::positive integers
+current value::current value
+right hand::right hand
+hand side::hand side
+arithmetic expression::arithmetic expression
+nite number::nite number
+natural numbers::natural numbers
+numbers set::numbers set
+set intersection::set intersection
+union set::union set
+demonstrates set::demonstrates set
+set union::set union
+frame work::frame- work
+mainstream languages::mainstream languages
+algorithms exist::algorithms exist
+extension methods::extension methods
+type sys::type sys-
+result dsa::result dsa
+provide implementations::provide implementations
+system.linq.enumerable deal::system.linq.enumerable deal
+simple traversal::simple traversal
+sets adding::sets adding
+algorithm union::algorithm union
+foreach item::foreach item
+end foreach::end foreach
+return union::return union
+end union::end union
+union algorithm::union algorithm
+rst set::rst set
+runtime applies::runtime applies
+major thing::major thing
+thing worth::thing worth
+worth pointing::worth pointing
+fewest items::fewest items
+intersection set::intersection set
+algorithm intersection::algorithm intersection
+return intersection::return intersection
+end intersection::end intersection
+intersection algorithm::intersection algorithm
+linear runtime::linear runtime
+unordered sets::unordered sets
+general sense::general sense
+explicit ordering::explicit ordering
+mem bers::mem- bers
+ordering scheme::ordering scheme
+libraries provide::libraries provide
+simply mention::simply mention
+unordered set::unordered set
+ordered set::ordered set
+cover brie::cover brie
+hash table::hash table
+cient data::cient data
+backing data::backing data
+insertion run::insertion run
+hash map::hash map
+hashing algorithm::hashing algorithm
+hash tables::hash tables
+tables employ::tables employ
+purpose hashing::purpose hashing
+hashing algorithms::hashing algorithms
+set enforces::set enforces
+ned comparison::ned comparison
+internal backing::internal backing
+order realised::order realised
+backing tree::backing tree
+correct ordered::correct ordered
+ordered sequence::ordered sequence
+set members::set members
+unique items::unique items
+summary sets::summary sets
+sets provide::sets provide
+unique objects::unique objects
+correct backing::correct backing
+check results::check results
+complexity ordered::complexity ordered
+ordered sets::ordered sets
+sets cost::sets cost
+logarithmic growth::logarithmic growth
+key property::key property
+sets implemented::sets implemented
+look-up times::look-up times
+inser tion::inser- tion
+constant ordered::constant ordered
+item yielding::item yielding
+queues queues::queues queues
+essential data::essential data
+vast amounts::vast amounts
+soft ware::soft- ware
+user mode::user mode
+kernel mode::kernel mode
+mode applications::mode applications
+rst put::rst put
+item added::item added
+traditional queue::traditional queue
+core methods::core methods
+mentioned methods::mentioned methods
+queue data::queue data
+list describes::list describes
+core data::core data
+mainstream library::mainstream library
+cient queue::cient queue
+main property::main property
+deletion run::deletion run
+remove items::remove items
+dequeue operation::dequeue operation
+head pointer::head pointer
+queue remains::queue remains
+queue determines::queue determines
+custom comparer::custom comparer
+highest priority::highest priority
+normal queue::normal queue
+rst item::rst item
+deque applies::deque applies
+prioritization strategy::prioritization strategy
+programmer utilising::programmer utilising
+structures exposed::structures exposed
+exposed interface::exposed interface
+queue mutations::queue mutations
+mutations chapter::mutations chapter
+provide front::provide front
+common queue::common queue
+queue operations::queue operations
+list identi::list identi
+peekback figure::peekback figure
+in order::in- order
+one-to-one translation::one-to-one translation
+normal queues::normal queues
+e.g enqueueback::e.g enqueueback
+collections implement::collections implement
+standard add::standard add
+add method::add method
+wrapper data::wrapper data
+pro grammer::pro- grammer
+obvious advantage::obvious advantage
+maxi mum::maxi- mum
+mum number::mum number
+library developer::library developer
+developer chapter::developer chapter
+deque data::deque data
+array minimization::array minimization
+minimization techniques::minimization techniques
+array taking::array taking
+considerable amount::considerable amount
+small percentage::small percentage
+aforementioned issues::aforementioned issues
+baking data::baking data
+pointers consumes::pointers consumes
+array item::array item
+item counterpart::item counterpart
+expensive resizing::expensive resizing
+structure increases::structure increases
+size dynamically::size dynamically
+virtual machine::virtual machine
+machine memory::machine memory
+memory reclamation::memory reclamation
+opaque process::opaque process
+collection algorithm::collection algorithm
+explicit memory::explicit memory
+memory allocation::memory allocation
+order queues::order queues
+windows cpu::windows cpu
+cpu scheduler::cpu scheduler
+erent queue::erent queue
+constant insertion::constant insertion
+times searching::times searching
+backing store::backing store
+natural data::natural data
+lot simpler::lot simpler
+rst search::rst search
+g.m adelson-velsky::g.m adelson-velsky
+e.m landis::e.m landis
+landis invented::landis invented
+rst self::rst self-
+self balancing::self- balancing
+self-balancing condition::self-balancing condition
+condition stating::condition stating
+tree modi::tree modi
+general shape::general shape
+tree obtained::tree obtained
+empty tree::empty tree
+worst case::worst case
+case scenario::case scenario
+run ning::run- ning
+balance condition::balance condition
+case running::case running
+common operation::common operation
+avl balance::avl balance
+node balance::node balance
+balance factor::balance factor
+factor represents::factor represents
+additional piece::additional piece
+information stored::information stored
+inventors make::inventors make
+well-known technique::well-known technique
+tree rotation::tree rotation
+avl trees::avl trees
+insertion order::insertion order
+standard bst::standard bst
+bst properties::bst properties
+right rotations::right rotations
+smaller subtrees::smaller subtrees
+larger subtrees::larger subtrees
+right rotation::right rotation
+rotation left::rotation left
+left rotation::left rotation
+rotation figure::rotation figure
+tree left::tree left
+rotations chapter::rotations chapter
+algorithm leftrotation::algorithm leftrotation
+end leftrotation::end leftrotation
+algorithm rightrotation::algorithm rightrotation
+end rightrotation::end rightrotation
+rotation algorithms::rotation algorithms
+rotation resulting::rotation resulting
+runtime complexity::runtime complexity
+elds present::elds present
+section veri::section veri
+correct rotation::correct rotation
+double rotations::double rotations
+named leftandrightrotation::named leftandrightrotation
+e.g leftandrightrotation::e.g leftandrightrotation
+rst performs::rst performs
+algorithm checkbalance::algorithm checkbalance
+current height::current height
+tree balance::tree balance
+end checkbalance::end checkbalance
+insertion avl::insertion avl
+avl insertion::avl insertion
+insertion operates::insertion operates
+bst insertion::bst insertion
+applying rebalancing::applying rebalancing
+rebalancing techniques::rebalancing techniques
+avl property::avl property
+longer holds::longer holds
+correct point::correct point
+inserted node::inserted node
+node balancing::node balancing
+balancing property::balancing property
+preserving tree::preserving tree
+balancing algorithm::balancing algorithm
+balance property::balance property
+removal upsets::removal upsets
+tree rebalanced::tree rebalanced
+alue.right chapter::alue.right chapter
+node check::node check
+check balance::check balance
+balancing tree::balancing tree
+younger brother::younger brother
+older brother::older brother
+tree avoids::tree avoids
+avoids worst::avoids worst
+case linear::case linear
+linear complexity::linear complexity
+complexity runtimes::complexity runtimes
+tree guarantees::tree guarantees
+balancing algorithms::balancing algorithms
+logarithmic runtime::logarithmic runtime
+demonstrate sorting::demonstrate sorting
+bit integer::bit integer
+algorithms discussed::algorithms discussed
+generic sorting::generic sorting
+sorting algo::sorting algo-
+simple forms::simple forms
+simple form::simple form
+algorithm bubblesort::algorithm bubblesort
+return list::return list
+end bubblesort::end bubblesort
+sort merge::sort merge
+cient space::cient space
+similar sized::similar sized
+sized lists::sized lists
+sorted lists::sorted lists
+function mergeordered::function mergeordered
+ordered lists::ordered lists
+sort iterations::sort iterations
+algorithm mergesort::algorithm mergesort
+return mergeordered::return mergeordered
+end mergesort::end mergesort
+mergesort chapter::mergesort chapter
+sort divide::sort divide
+impera approach::impera approach
+sort quick::sort quick
+popular sorting::popular sorting
+algorithms based::algorithms based
+impera strategy::impera strategy
+algorithm starts::algorithm starts
+smaller items::smaller items
+greater elements::greater elements
+main quick::main quick
+sort operation::sort operation
+greater sub::greater sub
+sub lists::sub lists
+median element::median element
+funda mental::funda- mental
+reduced performance::reduced performance
+pivot figure::pivot figure
+pivot median::pivot median
+median strategy::median strategy
+algorithm quicksort::algorithm quicksort
+return concatenate::return concatenate
+end quicksort::end quicksort
+quicksort chapter::quicksort chapter
+sort insertion::sort insertion
+interesting algorithm::interesting algorithm
+expensive runtime::expensive runtime
+sorting scheme::sorting scheme
+playing cards::playing cards
+algorithm insertionsort::algorithm insertionsort
+end insertionsort::end insertionsort
+insertionsort chapter::insertionsort chapter
+sort put::sort put
+simply shell::simply shell
+cient variation::cient variation
+comparing items::comparing items
+varying distances::varying distances
+straight forward::straight forward
+selects items::selects items
+compare figure::compare figure
+shows shell::shows shell
+red coloured::red coloured
+algorithm shellsort::algorithm shellsort
+end shellsort::end shellsort
+algorithms described::algorithms described
+sort items::sort items
+bucket holds::bucket holds
+holds items::holds items
+radix sort::radix sort
+key bucket::key bucket
+highest key::highest key
+key values::key values
+rst simple::rst simple
+simple version::simple version
+isolating keys::isolating keys
+rst key::rst key
+single hundred::single hundred
+sort chapter::sort chapter
+key value::key value
+thousands location::thousands location
+last thing::last thing
+simple implemen::simple implemen-
+implemen tation::implemen- tation
+maximum key::maximum key
+key size::key size
+tens key::tens key
+tens column::tens column
+substitution yields::substitution yields
+last key::last key
+ten working::ten working
+working left::working left
+sequential manner::sequential manner
+algorithm radix::algorithm radix
+largest key::largest key
+end radix::end radix
+radix figure::radix figure
+highlighted omitted::highlighted omitted
+omitted queues::omitted queues
+erent algorithms::erent algorithms
+sorting lists::sorting lists
+sort base::sort base
+correct sorting::correct sorting
+sorting algorithm::sorting algorithm
+choose merge::choose merge
+actual imple::actual imple-
+imple mentation::imple- mentation
+recursive fashion::recursive fashion
+e.g implementing::e.g implementing
+slower algorithm::slower algorithm
+bad idea::bad idea
+prime number::prime number
+prime numbers::prime numbers
+algorithm isprime::algorithm isprime
+end isprime::end isprime
+conversions dsa::conversions dsa
+equivalent binary::equivalent binary
+hexadecimal form::hexadecimal form
+binary representation::binary representation
+algorithm trace::algorithm trace
+algorithm tobinary::algorithm tobinary
+return reverse::return reverse
+end tobinary::end tobinary
+common denomina::common denomina-
+denomina tor::denomina- tor
+routine problem::routine problem
+greatest number::greatest number
+elegant solutions::elegant solutions
+algorithm greatestcommondenominator::algorithm greatestcommondenominator
+return greatestcommondenominator::return greatestcommondenominator
+end greatestcommondenominator::end greatestcommondenominator
+greatestcommondenominator chapter::greatestcommondenominator chapter
+num ber::num- ber
+algorithm computes::algorithm computes
+maximum number::maximum number
+number base::number base
+hexadecimal number::hexadecimal number
+algorithm numberbase::algorithm numberbase
+actual implementation::actual implementation
+implementation numberbase::implementation numberbase
+enumeration type::enumeration type
+base enumeration::base enumeration
+readable manner::readable manner
+correct base::correct base
+relevant option::relevant option
+option octal::option octal
+actual argument::actual argument
+argument numberbase::argument numberbase
+algorithm maxvalue::algorithm maxvalue
+number system::number system
+numberbase consisting::numberbase consisting
+return power::return power
+end maxvalue::end maxvalue
+number attaining::number attaining
+primitive mathematical::primitive mathematical
+mathematical operation::mathematical operation
+factorial algorithm::factorial algorithm
+re cursive::re- cursive
+iterative solution::iterative solution
+aforementioned acts::aforementioned acts
+numeric algorithms::numeric algorithms
+make work::make work
+respective domain::respective domain
+domain attainable::domain attainable
+advanced systems::advanced systems
+planet computing::planet computing
+weather forecasts::weather forecasts
+item inside::item inside
+match occurs::match occurs
+algorithm sequentialsearch::algorithm sequentialsearch
+return index::return index
+end sequentialsearch::end sequentialsearch
+search probability::search probability
+statistical sequential::statistical sequential
+sequential searching::sequential searching
+searching algorithm::searching algorithm
+algorithm complexity::algorithm complexity
+non-uniform items::non-uniform items
+items search::items search
+frequent items::frequent items
+rst positions::rst positions
+reducing list::reducing list
+list scanning::list scanning
+resulting state::resulting state
+searched items::searched items
+probability increased::probability increased
+search operation::search operation
+algorithm probabilitysearch::algorithm probabilitysearch
+boolean indicating::boolean indicating
+case swap::case swap
+swap founded::swap founded
+founded item::founded item
+end probabilitysearch::end probabilitysearch
+searching algorithms::searching algorithms
+cient searching::cient searching
+logarithmic searching::logarithmic searching
+bst tree::bst tree
+underlying data::underlying data
+deter mine::deter- mine
+linear data::linear data
+knowledge model::knowledge model
+strings strings::strings strings
+satisfy curiosity::satisfy curiosity
+ning algorithms::ning algorithms
+primitive string::primitive string
+e.g extracting::e.g extracting
+algorithm presented::algorithm presented
+white space::white space
+words start::words start
+algorithm reversewords::algorithm reversewords
+skip whitespace::skip whitespace
+append chars::append chars
+last word::last word
+string add::string add
+end reversewords::end reversewords
+frequent algorithm::frequent algorithm
+real-life scenarios::real-life scenarios
+scenarios detecting::scenarios detecting
+trivial algorithm::trivial algorithm
+algo rithm::algo- rithm
+opposite ends::opposite ends
+pointers march::pointers march
+value figure::value figure
+ispalindrome algorithm::ispalindrome algorithm
+valid palindrome::valid palindrome
+right pointers::right pointers
+pointers marching::pointers marching
+algorithm ispalindrome::algorithm ispalindrome
+return word::return word
+end ispalindrome::end ispalindrome
+algorithm discards::algorithm discards
+discards punctuation::discards punctuation
+including white::including white
+result word::result word
+compacted representation::compacted representation
+original string::original string
+uppercase representation::uppercase representation
+palindromes discard::palindromes discard
+case making::case making
+string counting::string counting
+word count::word count
+correct place::correct place
+ben ate::ben ate
+ate hay::ate hay
+listed points::listed points
+inword chapter::inword chapter
+words figure::words figure
+varying number::varying number
+space delimiting::space delimiting
+listed index::listed index
+current index::current index
+nally inword::nally inword
+present index::present index
+splitting symbols::splitting symbols
+.net string.split1::.net string.split1
+string indexed::string indexed
+single occurrence::single occurrence
+space splitting::space splitting
+algorithm wordcount::algorithm wordcount
+words contained::words contained
+initial white::initial white
+return wordcount::return wordcount
+end wordcount::end wordcount
+words adding::words adding
+unique strings::unique strings
+unique words::unique words
+unique word::unique word
+total number::total number
+stings contained::stings contained
+array returned::array returned
+split operation::split operation
+undesired uniques::undesired uniques
+uniques set::uniques set
+desired uniques::desired uniques
+algorithm repeatedwordcount::algorithm repeatedwordcount
+foreach word::foreach word
+end repeatedwordcount::end repeatedwordcount
+repeatedwordcount algorithm::repeatedwordcount algorithm
+strip method::strip method
+simply removes::simply removes
+accurate unique::accurate unique
+unique string::unique string
+string collection::string collection
+word minus::word minus
+punctuation figure::punctuation figure
+desired sets::desired sets
+unique set::unique set
+string matches::string matches
+pretty trivial::pretty trivial
+trivial put::trivial put
+strings considered::strings considered
+double loop::double loop
+discarding punctuation::discarding punctuation
+non-negative index::non-negative index
+rst character::rst character
+approach exhibit::approach exhibit
+word match::word match
+index index::index index
+match occurred::match occurred
+index representing::index representing
+representing match::representing match
+match location::match location
+fun algorithms::fun algorithms
+string data::string data
+data types::data types
+common data::common data
+data type::data type
+strings fascinating::strings fascinating
+simple google::simple google
+google search::google search
+string nuances::string nuances
+great number::great number
+introductory algorithms::introductory algorithms
+walkthrough learning::walkthrough learning
+good algorithms::good algorithms
+structured approach::structured approach
+cases tracing::cases tracing
+single table::single table
+algorithm operates::algorithm operates
+problem quicker::problem quicker
+trace table::trace table
+store information::store information
+algorithm mutates::algorithm mutates
+infer patterns::infer patterns
+visual representation::visual representation
+past values::past values
+values generated::values generated
+make understanding::make understanding
+solving problems::solving problems
+technique outlined::technique outlined
+iterative walkthrough::iterative walkthrough
+actual data::actual data
+contiguous memory::contiguous memory
+char data::char data
+accessing items::accessing items
+value word::value word
+word left::word left
+table a.1::table a.1
+algorithm execute::algorithm execute
+statement updating::statement updating
+variable values::variable values
+table appropriately::table appropriately
+appropriately table::appropriately table
+nal table::nal table
+table values::table values
+array indexes::array indexes
+include variables::include variables
+table a.2::table a.2
+word variables::word variables
+larger diagram::larger diagram
+values change::values change
+ispalindrome appendix::ispalindrome appendix
+trace tables::trace tables
+verify algorithm::verify algorithm
+algorithm correctness::algorithm correctness
+simple table::simple table
+quick sketch::quick sketch
+correct algorithms::correct algorithms
+algorithms quicker::algorithms quicker
+quicker visualising::quicker visualising
+problem domain::problem domain
+keeping track::keeping track
+changing data::changing data
+data makes::data makes
+makes problems::makes problems
+lot easier::lot easier
+part working::part working
+iterative algorithm::iterative algorithm
+based approach::based approach
+recursive implementation::recursive implementation
+fiboncacci sequence::fiboncacci sequence
+algorithm fibonacci::algorithm fibonacci
+bonacci sequence::bonacci sequence
+sequence number::sequence number
+return fibonacci::return fibonacci
+end fibonacci::end fibonacci
+diagrammtic representation::diagrammtic representation
+rithm calls::rithm calls
+fibonacci algorithm::fibonacci algorithm
+preceeding list::preceeding list
+base cases::base cases
+recursive method::recursive method
+method call::method call
+call tree::call tree
+recursive case::recursive case
+cases figure::cases figure
+recursive call::recursive call
+call chain::call chain
+labelled figure::labelled figure
+chain annotated::chain annotated
+return values::return values
+methods return::methods return
+red arrows::red arrows
+calls ceases::calls ceases
+algorithm figure::algorithm figure
+return chain::return chain
+algorithm appendix::algorithm appendix
+continue execution::continue execution
+method execution::method execution
+fibonacci algorithms::fibonacci algorithms
+subesequently return::subesequently return
+algorithm draw::algorithm draw
+draw method::draw method
+call diagrams::call diagrams
+summary understanding::summary understanding
+understanding algorithms::understanding algorithms
+tation perspective::tation perspective
+recursive sketch::recursive sketch
+cases implementing::cases implementing
+works mastering::works mastering
+designed solution::designed solution
+actual imperative::actual imperative
+public static::public static
+static bool::static bool
+bool isprime::bool isprime
+int number::int number
+int innerloopbound::int innerloopbound
+forward process::forward process
+utility algorithms::utility algorithms
+correct result::correct result
+strict preconditions::strict preconditions
+correct code::correct code
+correct exception::correct exception
+pseudo code::pseudo code
+code algorithms::code algorithms
+imperative languages::imperative languages
+code examples::code examples
+key word::key- word
+succinct properties::succinct properties
+modern programming::modern programming
+biggest advantages::biggest advantages
+advantages recursive::advantages recursive
+recursive methods::recursive methods
+methods bring::methods bring
+compact solutions::compact solutions
+main properties::main properties
+making progress::making progress
+recursion whatsoever::recursion whatsoever
+solution relies::solution relies
+recursive counterparts::recursive counterparts
+major advantage::major advantage
+production software::production software
+algorithms whatsoever::algorithms whatsoever
+companies prerequisite::companies prerequisite
+static analysis::static analysis
+analysis tool::analysis tool
+systems level::systems level
+level code::level code
+tolerance policy::tolerance policy
+algorithm run::algorithm run
+inviting trouble::inviting trouble
+growth rate::growth rate
+splitting problems::splitting problems
+good practice::good practice
+method calls::method calls
+lot slower::lot slower
+stack space::stack space
+allotted stack::allotted stack
+operating system::operating system
+case irrespective::case irrespective
+bigger stack::bigger stack
+stack size::stack size
+activation record::activation record
+method put::method put
+support method::support method
+method invocation::method invocation
+invocation activation::invocation activation
+small amount::small amount
+actual parameters::actual parameters
+return address::return address
+top-of-stack index::top-of-stack index
+total amount::total amount
+memory required::memory required
+local variables::local variables
+algorithms operating::algorithms operating
+large data::large data
+space quickly::space quickly
+big chunk::big chunk
+records start::records start
+nested methods::nested methods
+chain exit::chain exit
+respective caller::respective caller
+method exits::method exits
+unwound unwinding::unwound unwinding
+record results::record results
+memory consumed::memory consumed
+parameters appendix::parameters appendix
+size allocated::size allocated
+recursive solution::recursive solution
+lot quicker::lot quicker
+iterative version::iterative version
+shock programmers::shock programmers
+common tree::common tree
+tree node::tree node
+point ers::point- ers
+node type::node type
+makeup wit::makeup wit
+makes sense::makes sense
+inherent design::inherent design
+good news::good news
+summary recursion::summary recursion
+powerful tool::powerful tool
+software projects::software projects
+case recursion::case recursion
+throwing caution::throwing caution
+defensive coding::defensive coding
+times recursion::times recursion
+natural home::natural home
+perfectly acceptable::perfectly acceptable
+iterative counterpart::iterative counterpart
+recursive counterpart::recursive counterpart
+abstract point::abstract point
+compiler recognises::compiler recognises
+recognises things::recognises things
+tail recursion::tail recursion
+commercial compilers::commercial compilers
+optimisation compilers::optimisation compilers
+testing testing::testing testing
+essential part::essential part
+development testing::development testing
+hold test::hold test
+test centric::test centric
+centric roles::centric roles
+boundary conditions::boundary conditions
+safety net::safety net
+tweak algorithms::tweak algorithms
+sizeable project::sizeable project
+high bar::high bar
+unit testing::unit testing
+modern languages::modern languages
+impressive catalogue::impressive catalogue
+testing frameworks::testing frameworks
+target microsoft::target microsoft
+common language::common language
+language runtime::language runtime
+runtime http::runtime http
+boost test::boost test
+test library::test library
+popular boost::popular boost
+boost libraries::boost libraries
+libraries http::libraries http
+direct link::direct link
+umentation http::umentation http
+single atomic::single atomic
+atomic property::atomic property
+unstructured tests::unstructured tests
+smallest amount::smallest amount
+tests execute::tests execute
+execute quickly::execute quickly
+suite consisting::suite consisting
+tedious waiting::tedious waiting
+run tests::run tests
+local machine::local machine
+team scenario::team scenario
+continuous build::continuous build
+build server::build server
+tests devised::tests devised
+testers ran::testers ran
+build process::build process
+error cases::error cases
+customer base::customer base
+trivial bug::trivial bug
+code reported::code reported
+great debate::great debate
+ques tion::ques- tion
+recent years::recent years
+test driven::test driven
+driven approach::driven approach
+acronym tdd::acronym tdd
+founding principles::founding principles
+state based::state based
+based assertions::based assertions
+assertions made::assertions made
+structured intent::structured intent
+single goal::single goal
+failing test::failing test
+test pass::test pass
+tdd makes::tdd makes
+write tests::write tests
+preferred method::preferred method
+favoured approach::favoured approach
+rst point::rst point
+build error::build error
+tdd initially::tdd initially
+respective test::respective test
+test green::test green
+last item::last item
+last point::last point
+progressive methodology::progressive methodology
+progressive revisions::progressive revisions
+algorithm restructuring::algorithm restructuring
+structured types::structured types
+major part::major part
+project ecosystem::project ecosystem
+production code::production code
+clean code::clean code
+code formatting::code formatting
+testing code::testing code
+source control::source control
+control repository::control repository
+great amount::great amount
+writing tests::writing tests
+single unit::single unit
+popular approach::popular approach
+respective operations::respective operations
+simple test::simple test
+test method::test method
+public void::public void
+void mytest::void mytest
+assemble type::assemble type
+act t.methoda::act t.methoda
+tests structuring::tests structuring
+structuring tests::structuring tests
+structuring pro::structuring pro-
+pro duction::pro- duction
+duction code::duction code
+person type::person type
+persontest type::persontest type
+dynamic link::dynamic link
+link libraries::link libraries
+test code::test code
+ning classes::ning classes
+coverage statistics::coverage statistics
+statistics code::statistics code
+units tests::units tests
+tests cover::tests cover
+summary testing::summary testing
+stable product::stable product
+safety blanket::safety blanket
+removing features::removing features
+features providing::features providing
+early warning::early warning
+symbol description::symbol description
+whitespace single::whitespace single
+pseudo symbol::pseudo symbol
+direct translation::direct translation
+imperative counterparts::imperative counterparts
+dsa::dsa
+dat::dat
+hms::hms
+annotated::annotated
+reference::reference
+examples::examples
+granville::granville
+barne::barne
+luca::luca
+del::del
+tongo::tongo
+data::data
+structures::structures
+algorithms::algorithms
+first::first
+edition::edition
+copyright::copyright
+barnett::barnett
+book::book
+made::made
+exclusively::exclusively
+dotnetslackers::dotnetslackers
+http::http
+place::place
+.net::.net
+articles::articles
+news::news
+leading::leading
+minds::minds
+software::software
+industry::industry
+contents::contents
+introduction::introduction
+nt::nt
+assumed::assumed
+knowledge::knowledge
+1.2.1::1.2.1
+big::big
+notation::notation
+1.2.2::1.2.2
+imperative::imperative
+programming::programming
+language::language
+1.2.3::1.2.3
+object::object
+oriented::oriented
+concepts::concepts
+pseudocode::pseudocode
+tips::tips
+working::working
+outline::outline
+testing::testing
+code::code
+final::final
+messages::messages
+linked::linked
+lists::lists
+singly::singly
+list::list
+2.1.1::2.1.1
+insertion::insertion
+2.1.2::2.1.2
+searching::searching
+2.1.3::2.1.3
+deletion::deletion
+2.1.4::2.1.4
+traversing::traversing
+2.1.5::2.1.5
+reverse::reverse
+order::order
+doubly::doubly
+2.2.1::2.2.1
+2.2.2::2.2.2
+2.2.3::2.2.3
+traversal::traversal
+summary::summary
+binary::binary
+search::search
+tree::tree
+finding::finding
+parent::parent
+node::node
+attaining::attaining
+smallest::smallest
+largest::largest
+values::values
+traversals::traversals
+3.7.1::3.7.1
+preorder::preorder
+3.7.2::3.7.2
+postorder::postorder
+3.7.3::3.7.3
+inorder::inorder
+3.7.4::3.7.4
+breadth::breadth
+heap::heap
+sets::sets
+unordered::unordered
+5.1.1::5.1.1
+ordered::ordered
+queues::queues
+standard::standard
+queue::queue
+priority::priority
+double::double
+ended::ended
+avl::avl
+rotations::rotations
+rebalancing::rebalancing
+sorting::sorting
+bubble::bubble
+sort::sort
+merge::merge
+quick::quick
+shell::shell
+radix::radix
+numeric::numeric
+primality::primality
+test::test
+base::base
+conversions::conversions
+greatest::greatest
+common::common
+denominator::denominator
+two::two
+numbers::numbers
+computing::computing
+maximum::maximum
+value::value
+number::number
+speci::speci
+consisting::consisting
+digits::digits
+factorial::factorial
+sequential::sequential
+probability::probability
+strings::strings
+reversing::reversing
+words::words
+sentence::sentence
+detecting::detecting
+palindrome::palindrome
+counting::counting
+string::string
+determining::determining
+repeated::repeated
+rst::rst
+matching::matching
+character::character
+algorithm::algorithm
+walkthrough::walkthrough
+a.1::a.1
+iterative::iterative
+a.2::a.2
+recursive::recursive
+a.3::a.3
+translation::translation
+b.1::b.1
+solutions::solutions
+c.1::c.1
+activation::activation
+records::records
+c.2::c.2
+problems::problems
+nature::nature
+c.3::c.3
+d.1::d.1
+constitutes::constitutes
+unit::unit
+d.2::d.2
+write::write
+tests::tests
+d.3::d.3
+view::view
+suite::suite
+d.4::d.4
+d.5::d.5
+structuring::structuring
+d.6::d.6
+coverage::coverage
+d.7::d.7
+symbol::symbol
+nitions::nitions
+iii::iii
+preface::preface
+story::story
+erent::erent
+lying::lying
+development::development
+impromptu::impromptu
+put::put
+simply::simply
+result::result
+series::series
+emails::emails
+back::back
+authors::authors
+library::library
+framework::framework
+omission::omission
+subtitle::subtitle
+conversation::conversation
+started::started
+create::create
+aesthetically::aesthetically
+pleasing::pleasing
+present::present
+weeks::weeks
+presentation::presentation
+style::style
+fact::fact
+grown::grown
+listings::listings
+chunks::chunks
+text::text
+describing::describing
+structure::structure
+question::question
+works::works
+things::things
+point::point
+thought::thought
+heck::heck
+make::make
+thing::thing
+summer::summer
+began::began
+work::work
+side::side
+actual::actual
+implementation::implementation
+writing::writing
+respect::respect
+structured::structured
+explanations::explanations
+simple::simple
+maintaining::maintaining
+moder::moder-
+ately::ately
+degree::degree
+precision::precision
+eager::eager
+minded::minded
+reader::reader
+happy::happy
+inject::inject
+diagrams::diagrams
+demystify::demystify
+moderatly::moderatly
+challenging::challenging
+visualise::visualise
+remember::remember
+worked::worked
+nally::nally
+concise::concise
+self-explanatory::self-explanatory
+ported::ported
+easily::easily
+mainstream::mainstream
+languages::languages
+java::java
+key::key
+factor::factor
+implementations::implementations
+stated::stated
+designed::designed
+theory::theory
+guideline::guideline
+eternally::eternally
+grateful::grateful
+original::original
+creators::creators
+turn::turn
+out::out
+worse::worse
+normal::normal
+fellows::fellows
+opinion::opinion
+choice::choice
+great::great
+read::read
+subject::subject
+implementing::implementing
+version::version
+hope::hope
+absolute::absolute
+necessity::necessity
+under::under-
+standing::standing
+scenario::scenario
+projects::projects
+concerned::concerned
+performance::performance
+apply::apply
+greater::greater
+emphasis::emphasis
+real-time::real-time
+systems::systems
+selection::selection
+wrong::wrong
+deal::deal
+pain::pain
+absolutely::absolutely
+run::run
+complexity::complexity
+space::space
+requirements::requirements
+selected::selected
+approach::approach
+explain::explain
+theoretical::theoretical
+implications::implications
+good::good
+reason::reason
+compilers::compilers
+compiler::compiler
+amazing::amazing
+optimisation::optimisation
+phases::phases
+cally::cally
+targeted::targeted
+recursion::recursion
+ex::ex-
+ample::ample
+surprised::surprised
+subtle::subtle
+erences::erences
+fast::fast
+slow::slow
+vice::vice
+versa::versa
+concerns::concerns
+target::target
+virtual::virtual
+machines::machines
+leaving::leaving
+issues::issues
+lan::lan-
+guage::guage
+us...well::us...well
+cases::cases
+resulted::resulted
+focuses::focuses
+nal::nal
+note::note
+gospel::gospel
+verify::verify
+feasibly::feasibly
+veri::veri
+mind::mind
+enjoy::enjoy
+reading::reading
+enjoyed::enjoyed
+acknowledgements::acknowledgements
+short::short
+fun::fun
+rewarding::rewarding
+experience::experience
+people::people
+helped::helped
+sonu::sonu
+kapoor::kapoor
+generously::generously
+hosted::hosted
+released::released
+draft::draft
+received::received
+thirteen::thirteen
+thousand::thousand
+downloads::downloads
+generosity::generosity
+reach::reach
+jon::jon
+skeet::skeet
+provided::provided
+alarming::alarming
+suggestions::suggestions
+edited::edited
+odd::odd
+suggestion::suggestion
+email::email
+feedback::feedback
+listened::listened
+doubt::doubt
+content::content
+uenced::uenced
+special::special
+publicise::publicise
+microsoft::microsoft
+channel::channel
+weekly::weekly
+show::show
+dan::dan
+bloggers::bloggers
+spread::spread
+word::word
+gave::gave
+audience::audience
+extremely::extremely
+contributed::contributed
+program::program-
+ming::ming
+community::community
+ceases::ceases
+amaze::amaze
+constituents::constituents
+give::give
+ph.d::ph.d
+candidate::candidate
+queensland::queensland
+university::university
+technology::technology
+qut::qut
+parallelism::parallelism
+eresearch::eresearch
+centre1::centre1
+holds::holds
+computer::computer
+science::science
+mvp::mvp
+main::main
+interests::interests
+contacted::contacted
+places::places
+personal::personal
+website::website
+blog::blog
+studying::studying
+masters::masters
+flo::flo-
+rence::rence
+vary::vary
+web::web
+research::research
+elds::elds
+mining::mining
+vision::vision
+maintains::maintains
+italian::italian
+found::found
+1http::1http
+vii::vii
+page::page
+intentionally::intentionally
+left::left
+blank::blank
+chapter::chapter
+uncommon::uncommon
+independent::independent
+easy::easy
+porting::porting
+nitive::nitive
+part::part
+presents::presents
+devised::devised
+based::based
+respective::respective
+considered::considered
+norm::norm
+alongside::alongside
+formal::formal
+proofs::proofs
+abstract::abstract
+depict::depict
+appeals::appeals
+larger::larger
+written::written
+assumptions::assumptions
+approachable::approachable
+assume::assume
+familiar::familiar
+analysis::analysis
+extensively::extensively
+vital::vital
+general::general
+determine::determine
+scenarios::scenarios
+chosen::chosen
+reasons::reasons
+important::important
+measurement::measurement
+judge::judge
+mathematical::mathematical
+figure::figure
+algorithmic::algorithmic
+expansion::expansion
+shows::shows
+times::times
+demonstrate::demonstrate
+choose::choose
+cient::cient
+sanity::sanity
+graph::graph
+omitted::omitted
+cubic::cubic
+exponential::exponential
+small::small
+avoid::avoid
+explains::explains
+notations::notations
+constant::constant
+operation::operation
+depend::depend
+size::size
+input::input
+e.g::e.g
+adding::adding
+tail::tail
+maintain::maintain
+pointer::pointer
+linear::linear
+proportionate::proportionate
+log::log
+logarithmic::logarithmic
+break::break
+problem::problem
+smaller::smaller
+invocation::invocation
+breaks::breaks
+takes::takes
+results::results
+stitches::stitches
+quadratic::quadratic
+rare::rare
+incredibly::incredibly
+encounter::encounter
+items::items
+signal::signal
+review::review
+design::design
+prototyp::prototyp-
+ing::ing
+designs::designs
+intention::intention
+solving::solving
+irrespective::irrespective
+strongly::strongly
+advise::advise
+optimise::optimise
+loops::loops
+calls::calls
+biggest::biggest
+asset::asset
+es::es-
+sentially::sentially
+discard::discard
+hardware::hardware
+faster::faster
+set::set
+suitably::suitably
+large::large
+applies::applies
+ran::ran
+ma::ma-
+chine::chine
+isolates::isolates
+growth::growth
+grows::grows
+generally::generally
+acts::acts
+communication::communication
+tool::tool
+picture::picture
+scene::scene
+meeting::meeting
+fellow::fellow
+developers::developers
+product::product
+group::group
+discussing::discussing
+prototype::prototype
+discovery::discovery
+massive::massive
+networks::networks
+minutes::minutes
+elapse::elapse
+discussed::discussed
+idea::idea
+discussion::discussion
+high::high
+level::level
+ciency::ciency
+replay::replay
+head::head
+talking::talking
+developer::developer
+states::states
+asymptotic::asymptotic
+choices::choices
+selecting::selecting
+purpose::purpose
+readers::readers
+budgets::budgets
+feature::feature
+budget::budget
+represents::represents
+up::up-
+permost::permost
+bound::bound
+save::save
+necessarily::necessarily
+remaining::remaining
+features::features
+imagine::imagine
+application::application
+team::team
+developing::developing
+routines::routines
+essentially::essentially
+spin::spin
+required::required
+boss::boss
+tells::tells
+start::start
+exceed::exceed
+invoked::invoked
+successful::successful
+strive::strive
+optimal::optimal
+taking::taking
+quantitative::quantitative
+properties::properties
+superior::superior
+programmer::programmer
+measuring::measuring
+critical::critical
+success::success
+pseudo-imperative::pseudo-imperative
+coding::coding
+format::format
+basics::basics
+port::port
+ectively::ectively
+explicit::explicit
+requirement::requirement
+imple::imple-
+mentations::mentations
+thinking::thinking
+functional::functional
+aspects::aspects
+paradigm::paradigm
+produce::produce
+haskell::haskell
+ocaml::ocaml
+listed::listed
+provide::provide
+security::security
+sand::sand
+boxing::boxing
+memory::memory
+management::management
+garbage::garbage
+collection::collection
+trivial::trivial
+pointers::pointers
+describe::describe
+description::description
+context::context
+managed::managed
+environment::environment
+interpret::interpret
+programmers::programmers
+fair::fair
+amount::amount
+subtleties::subtleties
+is::is-
+sue::sue
+emphasise::emphasise
+comfortable::comfortable
+successfully::successfully
+pseudo::pseudo-
+essential::essential
+user::user
+primitive::primitive
+constructs::constructs
+lost::lost
+algo::algo-
+rithms::rithms
+presented::presented
+confusing::confusing
+follow::follow
+experienced::experienced
+generic::generic
+types::types
+samples::samples
+inheritance::inheritance
+encapsulation::encapsulation
+polymorphism::polymorphism
+planning::planning
+implemented::implemented
+x1.7::x1.7
+makes::makes
+extensive::extensive
+desirable::desirable
+interfaces::interfaces
+interpreting::interpreting
+pre-conditions::pre-conditions
+enforced::enforced
+post-conditions::post-conditions
+represent::represent
+applying::applying
+struc::struc-
+ture::ture
+type::type
+parameters::parameters
+inferred::inferred
+explicitly::explicitly
+begun::begun
+return::return
+post::post-
+condition::condition
+ciently::ciently
+obvious::obvious
+sake::sake
+brevity::brevity
+require::require
+assign::assign
+contexts::contexts
+operations::operations
+performed::performed
+additionally::additionally
+parameter::parameter
+clue::clue
+instance::instance
+pseudo-name::pseudo-name
+translates::translates
+integer::integer
+bits::bits
+bit::bit
+machine::machine
+similarly::similarly
+resizeable::resizeable
+array::array
+vector::vector
+last::last
+major::major
+end::end
+construct::construct
+close::close
+scope::scope
+loop::loop
+state::state
+interpretation::interpretation
+scopes::scopes
+closed::closed
+implicit::implicit
+closure::closure
+complex::complex
+lead::lead
+ambiguity::ambiguity
+straightforward::straightforward
+signature::signature
+algorithmname::algorithmname
+arg1::arg1
+arg2::arg2
+argn::argn
+immediately::immediately
+pre::pre
+post::post
+condi::condi-
+tions::tions
+compute::compute
+computed::computed
+describes::describes
+single::single
+conditions::conditions
+enforce::enforce
+pre-conidition::pre-conidition
+opera::opera-
+tion::tion
+cover::cover
+null::null
+passed::passed
+post-condition::post-condition
+ect::ect
+sorted::sorted
+ascending::ascending
+handle::handle
+non-conformance::non-conformance
+pre::pre-
+exceptional::exceptional
+message::message
+exception::exception
+caller::caller
+failed::failed
+execute::execute
+books::books
+recommend::recommend
+pen::pen
+paper::paper
+track::track
+variable::variable
+names::names
+table::table
+column::column
+continuously::continuously
+update::update
+columns::columns
+mutations::mutations
+occurring::occurring
+intuitively::intuitively
+map::map
+relationships::relationships
+rest::rest
+suggest::suggest
+variables::variables
+calculations::calculations
+dealing::dealing
+traces::traces
+function::function
+cleaner::cleaner
+drawing::drawing
+elaborate::elaborate
+arrows::arrows
+quickly::quickly
+systematic::systematic
+easier::easier
+split::split
+parts::parts
+pseudo-implementations::pseudo-implementations
+uncom::uncom-
+mon::mon
+varying::varying
+purposes::purposes
+sequentially::sequentially
+beginning::beginning
+chapters::chapters
+independently::independently
+entirety::entirety
+section::section
+interested::interested
+initially::initially
+con::con-
+cerned::cerned
+previous::previous
+vast::vast
+majority::majority
+appendix::appendix
+listing::listing
+symbols::symbols
+meaning::meaning
+keyword::keyword
+yield::yield
+light::light
+method::method
+exit::exit
+returns::returns
+control::control
+exhausted::exhausted
+tested::tested
+minimised::minimised
+driven::driven
+esh::esh
+transcribe::transcribe
+satisfying::satisfying
+progressively::progressively
+satis::satis
+fairly::fairly
+areas::areas
+prove::prove
+satisfy::satisfy
+tricky::tricky
+portions::portions
+case::case
+identify::identify
+mentation::mentation
+overwhelming::overwhelming
+hinder::hinder
+ability::ability
+greatly::greatly
+bom::bom-
+barded::barded
+sub-divide::sub-divide
+composing::composing
+task::task
+clouding::clouding
+details::details
+contribute::contribute
+core::core
+piece::piece
+creating::creating
+stable::stable
+invite::invite
+depth::depth
+aligned::aligned
+actively::actively
+open::open
+source::source
+project1::project1
+houses::houses
+project::project
+named::named
+digest::digest
+embark::embark
+understand::understand
+sense::sense
+achieve::achieve
+outcome::outcome
+points::points
+1all::1all
+encouraged::encouraged
+requests::requests
+bugs::bugs
+improve::improve
+perspective::perspective
+nodes::nodes
+representing::representing
+random::random
+excluded::excluded
+characteristics::characteristics
+stands::stands
+chose::chose
+aptly::aptly
+references::references
+performing::performing
+traditional::traditional
+front::front
+rule::rule
+inserting::inserting
+middle::middle
+add::add
+designated::designated
+traverse::traverse
+current::current
+predecessor::predecessor
+yields::yields
+attractive::attractive
+dynamically::dynamically
+resized::resized
+incurs::incurs
+copy::copy
+penalty::penalty
+eventually::eventually
+incur::incur
+consists::consists
+populated::populated
+integers::integers
+talk::talk
+form::form
+implicitly::implicitly
+api::api
+adds::adds
+append::append
+updating::updating
+appropriately::appropriately
+tail.next::tail.next
+se::se-
+quence::quence
+resulting::resulting
+checking::checking
+similar::similar
+x2.1.4::x2.1.4
+item::item
+true::true
+false::false
+n.value::n.value
+n.next::n.next
+deleting::deleting
+account::account
+empty::empty
+remove::remove
+removing::removing
+exist::exist
+described::described
+any::any-
+removed::removed
+head.next::head.next
+n.next.value::n.next.value
+conditional::conditional
+line::line
+n.next.next::n.next.next
+ned::ned
+x2.2::x2.2
+continue::continue
+node.next::node.next
+check::check
+traversed::traversed
+forward::forward
+manner::manner
+i.e::i.e
+right::right
+demonstrated::demonstrated
+wanted::wanted
+perform::perform
+x2.1.3::x2.1.3
+acquire::acquire
+fundamental::fundamental
+expensive::expensive
+nding::nding
+backwards::backwards
+cost::cost
+depicts::depicts
+applied::applied
+reversetraversal::reversetraversal
+belong::belong
+curr::curr
+prev::prev
+prev.next::prev.next
+curr.value::curr.value
+real::real
+interest::interest
+shown::shown
+x2.2.3::x2.2.3
+erence::erence
+traveral::traveral
+previously::previously
+x2.1.2::x2.1.2
+x2.1.1::x2.1.1
+bind::bind
+inserted::inserted
+n.previous::n.previous
+sequence::sequence
+guessed::guessed
+added::added
+binding::binding
+additional::additional
+correct::correct
+head.value::head.value
+head.previous::head.previous
+tail.previous::tail.previous
+n.previous.next::n.previous.next
+n.next.previous::n.next.previous
+x2.1.5::x2.1.5
+creative::creative
+invention::invention
+opposite::opposite
+direction::direction
+action::action
+unknown::unknown
+store::store
+exceeding::exceeding
+involves::involves
+invoking::invoking
+resizing::resizing
+requires::requires
+overhead::overhead
+pay::pay
+accessing::accessing
+index::index
+expense::expense
+bytes::bytes
+read::NNS
+count::count
+tracks::tracks
+contained::contained
+property::property
+basic::basic
+in::in-
+sertions::sertions
+accommodating::accommodating
+non-trivial::non-trivial
+forwards::forwards
+token::token
+stream::stream
+parse::parse
+descent::descent
+fashion::fashion
+backtrack::backtrack
+bi-directional::bi-directional
+simpler::simpler
+quicker::quicker
+trees::trees
+bsts::bsts
+root::root
+subtree::subtree
+rules::rules
+subtrees::subtrees
+favourably::favourably
+done::done
+attained::attained
+bst::bst
+balanced::balanced
+balancing::balancing
+alias::alias
+unbalanced::unbalanced
+mentioned::mentioned
+moderately::moderately
+insert::insert
+custom::custom
+checks::checks
+location::location
+insertnode::insertnode
+current.value::current.value
+current.left::current.left
+current.right::current.right
+non::non-
+nish::nish
+invoke::invoke
+guides::guides
+stage::stage
+chop::chop
+recurse::recurse
+comparing::comparing
+totally::totally
+simultaneously::simultaneously
+brie::brie
+premise::premise
+nonetheless::nonetheless
+talked::talked
+atomic::atomic
+four::four
+root.value::root.value
+inspect::inspect
+locate::locate
+located::located
+root.left::root.left
+root.right::root.right
+sider::sider
+leaf::leaf
+promote::promote
+fth::fth
+covered::covered
+noted::noted
+possibility::possibility
+occur::occur
+occurrence::occurrence
+relies::relies
+helper::helper
+findp::findp
+arent::arent
+findnode::findnode
+x3.4::x3.4
+x3.5::x3.5
+re::re-
+spectively::spectively
+nodetoremove::nodetoremove
+findparent::findparent
+nodetoremove.left::nodetoremove.left
+nodetoremove.right::nodetoremove.right
+nodetoremove.value::nodetoremove.value
+parent.value::parent.value
+parent.left::parent.left
+parent.right::parent.right
+largestv::largestv
+alue::alue
+alue.right::alue.right
+parents::parents
+alue.value::alue.value
+.right::.right
+transforma::transforma-
+root.left.value::root.left.value
+root.right.value::root.right.value
+callers::callers
+exists::exists
+returning::returning
+returned::returned
+astute::astute
+noticed::noticed
+x3.2::x3.2
+modi::modi
+cation::cation
+easiest::easiest
+call::call
+compare::compare
+termi::termi-
+nating::nating
+completeness::completeness
+findmin::findmin
+findmax::findmax
+reached::reached
+strategies::strategies
+employed::employed
+strategy::strategy
+depends::depends
+visitation::visitation
+touch::touch
+derive::derive
+binarysearcht::binarysearcht
+ree::ree
+visit::visit
+visited::visited
+x3.7.1::x3.7.1
+yielded::yielded
+variation::variation
+x3.7.2::x3.7.2
+beauties::beauties
+comparison::comparison
+18i::18i
+par::par-
+ticular::ticular
+deeper::deeper
+proceed::proceed
+hade::hade
+traditionally::traditionally
+sizeable::sizeable
+breadthfirst::breadthfirst
+q.enqueue::q.enqueue
+q.isempty::q.isempty
+q.dequeue::q.dequeue
+solution::solution
+inherent::inherent
+lookup::lookup
+ecient::ecient
+remains::remains
+ways::ways
+typically::typically
+operate::operate
+pretty::pretty
+assumption::assumption
+attain::attain
+earlier::earlier
+pathologically::pathologically
+examine::examine
+enforces::enforces
+self-balancing::self-balancing
+employs::employs
+min::min
+max::max
+determines::determines
+children::children
+unlike::unlike
+refer::refer-
+ences::ences
+conceptually::conceptually
+represented::represented
+top-to-bottom::top-to-bottom
+left-to-right::left-to-right
+direct::direct
+child::child
+centred::centred
+notion::notion
+understanding::understanding
+step::step
+process::process
+default::default
+capacity::capacity
+behaviour::behaviour
+program::program
+unpredictable::unpredictable
+internal::internal
+dynamic::dynamic
+initial::initial
+upper::upper
+storage::storage
+limit::limit
+encapsulates::encapsulates
+grow::grow
+representation::representation
+arraylist::arraylist
+varies::varies
+prohibited::prohibited
+treat::treat
+non-null::non-null
+resolve::resolve
+studied::studied
+clarity::clarity
+issue::issue
+prohibiting::prohibiting
+calculate::calculate
+expressions::expressions
+calculation::calculation
+calculates::calculates
+designing::designing
+ensure::ensure
+preserved::preserved
+post-insertion::post-insertion
+free::free
+slot::slot
+counter::counter
+increment::increment
+validating::validating
+min-heap::min-heap
+ordering::ordering
+swap::swap
+converting::converting
+counterpart::counterpart
+calculating::calculating
+verifying::verifying
+steps::steps
+minheapify::minheapify
+maxheapify::maxheapify
+min::min-
+heapify::heapify
+operator::operator
+entering::entering
+changed::changed
+ensuring::ensuring
+delete::delete
+include::include
+updated::updated
+findindex::findindex
+visually::visually
+backing::backing
+objects::objects
+allocated::allocated
+unmanaged::unmanaged
+hole::hole
+collector::collector
+reclaim::reclaim
+collected::collected
+matter::matter
+x3.7.4::x3.7.4
+presence::presence
+advantage::advantage
+hold::hold
+exhaust::exhaust
+factoring::factoring
+including::including
+logic::logic
+optimising::optimising
+deterministically::deterministically
+interesting::interesting
+inspected::inspected
+answer::answer
+inspecting::inspecting
+fall::fall
+feel::feel
+extra::extra
+justi::justi
+prevent::prevent
+tailor::tailor
+max-heap::max-heap
+ipped::ipped
+event::event
+con::con
+displayed::displayed
+expression::expression
+x4.3::x4.3
+starting::starting
+physical::physical
+partition::partition
+conceptual::conceptual
+care::care
+mutation::mutation
+living::living
+dead::dead
+advice::advice
+mutated::mutated
+longer::longer
+potentially::potentially
+lengthof::lengthof
+heaparray::heaparray
+platform::platform
+indexes::indexes
+live::live
+subscript::subscript
+disambiguate::disambiguate
+separate::separate
+picked::picked
+bene::bene
+intervention::intervention
+heaps::heaps
+prescribed::prescribed
+commonly::commonly
+implement::implement
+x6.2::x6.2
+sample::sample
+facilitate::facilitate
+x4.1::x4.1
+x4.2::x4.2
+sections::sections
+referred::referred
+told::told
+gured::gured
+abides::abides
+policy::policy
+complexities::complexities
+overly::overly
+price::price
+outgrows::outgrows
+assist::assist
+minimising::minimising
+impact::impact
+distinct::distinct
+tend::tend
+avoiding::avoiding
+demonstrates::demonstrates
+nes::nes
+curly::curly
+braces::braces
+member::member
+denoted::denoted
+ning::ning
+manually::manually
+stating::stating
+members::members
+tiresome::tiresome
+importantly::importantly
+providing::providing
+nition::nition
+fxjx::fxjx
+positive::positive
+hand::hand
+remainder::remainder
+arithmetic::arithmetic
+nite::nite
+natural::natural
+finally::finally
+intersection::intersection
+union::union
+per::per-
+formed::formed
+graphically::graphically
+f2g::f2g
+frame::frame-
+extension::extension
+methods::methods
+sys::sys-
+tem.linq.enumerable2::tem.linq.enumerable2
+2http::2http
+system.linq.enumerable::system.linq.enumerable
+sequences::sequences
+set1::set1
+set2::set2
+created::created
+foreach::foreach
+union.add::union.add
+runtime::runtime
+exhibit::exhibit
+insertions::insertions
+worth::worth
+pointing::pointing
+fewest::fewest
+smallerset::smallerset
+set1.count::set1.count
+set2.count::set2.count
+set1.contains::set1.contains
+set2.contains::set2.contains
+intersection.add::intersection.add
+operating::operating
+mem::mem-
+bers::bers
+conform::conform
+scheme::scheme
+libraries::libraries
+mention::mention
+hash::hash
+approaching::approaching
+hashing::hashing
+tables::tables
+employ::employ
+terms::terms
+prede::prede
+versions::versions
+onwards::onwards
+replaced::replaced
+primarily::primarily
+realised::realised
+wrapper::wrapper
+ensures::ensures
+unique::unique
+learn::learn
+select::select
+x5.1.1::x5.1.1
+rely::rely
+acceptable::acceptable
+look-up::look-up
+inser::inser-
+existence::existence
+yielding::yielding
+clear::clear
+x11.4::x11.4
+construction::construction
+amounts::amounts
+soft::soft-
+ware::ware
+mode::mode
+kernel::kernel
+applications::applications
+system::system
+fundamentally::fundamentally
+honour::honour
+fifo::fifo
+served::served
+access::access
+historically::historically
+enqueue::enqueue
+dequeue::dequeue
+retrieves::retrieves
+removes::removes
+peek::peek
+walk::walk
+observ::observ-
+1this::1this
+prior::prior
+popular::popular
+discuss::discuss
+x2.1::x2.1
+removal::removal
+modifying::modifying
+arrived::arrived
+comparer::comparer
+highest::highest
+deque::deque
+prioritization::prioritization
+utilising::utilising
+exposed::exposed
+interface::interface
+lines::lines
+enqueuefront::enqueuefront
+identi::identi
+supported::supported
+enqueueback::enqueueback
+dequeuefront::dequeuefront
+dequeueback::dequeueback
+peekfront::peekfront
+peekback::peekback
+one-to-one::one-to-one
+frameworks::frameworks
+adhere::adhere
+collections::collections
+expose::expose
+safely::safely
+enqueueing::enqueueing
+enqueuing::enqueuing
+pro::pro-
+grammer::grammer
+maxi::maxi-
+mum::mum
+inherently::inherently
+leave::leave
+minimization::minimization
+techniques::techniques
+invocations::invocations
+considerable::considerable
+percentage::percentage
+harder::harder
+gauge::gauge
+strategically::strategically
+bypass::bypass
+aforementioned::aforementioned
+baking::baking
+consumes::consumes
+redundant::redundant
+increases::increases
+targets::targets
+reclamation::reclamation
+opaque::opaque
+ref::ref-
+erenced::erenced
+unreachable::unreachable
+marked::marked
+allocation::allocation
+deallocation::deallocation
+decide::decide
+stores::stores
+freed::freed
+arrive::arrive
+dealt::dealt
+rst-in::rst-in-
+rst-out::rst-out
+windows::windows
+cpu::cpu
+scheduler::scheduler
+utilise::utilise
+quantum::quantum
+unusual::unusual
+lowest::lowest
+lot::lot
+early::early
+g.m::g.m
+adelson-velsky::adelson-velsky
+e.m::e.m
+landis::landis
+invented::invented
+self::self-
+calling::calling
+height::height
+restored::restored
+forces::forces
+shape::shape
+continuing::continuing
+focus::focus
+balance::balance
+obtained::obtained
+1,2,3,4,5::1,2,3,4,5
+worst::worst
+run::run-
+running::running
+information::information
+stored::stored
+combined::combined
+technique::technique
+restores::restores
+inventors::inventors
+well-known::well-known
+rotation::rotation
+1,5,4,3,2::1,5,4,3,2
+preserving::preserving
+decrease::decrease
+moving::moving
+leftrotation::leftrotation
+node.right::node.right
+rightnode::rightnode
+rightnode.left::rightnode.left
+rightrotation::rightrotation
+node.left::node.left
+leftnode::leftnode
+leftnode.right::leftnode.right
+symmetric::symmetric
+notice::notice
+leftandrightrotation::leftandrightrotation
+rightandleftrotation::rightandleftrotation
+documenting::documenting
+performs::performs
+subsequently::subsequently
+checkbalance::checkbalance
+needed::needed
+current.height::current.height
+,height::,height
+current.left.left::current.left.left
+current.left.right::current.left.right
+current.right.left::current.right.left
+current.right.right::current.right.right
+operates::operates
+travel::travel
+violated::violated
+rebalance::rebalance
+x3.3::x3.3
+adheres::adheres
+rebalanced::rebalanced
+upsets::upsets
+stackpath::stackpath
+path.push::path.push
+path::path
+path.pop::path.pop
+trackback::trackback
+sophisticated::sophisticated
+smarter::smarter
+younger::younger
+brother::brother
+older::older
+avoids::avoids
+runtimes::runtimes
+guarantees::guarantees
+enforcement::enforcement
+translated::translated
+forms::forms
+imply::imply
+bubblesort::bubblesort
+splitting::splitting
+sized::sized
+merging::merging
+mergeordered::mergeordered
+iterations::iterations
+mergesort::mergesort
+list.count::list.count
+left.count::left.count
+right.count::right.count
+divide::divide
+impera::impera
+starts::starts
+picking::picking
+pivot::pivot
+elements::elements
+recursively::recursively
+lesser::lesser
+sub::sub
+choosing::choosing
+median::median
+element::element
+funda::funda-
+mental::mental
+drastically::drastically
+reduced::reduced
+quicksort::quicksort
+medianvalue::medianvalue
+equal.insert::equal.insert
+less.insert::less.insert
+greater.insert::greater.insert
+concatenate::concatenate
+equal::equal
+playing::playing
+cards::cards
+card::card
+intent::intent
+building::building
+insertionsort::insertionsort
+unsorted::unsorted
+x8.4::x8.4
+achieves::achieves
+distances::distances
+log2::log2
+straight::straight
+ers::ers
+selects::selects
+red::red
+coloured::coloured
+square::square
+holding::holding
+shellsort::shellsort
+buckets::buckets
+bucket::bucket
+emptied::emptied
+isolating::isolating
+keys::keys
+hundreds::hundreds
+clarify::clarify
+progressing::progressing
+tens::tens
+hundred::hundred
+total::total
+clari::clari
+thousands::thousands
+asked::asked
+pad::pad
+implemen::implemen-
+tation::tation
+isolate::isolate
+spell::spell
+accessed::accessed
+keytoaccess::keytoaccess
+lets::lets
+substitution::substitution
+multiplying::multiplying
+ten::ten
+maxkeysize::maxkeysize
+indexofkey::indexofkey
+fori::fori
+getqueueindex::getqueueindex
+.enqueue::.enqueue
+collapsequeues::collapsequeues
+clearqueues::clearqueues
+highlighted::highlighted
+x8.3::x8.3
+x8.1::x8.1
+purely::purely
+factors::factors
+nicely::nicely
+expressed::expressed
+slower::slower
+bad::bad
+careful::careful
+denotes::denotes
+prime::prime
+attempt::attempt
+isprime::isprime
+determined::determined
+sqrt::sqrt
+convert::convert
+equivalent::equivalent
+octal::octal
+hexadecimal::hexadecimal
+trace::trace
+tobinary::tobinary
+converted::converted
+denomina::denomina-
+tor::tor
+routine::routine
+mathematics::mathematics
+multiple::multiple
+elegant::elegant
+euclid::euclid
+greatestcommondenominator::greatestcommondenominator
+calculated::calculated
+num::num-
+ber::ber
+computes::computes
+ffffff16::ffffff16
+numberbase::numberbase
+restricted::restricted
+enumeration::enumeration
+fbinary::fbinary
+decimal::decimal
+16g::16g
+modelled::modelled
+readable::readable
+cast::cast
+extract::extract
+relevant::relevant
+option::option
+argument::argument
+maxvalue::maxvalue
+power::power
+cursive::cursive
+build::build
+handy::handy
+gain::gain
+domains::domains
+domain::domain
+attainable::attainable
+drive::drive
+advanced::advanced
+planet::planet
+weather::weather
+forecasts::forecasts
+inside::inside
+looping::looping
+match::match
+occurs::occurs
+sequentialsearch::sequentialsearch
+statistical::statistical
+addition::addition
+frequency::frequency
+swapping::swapping
+non-uniform::non-uniform
+frequent::frequent
+positions::positions
+reducing::reducing
+scanning::scanning
+searched::searched
+increased::increased
+probabilitysearch::probabilitysearch
+boolean::boolean
+indicating::indicating
+founded::founded
+decided::decided
+refers::refers
+largely::largely
+underlying::underlying
+deter::deter-
+mine::mine
+sit::sit
+lack::lack
+model::model
+transformations::transformations
+programs::programs
+formulated::formulated
+curiosity::curiosity
+extracting::extracting
+sub-string::sub-string
+inventiveness::inventiveness
+characters::characters
+reverses::reverses
+principal::principal
+delimited::delimited
+white::white
+markers::markers
+reversewords::reversewords
+reversed::reversed
+value.length::value.length
+skip::skip
+whitespace::whitespace
+march::march
+chars::chars
+length::length
+sb.append::sb.append
+sb.length::sb.length
+cut::cut
+real-life::real-life
+turns::turns
+rithm::rithm
+ends::ends
+ispalindrome::ispalindrome
+eliot::eliot
+toilet::toilet
+punctuation::punctuation
+valid::valid
+marching::marching
+value.strip::value.strip
+.touppercase::.touppercase
+word.length::word.length
+strip::strip
+discards::discards
+heavily::heavily
+compacted::compacted
+uppercase::uppercase
+palindromes::palindromes
+making::making
+robust::robust
+detect::detect
+aware::aware
+tracking::tracking
+skipping::skipping
+delimits::delimits
+ben::ben
+ate::ate
+hay::hay
+distinguished::distinguished
+wordcount::wordcount
+inword::inword
+delimiting::delimiting
+encountered::encountered
+hitting::hitting
+separated::separated
+occurrences::occurrences
+string.split1::string.split1
+char::char
+delimiter::delimiter
+sub-strings::sub-strings
+indexed::indexed
+pattern::pattern
+iterate::iterate
+subtract::subtract
+stings::stings
+x11.3::x11.3
+undesired::undesired
+uniques::uniques
+desired::desired
+repeatedwordcount::repeatedwordcount
+value.split::value.split
+uniques.add::uniques.add
+word.strip::word.strip
+words.length::words.length
+uniques.count::uniques.count
+x11.1::x11.1
+accurate::accurate
+minus::minus
+matches::matches
+discarding::discarding
+equality::equality
+non-negative::non-negative
+occurred::occurred
+word,match::word,match
+occured::occured
+fascinating::fascinating
+google::google
+nuances::nuances
+encodings::encodings
+spurred::spurred
+introductory::introductory
+devise::devise
+learning::learning
+assisted::assisted
+tracing::tracing
+diagram::diagram
+constantly::constantly
+mutates::mutates
+history::history
+held::held
+infer::infer
+patterns::patterns
+powerful::powerful
+combining::combining
+visual::visual
+past::past
+generated::generated
+outlined::outlined
+x11.2::x11.2
+block::block
+contiguous::contiguous
+presenting::presenting
+draw::draw
+visualising::visualising
+execution::execution
+statement::statement
+bloated::bloated
+print::print
+compact::compact
+annotate::annotate
+aid::aid
+change::change
+included::included
+convenient::convenient
+operated::operated
+interrogate::interrogate
+neveroddoreven::neveroddoreven
+stress::stress
+correctness::correctness
+sketch::sketch
+keeping::keeping
+changing::changing
+solve::solve
+walking::walking
+fiboncacci::fiboncacci
+fibonacci::fibonacci
+bonacci::bonacci
+jump::jump
+showing::showing
+diagrammtic::diagrammtic
+preceeding::preceeding
+hit::hit
+etch::etch
+closer::closer
+chain::chain
+labelled::labelled
+annotations::annotations
+branch::branch
+contiued::contiued
+subesequently::subesequently
+diagrammatically::diagrammatically
+hard::hard
+mastering::mastering
+devising::devising
+conversion::conversion
+pseudo::pseudo
+x9.1::x9.1
+public::public
+static::static
+bool::bool
+int::int
+innerloopbound::innerloopbound
+math.floor::math.floor
+math.sqrt::math.sqrt
+utility::utility
+ascertain::ascertain
+consideration::consideration
+strict::strict
+preconditions::preconditions
+situations::situations
+preserve::preserve
+handled::handled
+throwing::throwing
+unfamiliar::unfamiliar
+browse::browse
+descirbes::descirbes
+key::key-
+succinct::succinct
+modern::modern
+advantages::advantages
+bring::bring
+progress::progress
+trouble::trouble
+speak::speak
+manifests::manifests
+stack::stack
+whatsoever::whatsoever
+do-while::do-while
+counterparts::counterparts
+speed::speed
+production::production
+companies::companies
+prerequisite::prerequisite
+tolerance::tolerance
+reserved::reserved
+ciencies::ciencies
+inviting::inviting
+rate::rate
+lean::lean
+conquer::conquer
+practice::practice
+spawning::spawning
+cheap::cheap
+pile::pile
+expected::expected
+allotted::allotted
+thread::thread
+shutdown::shutdown
+native::native
+bigger::bigger
+record::record
+support::support
+lightweight::lightweight
+pushed::pushed
+address::address
+top-of-stack::top-of-stack
+incremented::incremented
+local::local
+ine::ine
+creates::creates
+chunk::chunk
+consumed::consumed
+wait::wait
+unwound::unwound
+nested::nested
+exits::exits
+unwinding::unwinding
+decremented::decremented
+popped::popped
+chance::chance
+dusting::dusting
+cobwebs::cobwebs
+age::age
+famous::famous
+highlights::highlights
+beauty::beauty
+pitfalls::pitfalls
+job::job
+shock::shock
+rami::rami
+cations::cations
+warning::warning
+perfect::perfect
+point::point-
+makeup::makeup
+wit::wit
+possibly::possibly
+adhering::adhering
+limitations::limitations
+trade::trade
+readability::readability
+higher::higher
+thumb::thumb
+caution::caution
+wind::wind
+defensive::defensive
+prevail::prevail
+home::home
+perfectly::perfectly
+overkill::overkill
+consult::consult
+environ::environ-
+ment::ment
+recognises::recognises
+unheard::unheard
+commercial::commercial
+limited::limited
+accept::accept
+accountability::accountability
+discarded::discarded
+belief::belief
+burden::burden
+proof::proof
+company::company
+centric::centric
+roles::roles
+truth::truth
+boundary::boundary
+safety::safety
+net::net
+tweak::tweak
+alerted::alerted
+broken::broken
+recent::recent
+bar::bar
+quality::quality
+carefully::carefully
+widely::widely
+platforms::platforms
+impressive::impressive
+catalogue::catalogue
+junit::junit
+jav::jav
+nunit::nunit
+boost::boost
+ships::ships
+link::link
+doc::doc-
+umentation::umentation
+cppunit::cppunit
+worry::worry
+sparse::sparse
+unstructured::unstructured
+wanting::wanting
+future::future
+failure::failure
+goal::goal
+tedious::tedious
+waiting::waiting
+continuous::continuous
+server::server
+testers::testers
+employing::employing
+catch::catch
+niggling::niggling
+error::error
+customer::customer
+embarrassing::embarrassing
+bug::bug
+reported::reported
+debate::debate
+understatement::understatement
+personify::personify
+ques::ques-
+years::years
+acronym::acronym
+tdd::tdd
+founding::founding
+principles::principles
+watch::watch
+fail::fail
+pass::pass
+assertions::assertions
+failing::failing
+situation::situation
+forget::forget
+bothered::bothered
+coded::coded
+preferred::preferred
+favoured::favoured
+injustice::injustice
+mantra::mantra
+associate::associate
+signi::signi
+green::green
+passes::passes
+refactor::refactor
+restructure::restructure
+solely::solely
+restructuring::restructuring
+maintainable::maintainable
+progressive::progressive
+methodology::methodology
+revisions::revisions
+cleanly::cleanly
+ecosystem::ecosystem
+treated::treated
+ranges::ranges
+clean::clean
+formatting::formatting
+repository::repository
+spend::spend
+erently::erently
+fully::fully
+documented::documented
+importance::importance
+inevitably::inevitably
+imperatives::imperatives
+assemble::assemble
+asser::asser-
+act::act
+assembled::assembled
+mutate::mutate
+assert::assert
+expect::expect
+void::void
+mytest::mytest
+t.methoda::t.methoda
+assert.istrue::assert.istrue
+t.boolexpr::t.boolexpr
+viewed::viewed
+duction::duction
+person::person
+persontest::persontest
+abstracted::abstracted
+disjoint::disjoint
+dll::dll
+classes::classes
+statistics::statistics
+indicator::indicator
+units::units
+depending::depending
+creation::creation
+blanket::blanket
+breaking::breaking
+assignment::assignment
+inequality::inequality
+logical::logical
+builds::builds
+e.1::e.1

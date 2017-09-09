@@ -1,0 +1,111 @@
+An operating System (OS) is an intermediary between users and computer hardware. It provides users an environment in which a user can execute programs conveniently and efficiently.
+
+In technical terms, It is a software which manages hardware. An operating System controls the allocation of resources and services such as memory, processors, devices and information.
+
+Definition
+An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.
+
+Conceptual view of an Operating System
+Following are some of important functions of an operating System.
+
+Memory Management
+
+Processor Management
+
+Device Management
+
+File Management
+
+Security
+
+Control over system performance
+
+Job accounting
+
+Error detecting aids
+
+Coordination between other software and users
+
+Memory Management
+Memory management refers to management of Primary Memory or Main Memory. Main memory is a large array of words or bytes where each word or byte has its own address.
+
+Main memory provides a fast storage that can be access directly by the CPU. So for a program to be executed, it must in the main memory. Operating System does the following activities for memory management.
+
+Keeps tracks of primary memory i.e. what part of it are in use by whom, what part are not in use.
+
+In multiprogramming, OS decides which process will get memory when and how much.
+
+Allocates the memory when the process requests it to do so.
+
+De-allocates the memory when the process no longer needs it or has been terminated.
+The task of fulfilling an allocation request consists of locating a block of unused memory of sufficient size. Memory requests are satisfied by allocating portions from a large pool of memory called the heap or free store. At any given time, some parts of the heap are in use, while some are "free" (unused) and thus available for future allocations.
+
+Several issues complicate the implementation, such as external fragmentation, which arises when there are many small gaps between allocated memory blocks, which invalidates their use for an allocation request. The allocator's metadata can also inflate the size of (individually) small allocations. This is often managed by chunking. The memory management system must track outstanding allocations to ensure that they do not overlap and that no memory is ever "lost" as a memory leak.
+
+Efficiency[edit]
+The specific dynamic memory allocation algorithm implemented can impact performance significantly. A study conducted in 1994 by Digital Equipment Corporation illustrates the overheads involved for a variety of allocators. The lowest average instruction path length required to allocate a single memory slot was 52 (as measured with an instruction level profiler on a variety of software).[2]
+
+Implementations[edit]
+Since the precise location of the allocation is not known in advance, the memory is accessed indirectly, usually through a pointer reference. The specific algorithm used to organize the memory area and allocate and deallocate chunks is interlinked with the kernel, and may use any of the following methods:
+
+Fixed-size blocks allocation[edit]
+Main article: Memory pool
+Fixed-size blocks allocation, also called memory pool allocation, uses a free list of fixed-size blocks of memory (often all of the same size). This works well for simple embedded systems where no large objects need to be allocated, but suffers from fragmentation, especially with long memory addresses. However, due to the significantly reduced overhead this method can substantially improve performance for objects that need frequent allocation / de-allocation and is often used in video games.
+
+Buddy blocks[edit]
+For more details on this topic, see Buddy memory allocation.
+In this system, memory is allocated into several pools of memory instead of just one, where each pool represents blocks of memory of a certain power of two in size. All blocks of a particular size are kept in a sorted linked list or tree and all new blocks that are formed during allocation are added to their respective memory pools for later use. If a smaller size is requested than is available, the smallest available size is selected and halved. One of the resulting halves is selected, and the process repeats until the request is complete. When a block is allocated, the allocator will start with the smallest sufficiently large block to avoid needlessly breaking blocks. When a block is freed, it is compared to its buddy. If they are both free, they are combined and placed in the next-largest size buddy-block list.
+
+Systems with virtual memory[edit]
+Main articles: Memory protection and Shared memory
+Virtual memory is a method of decoupling the memory organization from the physical hardware. The applications operate memory via virtual addresses. Each time an attempt to access stored data is made, virtual memory data orders translate the virtual address to a physical address. In this way addition of virtual memory enables granular control over memory systems and methods of access.
+
+In virtual memory systems the operating system limits how a process can access the memory. This feature, called memory protection, can be used to disallow a process to read or write to memory that is not allocated to it, preventing malicious or malfunctioning code in one program from interfering with the operation of another.
+
+Even though the memory allocated for specific processes is normally isolated, processes sometimes need to be able to share information. Shared memory is one of the fastest techniques for inter-process communication.
+
+Memory is usually classified by access rate into primary storage and secondary storage. Memory management systems, among other operations, also handle the moving of information between these two levels of memory.
+
+Processor Management
+In multiprogramming environment, OS decides which process gets the processor when and how much time. This function is called process scheduling. Operating System does the following activities for processor management.
+
+Keeps tracks of processor and status of process. Program responsible for this task is known as traffic controller.
+
+Allocates the processor(CPU) to a process.
+
+De-allocates processor when processor is no longer required.
+
+Device Management
+OS manages device communication via their respective drivers. Operating System does the following activities for device management.
+
+Keeps tracks of all devices. Program responsible for this task is known as the I/O controller.
+
+Decides which process gets the device when and for how much time.
+
+Allocates the device in the efficient way.
+
+De-allocates devices.
+
+File Management
+A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions. Operating System does the following activities for file management.
+
+Keeps track of information, location, uses, status etc. The collective facilities are often known as file system.
+
+Decides who gets the resources.
+
+Allocates the resources.
+
+De-allocates the resources.
+
+Other Important Activities
+Following are some of the important activities that Operating System does.
+
+Security -- By means of password and similar other techniques, preventing unauthorized access to programs and data.
+
+Control over system performance -- Recording delays between request for a service and response from the system.
+
+Job accounting -- Keeping track of time and resources used by various jobs and users.
+
+Error detecting aids -- Production of dumps, traces, error messages and other debugging and error detecting aids.
+
+Coordination between other softwares and users -- Coordination and assignment of compilers, interpreters, assemblers and other software to the various users of the computer systems.

@@ -1,0 +1,257 @@
+
+[pic]
+
+
+
+
+Introduction To Problem Solving And Programming
+Lecture - 7
+Professor: Deepak Gupta
+ In the last lecture we have talked about the Boolean types and character
+types and in this lecture start talking little more firmly about the C
+syntax in what expression in C are and how they are evaluated (refer slide
+time 00:36)
+[pic]
+
+so an expression is essentially denotation of a simple computation we are
+all familiar with  expression from out high school arithmetic here you see
+every expression has a type the types are timed off type we have already
+seen integers long integer short char and so on the type is always
+determined at compile time or a compiler for any given expression and the
+expression to evaluate to evaluate the value that is the value of the
+expression and that is the entering on only at run time when the expression
+gets evaluated for example if you look at the expression x plus y where x
+has  the value three y has the value five then the value of the expression
+x plus y will be eight I think you are very familiar about this then
+expression in general could be simply a variable for example x or y or
+whatever variable a simple variable also an expression an expression could
+also be a constant literal such as the number can or  the number three
+point one four one seven etcetera etcetera and the more complicated
+expression performed out of these kinds of simple expression by using
+operator so we are already familiar with some arithmetic operator like plus
+minus division multiplication and so on every operator has some operand
+most of the operators that we have seen so far  are binary operator which
+means that there are two operands from this example x plus y is an
+expression plus is the operator and x and y are the operand for the
+expression lets talk little bit more about the constant literal of various
+kinds (refer slide time 02:25)
+[pic]
+
+the integer and floating point constants literals have familiar notation
+will not deliver the syntax of these integers and floating point constants
+there very familiar to you already there re some examples minus two is an
+integer literals or twenty five and forty seven etcetera so the integer
+literal essentially a sequence of ??02:49 optionally followed optionally
+preceded plus or minus sign and here are some examples of floating point
+literals five point zero that can be sign plus or minus  sign ten point
+three four five for example and we could also use the familiar exponent
+notation so for example three point zero e minus twelve is the same as the
+three point zero into ten to the power minus twelve these are all the
+floating point literals by default integer literals of this kind have the
+type int and floating point literals of these kind have the type double but
+we can say that the particular integer literal or the floating point
+literal has its different type  as follows (refer slide time 03:31)
+
+so for an integer literal constant use the suffix the letter l and the type
+is declared to be long rather than the default type int similarly if a
+suffix go after the literal then thetype becomes unsigned int and is the
+suffix used ??03:50 the type becomes unsigned long so for example five has
+type int forty five l has type long and forty five l has would have the
+type unsigned long similarly for the floating point literal if we use the f
+or l has the suffix after the constant then we are forcing it to be  of
+type float or long double respectively remember that before type of
+floating point constant  and literal is double so for example just five
+point four  has a type double five point four f has a type float and five
+point four has type long double we will be wondering why the type of these
+constant literals are important as we will see soon the type of the various
+components of the expression determines the type of the overall expression
+and in some case depending on the type from the value of the expression and
+so therefore  it is important to talk about the types of these constant
+literals as well as any other kinds of component that is expression might
+have ok we had talked about the character  type or the char type in the
+last lecture we can also have constant of type char remember that character
+are stored by the c cides inside the machine so a character constant is
+denoted by the character which we use within the single code character so
+for example the a within the quotes  or C capital C within the quote
+etceteras these are all  different constant literal of type character  note
+that the such the constant literal denotes an integer of type char and the
+value of the integer is the ascii code of the character we call that the
+type char is actually just an integer type of a byte size one byte or eight
+bit so these are also actually integers but the integer that this
+particular constant denotes has the value  which is same as the ascii code
+of the corresponding character a or cpital C or five etcetera etcetera so
+therefore it is important to know that the value of the constant literal
+five within quotes is the integer fifty three which is the ascii code for
+the character five and not five itself so here put no quotes arounthe
+character five than it could have the value five and of course all such
+character literals have the type char now there are  apart from the usual
+character there are certain characters which are not printable or some
+other reason cannot be easily denoted in this notation we have seen so
+these are denoted certain ?? 06:45 for example within quotes within single
+quotes letters backslash followed by n denotes the new line character
+(refer slide time 06:54 )
+[pic]
+
+which is the character corresponding to the enter key on the key board
+similarly backslash t will denotes the tab character and o on if you want
+to se the backslash character itself you have to use backslash back slash
+that is two backslashes within the quotes and the single quote character is
+denoted by a single quote followed by backslash and then two single quotes
+so in other words within single quotes backslash quote denotes the single
+quotes character and similarly the double quotes  character is denoted by
+backslash double quote within the quote character ok lets move on to the
+operators now and let begin with arithmetic operators we are already
+familiar with some of the basic arithmetic operators ( refer slide time
+07:41)
+
+like plus minus star which stands for multiplication and the slash is
+stands for the division etcetera these are all binary operators that is
+they have the just they have two operands the operators plus and minus can
+also be used in the unary form that is just one operand so for example plus
+x is in the succession plus x we are using plus as the unary operator and
+similarly the minus x is the expression we are unary minus operator being
+used of these operators all of them can be used for integers as well as the
+floating point operand but the behavior is slightly difference especially
+in the case of the division operation that is the lash operator in the
+slash operator the result differ depending upon the type of operand so the
+operands are integer type then the result of doing the division is the
+quotient of the saying by dividing the two numbers where as the two number
+are of floating point  type then the exact value is one that is the result
+of the expression so for example five slash two would be two for five and
+two are integer and therefore five by two is evaluate the quotient of the
+division which is two and five slash two point zero five point for example
+five point zero slash two point zero both result in the value two point
+five because in this case  the two operands are floating point operands ok
+there is another operator called percent operator which is applicable only
+to the integer types and this essentially returns the remainder of the
+division operation so for example the value of the expression five percent
+two would be one because it divides by two the quotient is two and the
+remainder is one so five percent two is  ??09:43 evaluate the remainder
+which in this case is one ok (refer slide time 09:46)
+[pic]
+
+
+so so far we had been assuming that the two operand involved in a
+particular expression are of the same type but in general it is possible
+that the two operand  are of different type so for example what is the
+value indeed what is the type of the expression five slash two point zero
+is the result of type floating point with the value two point five or is
+the result an integer with the value two that is the question that we need
+to answer and the answer is that in such cases where the two operands for
+an operator are of different types then the value of the operand of the low
+type is promoted to that of the higher type this is known as implicit type
+conversion we will discuss what the higher and lower type means is a
+minute essentially the higher of the two type is the roughly speaking the
+one which can store the largest set of values for example the type float
+would be higher than the type int so in this particular example you see
+that  the two operand five and two point zero as we know by now by default
+the type of the integer  literal five is int where as that of the floating
+point literal to two point zero is double so the double is higher type than
+int and so therefore what's going to happen is the value five is going to
+get promoted to a double and that will result in the value five point zero
+and the result of the operation therefore it also be a double bit the
+operands are now of the type double and of course the floating point
+division is going to get use since both the operands are of the type double
+and the answer would be two point five  of type double note that in this
+implicit type conversion if one of the operands happens to be fro example
+to be variable then this is not the type of the variable that is itself
+getting change so if you had double in this case the five divided by two
+point zero we had five divided by x where x is the type of float value is
+two point zero for example in this expression five by two point zero
+suppose we had slightly  different expression lets say we had an integer
+variable called x of that with value five and then we had the expression x
+divide by two point zero then the type of x would not change as the result
+of the implicit type conversion  that is x would continue to have the value
+five and the type int but the value of x as used in this expression that is
+what is going to get change so the value will become five point zero and
+type will become floating point but let me get it once again it is not the
+type of x is changing  it is only the value of x as used in the expression
+whose type is being changed ok so lets look at this type error at higher
+end lower type so as we have  said  roughly speaking the higher type is one
+which can hold a larger range of value so you can imagine that the type
+error c is going to look something like this long double is the highest
+type followed by double then float then unsigned long then long then
+unsigned int and int more than unsigned long doesn't really hold the
+largest sets of the values than long for example because the only
+difference is ??13:23 unsigned long type doesn't allow for the negative
+integers where as the long does allow for the negative integers but the
+largest positive value can be stored in the type unsigned long is is larger
+than the largest  integer that can be stored in type long but still the
+language defined type unsigned long to be higher than the type long  ok now
+the type which has smaller than int which are these types types like short
+unsigned short char and unsigned char these are always promoted to the type
+int before being used in an arithmetic operation so for example if you had
+two short x and y of with the values five and two respectively then x
+divide by y  in the expression x divide by y both the values both actually
+get promoted to the type int and so the expression would be equivalent to
+integer    five divided by integer two which would result in a integer
+value of  integer value two so the expression five slash two point five
+applied the rules five has type int two point five has type double so the
+five get promoted to double and so it becomes double five point zero
+divides double two point five and therefore the result is the value two
+point zero with type double ok lets now talk about another important notion
+associated with expressions and operations that is the notion of the
+precedence and associativity (refer slide time 15:00)
+
+
+[pic]
+
+
+now again this is something that should be familiar to from your high
+school arithmetic as you know in some expression we need to use brackets
+to unambiguously specify the operands for each operator in  the expression
+here brackets are not used as you know some convention is used to determine
+which operator will be evaluate it first if you recall you had the BODMAS
+rules from school which says the precedence brackets are evaluated first
+followed by division multiplication and addition and then subtraction and
+within the two operators of the same kind the left to right rule applies
+that is the  operators to be left evaluated first so the C languages if I
+find similar rule for determining how the expression can be evaluated when
+the operands for the each operator are not here so  ?? 15:55 so far the
+three operators slash percent and ampersand have higher precedence than the
+other two operators namely plus and  minus here we are talking only about
+the binary operator by unary operator as we see little later all have
+higher precedence then all of you are binary operator and all has to all of
+the five operator associated left to right  what is that mean (refer slide
+time 16:19)
+
+ [pic]
+
+
+lets take an example to clarify this issue so lets consider the expression
+x minus y in to z divide by ten plus three so the question is what are the
+operands for these operators which are being used there are four operators
+is this expression so minus star slash and plus so recall the precedence of
+star and slash higher than that of  minus and plus which means that star
+and plus are going to be evaluated before the minus and plus but out of
+these star and slash since the associativity for both of them is left to
+right   therefore the one which access from the left will be evaluated
+first which means that operator star the one which will get evaluated first
+followed by slash and after that  minus and then plus because again the
+associativity of minus and plus is left to right which essentially means
+that at the same level at the same ?? 17:24 level the operator on the left
+is going to be evaluated first therefore the evaluation of these operands
+is star followed by slash followed by minus followed by plus and so
+therefore  this expression is going to be treated as equivalent to ??17:39
+or that the whole thing divide by ten x minus the result of this and three
+is added to the result of the subtraction note that the precedence and the
+associativity rules tell us in what order the different operators within
+the excursion going to be evaluated but it does not says in what order the
+two operand of the particular operator are going to be evaluated for
+example the precedence rule don't tell us whether the expression y is going
+to be evaluated before the expression before the expression z now first of
+the  kinds of expression that we have seen so far this does not really make
+it  any difference but when we look at operators with ???? 18:24 we will
+see we adjust some time may be
+
+
+
+
+
+
+
+
+
+16:19  18:24
+To go up to 32:26
+

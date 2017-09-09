@@ -1,0 +1,1469 @@
+continue our discussion
+concept of hashing
+collision in hashing
+hashing using linked
+method of hashing
+method of collision
+chaining so today
+two other method
+collision resolution linear
+resolution linear probing
+probing and double
+discussing what hash
+functions what good
+good hash function
+function the function
+quick to compute
+distribute the keys
+keys get mapped
+performance of hashing
+linked list good
+list good hash
+paradox called birthday
+thirty five students
+students more sitting
+compute that probability
+sixty five days
+thirty five people
+fairly high probability
+kind of thing
+thing is happening
+right your days
+key and put
+keys were end
+slot birthday paradox
+paradox no matter
+matter what kind
+kind of hash
+notion this problem
+deal with non
+non integer keys
+keys in fact
+keys were telephone
+return the telephone
+numbers this manner
+integer we doesn
+drop this hyphen
+techniques of converting
+converting non integers
+non integers keys
+non integer key
+last two digits
+hash function value
+converting non integer
+keys into integer
+hash code map
+make a hash
+function so recall
+recall a hash
+basically a mapping
+mapping of keys
+table your hash
+code map maps
+maps the key
+key to integer
+bring this integer
+minus one right
+call compression map
+kind of functions
+requirement of hash
+key gets map
+map an key
+location you understand
+mapped to location
+maps it location
+location thirteen right
+kind of randomization
+map equal keys
+minimize the probability
+probability of collisions
+collisions so lets
+popular hash code
+hash code maps
+code maps recall
+recall the hash
+map the part
+part which converts
+converts your key
+pat and interpret
+numeric type thirty
+thirty two bits
+interpret the bits
+numbers a longer
+longer double real
+double real number
+number which takes
+chunks of thirty
+bits and add
+first four bytes
+bytes and add
+eventually some thirty
+thirty two bit
+kind of tree
+compute the hash
+lets say ankur
+compute the value
+number of collisions
+two different names
+kind of things
+converts strings character
+strings character strings
+whats called polynomial
+polynomial whose coefficient
+evaluate this polynomial
+evaluation that value
+right that integer
+map to map
+code map weren
+convert a string
+non integer data
+right so evaluate
+stuff so people
+people have looked
+thirty three thirty
+thirty seven thirty
+lets say english
+fifty thousand words
+technique to convert
+convert your words
+observed experimental right
+code map lets
+table now suppose
+size thousand twenty
+choose your right
+taking some integer
+essentially that means
+last ten bits
+write the integer
+taking the last
+last two bits
+lets say mod
+taking some small
+bits the last
+ten bits basing
+basing the hash
+kind of compression
+map this simple
+simple compression map
+two in fact
+fact it helps
+number to give
+two thousand strings
+put in hash
+pick the size
+hash table lets
+threes roughly thousand
+strings per location
+size of hash
+hash table close
+kind of effect
+effect its start
+preferably a prime
+things dont work
+lot of collisions
+right and lot
+follow perhaps improve
+kinds of compression
+essentially first read
+suppose your key
+max so recall
+recall now assuming
+keys are integers
+map to convert
+integer right keys
+max so first
+multiply each key
+first we converted
+multiply that number
+function which means
+means the round
+popular compression map
+doing such things
+lot of jugglery
+smaller fraction part
+evident some evident
+root five minus
+book by donald
+knuth on sorting
+sorting and searching
+searching which covers
+covers hash functions
+add and divide
+two fixed numbers
+kind of problem
+right in fact
+avoid any kind
+kind of patterns
+random number generator
+right as part
+random number random
+number random number
+technique called linear
+technique linear congruential
+linear congruential generators
+instance your random
+initial k value
+compute this quantity
+give random number
+value you return
+return right whichever
+right whichever last
+whichever last random
+last random number
+generate random number
+pseudo random number
+technique called universal
+hash function function
+set of keys
+function get mapped
+make life difficult
+spend a lot
+doing insert delete
+insert delete searching
+delete searching right
+bunch of hash
+hash function lets
+lets say fifteen
+fifteen different hash
+pick one hash
+function to put
+put the keys
+function for inserting
+keys for doing
+doing the search
+search for doing
+doing the relation
+run of hash
+hash table implementation
+change the hash
+hash function midway
+invoke this program
+randomly my set
+set of hash
+doing my implementation
+correction of hash
+collection of hash
+keys the probability
+algorithms third year
+function is concerned
+class to resolve
+put a linked
+search and delete
+delete by doing
+doing that operation
+two other techniques
+today which fall
+class of open
+point so open
+open addressing differs
+differs from chaining
+fact in open
+addressing so recalling
+recalling that chaining
+elements actually stored
+verse a reference
+right the table
+storing the pointers
+hashing could map
+number of elements
+elements as larger
+part of linked
+entry of table
+null which means
+means that doesn
+searching or inserting
+inserting or deleting
+probe the elements
+modifying the hash
+function little bit
+key are bit
+function in mapping
+mapping the keys
+set for instance
+instance the case
+case of chaining
+parameter which specifies
+key which probe
+insert a key
+insert the key
+lets say zeroth
+hash function obtain
+location is occupied
+parameter the first
+location hash table
+find a empty
+right at depending
+hash function decide
+decide will give
+sequence of slots
+collections of keys
+number of keys
+element not number
+table the number
+hundred elements hundred
+elements hundred students
+location of hash
+technique under open
+insert i compute
+table this place
+place is occupied
+location so probe
+probe is incremented
+find an empty
+put the element
+principle the current
+mod m doing
+start the beginning
+retrieve the keys
+right but understand
+understand this insert
+insert you compute
+value of hash
+location that location
+element already sitting
+find the empty
+track of references
+kind of spaces
+slower than chaining
+thirteen very simple
+simple hash function
+function my keys
+insert these keys
+table right thirteen
+location five right
+right no problem
+point the table
+table was empty
+forty one forty
+forty one mod
+two so forty
+absolutely no problem
+twenty two twenty
+twenty two mod
+forty four forty
+forty four mod
+four mod thirteen
+four this location
+location already occupied
+occupied by eighteen
+eighteen so forty
+location this location
+location is empty
+fifty nine fifty
+fifty nine mod
+thirty two thirty
+thirty two mod
+four is sitting
+two here thirty
+thirty one thirty
+thirty one mod
+occupied with eighteen
+occupied by forty
+occupied by fifty
+occupied by thirty
+occupied by twenty
+thirty one seventy
+seventy three seventy
+seventy three mod
+check for seventy
+occupied this location
+right very simple
+elements are sitting
+forget the part
+location two eighteen
+eighteen at location
+location five forty
+four at location
+tend to aggregate
+aggregate from clusters
+locations while searching
+inserted those elements
+searching for key
+compute k mod
+find the element
+reach an empty
+location then means
+means that element
+checked right lets
+lets see suppose
+searching for thirty
+thirty three mod
+find this location
+empty this means
+search an unsuccessful
+reach a empty
+successful search search
+search will terminate
+two so first
+search for thirty
+thirty two right
+two right thirty
+two mod twenty
+thirty two found
+found in location
+location eight suppose
+suppose i removed
+setting an location
+null i remove
+thirty one whats
+happen thirtyone mod
+thirtyone mod thirteen
+location to null
+mark this location
+declare the thirty
+setting this location
+praise a tombstone
+marker any marker
+set up bit
+location which specifies
+location was occupied
+encounter a tombstone
+tombstone we don
+search is ended
+present we continue
+tombstone here continue
+location or thirty
+tombstone it ignores
+ignores it continues
+encounters a tombstone
+kind of reclaim
+reclaim this space
+search the performance
+lot of tombstones
+kind of technique
+grow the table
+growing the table
+create empty slots
+performance will increase
+open addressing techniques
+techniques we looked
+looked at linear
+linear probing linear
+probing linear probing
+function next location
+two hash functions
+piece of code
+code so probe
+probe is set
+offset is set
+probe the locations
+probe plus offset
+set to probe
+offset which means
+offset plus offset
+offset whatever probe
+offset is determining
+probing for linear
+probing your offset
+jump one location
+jump two locations
+offset this case
+case is determined
+double hashing works
+technique will ensure
+insert the element
+table where empty
+divides the size
+offset never divided
+happen in fact
+arguments various cases
+advantages disadvantages linear
+disadvantages linear probing
+step one step
+makes the performs
+thirteen the elements
+table size twelve
+size twelve size
+minus k mod
+make any sense
+place were occupied
+insert the first
+first element eighteen
+element eighteen eighteen
+eighteen eighteen mod
+eighteen mod thirteen
+location nine forty
+two of forty
+four eight minus
+mod eight forty
+empty so forty
+location zero fifty
+location six thirty
+two of thirty
+two of seventy
+sixteen sixteen mod
+technique of double
+hashing so recall
+assuming the load
+factor the number
+inside the hash
+assumptions you made
+class that everytime
+everytime a probe
+element the hash
+table uniformly random
+first time probe
+random element random
+element random location
+put the table
+pick a random
+location in hash
+analyze so alpha
+minus alpha fraction
+fraction of table
+table is empty
+right if alpha
+half that means
+means the number
+half which means
+table is occupied
+half the table
+empty then suppose
+suppose my search
+unsuccessful search means
+unsuccessful search stop
+tenth of table
+empty yeah ninety
+table is full
+full one tenth
+empty so expected
+number of probes
+location one tenth
+tenth one tenth
+trails ill hit
+hit a empty
+alpha minus probe
+minus probe probes
+probes are required
+required before hit
+hit an empty
+location and declared
+numbers of probes
+required for unsuccessful
+unsuccessful search lets
+successful searches successful
+searches successful search
+suppose i search
+average right lets
+recall from last
+class the average
+required to insert
+insert those elements
+inserting those elements
+probes required insert
+insert all elements
+table so lets
+inserting an element
+suppose might table
+elements right size
+first m lets
+lets say assume
+talking of inserting
+inserting the first
+first fifty elements
+elements right suppose
+forty eight forty
+forty nine elements
+hit a full
+insert this fiftieth
+forty nine element
+average even required
+required for inserting
+inserting these elements
+show the rest
+element just assume
+insert this last
+full three fourth
+fourth of table
+roughly already full
+quarter of table
+location to put
+put this element
+roughly four probes
+praises an upper
+probes to insert
+total numbers required
+table was full
+full one quarter
+recall from previous
+i9s the total
+element what part
+empty what fraction
+half after inserted
+minus i fraction
+insert the elements
+elements n times
+factor of alpha
+inserted enough element
+factor is alpha
+alpha one minus
+quantity minus minus
+minus minus log
+alpha fraction empty
+minus alpha times
+fraction is empty
+fraction was empty
+empty are required
+point one minus
+numbers of required
+probes required average
+average was divided
+alpha this quantity
+unsuccessful and successful
+recall right probing
+times of log
+log one power
+power one minus
+stop the discussion
+discussion on hashing
+discussion hashing
+last class
+hash table
+resolve collision
+linked list
+collision resolution
+resolution linear
+linear probing
+double hashing
+hash functions
+good hash
+hash function
+previous class
+famous paradox
+birthday paradox
+high probability
+days birthday
+small probability
+year correspond
+slot birthday
+non integer
+integer keys
+telephone numbers
+converting non
+non integers
+integers keys
+entry numbers
+integer key
+function value
+hash code
+code map
+compression map
+map maps
+first convert
+arbitrary range
+call compression
+index location
+thirteen right
+randomization happening
+equal keys
+popular hash
+code maps
+maps recall
+bit pat
+integer right
+numeric type
+type thirty
+real numbers
+double real
+real number
+eighteen chunks
+string suppose
+ascii code
+bad strategy
+english dictionary
+ascii value
+great strategy
+converts strings
+strings character
+character strings
+settings whats
+polynomial accumulation
+first character
+coefficient things
+large range
+map weren
+integer data
+integer value
+experimental stuff
+fifty thousand
+thousand words
+experimental right
+experimental study
+map lets
+small range
+natural thing
+size lets
+size thousand
+thousand twenty
+integer mod
+last ten
+ten bits
+binary representation
+taking mod
+last bit
+taking lets
+small set
+bits basing
+simple compression
+prime number
+table lets
+important thing
+table close
+start happening
+key mod
+things dont
+dont work
+collisions happening
+generic principles
+improve performance
+compression maps
+first read
+first covert
+fractional part
+key right
+fractional number
+floor function
+nearest integer
+popular compression
+done lot
+small fraction
+smaller fraction
+fraction part
+good right
+fibonacci hashing
+significant theory
+nice book
+donald knuth
+covers hash
+multiply add
+key multiplied
+fixed numbers
+compute modulo
+first technique
+patterns happening
+random number
+number generator
+function random
+number random
+technique linear
+linear congruential
+congruential generators
+seed seed
+starting value
+give random
+last value
+whichever last
+last random
+generate random
+pseudo random
+universal hashing
+function function
+make life
+life difficult
+doing insert
+insert delete
+delete searching
+searching right
+function lets
+process start
+table right
+fro run
+table implementation
+function midway
+bad set
+resolve collisions
+insert search
+techniques today
+general class
+open addressing
+addressing differs
+key fact
+starting element
+first element
+map elements
+chaining technique
+null right
+suitable manner
+keys set
+specifies key
+first probe
+key key
+zeroth probe
+function obtain
+first parameter
+location hash
+empty location
+function decide
+determining sequence
+keys soory
+hundred elements
+elements hundred
+hundred students
+first place
+element sitting
+guiding principle
+current location
+reach end
+compute value
+specific location
+spaces wasted
+mod thirteen
+simple hash
+table location
+eighteen mod
+problem forty
+problem twenty
+put forty
+location fifty
+put thirty
+location occupied
+put seventy
+simple idea
+elements forty
+elements tend
+search lets
+elements suppose
+first location
+element present
+right lets
+means thirty
+unsuccessful search
+search terminates
+successful search
+search search
+delete thirty
+right thirty
+mod twenty
+remove thirty
+location null
+good idea
+right suppose
+happen thirtyone
+thirtyone mod
+problem coming
+full location
+location empty
+location thirty
+null location
+insert encounters
+empty locations
+search degrades
+elements put
+empty slots
+addressing techniques
+probing linear
+first position
+offset probe
+offset right
+hashing works
+units offset
+starting location
+offset divides
+small fact
+rough arguments
+advantages disadvantages
+disadvantages linear
+distributes keys
+found clusters
+thirteen steps
+table size
+size twelve
+twelve size
+lets insert
+element eighteen
+eighteen eighteen
+minus forty
+occupied thirty
+recall assume
+load factor
+elements divided
+sit inside
+random element
+uniformly random
+element random
+random location
+table alpha
+minus alpha
+alpha fraction
+empty right
+search means
+search stop
+ninety percent
+ten percent
+expected number
+probes required
+ten location
+tenth fraction
+tenths probability
+occupied location
+excepted sense
+alpha minus
+minus probe
+probe probes
+excepted numbers
+average number
+successful searches
+required suppose
+average right
+required insert
+empty table
+first fifty
+fifty elements
+inserted forty
+excepted number
+fiftieth element
+first forty
+total number
+last element
+upper bound
+total numbers
+numbers required
+average require
+total require
+last number
+table empty
+table table
+quantity minus
+minus minus
+minus log
+fraction empty
+alpha times
+number smaller
+average numbers
+successful probes
+alpha recall
+today
+continue
+discussion
+hashing
+last
+class
+hash
+table
+concept
+shown
+resolve
+collision
+linked
+list
+method
+chaining
+two
+resolution
+linear
+probing
+double
+spend
+discussing
+functions
+good
+function
+likeso
+computed
+quickly
+quick
+compute
+previous
+distribute
+keys
+uniformly
+right
+happen
+mapped
+location
+performance
+worse
+rare
+famous
+paradox
+birthday
+thirty
+students
+sitting
+high
+probability
+birthdays
+sixty
+days
+year
+small
+case
+people
+close
+fairly
+kind
+thing
+happening
+correspond
+slots
+key
+put
+randomly
+end
+slot
+matter
+collisions
+notion
+problem
+deal
+non
+integer
+fact
+telephone
+numbers
+return
+manner
+treated
+doesn
+drop
+hyphen
+thought
+techniques
+converting
+integers
+entry
+coming
+convert
+digits
+value
+parts
+code
+map
+compression
+make
+recall
+basically
+mapping
+maps
+first
+arbitrary
+range
+bring
+size
+minus
+index
+part
+call
+things
+requirement
+understand
+thousand
+four
+ten
+thirteen
+randomization
+insert
+retrieve
+search
+equal
+indices
+minimize
+lets
+popular
+converts
+bit
+pat
+interpret
+numeric
+type
+bits
+number
+real
+longer
+takes
+bytes
+add
+eighteen
+chunks
+eventually
+working
+tree
+string
+suppose
+ankur
+converted
+possibility
+ascii
+interpreted
+bad
+strategy
+noise
+sum
+names
+student
+order
+making
+words
+english
+dictionary
+obtain
+letters
+summing
+avoid
+sir
+replaced
+reasons
+great
+specially
+strings
+character
+technique
+settings
+whats
+polynomial
+accumulation
+coefficient
+evaluate
+evaluation
+large
+weren
+data
+setting
+experimental
+stuff
+looked
+found
+work
+forty
+values
+fifty
+query
+observed
+study
+favour
+natural
+mod
+give
+choose
+twenty
+imply
+taking
+essentially
+means
+write
+binary
+representation
+doing
+forgetting
+set
+basing
+simple
+pick
+power
+helps
+prime
+hundred
+assure
+average
+threes
+roughly
+length
+important
+effect
+start
+mind
+preferably
+dont
+lot
+depends
+generic
+principles
+follow
+improve
+instances
+experiment
+necessarily
+kinds
+read
+out
+max
+assuming
+integral
+covert
+multiply
+fractional
+corresponds
+consequence
+floor
+round
+nearest
+repeat
+multiplied
+done
+instance
+directly
+clear
+divide
+choice
+critical
+jugglery
+fraction
+smaller
+doubt
+evident
+root
+turns
+fibonacci
+significant
+theory
+nice
+book
+donald
+knuth
+sorting
+searching
+covers
+detail
+fixed
+modulo
+multiplying
+adding
+multiple
+patterns
+random
+generator
+programming
+congruential
+based
+generators
+seed
+starting
+user
+defined
+provide
+system
+point
+information
+initial
+quantity
+whichever
+generate
+pseudo
+figure
+universal
+briefly
+idea
+locations
+adverse
+life
+difficult
+picking
+delete
+solution
+don
+bunch
+fifteen
+process
+inserting
+relation
+fro
+run
+implementation
+change
+midway
+invoke
+program
+picked
+results
+correction
+collection
+algorithms
+concerned
+chain
+operation
+fall
+general
+open
+addressing
+questions
+differs
+recalling
+elements
+stored
+verse
+reference
+element
+storing
+pointers
+find
+reside
+larger
+residing
+nodes
+connected
+null
+deleting
+probe
+suitable
+modifying
+universe
+earlier
+parameter
+specifies
+zeroth
+occupied
+empty
+depending
+decide
+determining
+sequence
+examined
+question
+collections
+require
+soory
+correct
+create
+place
+incremented
+check
+increment
+guiding
+principle
+current
+rap
+reach
+beginning
+short
+specific
+advantage
+memory
+track
+references
+node
+spaces
+wasted
+slightly
+slower
+show
+twelve
+absolutely
+hindi
+seventy
+forget
+position
+shows
+tend
+aggregate
+clusters
+inserted
+present
+checked
+thirtyone
+unsuccessful
+terminates
+successful
+terminate
+picture
+remove
+removed
+didn
+full
+differently
+mark
+declare
+wrong
+praise
+tombstone
+marker
+encounter
+ended
+ignores
+continues
+encounters
+reclaim
+space
+tombstones
+degrades
+rehash
+back
+grow
+growing
+markers
+increase
+offset
+piece
+distance
+advance
+jump
+determined
+works
+ensure
+units
+finding
+cycle
+divides
+divided
+proof
+rough
+arguments
+cases
+prove
+formally
+advantages
+disadvantages
+distributes
+step
+steps
+makes
+performs
+lies
+sense
+trouble
+continuing
+sixteen
+distributed
+analysis
+assume
+load
+factor
+talking
+scheme
+sit
+inside
+similar
+assumptions
+made
+everytime
+analyze
+schemes
+depend
+alpha
+half
+stop
+probes
+required
+tenth
+ninety
+percent
+expected
+hit
+tenths
+trails
+excepted
+declared
+talk
+searches
+begin
+expectation
+fiftieth
+total
+rest
+fourth
+quarter
+praises
+upper
+bound
+times
+similarly
+quarters
+i9s
+guys
+fractions
+wanted
+log
+form
+capture
+showed
+lat
+performances

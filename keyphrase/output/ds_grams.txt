@@ -1,0 +1,6238 @@
+hms annotated reference
+reference with examples
+examples granville barne
+barne ! luca
+luca del tongo
+del tongo data
+tongo data structures
+structures and algorithms
+examples first edition
+first edition copyright
+book is made
+place for .net
+big oh notation
+1.2.2 imperative programming
+imperative programming language
+1.2.3 object oriented
+object oriented concepts
+tips for working
+singly linked list
+traversing the list
+list in reverse
+doubly linked list
+2.2.3 reverse traversal
+binary search tree
+finding the parent
+attaining a reference
+finding the smallest
+smallest and largest
+double ended queue
+attaining the greatest
+greatest common denominator
+computing the maximum
+reversing the order
+order of words
+detecting a palindrome
+counting the number
+number of words
+determining the number
+number of repeated
+rst matching character
+a.1 iterative algorithms
+a.2 recursive algorithms
+recursive vs iterative
+c.1 activation records
+c.2 some problems
+problems are recursive
+recursive in nature
+d.1 what constitutes
+constitutes a unit
+write my tests
+view my test
+d.5 the structuring
+structuring of tests
+d.6 code coverage
+preface every book
+simply this book
+series of emails
+nt we create
+present our pseudocode
+grown into pseudocode
+listings with chunks
+chunks of text
+structure or algorithm
+algorithm in question
+point we thought
+make this thing
+side by side
+actual library implementation
+writing this book
+explanations as simple
+maintaining a moder
+degree of precision
+eager minded reader
+minded reader happy
+diagrams to demystify
+challenging to visualise
+concise and self-explanatory
+self-explanatory pseudocode listings
+mainstream imperative programming
+imperative programming languages
+normal " implementations
+opinion that choice
+great thing read
+read our book
+algorithms in question
+book we hope
+necessity of under
+standing which data
+concerned with performance
+emphasis on real-time
+wrong data structure
+deal of performance
+run time complexity
+complexity and space
+explain the theoretical
+amazing optimisation phases
+optimisation phases speci
+targeted at recursion
+make a fast
+fast algorithm slow
+concerns about languages
+languages that target
+target virtual machines
+actual various implementation
+guage s compiler
+book that focuses
+gospel ; verify
+hope you enjoy
+reading this book
+granville barnett luca
+barnett luca del
+del tongo acknowledgements
+tongo acknowledgements writing
+writing this short
+fun and rewarding
+kapoor generously hosted
+hosted our book
+rst draft received
+received over thirteen
+thirteen thousand downloads
+generosity this book
+people jon skeet
+jon skeet provided
+number of suggestions
+eternally grateful jon
+jon also edited
+edited this book
+provided the odd
+suggestion via email
+feedback was listened
+publicise this book
+book from microsoft
+microsoft s channel
+bloggers who helped
+spread the word
+word you gave
+book the program
+program ming community
+community never ceases
+ceases to amaze
+authors granville barnett
+granville barnett granville
+candidate at queensland
+university of technology
+working on parallelism
+microsoft qut eresearch
+qut eresearch centre1
+holds a degree
+degree in computer
+mvp his main
+languages and compilers
+del tongo luca
+science at flo
+rence his main
+main interests vary
+vary from web
+development to research
+mining and computer
+computer vision luca
+luca also maintains
+maintains an italian
+found at http
+page intentionally left
+intentionally left blank
+nt this book
+book provides implementations
+implementations of common
+common and uncommon
+algorithms in pseudocode
+theory of data
+part this book
+book presents implementations
+presents implementations devised
+authors themselves based
+algorithms are based
+considered the norm
+notation to depict
+depict the run
+complexity of algorithms
+written this book
+book as concise
+concise and approachable
+reader is familiar
+concepts 1.2.1 big
+notation for run
+concepts to determine
+judge the performance
+performance of algorithms
+run time expansion
+times to demonstrate
+demonstrate how important
+run times cubic
+cubic and exponential
+big oh notations
+adding a node
+maintain a pointer
+complexity is proportionate
+algorithms that break
+break the problem
+problem into smaller
+searching a binary
+algorithm that breaks
+breaks the problem
+takes the results
+chunks and stitches
+e.g quick sort
+e.g bubble sort
+review the design
+algorithm while prototyp
+prototyp ing algorithm
+ing algorithm designs
+intention of solving
+solving the problem
+fast it works
+review your algorithm
+design and optimise
+cient run times
+asset that big
+es sentially discard
+sentially discard things
+things like hardware
+two sorting algorithms
+large this applies
+isolates a key
+factor in algorithm
+growth an algorithm
+run time grows
+notation also acts
+communication tool picture
+picture the scene
+discussing prototype algorithms
+algorithms for node
+discovery in massive
+discussed your respective
+fast each respective
+high level algorithm
+level algorithm design
+replay the scene
+talking about algorithm
+design each respective
+respective developer states
+states the asymptotic
+good general idea
+make better choices
+selecting an algorithm
+budgets per feature
+feature each feature
+budget that represents
+represents its up
+permost time bound
+nt necessarily give
+remaining features imagine
+developing the routines
+application is started
+invoked during start
+strive for optimal
+taking a quantitative
+software development properties
+properties will make
+work is critical
+critical to success
+language all examples
+pseudo-imperative coding format
+imperative mainstream programming
+mainstream programming language
+language to port
+port the examples
+languages in mind
+requirement is simple
+mentations are based
+imperative thinking style
+apply various aspects
+paradigm to produce
+solutions with respect
+machines which provide
+provide various things
+things like security
+security sand boxing
+management via garbage
+garbage collection algorithms
+trivial to port
+port our imple
+languages when porting
+describe a linked
+linked list node
+interpret the reference
+amount of experience
+language these subtleties
+subtleties will present
+present no is
+language in order
+port the pseudo
+user is familiar
+familiar with primitive
+primitive imperative language
+imperative language constructs
+constructs before reading
+lost some algo
+algo rithms presented
+confusing to follow
+provide data structures
+structures or algorithms
+algorithms that work
+work on generic
+order to make
+make the samples
+samples as easy
+easy to follow
+familiar with interfaces
+target uses interfaces
+pseudocode to describe
+describe our solutions
+interpreting the pseudocode
+pseudocode is trivial
+things to point
+represent the result
+result of applying
+data struc ture
+ture d chapter
+type of parameters
+parameters is inferred
+primitive language constructs
+begun and ended
+sake of brevity
+book require parameters
+assign no explicit
+parameters the type
+type is inferred
+parameter usually acts
+type for instance
+number of bits
+e.g a vector
+last major point
+point of reference
+end a language
+construct for instance
+close the scope
+explicitly state end
+leaving the interpretation
+scopes are closed
+reader while implicit
+implicit scope closure
+scope closure works
+lead to ambiguity
+simple algorithm signature
+signature we list
+list any pre
+pre or post
+post condi tions
+value to compute
+compute the factorial
+describes an algorithm
+takes a single
+single numeric parameter
+pre and post
+post conditions follow
+follow the algorithm
+enforce the pre-conditions
+algorithm when porting
+language of choice
+pre-conidition is critical
+algorithms opera tion
+items the post-condition
+post-condition mainly describes
+sorted in ascending
+describe is language
+non-conformance to pre
+cases we provide
+provide a message
+algorithm has failed
+failed to execute
+book you work
+pen and paper
+paper to track
+things like variable
+work through algorithms
+give each variable
+update these columns
+visualise the mutations
+working through algorithms
+intuitively map relationships
+relationships between data
+values on paper
+head we suggest
+suggest you put
+trivial some variables
+variables and calculations
+dealing with recursive
+recursive algorithm traces
+traces we recommend
+table that records
+records function calls
+out an elaborate
+map of function
+calls with arrows
+simply makes things
+things more complex
+complex to follow
+simple and systematic
+studying the implementations
+implementations far easier
+split this book
+discussion and pseudo-implementations
+pseudo-implementations of common
+common and uncom
+uncom mon data
+mon data structures
+algorithms of varying
+purposes from sorting
+sorting to string
+read the book
+sequentially from beginning
+beginning to end
+read each chapter
+reading the section
+chapter that describes
+describes the algorithm
+chapters on data
+data structures present
+initially the algorithms
+algorithms con cerned
+searching the previous
+previous list represents
+majority of cases
+respective data structure
+readers we recommend
+meaning one keyword
+light as return
+method to exit
+exit and returns
+returns each value
+caller with yield
+control only returns
+values to return
+test driven development
+driven development style
+style on paper
+out the pseudocode
+transcribe these tests
+tests into unit
+unit tests satisfying
+algorithm suitably tested
+fairly obvious cases
+complex to satisfy
+out the test
+portions of pseudocode
+algorithm that satisfy
+satisfy that respective
+intuitively identify areas
+algorithms imple mentation
+cases will yield
+yield an overwhelming
+list of concerns
+hinder your ability
+ability to design
+design an algorithm
+amount of concerns
+sub-divide the problem
+smaller problems solving
+solving the smaller
+task than clouding
+clouding your mind
+type of testing
+book are unit
+tests because unit
+unit tests contribute
+piece of creating
+software we invite
+invite the reader
+reader to view
+provide any code
+maintain an open
+open source project1
+project1 that houses
+listed the project
+project is named
+named data structures
+hope you digest
+embark on reading
+algorithms on paper
+paper to understand
+achieve their outcome
+follow these key
+readers are encouraged
+encouraged to provide
+improve our implementations
+part i data
+linked lists linked
+lists linked lists
+high level perspective
+series of nodes
+nodes each node
+node s case
+case a null
+null pointer representing
+dsa our implementations
+implementations of linked
+lists always maintain
+head and tail
+head or tail
+constant time operation
+operation random insertion
+insertion is excluded
+lists in dsa
+insertion in dsa
+dsa we chose
+performing a traditional
+operation an exception
+rule is performing
+performing an insertion
+head nor tail
+order to add
+traverse the linked
+node s current
+predecessor this traversal
+structure is trivial
+incurs no copy
+array or vector
+list singly linked
+singly linked lists
+primitive data structures
+book each node
+node that makes
+linked list consists
+list node figure
+linked list populated
+populated with integers
+integers 2.1.1 insertion
+insertion in general
+general when people
+talk about insertion
+insertion with respect
+respect to linked
+general purpose method
+method that adds
+adds a node
+adding the node
+case the node
+append our node
+updating the tail
+value to add
+algorithm consider adding
+quence of integers
+2.1.2 searching searching
+searching a linked
+list is straightforward
+traverse the list
+checking the value
+list the algorithm
+traversal in x2.1.4
+value to search
+2.1.3 deletion deleting
+deleting a node
+list is empty
+node to remove
+removing the head
+removing the tail
+item to remove
+algorithm whose cases
+described will remove
+remove a node
+node from any
+linked list deletion
+value to remove
+value is removed
+n.value = value
+head = tail
+n.next = tail
+conditional on line
+remove 2.1.4 traversing
+list and continue
+exhausted all nodes
+update the node
+simple while loop
+loop to check
+traverse 2.1.5 traversing
+reverse order traversing
+left to right
+simple as demonstrated
+demonstrated in x2.1.4
+wanted to traverse
+traverse the nodes
+algorithm to perform
+acquire a reference
+nodes that make
+linked list make
+nding its predecessor
+backwards the cost
+algorithm being applied
+traversed in reverse
+reversetraversal this algorithm
+doubly linked lists
+make reverse list
+reverse list traversal
+list traversal simple
+shown in x2.2.3
+list doubly linked
+linked list figure
+list node chapter
+remember to bind
+bind the previous
+previous tail node
+end add figure
+list after adding
+adding the sequence
+sequence of integers
+integers 2.2.2 deletion
+guessed the cases
+ned in x2.1.3
+x2.1.3 like insertion
+task of binding
+binding an additional
+value = head.value
+remove 2.2.3 reverse
+traversal singly linked
+forward only design
+reverse traversal algorithm
+ned in x2.1.5
+required some creative
+invention doubly linked
+linked lists make
+lists make reverse
+make reverse traversal
+traversal as simple
+simple as forward
+node and update
+update the pointers
+shows the reverse
+algorithm in action
+linked list reverse
+list reverse traversal
+list to traverse
+summary linked lists
+lists are good
+number of items
+items to store
+array would require
+size up front
+front ; exceeding
+exceeding that size
+size involves invoking
+invoking a resizing
+list to maintain
+maintain a constant
+requires maintaining pointers
+overhead will pay
+performing many times
+nodes by index
+maintain a count
+variable that tracks
+items are contained
+insertion and deletion
+performing basic in
+basic in sertions
+sertions in general
+general doubly linked
+accommodating for non-trivial
+forwards and backwards
+cases this requirement
+requirement is present
+recursive descent fashion
+backtrack in order
+order to create
+create the correct
+correct parse tree
+design makes bi-directional
+makes bi-directional traversal
+traversal much simpler
+simpler and quicker
+singly linked chapter
+search tree binary
+tree binary search
+binary search trees
+simple to understand
+understand we start
+node with value
+nodes with values
+subtree contains nodes
+nodes whose values
+rules with respect
+respect to nodes
+important to note
+tree data structure
+properties see avl
+alias that root
+simple unbalanced binary
+unbalanced binary search
+insertion as mentioned
+mentioned previously insertion
+value has passed
+passed custom type
+custom type checks
+checks for type
+node to start
+value < current.value
+insertnode the insertion
+algorithm is split
+core base case
+tree is empty
+create our root
+cases we invoke
+invoke the recursive
+recursive insertnode algorithm
+rst appropriate place
+tree to put
+put value note
+stage we perform
+perform a binary
+choose to recurse
+right by comparing
+totally ordered type
+satisfy the conditions
+conditions to place
+searching a bst
+simpler than insertion
+insertion the pseudocode
+pseudocode is self-explanatory
+previously about insertion
+subtree containing values
+inserting when searching
+searching the rules
+rules are made
+root.value = value
+value < root.value
+inspect the left
+subtree of root
+root for value
+value > root.value
+inspect the right
+end contains chapter
+removing a node
+cases to con
+case we promote
+promote the largest
+tree this case
+bst a value
+value may occur
+subtree no left
+subtree no right
+subtree and left
+left subtree figure
+search tree deletion
+tree deletion cases
+cases the remove
+two further helper
+helper algorithms named
+algorithms named findp
+named findp arent
+removed if found
+case yields true
+nodetoremove.right = null
+nodetoremove.value < parent.value
+subtree of nodetoremove
+set the parents
+parents  right
+pointer of largestv
+end remove chapter
+node the purpose
+algorithm is simple
+return a reference
+performing extensive tree
+extensive tree transforma
+tree transforma tions
+node of value
+value if found
+value = root.value
+root.left.value = value
+root.right.value = value
+findparent a special
+case we return
+node this algorithm
+returning a reference
+returns a reference
+end findnode astute
+findnode astute readers
+node not true
+true or false
+false given findnode
+findnode and compare
+compare the return
+subtree the opposite
+nding the largest
+bst both algorithms
+simply for completeness
+reached the last
+bst is located
+end findmin chapter
+employed to traverse
+traverse the items
+choice of strategy
+node visitation order
+order you require
+traversals that dsa
+structures that derive
+derive from binarysearcht
+visit the root
+traverse the left
+traverse the right
+traversal is shown
+shown in figure
+visited in preorder
+preorder 3.7.2 postorder
+postorder this algorithm
+node is yielded
+yielded after traversing
+traversing both subtrees
+visited in postorder
+end postorder chapter
+preorder visit binary
+visit binary search
+tree example chapter
+postorder visit binary
+inorder another variation
+traversing the left
+inorder visit binary
+visited in inorder
+beauties of inorder
+values are yielded
+traversing a populated
+breadth first traversing
+traversing a tree
+tree in breadth
+rst order yields
+yields the values
+par ticular depth
+visit the values
+nodes to visit
+traversal is implemented
+re sizeable array
+store the values
+visited in breadth
+queue to store
+store those nodes
+breadth first visit
+first visit binary
+summary a binary
+custom rules inherent
+type with logarithmic
+ecient traversal remains
+traversal remains linear
+visit the nodes
+trees are recursive
+recursive data structures
+algorithms that operate
+tree are recursive
+run times presented
+chapter are based
+pretty big assumption
+tree s left
+attain logarithmic run
+logarithmic run times
+algorithms presented earlier
+true a binary
+pathologically unbalanced tree
+tree become linear
+examine an avl
+tree that enforces
+enforces self-balancing properties
+heap a heap
+simple tree data
+heap usually employs
+heap each strategy
+determines the properties
+choose the min
+min heap strategy
+tree the opposite
+opposite is true
+max heap strategy
+employs the min
+unlike other tree
+tree data structures
+nodes the nodes
+two children figure
+heap data structure
+array the array
+array in figure
+simply adding values
+left-to-right fashion figure
+notion of representing
+representing a tree
+property is key
+key to understanding
+understanding this chapter
+shows a step
+step by step
+process to represent
+represent a tree
+run time behaviour
+internal data structures
+dynamic data structure
+array for scenarios
+upper storage limit
+storage limit required
+data structure encapsulates
+structure encapsulates resizing
+encapsulates resizing algorithms
+algorithms to grow
+grow the array
+array as required
+required at run
+data structure figure
+handle adding null
+adding null references
+heap this varies
+varies from case
+case to case
+values are prohibited
+resolve this ambiguity
+studied your requirements
+sake of clarity
+avoid the issue
+issue by prohibiting
+prohibiting null values
+calculate the index
+node the required
+node at index
+represents the calculation
+calculates the index
+designing an algorithm
+algorithm for heap
+insertion is simple
+ensure that heap
+order is preserved
+post-insertion operation inserting
+inserting a value
+array is simple
+inserting our value
+validating heap order
+case of min-heap
+ordering this requires
+swap the values
+converting a tree
+array counterpart chapter
+calculating node properties
+properties the run
+ciency for heap
+product of verifying
+verifying heap order
+shows the steps
+steps of inserting
+inserting the values
+store the heap
+heap has preserved
+preserved min heap
+min heap ordering
+minheapify the design
+min heapify algorithm
+condition of entering
+loop is changed
+deleting an item
+item involves ensuring
+ensuring that heap
+ordering is preserved
+preserved the algorithm
+algorithm for deletion
+value to delete
+put the last
+item to delete
+verify heap ordering
+include the value
+right are updated
+value is located
+heap and removed
+left < count
+count and heap
+promote smallest key
+key from subtree
+end remove figure
+shows the remove
+default the removed
+heap for reference
+free that memory
+null that empty
+collector can reclaim
+reclaim that memory
+null that hole
+nt be garbage
+searching a heap
+matter of traversing
+traversing the items
+x3.7.4 to visit
+heap to check
+search the heap
+nt take advantage
+backing heap array
+optimise the search
+algorithm by including
+logic which makes
+node being inspected
+provide an answer
+answer without traversing
+traversing the rest
+level of nodes
+back to inspecting
+heap the optimisation
+loop is justi
+prevent the expensive
+expensive worse case
+worse case run
+algorithm is speci
+min-heap to tailor
+tailor the algorithm
+two comparison operations
+start < count
+nodes + start
+count and start
+start < end
+value = heap
+value > parent
+value < heap
+count = nodes
+heap by checking
+checking whether count
+heap to determine
+traversing the nodes
+ned holds true
+traversal as mentioned
+array data structure
+implementation is based
+result you traverse
+traverse the array
+initial array index
+visit each value
+reached the upper
+actual physical bound
+allocated array count
+partition the conceptual
+actual array implementation
+bits of data
+result of heap
+heap after inspecting
+inspecting the nodes
+nodes of level
+living and dead
+heap backing array
+advice we gave
+mutated several times
+form of default
+value for items
+items no longer
+count garbage values
+heap array data
+structure the garbage
+vary from platform
+platform to platform
+platform to make
+make things simple
+simple the garbage
+shows a heap
+mutated many times
+point the items
+items in indexes
+references to live
+objects of type
+disambiguate separate objects
+traversing the heap
+property only holds
+traversing a heap
+requires some creative
+implement priority queues
+facilitate heap sort
+sort as discussed
+x4.1 and deletion
+deletion x4.2 sections
+sections a heap
+heap maintains heap
+maintains heap order
+selected ordering strategy
+strategy these strategies
+strategies are referred
+parent is greater
+told what strategy
+strategy it enforces
+state this explicitly
+explicitly the heap
+algorithms the cost
+deletion we invoke
+run time complexities
+cost of maintaining
+maintaining the strategy
+cost of dynamic
+dynamic array expansion
+outgrows the space
+heap s backing
+interest to research
+research a good
+good initial starting
+initial starting size
+assist in minimising
+minimising the impact
+impact of dynamic
+dynamic array resizing
+sets a set
+number of values
+order the values
+set are distinct
+generally set implementations
+set implementations tend
+tend to check
+set before adding
+avoiding the issue
+issue of repeated
+cover set theory
+theory in depth
+values of sets
+nes a set
+values are listed
+ning a set
+stating its members
+members is tiresome
+importantly the set
+providing a series
+series of properties
+set must satisfy
+right hand side
+natural numbers set
+introduction to sets
+cover set intersection
+intersection and union
+formed on sets
+sets the union
+demonstrates set intersection
+union and intersection
+case in .net
+exist as extension
+ned in system.linq.enumerable
+adding each item
+union of set1
+item in set1
+item in set2
+union the run
+set this runtime
+sets that exhibit
+trivial to implement
+major thing worth
+thing worth pointing
+traverse the set
+items to add
+smallerset are sets
+intersection of set1
+set1.count < set2.count
+item in smallerset
+intersection the run
+algorithm a linear
+attained when operating
+enforce the explicit
+libraries provide implementations
+implementations of unordered
+set and ordered
+set and cover
+cient data structure
+insertion an unordered
+backing data structure
+structure as mentioned
+add an item
+good the hashing
+hash tables employ
+cient general purpose
+general purpose hashing
+purpose hashing algorithms
+library of choice
+similar in terms
+ordered an ordered
+set is similar
+members are distinct
+ordered set enforces
+enforces some prede
+members to produce
+produce a set
+set whose members
+members are ordered
+internal backing data
+set from versions
+onwards we replaced
+replaced the binary
+primarily because avl
+avl is balanced
+realised by performing
+performing an inorder
+backing tree data
+structure which yields
+yields the correct
+correct ordered sequence
+sequence of set
+set in dsa
+simply a wrapper
+tree contains unique
+summary sets provide
+collection of unique
+ordered or unordered
+implementing a set
+key to select
+select the correct
+correct backing data
+item to determine
+table this check
+complexity ordered sets
+ordered sets cost
+structure is acceptable
+property of sets
+approach we describe
+favourably fast look-up
+fast look-up times
+check before inser
+table this run
+constant ordered sets
+sets as described
+stage when searching
+yielding a logarithmic
+sets to facilitate
+facilitate many algorithms
+set to assist
+algorithm that determines
+determines the number
+essential data structure
+found in vast
+amounts of soft
+ware from user
+mode to kernel
+kernel mode applications
+fundamentally they honour
+access the item
+queue that item
+places an item
+queue ; dequeue
+retrieves the item
+queue ; peek
+queue without removing
+demonstrate the behaviour
+previously mentioned methods
+methods observ ing
+ing the mutations
+queue data structure
+describes the operations
+queue in figure
+queue a queue
+section in dsa
+provide a standard
+queue because queues
+core data structure
+cient queue data
+queue the queue
+complexities the reason
+complexity for deletion
+front of queues
+simply a case
+case of returning
+returning the value
+modifying the head
+node the run
+complexity for searching
+searching a queue
+unlike a standard
+queue where items
+items are ordered
+ordered in terms
+priority queue determines
+determines the order
+form of custom
+queue being ordered
+ordered by priority
+priority it remains
+returning the item
+item at index
+array a heap
+ability to construct
+construct a priority
+unlike the queues
+chapter a double
+access the items
+queue a double
+applies no prioritization
+items are added
+added in order
+front of back
+deque are denoted
+utilising the data
+data structures exposed
+structures exposed interface
+queue mutations chapter
+deque s provide
+versions of common
+common queue operations
+enqueue an item
+lines of enqueuefront
+supported by deque
+shows a deque
+translation in terms
+cases the set
+set of algorithms
+algorithms that add
+structures must adhere
+implement an interface
+interface which requires
+requires the data
+structure to expose
+expose a standard
+standard add method
+respect to algorithmic
+complexities a deque
+enqueueing an item
+enqueuing an item
+wrapper data structure
+structure would require
+require the pro
+array up front
+provide an obvious
+state the maxi
+maxi mum number
+items the deque
+result the backing
+incur the expense
+expense of invoking
+leave the library
+library developer chapter
+deque data structure
+array minimization techniques
+amount of memory
+memory an algorithm
+harder to gauge
+issues a deque
+baking data structure
+two pointers consumes
+consumes more memory
+array item counterpart
+counterpart it makes
+expensive resizing algorithms
+data structure increases
+increases in size
+language that targets
+targets a garbage
+garbage collected virtual
+collected virtual machine
+virtual machine memory
+machine memory reclamation
+longer ref erenced
+erenced become unreachable
+marked for collection
+garbage collection algorithm
+explicit memory allocation
+allocation and deallocation
+programmer to decide
+memory that stores
+stores the object
+summary with normal
+rst are dealt
+windows cpu scheduler
+priority of process
+process to determine
+process to utilise
+utilise the cpu
+quantum normal queues
+queues have constant
+deletion run times
+run times searching
+exposed on queues
+typically the run
+times for insertion
+natural data structure
+make many problems
+problems a lot
+x3.7.4 makes extensive
+adelson-velsky and e.m
+e.m landis invented
+rst self balancing
+self balancing binary
+balancing binary search
+search tree data
+calling it avl
+self-balancing condition stating
+forces the general
+tree before continuing
+search tree obtained
+obtained by starting
+tree and inserting
+inserting some values
+bst in figure
+represents the worst
+worst case scenario
+applying a balance
+condition we ensure
+worst case running
+values are inserted
+avl balance condition
+node balance factor
+balance factor represents
+represents an additional
+piece of information
+restores the balance
+tree the inventors
+technique called tree
+rotations a tree
+tree while preserving
+preserving standard bst
+standard bst properties
+decrease the height
+bst by moving
+moving smaller subtrees
+right rotation left
+rotation left rotation
+left rotation figure
+right rotations chapter
+node.right s left
+properties are preserved
+node.left s right
+rightrotation the right
+right and left
+left rotation algorithms
+algorithms are symmetric
+symmetric only pointers
+pointers are changed
+rebalancing the algorithm
+perform the correct
+two new algorithms
+algorithms that represent
+represent double rotations
+algorithms are named
+performs a left
+subsequently a right
+start from balancing
+updated while tree
+restored through rotations
+current.height = max
+insertion avl insertion
+avl insertion operates
+rst by inserting
+applying rebalancing techniques
+property no longer
+right subtrees height
+insert a node
+insert the node
+node and check
+node balancing property
+nt been violated
+rebalance the tree
+preserving tree balance
+deletion our balancing
+tree still adheres
+avl balance property
+removing is contained
+step are required
+upsets the avl
+removed and tree
+rebalanced if found
+parent = nodetoremove
+value < nodetoremove.value
+count keeps track
+largestv alue.right chapter
+root node check
+node check balance
+summary the avl
+sophisticated self balancing
+unlike its older
+brother the avl
+avl tree avoids
+tree avoids worst
+avoids worst case
+worst case linear
+case linear complexity
+linear complexity runtimes
+avl tree guarantees
+enforcement of balancing
+logarithmic runtime complexity
+part ii algorithms
+chapter use data
+type to demonstrate
+easily be translated
+translated into generic
+generic sorting algo
+sorting algo rithms
+forms of sorting
+comparing each item
+imply this form
+form of sorting
+simple form bubble
+form bubble sort
+sorted into values
+values of ascending
+merge sort merge
+sort merge sort
+space time complexity
+implement the algorithm
+algorithm is based
+based on splitting
+splitting a list
+two similar sized
+similar sized lists
+sorting each list
+merging the sorted
+mergeordered simply takes
+takes two ordered
+two ordered lists
+lists and makes
+bubble sort iterations
+end mergesort chapter
+merge sort divide
+divide et impera
+quick sort quick
+sort quick sort
+popular sorting algorithms
+sorting algorithms based
+based on divide
+complexity the algorithm
+starts by picking
+picking an item
+moving all smaller
+main quick sort
+quick sort operation
+repeated on lesser
+lesser and greater
+greater sub lists
+case the list
+element is funda
+mental for avoiding
+drastically reduced performance
+pivot median strategy
+end quicksort chapter
+insertion sort insertion
+sort insertion sort
+sorting scheme similar
+sorting a hand
+hand of playing
+intent of building
+set of cards
+insertion sort iterations
+unsorted < list.count
+hold < list
+end insertionsort chapter
+shell sort put
+put simply shell
+simply shell sort
+variation of insertion
+sort as described
+items of varying
+distances apart resulting
+fairly straight forward
+items to compare
+shows shell sort
+sort being ran
+array of integers
+red coloured square
+current < list.count
+unlike the sorting
+sorting algorithms described
+previously radix sort
+sort uses buckets
+buckets to sort
+bucket holds items
+sort is performed
+performed these buckets
+buckets are emptied
+starting the smallest
+smallest key bucket
+list to sort
+isolating a speci
+rst simple version
+version of radix
+hundred the number
+total three keys
+shell sort chapter
+wanted to determine
+thousands the number
+asked the question
+pad the number
+thing to identify
+simple implemen tation
+tation of radix
+sort that works
+maximum key size
+isolate a speci
+isolate a key
+number = keytoaccess
+simple example lets
+access the tens
+column is key
+substitution yields key
+attained by multiplying
+multiplying the last
+key by ten
+ten working left
+manner the value
+value of key
+algorithm to work
+out the index
+array of queues
+queues to enqueue
+enqueue the item
+represents the largest
+largest key size
+item in list
+end radix figure
+shows the members
+members of queues
+described above operating
+list whose members
+number is highlighted
+highlighted omitted queues
+queues in figure
+algorithms for sorting
+radix sort base
+algorithm bubble sort
+selecting the correct
+correct sorting algorithm
+choose merge sort
+sort over shell
+actual imple mentation
+mentation some algorithms
+implementing a linear
+algorithm using recursion
+careful when implementing
+implementing recursive algorithms
+algorithms see appendix
+numeric unless stated
+alias n denotes
+denotes a standard
+test a simple
+attempt to slow
+base conversions dsa
+number of algorithms
+algorithms that convert
+convert a base
+octal or hexadecimal
+shows the algorithm
+number to convert
+convert to binary
+tobinary n list
+trace of tobinary
+greatest common denomina
+common denomina tor
+fairly routine problem
+problem in mathematics
+nding the greatest
+e.g the greatest
+problem is based
+based on euclid
+euclid s algorithm
+integers is calculated
+end greatestcommondenominator chapter
+digits this algorithm
+computes the maximum
+number of digits
+system the maximum
+similarly the maximum
+number that consists
+compute this maximum
+determine the maximum
+digits the expression
+represented as ffffff16
+ffffff16 which yields
+actual implementation numberbase
+type the base
+base enumeration type
+base = fbinary
+16g the reason
+reason we provide
+nition of base
+checks to determine
+determine the correct
+implementation we cast
+cast the value
+value of numberbase
+extract the value
+cast the option
+cast is implicit
+actual argument numberbase
+value for numberbase
+digits is computed
+attaining the factorial
+primitive mathematical operation
+operation many implementations
+algorithm are recursive
+problem is re
+cursive in nature
+present an iterative
+solution the iterative
+solution is presented
+similarly the factorial
+attain the factorial
+number to compute
+presented several numeric
+fun to design
+reader should gain
+domains to make
+respective domain attainable
+domain attainable numeric
+attainable numeric algorithms
+computing such data
+data as weather
+search a simple
+algorithm that search
+inside a list
+list it operates
+end is reached
+index of item
+item if found
+index < list.count
+list.count and list
+probability search probability
+search probability search
+statistical sequential searching
+sequential searching algorithm
+algorithm in addition
+addition to searching
+takes into account
+account its frequency
+frequency by swapping
+complexity still remains
+non-uniform items search
+reducing list scanning
+shows the resulting
+list after searching
+search probability increased
+item is found
+case swap founded
+swap founded item
+list.count or list
+cient searching algorithms
+searching algorithms earlier
+instance the logarithmic
+logarithmic searching algorithm
+algorithm that avl
+avl and bst
+cover a searching
+chop usually refers
+ciency largely depends
+underlying data structure
+store the data
+data for instance
+quicker to deter
+quicker to search
+search a bst
+search for data
+research the data
+primarily linear data
+linear data structure
+lack of knowledge
+model your data
+purely because string
+operations and transformations
+frequent within programs
+programs the algorithms
+presented are based
+based on problems
+problems the authors
+formulated to satisfy
+algorithms for primitive
+primitive string operations
+operations is simple
+extracting a sub-string
+algorithms that require
+require more inventiveness
+reverse the characters
+reverses the order
+string this algorithm
+principal that words
+delimited by white
+start and end
+words in value
+chars from start
+nt the last
+add some whitespace
+cut the whitespace
+applied in real-life
+real-life scenarios detecting
+out pretty trivial
+pretty trivial algorithm
+algorithm to design
+complexity our algo
+pointers at opposite
+ends of string
+character they point
+respect to value
+shows the ispalindrome
+algorithm in operation
+eliot s toilet
+remove all punctuation
+right pointers marching
+value is determined
+left < right
+algorithm we call
+call a method
+strip this algorithm
+algorithm discards punctuation
+including white space
+heavily compacted representation
+palindromes discard white
+discard white space
+design a simple
+algorithm while making
+making our algorithm
+algorithm fairly robust
+robust with respect
+updating the word
+skipping white space
+space that delimits
+delimits the words
+string \ ben
+ben ate hay
+distinguished via white
+previously listed points
+string with varying
+number of white
+white space delimiting
+delimiting the words
+previously listed index
+index keeps track
+hitting white space
+denotes a word
+algorithm each word
+word is separated
+occurrences of white
+e.g in .net
+array of characters
+determines a delimiter
+split the characters
+string into chunks
+chunks of strings
+array of sub-strings
+present a string
+typically the pattern
+occurrence of white
+varying white space
+white space splitting
+contained within value
+skip initial white
+initial white space
+whitespace and index
+index < value.length
+string just whitespace
+index = value.length
+value.length and value
+skip all whitespace
+split the words
+delimiter this algorithm
+algorithm is straightforward
+straightforward to implement
+back as elements
+attain the number
+number of unique
+subtract the unique
+unique word count
+number of stings
+operation the split
+undesired uniques set
+desired uniques set
+value is returned
+word in words
+method we referred
+referred to earlier
+earlier in x11.1
+x11.1 this simply
+removes any punctuation
+word the reason
+reason we perform
+perform this operation
+accurate unique string
+unique string collection
+e.g \ test
+minus the punctuation
+shows the undesired
+undesired and desired
+strings the algorithm
+algorithm to determine
+pretty trivial put
+parse the strings
+loop and check
+characters thus returning
+returning a non-negative
+index that represents
+represents the location
+occurs this approach
+exhibit a run
+word ; match
+index representing match
+representing match location
+location if occured
+summary we hope
+algorithms on string
+string data types
+types are strings
+common data type
+fascinating a simple
+simple google search
+search on string
+nuances between languages
+languages and encodings
+encodings will provide
+number of problems
+appendix a algorithm
+algorithm walkthrough learning
+design good algorithms
+approach to tracing
+tracing its behaviour
+tracing an algorithm
+algorithm only requires
+requires a single
+structure your algorithm
+visualise the problem
+ectively seeing things
+understand the problem
+table will store
+rithm the values
+attain a history
+values each variable
+variable has held
+variable has contained
+make your algorithm
+found this approach
+approach both simple
+powerful by combining
+combining a visual
+history of past
+past values generated
+problems much easier
+trace the ispalindrome
+variables the algorithm
+actual data structure
+structure the algorithm
+essentially a block
+block of contiguous
+memory that consists
+char data types
+array the picture
+ispalindrome to operate
+string data structure
+structure is represented
+visualising the data
+operating on value
+value word left
+left right table
+track the ispalindrome
+list of variables
+right having identi
+create a column
+table as shown
+shown in table
+ispalindrome algorithm execute
+execute each statement
+updating the variable
+table appropriately table
+table a.2 shows
+nal table values
+bloated in print
+annotate these strings
+strings with array
+indexes to aid
+aid the algorithm
+variables that change
+promote these values
+table for variables
+variables whose values
+algorithm we recommend
+promote the core
+structure being operated
+trace for ispalindrome
+important such traces
+designing your algorithm
+tables to verify
+verify algorithm correctness
+devise correct algorithms
+correct algorithms quicker
+algorithms quicker visualising
+visualising the problem
+domain and keeping
+track of changing
+changing data makes
+data makes problems
+easier to solve
+working through recursive
+simple as walking
+method call returns
+simple to follow
+out the recursive
+table based approach
+algorithm that computes
+computes a number
+sequence to compute
+bonacci sequence number
+jump into showing
+algo rithm calls
+algorithm the algorithm
+cases in total
+rst two items
+recursive method call
+method call tree
+case we etch
+etch ever closer
+base cases figure
+figure a.2 shows
+shows a diagrammtic
+recursive call chain
+a.2 the order
+figure a.3 shows
+shows the call
+call chain annotated
+callers in figure
+a.3 the return
+values are represented
+represented as annotations
+caller upon hitting
+two base cases
+hit a base
+case that branch
+branch of recursive
+recursive calls ceases
+ceases upon hitting
+hitting a base
+back to appendix
+chain for fibonacci
+fibonacci algorithm figure
+fibonacci algorithm appendix
+caller and continue
+caller is contiued
+call was made
+algorithms  recursive
+case we make
+make two recursive
+two recursive calls
+rst recursive call
+calls have returned
+easier to demonstrate
+diagrammatically as figure
+figure a.2 demonstrates
+recursive algorithm draw
+algorithm draw method
+draw method call
+method call diagrams
+diagrams to understand
+a.3 summary understanding
+summary understanding algorithms
+hard at times
+implemen tation perspective
+perspective in order
+order to understand
+understand an algorithm
+tables in cases
+sketch the recursive
+implementing an algorithm
+algorithm works mastering
+level is key
+key for devising
+problem in hand
+appendix b translation
+walkthrough the conversion
+conversion from pseudo
+actual imperative language
+convert the algorithm
+public static bool
+static bool isprime
+part the conversion
+straight forward process
+inject various calls
+algorithms to ascertain
+ascertain the correct
+fairly strict preconditions
+inject the correct
+code to handle
+handle such situations
+situations to preserve
+preserve the correctness
+handled by throwing
+throwing the correct
+make the translation
+pseudo code algorithms
+algorithms to mainstream
+mainstream imperative languages
+languages as simple
+encounter a keyword
+pseudo code examples
+browse to appendix
+descirbes each key
+appendix c recursive
+properties of modern
+modern programming languages
+methods that reference
+biggest advantages recursive
+advantages recursive methods
+recursive methods bring
+solutions to problems
+ned in terms
+generally a recursive
+two main properties
+aspects of recursive
+run into trouble
+trouble the trouble
+trouble we speak
+speak of manifests
+talk about iterative
+solutions an iterative
+iterative solution relies
+side to iterative
+counterparts with respect
+operation the major
+advantage of iterative
+solutions is speed
+speed most production
+recursive algorithms whatsoever
+prerequisite to checking
+checking in code
+e.g upon checking
+static analysis tool
+tool may verify
+code the developer
+developer is checking
+systems level code
+policy for recursive
+recursion for algorithms
+trouble the growth
+algorithms is high
+cases such algorithms
+algorithms will lean
+heavily on techniques
+techniques like divide
+divide and conquer
+constantly splitting problems
+problems into smaller
+problems is good
+spawning a lot
+lot of method
+algorithm to run
+run a lot
+slower than expected
+out of stack
+exceed the allotted
+allotted stack space
+thread the process
+bigger stack size
+records an activation
+record is created
+invoke a method
+simply an activation
+stack to support
+support method invocation
+method invocation activation
+invocation activation records
+method are pushed
+address is pushed
+index is incremented
+jump is made
+recursive algorithms operating
+operating on large
+large data structures
+stack space quickly
+value it creates
+creates many recursive
+case a big
+activation records start
+call chain exit
+exit and return
+record is unwound
+unwinding an activation
+activation record results
+index is decremented
+address is popped
+actual parameters appendix
+support method calls
+quickly recursive algorithms
+algorithms can exhaust
+exhaust the stack
+stack size allocated
+thread fairly fast
+dusting the cobwebs
+iterative vs recursive
+beauty and pitfalls
+algorithm the iterative
+job a lot
+give the fibonacci
+algorithm an input
+programmers into thinking
+cations of recursion
+structures and algo
+nature a perfect
+structure a common
+common tree node
+two point ers
+two other nodes
+tree is recursive
+wit each node
+node possibly pointing
+algorithms on tree
+algorithms like merge
+algorithms are recursive
+sense to model
+c.3 summary recursion
+trade between readability
+recursion is great
+implement an algorithm
+rule of thumb
+wind defensive coding
+home in recursive
+nature using recursion
+acceptable using recursion
+linked list traversal
+overkill its iterative
+lines of code
+point of view
+consult your compiler
+compiler and run
+compiler recognises things
+things like tail
+fact most commercial
+amount of optimisation
+compilers can appendix
+accept certain accountability
+appendix d testing
+part of software
+software development testing
+burden of proof
+company who hold
+hold test centric
+test centric roles
+provide a suite
+suite of unit
+tests that verify
+verify certain boundary
+thing about testing
+progressively a safety
+add or tweak
+run your suite
+suite of tests
+essential to maintaining
+fairly high bar
+order to attain
+platforms most modern
+catalogue of testing
+targeted at jav
+microsoft s common
+common language runtime
+language runtime http
+boost test library
+library that ships
+incredibly popular boost
+popular boost libraries
+boost libraries http
+libraries doc umentation
+doc umentation http
+test should focus
+single atomic property
+subject being tested
+test many things
+wanting to write
+write a test
+test that veri
+amount of work
+unit tests execute
+tests execute quickly
+test suite consisting
+consisting of thousands
+thousands of tests
+tests to execute
+failure to attain
+number of reasons
+incredibly tedious waiting
+waiting several minutes
+minutes to run
+developers local machine
+continuous build server
+developers and testers
+ran as part
+employing such strategies
+niggling little error
+source of great
+understatement to personify
+years a test
+test driven approach
+approach to development
+commonly the acronym
+principles of tdd
+write the unit
+watch it fail
+make it pass
+pass the premise
+write enough code
+satisfy the state
+state based assertions
+based assertions made
+approach to provide
+implementation of algorithms
+make the failing
+failing test pass
+pass because tdd
+makes you write
+write the tests
+tests up front
+nt be bothered
+bothered to write
+write your tests
+mentioned that tdd
+approach to testing
+describe the mantra
+test has failed
+test now passes
+restructure our program
+makes more sense
+easier to maintain
+list always occurs
+count the build
+initially your task
+solely to make
+make the test
+make the respective
+respective test green
+green the last
+item is based
+based around appendix
+program to make
+readable and maintainable
+important as tdd
+methodology to building
+building a solution
+adhere to progressive
+cleanly structured types
+amount of respect
+code this ranges
+ranges from correct
+clean code formatting
+code being stored
+source control repository
+employing a methodology
+methodology like tdd
+testing after implementing
+spend a great
+code all tests
+structure each block
+block of imperatives
+single unit test
+test a popular
+create the objects
+objects you require
+require in order
+order to perform
+perform the state
+based asser tions
+invoke the respective
+assembled to mutate
+mutate the state
+expect to hold
+previous two steps
+shows a simple
+simple test method
+method that employs
+public void mytest
+tests structuring tests
+structuring pro duction
+pro duction code
+e.g all unit
+typically all tests
+tests are abstracted
+abstracted from production
+tests are disjoint
+two dynamic link
+dynamic link libraries
+things like inheritance
+classes of tests
+amount of thought
+product of unit
+testing are code
+code coverage statistics
+coverage statistics code
+statistics code coverage
+portions of production
+units tests cover
+cover using tdd
+d.7 summary testing
+testing is key
+moderately stable product
+product moreover unit
+create a safety
+blanket when adding
+adding and removing
+removing features providing
+providing an early
+warning for breaking
+appendix e symbol
+describes the meaning
+whitespace single occurrence
+occurrence of whitespace
+yield like return
+return but builds
+builds a sequence
+majority of imperative
+dsa dat
+hms annotated
+annotated reference
+examples granville
+granville barne
+luca del
+del tongo
+tongo data
+data structures
+first edition
+edition copyright
+granville barnett
+.net articles
+leading minds
+software industry
+assumed knowledge
+imperative programming
+programming language
+object oriented
+oriented concepts
+book outline
+final messages
+linked lists
+linked list
+reverse order
+reverse traversal
+binary search
+search tree
+largest values
+tree traversals
+standard queue
+priority queue
+double ended
+ended queue
+avl tree
+tree rotations
+tree rebalancing
+bubble sort
+merge sort
+quick sort
+insertion sort
+shell sort
+primality test
+base conversions
+greatest common
+common denominator
+maximum value
+base consisting
+sequential search
+probability search
+repeated words
+rst matching
+matching character
+iterative algorithms
+recursive algorithms
+iterative solutions
+activation records
+unit test
+test suite
+code coverage
+iii preface
+impromptu put
+.net framework
+conversation started
+presentation style
+fact grown
+pseudocode listings
+text describing
+data structure
+question works
+began work
+book side
+actual library
+library implementation
+make explanations
+minded reader
+reader happy
+inject diagrams
+demystify problems
+algorithms worked
+present concise
+self-explanatory pseudocode
+programming languages
+key factor
+original creators
+great thing
+thing read
+absolute necessity
+under standing
+greater emphasis
+real-time systems
+wrong data
+great deal
+performance pain
+space requirements
+selected approach
+theoretical implications
+good reason
+amazing optimisation
+optimisation phases
+phases speci
+ex ample
+fast algorithm
+vice versa
+target virtual
+virtual machines
+implementation issues
+lan guage
+concise book
+key issues
+nal note
+barnett luca
+tongo acknowledgements
+acknowledgements writing
+short book
+rewarding experience
+sonu kapoor
+rst draft
+draft received
+thirteen thousand
+thousand downloads
+people jon
+jon skeet
+skeet provided
+alarming number
+eternally grateful
+grateful jon
+odd suggestion
+weekly show
+program ming
+ming community
+authors granville
+barnett granville
+ph.d candidate
+queensland university
+microsoft qut
+qut eresearch
+eresearch centre1
+computer science
+microsoft mvp
+main interests
+compilers granville
+personal website
+tongo luca
+masters degree
+flo rence
+web development
+data mining
+computer vision
+vision luca
+italian blog
+vii page
+left blank
+uncommon algorithms
+language independent
+easy porting
+nitive book
+book presents
+presents implementations
+implementations devised
+respective algorithms
+book alongside
+formal proofs
+book appeals
+larger audience
+complexity analysis
+general concepts
+abstract measurement
+mathematical proofs
+algorithmic run
+expansion figure
+run times
+cient algorithm
+exponential algorithms
+small problems
+list explains
+common big
+e.g adding
+tail node
+smaller chunks
+e.g searching
+e.g quick
+prototyp ing
+ing algorithm
+algorithm designs
+problem irrespective
+algorithm design
+loops chapter
+recursive calls
+cient run
+biggest asset
+discard things
+sorting algorithms
+quadratic run
+logarithmic run
+logarithmic algorithm
+data set
+suitably large
+ma chine
+notation isolates
+algorithm analysis
+quadratic algorithm
+communication tool
+tool picture
+fellow developers
+product group
+discussing prototype
+prototype algorithms
+node discovery
+massive networks
+minutes elapse
+good idea
+respective algorithm
+high level
+level algorithm
+ciency replay
+respective developer
+developer states
+asymptotic run
+good general
+general idea
+ciency data
+feature holds
+up permost
+remaining features
+features imagine
+successful product
+optimal solutions
+quantitative approach
+software development
+development properties
+superior programmer
+pseudo-imperative coding
+coding format
+imperative mainstream
+mainstream programming
+target languages
+java chapter
+imple mentations
+imperative thinking
+thinking style
+functional programmer
+functional paradigm
+cient solutions
+functional language
+security sand
+sand boxing
+memory management
+garbage collection
+collection algorithms
+list node
+managed environment
+fair amount
+respective language
+is sue
+imperative language
+pseudo implementations
+primitive imperative
+language constructs
+algo rithms
+rithms presented
+experienced programmers
+provide data
+generic types
+part interpreting
+post-conditions represent
+applying algorithm
+primitive language
+return type
+post condition
+book require
+require parameters
+explicit type
+operations performed
+biggest clue
+bit machine
+resizeable array
+last major
+major point
+explicitly end
+language construct
+state end
+implicit scope
+scope closure
+closure works
+simple code
+complex cases
+pseudocode style
+algorithms start
+simple algorithm
+algorithm signature
+algorithm algorithmname
+end algorithmname
+post condi
+condi tions
+single numeric
+numeric parameter
+post conditions
+conditions follow
+cover things
+actual parameter
+collection passed
+algorithms operation
+ascending order
+handle pre-conditions
+pre conditions
+exceptional cases
+track things
+variable names
+table give
+map relationships
+recursive algorithm
+algorithm traces
+records function
+function calls
+elaborate map
+makes things
+follow track
+uncom mon
+mon data
+varying purposes
+string operations
+structures present
+previous list
+list represents
+vast majority
+respective data
+table listing
+return keyword
+returns control
+yield returns
+yield control
+minimised test
+driven development
+development style
+pseudocode algorithm
+unit tests
+tests satisfying
+test cases
+part algorithms
+obvious cases
+respective case
+actual problem
+identify areas
+overwhelming list
+algorithm greatly
+vast amount
+smaller problems
+problems solving
+easier task
+tests contribute
+core piece
+stable software
+view appendix
+describes testing
+code speci
+open source
+source project1
+pseudocode listed
+named data
+nal messages
+algorithm works
+abstract sense
+key points
+provide suggestions
+feature requests
+lists linked
+level perspective
+single pointer
+last node
+null pointer
+pointer representing
+maintain head
+tail pointers
+operation random
+random insertion
+linear operation
+maintain pointers
+aptly references
+traditional insertion
+designated node
+current predecessor
+traversal yields
+times make
+copy penalty
+primitive data
+list consists
+node figure
+list populated
+people talk
+general purpose
+purpose method
+list updating
+tail reference
+algorithm add
+end add
+previous algorithm
+se quence
+resulting list
+searching searching
+list checking
+algorithm listed
+head node
+return false
+deletion deleting
+list irrespective
+concise algorithms
+list deletion
+algorithm remove
+end remove
+list traversing
+node reference
+algorithm described
+rst case
+algorithm traverse
+end traverse
+order traversing
+forward manner
+i.e left
+fundamental characteristics
+list make
+expensive operation
+list backwards
+algorithm reversetraversal
+end reversetraversal
+real interest
+make reverse
+reverse list
+list traversal
+traversal simple
+previous nodes
+list figure
+node chapter
+previous pointer
+previous tail
+rst node
+add figure
+added task
+additional reference
+correct value
+traversal algorithm
+x2.1.5 required
+creative invention
+lists make
+forward traversal
+opposite direction
+list reverse
+summary linked
+unknown number
+size involves
+involves invoking
+resizing algorithm
+linear run
+remove nodes
+constant run
+maintaining pointers
+memory overhead
+accessing nodes
+primitive property
+constant operation
+update count
+deletion algorithms
+basic in
+in sertions
+non-trivial operations
+require forwards
+backwards traversal
+token stream
+recursive descent
+descent fashion
+correct parse
+parse tree
+design makes
+bi-directional traversal
+linked chapter
+tree binary
+search trees
+root node
+left subtree
+right subtree
+tree data
+balancing properties
+parameter alias
+previously insertion
+operation provided
+algorithm insert
+passed custom
+custom type
+type checks
+correct location
+end insert
+algorithm insertnode
+end insertnode
+insertion algorithm
+rst algorithm
+non recursive
+core base
+base case
+recursive insertnode
+insertnode algorithm
+put value
+value note
+binary chop
+current node
+ordered type
+algorithm nonetheless
+case value
+deletion removing
+con sider
+leaf node
+largest value
+fth case
+possibility nonetheless
+rst occurrence
+subtree figure
+tree deletion
+deletion cases
+remove algorithm
+helper algorithms
+algorithms named
+named findp
+findp arent
+case yields
+largestv alue
+largestv alue.right
+right pointer
+remove chapter
+parent node
+extensive tree
+tree transforma
+transforma tions
+algorithm findparent
+return root
+return findparent
+end findparent
+special case
+value exists
+algorithm findnode
+return findnode
+end findnode
+findnode astute
+astute readers
+findnode algorithm
+call findnode
+return value
+smallest value
+termi nating
+findmax algorithms
+node references
+algorithm findmin
+end findmin
+findmin chapter
+algorithm findmax
+end findmax
+strategy depends
+node visitation
+visitation order
+binarysearcht ree
+preorder algorithm
+preorder traversal
+algorithm preorder
+end preorder
+postorder traversal
+algorithm postorder
+end postorder
+postorder chapter
+preorder visit
+visit binary
+postorder visit
+inorder traversal
+inorder visit
+algorithm inorder
+end inorder
+comparison order
+populated bst
+inorder strategy
+yielded sequence
+rst order
+order yields
+par ticular
+ticular depth
+right fashion
+rst traversal
+sizeable array
+nodes visited
+breadth first
+first visit
+algorithm breadthfirst
+end breadthfirst
+good solution
+represent types
+custom rules
+rules inherent
+logarithmic insertion
+ecient traversal
+traversal remains
+tree trees
+recursive data
+big assumption
+algorithms presented
+unbalanced tree
+self-balancing properties
+simple tree
+min heap
+max heap
+strategy determines
+heap strategy
+heap employs
+refer ences
+children figure
+heap data
+adding values
+left-to-right fashion
+fashion figure
+shows arrows
+direct left
+chapter figure
+step process
+default capacity
+internal data
+dynamic data
+initial size
+upper storage
+storage limit
+limit required
+structure encapsulates
+encapsulates resizing
+resizing algorithms
+array representation
+structure figure
+direct children
+adding null
+null references
+null values
+non-null value
+required expressions
+parent index
+left child
+right child
+insertion designing
+heap insertion
+heap order
+post-insertion operation
+operation inserting
+free slot
+free index
+insertion inserting
+rst part
+validating heap
+min-heap ordering
+array counterpart
+counterpart chapter
+calculating node
+node properties
+verifying heap
+actual insertion
+inserting values
+min-heap chapter
+algorithm minheapify
+heap items
+preserved min
+heap ordering
+end minheapify
+maxheapify algorithm
+min heapify
+heapify algorithm
+item involves
+last value
+index location
+verify heap
+value chapter
+updated alias
+promote smallest
+smallest key
+remove figure
+backing array
+initial capacity
+deletion algorithm
+removed value
+heap array
+reference types
+i.e objects
+managed languages
+empty hole
+garbage collector
+garbage collected
+heap chapter
+case true
+heap hold
+backing heap
+heap factoring
+search algorithm
+including logic
+properties presented
+deterministically state
+current level
+extra logic
+expensive worse
+worse case
+case run
+comparison operations
+algorithm determines
+previous expression
+ned holds
+array data
+heap implementation
+array starting
+initial array
+array index
+upper bound
+actual physical
+physical bound
+allocated array
+array count
+conceptual heap
+actual array
+array implementation
+heap mutation
+dead space
+heap backing
+default value
+count garbage
+garbage values
+make things
+things simple
+garbage value
+reference type
+value type
+contained references
+live objects
+separate objects
+heap property
+fashion requires
+creative intervention
+summary heaps
+implement priority
+priority queues
+sample implementation
+facilitate heap
+heap sort
+heap maintains
+maintains heap
+ordering strategy
+strategy enforces
+min-heap strategy
+heap abides
+invoke algorithms
+dynamic array
+array expansion
+heap outgrows
+space allocated
+good initial
+initial starting
+starting size
+array resizing
+set implementations
+implementations tend
+repeated values
+set theory
+demonstrates brie
+common operations
+curly braces
+large number
+positive integers
+current value
+right hand
+hand side
+arithmetic expression
+nite number
+natural numbers
+numbers set
+set intersection
+union set
+demonstrates set
+set union
+frame work
+mainstream languages
+algorithms exist
+extension methods
+type sys
+result dsa
+provide implementations
+system.linq.enumerable deal
+simple traversal
+sets adding
+algorithm union
+foreach item
+end foreach
+return union
+end union
+union algorithm
+rst set
+runtime applies
+major thing
+thing worth
+worth pointing
+fewest items
+intersection set
+algorithm intersection
+return intersection
+end intersection
+intersection algorithm
+linear runtime
+unordered sets
+general sense
+explicit ordering
+mem bers
+ordering scheme
+libraries provide
+simply mention
+unordered set
+ordered set
+cover brie
+hash table
+cient data
+backing data
+insertion run
+hash map
+hashing algorithm
+hash tables
+tables employ
+purpose hashing
+hashing algorithms
+set enforces
+ned comparison
+internal backing
+order realised
+backing tree
+correct ordered
+ordered sequence
+set members
+unique items
+summary sets
+sets provide
+unique objects
+correct backing
+check results
+complexity ordered
+ordered sets
+sets cost
+logarithmic growth
+key property
+sets implemented
+look-up times
+inser tion
+constant ordered
+item yielding
+queues queues
+essential data
+vast amounts
+soft ware
+user mode
+kernel mode
+mode applications
+rst put
+item added
+traditional queue
+core methods
+mentioned methods
+queue data
+list describes
+core data
+mainstream library
+cient queue
+main property
+deletion run
+remove items
+dequeue operation
+head pointer
+queue remains
+queue determines
+custom comparer
+highest priority
+normal queue
+rst item
+deque applies
+prioritization strategy
+programmer utilising
+structures exposed
+exposed interface
+queue mutations
+mutations chapter
+provide front
+common queue
+queue operations
+list identi
+peekback figure
+in order
+one-to-one translation
+normal queues
+e.g enqueueback
+collections implement
+standard add
+add method
+wrapper data
+pro grammer
+obvious advantage
+maxi mum
+mum number
+library developer
+developer chapter
+deque data
+array minimization
+minimization techniques
+array taking
+considerable amount
+small percentage
+aforementioned issues
+baking data
+pointers consumes
+array item
+item counterpart
+expensive resizing
+structure increases
+size dynamically
+virtual machine
+machine memory
+memory reclamation
+opaque process
+collection algorithm
+explicit memory
+memory allocation
+order queues
+windows cpu
+cpu scheduler
+erent queue
+constant insertion
+times searching
+backing store
+natural data
+lot simpler
+rst search
+g.m adelson-velsky
+e.m landis
+landis invented
+rst self
+self balancing
+self-balancing condition
+condition stating
+tree modi
+general shape
+tree obtained
+empty tree
+worst case
+case scenario
+run ning
+balance condition
+case running
+common operation
+avl balance
+node balance
+balance factor
+factor represents
+additional piece
+information stored
+inventors make
+well-known technique
+tree rotation
+avl trees
+insertion order
+standard bst
+bst properties
+right rotations
+smaller subtrees
+larger subtrees
+right rotation
+rotation left
+left rotation
+rotation figure
+tree left
+rotations chapter
+algorithm leftrotation
+end leftrotation
+algorithm rightrotation
+end rightrotation
+rotation algorithms
+rotation resulting
+runtime complexity
+elds present
+section veri
+correct rotation
+double rotations
+named leftandrightrotation
+e.g leftandrightrotation
+rst performs
+algorithm checkbalance
+current height
+tree balance
+end checkbalance
+insertion avl
+avl insertion
+insertion operates
+bst insertion
+applying rebalancing
+rebalancing techniques
+avl property
+longer holds
+correct point
+inserted node
+node balancing
+balancing property
+preserving tree
+balancing algorithm
+balance property
+removal upsets
+tree rebalanced
+alue.right chapter
+node check
+check balance
+balancing tree
+younger brother
+older brother
+tree avoids
+avoids worst
+case linear
+linear complexity
+complexity runtimes
+tree guarantees
+balancing algorithms
+logarithmic runtime
+demonstrate sorting
+bit integer
+algorithms discussed
+generic sorting
+sorting algo
+simple forms
+simple form
+algorithm bubblesort
+return list
+end bubblesort
+sort merge
+cient space
+similar sized
+sized lists
+sorted lists
+function mergeordered
+ordered lists
+sort iterations
+algorithm mergesort
+return mergeordered
+end mergesort
+mergesort chapter
+sort divide
+impera approach
+sort quick
+popular sorting
+algorithms based
+impera strategy
+algorithm starts
+smaller items
+greater elements
+main quick
+sort operation
+greater sub
+sub lists
+median element
+funda mental
+reduced performance
+pivot figure
+pivot median
+median strategy
+algorithm quicksort
+return concatenate
+end quicksort
+quicksort chapter
+sort insertion
+interesting algorithm
+expensive runtime
+sorting scheme
+playing cards
+algorithm insertionsort
+end insertionsort
+insertionsort chapter
+sort put
+simply shell
+cient variation
+comparing items
+varying distances
+straight forward
+selects items
+compare figure
+shows shell
+red coloured
+algorithm shellsort
+end shellsort
+algorithms described
+sort items
+bucket holds
+holds items
+radix sort
+key bucket
+highest key
+key values
+rst simple
+simple version
+isolating keys
+rst key
+single hundred
+sort chapter
+key value
+thousands location
+last thing
+simple implemen
+implemen tation
+maximum key
+key size
+tens key
+tens column
+substitution yields
+last key
+ten working
+working left
+sequential manner
+algorithm radix
+largest key
+end radix
+radix figure
+highlighted omitted
+omitted queues
+erent algorithms
+sorting lists
+sort base
+correct sorting
+sorting algorithm
+choose merge
+actual imple
+imple mentation
+recursive fashion
+e.g implementing
+slower algorithm
+bad idea
+prime number
+prime numbers
+algorithm isprime
+end isprime
+conversions dsa
+equivalent binary
+hexadecimal form
+binary representation
+algorithm trace
+algorithm tobinary
+return reverse
+end tobinary
+common denomina
+denomina tor
+routine problem
+greatest number
+elegant solutions
+algorithm greatestcommondenominator
+return greatestcommondenominator
+end greatestcommondenominator
+greatestcommondenominator chapter
+num ber
+algorithm computes
+maximum number
+number base
+hexadecimal number
+algorithm numberbase
+actual implementation
+implementation numberbase
+enumeration type
+base enumeration
+readable manner
+correct base
+relevant option
+option octal
+actual argument
+argument numberbase
+algorithm maxvalue
+number system
+numberbase consisting
+return power
+end maxvalue
+number attaining
+primitive mathematical
+mathematical operation
+factorial algorithm
+re cursive
+iterative solution
+aforementioned acts
+numeric algorithms
+make work
+respective domain
+domain attainable
+advanced systems
+planet computing
+weather forecasts
+item inside
+match occurs
+algorithm sequentialsearch
+return index
+end sequentialsearch
+search probability
+statistical sequential
+sequential searching
+searching algorithm
+algorithm complexity
+non-uniform items
+items search
+frequent items
+rst positions
+reducing list
+list scanning
+resulting state
+searched items
+probability increased
+search operation
+algorithm probabilitysearch
+boolean indicating
+case swap
+swap founded
+founded item
+end probabilitysearch
+searching algorithms
+cient searching
+logarithmic searching
+bst tree
+underlying data
+deter mine
+linear data
+knowledge model
+strings strings
+satisfy curiosity
+ning algorithms
+primitive string
+e.g extracting
+algorithm presented
+white space
+words start
+algorithm reversewords
+skip whitespace
+append chars
+last word
+string add
+end reversewords
+frequent algorithm
+real-life scenarios
+scenarios detecting
+trivial algorithm
+algo rithm
+opposite ends
+pointers march
+value figure
+ispalindrome algorithm
+valid palindrome
+right pointers
+pointers marching
+algorithm ispalindrome
+return word
+end ispalindrome
+algorithm discards
+discards punctuation
+including white
+result word
+compacted representation
+original string
+uppercase representation
+palindromes discard
+case making
+string counting
+word count
+correct place
+ben ate
+ate hay
+listed points
+inword chapter
+words figure
+varying number
+space delimiting
+listed index
+current index
+nally inword
+present index
+splitting symbols
+.net string.split1
+string indexed
+single occurrence
+space splitting
+algorithm wordcount
+words contained
+initial white
+return wordcount
+end wordcount
+words adding
+unique strings
+unique words
+unique word
+total number
+stings contained
+array returned
+split operation
+undesired uniques
+uniques set
+desired uniques
+algorithm repeatedwordcount
+foreach word
+end repeatedwordcount
+repeatedwordcount algorithm
+strip method
+simply removes
+accurate unique
+unique string
+string collection
+word minus
+punctuation figure
+desired sets
+unique set
+string matches
+pretty trivial
+trivial put
+strings considered
+double loop
+discarding punctuation
+non-negative index
+rst character
+approach exhibit
+word match
+index index
+match occurred
+index representing
+representing match
+match location
+fun algorithms
+string data
+data types
+common data
+data type
+strings fascinating
+simple google
+google search
+string nuances
+great number
+introductory algorithms
+walkthrough learning
+good algorithms
+structured approach
+cases tracing
+single table
+algorithm operates
+problem quicker
+trace table
+store information
+algorithm mutates
+infer patterns
+visual representation
+past values
+values generated
+make understanding
+solving problems
+technique outlined
+iterative walkthrough
+actual data
+contiguous memory
+char data
+accessing items
+value word
+word left
+table a.1
+algorithm execute
+statement updating
+variable values
+table appropriately
+appropriately table
+nal table
+table values
+array indexes
+include variables
+table a.2
+word variables
+larger diagram
+values change
+ispalindrome appendix
+trace tables
+verify algorithm
+algorithm correctness
+simple table
+quick sketch
+correct algorithms
+algorithms quicker
+quicker visualising
+problem domain
+keeping track
+changing data
+data makes
+makes problems
+lot easier
+part working
+iterative algorithm
+based approach
+recursive implementation
+fiboncacci sequence
+algorithm fibonacci
+bonacci sequence
+sequence number
+return fibonacci
+end fibonacci
+diagrammtic representation
+rithm calls
+fibonacci algorithm
+preceeding list
+base cases
+recursive method
+method call
+call tree
+recursive case
+cases figure
+recursive call
+call chain
+labelled figure
+chain annotated
+return values
+methods return
+red arrows
+calls ceases
+algorithm figure
+return chain
+algorithm appendix
+continue execution
+method execution
+fibonacci algorithms
+subesequently return
+algorithm draw
+draw method
+call diagrams
+summary understanding
+understanding algorithms
+tation perspective
+recursive sketch
+cases implementing
+works mastering
+designed solution
+actual imperative
+public static
+static bool
+bool isprime
+int number
+int innerloopbound
+forward process
+utility algorithms
+correct result
+strict preconditions
+correct code
+correct exception
+pseudo code
+code algorithms
+imperative languages
+code examples
+key word
+succinct properties
+modern programming
+biggest advantages
+advantages recursive
+recursive methods
+methods bring
+compact solutions
+main properties
+making progress
+recursion whatsoever
+solution relies
+recursive counterparts
+major advantage
+production software
+algorithms whatsoever
+companies prerequisite
+static analysis
+analysis tool
+systems level
+level code
+tolerance policy
+algorithm run
+inviting trouble
+growth rate
+splitting problems
+good practice
+method calls
+lot slower
+stack space
+allotted stack
+operating system
+case irrespective
+bigger stack
+stack size
+activation record
+method put
+support method
+method invocation
+invocation activation
+small amount
+actual parameters
+return address
+top-of-stack index
+total amount
+memory required
+local variables
+algorithms operating
+large data
+space quickly
+big chunk
+records start
+nested methods
+chain exit
+respective caller
+method exits
+unwound unwinding
+record results
+memory consumed
+parameters appendix
+size allocated
+recursive solution
+lot quicker
+iterative version
+shock programmers
+common tree
+tree node
+point ers
+node type
+makeup wit
+makes sense
+inherent design
+good news
+summary recursion
+powerful tool
+software projects
+case recursion
+throwing caution
+defensive coding
+times recursion
+natural home
+perfectly acceptable
+iterative counterpart
+recursive counterpart
+abstract point
+compiler recognises
+recognises things
+tail recursion
+commercial compilers
+optimisation compilers
+testing testing
+essential part
+development testing
+hold test
+test centric
+centric roles
+boundary conditions
+safety net
+tweak algorithms
+sizeable project
+high bar
+unit testing
+modern languages
+impressive catalogue
+testing frameworks
+target microsoft
+common language
+language runtime
+runtime http
+boost test
+test library
+popular boost
+boost libraries
+libraries http
+direct link
+umentation http
+single atomic
+atomic property
+unstructured tests
+smallest amount
+tests execute
+execute quickly
+suite consisting
+tedious waiting
+run tests
+local machine
+team scenario
+continuous build
+build server
+tests devised
+testers ran
+build process
+error cases
+customer base
+trivial bug
+code reported
+great debate
+ques tion
+recent years
+test driven
+driven approach
+acronym tdd
+founding principles
+state based
+based assertions
+assertions made
+structured intent
+single goal
+failing test
+test pass
+tdd makes
+write tests
+preferred method
+favoured approach
+rst point
+build error
+tdd initially
+respective test
+test green
+last item
+last point
+progressive methodology
+progressive revisions
+algorithm restructuring
+structured types
+major part
+project ecosystem
+production code
+clean code
+code formatting
+testing code
+source control
+control repository
+great amount
+writing tests
+single unit
+popular approach
+respective operations
+simple test
+test method
+public void
+void mytest
+assemble type
+act t.methoda
+tests structuring
+structuring tests
+structuring pro
+pro duction
+duction code
+person type
+persontest type
+dynamic link
+link libraries
+test code
+ning classes
+coverage statistics
+statistics code
+units tests
+tests cover
+summary testing
+stable product
+safety blanket
+removing features
+features providing
+early warning
+symbol description
+whitespace single
+pseudo symbol
+direct translation
+imperative counterparts
+dsa
+dat
+hms
+annotated
+reference
+examples
+granville
+barne
+luca
+del
+tongo
+data
+structures
+algorithms
+first
+edition
+copyright
+barnett
+book
+made
+exclusively
+dotnetslackers
+http
+place
+.net
+articles
+news
+leading
+minds
+software
+industry
+contents
+introduction
+nt
+assumed
+knowledge
+1.2.1
+big
+notation
+1.2.2
+imperative
+programming
+language
+1.2.3
+object
+oriented
+concepts
+pseudocode
+tips
+working
+outline
+testing
+code
+final
+messages
+linked
+lists
+singly
+list
+2.1.1
+insertion
+2.1.2
+searching
+2.1.3
+deletion
+2.1.4
+traversing
+2.1.5
+reverse
+order
+doubly
+2.2.1
+2.2.2
+2.2.3
+traversal
+summary
+binary
+search
+tree
+finding
+parent
+node
+attaining
+smallest
+largest
+values
+traversals
+3.7.1
+preorder
+3.7.2
+postorder
+3.7.3
+inorder
+3.7.4
+breadth
+heap
+sets
+unordered
+5.1.1
+ordered
+queues
+standard
+queue
+priority
+double
+ended
+avl
+rotations
+rebalancing
+sorting
+bubble
+sort
+merge
+quick
+shell
+radix
+numeric
+primality
+test
+base
+conversions
+greatest
+common
+denominator
+two
+numbers
+computing
+maximum
+value
+number
+speci
+consisting
+digits
+factorial
+sequential
+probability
+strings
+reversing
+words
+sentence
+detecting
+palindrome
+counting
+string
+determining
+repeated
+rst
+matching
+character
+algorithm
+walkthrough
+a.1
+iterative
+a.2
+recursive
+a.3
+translation
+b.1
+solutions
+c.1
+activation
+records
+c.2
+problems
+nature
+c.3
+d.1
+constitutes
+unit
+d.2
+write
+tests
+d.3
+view
+suite
+d.4
+d.5
+structuring
+d.6
+coverage
+d.7
+symbol
+nitions
+iii
+preface
+story
+erent
+lying
+development
+impromptu
+put
+simply
+result
+series
+emails
+back
+authors
+library
+framework
+omission
+subtitle
+conversation
+started
+create
+aesthetically
+pleasing
+present
+weeks
+presentation
+style
+fact
+grown
+listings
+chunks
+text
+describing
+structure
+question
+works
+things
+point
+thought
+heck
+make
+thing
+summer
+began
+work
+side
+actual
+implementation
+writing
+respect
+structured
+explanations
+simple
+maintaining
+moder
+ately
+degree
+precision
+eager
+minded
+reader
+happy
+inject
+diagrams
+demystify
+moderatly
+challenging
+visualise
+remember
+worked
+nally
+concise
+self-explanatory
+ported
+easily
+mainstream
+languages
+java
+key
+factor
+implementations
+stated
+designed
+theory
+guideline
+eternally
+grateful
+original
+creators
+turn
+out
+worse
+normal
+fellows
+opinion
+choice
+great
+read
+subject
+implementing
+version
+hope
+absolute
+necessity
+under
+standing
+scenario
+projects
+concerned
+performance
+apply
+greater
+emphasis
+real-time
+systems
+selection
+wrong
+deal
+pain
+absolutely
+run
+complexity
+space
+requirements
+selected
+approach
+explain
+theoretical
+implications
+good
+reason
+compilers
+compiler
+amazing
+optimisation
+phases
+cally
+targeted
+recursion
+ex
+ample
+surprised
+subtle
+erences
+fast
+slow
+vice
+versa
+concerns
+target
+virtual
+machines
+leaving
+issues
+lan
+guage
+us...well
+cases
+resulted
+focuses
+nal
+note
+gospel
+verify
+feasibly
+veri
+mind
+enjoy
+reading
+enjoyed
+acknowledgements
+short
+fun
+rewarding
+experience
+people
+helped
+sonu
+kapoor
+generously
+hosted
+released
+draft
+received
+thirteen
+thousand
+downloads
+generosity
+reach
+jon
+skeet
+provided
+alarming
+suggestions
+edited
+odd
+suggestion
+email
+feedback
+listened
+doubt
+content
+uenced
+special
+publicise
+microsoft
+channel
+weekly
+show
+dan
+bloggers
+spread
+word
+gave
+audience
+extremely
+contributed
+program
+ming
+community
+ceases
+amaze
+constituents
+give
+ph.d
+candidate
+queensland
+university
+technology
+qut
+parallelism
+eresearch
+centre1
+holds
+computer
+science
+mvp
+main
+interests
+contacted
+places
+personal
+website
+blog
+studying
+masters
+flo
+rence
+vary
+web
+research
+elds
+mining
+vision
+maintains
+italian
+found
+1http
+vii
+page
+intentionally
+left
+blank
+chapter
+uncommon
+independent
+easy
+porting
+nitive
+part
+presents
+devised
+based
+respective
+considered
+norm
+alongside
+formal
+proofs
+abstract
+depict
+appeals
+larger
+written
+assumptions
+approachable
+assume
+familiar
+analysis
+extensively
+vital
+general
+determine
+scenarios
+chosen
+reasons
+important
+measurement
+judge
+mathematical
+figure
+algorithmic
+expansion
+shows
+times
+demonstrate
+choose
+cient
+sanity
+graph
+omitted
+cubic
+exponential
+small
+avoid
+explains
+notations
+constant
+operation
+depend
+size
+input
+e.g
+adding
+tail
+maintain
+pointer
+linear
+proportionate
+log
+logarithmic
+break
+problem
+smaller
+invocation
+breaks
+takes
+results
+stitches
+quadratic
+rare
+incredibly
+encounter
+items
+signal
+review
+design
+prototyp
+ing
+designs
+intention
+solving
+irrespective
+strongly
+advise
+optimise
+loops
+calls
+biggest
+asset
+es
+sentially
+discard
+hardware
+faster
+set
+suitably
+large
+applies
+ran
+ma
+chine
+isolates
+growth
+grows
+generally
+acts
+communication
+tool
+picture
+scene
+meeting
+fellow
+developers
+product
+group
+discussing
+prototype
+discovery
+massive
+networks
+minutes
+elapse
+discussed
+idea
+discussion
+high
+level
+ciency
+replay
+head
+talking
+developer
+states
+asymptotic
+choices
+selecting
+purpose
+readers
+budgets
+feature
+budget
+represents
+up
+permost
+bound
+save
+necessarily
+remaining
+features
+imagine
+application
+team
+developing
+routines
+essentially
+spin
+required
+boss
+tells
+start
+exceed
+invoked
+successful
+strive
+optimal
+taking
+quantitative
+properties
+superior
+programmer
+measuring
+critical
+success
+pseudo-imperative
+coding
+format
+basics
+port
+ectively
+explicit
+requirement
+imple
+mentations
+thinking
+functional
+aspects
+paradigm
+produce
+haskell
+ocaml
+listed
+provide
+security
+sand
+boxing
+memory
+management
+garbage
+collection
+trivial
+pointers
+describe
+description
+context
+managed
+environment
+interpret
+programmers
+fair
+amount
+subtleties
+is
+sue
+emphasise
+comfortable
+successfully
+pseudo
+essential
+user
+primitive
+constructs
+lost
+algo
+rithms
+presented
+confusing
+follow
+experienced
+generic
+types
+samples
+inheritance
+encapsulation
+polymorphism
+planning
+implemented
+x1.7
+makes
+extensive
+desirable
+interfaces
+interpreting
+pre-conditions
+enforced
+post-conditions
+represent
+applying
+struc
+ture
+type
+parameters
+inferred
+explicitly
+begun
+return
+post
+condition
+ciently
+obvious
+sake
+brevity
+require
+assign
+contexts
+operations
+performed
+additionally
+parameter
+clue
+instance
+pseudo-name
+translates
+integer
+bits
+bit
+machine
+similarly
+resizeable
+array
+vector
+last
+major
+end
+construct
+close
+scope
+loop
+state
+interpretation
+scopes
+closed
+implicit
+closure
+complex
+lead
+ambiguity
+straightforward
+signature
+algorithmname
+arg1
+arg2
+argn
+immediately
+pre
+condi
+tions
+compute
+computed
+describes
+single
+conditions
+enforce
+pre-conidition
+opera
+tion
+cover
+null
+passed
+post-condition
+ect
+sorted
+ascending
+handle
+non-conformance
+exceptional
+message
+exception
+caller
+failed
+execute
+books
+recommend
+pen
+paper
+track
+variable
+names
+table
+column
+continuously
+update
+columns
+mutations
+occurring
+intuitively
+map
+relationships
+rest
+suggest
+variables
+calculations
+dealing
+traces
+function
+cleaner
+drawing
+elaborate
+arrows
+quickly
+systematic
+easier
+split
+parts
+pseudo-implementations
+uncom
+mon
+varying
+purposes
+sequentially
+beginning
+chapters
+independently
+entirety
+section
+interested
+initially
+con
+cerned
+previous
+vast
+majority
+appendix
+listing
+symbols
+meaning
+keyword
+yield
+light
+method
+exit
+returns
+control
+exhausted
+tested
+minimised
+driven
+esh
+transcribe
+satisfying
+progressively
+satis
+fairly
+areas
+prove
+satisfy
+tricky
+portions
+case
+identify
+mentation
+overwhelming
+hinder
+ability
+greatly
+bom
+barded
+sub-divide
+composing
+task
+clouding
+details
+contribute
+core
+piece
+creating
+stable
+invite
+depth
+aligned
+actively
+open
+source
+project1
+houses
+project
+named
+digest
+embark
+understand
+sense
+achieve
+outcome
+points
+1all
+encouraged
+requests
+bugs
+improve
+perspective
+nodes
+representing
+random
+excluded
+characteristics
+stands
+chose
+aptly
+references
+performing
+traditional
+front
+rule
+inserting
+middle
+add
+designated
+traverse
+current
+predecessor
+yields
+attractive
+dynamically
+resized
+incurs
+copy
+penalty
+eventually
+incur
+consists
+populated
+integers
+talk
+form
+implicitly
+api
+adds
+append
+updating
+appropriately
+tail.next
+se
+quence
+resulting
+checking
+similar
+x2.1.4
+item
+true
+false
+n.value
+n.next
+deleting
+account
+empty
+remove
+removing
+exist
+described
+any
+removed
+head.next
+n.next.value
+conditional
+line
+n.next.next
+ned
+x2.2
+continue
+node.next
+check
+traversed
+forward
+manner
+i.e
+right
+demonstrated
+wanted
+perform
+x2.1.3
+acquire
+fundamental
+expensive
+nding
+backwards
+cost
+depicts
+applied
+reversetraversal
+belong
+curr
+prev
+prev.next
+curr.value
+real
+interest
+shown
+x2.2.3
+erence
+traveral
+previously
+x2.1.2
+x2.1.1
+bind
+inserted
+n.previous
+sequence
+guessed
+added
+binding
+additional
+correct
+head.value
+head.previous
+tail.previous
+n.previous.next
+n.next.previous
+x2.1.5
+creative
+invention
+opposite
+direction
+action
+unknown
+store
+exceeding
+involves
+invoking
+resizing
+requires
+overhead
+pay
+accessing
+index
+expense
+bytes
+count
+tracks
+contained
+property
+basic
+in
+sertions
+accommodating
+non-trivial
+forwards
+token
+stream
+parse
+descent
+fashion
+backtrack
+bi-directional
+simpler
+quicker
+trees
+bsts
+root
+subtree
+rules
+subtrees
+favourably
+done
+attained
+bst
+balanced
+balancing
+alias
+unbalanced
+mentioned
+moderately
+insert
+custom
+checks
+location
+insertnode
+current.value
+current.left
+current.right
+non
+nish
+invoke
+guides
+stage
+chop
+recurse
+comparing
+totally
+simultaneously
+brie
+premise
+nonetheless
+talked
+atomic
+four
+root.value
+inspect
+locate
+located
+root.left
+root.right
+sider
+leaf
+promote
+fth
+covered
+noted
+possibility
+occur
+occurrence
+relies
+helper
+findp
+arent
+findnode
+x3.4
+x3.5
+re
+spectively
+nodetoremove
+findparent
+nodetoremove.left
+nodetoremove.right
+nodetoremove.value
+parent.value
+parent.left
+parent.right
+largestv
+alue
+alue.right
+parents
+alue.value
+.right
+transforma
+root.left.value
+root.right.value
+callers
+exists
+returning
+returned
+astute
+noticed
+x3.2
+modi
+cation
+easiest
+call
+compare
+termi
+nating
+completeness
+findmin
+findmax
+reached
+strategies
+employed
+strategy
+depends
+visitation
+touch
+derive
+binarysearcht
+ree
+visit
+visited
+x3.7.1
+yielded
+variation
+x3.7.2
+beauties
+comparison
+18i
+par
+ticular
+deeper
+proceed
+hade
+traditionally
+sizeable
+breadthfirst
+q.enqueue
+q.isempty
+q.dequeue
+solution
+inherent
+lookup
+ecient
+remains
+ways
+typically
+operate
+pretty
+assumption
+attain
+earlier
+pathologically
+examine
+enforces
+self-balancing
+employs
+min
+max
+determines
+children
+unlike
+refer
+ences
+conceptually
+represented
+top-to-bottom
+left-to-right
+direct
+child
+centred
+notion
+understanding
+step
+process
+default
+capacity
+behaviour
+unpredictable
+internal
+dynamic
+initial
+upper
+storage
+limit
+encapsulates
+grow
+representation
+arraylist
+varies
+prohibited
+treat
+non-null
+resolve
+studied
+clarity
+issue
+prohibiting
+calculate
+expressions
+calculation
+calculates
+designing
+ensure
+preserved
+post-insertion
+free
+slot
+counter
+increment
+validating
+min-heap
+ordering
+swap
+converting
+counterpart
+calculating
+verifying
+steps
+minheapify
+maxheapify
+heapify
+operator
+entering
+changed
+ensuring
+delete
+include
+updated
+findindex
+visually
+backing
+objects
+allocated
+unmanaged
+hole
+collector
+reclaim
+collected
+matter
+x3.7.4
+presence
+advantage
+hold
+exhaust
+factoring
+including
+logic
+optimising
+deterministically
+interesting
+inspected
+answer
+inspecting
+fall
+feel
+extra
+justi
+prevent
+tailor
+max-heap
+ipped
+event
+displayed
+expression
+x4.3
+starting
+physical
+partition
+conceptual
+care
+mutation
+living
+dead
+advice
+mutated
+longer
+potentially
+lengthof
+heaparray
+platform
+indexes
+live
+subscript
+disambiguate
+separate
+picked
+bene
+intervention
+heaps
+prescribed
+commonly
+implement
+x6.2
+sample
+facilitate
+x4.1
+x4.2
+sections
+referred
+told
+gured
+abides
+policy
+complexities
+overly
+price
+outgrows
+assist
+minimising
+impact
+distinct
+tend
+avoiding
+demonstrates
+nes
+curly
+braces
+member
+denoted
+ning
+manually
+stating
+members
+tiresome
+importantly
+providing
+nition
+fxjx
+positive
+hand
+remainder
+arithmetic
+nite
+natural
+finally
+intersection
+union
+per
+formed
+graphically
+f2g
+frame
+extension
+methods
+sys
+tem.linq.enumerable2
+2http
+system.linq.enumerable
+sequences
+set1
+set2
+created
+foreach
+union.add
+runtime
+exhibit
+insertions
+worth
+pointing
+fewest
+smallerset
+set1.count
+set2.count
+set1.contains
+set2.contains
+intersection.add
+operating
+mem
+bers
+conform
+scheme
+libraries
+mention
+hash
+approaching
+hashing
+tables
+employ
+terms
+prede
+versions
+onwards
+replaced
+primarily
+realised
+wrapper
+ensures
+unique
+learn
+select
+x5.1.1
+rely
+acceptable
+look-up
+inser
+existence
+yielding
+clear
+x11.4
+construction
+amounts
+soft
+ware
+mode
+kernel
+applications
+system
+fundamentally
+honour
+fifo
+served
+access
+historically
+enqueue
+dequeue
+retrieves
+removes
+peek
+walk
+observ
+1this
+prior
+popular
+discuss
+x2.1
+removal
+modifying
+arrived
+comparer
+highest
+deque
+prioritization
+utilising
+exposed
+interface
+lines
+enqueuefront
+identi
+supported
+enqueueback
+dequeuefront
+dequeueback
+peekfront
+peekback
+one-to-one
+frameworks
+adhere
+collections
+expose
+safely
+enqueueing
+enqueuing
+pro
+grammer
+maxi
+mum
+inherently
+leave
+minimization
+techniques
+invocations
+considerable
+percentage
+harder
+gauge
+strategically
+bypass
+aforementioned
+baking
+consumes
+redundant
+increases
+targets
+reclamation
+opaque
+ref
+erenced
+unreachable
+marked
+allocation
+deallocation
+decide
+stores
+freed
+arrive
+dealt
+rst-in
+rst-out
+windows
+cpu
+scheduler
+utilise
+quantum
+unusual
+lowest
+lot
+early
+g.m
+adelson-velsky
+e.m
+landis
+invented
+self
+calling
+height
+restored
+forces
+shape
+continuing
+focus
+balance
+obtained
+1,2,3,4,5
+worst
+running
+information
+stored
+combined
+technique
+restores
+inventors
+well-known
+rotation
+1,5,4,3,2
+preserving
+decrease
+moving
+leftrotation
+node.right
+rightnode
+rightnode.left
+rightrotation
+node.left
+leftnode
+leftnode.right
+symmetric
+notice
+leftandrightrotation
+rightandleftrotation
+documenting
+performs
+subsequently
+checkbalance
+needed
+current.height
+,height
+current.left.left
+current.left.right
+current.right.left
+current.right.right
+operates
+travel
+violated
+rebalance
+x3.3
+adheres
+rebalanced
+upsets
+stackpath
+path.push
+path
+path.pop
+trackback
+sophisticated
+smarter
+younger
+brother
+older
+avoids
+runtimes
+guarantees
+enforcement
+translated
+forms
+imply
+bubblesort
+splitting
+sized
+merging
+mergeordered
+iterations
+mergesort
+list.count
+left.count
+right.count
+divide
+impera
+starts
+picking
+pivot
+elements
+recursively
+lesser
+sub
+choosing
+median
+element
+funda
+mental
+drastically
+reduced
+quicksort
+medianvalue
+equal.insert
+less.insert
+greater.insert
+concatenate
+equal
+playing
+cards
+card
+intent
+building
+insertionsort
+unsorted
+x8.4
+achieves
+distances
+log2
+straight
+ers
+selects
+red
+coloured
+square
+holding
+shellsort
+buckets
+bucket
+emptied
+isolating
+keys
+hundreds
+clarify
+progressing
+tens
+hundred
+total
+clari
+thousands
+asked
+pad
+implemen
+tation
+isolate
+spell
+accessed
+keytoaccess
+lets
+substitution
+multiplying
+ten
+maxkeysize
+indexofkey
+fori
+getqueueindex
+.enqueue
+collapsequeues
+clearqueues
+highlighted
+x8.3
+x8.1
+purely
+factors
+nicely
+expressed
+slower
+bad
+careful
+denotes
+prime
+attempt
+isprime
+determined
+sqrt
+convert
+equivalent
+octal
+hexadecimal
+trace
+tobinary
+converted
+denomina
+tor
+routine
+mathematics
+multiple
+elegant
+euclid
+greatestcommondenominator
+calculated
+num
+ber
+computes
+ffffff16
+numberbase
+restricted
+enumeration
+fbinary
+decimal
+16g
+modelled
+readable
+cast
+extract
+relevant
+option
+argument
+maxvalue
+power
+cursive
+build
+handy
+gain
+domains
+domain
+attainable
+drive
+advanced
+planet
+weather
+forecasts
+inside
+looping
+match
+occurs
+sequentialsearch
+statistical
+addition
+frequency
+swapping
+non-uniform
+frequent
+positions
+reducing
+scanning
+searched
+increased
+probabilitysearch
+boolean
+indicating
+founded
+decided
+refers
+largely
+underlying
+deter
+mine
+sit
+lack
+model
+transformations
+programs
+formulated
+curiosity
+extracting
+sub-string
+inventiveness
+characters
+reverses
+principal
+delimited
+white
+markers
+reversewords
+reversed
+value.length
+skip
+whitespace
+march
+chars
+length
+sb.append
+sb.length
+cut
+real-life
+turns
+rithm
+ends
+ispalindrome
+eliot
+toilet
+punctuation
+valid
+marching
+value.strip
+.touppercase
+word.length
+strip
+discards
+heavily
+compacted
+uppercase
+palindromes
+making
+robust
+detect
+aware
+tracking
+skipping
+delimits
+ben
+ate
+hay
+distinguished
+wordcount
+inword
+delimiting
+encountered
+hitting
+separated
+occurrences
+string.split1
+char
+delimiter
+sub-strings
+indexed
+pattern
+iterate
+subtract
+stings
+x11.3
+undesired
+uniques
+desired
+repeatedwordcount
+value.split
+uniques.add
+word.strip
+words.length
+uniques.count
+x11.1
+accurate
+minus
+matches
+discarding
+equality
+non-negative
+occurred
+word,match
+occured
+fascinating
+google
+nuances
+encodings
+spurred
+introductory
+devise
+learning
+assisted
+tracing
+diagram
+constantly
+mutates
+history
+held
+infer
+patterns
+powerful
+combining
+visual
+past
+generated
+outlined
+x11.2
+block
+contiguous
+presenting
+draw
+visualising
+execution
+statement
+bloated
+print
+compact
+annotate
+aid
+change
+included
+convenient
+operated
+interrogate
+neveroddoreven
+stress
+correctness
+sketch
+keeping
+changing
+solve
+walking
+fiboncacci
+fibonacci
+bonacci
+jump
+showing
+diagrammtic
+preceeding
+hit
+etch
+closer
+chain
+labelled
+annotations
+branch
+contiued
+subesequently
+diagrammatically
+hard
+mastering
+devising
+conversion
+x9.1
+public
+static
+bool
+int
+innerloopbound
+math.floor
+math.sqrt
+utility
+ascertain
+consideration
+strict
+preconditions
+situations
+preserve
+handled
+throwing
+unfamiliar
+browse
+descirbes
+succinct
+modern
+advantages
+bring
+progress
+trouble
+speak
+manifests
+stack
+whatsoever
+do-while
+counterparts
+speed
+production
+companies
+prerequisite
+tolerance
+reserved
+ciencies
+inviting
+rate
+lean
+conquer
+practice
+spawning
+cheap
+pile
+expected
+allotted
+thread
+shutdown
+native
+bigger
+record
+support
+lightweight
+pushed
+address
+top-of-stack
+incremented
+local
+ine
+creates
+chunk
+consumed
+wait
+unwound
+nested
+exits
+unwinding
+decremented
+popped
+chance
+dusting
+cobwebs
+age
+famous
+highlights
+beauty
+pitfalls
+job
+shock
+rami
+cations
+warning
+perfect
+makeup
+wit
+possibly
+adhering
+limitations
+trade
+readability
+higher
+thumb
+caution
+wind
+defensive
+prevail
+home
+perfectly
+overkill
+consult
+environ
+ment
+recognises
+unheard
+commercial
+limited
+accept
+accountability
+discarded
+belief
+burden
+proof
+company
+centric
+roles
+truth
+boundary
+safety
+net
+tweak
+alerted
+broken
+recent
+bar
+quality
+carefully
+widely
+platforms
+impressive
+catalogue
+junit
+jav
+nunit
+boost
+ships
+link
+doc
+umentation
+cppunit
+worry
+sparse
+unstructured
+wanting
+future
+failure
+goal
+tedious
+waiting
+continuous
+server
+testers
+employing
+catch
+niggling
+error
+customer
+embarrassing
+bug
+reported
+debate
+understatement
+personify
+ques
+years
+acronym
+tdd
+founding
+principles
+watch
+fail
+pass
+assertions
+failing
+situation
+forget
+bothered
+coded
+preferred
+favoured
+injustice
+mantra
+associate
+signi
+green
+passes
+refactor
+restructure
+solely
+restructuring
+maintainable
+progressive
+methodology
+revisions
+cleanly
+ecosystem
+treated
+ranges
+clean
+formatting
+repository
+spend
+erently
+fully
+documented
+importance
+inevitably
+imperatives
+assemble
+asser
+act
+assembled
+mutate
+assert
+expect
+void
+mytest
+t.methoda
+assert.istrue
+t.boolexpr
+viewed
+duction
+person
+persontest
+abstracted
+disjoint
+dll
+classes
+statistics
+indicator
+units
+depending
+creation
+blanket
+breaking
+assignment
+inequality
+logical
+builds
+e.1

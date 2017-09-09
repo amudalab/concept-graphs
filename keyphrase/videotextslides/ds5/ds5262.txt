@@ -1,0 +1,12 @@
+Row 1::Height 2::universal hashing
+Row 2::Height 3::for any choice of hash function, there exists a
+Row 3::Height 1::bad set of identifiers
+Row 4::Height 1::a malicious adversary could chose keys to be
+Row 5::Height 1::hashed such that all go into the same slot
+Row 6::Height 1::(bucket)
+Row 7::Height 1::average retrieval time is o(n)
+Row 8::Height 1::solution
+Row 9::Height 3::a random hash function
+Row 10::Height 3::choose hash function independently of keys!
+Row 11::Height 3::create a set of hash functions h, from which h can
+Row 12::Height 1::be randomly selected

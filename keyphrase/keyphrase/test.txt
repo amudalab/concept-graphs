@@ -1,0 +1,13 @@
+python command/preprocess_audio/pos.py CG1.txt /usr/share/red5/webapps/oflaDemo/transcripts/ /var/www/metadata/output/preprocess_integrated/Lalitha enable Porter-Stemmer _tagged.txt _untagged.txt
+
+python command/preprocess_audio/pos.py CG1.txt
+
+python command/preprocess_audio/pos.py CG1.txt enable Porter-Stemmer
+
+python command/preprocess_audio/pos.py CG1.txt /usr/share/red5/webapps/oflaDemo/transcripts/ /var/www/metadata/output/preprocess_integrated/Lalitha enable Porter-Stemmer _tagged.txt _untagged.txt
+
+python command/preprocess_audio/grams_pos.py CG1_tagged.txt /var/www/metadata/output/preprocess_integrated/Lalitha /var/www/metadata/output/preprocess_integrated/Lalitha 4 /var/www/metadata/features/default_pos_filter.txt Porter-Stemmer _grams.txt
+
+python command/preprocess_video/text_stem.py CG1 output/videotextslides output/preprocess_integrated/Lalitha Porter-Stemmerpython command/preprocess_video/extractgrams.py output/preprocess_integrated/Lalitha/CG1 4 output/preprocess_integrated/Lalitha _vgrams.txt
+
+python command/preprocess_audio/grams.py CG1_tagged.txt /var/www/metadata/output/preprocess_integrated/ /var/www/metadata/output/preprocess_integrated/ 4 Porter-Stemmer _grams.txt

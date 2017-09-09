@@ -1,0 +1,557 @@
+structures can implement
+abstract data types
+contract of operations
+complexity in comparison
+adt different kinds
+kinds of data
+structures are suited
+kinds of applications
+specialized to specific
+databases use b-tree
+indexes for small
+percentages of data
+retrieval and compilers
+compilers and databases
+databases use dynamic
+dynamic hash tables
+tables data structures
+data structures provide
+provide a means
+means to manage
+manage large amounts
+amounts of data
+databases and internet
+internet indexing services
+efficient data structures
+structures are key
+key to designing
+designing efficient algorithms
+algorithms some formal
+formal design methods
+methods and programming
+programming languages emphasize
+languages emphasize data
+emphasize data structures
+key organizing factor
+factor in software
+software design storing
+storing and retrieving
+out on data
+secondary memory.data structures
+computer to fetch
+fetch and store
+representing a memory
+stored in memory
+memory and manipulated
+array and record
+record data structures
+structures are based
+based on computing
+computing the addresses
+addresses of data
+items with arithmetic
+linked data structures
+based on storing
+combined in non-trivial
+structure usually requires
+writing a set
+set of procedures
+procedures that create
+create and manipulate
+structure the efficiency
+operations this observation
+motivates the theoretical
+abstract data type
+including their space
+.there are numerous
+types of data
+built upon simpler
+simpler primitive data
+primitive data types
+number of elements
+elements are accessed
+element is required
+typical implementations allocate
+implementations allocate contiguous
+allocate contiguous memory
+contiguous memory words
+elements of arrays
+fixed-length or resizable
+resizable an associative
+map or object
+added and deleted
+freely a hash
+array a record
+tuple or struct
+aggregate data structure
+structure a record
+typically in fixed
+number and sequence
+indexed by names
+names the elements
+elements of records
+fields or members
+members a union
+union type specifies
+number of permitted
+permitted primitive types
+long integer contrast
+space is allocated
+widest member datatype
+datatype a tagged
+additional field indicating
+indicating its current
+enhanced type safety
+safety a set
+abstract data structure
+store specific values
+duplicate values graphs
+graphs and trees
+trees are linked
+linked abstract data
+abstract data structures
+data structures composed
+composed of nodes
+nodes each node
+variants of trees
+sorting and searching
+relative order based
+values an object
+object contains data
+methods which operate
+context of object-oriented
+plain old data
+structures to distinguish
+objects.most assembly languages
+basic combined programming
+combined programming language
+lack built-in support
+support for data
+high-level programming languages
+higher-level assembly languages
+records and arrays
+pascal languages support
+languages support structs
+structs and records
+addition to vectors
+programming languages feature
+feature some sort
+sort of library
+data structure implementations
+programs modern languages
+libraries that implement
+common data structures
+data structures examples
+standard template library
+java collections framework
+microsoft s .net
+.net framework modern
+framework modern languages
+generally support modular
+support modular programming
+implementation some provide
+provide opaque data
+opaque data types
+clients to hide
+hide implementation details
+implementation details object-oriented
+details object-oriented programming
+object-oriented programming languages
+java and smalltalk
+structures have concurrent
+multiple computing threads
+threads to access
+access the data
+computer science
+data structure
+organizing data
+data structures
+abstract data
+data types
+concrete implementation
+contract provided
+specific tasks
+b-tree indexes
+small percentages
+data retrieval
+dynamic hash
+hash tables
+tables data
+structures provide
+large amounts
+large databases
+internet indexing
+indexing services
+efficient data
+designing efficient
+efficient algorithms
+formal design
+design methods
+programming languages
+languages emphasize
+emphasize data
+key organizing
+organizing factor
+software design
+design storing
+data stored
+main memory
+secondary memory.data
+memory.data structures
+store data
+bit string
+memory address
+record data
+data items
+arithmetic operations
+linked data
+storing addresses
+non-trivial ways
+xor linking
+manipulate instances
+observation motivates
+theoretical concept
+data type
+mathematical properties
+numerous types
+primitive data
+specific order
+type elements
+integer index
+typical implementations
+implementations allocate
+contiguous memory
+memory words
+associative array
+flexible variation
+name-value pairs
+deleted freely
+hash table
+common implementation
+aggregate data
+fixed number
+union type
+type specifies
+primitive types
+e.g float
+long integer
+integer contrast
+widest member
+member datatype
+tagged union
+variant record
+discriminated union
+disjoint union
+additional field
+field indicating
+current type
+enhanced type
+type safety
+specific values
+duplicate values
+values graphs
+linked abstract
+structures composed
+nodes arranged
+hierarchy graphs
+represent networks
+relative order
+order based
+data fields
+object-oriented programming
+low-level languages
+combined programming
+programming language
+built-in support
+high-level programming
+higher-level assembly
+assembly languages
+special syntax
+pascal languages
+languages support
+support structs
+one-dimensional arrays
+multi-dimensional arrays
+languages feature
+library mechanism
+structure implementations
+programs modern
+modern languages
+standard libraries
+common data
+structures examples
+standard template
+template library
+java collections
+collections framework
+.net framework
+framework modern
+generally support
+support modular
+modular programming
+library module
+provide opaque
+opaque data
+hide implementation
+implementation details
+concurrent versions
+multiple computing
+computing threads
+computer
+science
+data
+structure
+organizing
+efficiently
+structures
+implement
+abstract
+types
+adt
+means
+contract
+operations
+complexity
+comparison
+concrete
+implementation
+provided
+kinds
+suited
+applications
+highly
+specialized
+specific
+tasks
+databases
+b-tree
+indexes
+small
+percentages
+retrieval
+compilers
+dynamic
+hash
+tables
+provide
+manage
+large
+amounts
+internet
+indexing
+services
+efficient
+key
+designing
+algorithms
+formal
+design
+methods
+programming
+languages
+emphasize
+factor
+software
+storing
+retrieving
+carried
+out
+stored
+main
+memory
+secondary
+memory.data
+generally
+based
+ability
+fetch
+store
+place
+pointer
+bit
+string
+representing
+address
+manipulated
+program
+array
+record
+computing
+addresses
+items
+arithmetic
+linked
+principles
+combined
+non-trivial
+ways
+xor
+linking
+requires
+writing
+set
+procedures
+create
+manipulate
+instances
+efficiency
+analyzed
+separately
+observation
+motivates
+theoretical
+concept
+type
+defined
+indirectly
+performed
+mathematical
+properties
+including
+space
+cost
+.there
+numerous
+built
+simpler
+primitive
+list
+number
+elements
+order
+typically
+accessed
+integer
+index
+element
+required
+typical
+implementations
+allocate
+contiguous
+words
+arrays
+necessity
+fixed-length
+resizable
+associative
+dictionary
+map
+object
+flexible
+variation
+name-value
+pairs
+added
+deleted
+freely
+table
+common
+tuple
+struct
+aggregate
+value
+values
+fixed
+sequence
+indexed
+names
+records
+fields
+members
+union
+specifies
+permitted
+e.g
+float
+long
+contrast
+allocated
+widest
+member
+datatype
+tagged
+variant
+discriminated
+disjoint
+additional
+field
+indicating
+current
+enhanced
+safety
+duplicate
+graphs
+trees
+composed
+nodes
+node
+pointers
+arranged
+hierarchy
+represent
+networks
+variants
+sorting
+searching
+relative
+operate
+contents
+context
+object-oriented
+plain
+distinguish
+objects.most
+assembly
+low-level
+bcpl
+basic
+language
+lack
+built-in
+support
+hand
+high-level
+higher-level
+masm
+special
+syntax
+pascal
+structs
+addition
+vectors
+one-dimensional
+multi-dimensional
+feature
+sort
+library
+mechanism
+reused
+programs
+modern
+standard
+libraries
+examples
+template
+java
+collections
+framework
+microsoft
+.net
+modular
+separation
+interface
+module
+opaque
+clients
+hide
+details
+smalltalk
+classes
+purpose
+concurrent
+versions
+multiple
+threads
+access
+simultaneously

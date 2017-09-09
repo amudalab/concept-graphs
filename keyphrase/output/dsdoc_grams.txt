@@ -1,0 +1,1008 @@
+structures and programming
+stacks and queues
+queues the first
+first data structures
+study this semester
+order they arrive
+stacks are data
+structures which maintain
+maintain the order
+order of last-in
+queues are data
+order of first-in
+lines at stores
+stores are organized
+organized as queues
+applications in programs
+data structure operations
+operations on stacks
+stacks the terminology
+spring loaded plate
+loaded plate containers
+plate containers common
+common in dining
+plate is washed
+plate is popped
+stack a stack
+don t care
+maintaining procedure calls
+procedure calls stacks
+maintain the return
+modula-3 procedures call
+call other procedures
+procedures which call
+jacob and esau
+esau were twin
+brothers where esau
+esau was born
+issac s birthright
+jacob got esau
+esau to give
+bowl of soup
+patriarch of israel
+tricking his brother
+famous 11th century
+11th century jewish
+century jewish commentator
+explained the problem
+jacob was conceived
+tube to assume
+assume his rightful
+first in line
+line abstract operations
+item x note
+search operation initialize
+two are boolean
+boolean queries defining
+defining these abstract
+abstract operations lets
+lets us build
+build a stack
+reuse without knowing
+knowing the details
+implementation the easiest
+variable to represent
+represent the top
+stack an alternative
+change the implementations
+program knowing declarations
+stack interface stack
+stack of integer
+element to top
+top of stack
+removes and returns
+returns top element
+true if stack
+stack is empty
+stack is full
+end stack stack
+stack stack implementation
+stack implementation module
+implementation module stack
+number of elements
+elements on stack
+record info array
+stack to empty
+instance of stack
+elem end push
+end push procedure
+push procedure pop
+end pop procedure
+pop procedure empty
+begin return stack.top
+end empty procedure
+empty procedure full
+stack.top = max
+max end full
+end full begin
+full begin end
+begin end stack
+stack type module
+type module stackuser
+module stackuser exports
+stackuser exports main
+stack import push
+full from sio
+sio import error
+user please enter
+add entered number
+number to stack
+number from stack
+stack and return
+end stackuser fifo
+stackuser fifo queues
+fifo queues queues
+difficult to implement
+implement than stacks
+ends the easiest
+moves all elements
+efficient queues suppose
+clear previously unused
+previously unused cells
+enqueue and dequeue
+wasteful of space
+number of enqueues
+number of items
+circular queues circular
+queues circular queues
+reuse empty space
+empty space note
+queue is full
+two pointers point
+point to neighboring
+ways to adjust
+adjust the pointers
+pointers for circular
+full from empty
+identical the easiest
+queue fifo queue
+fifo queue interface
+queue interface interface
+interface interface fifo
+queue of text
+element to end
+returns first element
+true if queue
+queue is empty
+end fifo priority
+fifo priority queue
+priority queue implementation
+queue implementation module
+implementation module fifo
+elements in fifo
+fifo = record
+var w fifo
+stores new element
+in-pointer in ring
+number of stored
+end enqueue procedure
+enqueue procedure dequeue
+removes oldest element
+out-pointer in ring
+returns the read
+end dequeue utility
+dequeue utility routines
+utility routines procedure
+routines procedure empty
+begin return w.n
+w.n = max
+begin end fifo
+end fifo user
+fifo user module
+user module module
+module module fifouser
+module fifouser exports
+fifouser exports main
+fifo import enqueue
+fifouser other queues
+queues double-ended queues
+structures which support
+support both push
+push and pop
+operations priority queues
+insertions and remove
+remove minimum operations
+simulations to maintain
+maintain a queue
+lecture we introduce
+commonly used data
+stack we practice
+practice again writing
+writing an interface
+implementing the interface
+interface using linked
+list is circular
+stack interface stacks
+stacks are similar
+similar to queues
+insert and remove
+stacks a lifo
+last in first
+interface type elem
+defined typedef struct
+typedef struct stack
+struct stack stack
+stack stack bool
+stack bool is_empty
+pushing and popping
+popping an item
+slightly more abstract
+case of queues
+type the elements
+file is read
+defined a lecture
+lecture notes september
+stacks l8.2 type
+l8.2 type elem
+type of stack
+implementation is generic
+generic or polymorphic
+provide a good
+rely on programmer
+implementation the idea
+reuse linked lists
+top a typical
+data next note
+list is marked
+special null pointer
+dereferenced we define
+define struct list
+elem data struct
+data struct list
+typedef struct list
+struct list list
+list list struct
+list struct stack
+starting at top
+ends in null
+l8.3 to check
+verify that top
+top is null
+null bool is_empty
+top to null
+null after allocating
+allocating it stack
+top = null
+push an element
+set its data
+update the top
+stack to point
+idea to draw
+draw a diagram
+data next lecture
+code void push
+first = alloc
+first > data
+pop an element
+move the top
+pointer to follow
+case of dequeuing
+dequeuing an element
+constituted the top
+longer be accessible
+collected as needed
+code elem pop
+pop empty stack
+top > data
+completes the implementation
+implementation of stacks
+simple and pervasive
+pervasive data structure
+implement a virtual
+detecting circularity checking
+satisify their data
+data structure invariant
+structure invariant raises
+raises an interesting
+created a list
+list that lecture
+terminates the program
+program for checking
+checking a segment
+loop in general
+contracts should terminate
+contract it satisfied
+rejected a circular
+lecture lecture notes
+original is_segment predicate
+is_segment predicate bool
+predicate bool is_segment
+simplest solutions proposed
+proposed in class
+loop to check
+list the code
+return false circular
+solution before reading
+reading on lecture
+l8.8 the idea
+create two pointers
+traverses the list
+skips two elements
+list we show
+show the state
+code bool is_circular
+inside the loop
+loop we exploit
+exploit the short-circuiting
+dereference a null
+extremely important consideration
+consideration when writing
+writing pointer manipulation
+pointer manipulation code
+due to floyd
+stand for tortoise
+stand for hare
+hare this algorithm
+algorithm has complexity
+student in class
+hare will stumble
+stumble over null
+enters the loop
+step the tortoise
+loop the hare
+closer the hare
+hare will catch
+catch the tortoise
+half the size
+complete a full
+data structures
+programming stacks
+first data
+arrive stacks
+first-out queues
+important applications
+data structure
+structure operations
+spring loaded
+loaded plate
+plate containers
+dining halls
+clean plate
+plates don
+maintaining procedure
+procedure calls
+calls stacks
+return points
+procedures call
+biblical story
+twin brothers
+inherited issac
+brother rashi
+famous 11th
+11th century
+century jewish
+jewish commentator
+narrow tube
+rightful place
+line abstract
+abstract operations
+stack push
+search operation
+operation initialize
+boolean queries
+queries defining
+operations lets
+stack module
+easiest implementation
+alternative implementation
+linked lists
+overflow note
+program knowing
+knowing declarations
+stack interface
+interface stack
+integer elements
+element type
+procedure push
+adds element
+procedure pop
+returns top
+procedure empty
+end stack
+stack stack
+stack implementation
+implementation module
+module stack
+integer stack
+const max
+maximum number
+record info
+info array
+initialize stack
+var stack
+elem end
+end push
+push procedure
+begin dec
+end pop
+pop procedure
+returns true
+begin return
+end empty
+empty procedure
+max end
+full begin
+begin end
+stack type
+type module
+module stackuser
+stackuser exports
+stack import
+import push
+sio import
+import error
+fatal error
+suppress warning
+begin puttext
+stack user
+enter numbers
+add entered
+entered number
+remove number
+end stackuser
+stackuser fifo
+fifo queues
+queues queues
+adds elements
+wasteful moving
+efficient queues
+queues suppose
+maintaining pointers
+unused cells
+array bigger
+total number
+items stored
+circular queues
+empty space
+space note
+back pointer
+pointers point
+neighboring elements
+empty queues
+pointer positions
+queue fifo
+fifo queue
+queue interface
+interface interface
+interface fifo
+text elements
+procedure enqueue
+procedure dequeue
+end fifo
+fifo priority
+priority queue
+queue implementation
+module fifo
+type fifo
+mod max
+increments number
+stored elements
+end enqueue
+enqueue procedure
+oldest element
+decrements number
+read element
+end dequeue
+dequeue utility
+utility routines
+routines procedure
+return w.n
+fifo user
+user module
+module module
+module fifouser
+fifouser exports
+text queue
+fifo import
+import enqueue
+supress warning
+enter texts
+end fifouser
+double-ended queues
+operations priority
+priority queues
+supports insertions
+minimum operations
+linked list
+interface stacks
+remove items
+makes stacks
+interface type
+type elem
+defined typedef
+typedef struct
+struct stack
+stack bool
+bool is_empty
+stack s_new
+void push
+elem pop
+constant-time operations
+lecture notes
+notes september
+stack elements
+programmer discipline
+operations work
+call top
+typical stack
+top data
+special null
+null pointer
+define struct
+struct list
+elem data
+data struct
+list list
+list struct
+list top
+valid stack
+list starting
+top ends
+list segment
+last lecture
+bool is_stack
+return is_segment
+null bool
+requires is_stack
+ensures is_stack
+ensures is_empty
+null return
+list item
+data field
+current top
+top field
+good idea
+code void
+top pointer
+previous lecture
+garbage collected
+runtime system
+code elem
+empty stack
+pervasive data
+virtual machine
+detecting circularity
+circularity checking
+queue satisify
+structure invariant
+invariant raises
+interesting question
+start data
+infinite loop
+contract diverges
+circular list
+lecture lecture
+original is_segment
+is_segment predicate
+predicate bool
+bool is_segment
+list start
+list end
+return false
+return true
+simplest solutions
+solutions proposed
+start pointer
+auxiliary loop
+false circular
+solution requires
+efficient solution
+single steps
+code bool
+bool is_circular
+tortoise list
+loop_invariant is_segment
+condition inside
+short-circuiting evaluation
+null guarding
+important consideration
+writing pointer
+pointer manipulation
+manipulation code
+tortoise enters
+tortoise takes
+hare takes
+full trip
+data
+structures
+programming
+stacks
+queues
+first
+study
+semester
+lists
+property
+order
+items
+determined
+arrive
+maintain
+last-in
+first-out
+first-in
+fairer
+lines
+stores
+organized
+important
+applications
+programs
+structure
+operations
+terminology
+spring
+loaded
+plate
+containers
+common
+dining
+halls
+washed
+pushed
+stack
+hungry
+clean
+popped
+task
+plates
+don
+care
+maintaining
+procedure
+calls
+return
+points
+modula-3
+procedures
+call
+jacob
+esau
+biblical
+story
+twin
+brothers
+born
+inherited
+issac
+birthright
+give
+bowl
+soup
+patriarch
+israel
+justified
+tricking
+brother
+rashi
+famous
+11th
+century
+jewish
+commentator
+explained
+problem
+conceived
+narrow
+tube
+assume
+rightful
+place
+line
+abstract
+push
+x,s
+pop
+item
+note
+search
+operation
+initialize
+full
+empty
+two
+boolean
+queries
+defining
+lets
+build
+module
+reuse
+knowing
+details
+implementation
+easiest
+array
+index
+variable
+represent
+top
+alternative
+linked
+overflow
+change
+implementations
+rest
+program
+declarations
+interface
+integer
+elements
+type
+element
+elem
+adds
+removes
+returns
+true
+end
+14.07.94
+const
+max
+maximum
+number
+record
+info
+cardinal
+var
+instance
+begin
+stack.top
+stack.info
+dec
+stackuser
+exports
+main
+14.02.95
+client
+import
+sio
+error
+getint
+putint
+puttext
+fatal
+suppress
+warning
+user
+enter
+numbers
+add
+entered
+remove
+fifo
+difficult
+implement
+action
+ends
+moves
+queue
+wasteful
+moving
+dequeue
+efficient
+suppose
+pointers
+head
+last
+tail
+reason
+explicitly
+clear
+previously
+unused
+cells
+enqueue
+fast
+space
+bigger
+total
+enqueues
+stored
+circular
+pointer
+front
+list
+back
+point
+neighboring
+lots
+ways
+adjust
+tricky
+distinguish
+positions
+identical
+counter
+text
+priority
+out
+w.info
+w.in
+mod
+increments
+in-pointer
+ring
+w.n
+w.out
+oldest
+out-pointer
+decrements
+read
+utility
+routines
+fifouser
+gettext
+supress
+texts
+double-ended
+support
+heaps
+supports
+insertions
+minimum
+simulations
+events
+lecture
+introduce
+commonly
+practice
+writing
+implementing
+discuss
+check
+similar
+insert
+makes
+lifo
+defined
+typedef
+struct
+bool
+is_empty
+s_new
+void
+creation
+pushing
+popping
+constant-time
+slightly
+case
+write
+file
+notes
+september
+l8.2
+generic
+polymorphic
+provide
+good
+enforce
+language
+rely
+programmer
+discipline
+idea
+work
+typical
+form
+marked
+special
+null
+dereferenced
+define
+test
+valid
+starting
+checking
+segment
+introduced
+is_stack
+is_segment
+l8.3
+verify
+requires
+creating
+simple
+set
+allocating
+ensures
+result
+alloc
+create
+field
+current
+finally
+update
+draw
+diagram
+l8.4
+code
+move
+follow
+dequeuing
+previous
+constituted
+longer
+accessible
+garbage
+collected
+needed
+runtime
+system
+l8.5
+assert
+completes
+pervasive
+exercise
+virtual
+machine
+detecting
+circularity
+satisify
+invariant
+raises
+interesting
+question
+created
+l8.6
+cycle
+start
+reach
+terminates
+infinite
+loop
+general
+contracts
+terminate
+effects
+marginally
+acceptable
+contract
+diverges
+incorrectly
+claim
+satisfied
+rejected
+class
+l8.7
+original
+predicate
+false
+simplest
+solutions
+proposed
+copy
+advance
+run
+auxiliary
+solution
+find
+reading
+l8.8
+traverses
+single
+steps
+hand
+skips
+step
+slower
+overtake
+show
+state
+iteration
+l8.9
+is_circular
+tortoise
+hare
+loop_invariant
+next
+condition
+inside
+exploit
+short-circuiting
+evaluation
+logical
+guarding
+dereference
+extremely
+consideration
+manipulation
+algorithm
+due
+floyd
+chosen
+stand
+complexity
+easy
+suggested
+student
+stumble
+enters
+takes
+closer
+catch
+half
+size
+complete
+trip

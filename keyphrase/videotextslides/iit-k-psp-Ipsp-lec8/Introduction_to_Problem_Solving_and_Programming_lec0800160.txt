@@ -1,0 +1,10 @@
+Row 1::Height 2::expressions as statements
+Row 2::Height 1::any c expression can be used as a statement by
+Row 3::Height 1::adding a after it
+Row 4::Height 1::the most common example is assignment
+Row 5::Height 1::expressions used as statements
+Row 6::Height 1::in such a case, the expression is evaluated and its
+Row 7::Height 1::value is discarded (but the side-effects stay)
+Row 8::Height 1::clearly it is not useful to use an expression that
+Row 9::Height 1::has no side effects as a statement. fo example
+Row 10::Height 1::x+y is a valid but quite useless c statement

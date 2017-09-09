@@ -1,0 +1,830 @@
+widely used abstract::widely used abstract
+abstract data type::abstract data type
+data structure implementing::data structure implementing
+implementing this adt::implementing this adt
+adt that simulates::adt that simulates
+simulates a hierarchical::simulates a hierarchical
+hierarchical tree structure::hierarchical tree structure
+value and subtrees::value and subtrees
+subtrees of children::subtrees of children
+set of linked::set of linked
+nodes a tree::nodes a tree
+tree data structure::tree data structure
+collection of nodes::collection of nodes
+data structure consisting::data structure consisting
+list of references::list of references
+references to nodes::references to nodes
+reference is duplicated::reference is duplicated
+represented and worked::represented and worked
+separately by node::separately by node
+list of nodes::list of nodes
+list of edges::list of edges
+edges between nodes::edges between nodes
+represent a digraph::represent a digraph
+data structure made::data structure made
+nodes or vertices::nodes or vertices
+vertices and edges::vertices and edges
+cycle the tree::cycle the tree
+null or empty::null or empty
+tree a tree::tree a tree
+potentially many levels::potentially many levels
+levels of additional::levels of additional
+nodes that form::nodes that form
+form a hierarchy::form a hierarchy
+root the top::root the top
+parent the converse::parent the converse
+notion of child::notion of child
+child siblings nodes::child siblings nodes
+descendant a node::descendant a node
+reachable by repeated::reachable by repeated
+proceeding from parent::proceeding from parent
+parent to child::parent to child
+ancestor a node::ancestor a node
+proceeding from child::proceeding from child
+child to parent::child to parent
+leaf a node::leaf a node
+children internal node::children internal node
+node a node::node a node
+child external node::child external node
+children degree number::children degree number
+number of sub::number of sub
+node edge connection::node edge connection
+path a sequence::path a sequence
+sequence of nodes::sequence of nodes
+nodes and edges::nodes and edges
+connecting a node::connecting a node
+level the level::level the level
+node is defined::node is defined
+number of connections::number of connections
+height of tree::height of tree
+tree the height::tree the height
+number of edges::number of edges
+longest downward path::longest downward path
+height of node::height of node
+node the height::node the height
+depth the depth::depth the depth
+tree s root::tree s root
+root node forest::root node forest
+forest a forest::forest a forest
+disjoint trees data::disjoint trees data
+trees data type::trees data type
+type vs data::type vs data
+concrete data structure::concrete data structure
+value and children::value and children
+tree are interpreted::tree are interpreted
+list of children::list of children
+case the list::case the list
+group of nodes::group of nodes
+structure actually defines::structure actually defines
+defines a directed::defines a directed
+two references point::two references point
+tree that violates::tree that violates
+references to trees::references to trees
+linked tree data::linked tree data
+discussed implicitly assuming::discussed implicitly assuming
+represented by references::represented by references
+type a tree::type a tree
+tree is defined::tree is defined
+list of trees::list of trees
+possibly an empty::possibly an empty
+tree t consists::tree t consists
+defined in terms::defined in terms
+terms of values::terms of values
+assumes referential transparency::assumes referential transparency
+lists of values::lists of values
+list possibly empty::list possibly empty
+references possibly null::references possibly null
+node n consists::node n consists
+data structure defines::data structure defines
+add a condition::add a condition
+reference can point::reference can point
+root in fact::root in fact
+node a list::node a list
+analyzing its global::analyzing its global
+topologically a tree::topologically a tree
+defined below type::defined below type
+abstract tree type::abstract tree type
+abstract forest type::abstract forest type
+terms of type::terms of type
+inductive type defined::inductive type defined
+tree with root::tree with root
+generally with values::generally with values
+root " direction::root " direction
+underlying undirected graph::underlying undirected graph
+vertices are connected::vertices are connected
+vertex is designated::vertex is designated
+determines the direction::determines the direction
+parentand the node::parentand the node
+node often trees::node often trees
+two child nodes::two child nodes
+twonon-empty child nodes::twonon-empty child nodes
+allowing empty trees::allowing empty trees
+empty trees makes::empty trees makes
+makes some definitions::makes some definitions
+trees are allowed::trees are allowed
+empty trees simplify::empty trees simplify
+trees simplify defining::trees simplify defining
+simplify defining fixed::simplify defining fixed
+defining fixed branching::defining fixed branching
+fixed branching factor::fixed branching factor
+empty trees allowed::empty trees allowed
+.the complete sets::.the complete sets
+sets of operations::sets of operations
+operations on tree::operations on tree
+tree must include::tree must include
+include fork operation::include fork operation
+fork operation terminology::fork operation terminology
+terminology a node::terminology a node
+value or condition::value or condition
+represent a separate::represent a separate
+separate data structure::separate data structure
+trees are drawn::trees are drawn
+parent an internal::parent an internal
+inode for short::inode for short
+nodes the topmost::nodes the topmost
+root node depending::root node depending
+depending on definition::depending on definition
+case all trees::case all trees
+trees are non-empty::trees are non-empty
+pass from parents::pass from parents
+parents to children::parents to children
+post-order depth-first search::post-order depth-first search
+first visit leaf::first visit leaf
+visit leaf nodes::visit leaf nodes
+access the value::access the value
+value of leaf::value of leaf
+visit the root::visit the root
+access the children::access the children
+edges or links::edges or links
+node has special::node has special
+properties every node::properties every node
+tree the depth::tree the depth
+node has depth::node has depth
+nodes have height::nodes have height
+root and leaf::root and leaf
+depth and height::depth and height
+descendants in t.c::descendants in t.c
+nodes thus correspond::nodes thus correspond
+correspond to subtrees::correspond to subtrees
+subtree it determines::subtree it determines
+drawing trees trees::drawing trees trees
+plane ordered trees::plane ordered trees
+fixes a conventional::fixes a conventional
+arranges the child::arranges the child
+first incoming parent::first incoming parent
+incoming parent edge::incoming parent edge
+first child edge::first child edge
+yields an embedding::yields an embedding
+determines an ordering::determines an ordering
+places the root::places the root
+parents above children::parents above children
+places all nodes::places all nodes
+terms of number::terms of number
+obtains a standard::obtains a standard
+ways to represent::ways to represent
+trees ; common::trees ; common
+common representations represent::common representations represent
+represent the nodes::represent the nodes
+dynamically allocated records::dynamically allocated records
+records with pointers::records with pointers
+list of lists::list of lists
+values are lists::values are lists
+value of first::value of first
+child in general::child in general
+general a node::general a node
+expanding the data::expanding the data
+include a pointer::include a pointer
+child node data::child node data
+threaded binary tree::threaded binary tree
+binary tree generalizations::binary tree generalizations
+tree generalizations digraphs::tree generalizations digraphs
+digraphs if edges::digraphs if edges
+generalized to representdirected::generalized to representdirected
+graphs by removing::graphs by removing
+removing the constraints::removing the constraints
+cycles are allowed::cycles are allowed
+considered as pairs::considered as pairs
+pairs of nodes::pairs of nodes
+parent and child::parent and child
+source and target::source and target
+implementation strategies exist::implementation strategies exist
+local data structure::local data structure
+node with value::node with value
+value and list::value and list
+structures as adjacency::structures as adjacency
+lists in graph::lists in graph
+connected acyclic graph::connected acyclic graph
+graph theory trees::graph theory trees
+trees and graphs::trees and graphs
+graphs are assumed::graphs are assumed
+trees and trees::trees and trees
+trees as data::trees as data
+arbitrary undirected tree::arbitrary undirected tree
+directed by making::directed by making
+making them point::making them point
+root node producing::root node producing
+producing an arborescence::producing an arborescence
+arborescence and assign::arborescence and assign
+assign an order::assign an order
+nodes the result::nodes the result
+data structure picking::data structure picking
+define an ordered::define an ordered
+union of subtrees::union of subtrees
+taking the subtree::taking the subtree
+erasing the root::erasing the root
+subtrees are natural::subtrees are natural
+natural for recursion::natural for recursion
+forests are natural::forests are natural
+natural for corecursion::natural for corecursion
+represented by root::represented by root
+traversal methods main::traversal methods main
+methods main article::methods main article
+tree traversal stepping::tree traversal stepping
+connections between parents::connections between parents
+parents and children::parents and children
+walking the tree::walking the tree
+node a walk::node a walk
+node is traversed::node is traversed
+children are traversed::children are traversed
+parents are traversed::parents are traversed
+node s left::node s left
+finally its right::finally its right
+subtree are traversed::subtree are traversed
+specifically a binary::specifically a binary
+walk effectively performs::walk effectively performs
+performs a breadth-first::performs a breadth-first
+tree ; nodes::tree ; nodes
+nodes are traversed::nodes are traversed
+level by level::level by level
+node is visited::node is visited
+direct child nodes::direct child nodes
+computer science::computer science
+abstract data::abstract data
+data type::data type
+data structure::data structure
+hierarchical tree::hierarchical tree
+tree structure::tree structure
+root value::root value
+parent node::parent node
+linked nodes::linked nodes
+tree data::tree data
+root node::root node
+structure consisting::structure consisting
+ordered tree::ordered tree
+value assigned::value assigned
+adjacency list::adjacency list
+structure made::structure made
+empty tree::empty tree
+empty consists::empty consists
+additional nodes::additional nodes
+hierarchy root::hierarchy root
+top node::top node
+tree parent::tree parent
+converse notion::converse notion
+child siblings::child siblings
+siblings nodes::siblings nodes
+parent descendant::parent descendant
+child ancestor::child ancestor
+parent leaf::parent leaf
+internal node::internal node
+external node::external node
+children degree::children degree
+degree number::degree number
+sub trees::sub trees
+node edge::node edge
+edge connection::edge connection
+edges connecting::edges connecting
+descendant level::descendant level
+root height::root height
+longest downward::longest downward
+downward path::downward path
+leaf height::leaf height
+leaf depth::leaf depth
+node forest::node forest
+disjoint trees::disjoint trees
+trees data::trees data
+concrete data::concrete data
+linked list::linked list
+finite trees::finite trees
+case trees::case trees
+fixed size::fixed size
+branching factor::branching factor
+linked tree::linked tree
+references point::references point
+single parent::single parent
+null reference::null reference
+empty list::empty list
+mutual recursion::mutual recursion
+basic examples::basic examples
+tree consists::tree consists
+functional languages::functional languages
+referential transparency::referential transparency
+simply lists::simply lists
+structure defines::structure defines
+directed graph,b::directed graph,b
+global structure::global structure
+tree point::tree point
+type theory::type theory
+abstract tree::abstract tree
+tree type::tree type
+abstract forest::abstract forest
+forest type::forest type
+inductive type::inductive type
+type defined::type defined
+constructors nil::constructors nil
+empty forest::empty forest
+values attached::values attached
+rooted tree::rooted tree
+narrow term::narrow term
+directed graph::directed graph
+undirected graph::undirected graph
+simple path::simple path
+distinguished root::distinguished root
+arrows point::arrows point
+edge points::edge points
+child nodes::child nodes
+twonon-empty child::twonon-empty child
+binary tree::binary tree
+allowing empty::allowing empty
+empty trees::empty trees
+trees makes::trees makes
+definitions simpler::definitions simpler
+trees simplify::trees simplify
+trees allowed::trees allowed
+.the complete::.the complete
+complete sets::complete sets
+include fork::include fork
+fork operation::fork operation
+operation terminology::operation terminology
+separate data::separate data
+childsparent node::childsparent node
+ancestor node::ancestor node
+branch node::branch node
+outer node::outer node
+leaf node::leaf node
+terminal node::terminal node
+topmost node::topmost node
+node depending::node depending
+tree begin::tree begin
+children note::children note
+post-order depth-first::post-order depth-first
+depth-first search::depth-first search
+first visit::first visit
+visit leaf::visit leaf
+leaf nodes::leaf nodes
+first access::first access
+formal definition::formal definition
+special properties::special properties
+root path::root path
+self-balancing trees::self-balancing trees
+avl trees::avl trees
+single node::single node
+tree consisting::tree consisting
+node corresponds::node corresponds
+entire tree::entire tree
+proper subtree::proper subtree
+proper subset::proper subset
+drawing trees::drawing trees
+trees trees::trees trees
+plane ordered::plane ordered
+ordered trees::ordered trees
+plane trees::plane trees
+conventional order::conventional order
+first incoming::first incoming
+incoming parent::incoming parent
+parent edge::parent edge
+first child::first child
+child edge::child edge
+ambient isotopy::ambient isotopy
+embedding determines::embedding determines
+family tree::family tree
+horizontal line::horizontal line
+standard drawing::standard drawing
+left node::left node
+represent trees::represent trees
+common representations::common representations
+representations represent::representations represent
+allocated records::allocated records
+binary heap::binary heap
+first term::first term
+left child::left child
+future terms::future terms
+right child::right child
+lisp s-expressions::lisp s-expressions
+stored separately::stored separately
+upward links::upward links
+child node::child node
+node data::node data
+threaded binary::threaded binary
+tree generalizations::tree generalizations
+generalizations digraphs::generalizations digraphs
+special case::special case
+representdirected graphs::representdirected graphs
+allowed edges::allowed edges
+terms parent::terms parent
+implementation strategies::implementation strategies
+strategies exist::strategies exist
+local data::local data
+adjacency lists::adjacency lists
+graph theory::graph theory
+acyclic graph::acyclic graph
+theory trees::theory trees
+assumed undirected::assumed undirected
+one-to-one correspondence::one-to-one correspondence
+undirected tree::undirected tree
+edges directed::edges directed
+node producing::node producing
+result corresponds::result corresponds
+structure picking::structure picking
+ordering produces::ordering produces
+children define::children define
+ordered forest::ordered forest
+breadth-first search::breadth-first search
+root nodes::root nodes
+traversal methods::traversal methods
+main article::main article
+tree traversal::tree traversal
+traversal stepping::traversal stepping
+pointer arrives::pointer arrives
+pre-order walk::pre-order walk
+respective parents::respective parents
+post-order walk::post-order walk
+left subtree::left subtree
+right subtree::right subtree
+in-order traversal::in-order traversal
+last scenario::last scenario
+level-order walk::level-order walk
+traversed level::traversed level
+direct child::direct child
+grandchild nodes::grandchild nodes
+computer::computer
+science::science
+tree::tree
+widely::widely
+abstract::abstract
+data::data
+type::type
+adt::adt
+structure::structure
+implementing::implementing
+simulates::simulates
+hierarchical::hierarchical
+root::root
+value::value
+subtrees::subtrees
+children::children
+parent::parent
+node::node
+represented::represented
+set::set
+linked::linked
+nodes::nodes
+defined::defined
+recursively::recursively
+locally::locally
+collection::collection
+starting::starting
+consisting::consisting
+list::list
+references::references
+constraints::constraints
+reference::reference
+duplicated::duplicated
+points::points
+alternatively::alternatively
+abstractly::abstractly
+globally::globally
+ordered::ordered
+assigned::assigned
+perspectives::perspectives
+analyzed::analyzed
+mathematically::mathematically
+worked::worked
+separately::separately
+adjacency::adjacency
+edges::edges
+represent::represent
+digraph::digraph
+instance::instance
+talk::talk
+general::general
+possibly::possibly
+non-linear::non-linear
+made::made
+vertices::vertices
+cycle::cycle
+null::null
+empty::empty
+consists::consists
+potentially::potentially
+levels::levels
+additional::additional
+form::form
+hierarchy::hierarchy
+top::top
+converse::converse
+notion::notion
+child::child
+siblings::siblings
+descendant::descendant
+reachable::reachable
+repeated::repeated
+proceeding::proceeding
+ancestor::ancestor
+leaf::leaf
+internal::internal
+external::external
+degree::degree
+number::number
+sub::sub
+trees::trees
+edge::edge
+connection::connection
+path::path
+sequence::sequence
+connecting::connecting
+level::level
+connections::connections
+height::height
+longest::longest
+downward::downward
+depth::depth
+forest::forest
+disjoint::disjoint
+distinction::distinction
+concrete::concrete
+analogous::analogous
+interpreted::interpreted
+finite::finite
+case::case
+required::required
+non-empty::non-empty
+fixed::fixed
+size::size
+branching::branching
+factor::factor
+binary::binary
+desired::desired
+group::group
+defines::defines
+directed::directed
+graph,a::graph,a
+loops::loops
+loop::loop
+requirement::requirement
+two::two
+point::point
+single::single
+fact::fact
+violates::violates
+corrupt::corrupt
+due::due
+discussed::discussed
+implicitly::implicitly
+assuming::assuming
+implemented::implemented
+recursive::recursive
+symbolically::symbolically
+elegantly::elegantly
+mutual::mutual
+recursion::recursion
+basic::basic
+examples::examples
+terms::terms
+note::note
+definition::definition
+values::values
+functional::functional
+languages::languages
+assumes::assumes
+referential::referential
+transparency::transparency
+simply::simply
+lists::lists
+graph,b::graph,b
+add::add
+condition::condition
+global::global
+topology::topology
+parents::parents
+analyzing::analyzing
+topologically::topologically
+theory::theory
+functions::functions
+nil::nil
+axioms::axioms
+inductive::inductive
+constructors::constructors
+mathematical::mathematical
+viewed::viewed
+generally::generally
+attached::attached
+concretely::concretely
+rooted::rooted
+direction::direction
+narrow::narrow
+term::term
+arborescence::arborescence
+meaning::meaning
+graph::graph
+underlying::underlying
+undirected::undirected
+connected::connected
+simple::simple
+distinguished::distinguished
+vertex::vertex
+designated::designated
+determines::determines
+arrows::arrows
+parentand::parentand
+ordering::ordering
+properly::properly
+bounded::bounded
+outdegree::outdegree
+twonon-empty::twonon-empty
+allowing::allowing
+makes::makes
+definitions::definitions
+simpler::simpler
+complicated::complicated
+allowed::allowed
+hand::hand
+simplify::simplify
+defining::defining
+.the::.the
+complete::complete
+sets::sets
+operations::operations
+include::include
+fork::fork
+operation::operation
+terminology::terminology
+separate::separate
+convention::convention
+drawn::drawn
+growing::growing
+childsparent::childsparent
+superior::superior
+inode::inode
+short::short
+branch::branch
+similarly::similarly
+outer::outer
+terminal::terminal
+topmost::topmost
+depending::depending
+necessarily::necessarily
+algorithms::algorithms
+begin::begin
+pass::pass
+post-order::post-order
+depth-first::depth-first
+search::search
+first::first
+visit::visit
+access::access
+last::last
+i.e::i.e
+reached::reached
+links::links
+formal::formal
+unique::unique
+diagrams::diagrams
+conventionally::conventionally
+heaps::heaps
+special::special
+properties::properties
+subtree::subtree
+length::length
+commonly::commonly
+needed::needed
+manipulation::manipulation
+self-balancing::self-balancing
+avl::avl
+descendants::descendants
+t.c::t.c
+correspond::correspond
+corresponds::corresponds
+entire::entire
+proper::proper
+analogy::analogy
+subset::subset
+drawing::drawing
+plane::plane
+essentially::essentially
+uniquely::uniquely
+fixes::fixes
+conventional::conventional
+order::order
+counterclockwise::counterclockwise
+arranges::arranges
+incoming::incoming
+yields::yields
+embedding::embedding
+ambient::ambient
+isotopy::isotopy
+conversely::conversely
+places::places
+family::family
+distance::distance
+horizontal::horizontal
+line::line
+obtains::obtains
+standard::standard
+left::left
+right::right
+representations::representations
+ways::ways
+common::common
+dynamically::dynamically
+allocated::allocated
+records::records
+pointers::pointers
+items::items
+array::array
+relationships::relationships
+determined::determined
+positions::positions
+e.g::e.g
+heap::heap
+head::head
+tail::tail
+future::future
+modified::modified
+lisp::lisp
+s-expressions::s-expressions
+information::information
+included::included
+expanding::expanding
+pointer::pointer
+stored::stored
+upward::upward
+threaded::threaded
+generalizations::generalizations
+digraphs::digraphs
+thought::thought
+generalized::generalized
+representdirected::representdirected
+graphs::graphs
+removing::removing
+cycles::cycles
+considered::considered
+pairs::pairs
+replaced::replaced
+source::source
+target::target
+implementation::implementation
+strategies::strategies
+exist::exist
+local::local
+structures::structures
+acyclic::acyclic
+stated::stated
+assumed::assumed
+one-to-one::one-to-one
+correspondence::correspondence
+arbitrary::arbitrary
+arbitrarily::arbitrarily
+pick::pick
+make::make
+making::making
+producing::producing
+assign::assign
+result::result
+picking::picking
+produces::produces
+define::define
+union::union
+equivalently::equivalently
+taking::taking
+erasing::erasing
+natural::natural
+forests::forests
+corecursion::corecursion
+breadth-first::breadth-first
+traversal::traversal
+methods::methods
+main::main
+article::article
+stepping::stepping
+means::means
+walking::walking
+action::action
+walk::walk
+performed::performed
+arrives::arrives
+traversed::traversed
+pre-order::pre-order
+respective::respective
+finally::finally
+in-order::in-order
+scenario::scenario
+referring::referring
+specifically::specifically
+level-order::level-order
+effectively::effectively
+performs::performs
+entirety::entirety
+visited::visited
+direct::direct
+grandchild::grandchild

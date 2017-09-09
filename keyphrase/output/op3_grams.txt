@@ -1,0 +1,1527 @@
+software that controls
+controls the hardware
+due to microcode
+programs that make
+make the hardware
+set of programs
+programs that controls
+controls a computer
+computer some examples
+examples of operating
+controlling the computer
+computer involves software
+differentiate kernel services
+operating system processes
+system processes run
+processes run applications
+libraries that perform
+perform standard services
+services the kernel
+supports the processes
+processes by providing
+providing a path
+devices the kernel
+responds to service
+processes and interrupts
+devices the core
+program that functions
+functions in privileged
+reacting to interrupts
+interrupts from external
+requests and traps
+traps from processes
+computer it creates
+creates and terminates
+processes and responds
+request for service
+service operating systems
+systems are resource
+managers the main
+resource is computer
+form of processors
+operating system functions
+implementing the user
+hardware among users
+users to share
+users from interfering
+resources among users
+recovering from errors
+accounting for resource
+facilitating parallel operations
+data for secure
+secure and rapid
+handling network communications
+network communications objectives
+objectives of operating
+operating systems modern
+systems modern operating
+modern operating systems
+major goals operating
+goals operating systems
+systems generally accomplish
+accomplish these goals
+goals by running
+processes in low
+privilege and providing
+providing service calls
+calls that invoke
+invoke the operating
+operating system kernel
+kernel in high-privilege
+details of hardware
+hardware by creating
+abstraction an abstraction
+abstraction is software
+software that hides
+hides lower level
+lower level details
+set of higher-level
+functions an operating
+operating system transforms
+transforms the physical
+world of devices
+result of abstractions
+reasons for abstraction
+needed to control
+control peripheral devices
+standardized operating systems
+operating systems provide
+systems provide subroutines
+subroutines called device
+drivers that perform
+operations on behalf
+behalf of programs
+operating system introduces
+introduces new functions
+abstracts the hardware
+hardware for instance
+introduces the file
+deal with disks
+transforms the computer
+hardware into multiple
+multiple virtual computers
+program each program
+process each process
+views the hardware
+lens of abstraction
+system can enforce
+security through abstraction
+resources to processes
+operating system controls
+controls how processes
+provide a pleasant
+pleasant and effective
+effective user interface
+interface the user
+integration the recent
+increasingly integrated graphical
+integrated graphical user
+graphical user interfaces
+interfaces that encompass
+encompass the activities
+activities of multiple
+processes on networks
+networks of computers
+view operating systems
+points of views
+manager and extended
+extended machines form
+machines form resource
+form resource manager
+resource manager point
+point of view
+operating systems manage
+extended machines point
+provide a virtual
+machine to users
+structurally operating systems
+hierarchy of layers
+virtual machine system
+model the basic
+concepts of operating
+systems are processes
+history of operating
+systems historically operating
+historically operating systems
+idea to study
+study the history
+run operating systems
+systems have evolved
+number of distinct
+phases or generations
+generations which corresponds
+generations the earliest
+earliest electronic digital
+electronic digital computers
+operating systems machines
+primitive that programs
+entered one bit
+rows of mechanical
+languages were unknown
+systems were unheard
+routine had improved
+introduction of punch
+cards the general
+general motors research
+motors research laboratories
+research laboratories implemented
+implemented the first
+first operating systems
+systems in early
+ran one job
+single-stream batch processing
+batch processing systems
+systems because programs
+programs and data
+data were submitted
+submitted in groups
+groups or batches
+generation the systems
+computer s resources
+resources by running
+running several jobs
+operating systems designers
+systems designers developed
+developed the concept
+concept of multiprogramming
+processor is switched
+switched from job
+job to job
+job as needed
+advancing while keeping
+keeping the peripheral
+current job paused
+paused to wait
+operation to complete
+cpu simply sat
+simply sat idle
+finished the solution
+problem that evolved
+job was waiting
+cpu another major
+feature in third-generation
+third-generation operating system
+technique called spooling
+simultaneous peripheral operations
+operations on line
+low-speed device involved
+outputs are written
+programs can run
+run to completion
+note that spooling
+thread being spun
+unwound as needed
+needed another feature
+generation was time-sharing
+variant of multiprogramming
+user is present
+present and interacting
+system must respond
+quickly to user
+productivity could suffer
+suffer timesharing systems
+systems were developed
+developed to multiprogram
+multiprogram large number
+number of simultaneous
+simultaneous interactive users
+interactive users fourth
+users fourth generation
+development of lsi
+large scale integration
+operating system entered
+workstation age microprocessor
+age microprocessor technology
+microprocessor technology evolved
+build desktop computers
+computers as powerful
+1970s two operating
+two operating systems
+systems have dominated
+dominated the personal
+personal computer scene
+written by microsoft
+large personal computers
+cpu family system
+family system components
+structure many modern
+operating systems share
+goal of supporting
+types of system
+system components process
+components process management
+management the operating
+operating system manages
+manages many kinds
+kinds of activities
+ranging from user
+programs to system
+programs like printer
+activities is encapsulated
+process a process
+includes the complete
+complete execution context
+important to note
+program a process
+program in execution
+system in regard
+regard to process
+creation and deletion
+deletion of user
+user and system
+processes * suspension
+suspension and resumption
+resumption of processes
+mechanism for process
+mechanism for deadlock
+deadlock handling main-memory
+handling main-memory management
+main-memory management primary-memory
+primary-memory or main-memory
+array of words
+words or bytes
+bytes each word
+word or byte
+main-memory provides storage
+memory the major
+operating in regard
+regard to memory-management
+part of memory
+decide which process
+process are loaded
+loaded into memory
+memory when memory
+allocate and deallocate
+deallocate memory space
+space as needed
+needed file management
+management a file
+collected of related
+related information defined
+computer can store
+provide long term
+long term storage
+storage some examples
+examples of storage
+media are magnetic
+disk and optical
+properties like speed
+data transfer rate
+rate and access
+methods a file
+systems normally organized
+organized into directories
+directories to ease
+main major activities
+regard to file
+deletion of files
+deletion of directions
+support of primitives
+primitives for manipulating
+files and directions
+mapping of files
+files onto secondary
+files on stable
+stable storage media
+media i system
+i system management
+management i subsystem
+hides the peculiarities
+peculiarities of specific
+specific hardware devices
+assigned secondary-storage management
+management generally speaking
+levels of storage
+including primary storage
+storage and cache
+cache storage instructions
+instructions and data
+program because main
+small to accommodate
+accommodate all data
+data and programs
+data are lost
+lost when power
+power is lost
+system must provide
+provide secondary storage
+storage to back
+back up main
+main memory secondary
+memory secondary storage
+secondary storage consists
+consists of tapes
+designed to hold
+eventually be accessed
+accessed in primary
+divided into bytes
+bytes or words
+number of bytes
+bytes each location
+location in storage
+regard to secondary
+secondary storage management
+managing the free
+allocation of storage
+scheduling the requests
+requests for memory
+memory access networking
+networking a distributed
+collection of processors
+clock the processors
+lines called network
+network the communication-network
+routing and connection
+problems of contention
+contention and security
+security protection system
+systems has multiple
+execution of multiple
+activities protection refers
+refers to mechanism
+mechanism for controlling
+controlling the access
+access of programs
+computer systems command
+systems command interpreter
+command interpreter system
+system a command
+user the user
+user gives commands
+executed by operating
+user specified command
+multiple command interpreters
+run in kernel
+two main advantages
+advantages to separating
+separating the command
+change the interface
+interface of command
+interpreter is separate
+change the code
+modify the interface
+process to gain
+command interpreter separate
+separate from kernel
+kernel operating systems
+operating systems services
+users program execution
+execution the purpose
+user to execute
+conveniently run programs
+programs the user
+allocation or multitasking
+operating systems running
+running a program
+involves the allocating
+allocating and deallocating
+scheduling in case
+case of multiprocess
+multiprocess these functions
+programs so user-level
+user to run
+systems i operations
+operations each program
+requires an input
+input and produces
+output this involves
+i the operating
+operating systems hides
+hides the user
+user the details
+details of underlying
+systems by providing
+providing i makes
+makes it convenient
+users to run
+efficiently and protection
+provided by user-level
+user-level programs file
+programs file system
+file system manipulation
+manipulation the output
+files or input
+files the operating
+service the user
+worry about secondary
+storage management user
+command for reading
+reading or writing
+file and sees
+accomplished thus operating
+operating systems makes
+makes it easier
+easier for user
+programs to accomplished
+accomplished their task
+task this service
+service involves secondary
+involves secondary storage
+management the speed
+i that depends
+depends on secondary
+management is critical
+systems to manage
+giving individual users
+users the control
+programs to provide
+provide these services
+service s left
+left with operating
+operating system communications
+instances where processes
+computer or running
+computers by providing
+providing this service
+service the operating
+operating system relieves
+relieves the user
+worry of passing
+messages between processes
+processes in case
+passed to processes
+operating system error
+system error detection
+detection an error
+system to avoid
+situation the operating
+system constantly monitors
+monitors the system
+system for detecting
+detecting the errors
+errors this relieves
+worry of errors
+system and causing
+malfunctioning this service
+handled by user
+cases altering area
+area of memory
+memory or deallocation
+deallocation of memory
+relinquishing the cpu
+loop these tasks
+programs a user
+privileges can interfere
+operating systems system
+systems system calls
+calls and system
+system programs system
+programs system calls
+system calls provide
+provide an interface
+operating system system
+system system calls
+calls allow user-level
+processes to request
+request some services
+system which process
+handling the trap
+system will enter
+access to privileged
+perform the desired
+behalf of user-level
+nature of operations
+i a process
+involves a system
+system call telling
+telling the operating
+system to read
+read or write
+write particular area
+request is satisfied
+system system programs
+system programs provide
+programs provide basic
+provide basic functioning
+functioning to users
+environment for program
+system calls layered
+calls layered approach
+layered approach design
+case the system
+system is easier
+easier to debug
+debug and modify
+affect only limited
+affecting that data
+data are limited
+module or layer
+mechanisms and policies
+policies the policies
+done for instance
+construct for ensuring
+ensuring cpu protection
+protection is mechanism
+long the timer
+timer is set
+decision the separation
+separation of mechanism
+mechanism and policy
+policy is important
+important to provide
+interface between mechanism
+change of policy
+policy may affect
+two is vague
+involve much deeper
+programmer the choice
+two provides flexibility
+variety of ways
+implement a variety
+variety of policies
+changing the policy
+require the development
+change in parameters
+library of mechanisms
+increase its efficiency
+operating system
+hardware useable
+operating systems
+computer involves
+involves software
+differentiate kernel
+kernel services
+library services
+application-level services
+system processes
+processes run
+run applications
+perform standard
+standard services
+kernel supports
+peripheral devices
+kernel responds
+service calls
+control program
+privileged state
+execution context
+hardware instructions
+external devices
+service requests
+permanent resident
+terminates processes
+service operating
+resource managers
+main resource
+computer hardware
+communication devices
+system functions
+user interface
+sharing hardware
+allowing users
+share data
+preventing users
+scheduling resources
+resource usage
+facilitating parallel
+parallel operations
+organizing data
+rapid access
+handling network
+network communications
+communications objectives
+modern operating
+major goals
+goals operating
+running processes
+low privilege
+providing service
+system kernel
+high-privilege state
+hide details
+creating abstraction
+lower level
+level details
+higher-level functions
+system transforms
+physical world
+virtual world
+abstractions built
+code needed
+standardized operating
+systems provide
+provide subroutines
+device drivers
+perform operations
+system introduces
+file abstraction
+virtual computers
+process views
+enforce security
+allocate resources
+manage resources
+system controls
+active agents
+access resources
+passive entities
+effective user
+user interacts
+important components
+command interpreter
+file system
+application integration
+recent trend
+graphical user
+user interfaces
+multiple processes
+view operating
+resource manager
+extended machines
+machines form
+form resource
+manager point
+systems manage
+machines point
+virtual machine
+monolithic system
+machine system
+client-server model
+basic concepts
+memory management
+file systems
+security history
+computer architecture
+good idea
+run operating
+distinct phases
+first generations
+earliest electronic
+electronic digital
+digital computers
+systems machines
+mechanical switches
+plug boards
+programming languages
+assembly languages
+punch cards
+general motors
+motors research
+research laboratories
+laboratories implemented
+first operating
+batch processing
+processing systems
+systems designers
+designers developed
+main memory
+jobs advancing
+current job
+job paused
+sat idle
+partition memory
+major feature
+third-generation operating
+simultaneous peripheral
+peripheral operations
+high-speed device
+disk interposed
+running program
+low-speed device
+device involved
+disk programs
+completion faster
+initiated sooner
+printed note
+spooling technique
+feature present
+time-sharing technique
+multiprogramming technique
+computer system
+user requests
+user productivity
+suffer timesharing
+timesharing systems
+large number
+simultaneous interactive
+interactive users
+fourth generation
+large scale
+scale integration
+system entered
+personal computer
+workstation age
+age microprocessor
+microprocessor technology
+technology evolved
+build desktop
+desktop computers
+computer scene
+large personal
+personal computers
+cpu family
+family system
+system components
+systems share
+components process
+process management
+system manages
+activities ranging
+user programs
+system programs
+printer spooler
+file server
+process includes
+complete execution
+major activities
+process synchronization
+process communication
+deadlock handling
+handling main-memory
+main-memory management
+management primary-memory
+large array
+memory space
+deallocate memory
+needed file
+file management
+related information
+information defined
+creator computer
+store files
+secondary storage
+long term
+term storage
+storage media
+magnetic tape
+magnetic disk
+optical disk
+data transfer
+transfer rate
+access methods
+manipulating files
+stable storage
+system management
+subsystem hides
+specific hardware
+hardware devices
+device driver
+specific device
+assigned secondary-storage
+secondary-storage management
+primary storage
+cache storage
+storage instructions
+storage consists
+media designed
+hold information
+words consisting
+fixed number
+address space
+storage management
+free space
+secondary-storage device
+storage space
+memory access
+access networking
+distributed systems
+share memory
+processors communicate
+communication lines
+communication-network design
+connection strategies
+security protection
+protection system
+computer systems
+multiple users
+concurrent execution
+activities protection
+protection refers
+resources defined
+systems command
+interpreter system
+system calls
+main function
+command command-interpreter
+multiple command
+command interpreters
+unix terminology
+kernel mode
+main advantages
+malicious process
+gain access
+ugly scenario
+kernel operating
+systems services
+services provided
+users program
+program execution
+execute programs
+run programs
+memory allocation
+systems running
+program involves
+deallocating memory
+cpu scheduling
+user-level programs
+program requires
+produces output
+systems hides
+underlying hardware
+user sees
+protection users
+programs file
+system manipulation
+management user
+task accomplished
+systems makes
+service involves
+individual users
+mentioned reasons
+system communications
+exchange information
+processes running
+system relieves
+passing messages
+user program
+message transits
+service interface
+system error
+error detection
+complete system
+constantly monitors
+errors propagating
+causing malfunctioning
+cases altering
+altering area
+faulty process
+infinite loop
+systems system
+programs system
+calls provide
+system system
+user-level processes
+privileged instructions
+desired service
+user-level process
+critical nature
+process involves
+system call
+call telling
+programs provide
+basic functioning
+program development
+calls layered
+layered approach
+approach design
+limited portions
+layers information
+bugs affecting
+specific module
+layer mechanisms
+mechanism specifies
+timer construct
+ensuring cpu
+cpu protection
+policy decision
+provide flexibility
+deeper change
+underlying implementation
+introduction
+operating
+system
+definition
+software
+controls
+hardware
+today
+due
+microcode
+programs
+make
+useable
+set
+computer
+examples
+systems
+unix
+mach
+ms-dos
+ms-windows
+chicago
+os
+macos
+vms
+mvs
+controlling
+involves
+levels
+differentiate
+kernel
+services
+library
+application-level
+part
+processes
+run
+applications
+linked
+libraries
+perform
+standard
+supports
+providing
+path
+peripheral
+devices
+responds
+service
+calls
+interrupts
+core
+control
+program
+functions
+privileged
+state
+execution
+context
+instructions
+executed
+reacting
+external
+requests
+traps
+generally
+permanent
+resident
+creates
+terminates
+request
+resource
+managers
+main
+form
+processors
+storage
+communication
+data
+implementing
+user
+interface
+sharing
+users
+allowing
+share
+preventing
+interfering
+scheduling
+resources
+facilitating
+recovering
+errors
+accounting
+usage
+parallel
+operations
+organizing
+secure
+rapid
+access
+handling
+network
+communications
+objectives
+modern
+major
+goals
+accomplish
+running
+low
+privilege
+invoke
+high-privilege
+hide
+details
+creating
+abstraction
+hides
+lower
+level
+higher-level
+transforms
+physical
+world
+memory
+virtual
+result
+abstractions
+built
+reasons
+first
+code
+needed
+standardized
+provide
+subroutines
+device
+drivers
+behalf
+introduces
+abstracts
+instance
+file
+deal
+disks
+multiple
+computers
+belonging
+process
+views
+lens
+fourth
+enforce
+security
+allocate
+manage
+active
+agents
+passive
+entities
+pleasant
+effective
+interacts
+interested
+feel
+important
+components
+command
+interpreter
+on-line
+application
+integration
+recent
+trend
+increasingly
+integrated
+graphical
+interfaces
+encompass
+activities
+networks
+view
+two
+points
+manager
+extended
+machines
+point
+parts
+efficiently
+machine
+convenient
+structurally
+design
+monolithic
+hierarchy
+layers
+exokernel
+client-server
+model
+basic
+concepts
+management
+i
+history
+historically
+tightly
+related
+architecture
+good
+idea
+study
+evolved
+number
+distinct
+phases
+generations
+corresponds
+roughly
+decades
+earliest
+electronic
+digital
+primitive
+entered
+bit
+rows
+mechanical
+switches
+plug
+boards
+programming
+languages
+unknown
+assembly
+unheard
+generation
+early
+routine
+improved
+punch
+cards
+general
+motors
+research
+laboratories
+implemented
+ibm
+ran
+job
+single-stream
+batch
+processing
+submitted
+groups
+batches
+advantage
+jobs
+designers
+developed
+concept
+multiprogramming
+processor
+switched
+advancing
+keeping
+current
+paused
+wait
+operation
+complete
+cpu
+simply
+sat
+idle
+finished
+solution
+problem
+partition
+pieces
+waiting
+feature
+third-generation
+technique
+spooling
+simultaneous
+line
+high-speed
+disk
+interposed
+low-speed
+involved
+writing
+directly
+printer
+outputs
+written
+completion
+faster
+initiated
+sooner
+printed
+note
+thread
+spun
+spool
+unwound
+present
+time-sharing
+variant
+i.e
+connected
+terminal
+interacting
+respond
+quickly
+productivity
+suffer
+timesharing
+multiprogram
+large
+interactive
+development
+lsi
+scale
+circuits
+chips
+personal
+workstation
+age
+microprocessor
+technology
+build
+desktop
+powerful
+mainframes
+1970s
+dominated
+scene
+microsoft
+intel
+successors
+dominant
+motorola
+family
+structure
+goal
+supporting
+types
+manages
+kinds
+ranging
+spooler
+servers
+server
+encapsulated
+includes
+registers
+instant
+regard
+creation
+deletion
+suspension
+resumption
+mechanism
+synchronization
+deadlock
+main-memory
+primary-memory
+array
+words
+bytes
+word
+byte
+address
+memory-management
+track
+decide
+loaded
+space
+deallocate
+collected
+information
+defined
+creator
+store
+files
+secondary
+long
+term
+media
+magnetic
+tape
+optical
+properties
+speed
+capacity
+transfer
+rate
+methods
+organized
+directories
+ease
+directions
+support
+primitives
+manipulating
+mapping
+back
+stable
+subsystem
+peculiarities
+specific
+driver
+assigned
+secondary-storage
+speaking
+including
+primary
+cache
+referenced
+small
+accommodate
+lost
+power
+consists
+tapes
+designed
+hold
+eventually
+accessed
+ordinarily
+divided
+consisting
+fixed
+location
+addresses
+managing
+free
+allocation
+networking
+distributed
+collection
+clock
+communicate
+lines
+communication-network
+routing
+connection
+strategies
+problems
+contention
+protection
+concurrent
+protected
+refers
+commands
+turning
+function
+execute
+command-interpreter
+interpreters
+shell
+terminology
+mode
+advantages
+separating
+change
+separate
+modify
+malicious
+gain
+showed
+avoid
+ugly
+scenario
+advantageous
+provided
+convenience
+purpose
+environment
+conveniently
+worry
+multitasking
+things
+care
+allocating
+deallocating
+case
+multiprocess
+user-level
+independently
+requires
+input
+produces
+output
+underlying
+sees
+performed
+makes
+manipulation
+reading
+task
+accomplished
+easier
+depends
+critical
+relegated
+giving
+individual
+difficult
+mentioned
+left
+instances
+exchange
+relieves
+passing
+messages
+passed
+done
+customized
+specifics
+message
+transits
+error
+detection
+malfunctioning
+situation
+constantly
+monitors
+detecting
+propagating
+causing
+allowed
+handled
+monitoring
+cases
+altering
+area
+deallocation
+faulty
+relinquishing
+infinite
+loop
+tasks
+handed
+privileges
+interfere
+correct
+normal
+trap
+enter
+desired
+nature
+call
+telling
+read
+write
+satisfied
+functioning
+editors
+compilers
+shells
+sense
+bundles
+layered
+approach
+debug
+affect
+limited
+portions
+programmer
+accessible
+ways
+bugs
+affecting
+module
+layer
+mechanisms
+policies
+specifies
+timer
+construct
+ensuring
+hand
+decision
+policy
+separation
+flexibility
+parameters
+vague
+involve
+deeper
+decided
+choice
+implementation
+changed
+efficient
+trouble
+specifically
+variety
+implement
+changing
+require
+increase
+efficiency
+move
+platform

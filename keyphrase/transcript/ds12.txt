@@ -1,0 +1,540 @@
+So today we are going to continue on discussion on AVL trees in particular we are going to look at the insertion and deletion procedure in an AVL trees
+so we will begin with the insertion 
+so we had started this discussion on insertion on the last class also 
+so suppose i am trying to insert a node v in to an AVL tree right 
+actually what i am trying to do is insert a key right but so whats a process of insertion in a binary search tree 
+first you find where the key is right you go to that place you put the key there 
+that say the node in which i put the key is the node in which i put the key is v okay 
+now this is something we had started the discussion of so if as a consequence of this insertion 
+it doesn’t remain an AVL tree then that’s because the height balance property is violated ya and what are the nodes whose height could change as a result of this insertion right which of the nodes whose height could changes we  call the define the height of the node as the height of the subtree rooted at that node ya
+so this is large tree and some where below there i insert a particular node ya 
+so which of the nodes whose heights could change it could only be the ancestors of this particular node ya not because its return here but you should also understand why it is only ancestors because its only in the ancestors of that node would whose subtree has changed as result of this insertion process right
+for any other node its subtree has not changes its remains as same other flow 
+so the ancestor of this node their height might change and change it will only increased right 
+because we add in a particular node so its the ancestor of this nodes whose height might increase as a consequence of this insertion 
+so if (refer slide time 03:47) the insertion cause the tree to become imbalance or unbalanced then some ancestor of this node v is the culprit is the place where some one or more ancestors right where we have a height balance problem 
+
+
+
+height problem means it will become height imbalanced height imbalance means one left subtree and right subtree the difference in heights is more than a one 
+so what are we going to do we are going to essentially travel up the tree from this node v 
+travel up the tree which means just keep following pin the parent pointer ya till we identify the node z which is unbalanced right
+so as said it as till we find the first node x whose grandparent is unbalanced 
+but you can also think of it as find the node z whose grandparent who which is unbalance and xz is it grandchild 
+which  grandchild 
+the  grandchild that we travels went through the  grandchild on the path right because the node can have many  grandchildren ya i will show in you example and this will be clearer and we will call if y the parent of x 
+so y is the parent of x and the child of z then right 
+so suppose this was the situation we had this was an AVL tree ya and i insert let say fifty four in to this tree 
+
+
+so fifty four would come here why because its larger smaller larger smaller and so it would come here right
+now if there is a problem actually this tree is not height balanced any more this is not a AVL tree any more 
+so if there is a problem we said that the problem would be on one of these nodes 
+so note that these are the only nodes whose heights are changed earlier this node had the height of zero 
+now it is one this node had height of one 
+now it is two this node had height of two now it is three this node had height of three now it is four which is the first node on this path whose height has which is now imbalanced 
+this is imbalanced 
+fifty 
+no 
+difference of height is one this is imbalanced yes 
+right difference of height two this is one this is height three ya
+the height of no other node is changed the height of this node is not changed ya 
+so you understand why the heights of these nodes on this path would change 
+right 
+so this node will be z 
+ya 
+this node will be z 
+x would be its grandchild on the path and the parent would be y 
+[noise:student]
+lets call that x is the node y is the node and z is the node ya 
+so x is the node here 
+okay 
+every one with me 
+so we travel up from here 
+we find the first place where the imbalance happens lets call that z and x is the  grandchild of z  grandchild means parent sorry childs child 
+so child is y and its child is x and now we are going to rebalance this tree 
+so to rebalance this tree 
+so we are going to particular rebalance this subtree 
+subtree rooted at z and we will do that by performing the rotation and this is what will happen after the rebalance this is what the tree would look like okay and what we are going to today is understand how we came up with this picture as we can see i have only change to this subtree which subtree this subtree 
+the one containing this six nodes forty eight fifty fifty four sixty two seventy eight eighty eight they are here the six nodes but organized in the manner now 	
+so that this node is not height imbalanced any more and either is this node height imbalanced 
+yes 
+we are going to understand this process today okay 
+so lets first understand what is the rotation right 
+in the previous slide i use this system rotation 
+what does the rotation mean 
+so rotation is the way of locally re organizing the binary search tree okay 
+so this is part of my binary search tree 
+this could be huge tree i just consider the part of it ya
+so u is one node 
+v is its child and these are some subtrees
+this is a right subtree 
+this is the subtree rooted at the right child of u this is the subtree rooted at the right child of v 
+these is the subtree rooted at the left child of u
+this could be a null tree 
+no node or could be a huge tree i don’t care right 
+what do i know because it’s a binary search tree and know all the keys in t one are less then the key in v 
+all the keys in t two or more than the key in v 
+keys in t two are less than the key in u and keys in t three are more than the key in u right this follows from the property of binary search tree yes okay
+now what is the rotation step going to be okay 
+so first what we are going to do is lets just forget these links okay lets us look at this and now this is what the rotation is as okay
+so what has happen 
+v is become the parent of u ya you want to replay of this okay 
+[noise:student]
+slow motion right 
+so its sufficiently slow okay that’s what a rotation is and will put the links back 
+now right 
+so what happened what happened was v became a parent of u the binary search tree properties still holds by the way 
+keys of t one less are than v keys of t two are more than v 
+so they come here and they are less than u so they come to the left of u right
+so still a binary search tree 
+but we have done some local reorganization right and this will be very useful and we will see why right
+so t one earlier was the left child to the left of v it remains to the left of v ya t three was to the right of u 
+if you remember 
+lets see t three was to the right of u t one was to the left of v t two was to the right of v right 
+so t three remains to the right of u 
+t one remains to the left of v 
+but t two moves from being right of v to the left of u 
+its now the left child of u 
+ya 
+every one follows this what a rotation is okay 
+now lets see how we will use these rotations to do or insertion okay (refer slide time 16:29)
+
+
+so okay 
+so suppose the insertion happens so this is the tree i am not drawn the links right but it should be clear what the links are who can tell me what the links are 
+y is the child of z 
+x is the child of y these two are the children of x t three is the right child of y 
+and t four is the right subtree of z ya
+so in the next few slides you will see the pictures with out these links but that just to avoid the clutter 
+it it should be completely clear what the relationships are
+now suppose i did an insertion in t one ya and these are the x y z that being counted in the procedure so may be  insertion happens some where in some leaf 
+we went up along the path towards the root 
+the root is may be some where here ya and z was the first place at which we had an imbalance and so y was the child of z and x was the child of y on this path that we took 
+any questions to this point right
+i have taken this one picture but it could also be different right y could have been the right child of z ya 
+x could have been the left or the right child of y right 
+so there are how many different cases possible 
+four 
+y could be the left of the right child of z and x could be the left of the right child of y 
+two times two four different cases some looking at one particular case now 
+that y is the left child of z an x is also left child of y and the insertion happened here 
+so the insertion happened here 
+so lets say the height of t one i am using this to denote the height of the particular thing the height of t one lets say originally it was h and now because of the insertion it became h plus one ya
+it cannot increase by more than a one and because of tol i am just adding one more 
+so the increasing height can be at most a one and so lets say there was an increasing in height ya
+so there is an increase in height of this node x also 
+there is an increase in height of node y and there is also an increase in height of node z right that is why z became a imbalanced right 
+if there was no increasing height of y then z will not be come imbalanced right 
+if [noise:hindi] insertion 
+everything is a same as before that means height of y is also increased and height of y is increased because height of x is increased right and height of x is increased because height of t one as increased and height of t one let say increased from h to h plus one what can we say about the height of t two now 
+what is the height of t two [noise:student ] okay
+so x is  balanced even after the insertion because z was the first node which was imbalanced 
+so x was balanced after insertion 
+so if x was balanced after insertion other [noise:hindi] height h plus one but t two height h plus two ya h plus one ya h three [noise:hindi]
+every one is with me 
+so height of t two is one of these three 
+which one okay 
+can it be h plus two if it is h plus two then originally x is imbalance because originally height of t one was h 
+if this is h and this is h plus two and then this was imbalance even to begin with but does not in the case right originally it was an AVL tree 
+so height of t two can not be h plus two can it be h plus one 
+if it is h plus one then height of h does not increased because this is h plus one then that means what was the height x to begin with h plus two and what is the height other if the height of this increased from h to h  plus one 
+even then its height remains that h plus two 
+the fact that the height of x has increased implies that this cannot be h plus one because this was h plus one then the height of x should not increased 
+it remain what it for before h plus two 
+everyone follows this ya 
+so this implies height of t two cannot be h plus one 
+so it has to be h
+so height of t two is h 
+if height of t two is h then height of this has increased from h to h plus one then what about height of x 
+what was the original height of x 
+original height was h plus one and now its become h plus two yes 
+is this clear to everyone 
+so the height of x is increased from h plus one to h plus two right 
+lets continue this argument 
+so this is the picture
+so far we have argued that the height of t one has increased from h to h plus one then height of t two is h then the height of x is increased from h plus one to h plus two 
+what about the height of t three now okay 
+so once again since y remains balanced the new height of x is h plus two 
+so and this is balanced 
+this is height balanced 
+so the height of t three is h plus three or h plus two or h plus one 
+one of these three because the difference in heights can only be one so its one of these three 
+now if it is h plus three we repeating the argument roughly ya 
+if it is h plus three then that means y was originally imbalanced 
+because original height of x was h plus one 
+so y is originally imbalanced 
+so height of t three can not be h plus three 
+if it is h plus two then that means that the height of y has not increased right because if this was h plus two then the height of y that means originally was h plus three right [noise:hindi] 18:04 h plus 
+so height of t three cannot be h plus two 
+so height of t three has to be h plus one right
+so height of t three is h plus one 
+so if height of t three is h  plus one what is the height of y now 
+so originally it was h plus two 
+because both of these guys were h plus two h plus one 
+so these was h plus two originally and now its become h plus three so its increased from h plus two to h plus three 
+is it clear to everyone ya 
+now what about height of t four 
+note that z is imbalanced ya 
+the new height is h plus three of these guy 
+so what should the height of t four v or h plus five 
+[noise:student]
+initially it was balanced 
+so since z was balanced z was balanced height of t four is h plus one or h plus two or h plus three right 
+since this was originally h plus two 
+this could only have been h plus one h plus two or h plus three and since it is now un balanced it cannot be h plus two or h plus three it has to be h plus one ya 
+so this is h plus one 
+whose not following 
+if you have a question please ask 
+your face will not come on the television you can ask the question 
+no
+so height of t four is h plus one ya 
+so what is the height of z initially 
+this was originally h plus two 
+this was h plus one 
+so this was h plus three originally 
+ya and now of course its heights become h plus four but  now we will do some rotation and stuff like that 
+so that will reduce its size so its original height was h plus three ya 
+every one follows this good 
+so you will keep this picture right 
+
+so this is what we argued 
+that we quickly this is the final thing we argued right 
+these are the heights of the various things 
+so when i said from here to here this the first thing is what it was originally and what it is now 
+so we just need to look at the new values okay
+now we are going to do a rotation around this pair y z 
+so what is rotation do rotation is going to rotate this 
+so that y is now going to become the parent of z 
+yes 
+ya 
+is it clear to everyone 
+so what do we want to do 
+we want to move this up 
+so that it will come here and y will become the parent of z ya and pardon 
+yes this is what the rotation let me just write here 
+so  y will now become the parent of z 
+yes and where will i put these two 
+so this this is one subtree this come remains as it is this will not be changed ya 
+so t three and t four are only ones which have to be so t four recalls will remain at the right 
+t three will come to the left and this big piece will remain as it is yes
+that’s what the rotation was so lets just 
+this is what will happen  ya
+y is become a parent of  z 
+these two are the children of z t four and t three and this entire thing was to the left this is clear 
+again i am not shown the link but it should be clear what a links are 
+ya and i have written down the heights 
+the height this was h plus one this was h this was h plus one this was h plus one h plus one h h plus one ya 
+as a rotation after a rotation we already saw that the binary search tree properties are maintained
+so this is still a binary search tree but now we want to argue that height balanced properties is also restored 
+[noise:hindi] where was the height imbalanced happening on z z as you can see this has height h plus three this is height h plus one 
+so this height imbalanced 
+now let see what is the height of node x now ya because this is h plus one this is h what is the height of node z 
+h plus two 
+what is the height of node y 
+h plus three is everything balanced now this is balanced this is only a difference of height of one this is balanced no difference this is balanced no difference ya 
+so we have done a rotation 
+this is called a single rotation you will soon see why it is called a single rotation 
+how much time does this operation take just one rotation right 
+we just have to do the constant number of operations right 
+we have to may be y y we will have to in z will have to become a child of y 
+ so there will be three or four different reference changes that you have to do 
+may be five may be six some constant  number independent of the number of nodes in the graph in the tree okay 
+now one interesting thing is happened 
+the original height of z was h plus three yes 
+that’s why we have written this h plus three here  after this rotation the height of this subtree is also h plus three 
+yes
+whatever was the original height of this is the new height of this subtree also 
+so the height of the subtree  remains the same the same after the rotation 
+
+the remains the same as in what was whatever was the height before the insertion even h plus three was the height before the insertion ya
+so after we inserted and dead the rotation the new height is also become h plus three 
+why is this important ya 
+because now i don’t have to go up further ya 
+because now any ancestor of this its height would not change any more because i have whatever was the original height of this h plus three of this node is the new height of this subtree also 
+so any of the ancestor of z their heights would become the same as before and so they would be no imbalance on them 
+right so 
+as i marching up after i did my insertion as i well started moving up 
+i find the first place where was there was an imbalance i did the rotation ya and i am done 
+i don’t have to go up any further 
+lets see 
+so we have actually consider only one case 
+one out of four different cases 
+yes 
+why one case 
+because we said y is the left child of z and x is the left child of y 
+now there is one symmetric case which has the symmetric both are right right right that i am not going to handle because i trust all of you can be leave me there that it is the symmetric case completely right 
+so the other case is this one ya 
+
+where x is let see the right child of y which is the left child of z okay 
+this has the symmetric case which is that y is the right child of z and x is the left child of y 
+again that’s completely symmetric and will not handle right okay okay
+so lets repeat the argument that we had 
+so once again i am assuming that the insertion happens here 
+right it could happen in any one of these but again it its symmetric lets assume it happens here
+so this height went from h to h plus one 
+what about the height of this guy 
+right 
+so since this is balanced even after the insertion the new height so the height of this is either h plus two or h plus one or h 
+if it is h plus two then that means x was originally imbalanced 
+if it is h plus one then that means the height of x is not changed 
+so it has to be h ya 
+i am repeating the argument its as same as before ya
+so this is h and the new height is h plus one 
+so what is the new height of x h plus two and what was the original height h plus one 
+so its height moves from h plus one to h plus two 
+now lets look at the height of t one well since y is still balanced then that means the height of t one is either h plus three or h plus two or h plus one right
+so if it is h plus three then that means y was originally not balanced 
+if it was h plus two then y’s height has not increased 
+so it has to be h plus one which means y is height has increased h plus two to h plus three which means that now since z is imbalanced the height of t four has to be h plus one ya 
+which implies that z’s original height was h plus three ya 
+exactly the same as before we do not make any difference ya okay 
+but now the rotations will have to be different a bit okay
+okay which of these three keys 
+so in x y and z which of these three keys is the middle key x y or z which of these is middle x z is the largest y is the smallest right  
+so if you recall in the previous rotation we are x y and z again there 
+in the previous rotation which was the middle key why because all there in a line ya z was the top y was its left child so it means y is less than z and x was left child x is less than y is less than z
+so after the rotation we ended up making y the root 
+the middle child we the middle key we ended up making the root here also we want to do ended up making the root here also we would want to do something similar but except that the middle key is now x okay 
+so we are going to do a two step rotation that’s why it called a double rotation
+so first i will rotate x y  okay
+let see what will happen after i rotate x y 
+this is what will look like it will look like x as moved up y is moved down 
+t one remains the left child of y 
+t three remains the right subtree of x and t two switch is loyalties from x to y 
+so earlier it was the left subtree of x 
+now it is the right of subtree of y and t four remains as it is 
+yes 
+every one with me and i have just copied the same height so t one has height h plus one t two has height h  plus one t three has height h 
+t four has height h plus one 
+no difference is this balanced this is height balanced height of y is h plus two ya because both of these height are h plus one 
+height of x will be h  plus three actually now there is an imbalanced at x itself ya because this has h plus two and this has h there is an imbalanced here and height of z would be h plus four because this is height h plus three 
+one more right 
+so this rotation has not done the job for us yet ya
+so we need to do one more rotation what other rotation i need to do rotation x ya 
+so what will happen now 
+x will go up and z will come down x will become the parent of z t four was the right subtree of z so it will remain the right subtree 
+y had t one and t two as left they will remain as they are and t three which was the right subtree of x now becomes the left subtree of z 
+the same thing ya okay 
+now lets compute heights 
+height of y h plus two height of z h plus two height of x h plus three 
+height balance happens ya 
+this is balanced here its balanced here its balanced here 
+further more the height of this subtree is the same as the original subtree h plus three right 
+so final tree as the same height of the original tree and we see need not go further up the tree 
+everyone follows what’s happening 
+you understand the need for the double rotation here right
+we ended up doing the same thing as i said the middle key ended up being at the top because we want to be able to split the thing uniformly now ya
+why was the height here imbalance 
+why was the height imbalance happening 
+because you know this was the middle key it was coming way down right  
+now when i kind of split uniformly the heights reduced and there is a height balanced its roughly what is happening here 
+how much time does the double rotation take 
+constant time ya okay 
+everyone with me 
+so so just as a quick recap we we have four different ways to rotate node in an AVL tree so the single rotation was something like this right there were all in a line x y and z are they were like this x y and z and after rotation this is the picture you get and here after rotation this is the picture you get right 
+
+
+this is just as a recap you understand why we are doing this thing and why this picture is a balanced picture height balanced picture and we also sort the double rotations 
+so either like this in which case after rotation you got something like this and or it could be like this left and right and which case again after rotation you got something like that ya
+this is just to show you a picture 
+you don’t have to understand much here you are hopefully understood why the single and double rotations are done in the way they are done okay
+so now lets come to deletion  because exactly the same principle are going to be useful for deletion also [noise:student]
+it is a  binary tree 
+the difference between the height does it become zero 
+we saw that right 
+we see that lets see 
+here it became here it became zero at this node but not at this node here the difference or here it is zero but this node the difference is a one but some nodes they  would be difference of a one they some other nodes they would be difference of zero okay
+so now lets look at the deletion 
+so in a binary search tree when i delete a node we will have three cases 
+if  you remember right 
+when i am deleting the node which is a leaf or i am deleting a node which is only one child or  i am deleting a node which has two children when i delete a node which has two children what did i do 
+i went to the successor of that node i copied the content of their successor in to that node and deleted the successor 
+so the actual node i deleted was the successor node and the successor node has only one child or no children 
+why does the successor only one child [noise:student] 
+because it does not have the left child
+because if it had the left child then it would not be the successor 
+it has only one child or it has no children 
+so the actual node that you end up deleting is either a leaf node or a node with only one child right 
+everyone with me
+this is the actual node that you ended up deleting okay
+now so what is the node which has only one child in an AVL tree if i tell you here is a node which has only one child what can you say about that  node [noise:student]
+this is a node with only one child right 
+can it have another child 
+can this node have the child 
+no
+if it had a child like this then what would be the problem they would be height imbalanced here 
+so it cannot have this child or it cannot have this child so which means this node is a leaf exactly 
+so if in an AVL tree and node has only one child then the child is a leaf
+if in an AVL tree if a node has only one child then that child is a leaf ya
+so what are we saying 
+i am either deleting a leaf when i am deleting in an AVL tree or i am either deleting a leaf or i am deleting a parent of a leaf 
+if i am deleting a node with only one child then it’s a parent of a leaf yes 
+so which means that i am essentially deleting a leaf if i am deleting a parent of a leaf them essentially what i am doing i am just i can think of it as if i was deleting the leaf and copying the content of the leaf in to the pair 
+so i am i can always think of it as if i am deleting a leaf ya 
+so either deleting a leaf or parent let us keep that in mind okay
+so lets lets say w is the node that we are deleting okay 
+now we are going to define our x y and z slightly differently right 
+so z is once again the first unbalanced node that the link counter as we go up from w towards the root 
+when i deleted w once again whats going to happen 
+the ancestors of w their height could reduce right 
+so one of this one of these ancestors will be unbalanced if their if any are unbalanced then one of this will be unbalanced
+so lets say z is the first unbalanced node encountered while we are traveling up the tree from w okay
+now y is not the child of z on the path 
+but we defining y as child of z with larger height and x is the child of y with larger height okay 
+z has two children 
+one of them has lef one of them has a larger height than the other one ya 
+so we take that one 
+so once again we perform it rotation to restore the balance of the the height balance of the subtree rooted at z 
+now what is going to happen here is that this rotation now we are doing so in the case of insertion what was happening is that once you did the rotation you don’t we did not have to worry any more on the ancestor nodes 
+right 
+everything was taken care of we could stop after doing the rotation
+now in delete what we are going to see is that we might have to continue up and we will see what the reason for that is right
+so you might have to continue up the tree go to the ancestor of z and once again find the first node which is unbalanced and repeat the rotation there and after that go even further up fine the first node which is unbalanced repeat the rotation  there and so on till you reach the root okay
+so lets understand what is happening ya yes [noise:student]
+z is the device the child x is the child of y will larger height ya 
+if both of them have the same height then we will we will say which which which of them should be x will say that in a minute right 
+it could happen 
+so this is a valid question both the children of y might have the same height so then which is x 
+we will see which is x okay [noise:student]
+no 
+the two children of z cannot have the same height 
+because that is the imbalanced node right okay
+ignore this h minus one or  h minus two for a minute 
+they should not they should have come at the end so this is the picture i have z which is the first unbalanced node y is the child of z which has higher larger height and x is the child of y which has larger height right and i did a deletion in t four h i did a deletion in t four i started going up the tree i found a z ya i found a z y was a um okay can y be so valid question can y be this node here [noise:student]
+
+right 
+so the height of this if if if y was here then it heights would have actually decreased right 
+so whats a problem 
+[noise:student]any choosing y to be the larger so it cannot be y which is decreased 
+okay ya so did everyone follow what using lets see 
+so question is why did i draw y to be this 
+so i so i am w is some where here the node i deleted some where here right i said i started walking up this and i came here and this was a first node i identified which hadn’t balanced right and then what did i say 
+let me take so this node has two children 
+this is one child of z and the other child of z is this one i said let us take the child of z which has larger height why could it not have been this node which has larger height right[noise]
+so this is very simple actually 
+this is imbalanced that happened here earlier there was no imbalanced 
+imbalance happens because this decreased the height of this guy decreased yes
+so if there are two things which was balanced right if there are two things which are balance and one of them decreased yes then what can we say about the relationship between these two things initially could it have been could this have been this have been smaller than this 
+no 
+because this was smaller than this then actually it will become more balanced now so this must have been larger than this for imbalance to have happened right 
+so this is y therefore okay 
+so the height of t four has reduced from h to h minus one 
+lets say what can i say about the what can i say about the height of y h plus one ya everyone with me on this 
+so y because originally its h minus one now  right so this means that this must be h plus one or h plus two it cannot be h plus two because then originally also it was unbalanced it cannot be h minus three kind of  a thing because then initially it was unbalanced straight has to be h plus one 
+so height of y is h plus one okay 
+now x is the node the two of of the two of this x is the one which has the larger height 
+so what is the height of so height of x is h ya what can i say about of height of t three [noise:student]
+it can be h 
+so since this is y is balanced this can be h or h minus one a because y is balanced okay good 
+i will take these why these are in this in the next slide right 
+so this is what we have argued so far
+this goes from h to h minus this is h plus two this is h plus one h or h minus one right 
+so this is height is h 
+
+so one of them and this is also balanced right 
+so the heights of these two are h minus one or h minus two h minus one[noise:student]
+one has to have a height of h minus one 
+so both cannot have a height of h minus two that’s only thing we can say 
+both can have the height of h minus one 
+so you can’t say that only one can have a height of h minus one that’s a wrong statement at least one is the height of h minus one 
+so lets do a rotation now to see what needs to be done so these are the various heights that have seen 
+yes 
+this is what we argued in the last two slides okay 
+now what kind of rotation should i do 
+i will do a rotation y z once again ya 
+similar to what i did in my insertion so as a consequence you will have this kind of a picture now 
+yes y went up z went down t four and t three became the two children of z and t one and t two are the children of x 
+i have written down the  heights h minus one or h minus two h minus one or  h minus two h or h minus one and h minus one ya 
+because t four went from h to h minus one 
+so this is h minus one 
+what is the height of x now 
+this is h minus one or h minus two this is h minus one or h minus two but one of them is at least h minus one 
+so x is h 
+what is height of z [noise:student]
+h or h plus one 
+so what is the height of y [noise:student]
+h plus one or h plus two 
+what was the original height of this tree 
+h plus two 
+so if this is h plus two then we are okay 
+we don’t have to continue but if this is h plus one then we may have to continue because this now becomes the bigger tree [noise:hindi]
+we will have to continue the argument as we go up 
+everyone follows this ya 
+the wave is said height is reduced from h to h minus one now we might have to say that this bigger thing height as reduced from h plus two to h plus one and we will have to repeat the argument at the next higher level and so on good 
+so after rotation height of subtree might be one less than original height in that case we have to continue of the tree might be you understand might ya because it could not have reduced in which case we can just stop
+so this is single rotation in the case when this was the picture y was the left child of z and x was the left child of y 
+but we could have this kind of a picture 
+that x is the right child of y yes 
+so the first part of the argument is the same 
+this has gone from h to h minus one 
+so we argued that the height of y is what was it h plus one so height of y is h  plus one and height of y is height of x is h because x is the one which is larger height and height of z is h plus two because height of y is h plus one ya this is height h or h minus one good
+how about the height of T one 
+so y is balanced 
+so height of T one is either h or h minus one 
+now height of T one was h then what i would do is i would pick the root of T one as x right [noise] 
+so so it will in that case i will be able to do that in a single rotation of mine the previous case 
+if the height of this is x and the of this is h and the height of this is also h right that the same thing that the question here asked earlier which do we pick 
+now which one like you like pick i will pick [noise] the one which will give me the single rotation case right 
+i cant say i will pick the left child or the right child i will pick the left child if y is the left child of z if y where the right child of the z then i will pick the right child ya
+so therefore since such was not the case height of t one if it was h then i would picked it pick x as the root of T one 
+so height of T one is h minus one height of T one is h minus one ya and since the height of this is h these are the same as before h minus one or h minus two for both of them with one of them at least being h minus one [noise] 
+this is the new picture now okay 
+so let me just copy it here 
+this about the heights of the various nodes and tress are okay now lets do the double rotation step 
+so first i am going to rotate i will before xy the same process as an insertion essentially 
+so with the rotation of xy 
+y will come down x will move up i would get such a picture t three is the right child of x now 
+t one and t two are the two children of y left and right of the child sub tress of y 
+this is h minus one this is h minus one or h minus two this is h minus one or h minus two this is h minus one okay
+now what are the heights of these nodes 
+height of y is h what about height of x 
+h plus one and there could be an imbalance at x if this where h minus two [noise] and height of z is h plus two because this is h plus one and there is an imbalance at this node 
+so there could be here there is here there is none here ya um
+but we are not done so we will will now do a rotation around xz yes and now what would be happen 
+x moves up z moves down t three and t four become the two children of the z t three has height h minus one or h minus two t four has height h minus one and this is the height of  t four and this is the height of t three this is the height of t two h minus one h minus two t one has a height h minus one 
+what about the height of y now 
+h is it balanced yes this is h minus one this is h minus one or h minus two 
+what is the height of z 
+h is it balanced 
+yes 
+h minus one and h minus one or h minus two what is the height of x now [noise] h plus one 
+it is also balanced 
+but this height is now strictly one less than this this case may [noise : Hindi ] this no might this time um okay 
+why did i require why did i make that argument [noise : Hindi ] height h minus one [noise : Hindi ] h [noise : student ] um we could have done single rotation [noise :hindi] and all that thing [noise : student ] [noise : Hindi ] you understand y y had to make this kind of argument [noise : Hindi ] 54:41 good 
+so hopefully you all understand this that any questions right 
+what has happened is final tree has height less than original tree 
+we need to continue off the tree right you understand the need for continuing of the tree [noise] because height has reduced by one as the consequence they could still be imbalanced at the ancestors
+ancestors of this now what ever is this node in the ancestor [noise :student ] 
+no [noise :student ] um [noise :student ] right [noise :student ] okay 
+this will require a proof even if it is correct right so thing about it 
+it’s a good question 
+he is asking me if youe know whether we can just be satisfied by checking the parent of this node right 
+so thing about this and we will we will answer it may be in the next class may be after the class okay
+so lets quickly look at what the running time of insert and delete okay
+so for insertion 
+we spent log n time in finding way to insert why log n height of the tree 
+we actually spent time actually proportional to height of the tree which is the height we argued in the last class okay
+so we spent log n time down then we spent log n time may be moving up at most log n right because that’s the height and then we spent constant time in doing a rotation and one rotation and we have done 
+so the entire thing is only log n deletion um recall that insertion what we said was that you will first find the node in the binary search tree whether the insertion has to be done 
+you will insert the node then you will start moving up the tree to find the place where the imbalance occurs 
+the first place and then in that place we said we will just do a rotation and with one rotation you will be able to satisfy the height balance property once again 
+so insertion basically requires order log n time to insert the node and you might have to spend order log n time to move up and the constant time to do the rotation 
+so in all it just takes a log n order time 
+deletion of the other hand also requires only order log n time but we need to do a little bit more work right 
+the reason for that is that to delete the node to recall that you have to identify which of those three cases the node is does in whether the node is deleting is leaf node or if it has only one child or if it has two children then we need to find the success around the node
+so we need to go right and go keep going left find the successor swap contents and then delete delete the successor node 
+once you deleted now you have to move up the tree to find the first place where the imbalance occurs having found that you do a rotation that rotation may or may not solve your problem 
+if it does not solve the problem of height balanced it doesn’t restore height balance then you might have to continue up from that from that node right
+and may be once again performer rotation if that’s also the problem then you stop otherwise you will have to continue up 
+so in all the number of rotations you might require is as large as the height of the tree right because every rotation you are moving one level up 
+so you might require as many as order log n rotations but each of those rotations only taking a constant time 
+so the total time require for all this rotations put together this only order log n and we took order log n time to delete the node all the rotations also took order log n time and so the total time required for the entire delete operation is still order log n right
+so that will end today’s class we saw how did do an insertion and deletion in AVL trees and we argued eventually that the total time taken for both insertion and deletion is only order log n ya um 
+in the last class we had seen that the time taken for search is also only order log n in the case of an AVL tree 
+so all the three operations of insert search and delete can be done in log n time in a AVL tree
+thank you. 
+
+
+
+

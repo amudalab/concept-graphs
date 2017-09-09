@@ -1,0 +1,5748 @@
+system is a program
+manages the computer hardware
+basis for application programs
+application programs and acts
+intermediary between the computer
+user and the computer
+computer hardware an amazing
+hardware an amazing aspect
+amazing aspect of operating
+aspect of operating systems
+systems is how varied
+accomplishing these tasks mainframe
+tasks mainframe operating systems
+operating systems are designed
+designed primarily to optimize
+primarily to optimize utilization
+optimize utilization of hardware
+operating systems support complex
+systems support complex games
+operating systems for handheld
+systems for handheld computers
+handheld computers are designed
+user can easily interface
+interface with the computer
+computer to execute programs
+combination of the two
+details of computer system
+system structure we begin
+discussing the basic functions
+basic functions of system
+functions of system startup
+storage we also describe
+describe the basic computer
+computer architecture that makes
+write a functional operating
+system because an operating
+created piece by piece
+portion of the system
+functions in this chapter
+provide a general overview
+components of an operating
+operating system a computer
+system a computer system
+system can be divided
+roughly into four components
+hardware the central processing
+resources for the system
+system the application programs
+programs such as word
+browsers define the ways
+solve users  computing
+users  computing problems
+computing problems the operating
+problems the operating system
+system controls and coordinates
+view a computer system
+computer system as consisting
+data the operating system
+system provides the means
+resources in the operation
+operation of the computer
+computer system an operating
+system an operating system
+similar to a government
+government like a government
+performs no useful function
+simply provides an environment
+fully the operating system
+operating system s role
+systems from two viewpoints
+view of the computer
+users sit in front
+consisting of a monitor
+unit such a system
+designed for one user
+goal is to maximize
+performing in this case
+operating system is designed
+designed mostly for ease
+attention paid to performance
+performance and none paid
+paid to resource utilization
+utilization how various hardware
+hardware and software resources
+software resources are shared
+resources are shared performance
+important to the user
+experience in other cases
+connected to a mainframe
+accessing the same computer
+computer through other terminals
+terminals these users share
+resources and may exchange
+exchange information the operating
+information the operating system
+system in such cases
+designed to maximize resource
+resource utilization to assure
+users sit at workstations
+sit at workstations connected
+workstations connected to networks
+networks of other workstations
+users have dedicated resources
+resources at their disposal
+resources such as networking
+networking and servers file
+compromise between individual usability
+individual usability and resource
+usability and resource utilization
+varieties of handheld computers
+devices are standalone units
+units for individual users
+users some are connected
+wireless modems and networking
+networking because of power
+perform relatively few remote
+remote operations their operating
+operations their operating systems
+amount of battery life
+embedded computers in home
+computers in home devices
+home devices and automobiles
+keypads and may turn
+designed primarily to run
+run without user intervention
+intervention from the computer
+system is the program
+program most intimately involved
+involved with the hardware
+hardware in this context
+view an operating system
+system as a resource
+resource allocator a computer
+allocator a computer system
+system has many resources
+acts as the manager
+manager of these resources
+numerous and possibly conflicting
+conflicting requests for resources
+operating system must decide
+decide how to allocate
+specific programs and users
+operate the computer system
+system efficiently and fairly
+important where many users
+access the same mainframe
+view of an operating
+devices and user programs
+user programs an operating
+programs an operating system
+system is a control
+control program a control
+program a control program
+program manages the execution
+execution of user programs
+user programs to prevent
+programs to prevent errors
+concerned with the operation
+control of i devices
+devices we have looked
+looked at the operating
+role from the views
+views of the user
+define what an operating
+definition of an operating
+operating system operating systems
+system operating systems exist
+exist because they offer
+reasonable way to solve
+creating a usable computing
+system the fundamental goal
+fundamental goal of computer
+goal of computer systems
+systems is to execute
+programs and to make
+make solving user problems
+solving user problems easier
+easier toward this goal
+computer hardware is constructed
+constructed since bare hardware
+application programs are developed
+developed these programs require
+require certain common operations
+controlling the i devices
+devices the common functions
+common functions of controlling
+controlling and allocating resources
+resources are then brought
+operating system in addition
+part of the operating
+system a simple viewpoint
+includes everything a vendor
+ships when you order
+order " the operating
+system " the features
+vary greatly across systems
+require gigabytes of space
+based on graphical windowing
+bytes ; a megabyte
+l,0243 bytes computer manufacturers
+computer manufacturers often round
+round off these numbers
+bytes and a gigabyte
+running at all times
+times on the computer
+systems programs and application
+programs and application programs
+programs this last definition
+generally follow the matter
+matter of what constitutes
+constitutes an operating system
+states department of justice
+department of justice filed
+filed suit against microsoft
+essence claiming that microsoft
+claiming that microsoft included
+included too much functionality
+functionality in its operating
+systems and thus prevented
+application vendors from competing
+system as a result
+microsoft was found guilty
+system monopoly to limit
+monopoly to limit competition
+limit competition an operating
+competition an operating system
+operating system is software
+environment for application programs
+application programs to run
+aspect of an operating
+system is the interface
+interface to the computer
+user for a computer
+job of executing programs
+main memory main memory
+area that the processor
+processor can access directly
+address the main memory
+storage device that loses
+turned off or lost
+lost most computer systems
+systems provide secondary storage
+storage as an extension
+extension of main memory
+main memory secondary storage
+storage provides a form
+form of non-volatile storage
+large quantities of data
+quantities of data permanently
+storage of both programs
+data the wide variety
+wide variety of storage
+variety of storage systems
+systems in a computer
+system can be organized
+hierarchy according to speed
+cost the higher levels
+fast as we move
+move down the hierarchy
+cost per bit generallydecreases
+access time generally increases
+designing a computer system
+computer system uniprocessor systems
+single processor while multiprocessor
+processor while multiprocessor systems
+two or more processors
+memory and peripheral devices
+design is symmetric multiprocessing
+processors are considered peers
+considered peers and run
+systems are a specialized
+specialized form of multiprocessor
+form of multiprocessor systems
+multiprocessor systems and consist
+consist of multiple computer
+multiple computer systems connected
+network to best utilize
+modern operating systems employ
+job to execute timesharing
+systems are an extension
+multiprogramming whereby cpu scheduling
+scheduling algorithms rapidly switch
+rapidly switch between jobs
+job is running concurrently
+running concurrently the operating
+concurrently the operating system
+operating system must ensure
+computer system to prevent
+system to prevent user
+user programs from interfering
+interfering with the proper
+operation of the system
+hardware has two modes
+user mode and kernel
+mode and kernel mode
+kernel mode various instructions
+i instructions and halt
+instructions and halt instructions
+executed only in kernel
+kernel mode the memory
+modification by the user
+user a timer prevents
+timer prevents infinite loops
+infinite loops these facilities
+blocks used by operating
+operating systems to achieve
+correct operation a process
+fundamental unit of work
+work in an operating
+operating system process management
+system process management includes
+process management includes creating
+includes creating and deleting
+creating and deleting processes
+deleting processes and providing
+processes and providing mechanisms
+providing mechanisms for processes
+operating system manages memory
+manages memory by keeping
+memory by keeping track
+track of what parts
+responsible for dynamically allocating
+dynamically allocating and freeing
+allocating and freeing memory
+freeing memory space storage
+memory space storage space
+space is also managed
+managed by the operating
+system and this includes
+includes providing file systems
+file systems for representing
+systems for representing files
+representing files and directories
+directories and managing space
+managing space on mass
+space on mass storage
+mass storage devices operating
+storage devices operating systems
+securing the operating system
+operating system and users
+system and users protection
+users protection are mechanisms
+users to the resources
+computer system security measures
+defending a computer system
+external or internal attacks
+internal attacks distributed systems
+distributed systems allow users
+users to share resources
+resources on geographically dispersed
+geographically dispersed hosts connected
+connected via a computer
+services may be provided
+model in a clustered
+multiple machines can perform
+machines can perform computations
+perform computations on data
+computations on data residing
+data residing on shared
+residing on shared storage
+subset of cluster members
+cluster members fails lans
+fails lans and wans
+basic types of networks
+types of networks lans
+networks lans enable processors
+lans enable processors distributed
+geographical area to communicate
+wans allow processors distributed
+larger area to communicate
+area to communicate lans
+computer systems that serve
+specific purposes these include
+include real-time operating systems
+real-time operating systems designed
+systems designed for embedded
+designed for embedded environments
+environments such as consumer
+robotics real-time operating systems
+systems have well defined
+fixed time constraints processing
+processing must be done
+done within the defined
+system will fail multimedia
+fail multimedia systems involve
+systems involve the delivery
+delivery of multimedia data
+special requirements of displaying
+displaying or playing audio
+synchronized audio and video
+audio and video streams
+influence of the internet
+internet and the world
+wide web has encouraged
+development of modern operating
+operating systems that include
+systems that include web
+web browsers and networking
+networking and communication software
+software as integral features
+integral features operating-system services
+operating-system services an operating
+services an operating system
+system provides an environment
+environment for the execution
+users of those programs
+programs the specific services
+differ from one operating
+classes these operating-system services
+operating-system services are provided
+provided for the convenience
+convenience of the programmer
+make the programming task
+task easier one set
+set of operating-system services
+operating-system services provides functions
+helpful to the user
+interface almost all operating
+systems have a user
+commands and a method
+program to allow entering
+interface is a window
+system with a pointing
+pointing device to direct
+selections and a keyboard
+keyboard to enter text
+enter text some systems
+text some systems provide
+program execution the system
+memory and to run
+i operations a running
+operations a running program
+running program may require
+device for specific devices
+functions may be desired
+dvd drive or blanking
+blanking a crt screen
+control i devices directly
+operating system must provide
+file-system manipulation the file
+manipulation the file system
+programs need to read
+read and write files
+write files and directories
+programs include permissions management
+deny access to files
+files or directories based
+based on file ownership
+process needs to exchange
+information with another process
+processes that are executing
+computer or between processes
+executing on different computer
+communications may be implemented
+implemented via shared memory
+memory or through message
+processes by the operating
+operating system error detection
+error detection the operating
+detection the operating system
+aware of possible errors
+errors errors may occur
+occur in the cpu
+cpu and memory hardware
+error or a power
+parity error on tape
+failure on a network
+paper in the printer
+access an illegal memory
+too-great use of cpu
+ensure correct and consistent
+correct and consistent computing
+consistent computing debugging facilities
+facilities can greatly enhance
+greatly enhance the user
+user s and programmer
+system efficiently another set
+set of operating-system functions
+exists not for helping
+ensuring the efficient operation
+systems with multiple users
+multiple users can gain
+users can gain efficiency
+gain efficiency by sharing
+sharing the computer resources
+resources among the users
+multiple users or multiple
+users or multiple jobs
+resources must be allocated
+hem many different types
+general request and release
+request and release code
+release code for instance
+systems have cpu-scheduling routines
+speed of the cpu
+routines to allocate printers
+track of which users
+kinds of computer resources
+computer resources this record
+resources this record keeping
+users can be billed
+simply for accumulating usage
+accumulating usage statistics usage
+usage statistics usage statistics
+valuable tool for researchers
+system to improve computing
+improve computing services protection
+services protection and security
+owners of information stored
+stored in a multiuser
+multiuser or networked computer
+operating system itself protection
+system itself protection involves
+ensuring that all access
+access to system resources
+system resources is controlled
+resources is controlled security
+security of the system
+outsiders is also important
+important such security starts
+security starts with requiring
+means of a password
+gain access to system
+system resources it extends
+defending external i devices
+including modems and network
+modems and network adapters
+attempts and to recording
+recording all such connections
+break-ins if a system
+precautions must be instituted
+strong as its weakest
+weakest link user operating-system
+link user operating-system interface
+fundamental approaches for users
+interface with the operating
+operating system one technique
+technique is to provide
+provide a command-line interface
+command-line interface or command
+interface or command interpreter
+interpreter that allows users
+performed by the operating
+system the second approach
+approach allows the user
+user interface or gui
+gui 2.2.1 command interpreter
+command interpreter some operating
+interpreter some operating systems
+systems include the command
+include the command interpreter
+interpreter in the kernel
+windows xp and unix
+treat the command interpreter
+program that is running
+running when a job
+systems with multiple command
+command interpreters to choose
+unix and linux systems
+including the bourne shell
+shells provide similar functionality
+differences ; most users
+users choose a shell
+choose a shell based
+based upon personal preference
+preference the main function
+function of the command
+ms-dos and unix shells
+commands can be implemented
+implemented in one approach
+command interpreter to jump
+jump to a section
+section of its code
+sets up the parameters
+makes the appropriate system
+call in this case
+size of the command
+requires its own implementing
+implementing code an alternative
+code an alternative approach
+approach used by unix
+systems implements most commands
+commands through system programs
+programs in this case
+interpreter does not understand
+file to be loaded
+unix command to delete
+file.tx t would search
+search for a file
+command would be defined
+completely by the code
+code in the file
+commands to the system
+system easily by creating
+files with the proper
+names the command-interpreter program
+changed for new commands
+commands to be added
+added 2.2.2 graphical user
+2.2.2 graphical user interfaces
+interfaces a second strategy
+interfacing with the operating
+userfriendly graphical user interface
+users directly enter commands
+system as an interface
+gui provides a desktop
+metaphor where the mouse
+depending on the mouse
+mouse pointer s location
+button on the mouse
+pull down a menu
+menu that contains commands
+commands graphical user interfaces
+user interfaces first appeared
+appeared due in part
+part to research taking
+early 1970s at xerox
+1970s at xerox parc
+xerox parc research facility
+facility the first gui
+appeared on the xerox
+widespread with the advent
+advent of apple macintosh
+1980s the user interface
+interface to the macintosh
+significant being the adoption
+adoption of the aqua
+aqua interface that appeared
+mac os x microsoft
+microsoft s first version
+first version of windows
+version of windows version
+based upon a gui
+interface to the ms-dos
+system the various versions
+versions of windows systems
+proceeding this initial version
+initial version have made
+appearance of the gui
+gui and several enhancements
+enhancements to its functionality
+including the windows explorer
+systems have been dominated
+dominated by command-line interfaces
+including the common desktop
+common on commercial versions
+commercial versions of unix
+unix such as solaris
+ibm s aix system
+significant development in gui
+development in gui designs
+designs from various opensource
+desktop by the gnu
+project both the kde
+kde and gnome desktops
+desktops rim on linux
+linux and various unix
+means their source code
+public domain the choice
+command-line or gui interface
+prefer a command-line interface
+provide powerful shell interfaces
+windows users are pleased
+nice study in contrast
+provided a command line
+system using its gui
+implemented using a unix
+interface and command-line interface
+user interface can vary
+user within a system
+typically is substantially removed
+system structure the design
+function of the operating
+system in this book
+fundamental problems of providing
+adequate service to user
+service to user programs
+programs from the point
+view of the operating
+distinguish between user programs
+user programs and system
+programs and system programs
+system programs system calls
+programs system calls system
+system calls system calls
+calls system calls provide
+calls provide an interface
+interface to the services
+operating system these calls
+generally available as routines
+hardware must be accessed
+written using assembly-language instructions
+instructions before we discuss
+discuss how an operating
+operating system makes system
+system makes system calls
+illustrate how system calls
+writing a simple program
+simple program to read
+program to read data
+data from one file
+file the first input
+input that the program
+file and the output
+output file these names
+operating-system design one approach
+user for the names
+sequence of system calls
+write a prompting message
+message on the screen
+read from the keyboard
+define the two files
+mouse-based and icon-based systems
+menu of file names
+names is usually displayed
+displayed in a window
+window can be opened
+opened for the destination
+requires many i system
+file names are obtained
+open the input file
+input file and create
+create the output file
+operations requires another system
+requires another system call
+conditions for each operation
+operation when the program
+program tries to open
+access in these cases
+should8 print a message
+message on the console
+create a new output
+file we may find
+delete the existing file
+system calls to output
+output the prompting message
+message and to read
+replace the existing file
+file or to abort
+reads from the input
+writes to the output
+write must return status
+error conditions on input
+find that the end
+end of the file
+file has been reached
+failure in the read
+write operation may encounter
+depending on the output
+printer out of paper
+entire file is copied
+message to the console
+simple programs may make
+execute thousands of system
+thousands of system calls
+systemcall sequence is shown
+application developers design programs
+api specifies a set
+parameters that are passed
+passed to each function
+function and the return
+return values the programmer
+apis available to application
+programmers are the win32
+win32 api for windows
+api for windows systems
+api for posix-based systems
+includes virtually all versions
+java api for designing
+api for designing programs
+designing programs that run
+run on the java
+java virtual machine note
+text are generic examples
+generic examples each operating
+examples each operating system
+call behind the scenes
+make up an api
+invoke the actual system
+system calls on behalf
+behalf of the application
+create a new process
+call in the windows
+application programmer prefer programming
+api rather than invoking
+invoking actual system calls
+doing so one benefit
+api concerns program portability
+programmer designing a program
+program using an api
+run on any system
+supports the same api
+architectural differences often make
+exists a strong correlation
+strong correlation between invoking
+function in the api
+call within the kernel
+posix and win32 apis
+native system calls provided
+provided by the unix
+systems the run-time support
+set of functions built
+functions built into libraries
+built into libraries included
+included with a compiler
+system-call interface that serves
+serves as the link
+link to system calls
+system the system-call interface
+system-call interface intercepts function
+interface intercepts function calls
+calls in the api
+invokes the necessary system
+call within the operating
+maintains a table indexed
+numbers the system call
+call interface then invokes
+invokes the intended system
+call in the operating
+system kernel and returns
+status of the system
+call and any return
+return values the caller
+system call is implemented
+understand what the operating
+result of the execution
+execution of that system
+operating-system interface are hidden
+hidden from the programmer
+programmer by the api
+api and are managed
+support library the relationship
+relationship between an api
+operating system is shown
+illustrates how the operating
+system handles a user
+handles a user application
+system call system calls
+call system calls occur
+occur in different ways
+depending on the computer
+identity of the desired
+call the exact type
+exact type and amount
+amount of information vary
+operating system and call
+length of the memory
+input should be read
+length may be implicit
+implicit in the call
+call three general methods
+parameters to the operating
+system the simplest approach
+approach is to pass
+registers in some cases
+registers in these cases
+parameters are generally stored
+stored in a block
+address of the block
+passed as a parameter
+parameter in a register
+approach taken by linux
+linux and solaris parameters
+stack by the program
+popped off the stack
+stack by the operating
+operating system some operating
+system some operating systems
+systems prefer the block
+block or stack method
+approaches do not limit
+parameters being passed system
+calls can be grouped
+discuss briefly the types
+types of system calls
+provided by an operating
+functions that are discussed
+discussed in later chapters
+system calls normally provided
+operating system 2.4.1 process
+system 2.4.1 process control
+process control a running
+control a running program
+system call is made
+terminate the currently running
+runs into a problem
+message generated the dump
+examined by a debugger
+debugger a system program
+program designed to aid
+finding and correcting bugs
+correcting bugs to determine
+normal or abnormal circumstances
+operating system must transfer
+system must transfer control
+control to the invoking
+command interpreter the command
+interpreter the command interpreter
+command interpreter then reads
+reads the next command
+command interpreter simply continues
+assumed that the user
+issue an appropriate command
+respond to any error
+error in a gui
+pop-up window might alert
+user to the error
+guidance in a batch
+command interpreter usually terminates
+terminates the entire job
+entire job and continues
+job computers can store
+computers can store information
+information on various storage
+system provides a uniform
+logical view of information
+view of information storage
+information storage the operating
+storage the operating system
+properties of its storage
+storage devices to define
+define a logical storage
+file files are mapped
+mapped by the operating
+system onto physical devices
+physical devices these storage
+devices these storage devices
+persistent through power failures
+power failures and system
+failures and system reboots
+system reboots a file
+file is a named
+collection of related information
+information that is recorded
+recorded on secondary storage
+storage from a user
+written to secondary storage
+source and object forms
+file is a sequence
+defined by the file
+concept of a file
+extremely general the information
+information in a file
+defined by its creator
+creator many different types
+information may be stored
+stored in a file
+depends on its type
+type a text file
+sequence of characters organized
+characters organized into lines
+executable statements an object
+statements an object file
+sequence of bytes organized
+bytes organized into blocks
+understandable by the system
+linker an executable file
+file is a series
+series of code sections
+sections that the loader
+execute 10.1.1 file attributes
+file attributes a file
+example.c some systems differentiate
+systems differentiate between uppercase
+uppercase and lowercase characters
+lowercase characters in names
+independent of the process
+created it for instance
+create the file example.c
+file to a floppy
+example.c on the destination
+destination system a file
+vary from one operating
+form identifier this unique
+identifier this unique tag
+file within the file
+file type this information
+types of files location
+files location this information
+information is a pointer
+pointer to a device
+location of the file
+file on that device
+size the current size
+size of the file
+possibly the maximum allowed
+allowed size are included
+included in this attribute
+attribute protection access-control information
+protection access-control information determines
+user identification this information
+last use these data
+usage monitoring the information
+information about all files
+resides on secondary storage
+consists of the file
+unique identifier the identifier
+identifier in turn locates
+locates the other file
+information for each file
+file in a system
+system with many files
+size of the directory
+stored on the device
+brought into memory piecemeal
+needed 10,1.2 file operations
+file operations a file
+file is an abstract
+data type to define
+files the operating system
+operating system can provide
+system can provide system
+system calls to create
+files let s examine
+examine what the operating
+implemented creating a file
+space in the file
+system must be found
+found for the file
+discuss how to allocate
+space for the file
+file must be made
+made in the directory
+directory writing a file
+make a system call
+file and the information
+information to be written
+written to the file
+system searches the directory
+pointer to the location
+location in the file
+place the write pointer
+pointer must be updated
+occurs reading a file
+read from a file
+system call that specifies
+block of the file
+file should be put
+place once the read
+read has taken place
+read pointer is updated
+updated because a process
+reading from or writing
+writing to a file
+pointer both the read
+read and write operations
+saving space and reducing
+space and reducing system
+reducing system complexity repositioning
+repositioning within a file
+current-file-position pointer is repositioned
+file need not involve
+actual i this file
+i this file operation
+seek deleting a file
+directory for the named
+named file having found
+found the associated directory
+release all file space
+reused bv other files
+erase the directory entry
+interface .truncating a file
+contents of a file
+attributes rather than forcing
+file and then recreate
+function allows all attributes
+unchanged except for file
+file length but lets
+comprise the minimal set
+minimal set of required
+set of required file
+operations other common operations
+common operations include appending
+include appending new information
+information to the end
+end of an existing
+existing file and renaming
+renaming an existing file
+file these primitive operations
+perform other file operations
+file operations for instance
+copy of a file
+printer or a display
+creating a new file
+file and then reading
+set the various attributes
+attributes of a file
+status of a file
+operations mentioned involve searching
+involve searching the directory
+directory for the entry
+named file to avoid
+avoid this constant searching
+require that an openo
+system call be made
+made before a file
+actively the operating system
+files when a file
+file operation is requested
+required when the file
+file is no longer
+closed by the process
+system removes its entry
+delet e are system
+system calls that work
+open files some systems
+implicitly open a file
+file is automatically closed
+closed when the job
+opened the file terminates
+file terminates most systems
+require that the programmer
+programmer open a file
+explicitly with the openo
+operation takes a file
+file name and searches
+copying the directory entry
+open-file table the openo
+table the openo call
+call can also accept
+accept accessmode information create
+checked against the file
+permissions if the request
+request mode is allowed
+opened for the process
+process the openo system
+system call typically returns
+typically returns a pointer
+pointer to the entry
+open-file table this pointer
+avoiding any further searching
+simplifying the system-call interface
+system-call interface the implementation
+implementation of the openo
+complicated in an environment
+environment where several processes
+occur in a system
+open the same file
+system uses two levels
+levels of internal tables
+system-wide table the perprocess
+table the perprocess table
+table tracks all files
+files that a process
+process has open stored
+stored in this table
+file by the process
+pointer for each file
+found here access rights
+rights to the file
+file and accounting information
+per-process table in turn
+table in turn points
+table the system-wide table
+table contains process-independent information
+size once a file
+file has been opened
+opened by one process
+table includes an entry
+entry for the file
+process executes an openq
+executes an openq call
+entry is simply added
+added to the process
+process s open-file table
+entry in the systemwide
+processes have the file
+file open each close
+decreases this open count
+open-file table in summary
+open file file pointer
+file pointer on systems
+include a file offset
+file offset as part
+part of the reado
+track the last readwrite
+location as a current-file-position
+current-file-position pointer this pointer
+unique to each process
+operating on the file
+on-disk file attributes file-open
+file attributes file-open count
+file-open count as files
+operating system must reuse
+run out of space
+space in the table
+table because multiple processes
+processes may have opened
+last file to close
+removing the open-file table
+entry the file-open counter
+counter tracks the number
+last close the system
+system can then remove
+remove the entry disk
+file most file operations
+operations require the system
+system to modify data
+data within the file
+file the information needed
+information needed to locate
+read it from disk
+disk for each operation
+access rights each process
+rights each process opens
+process opens a file
+file in an access
+access mode this information
+table so the operating
+deny subsequent i requests
+requests some operating systems
+operating systems provide facilities
+provide facilities for locking
+locking an open file
+sections of a file
+locks allow one process
+processes from gaining access
+access to it file
+files that are shared
+shared by several processes
+modified by a number
+processes in the system
+control can be returned
+returned to the user
+wait until sufficient resources
+controlled by the operating
+sysstem can be thought
+thought of as devices
+devices are physical devices
+abstract or virtual devices
+users of the system
+first request the device
+finished with the device
+release it these functions
+open and close system
+system calls for files
+files other operating systems
+operating systems allow unmanaged
+systems allow unmanaged access
+unmanaged access to devices
+potential for device contention
+contention and perhaps deadlock
+deadlock once the device
+device has been requested
+similarity between i devices
+i devices and files
+great that many operating
+structure in this case
+set of system calls
+i devices are identified
+identified by special file
+make files and devices
+system calls are dissimilar
+building an operating system
+operating system and user
+system and user interface
+user interface 2.4.4 information
+interface 2.4.4 information maintenance
+information maintenance many system
+maintenance many system calls
+simply for the purpose
+purpose of transferring information
+information between the user
+program and the operating
+systems have a system
+system call to return
+current time and date
+system calls may return
+calls may return information
+information about the system
+number of current users
+number of the operating
+amount of free memory
+free memory or disk
+memory or disk space
+operating system keeps information
+reset the process information
+process attributes and set
+attributes and set process
+common models of interprocess
+models of interprocess communication
+communicating processes exchange messages
+messages can be exchanged
+exchanged between the processes
+common mailbox before communication
+communication can take place
+connection must be opened
+system or a process
+process on another computer
+connected by a communications
+communications network each computer
+computer in a network
+network has a host
+commonly known a host
+process has a process
+process the get host
+calls do this translation
+identifiers are then passed
+passed to the generalpurpose
+open and close calls
+provided by the file
+open connection and close
+connection and close connection
+close connection system calls
+depending on the system
+communication the recipient process
+process usually must give
+communication to take place
+connection call most processes
+connections are special-purpose daemons
+provided for that purpose
+wait for c onnect
+call and are awakened
+awakened when a connection
+source of the communication
+messages by using read
+read message and write
+message and write message
+write message system calls
+system calls the close
+calls the close connection
+close connection call terminates
+call terminates the communication
+processes use shared memory
+memory create and shared
+create and shared memory
+shared memory attach system
+memory attach system calls
+create and gain access
+gain access to regions
+regions of memory owned
+owned by other processes
+system tries to prevent
+process s memory shared
+memory shared memory requires
+two or more processes
+processes agree to remove
+exchange information by reading
+reading and writing data
+data in the shared
+shared areas the form
+form of the data
+data and the location
+determined by the processes
+operating system s control
+location simultaneously such mechanisms
+variation of the process
+threads in which memory
+common in operating systems
+systems implement both message
+implement both message passing
+smaller amounts of data
+conflicts need be avoided
+implement than is shared
+shared memory for intercomputer
+memory for intercomputer communication
+memory allows maximum speed
+maximum speed and convenience
+done at memory speeds
+speeds when it takes
+place within a computer
+synchronization between the processes
+system programs another aspect
+system is the collection
+collection of system programs
+system programs recall figure
+depicted the logical computer
+lowest level is hardware
+finally the application programs
+application programs system programs
+programs system programs provide
+provide a convenient environment
+convenient environment for program
+environment for program development
+program development and execution
+user interfaces to system
+interfaces to system calls
+divided into these categories
+file management these programs
+management these programs create
+manipulate files and directories
+files and directories status
+status information some programs
+simply ask the system
+system for the date
+amount of available memory
+programs format and print
+terminal or other output
+output devices or files
+window of the gui
+store and retrieve configuration
+retrieve configuration information file
+configuration information file modification
+file modification several text
+modification several text editors
+content of files stored
+files stored on disk
+disk or other storage
+special commands to search
+commands to search contents
+search contents of files
+files or perform transformations
+transformations of the text
+text programming-language support compilers
+interpreters for common programming
+provided to the user
+user with the operating
+operating system program loading
+program loading and execution
+execution once a program
+memory to be executed
+overlay loaders debugging systems
+higher-level languages or machine
+languages or machine language
+machine language are needed
+needed as well communications
+communications these programs provide
+programs provide the mechanism
+virtual connections among processes
+systems they allow users
+users to send messages
+files from one machine
+addition to systems programs
+operating systems are supplied
+common problems or performing
+common operations such programs
+operations such programs include
+programs include web browsers
+word processors and text
+processors and text formatters
+plotting and statistical-analysis packages
+system utilities or application
+utilities or application programs
+application programs the view
+application and system programs
+system calls consider pcs
+pcs when his computer
+mac os x operating
+mouse and windows interface
+act in different ways
+process can be thought
+resources such as cpu
+i devices to accomplish
+allocated to the process
+process is the unit
+work in most systems
+consist of a collection
+operating-system processes execute system
+processes execute system code
+user processes execute user
+processes execute user code
+code all these processes
+processes may execute concurrently
+traditionally a process contained
+single thread of control
+control as it ran
+operating systems now support
+systems now support processes
+processes that have multiple
+multiple threads the operating
+threads the operating system
+process and thread management
+deletion of both user
+user and system processes
+processes ; the scheduling
+deadlock handling for processes
+handling for processes process
+process concept a question
+arises in discussing operating
+discussing operating systems involves
+involves what to call
+call all the cpu
+cpu activities a batch
+activities a batch system
+batch system executes jobs
+time-shared system has user
+system has user programs
+execute only one program
+management in many respects
+processes the terms job
+terms job and process
+interchangeably in this text
+personally prefer the term
+prefer the term process
+operating-system theory and terminology
+major activity of operating
+activity of operating systems
+operating systems was job
+systems was job processing
+accepted terms that include
+include the word job
+process has superseded job
+job 3.1.1 the process
+process is a program
+section it also includes
+includes the current activity
+represented by the value
+value of the program
+counter and the contents
+contents of the processor
+process generally also includes
+includes the process stack
+global variables a process
+process may also include
+dynamically allocated during process
+allocated during process run
+run time the structure
+structure of a process
+emphasize that a program
+process ; a program
+file containing a list
+list of instructions stored
+instructions stored on disk
+execute and a set
+set of associated resources
+program becomes a process
+executable file is loaded
+memory two common techniques
+common techniques for loading
+double-clicking an icon representing
+representing the executable file
+executable file and entering
+file on the command
+exe or a out
+considered two separate execution
+two separate execution sequences
+sequences as a process
+state of a process
+activity of that process
+process is being created
+instructions are being executed
+executed waiting the process
+waiting for some event
+reception of a signal
+waiting to be assigned
+assigned to a processor
+processor terminated the process
+process has finished execution
+finished execution these names
+vary across operating systems
+operating systems the states
+states that they represent
+finely delineate process states
+process can be running
+running on any processor
+processor at any instant
+3.1.3 process control block
+control block each process
+represented in the operating
+system by a process
+control block a pcb
+process state the state
+program counter the counter
+counter indicates the address
+instruction to be executed
+executed for this process
+cpu registers the registers
+registers vary in number
+computer architecture they include
+architecture they include accumulators
+information must be saved
+process to be continued
+correctly afterward .cpu-scheduling information
+.cpu-scheduling information this information
+information this information includes
+information includes a process
+includes a process priority
+pointers to scheduling queues
+memory-management information this information
+information as the value
+value of the base
+base and limit registers
+depending on the memory
+accounting information this information
+information includes the amount
+job or process numbers
+status information this information
+information includes the list
+list of i devices
+list of open files
+serves as the repository
+repository for any information
+information that may vary
+process to process.a process
+execution as a process
+defined by that process
+process s current activity
+current activity each process
+major classes of queues
+queues in an operating
+queue the ready queue
+execute and are waiting
+waiting for the cpu
+represented by a pcb
+pcbs can be linked
+linked together to form
+form a ready queue
+scheduling is the selection
+contend for the cpu
+scheduling is heavily influenced
+heavily influenced by resourceallocation
+influenced by resourceallocation considerations
+selection of one process
+ready queue operating systems
+operating systems must provide
+mechanism for parent processes
+parent processes to create
+create new child processes
+child processes the parent
+wait for its children
+children may execute concurrently
+reasons for allowing concurrent
+convenience the processes executing
+executing in the operating
+independent processes or cooperating
+processes or cooperating processes
+cooperating processes cooperating processes
+processes cooperating processes require
+processes require an interprocess
+require an interprocess communication
+communication mechanism to communicate
+achieved through two schemes
+shared memory and message
+memory and message passing
+passing the shared-memory method
+shared-memory method requires communicating
+method requires communicating processes
+communicating processes to share
+expected to exchange information
+responsibility for providing communication
+rests with the application
+programmers ; the operating
+system needs to provide
+provide only the shared
+memory the message-passing method
+method allows the processes
+processes to exchange messages
+exchange messages the responsibility
+providing communication may rest
+rest with the operating
+single operating system communication
+communication in client-server systems
+java s remote method
+defined as an endpoint
+connection between a pair
+pair of applications consists
+consists of a pair
+end of the communication
+rpcs are another form
+form of distributed communication
+distributed communication an rpc
+communication an rpc occurs
+occurs when a process
+procedure on a remote
+rmi is the java
+java version of rpcs
+version of rpcs rmi
+rmi allows a thread
+method on a remote
+object the primary distinction
+primary distinction between rpcs
+rpcs data are passed
+passed to a remote
+procedure in the form
+objects to be passed
+passed in remote method
+program that manages
+manages the computer
+basis for application
+programs and acts
+hardware an amazing
+aspect of operating
+accomplishing these tasks
+tasks mainframe operating
+mainframe operating systems
+systems are designed
+primarily to optimize
+utilization of hardware
+hardware personal computer
+operating systems support
+systems support complex
+support complex games
+systems for handheld
+computers are designed
+designed to provide
+provide an environment
+computer to execute
+explore the details
+details of computer
+computer system operation
+structure we begin
+begin by discussing
+discussing the basic
+functions of system
+describe the basic
+basic computer architecture
+architecture that makes
+write a functional
+functional operating system
+system is large
+large and complex
+piece by piece
+carefully defined inputs
+chapter we provide
+provide a general
+system a computer
+users the hardware
+hardware the central
+central processing unit
+basic computing resources
+system the application
+web browsers define
+define the ways
+users  computing
+problems the operating
+operating system controls
+controls and coordinates
+view a computer
+system as consisting
+consisting of hardware
+data the operating
+means for proper
+system an operating
+system is similar
+work to understand
+fully the operating
+system s role
+explore operating systems
+system the user
+user s view
+computer users sit
+sit in front
+system is designed
+user to monopolize
+monopolize its resources
+resources the goal
+maximize the work
+user is performing
+paid to performance
+paid to resource
+hardware and software
+resources are shared
+systems are optimized
+mainframe or minicomputer
+minicomputer other users
+users are accessing
+terminals these users
+users share resources
+information the operating
+cases is designed
+designed to maximize
+maximize resource utilization
+utilization to assure
+individual user takes
+sit at workstations
+connected to networks
+workstations and servers
+servers these users
+users have dedicated
+networking and servers
+designed to compromise
+compromise between individual
+usability and resource
+varieties of handheld
+devices are standalone
+units for individual
+directly by wire
+modems and networking
+operations their operating
+performance per amount
+amount of battery
+life is important
+computers in home
+devices and automobiles
+turn indicator lights
+primarily to run
+run without user
+computer s point
+point of view
+view an operating
+allocator a computer
+required to solve
+solve a problem
+operating system acts
+resources facing numerous
+possibly conflicting requests
+requests for resources
+system must decide
+programs and users
+operate the computer
+efficiently and fairly
+slightly different view
+operating system emphasizes
+devices and user
+programs an operating
+program a control
+control program manages
+manages the execution
+execution of user
+programs to prevent
+errors and improper
+operation and control
+completely adequate definition
+operating system operating
+system operating systems
+operating systems exist
+offer a reasonable
+solve the problem
+problem of creating
+creating a usable
+usable computing system
+system the fundamental
+goal of computer
+execute user programs
+make solving user
+solving user problems
+user problems easier
+hardware is constructed
+constructed since bare
+programs are developed
+developed these programs
+require certain common
+devices the common
+functions of controlling
+controlling and allocating
+piece of software
+system in addition
+universally accepted definition
+system a simple
+greatly across systems
+systems some systems
+megabyte of space
+space and lack
+gigabytes of space
+based on graphical
+graphical windowing systems
+l,0243 bytes computer
+bytes computer manufacturers
+manufacturers often round
+programs and application
+programs this last
+follow the matter
+constitutes an operating
+united states department
+department of justice
+justice filed suit
+suit against microsoft
+claiming that microsoft
+prevented application vendors
+vendors from competing
+microsoft was found
+monopoly to limit
+competition an operating
+system is software
+software that manages
+providing an environment
+environment for application
+programs to run
+job of executing
+main memory main
+memory main memory
+large storage area
+processor can access
+array of words
+words or bytes
+ranging in size
+size from millions
+millions to billions
+billions each word
+word in memory
+address the main
+volatile storage device
+device that loses
+loses its contents
+contents when power
+power is turned
+lost most computer
+computer systems provide
+systems provide secondary
+provide secondary storage
+extension of main
+main memory secondary
+memory secondary storage
+form of non-volatile
+capable of holding
+holding large quantities
+quantities of data
+common secondary-storage device
+programs and data
+data the wide
+variety of storage
+speed and cost
+cost the higher
+levels are expensive
+cost per bit
+strategies for designing
+designing a computer
+computer system uniprocessor
+system uniprocessor systems
+processor while multiprocessor
+processors that share
+share physical memory
+memory and peripheral
+common multiprocessor design
+design is symmetric
+processors are considered
+peers and run
+form of multiprocessor
+systems and consist
+consist of multiple
+multiple computer systems
+computer systems connected
+local area network
+utilize the cpu
+modern operating systems
+operating systems employ
+ensuring the cpu
+job to execute
+execute timesharing systems
+extension of multiprogramming
+multiprogramming whereby cpu
+cpu scheduling algorithms
+algorithms rapidly switch
+switch between jobs
+providing the illusion
+illusion each job
+job is running
+concurrently the operating
+system must ensure
+ensure correct operation
+system to prevent
+prevent user programs
+programs from interfering
+mode and kernel
+mode various instructions
+instructions and halt
+mode the memory
+operating system resides
+protected from modification
+user a timer
+timer prevents infinite
+prevents infinite loops
+loops these facilities
+basic building blocks
+systems to achieve
+achieve correct operation
+operation a process
+unit of work
+operating system process
+system process management
+process management includes
+management includes creating
+creating and deleting
+processes and providing
+mechanisms for processes
+processes to communicate
+communicate and synchronize
+operating system manages
+system manages memory
+memory by keeping
+parts of memory
+allocating and freeing
+freeing memory space
+memory space storage
+space storage space
+includes providing file
+providing file systems
+systems for representing
+files and directories
+directories and managing
+space on mass
+mass storage devices
+storage devices operating
+devices operating systems
+concerned with protecting
+protecting and securing
+securing the operating
+system and users
+protection are mechanisms
+mechanisms that control
+control the access
+access of processes
+processes or users
+computer system security
+system security measures
+measures are responsible
+responsible for defending
+defending a computer
+system from external
+external or internal
+internal attacks distributed
+attacks distributed systems
+systems allow users
+users to share
+geographically dispersed hosts
+dispersed hosts connected
+computer network services
+machines can perform
+computations on data
+residing on shared
+computing can continue
+subset of cluster
+cluster members fails
+members fails lans
+lans and wans
+two basic types
+types of networks
+networks lans enable
+lans enable processors
+enable processors distributed
+small geographical area
+area to communicate
+wans allow processors
+typically are faster
+faster than wans
+systems that serve
+serve specific purposes
+purposes these include
+include real-time operating
+real-time operating systems
+operating systems designed
+designed for embedded
+robotics real-time operating
+fixed time constraints
+system will fail
+fail multimedia systems
+multimedia systems involve
+involve the delivery
+delivery of multimedia
+requirements of displaying
+displaying or playing
+audio and video
+world wide web
+web has encouraged
+encouraged the development
+development of modern
+systems that include
+include web browsers
+browsers and networking
+networking and communication
+software as integral
+integral features operating-system
+features operating-system services
+services an operating
+execution of programs
+services to programs
+programs the specific
+specific services provided
+identify common classes
+classes these operating-system
+services are provided
+make the programming
+programming task easier
+easier one set
+set of operating-system
+services provides functions
+user user interface
+method for entering
+entering and editing
+editing of commands
+commands and directives
+directives to control
+control those commands
+commands are entered
+entered into files
+files are executed
+graphical user interface
+device to direct
+choose from menus
+keyboard to enter
+text some systems
+variations program execution
+execution the system
+load a program
+program into memory
+run that program
+program the program
+end its execution
+operations a running
+program may require
+involve a file
+device for specific
+drive or blanking
+blanking a crt
+efficiency and protection
+control i devices
+i devices directly
+system must provide
+provide a means
+i file-system manipulation
+manipulation the file
+read and write
+create and delete
+list file information
+programs include permissions
+include permissions management
+access to files
+files or directories
+based on file
+file ownership communications
+process such communication
+communication may occur
+occur between processes
+computer systems tied
+computer network communications
+implemented via shared
+packets of information
+information are moved
+moved between processes
+operating system error
+system error detection
+detection the operating
+errors may occur
+cpu and memory
+error on tape
+lack of paper
+attempt to access
+access an illegal
+illegal memory location
+type of error
+action to ensure
+correct and consistent
+consistent computing debugging
+computing debugging facilities
+enhance the user
+programmer s abilities
+efficiently another set
+operating-system functions exists
+helping the user
+ensuring the efficient
+system itself systems
+systems with multiple
+users can gain
+efficiency by sharing
+sharing the computer
+users resource allocation
+users or multiple
+multiple jobs running
+types of resources
+resources are managed
+special allocation code
+request and release
+code for instance
+systems have cpu-scheduling
+account the speed
+number of registers
+routines to allocate
+usb storage drives
+peripheral devices accounting
+kinds of computer
+resources this record
+simply for accumulating
+accumulating usage statistics
+usage statistics usage
+statistics usage statistics
+tool for researchers
+reconfigiire the system
+system to improve
+improve computing services
+computing services protection
+protection and security
+security the owners
+owners of information
+multiuser or networked
+networked computer system
+separate processes execute
+process to interfere
+system itself protection
+protection involves ensuring
+access to system
+resources is controlled
+system from outsiders
+important such security
+starts with requiring
+requiring each user
+user to authenticate
+resources it extends
+extends to defending
+external i devices
+modems and network
+invalid access attempts
+connections for detection
+detection of break-ins
+protected and secure
+weakest link user
+link user operating-system
+user operating-system interface
+two fundamental approaches
+approaches for users
+users to interface
+system one technique
+provide a command-line
+interface or command
+directly enter commands
+user to interface
+interface or gui
+gui 2.2.1 command
+2.2.1 command interpreter
+interpreter some operating
+operating systems include
+include the command
+treat the command
+job is initiated
+user first logs
+multiple command interpreters
+interpreters to choose
+unix and linux
+shells a user
+user may choose
+choose from including
+including the bourne
+shells provide similar
+provide similar functionality
+choose a shell
+based upon personal
+preference the main
+level manipulate files
+unix shells operate
+two general ways
+code to execute
+execute the command
+command to delete
+delete a file
+interpreter to jump
+code that sets
+parameters and makes
+number of commands
+determines the size
+code an alternative
+operating systems implements
+implements most commands
+commands through system
+understand the command
+command to identify
+identify a file
+loaded into memory
+memory and executed
+file rm file.tx
+load the file
+file into memory
+txt the function
+programmers can add
+add new commands
+easily by creating
+creating new files
+names the command-interpreter
+added 2.2.2 graphical
+2.2.2 graphical user
+graphical user interfaces
+strategy for interfacing
+userfriendly graphical user
+users directly enter
+mouse-based window-and-menu system
+interface a gui
+mouse is moved
+moved to position
+position its pointer
+pointer on images
+system functions depending
+pointer s location
+clicking a button
+mouse can invoke
+invoke a program
+select a file
+file or directory
+folder or pull
+commands graphical user
+interfaces first appeared
+first appeared due
+due in part
+part to research
+research taking place
+1970s at xerox
+xerox parc research
+parc research facility
+facility the first
+first gui appeared
+xerox alto computer
+advent of apple
+apple macintosh computers
+1980s the user
+macintosh operating system
+interface that appeared
+appeared with mac
+microsoft s first
+version of windows
+ms-dos operating system
+versions of windows
+windows systems proceeding
+proceeding this initial
+version have made
+including the windows
+dominated by command-line
+including the common
+common desktop environment
+common on commercial
+versions of unix
+solaris and ibm
+ibm s aix
+development in gui
+kde and gnome
+gnome desktops rim
+rim on linux
+means their source
+domain the choice
+command-line or gui
+unix users prefer
+prefer a command-line
+provide powerful shell
+powerful shell interfaces
+users are pleased
+windows gui environment
+ms-dos shell interface
+macintosh operating systems
+study in contrast
+provided a command
+command line interface
+requiring its users
+release of mac
+interface and command-line
+interface can vary
+vary from system
+system to system
+user to user
+actual system structure
+structure the design
+friendly user interface
+problems of providing
+providing adequate service
+service to user
+distinguish between user
+programs and system
+system programs system
+programs system calls
+system calls system
+calls system calls
+system calls provide
+provide an interface
+system these calls
+tasks where hardware
+written using assembly-language
+operating system makes
+system makes system
+makes system calls
+illustrate how system
+writing a simple
+program to read
+file and copy
+file the first
+file these names
+design one approach
+approach will require
+require a sequence
+sequence of system
+first to write
+write a prompting
+keyboard the characters
+characters that define
+files on mouse-based
+mouse-based and icon-based
+menu of file
+window the user
+mouse to select
+select the source
+two file names
+names are obtained
+program must open
+open the input
+file and create
+create the output
+requires another system
+file is protected
+protected against access
+program should8 print
+print a message
+input file exists
+program to abort
+delete the existing
+calls to output
+output the prompting
+read the response
+replace the existing
+abort the program
+files are set
+enter a loop
+loop that reads
+write must return
+return status information
+conditions on input
+program may find
+operation may encounter
+encounter various errors
+out of paper
+file is copied
+program may close
+close both files
+write a message
+console or window
+final system call
+programs may make
+systems execute thousands
+thousands of system
+sequence is shown
+shown in figure
+level of detail
+application developers design
+developers design programs
+application programming interface
+specifies a set
+set of functions
+including the parameters
+values the programmer
+programmer can expect
+api for windows
+api for posix-based
+virtually all versions
+api for designing
+programs that run
+java virtual machine
+virtual machine note
+text are generic
+examples each operating
+functions that make
+api typically invoke
+invoke the actual
+actual system calls
+calls on behalf
+win32 function createprocess
+calls the ntcreateprocess
+application programmer prefer
+programmer prefer programming
+invoking actual system
+reasons for doing
+benefit of programming
+api concerns program
+concerns program portability
+application programmer designing
+designing a program
+api can expect
+expect her program
+program to compile
+compile and run
+system that supports
+differences often make
+detailed and difficult
+difficult to work
+exists a strong
+correlation between invoking
+invoking a function
+kernel in fact
+posix and win32
+apis are similar
+native system calls
+system calls provided
+windows operating systems
+systems the run-time
+run-time support system
+built into libraries
+interface that serves
+link to system
+system calls made
+system the system-call
+system-call interface intercepts
+interface intercepts function
+intercepts function calls
+api and invokes
+system-call interface maintains
+maintains a table
+numbers the system
+system call interface
+interface then invokes
+invokes the intended
+intended system call
+operating system kernel
+kernel and returns
+returns the status
+values the caller
+call is implemented
+obey the api
+api and understand
+interface are hidden
+run-time support library
+library the relationship
+system is shown
+operating system handles
+handles a user
+user application invoking
+invoking the open
+system call system
+call system calls
+system calls occur
+information is required
+simply the identity
+desired system call
+call the exact
+type and amount
+amount of information
+system and call
+file or device
+address and length
+device or file
+file and length
+call three general
+system the simplest
+pass the parameters
+parameters in registers
+parameters than registers
+block is passed
+linux and solaris
+program and popped
+system some operating
+operating systems prefer
+prefer the block
+block or stack
+limit the number
+number or length
+length of parameters
+parameters being passed
+passed system calls
+communications in sections
+briefly the types
+types of system
+system calls support
+concepts and functions
+summarizes the types
+calls normally provided
+system 2.4.1 process
+2.4.1 process control
+control a running
+halt its execution
+call is made
+made to terminate
+dump of memory
+error message generated
+generated the dump
+dump is written
+written to disk
+debugger a system
+system program designed
+designed to aid
+aid the programmer
+programmer in finding
+finding and correcting
+bugs to determine
+normal or abnormal
+system must transfer
+invoking command interpreter
+interpreter the command
+interpreter then reads
+interpreter simply continues
+user will issue
+command to respond
+window might alert
+alert the user
+interpreter usually terminates
+terminates the entire
+job and continues
+computers can store
+uniform logical view
+view of information
+storage the operating
+operating system abstracts
+devices to define
+define a logical
+logical storage unit
+files are mapped
+system onto physical
+devices these storage
+contents are persistent
+persistent through power
+failures and system
+reboots a file
+collection of related
+recorded on secondary
+user s perspective
+allotment of logical
+logical secondary storage
+written to secondary
+files represent programs
+source and object
+data data files
+rigidly in general
+sequence of bits
+file s creator
+creator and user
+user the concept
+general the information
+file is defined
+types of information
+file source programs
+type a text
+sequence of characters
+organized into lines
+sequence of subroutines
+subroutines and functions
+organized as declarations
+statements an object
+sequence of bytes
+organized into blocks
+system s linker
+linker an executable
+series of code
+loader can bring
+bring into memory
+memory and execute
+execute 10.1.1 file
+10.1.1 file attributes
+attributes a file
+file is named
+string of characters
+example.c some systems
+differentiate between uppercase
+uppercase and lowercase
+characters in names
+system that created
+user might create
+create the file
+user might edit
+edit that file
+file s owner
+owner might write
+write the file
+system a file
+file s attributes
+humanreadable form identifier
+identifier this unique
+identifies the file
+type this information
+information is needed
+needed for systems
+systems that support
+support different types
+types of files
+location this information
+size the current
+possibly the maximum
+maximum allowed size
+size are included
+attribute protection access-control
+protection access-control information
+access-control information determines
+identification this information
+monitoring the information
+resides on secondary
+directory entry consists
+identifier the identifier
+identifier in turn
+kilobyte to record
+record this information
+megabytes because directories
+device and brought
+brought into memory
+needed 10,1.2 file
+10,1.2 file operations
+operations a file
+abstract data type
+type to define
+define a file
+performed on files
+files the operating
+system can provide
+provide system calls
+calls to create
+basic file operations
+renaming a file
+creating a file
+file two steps
+create a file
+file we discuss
+file in chapter
+writing a file
+file to write
+write a file
+make a system
+searches the directory
+directory to find
+find the file
+file s location
+location the system
+place the write
+write occurs reading
+reading a file
+file to read
+call that specifies
+directory is searched
+pointer is updated
+current operation location
+per-process currentfile-position pointer
+space and reducing
+reducing system complexity
+system complexity repositioning
+file the directory
+pointer is repositioned
+involve any actual
+i this file
+file seek deleting
+deleting a file
+file to delete
+search the directory
+file having found
+release all file
+erase the directory
+file-system interface .truncating
+.truncating a file
+file the user
+erase the contents
+forcing the user
+user to delete
+delete the file
+attributes to remain
+length but lets
+lets the tile
+tile be reset
+reset to length
+file space released
+basic operations comprise
+comprise the minimal
+set of required
+required file operations
+operations other common
+common operations include
+operations include appending
+appending new information
+file and renaming
+renaming an existing
+file these primitive
+combined to perform
+perform other file
+operations for instance
+create a copy
+copy the file
+user to determine
+determine the status
+file s length
+set file attributes
+file operations mentioned
+operations mentioned involve
+mentioned involve searching
+searching the directory
+file to avoid
+avoid this constant
+openo system call
+call be made
+file is first
+first used actively
+actively the operating
+operation is requested
+searching is required
+operating system removes
+removes its entry
+create and delet
+calls that work
+work with closed
+files some systems
+systems implicitly open
+open a file
+made the file
+job or program
+program that opened
+opened the file
+terminates most systems
+openo operation takes
+takes a file
+copying the directory
+table the openo
+accept accessmode information
+accessmode information create
+mode is checked
+file s permissions
+mode is allowed
+file is opened
+process the openo
+call typically returns
+returns a pointer
+table this pointer
+searching and simplifying
+simplifying the system-call
+interface the implementation
+openo and close
+processes may open
+open the file
+levels of internal
+table the perprocess
+perprocess table tracks
+tracks all files
+process has open
+table is information
+process for instance
+current file pointer
+file is found
+found here access
+file and accounting
+included each entry
+table in turn
+system-wide open-file table
+table the system-wide
+table contains process-independent
+file on disk
+system-wide table includes
+includes an entry
+executes an openq
+process s open-file
+open-file table pointing
+systemwide table typically
+open each close
+decreases this open
+open count reaches
+file s entry
+entry is removed
+table in summary
+pieces of information
+open file file
+file file pointer
+pointer on systems
+include a file
+offset as part
+reado and write
+system must track
+track the last
+last readwrite location
+pointer this pointer
+pointer is unique
+on-disk file attributes
+file attributes file-open
+attributes file-open count
+count as files
+files are closed
+system must reuse
+reuse its open-file
+open-file table entries
+out of space
+table because multiple
+opened a file
+system must wait
+file to close
+close before removing
+removing the open-file
+open-file table entry
+entry the file-open
+file-open counter tracks
+tracks the number
+number of opens
+opens and closes
+closes and reaches
+close the system
+remove the entry
+entry disk location
+file most file
+file operations require
+require the system
+system to modify
+file the information
+needed to locate
+locate the file
+operation access rights
+rights each process
+opens a file
+mode this information
+information is stored
+subsequent i requests
+requests some operating
+operating systems provide
+systems provide facilities
+facilities for locking
+locking an open
+file " locks
+process to lock
+lock a file
+file and prevent
+prevent other processes
+processes from gaining
+system log file
+accessed and modified
+number of processes
+system a process
+resources to execute
+execute main memory
+wait until sufficient
+devices are physical
+abstract or virtual
+system may require
+request the device
+functions are similar
+open and close
+close system calls
+calls for files
+files other operating
+systems allow unmanaged
+access to devices
+devices the hazard
+potential for device
+reposition the device
+files in fact
+devices and files
+combined file-device structure
+set of system
+files and devices
+devices are identified
+identified by special
+special file names
+underlying system calls
+calls are dissimilar
+building an operating
+system and user
+interface 2.4.4 information
+2.4.4 information maintenance
+maintenance many system
+system calls exist
+purpose of transferring
+call to return
+return the current
+calls may return
+number of current
+amount of free
+memory or disk
+system keeps information
+access this information
+reset the process
+attributes and set
+set process attributes
+two common models
+models of interprocess
+communicating processes exchange
+processes exchange messages
+transfer information messages
+mailbox before communication
+network each computer
+processid system calls
+translation the identifiers
+close calls provided
+specific open connection
+connection and close
+close connection system
+connection system calls
+system s model
+model of communication
+communication the recipient
+give its permission
+permission for communication
+accept connection call
+call most processes
+connections are special-purpose
+systems programs provided
+purpose they execute
+execute a wait
+onnect ion call
+connection is made
+made the source
+message and write
+write message system
+message system calls
+calls the close
+close connection call
+connection call terminates
+terminates the communication
+processes use shared
+shared memory create
+create and shared
+shared memory attach
+memory attach system
+attach system calls
+create and gain
+access to regions
+regions of memory
+prevent one process
+process from accessing
+accessing another process
+process s memory
+memory shared memory
+shared memory requires
+agree to remove
+remove this restriction
+information by reading
+reading and writing
+areas the form
+location are determined
+system s control
+control the processes
+responsible for ensuring
+simultaneously such mechanisms
+mechanisms are discussed
+discussed in chapter
+process scheme threads
+memory is shared
+shared by default
+models just discussed
+discussed are common
+common in operating
+implement both message
+exchanging smaller amounts
+amounts of data
+easier to implement
+memory for intercomputer
+intercomputer communication shared
+memory allows maximum
+speed and convenience
+convenience of communication
+done at memory
+computer problems exist
+areas of protection
+protection and synchronization
+processes sharing memory
+programs another aspect
+collection of system
+system programs recall
+programs recall figure
+depicted the logical
+logical computer hierarchy
+level is hardware
+finally the application
+application programs system
+programs system programs
+system programs provide
+provide a convenient
+environment for program
+development and execution
+simply user interfaces
+interfaces to system
+considerably more complex
+management these programs
+generally manipulate files
+directories status information
+information some programs
+number of users
+similar status information
+providing detailed performance
+format and print
+print the output
+devices or files
+files or display
+gui some systems
+systems also support
+support a registry
+store and retrieve
+retrieve configuration information
+configuration information file
+information file modification
+modification several text
+create and modify
+modify the content
+content of files
+stored on disk
+commands to search
+contents of files
+files or perform
+text programming-language support
+programming-language support compilers
+debuggers and interpreters
+interpreters for common
+common programming languages
+operating system program
+system program loading
+loading and execution
+program is assembled
+assembled or compiled
+executed the system
+system may provide
+provide absolute loaders
+overlay loaders debugging
+loaders debugging systems
+languages or machine
+language are needed
+communications these programs
+provide the mechanism
+mechanism for creating
+creating virtual connections
+connections among processes
+users to send
+browse web pages
+send electronic-mail messages
+addition to systems
+systems are supplied
+supplied with programs
+solving common problems
+problems or performing
+performing common operations
+operations such programs
+programs include web
+processors and text
+plotting and statistical-analysis
+games these programs
+utilities or application
+programs the view
+users is defined
+application and system
+calls consider pcs
+computer is running
+running the mac
+featuring a mouse
+mouse and windows
+command-line unix shell
+ways a process
+program in execution
+devices to accomplish
+accomplish its task
+task these resources
+resources are allocated
+executing a process
+systems systems consist
+collection of processes
+operating-system processes execute
+processes execute system
+execute system code
+user processes execute
+processes execute user
+execute user code
+processes may execute
+traditionally a process
+thread of control
+systems now support
+threads the operating
+system is responsible
+activities in connection
+connection with process
+process and thread
+creation and deletion
+user and system
+scheduling of processes
+provision of mechanisms
+mechanisms for synchronization
+handling for processes
+processes process concept
+concept a question
+question that arises
+arises in discussing
+discussing operating systems
+operating systems involves
+activities a batch
+batch system executes
+system executes jobs
+system has user
+run several programs
+user can execute
+internal programmed activities
+activities are similar
+processes the terms
+job and process
+prefer the term
+theory and terminology
+terminology was developed
+activity of operating
+systems was job
+misleading to avoid
+commonly accepted terms
+terms that include
+include the word
+simply because process
+process has superseded
+3.1.1 the process
+execution a process
+includes the current
+processor s registers
+registers a process
+generally also includes
+includes the process
+variables a process
+include a heap
+allocated during process
+process in memory
+memory is shown
+list of instructions
+instruction to execute
+resources a program
+file is loaded
+memory two common
+two common techniques
+techniques for loading
+loading executable files
+files are double-clicking
+double-clicking an icon
+representing the executable
+file and entering
+considered two separate
+two separate execution
+separate execution sequences
+state the state
+process is defined
+defined in part
+process each process
+created running instructions
+waiting the process
+process is waiting
+event to occur
+completion or reception
+ready the process
+terminated the process
+process has finished
+execution these names
+names are arbitrary
+vary across operating
+systems the states
+represent are found
+found all systems
+finely delineate process
+delineate process states
+important to realize
+instant many processes
+ready and limiting
+states is presented
+presented in figure
+3.1.3 process control
+process control block
+block each process
+process is represented
+task control block
+block a pcb
+pcb is shown
+counter the counter
+process cpu registers
+registers the registers
+vary in number
+number and type
+architecture they include
+correctly afterward .cpu-scheduling
+afterward .cpu-scheduling information
+information this information
+includes a process
+pointers to scheduling
+describes process scheduling
+information may include
+include such information
+base and limit
+includes the amount
+amount of cpu
+cpu and real
+job or process
+i status information
+includes the list
+i devices allocated
+list of open
+pcb simply serves
+vary from process
+process to process.a
+process s current
+activity each process
+terminated each process
+two major classes
+classes of queues
+queue the ready
+areteady to execute
+cpu each process
+form a ready
+ready queue long-term
+selection of processes
+allowed to contend
+influenced by resourceallocation
+memory management short-term
+ready queue operating
+queue operating systems
+systems must provide
+provide a mechanism
+mechanism for parent
+processes to create
+create new child
+processes the parent
+parent may wait
+children to terminate
+terminate before proceeding
+parent and children
+children may execute
+reasons for allowing
+allowing concurrent execution
+convenience the processes
+processes or cooperating
+cooperating processes cooperating
+processes cooperating processes
+cooperating processes require
+require an interprocess
+interprocess communication mechanism
+mechanism to communicate
+communication is achieved
+memory and message
+passing the shared-memory
+shared-memory method requires
+method requires communicating
+requires communicating processes
+processes to share
+share some variables
+variables the processes
+processes are expected
+expected to exchange
+responsibility for providing
+providing communication rests
+memory the message-passing
+processes to exchange
+messages the responsibility
+communication may rest
+single operating system
+operating system communication
+communication in client-server
+remote procedure calls
+java s remote
+remote method invocation
+socket is defined
+endpoint for communication
+communication a connection
+pair of applications
+pair of sockets
+communication channel rpcs
+form of distributed
+communication an rpc
+calls a procedure
+remote application rmi
+version of rpcs
+thread to invoke
+invoke a method
+object the primary
+distinction between rpcs
+rpcs and rmi
+data are passed
+ordinary data structure
+rmi allows objects
+passed in remote
+remote method calls
+operating system
+computer hardware
+application programs
+computer user
+amazing aspect
+operating systems
+tasks mainframe
+mainframe operating
+optimize utilization
+personal computer
+systems support
+support complex
+complex games
+business applications
+handheld computers
+execute programs
+computer system
+system operation
+system structure
+basic functions
+system startup
+basic computer
+computer architecture
+functional operating
+created piece
+well-delineated portion
+defined inputs
+general overview
+major components
+central processing
+processing unit
+basic computing
+computing resources
+word processors
+web browsers
+browsers define
+solve users
+computing problems
+system controls
+explore operating
+computer varies
+computer users
+users sit
+system unit
+attention paid
+resource utilization
+software resources
+shared performance
+single-user experience
+user sits
+users share
+share resources
+exchange information
+maximize resource
+individual user
+user takes
+fair share
+workstations connected
+dedicated resources
+print servers
+individual usability
+standalone units
+individual users
+wireless modems
+interface limitations
+remote operations
+battery life
+user view
+embedded computers
+home devices
+numeric keypads
+turn indicator
+indicator lights
+show status
+user intervention
+resource allocator
+memory space
+file-storage space
+system acts
+resources facing
+conflicting requests
+specific programs
+resource allocation
+users access
+system emphasizes
+user programs
+control program
+program manages
+prevent errors
+adequate definition
+system operating
+systems exist
+usable computing
+computing system
+fundamental goal
+computer systems
+execute user
+solving user
+user problems
+problems easier
+bare hardware
+programs require
+common operations
+common functions
+allocating resources
+accepted definition
+simple viewpoint
+vendor ships
+features included
+full-screen editor
+require gigabytes
+graphical windowing
+windowing systems
+bytes computer
+computer manufacturers
+common definition
+program running
+systems programs
+last definition
+generally follow
+increasingly important
+united states
+states department
+justice filed
+filed suit
+essence claiming
+microsoft included
+prevented application
+application vendors
+web browser
+integral part
+found guilty
+limit competition
+visible aspect
+human user
+executing programs
+main memory
+memory main
+large storage
+storage area
+access directly
+volatile storage
+storage device
+systems provide
+secondary storage
+non-volatile storage
+large quantities
+data permanently
+common secondary-storage
+secondary-storage device
+magnetic disk
+wide variety
+storage systems
+higher levels
+bit generallydecreases
+generally increases
+system uniprocessor
+uniprocessor systems
+single processor
+multiprocessor systems
+physical memory
+peripheral devices
+common multiprocessor
+multiprocessor design
+symmetric multiprocessing
+considered peers
+clustered systems
+specialized form
+multiple computer
+systems connected
+local area
+area network
+modern operating
+systems employ
+execute timesharing
+timesharing systems
+cpu scheduling
+scheduling algorithms
+running concurrently
+correct operation
+prevent user
+proper operation
+user mode
+kernel mode
+halt instructions
+system resides
+timer prevents
+infinite loops
+dual mode
+privileged instructions
+memory protection
+timer interrupt
+basic building
+building blocks
+fundamental unit
+system process
+process management
+management includes
+deleting processes
+providing mechanisms
+system manages
+manages memory
+keeping track
+freeing memory
+space storage
+storage space
+providing file
+file systems
+representing files
+managing space
+mass storage
+storage devices
+devices operating
+users protection
+resources made
+system security
+security measures
+internal attacks
+attacks distributed
+distributed systems
+dispersed hosts
+hosts connected
+computer network
+network services
+client-server model
+peer-to-peer model
+clustered system
+multiple machines
+perform computations
+data residing
+shared storage
+cluster members
+members fails
+fails lans
+basic types
+networks lans
+enable processors
+processors distributed
+small geographical
+geographical area
+larger area
+communicate lans
+specific purposes
+real-time operating
+systems designed
+embedded environments
+consumer devices
+robotics real-time
+constraints processing
+defined constraints
+fail multimedia
+multimedia systems
+systems involve
+multimedia data
+special requirements
+playing audio
+synchronized audio
+video streams
+world wide
+wide web
+include web
+communication software
+integral features
+features operating-system
+operating-system services
+specific services
+services provided
+common classes
+programming task
+task easier
+user user
+user interface
+command-line interface
+text commands
+batch interface
+graphical user
+window system
+pointing device
+make selections
+enter text
+variations program
+program execution
+indicating error
+running program
+specific devices
+special functions
+crt screen
+devices directly
+file-system manipulation
+file system
+write files
+list file
+file information
+programs include
+include permissions
+permissions management
+deny access
+directories based
+file ownership
+ownership communications
+systems tied
+network communications
+shared memory
+message passing
+system error
+error detection
+errors errors
+memory hardware
+memory error
+power failure
+parity error
+connection failure
+user program
+arithmetic overflow
+illegal memory
+memory location
+consistent computing
+computing debugging
+debugging facilities
+system efficiently
+operating-system functions
+functions exists
+efficient operation
+multiple users
+gain efficiency
+computer resources
+users resource
+multiple jobs
+jobs running
+cpu cycles
+file storage
+special allocation
+allocation code
+general request
+release code
+cpu-scheduling routines
+allocate printers
+usb storage
+storage drives
+devices accounting
+record keeping
+accumulating usage
+usage statistics
+statistics usage
+valuable tool
+improve computing
+computing services
+services protection
+information stored
+networked computer
+separate processes
+processes execute
+protection involves
+system resources
+controlled security
+security starts
+gain access
+including modems
+network adapters
+invalid access
+access attempts
+weakest link
+link user
+user operating-system
+operating-system interface
+fundamental approaches
+command interpreter
+enter commands
+systems include
+special program
+interactive systems
+multiple command
+command interpreters
+linux systems
+bourne shell
+bourne-again shell
+korn shell
+shells provide
+similar functionality
+minor differences
+users choose
+shell based
+personal preference
+main function
+user-specified command
+level manipulate
+manipulate files
+shells operate
+general ways
+system call
+command requires
+implementing code
+alternative approach
+systems implements
+system programs
+unix command
+parameter file
+proper names
+command-interpreter program
+user interfaces
+mouse-based window-and-menu
+window-and-menu system
+desktop metaphor
+represent programs
+system functions
+functions depending
+mouse pointer
+research taking
+taking place
+xerox parc
+parc research
+research facility
+first gui
+gui appeared
+xerox alto
+alto computer
+graphical interfaces
+apple macintosh
+macintosh computers
+macintosh operating
+aqua interface
+first version
+windows version
+gui interface
+ms-dos operating
+windows systems
+systems proceeding
+initial version
+windows explorer
+unix systems
+command-line interfaces
+gui interfaces
+common desktop
+desktop environment
+x-windows systems
+commercial versions
+aix system
+significant development
+gui designs
+opensource projects
+gnome desktop
+gnu project
+gnome desktops
+desktops rim
+open-source licenses
+source code
+public domain
+general rule
+unix users
+users prefer
+powerful shell
+shell interfaces
+windows users
+windows gui
+gui environment
+ms-dos shell
+shell interface
+nice study
+command line
+line interface
+part implemented
+unix kernel
+actual system
+friendly user
+direct function
+fundamental problems
+adequate service
+programs system
+system calls
+calls system
+services made
+routines written
+low-level tasks
+assembly-language instructions
+system makes
+makes system
+simple program
+read data
+first input
+input file
+output file
+operating-system design
+interactive system
+prompting message
+icon-based systems
+file names
+sequence requires
+operations requires
+error conditions
+program should8
+should8 print
+file exists
+existing file
+return status
+status information
+hardware failure
+write operation
+output device
+disk space
+entire file
+final system
+simple programs
+systems execute
+execute thousands
+systemcall sequence
+application developers
+developers design
+design programs
+application programming
+programming interface
+api specifies
+application programmer
+return values
+common apis
+application programmers
+win32 api
+posix api
+posix-based systems
+java api
+designing programs
+virtual machine
+machine note
+system-call names
+generic examples
+win32 function
+function createprocess
+windows kernel
+programmer prefer
+prefer programming
+api concerns
+concerns program
+program portability
+programmer designing
+architectural differences
+strong correlation
+win32 apis
+native system
+windows operating
+run-time support
+support system
+functions built
+libraries included
+programming languages
+system-call interface
+calls made
+interface intercepts
+intercepts function
+function calls
+interface maintains
+call interface
+intended system
+system kernel
+support library
+system handles
+user application
+application invoking
+call system
+calls occur
+desired system
+exact type
+information vary
+memory buffer
+general methods
+pass parameters
+simplest approach
+solaris parameters
+systems prefer
+stack method
+passed system
+major categories
+process control
+file manipulation
+device manipulation
+information maintenance
+calls support
+chapters figure
+program runs
+error trap
+error message
+message generated
+system program
+program designed
+correcting bugs
+abnormal circumstances
+transfer control
+invoking command
+gui system
+pop-up window
+batch system
+entire job
+job computers
+store information
+storage media
+magnetic disks
+magnetic tapes
+optical disks
+logical view
+information storage
+system abstracts
+physical properties
+logical storage
+storage unit
+file files
+physical devices
+power failures
+system reboots
+named collection
+related information
+smallest allotment
+logical secondary
+files represent
+object forms
+data data
+data files
+binary files
+free form
+text files
+extremely general
+file source
+source programs
+object programs
+executable programs
+numeric data
+payroll records
+graphic images
+sound recordings
+defined structure
+text file
+characters organized
+possibly pages
+source file
+executable statements
+object file
+bytes organized
+executable file
+code sections
+file attributes
+human users
+systems differentiate
+lowercase characters
+file example.c
+floppy disk
+destination system
+symbolic file
+humanreadable form
+form identifier
+unique tag
+file type
+files location
+device size
+current size
+maximum allowed
+allowed size
+attribute protection
+protection access-control
+access-control information
+information determines
+file concept
+user identification
+last modification
+usage monitoring
+directory structure
+directory entry
+entry consists
+unique identifier
+turn locates
+memory piecemeal
+file operations
+abstract data
+data type
+provide system
+truncate files
+basic file
+similar operations
+implemented creating
+allocate space
+directory writing
+system searches
+write pointer
+write occurs
+occurs reading
+read pointer
+current operation
+operation location
+per-process currentfile-position
+currentfile-position pointer
+write operations
+saving space
+reducing system
+system complexity
+complexity repositioning
+current-file-position pointer
+value repositioning
+file operation
+file seek
+seek deleting
+named file
+file space
+file-system interface
+file length
+space released
+basic operations
+operations comprise
+minimal set
+required file
+operations include
+primitive operations
+operations mentioned
+involve searching
+constant searching
+systems require
+openo system
+small table
+open-file table
+open files
+system removes
+first reference
+file terminates
+openo operation
+operation takes
+openo call
+accept accessmode
+accessmode information
+information create
+request mode
+actual file
+internal tables
+per-process table
+system-wide table
+perprocess table
+table tracks
+open stored
+current file
+file pointer
+access rights
+accounting information
+turn points
+system-wide open-file
+process-independent information
+access dates
+file size
+table includes
+process executes
+openq call
+table pointing
+systemwide table
+table typically
+open count
+file open
+count reaches
+open file
+file file
+file offset
+last readwrite
+readwrite location
+process operating
+on-disk file
+attributes file-open
+file-open count
+table entries
+multiple processes
+last file
+table entry
+file-open counter
+counter tracks
+last close
+entry disk
+disk location
+operations require
+modify data
+information needed
+operation access
+process opens
+access mode
+provide facilities
+gaining access
+file locks
+system log
+log file
+disk drives
+user process
+sufficient resources
+resources controlled
+operating sysstem
+virtual devices
+first request
+close system
+unmanaged access
+device contention
+including unix
+combined file-device
+file-device structure
+special file
+directory placement
+make files
+underlying system
+design decisions
+calls exist
+transferring information
+return information
+current users
+version number
+free memory
+svstem calls
+process information
+process attributes
+set process
+common models
+interprocess communication
+messagepassing model
+shared-memory model
+message-passing model
+communicating processes
+processes exchange
+exchange messages
+transfer information
+information messages
+common mailbox
+computer connected
+communications network
+network identifier
+processid system
+close calls
+calls provided
+specific open
+open connection
+close connection
+connection system
+recipient process
+accept connection
+connection call
+receiving connections
+special-purpose daemons
+programs provided
+onnect ion
+ion call
+receiving daemon
+read message
+write message
+message system
+call terminates
+memory create
+memory attach
+attach system
+memory owned
+processes recall
+memory shared
+memory requires
+processes agree
+writing data
+shared areas
+location simultaneously
+process scheme
+scheme threads
+systems implement
+smaller amounts
+intercomputer communication
+communication shared
+maximum speed
+memory speeds
+takes place
+computer problems
+problems exist
+processes sharing
+sharing memory
+modern system
+programs recall
+recall figure
+logical computer
+computer hierarchy
+lowest level
+programs provide
+convenient environment
+program development
+file management
+programs create
+directories status
+similar status
+detailed performance
+debugging information
+programs format
+output devices
+retrieve configuration
+configuration information
+information file
+file modification
+text editors
+files stored
+special commands
+search contents
+perform transformations
+text programming-language
+programming-language support
+support compilers
+common programming
+visual basic
+program loading
+absolute loaders
+relocatable loaders
+linkage editors
+overlay loaders
+loaders debugging
+debugging systems
+higher-level languages
+machine language
+virtual connections
+send messages
+browse web
+web pages
+electronic-mail messages
+transfer files
+common problems
+text formatters
+database systems
+statistical-analysis packages
+system utilities
+windows interface
+command-line unix
+unix shell
+systems systems
+systems consist
+operating-system processes
+execute system
+system code
+user processes
+user code
+execute concurrently
+process contained
+single thread
+support processes
+multiple threads
+thread management
+system processes
+deadlock handling
+processes process
+process concept
+discussing operating
+systems involves
+cpu activities
+system executes
+executes jobs
+time-shared system
+single-user system
+microsoft windows
+word processor
+e-mail package
+programmed activities
+memory management
+terms job
+term process
+operating-system theory
+major activity
+job processing
+accepted terms
+word job
+job scheduling
+superseded job
+program code
+text section
+current activity
+program counter
+process stack
+temporary data
+function parameters
+return addresses
+local variables
+data section
+global variables
+process run
+passive entity
+instructions stored
+active entity
+common techniques
+executable files
+icon representing
+prog exe
+separate execution
+execution sequences
+created running
+running instructions
+executed waiting
+processor terminated
+finished execution
+delineate process
+process states
+state diagram
+control block
+task control
+specific process
+process state
+process cpu
+cpu registers
+include accumulators
+index registers
+stack pointers
+general-purpose registers
+condition-code information
+state information
+interrupt occurs
+.cpu-scheduling information
+information includes
+process priority
+scheduling queues
+scheduling parameters
+describes process
+process scheduling
+memory-management information
+limit registers
+page tables
+segment tables
+memory system
+account mimbers
+process numbers
+devices allocated
+process.a process
+process-control block
+waiting queue
+major classes
+request queues
+ready queue
+long-term scheduling
+resourceallocation considerations
+queue operating
+parent processes
+child processes
+allowing concurrent
+concurrent execution
+information sharing
+computation speedup
+processes executing
+independent processes
+cooperating processes
+processes cooperating
+processes require
+communication mechanism
+shared-memory method
+method requires
+shared variables
+shared-memory system
+providing communication
+communication rests
+message-passing method
+single operating
+system communication
+client-server systems
+remote procedure
+procedure calls
+remote method
+method invocation
+applications consists
+communication channel
+channel rpcs
+distributed communication
+rpc occurs
+remote application
+application rmi
+java version
+rpcs rmi
+remote object
+local object
+primary distinction
+rpcs data
+ordinary data
+data structure
+method calls
+operating
+system
+program
+manages
+computer
+hardware
+basis
+application
+programs
+acts
+intermediary
+user
+amazing
+aspect
+systems
+varied
+accomplishing
+tasks
+mainframe
+designed
+primarily
+optimize
+utilization
+personal
+support
+complex
+games
+business
+applications
+handheld
+computers
+provide
+environment
+easily
+interface
+execute
+convenient
+efficient
+combination
+two
+explore
+details
+operation
+structure
+begin
+discussing
+basic
+functions
+startup
+i
+storage
+describe
+architecture
+makes
+write
+functional
+large
+created
+piece
+pieces
+well-delineated
+portion
+carefully
+defined
+inputs
+outputs
+chapter
+general
+overview
+major
+components
+divided
+roughly
+four
+users
+central
+processing
+unit
+cpu
+memory
+devices
+computing
+resources
+word
+processors
+spreadsheets
+compilers
+web
+browsers
+define
+ways
+solve
+problems
+controls
+coordinates
+view
+consisting
+software
+data
+means
+proper
+similar
+government
+performs
+function
+simply
+work
+understand
+fully
+role
+viewpoints
+varies
+sit
+front
+monitor
+keyboard
+mouse
+monopolize
+goal
+maximize
+play
+performing
+case
+ease
+attention
+paid
+performance
+resource
+shared
+important
+optimized
+single-user
+experience
+cases
+sits
+terminal
+connected
+minicomputer
+accessing
+terminals
+share
+exchange
+information
+assure
+efficiently
+individual
+takes
+fair
+workstations
+networks
+servers
+dedicated
+disposal
+networking
+file
+compute
+print
+compromise
+usability
+recently
+varieties
+fashion
+standalone
+units
+directly
+wire
+wireless
+modems
+power
+speed
+limitations
+perform
+remote
+operations
+amount
+battery
+life
+embedded
+home
+automobiles
+numeric
+keypads
+turn
+indicator
+lights
+show
+status
+run
+intervention
+point
+intimately
+involved
+context
+allocator
+required
+problem
+space
+file-storage
+manager
+facing
+numerous
+possibly
+conflicting
+requests
+decide
+allocate
+specific
+operate
+fairly
+allocation
+access
+slightly
+emphasizes
+control
+execution
+prevent
+errors
+improper
+concerned
+looked
+views
+completely
+adequate
+definition
+exist
+offer
+reasonable
+creating
+usable
+fundamental
+make
+solving
+easier
+constructed
+bare
+easy
+developed
+require
+common
+controlling
+allocating
+brought
+addition
+universally
+accepted
+part
+simple
+viewpoint
+includes
+vendor
+ships
+order
+features
+included
+vary
+greatly
+megabyte
+lack
+full-screen
+editor
+gigabytes
+based
+graphical
+windowing
+kilobyte
+1,024
+bytes
+l,0242
+gigabyte
+l,0243
+manufacturers
+round
+numbers
+million
+billion
+running
+times
+kernel
+last
+generally
+follow
+matter
+constitutes
+increasingly
+united
+states
+department
+justice
+filed
+suit
+microsoft
+essence
+claiming
+functionality
+prevented
+vendors
+competing
+browser
+integral
+result
+found
+guilty
+monopoly
+limit
+competition
+providing
+visible
+human
+job
+executing
+main
+area
+processor
+array
+words
+ranging
+size
+millions
+billions
+address
+volatile
+device
+loses
+contents
+turned
+lost
+secondary
+extension
+form
+non-volatile
+capable
+holding
+quantities
+permanently
+secondary-storage
+magnetic
+disk
+wide
+variety
+organized
+hierarchy
+cost
+higher
+levels
+expensive
+fast
+move
+bit
+generallydecreases
+increases
+strategies
+designing
+uniprocessor
+single
+multiprocessor
+physical
+peripheral
+design
+symmetric
+multiprocessing
+smp
+considered
+peers
+summary
+independently
+clustered
+specialized
+consist
+multiple
+local
+network
+utilize
+modern
+employ
+jobs
+ensuring
+timesharing
+multiprogramming
+scheduling
+algorithms
+rapidly
+switch
+illusion
+concurrently
+ensure
+correct
+interfering
+modes
+mode
+instructions
+halt
+privileged
+executed
+resides
+protected
+modification
+timer
+prevents
+infinite
+loops
+facilities
+dual
+protection
+interrupt
+building
+blocks
+achieve
+process
+management
+deleting
+processes
+mechanisms
+communicate
+synchronize
+keeping
+track
+parts
+responsible
+dynamically
+freeing
+managed
+representing
+files
+directories
+managing
+mass
+protecting
+securing
+made
+security
+measures
+defending
+external
+internal
+attacks
+distributed
+geographically
+dispersed
+hosts
+services
+provided
+client-server
+model
+peer-to-peer
+machines
+computations
+residing
+continue
+subset
+cluster
+members
+fails
+lans
+wans
+types
+enable
+small
+geographical
+larger
+typically
+faster
+serve
+purposes
+include
+real-time
+environments
+consumer
+robotics
+fixed
+constraints
+done
+fail
+multimedia
+involve
+delivery
+special
+requirements
+displaying
+playing
+audio
+video
+synchronized
+streams
+influence
+internet
+world
+encouraged
+development
+communication
+operating-system
+differ
+identify
+classes
+convenience
+programmer
+programming
+task
+set
+helpful
+forms
+command-line
+cli
+text
+commands
+method
+entering
+editing
+batch
+directives
+entered
+gui
+window
+pointing
+direct
+choose
+menus
+selections
+enter
+variations
+load
+end
+abnormally
+indicating
+error
+desired
+recording
+dvd
+drive
+blanking
+crt
+screen
+efficiency
+file-system
+manipulation
+interest
+read
+create
+delete
+search
+list
+finally
+permissions
+deny
+ownership
+communications
+circumstances
+occur
+tied
+implemented
+message
+passing
+packets
+moved
+detection
+constantly
+aware
+failure
+parity
+tape
+connection
+paper
+printer
+arithmetic
+overflow
+attempt
+illegal
+location
+too-great
+type
+action
+consistent
+debugging
+enhance
+abilities
+exists
+helping
+gain
+sharing
+allocated
+hem
+cycles
+code
+request
+release
+instance
+determining
+cpu-scheduling
+routines
+account
+number
+registers
+factors
+printers
+usb
+drives
+accounting
+kinds
+record
+billed
+accumulating
+usage
+statistics
+valuable
+tool
+researchers
+reconfigiire
+improve
+owners
+stored
+multiuser
+networked
+separate
+interfere
+involves
+controlled
+outsiders
+starts
+requiring
+authenticate
+password
+extends
+including
+adapters
+invalid
+attempts
+connections
+break-ins
+secure
+precautions
+instituted
+chain
+strong
+weakest
+link
+approaches
+technique
+command
+interpreter
+performed
+approach
+2.2.1
+windows
+unix
+treat
+initiated
+first
+logs
+interactive
+interpreters
+shells
+linux
+bourne
+shell
+bourne-again
+korn
+minor
+differences
+preference
+user-specified
+level
+manipulate
+copy
+ms-dos
+jump
+section
+sets
+parameters
+call
+determines
+requires
+implementing
+alternative
+implements
+loaded
+file.tx
+parameter
+txt
+programmers
+add
+names
+command-interpreter
+changed
+added
+2.2.2
+interfaces
+strategy
+interfacing
+userfriendly
+mouse-based
+window-and-menu
+desktop
+metaphor
+position
+pointer
+images
+icons
+represent
+depending
+clicking
+button
+invoke
+select
+directory
+folder
+pull
+menu
+appeared
+due
+research
+taking
+place
+early
+1970s
+xerox
+parc
+facility
+alto
+widespread
+advent
+apple
+macintosh
+1980s
+mac
+undergone
+years
+significant
+adoption
+aqua
+version
+versions
+proceeding
+initial
+cosmetic
+appearance
+enhancements
+explorer
+traditionally
+dominated
+cde
+x-windows
+commercial
+solaris
+ibm
+aix
+designs
+opensource
+projects
+kde
+gnome
+gnu
+project
+desktops
+rim
+open-source
+licenses
+source
+public
+domain
+choice
+rule
+prefer
+powerful
+alternatively
+pleased
+nice
+study
+contrast
+historically
+line
+substantially
+removed
+actual
+friendly
+book
+concentrate
+service
+distinguish
+calls
+written
+low-level
+accessed
+assembly-language
+discuss
+illustrate
+writing
+input
+output
+sequence
+prompting
+characters
+icon-based
+displayed
+opened
+destination
+obtained
+open
+conditions
+find
+should8
+console
+terminate
+situation
+abort
+existing
+option
+response
+replace
+loop
+reads
+writes
+return
+reached
+encounter
+out
+entire
+copied
+close
+final
+heavy
+frequently
+thousands
+systemcall
+shown
+figure
+detail
+developers
+api
+specifies
+passed
+values
+expect
+apis
+win32
+posix
+posix-based
+virtually
+java
+virtual
+machine
+note
+system-call
+generic
+examples
+scenes
+behalf
+createprocess
+unsurprisingly
+ntcreateprocess
+invoking
+reasons
+doing
+benefit
+concerns
+portability
+compile
+supports
+reality
+architectural
+difficult
+detailed
+correlation
+fact
+native
+run-time
+built
+libraries
+compiler
+languages
+serves
+intercepts
+invokes
+maintains
+table
+indexed
+intended
+returns
+caller
+obey
+hidden
+library
+relationship
+illustrates
+handles
+identity
+exact
+length
+buffer
+implicit
+methods
+pass
+simplest
+block
+register
+pushed
+stack
+popped
+grouped
+categories
+maintenance
+sections
+2.4.1
+2.4.5
+briefly
+supported
+concepts
+discussed
+chapters
+summarizes
+runs
+trap
+dump
+generated
+examined
+debugger
+aid
+finding
+correcting
+bugs
+determine
+normal
+abnormal
+transfer
+continues
+assumed
+issue
+respond
+pop-up
+alert
+guidance
+terminates
+store
+media
+disks
+tapes
+optical
+uniform
+logical
+abstracts
+properties
+mapped
+nonvolatile
+persistent
+failures
+reboots
+named
+collection
+related
+recorded
+perspective
+tile
+smallest
+allotment
+commonly
+object
+alphabetic
+alphanumeric
+binary
+free
+formatted
+rigidly
+bits
+lines
+records
+meaning
+creator
+concept
+extremely
+executable
+payroll
+graphic
+sound
+recordings
+depends
+pages
+subroutines
+declarations
+statements
+understandable
+linker
+series
+loader
+bring
+10.1.1
+attributes
+referred
+string
+example.c
+differentiate
+uppercase
+lowercase
+independent
+edit
+owner
+floppy
+send
+e-mail
+symbolic
+humanreadable
+identifier
+unique
+tag
+identifies
+non-human-readable
+needed
+current
+maximum
+allowed
+attribute
+access-control
+reading
+date
+identification
+creation
+monitoring
+entry
+consists
+locates
+megabytes
+piecemeal
+10,1.2
+abstract
+properly
+reposition
+truncate
+examine
+renaming
+steps
+searches
+updated
+occurs
+put
+searched
+per-process
+currentfile-position
+saving
+reducing
+complexity
+repositioning
+current-file-position
+repositioned
+value
+seek
+reused
+erase
+.truncating
+forcing
+recreate
+remain
+unchanged
+lets
+reset
+released
+comprise
+minimal
+appending
+primitive
+combined
+display
+mentioned
+searching
+avoid
+constant
+openo
+actively
+open-file
+requested
+index
+longer
+closed
+removes
+delet
+implicitly
+reference
+automatically
+explicitly
+copying
+accept
+accessmode
+read-only
+append-only
+checked
+avoiding
+simplifying
+implementation
+complicated
+tables
+system-wide
+perprocess
+tracks
+rights
+points
+process-independent
+dates
+executes
+openq
+systemwide
+count
+decreases
+reaches
+offset
+reado
+readwrite
+on-disk
+file-open
+reuse
+entries
+wait
+removing
+counter
+opens
+closes
+remove
+modify
+locate
+subsequent
+locking
+locks
+lock
+gaining
+log
+modified
+granted
+returned
+sufficient
+sysstem
+thought
+exclusive
+finished
+unmanaged
+hazard
+potential
+contention
+deadlock
+similarity
+great
+merge
+file-device
+identified
+placement
+underlying
+dissimilar
+decisions
+2.4.4
+purpose
+transferring
+svstem
+models
+interprocess
+messagepassing
+shared-memory
+message-passing
+communicating
+messages
+exchanged
+indirectly
+mailbox
+communicator
+host
+similarly
+translated
+processid
+translation
+identifiers
+generalpurpose
+recipient
+give
+permission
+receiving
+special-purpose
+daemons
+onnect
+ion
+awakened
+client
+daemon
+server
+attach
+regions
+owned
+recall
+agree
+restriction
+areas
+determined
+simultaneously
+variation
+scheme
+threads
+default
+implement
+exchanging
+smaller
+amounts
+conflicts
+avoided
+intercomputer
+speeds
+synchronization
+depicted
+lowest
+considerably
+rename
+logging
+format
+registry
+retrieve
+configuration
+editors
+content
+transformations
+programming-language
+assemblers
+debuggers
+visual
+perl
+loading
+assembled
+compiled
+absolute
+loaders
+relocatable
+linkage
+overlay
+higher-level
+language
+mechanism
+screens
+browse
+electronic-mail
+remotely
+supplied
+formatters
+database
+plotting
+statistical-analysis
+packages
+utilities
+pcs
+featuring
+act
+accomplish
+contained
+thread
+ran
+activities
+deletion
+provision
+handling
+question
+arises
+time-shared
+package
+suppoft
+programmed
+respects
+terms
+interchangeably
+personally
+term
+theory
+terminology
+activity
+misleading
+superseded
+3.1.1
+informally
+earlier
+represented
+temporary
+addresses
+variables
+global
+heap
+emphasize
+passive
+entity
+active
+instruction
+techniques
+double-clicking
+icon
+prog
+exe
+sequences
+state
+waiting
+event
+completion
+reception
+signal
+ready
+assigned
+terminated
+arbitrary
+finely
+delineate
+realize
+instant
+limiting
+diagram
+presented
+3.1.3
+pcb
+halted
+accumulators
+pointers
+general-purpose
+condition-code
+saved
+continued
+correctly
+afterward
+.cpu-scheduling
+priority
+queues
+describes
+memory-management
+base
+page
+segment
+real
+limits
+mimbers
+repository
+process.a
+process-control
+queue
+areteady
+pcbs
+linked
+long-term
+selection
+contend
+heavily
+influenced
+resourceallocation
+considerations
+short-term
+parent
+child
+children
+allowing
+concurrent
+computation
+speedup
+modularity
+cooperating
+principally
+achieved
+schemes
+expected
+responsibility
+rests
+rest
+mutually
+sockets
+procedure
+rpcs
+invocation
+rmi
+socket
+endpoint
+pair
+channel
+rpc
+primary
+distinction
+ordinary
+objects

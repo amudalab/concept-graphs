@@ -1,0 +1,7703 @@
+computer networks prof
+prof s ghosh
+dept of computer
+science & engineering
+engineering iit kharagpur
+iit kharagpur lecture
+today is tcp
+important transport protocol
+complex then udp
+transport layer responsibilities
+transport layer creates
+layer creates packets
+packets from byte
+byte steam received
+order to multiplex
+multiplex and de-multiplex
+numbers to create
+create process-to-process communication
+sliding window protocol
+protocol to achieve
+achieve flow control
+out and retransmission
+retransmission to achieve
+achieve error control
+unreliable this seeks
+seeks to provide
+provide a reliable
+communication that means
+connection oriented protocol
+kind of congestion
+congestion control mechanism
+thing of connecting
+connecting between processors
+two distant nodes
+connection-oriented reliable transport
+reliable transport protocol
+protocol it adds
+adds connection oriented
+oriented and reliability
+kind of service
+connectionless whereas tcp
+give some kind
+kind of connection-oriented
+connection and proposal
+proposal is implemented
+two end nodes
+nodes that means
+means the intermediate
+role to play
+reliable and ordered
+ordered ordered means
+means the packets
+packets are received
+received in order
+packets will arrive
+arrive in order
+first may land
+earlier and vice
+versa but tcp
+makes them ordered
+ordered tcp brings
+brings an order
+tcp is point-to-point
+point-to-point and unicast
+reliable and unicast
+flavor to tcp
+tcp it takes
+takes the byte-stream
+full loop-less connection
+connection that means
+connected by tcp
+flow and congestion
+transmission control protocol
+data transfer tcp
+transfer tcp establishes
+establishes a connection
+network like classical
+kinds of control
+first a connection
+connection is set
+actual data transmission
+data transmission begins
+tcp a connection
+two end points
+transmission takes place
+entity is waiting
+tcp entity-client contacts
+contacts the server
+server the actual
+procedure for setting
+setting up connection
+complex the client
+client first makes
+makes a request
+acknowledges the request
+request and accepts
+data transfer begins
+actual data transfer
+reliable the byte-stream
+byte-stream is broken
+segments the receiver
+receiver sends acknowledgements
+acknowledgements for segments
+reliability is brought
+segment is acknowledged
+acknowledged tcp maintains
+maintains a timer
+segment is retransmitted
+mechanism for reliability
+reliability the sender
+sends a packet
+lost and sends
+sends the packet
+packet again hoping
+reach the receiver
+receiver will send
+send the acknowledgement
+lead to duplicate
+receiver has received
+acknowledgement got lost
+naturally the original
+receive any acknowledgement
+tcp can detect
+detect errors tcp
+tcp has checksum
+checksum for header
+header and data
+data like udp
+segment with invalid
+checksums are discarded
+discarded each byte
+intermediate sequence number
+number is missing
+missing the receiver
+lower layers tcp
+layers tcp handles
+tcp handles data
+data in blocks
+packets actually originate
+higher layer tcp
+layer tcp handles
+sequence of bytes
+boundaries between bytes
+beginning and end
+end of segments
+stream of bytes
+queues are bytes
+queue of bytes
+unit of data
+transfer between devices
+devices using tcp
+bytes of option
+protocol to run
+bit source port
+source port address
+bit destination port
+destination port address
+options like window
+options and padding
+processes actually communicate
+communicate through ports
+address together form
+form the socket
+identifies every session
+sides two port
+two port numbers
+numbers are assigned
+assigned for standard
+applications the first
+communication will start
+start on well-known
+well-known port number
+switch to ephemeral
+ephemeral port numbers
+address that defines
+defines the port
+sending the segment
+bits the port
+port numbers destination
+numbers destination port
+port address defines
+receiving the segment
+number it defines
+defines the number
+byte of data
+segment during connection
+establishment a random
+random number generator
+create an initial
+initial sequence number
+number of bits
+number was small
+starts it sends
+sends the number
+finite length sequence
+length sequence number
+back and starts
+starts these numbers
+small segment size
+similarly other kinds
+kinds of confusion
+confusion might arise
+large sequence number
+number is generated
+receiving very high
+low sequence numbers
+range of sequence
+number and random
+generate the initial
+number this initial
+sequence is expected
+isn is exchanged
+similarly these segments
+stream of acknowledgements
+number will start
+set up phase
+large it defines
+defines the byte
+segment is expecting
+expecting to receive
+length the header
+bits for future
+flags it defines
+controls flags urg
+flags urg defines
+defines the urgent
+pointer which determines
+pointer is valid
+valid the urgent
+urgent pointer field
+garbage ack tells
+tells whether acknowledgement
+acknowledgement is valid
+request for push
+resetting the connection
+synchronize sequence number
+number and fin
+terminate these connections
+connections these flags
+termination of connections
+bit which defines
+defines the size
+window in bytes
+party must maintain
+sort of controlled
+receiver the receiver
+bits the checksum
+flag is set
+set it defines
+number to determine
+determine the last
+last urgent byte
+single-byte or multiple-byte
+multiple-byte in options
+maximum segment size
+windows scale factor
+factor and timestamp
+end of options
+operation for padding
+end of option
+size which defines
+chunk of data
+taking the header
+header field out
+window scale factor
+scale factor defines
+timestamp is filled
+filled by source
+source when segment
+leaves and destination
+echo reply field
+source to determine
+determine the round
+essential because suppose
+sender is expecting
+expecting an acknowledgement
+make an estimate
+estimate is based
+round trip delay
+maximum segment life
+sender would sort
+packet is lost
+acknowledgement is lost
+case the packet
+calculation as udp
+udp and inclusion
+inclusion is mandatory
+mandatory with tcp
+setting up connections
+connections and resetting
+resetting of connections
+path because remember
+remember that tcp
+tcp is working
+underlying actual service
+connectionless but tcp
+thing that means
+means all good
+things about connection
+orientation like segments
+arriving in order
+order and reliability
+present but tcp
+connectionless ip network
+established from source
+path unlike traditional
+unlike traditional strict
+traditional strict connection-oriented
+strict connection-oriented service
+establishment four actions
+actions are required
+required before sending
+actions first host
+host a sends
+sends a segment
+establish a connection
+segment to announce
+connection and includes
+includes its initialization
+host b sends
+segment to acknowledge
+acknowledge the request
+back an acknowledgement
+segment that includes
+includes the initialization
+means the host
+request of host
+send the initialization
+initialization information meaning
+meaning the sequence
+synchronization the sender
+sends a synchronization
+request to set
+number the receiver
+receiver then sends
+sends a syn
+syn the sequence
+consumes the first
+first sequence number
+acknowledging it sends
+sends the value
+receiver is expecting
+tcp is sitting
+send the syn
+sends the sequence
+sends sequence number1200
+number1200 it replies
+transmission can start
+termination to terminate
+terminate the connection
+connection either party
+party can close
+close the connection
+connection if connection
+connection is terminated
+data can continue
+full loop-less communication
+communication which means
+side is sending
+side the acknowledgement
+acknowledgement is coming
+initialize the termination
+required to close
+segment announcing connection
+announcing connection termination
+termination this means
+means it sends
+sends the segments
+segments containing fin
+acknowledging the request
+connection is closed
+finished sending data
+data it sends
+segment indicating connection
+indicating connection closure
+sort of allowing
+allowing the termination
+termination of connection
+things to send
+indicating a connection
+connection closure host
+host a acknowledges
+diagram showing four-way
+showing four-way handshaking
+receives the fin
+back an ack
+side is sequence
+sends a fin
+closing the connection
+network is unreliable
+fin is missed
+send the fin
+send this fin
+sending this acknowledgement
+acknowledgement the sender
+sender will assume
+send any ack
+ack any longer
+closed that means
+means no connection
+connection is active
+active or pending
+server is waiting
+incoming call syn
+call syn rcvd
+syn rcvd means
+made a request
+request has arrived
+waiting for acknowledgement
+client has started
+started to open
+open a connection
+connection established means
+means a connection
+normal data transfer
+data transfer state
+transfer state fin
+state fin wait
+finished fin wait
+server has agreed
+agreed to release
+release timed wait
+timed wait means
+wait means wait
+wait for pending
+msl wait state
+last pending packet
+sort of estimated
+trip time closing
+means both sides
+close simultaneously close
+simultaneously close wait
+close wait means
+wait means server
+server has initiated
+initiated a release
+ack is waiting
+syn or syn
+syn plus ack
+ack it receives
+syn rcvd state
+state as explained
+reaches the established
+two way communication
+control is implemented
+implemented by tcp
+tcp this defines
+defines the amount
+amount of data
+data a source
+source can send
+send before receiving
+receiving an acknowledgment
+buffer of data
+data to limit
+limit the amount
+traditional sliding window
+protocol a sliding
+transmission more efficient
+control the flow
+flow of data
+overwhelmed with data
+number or packets
+packets or segments
+sending these bytes
+case the sender
+acknowledgment comes suppose
+buffer the destination
+consuming the data
+suppose the size
+receiver window size
+size the point
+sender may send
+lot of packets
+sender will push
+lot of data
+make the congestion
+reach that side
+buffer has overflowed
+router has dropped
+dropped some packets
+size the window
+effective data transfer
+transfer is taking
+sending two segments
+segments the sender
+acknowledgment comes back
+acknowledgement the packet
+packet will reach
+acknowledgment will travel
+delay now suppose
+suppose the window
+sending each segment
+byte you wait
+minimum possible rate
+rate at witch
+witch the sender
+sender is sending
+large a large
+data transfer speed
+byte its waiting
+send any acknowledgement
+sender will realize
+gap is closed
+put in proper
+sequence because sequence
+protocol is reliable
+acknowledged the window
+sending some packets
+network is congested
+reducing the window
+control the congestion
+built into tcp
+details about congestion
+tcp the sender
+sender window size
+receiver window value
+number of empty
+actual window size
+send a full
+worth of data
+increased or decreased
+destination the destination
+destination can send
+send an acknowledgment
+transport protocol tcp
+protocol tcp delivers
+delivers the entire
+end in order
+order without error
+lost or duplicated
+duplicated so tcp
+tcp provides reliability
+reliability using error
+things that tcp
+detects corrupt segments
+detecting lost segments
+out of order
+detecting duplicated segments
+detected detecting corrupt
+detecting corrupt segments
+correct the error
+segments is achieved
+number is lost
+missing detecting segments
+detect and correct
+lost or delayed
+detection is achieved
+acknowledgement and time-out
+give a time-out
+things together offer
+reliability and error
+detection and correction
+capability of tcp
+correction when time-out
+time-out counter expires
+counter expires segment
+segment is considered
+corrupted or lost
+maintain a number
+number of timers
+timers inside tcp
+lot of work
+work to give
+give that reliability
+unreliable ip service
+sending a file
+file transfer protocol
+transferring a file
+bits will make
+protocols like ftp
+ftp and actp
+connection and absolute
+absolute error control
+nature of communication
+bits or bytes
+carrying a voice
+carrying voice communication
+lost the quality
+kind of communication
+kinds of network
+bits are lost
+delay and differing
+rate of transmission
+size is large
+large the rate
+transmit is high
+size is small
+small the rate
+transmit is small
+transmission is taking
+varying or takes
+takes a lot
+acceptable for voice
+tcp so ftp
+ftp and http
+examples where tcp
+timer and time-waited
+control a lost
+lost or discarded
+discarded segment suppose
+suppose a segment
+segment is lost
+set your retransmission
+immediately the retransmission
+retransmission timer starts
+window size happened
+maintaining this retransmission
+timers is timed-out
+timed-out it means
+retransmit that packet
+retransmission timer tcp
+timer tcp creates
+creates a retransmission
+acknowledgement is received
+timer is destroyed
+segment you start
+means the acknowledgement
+timer is reset
+retransmit the retransmitted
+start the retransmission
+lot of connections
+number of people
+server is sort
+sort of serving
+number of tcp
+process this belongs
+two different networks
+kind of retransmission
+timer when tcp
+receives an acknowledgment
+starts a persistence
+persistence timer window
+timer window size
+sort of wrong
+start a persistence
+sends a special
+sending a packet
+send a probe
+prevents a deadlock
+deadlock from occurring
+occurring in case
+case an acknowledgment
+acknowledgment is lost
+timer that prevents
+prevents long idle
+long idle connections
+suppose two sides
+sides the connection
+closed the connection
+sides are idle
+connection is setup
+communication this keep-alive
+disruption in connection
+client it resets
+resets the timer
+timer and starts
+starts the countdown
+sends a probe
+side is alive
+action to close
+termination when tcp
+closes a connection
+timer times out
+case the last
+terminated the condition
+condition and stopped
+close our discussion
+discussion on tcp
+variance of tcp
+control the window
+discuss congestion control
+congestion control lecture
+modes of operation
+unicast that means
+means one sender
+broadcast which means
+receivers that means
+group of hosts
+multicast communication refers
+refers to one-to-many
+one-to-many or many-to-many
+many-to-many communication unicast
+communication unicast refers
+implementation of multicast
+internet individual hosts
+hosts are configured
+configured as members
+multicast groups multicasting
+group is identified
+class d address
+connection-oriented that means
+packet by packet
+multicasting good day
+good day today
+network and multicasting
+topic for today
+multicast communications refers
+one-to-many and many-to-many
+identified by class
+thing to understand
+source multiple channels
+channels are prairie
+multicast the class
+beginning four bits
+applications like news
+stock and weather
+interested in stock
+group of people
+group of stock
+feed should reach
+reach these people
+people then multicasting
+applied in distance
+material is distributed
+distributed to distance
+group of learners
+areas where multicast
+applied pointcast-type push
+pointcast-type push applications
+applications where push
+source of information
+interesting and important
+application of multicasting
+multicasting that means
+stream should reach
+reach the entire
+distributed interactive gaming
+gaming or simulations
+people are participating
+email distribution lists
+distribution ; software
+web cache updates
+database replication multicasting
+number of applications
+complex the technology
+configured for multicasting
+takes a toll
+routers respectively suppose
+group of machines
+decide to join
+join the multicast
+members may choose
+choose to leave
+group membership protocol
+question of multicast
+internet group management
+group management protocol
+runs between host
+immediately neighboring multicast
+neighboring multicast routers
+multicast routing protocol
+routing protocol running
+hosts and host
+host to router
+types of multicast
+multicasting only supports
+udp as higher
+multicast tcp udp
+connectionless datagram oriented
+datagram oriented protocol
+protocol and tcp
+tcp is connection-oriented
+transport layer protocol
+network layer takes
+layer takes part
+normal routing protocol
+multicast part takes
+part takes care
+multicasting routing protocol
+tcp ip stack
+udp to send
+send multicast messages
+multicast supporting routers
+groups are identified
+class d addresses
+precisely every network
+network interface card
+join or leave
+leave multicast group
+multicast group dynamically
+group which requires
+requires access control
+protocol stands today
+multicasting in actual
+actual practice constitutes
+amount of traffic
+potential true multicasting
+multicasting and simulated
+multicasting but actual
+actual true multicasting
+true multicasting traffic
+configured to support
+group is transmitted
+range of addresses
+means the last
+first range inclusive
+inclusive is reserved
+low level topology
+level topology discovery
+discovery or maintenance
+forward any multicast
+datagram with destination
+examples of special
+special reserved class
+224.0.0.1 really means
+means all systems
+means all routers
+network time protocol
+multicast address translation
+translation you remember
+case of unicast
+data link layer
+out the hardware
+out the ethernet
+ethernet or mac
+address is put
+number of machines
+ethernet mac addresses
+addresses a multicast
+address is identified
+identified by setting
+setting the lowest
+cards can filter
+filter multicast addresses
+addresses in hardware
+done in hardware
+hardware then filtering
+done in software
+accept the packet
+mapping is done
+bits and suppose
+first four bits
+address comes straight
+bits are matched
+first three bytes
+bytes are reserved
+reserved for multicast
+part comes straight
+igmp is defined
+defined in rfc
+single ethernet segment
+router is connected
+segment so igmp
+local multicasting router
+joining a multicast
+membership and send
+send membership reports
+router will send
+host will respond
+segment and number
+router and igmp
+igmp general query
+query that igmp
+igmp group address
+address is set
+groups and destination
+destination ip address
+address is broadcast
+subnet you remember
+224.0.0.1 is broadcast
+subnet and source
+source ip address
+routers ip address
+groups specific query
+case the igmp
+give this query
+group and source
+individual host sends
+sends the reports
+igmp membership report
+report therefore igmp
+address and source
+address is equal
+equal to host
+igmp message format
+version and type
+32-bit group address
+group address type
+host group address
+address on query
+address being reported
+sends an igmp
+joins a multicast
+host can join
+join a report
+leave a group
+traffic any longer
+leave that group
+kind of aging
+group membership list
+router would maintain
+leaves a group
+router regularly multicasts
+multicasts an igmp
+fails to respond
+left the group
+igmp host reports
+sends a report
+joins a group
+leaves the group
+address is group
+address is host
+host ip address
+broadcast and source
+routers sends query
+query at regular
+group queries send
+out each interface
+responds by sending
+sending one response
+part is unused
+network with multiple
+multiple multicast routers
+routers that means
+responds to igmp
+smallest ip address
+network one router
+router forwards multicast
+forwards multicast packets
+two routers connected
+smaller ip address
+topic of multicast
+special in multicast
+support for multicast
+sort of simulate
+multicasting by doing
+doing repeated unicast
+sends the message
+successive unicast done
+packets are packed
+packed into hops
+impose some kind
+kind of access
+support for multicasting
+source will send
+router this router
+duplicate the packet
+link this packet
+number of packets
+minimized a lot
+number of users
+hop count kind
+sense for packets
+requires two things
+send multiple copies
+router is receiving
+sort of users
+packet is supposed
+forwards multiple copies
+packet this capability
+multicast routing algorithm
+routing algorithm builds
+builds a spanning
+spanning tree dynamically
+found this tree
+similar to forming
+forming a routing
+tree for unicast
+differences this tree
+run ip multicasting
+routers are supporting
+goal of multicast
+build a spanning
+graph theoretical problem
+embed the tree
+multicast group members
+members are connected
+form a tree
+shortest path tree
+tree or source-based
+build a tree
+tree that minimizes
+minimizes the path
+central news service
+kind of financial
+financial advisory service
+group of stocks
+stocks this company
+making a source-based
+source-based tree makes
+makes quite lot
+lot of sense
+tree per sender
+members are interacting
+sender is easy
+easy to compute
+routing is happening
+happening through osp
+multicast is sitting
+unicast routing table
+compute the tree
+tree is built
+reverse shortest path
+path or reverse
+reverse path forwarding
+minimizes the total
+sense to make
+make the tree
+minimum total cost
+cost of edges
+kind of solution
+difficult to compute
+keeping one source-based
+expensive to compute
+selects one router
+router as core
+build a shortest
+rendezvous point depends
+good your core
+core based tree
+choose the core
+chosen the core
+details of reverse
+build the tree
+builds a shortest
+fashion by taking
+advantage of unicast
+unicast routing tables
+source this tree
+selects its upstream
+neighbor for forwarding
+forwarding unicast packets
+minimize the path
+sending a message
+two different potential
+two different recipients
+source of multicast
+idea of reverse
+forward a packet
+set up multicast
+multicast routing table
+table in accordance
+accordance from receiver
+receiver to sender
+source and rpf
+routing table entries
+entries for source-based
+arrives the router
+forward one copy
+reach some members
+building a source-based
+set routing tables
+packets that arrive
+arrive on rpf
+non-rpf interfaces receiver
+interfaces receiver drops
+receiver drops packets
+packets not received
+received on rpf
+interfaces these routers
+require the capability
+capability of forwarding
+forwarding multiple copies
+bearing this address
+non-rpf this means
+interface it means
+neighbor is coming
+member ? first
+distributed and dynamic
+system so things
+router is concerned
+packet is dropped
+pruning is sending
+sending a prune
+packet is received
+non rpf interface
+igmp always finding
+members of group
+member has retired
+group that means
+sending your igmp
+local contributor member
+prune has retired
+send a prune
+prune message stating
+send anymore packets
+send the prune
+naturally it drops
+drops this packet
+local member sends
+sends a prune
+message it means
+send the local
+received a prune
+non rpf interfaces
+interfaces that means
+source to distant
+longer a member
+back a prune
+destination that prunes
+prunes this link
+message temporarily disables
+disables a routing
+routing table entry
+removes a link
+cases the prune
+disabling a routing
+entry the question
+reactivate a pruned
+pruned routing table
+reactivate this link
+sending a graft
+graft message disables
+message disables prune
+prune and reactivates
+reactivates the routing
+pruning and grafting
+grafting are complimentary
+prune to disable
+graft to enable
+kind of situation
+communications that means
+sends a join
+message to rpf
+neighbor with respect
+respect to core
+join messages creates
+source sends data
+core forwards data
+source we put
+put a star
+star in place
+links get messages
+mentioned about multicast
+multicast routing protocols
+routers of today
+distance vector multicast
+vector multicast routing
+first multicasting routing
+flood and prune
+prune distance vector
+distance vector routing
+distributed bellman ford
+bellman ford algorithm
+implemented by rip
+rip the centralized
+centralized diesters algorithm
+link state algorithm
+algorithm is implemented
+protocol called ospf
+open shortest path
+recall our discussion
+discussion about routing
+acceptable routing protocol
+extension of ospf
+multicast open shortest
+extensions to ospf
+calculates a shortest
+path tree based
+based on link
+link state database
+pim-sm builds core-based
+builds core-based trees
+distance-vector multicasting routing
+two major components
+conventional distance-vector routing
+distance-vector routing protocol
+protocol for determining
+forward multicast packets
+multicast packets based
+reach the source
+forwarding that means
+rpf neighbor link
+provided the downstream
+dvmrp has limitations
+distance vector protocols
+affected by count-to-infinity
+count-to-infinity and transient
+problem some link
+link has failed
+round and round
+counting of potential
+vector routing transient
+routing transient looping
+transient looping means
+loop may form
+packet goes round
+vulnerable than unicast
+shares the scaling
+limitations of rip
+flat routing domain
+advantages of ospf
+ospf over rip
+ospf we break
+regions or autonomous
+routing problem remains
+problem remains simpler
+scale to bigger
+bigger and bigger
+networks since dvmrp
+dvmrp is based
+based on rip
+ideas of rip
+problem in dvmrp
+state in routers
+flooding the network
+kind of broadcast
+network grows bigger
+broadcast becomes unacceptable
+problem in scaling
+senders many small
+groups also undesired
+forms a source-based
+number of groups
+problem of maintaining
+limitation for scaling
+effort to implement
+essentially an overlay
+routers using dvmrp
+places are multicast-capable
+locality that means
+connected these routers
+run a multicasting
+cloud of routers
+multicast supporting router
+routers they support
+mbone is shown
+shown in light
+multicast supporting node
+multicasting they tunnel
+method for sending
+sending multicast packets
+packets through multicast-ignorant
+packet is encapsulated
+unicast ip packet
+encapsulation and tunneling
+act like virtual
+virtual point-to-point link
+header that means
+means the unicast
+unicast routing header
+tunnel endpoint recognizes
+endpoint recognizes ip-in-ip
+de-capsulate the datagram
+datagram for processing
+configured with unicast
+done to implement
+routers namely dmrp
+sort of networked
+networked and people
+groups will explode
+difficult for routers
+routers to handle
+kind of technology
+controlling the network
+network and making
+making the machines
+talk about dhcp
+dhcp and icmp
+dynamic host configuration
+host configuration protocol
+configuring a host
+configuring a machine
+utility are dhcp
+addresses is desirable
+reasons computer networks
+networks prof s.ghosh
+prof s.ghosh dept
+keeping machines connected
+dhcp is dynamic
+addresses the dynamic
+assigned on demand
+scarcity for real
+real ip addresses
+line it assigns
+addresses are withdrawn
+machines another place
+ras or remote
+remote access server
+connected via dial
+dial up connections
+case you give
+temporary ip address
+visit some network
+assigned ip addresses
+addresses are assigned
+demand it avoids
+manual ip configuration
+prone to errors
+mobility of laptops
+addresses is done
+usage a bootp
+reverse arp address
+arp address resolution
+address resolution protocol
+protocol the problem
+mac addresses finding
+finding the mac
+finds ip address
+disclosed work station
+station which boosts
+boosts the signal
+network a disclosed
+typically used rarp
+broadcast a request
+mac address rap
+address rap server
+rap server responds
+assigns ip address
+address to mac
+arp and ethernet
+ethernet mac address
+version of rarp
+rarp i.e bootp
+i.e bootp bootp
+assigns ip addresses
+host can configure
+configure ip parameters
+parameters at boot
+address assignment detection
+loaded and executed
+client machine i.e
+i.e the boot
+bootstrap protocol i.e
+machine is booting
+protocol or bootp
+requires for communication
+message so udp
+server and udp
+host is required
+out a machine
+machine from bootstrap
+limited broadcast address
+discussion about addresses
+broadcast is limited
+subnet or network
+downloading memory image
+image for diskless
+motivation for rarp
+done through bootp
+address to hosts
+hosts is static
+sort of drawback
+drawback of bootp
+make it dynamic
+versatile than rarp
+rarp and bootp
+lot of things
+extension of bootp
+similarities to bootp
+numbers as bootp
+server can handle
+lots of extensions
+extensions support temporary
+support temporary allocation
+allocation or leases
+people are dialing
+demand the lease
+dynamic dhcp client
+client can acquire
+mask and gateway
+kinds of parameters
+mechanism for dynamic
+addresses and dhcp
+dhcp can interoperate
+interoperate with bootp
+number of options
+things like subnet
+dhcp message type
+number of services
+important to give
+give more information
+originally the machine
+two computers suppose
+centralized print service
+kinds of services
+require some kind
+kind of configuration
+number of dhcp
+client can start
+renewing a lease
+lease has expired
+expired if dhcp
+dhcp server sends
+server sends dhcpnack
+address is released
+client has released
+dhcp message header
+message header fields
+server the dhcp
+option the hardware
+type of message
+ethernet and hardware
+hardware address length
+ethernet hop count
+count is set
+client and transaction
+reply to response
+number of seconds
+started to boot
+client ip address
+server ip address
+gateway ip address
+client hardware address
+sends the request
+fields are left
+left blank dhcp
+blank dhcp server
+server will pick
+broadcast it back
+dhcp message types
+dhcpdiscover dhcpoffer dhcprequest
+dhcpoffer dhcprequest dhcpdecline
+dhcprequest dhcpdecline dhcp
+dhcpdecline dhcp acknowledge
+dhcp acknowledge dhcp
+dhcp not acknowledge
+acknowledge dhcprelease dhcpinform
+topic is icmp
+icmp internet control
+internet control message
+control message protocol
+protocol ip protocol
+effort delivery service
+service it lacks
+lacks error control
+control and lack
+lack of assistance
+ore other nodes
+packets and packets
+reach its destination
+errors do occur
+control the network
+icmp was brought
+router must discard
+discard a datagram
+find a route
+predetermined time limit
+discard a packet
+reached the destination
+protocol also lacks
+lacks a mechanism
+mechanism for host
+host and management
+queries so icmp
+icmp was designed
+designed to compensate
+type of icmp
+queries or errors
+errors code field
+occurs it tells
+tells what kind
+kind of error
+verify the integrity
+checksum is included
+included to control
+control the error
+types of icmp
+error reporting type
+query another type
+effort in icmp
+icmp to correct
+correct the errors
+reports the errors
+errors the error
+suppose the datagram
+drops that packet
+send an icmp
+types of errors
+errors in error
+source quench sending
+sending to first
+problem or redirection
+icmp error message
+generated in response
+carrying an icmp
+message that means
+generated an icmp
+generate another icmp
+bit of problem
+problem happens due
+due to congestion
+congestion of networks
+congested many packets
+response to dropping
+dropping many packets
+packets you generate
+generate more packets
+icmp error messages
+trigger other icmp
+set of fragment
+number of parts
+generate an icmp
+messages are generated
+section that includes
+bytes of data
+datagram this information
+information is required
+source can inform
+inform the protocols
+back this icmp
+packet was generated
+error messages due
+due to network
+process or application
+message the host
+process it relates
+transport layer header
+icmp message .this
+message .this information
+route a datagram
+deliver a datagram
+case the destination
+destination is unreachable
+unreachable a router
+detect all problems
+preventing the delivery
+attempt to implement
+implement some kind
+kind of flow
+control ip protocol
+flow control routers
+routers and hosts
+hosts have limited
+limited size queues
+flood of packets
+processed and forwarded
+packets keep coming
+buffer might overflow
+case the router
+drop those packets
+packets this router
+network to slow
+flow of packets
+sends the source
+source quench icmp
+quench icmp message
+sources if datagram
+datagram is received
+processed the queue
+queue may overflow
+case it asks
+asks the network
+router or host
+discards a datagram
+congestion it sends
+sends a source
+source quench message
+sender the source
+source must slow
+sending of datagram
+congestion is relieved
+reduce the amount
+turn generate network
+generate network congestion
+source quench packet
+congestion might travel
+finally it reaches
+reaches the source
+receives a datagram
+round the network
+network it discards
+discards the datagram
+datagram and sends
+discards the received
+fragments and sends
+two different cases
+fragments and send
+keeping a time-to-leave
+field and decrementing
+important because suppose
+network and due
+tables a loop
+round at infinite
+burden the network
+number of hops
+hops the packet
+ambiguity is found
+datagram the datagram
+datagram is discarded
+parameter problem message
+host usually starts
+small routing table
+augmented and updated
+tools to accomplish
+helps in routing
+diagnose some network
+solicitation and advertisements
+echo request message
+host or router
+router an echo
+echo reply message
+router which receives
+receives an echo
+message the echo
+request and echo
+managers to check
+check the operation
+protocol echo request
+message can test
+test the reachability
+done by invoking
+invoking the ping
+details of ping
+kind of command
+reach your destination
+ping that gateway
+ping the router
+probing the network
+request and timestamp
+timestamp reply messages
+calculate the round-trip
+value of receiving
+receiving time stamp
+stamp minus value
+value of original
+original time stamp
+returned ? value
+value of transmit
+transmit timestamp round-trip
+timestamp reply message
+synchronize two clocks
+one-way time duration
+enables a host
+host to request
+request and receive
+receive the network
+network or subnetwork
+stations at start
+solicitation and advertisement
+request of routing
+periodically send router
+send router advertisements
+suppose a router
+run the routing
+rip or bgp
+router gets connected
+slowly the entire
+network becomes aware
+things may happen
+exchange of router
+router discovery message
+host can learn
+networks host send
+send the router
+router solicitation message
+message to begin
+begin the process
+message in case
+case a router
+accept multicast messages
+receives the message
+icmp the checksum
+checksum is calculated
+control over errors
+software may require
+require time synchronization
+synchronization so icmp
+icmp time stamp
+stamp message combats
+combats this problem
+host using icmp
+icmp timestamp request
+host uses icmp
+synchronizing the clocks
+ping and traceroute
+icmp messages ping
+messages ping sends
+sends an icmp
+host and lets
+lets you determine
+host is responding
+responding actually ping
+echo and echo
+icmp message traceroute
+traceroute uses ttl
+fields to query
+query all hosts
+traceroute to map
+map a network
+network that means
+ping is named
+named after sonar
+sonar in sonar
+probe some place
+place you send
+send an ultra
+ultra sound signal
+send an echo
+request you expect
+expect an echo
+server normally implemented
+implemented in kernel
+kernel uses icmp
+echo reply messages
+messages on unix
+unix the identifier
+field is set
+set to unix
+pid or sending
+sending process sequence
+process sequence numbers
+sequence numbers starts
+ping a machine
+sending one request
+sends echo request
+percent of packet
+loss or forty
+suppose we ping
+pinged this machine
+packet it receives
+print a line
+received which means
+output sequence number
+number are shown
+returned in order
+lost some packets
+order also ttl
+field of return
+message is displayed
+displayed and round-trip
+bandwidth using ping
+hops your ping
+work the ping
+packet can estimate
+estimate the bandwidth
+byte ip header
+byte icmp header
+total datagram size
+kind of bandwidth
+case the bandwidth
+kind of feel
+record route option
+ping implementations provide
+implementations provide record
+provide record route
+option on linux
+option on windows
+windows each router
+stores its address
+trace the route
+number of addresses
+route or map
+map the network
+sequence of icmp
+messages to determine
+determine the current
+iterative fashion suppose
+send a message
+time-to ? live
+drop the packet
+destination after increasing
+increasing the time-to-live
+pass that router
+dropped the packet
+increasing the time-to-leave
+trace the entire
+map it out
+reaches the destination
+randomly selected port
+port is unreachable
+traced the entire
+destination the ttl
+specifies the number
+hops a message
+message can travel
+travel trace route
+trace route sends
+route sends udp
+sends udp datagrams
+datagrams while varying
+varying the ttl
+ttl the router
+router that drops
+drops the udp
+packet now replies
+exceeded icmp message
+port icmp message
+reached the end
+reference about icmp
+control message protocols
+protocols like dhcp
+running the network
+fashion arp protocol
+low level protocol
+bootp and dhcp
+dhcp for assigning
+assigning a network
+network this icmp
+helps in controlling
+operation and giving
+giving error messages
+class namely igmp
+part of routing
+dns & directory
+directory good day
+dns and directory
+talk about dns
+form for domain
+domain name system
+kinds of addresses
+case of ethernet
+layer for direct
+address includes information
+part and post
+addresses are tough
+tough for humans
+humans to remember
+part of address
+remember ip addresses
+difficult for human
+beings to remember
+impossible to guess
+guess humans find
+easier to remember
+domain names domain
+names domain names
+surfing the web
+out some guesses
+combination of .com
+.com or .net
+remember we remember
+machine or site
+domain names today
+local area network
+network you require
+addresses to mac
+reverse mac address
+done by rarp
+mechanism for mapping
+mapping the domain
+point of failure
+distant centralized database
+address mapping local
+local name servers
+company has local
+default name server
+server and host
+local name server
+authoritative name server
+hosts ip address
+names can perform
+perform name address
+root name servers
+biggest name servers
+user to communicate
+nslookup and give
+nslookup comes nslookup
+servers handle requests
+domain directly servers
+directly servers handle
+servers handle request
+domains by contacting
+contacting remote dns
+remote dns servers
+dns servers servers
+servers servers cache
+servers cache external
+cache external mappings
+find the address
+hostname it asks
+asks the root
+server the root
+server to contact
+contact a request
+server and request
+domain name translation
+level namely ernet
+administering that domain
+suppose from india
+root name server
+sever to contact
+lightweight directory access
+directory access protocol
+osi this x.500
+layer osi layer
+osi layer stack
+x.500 directory service
+x.500 and ldap
+protocol it supports
+supports x.500 interface
+require the osi
+tcp ip protocol
+generic addressing interface
+interface like netscape
+ldap or lightweight
+protocol for querying
+querying and modifying
+modifying directory services
+directory services running
+running over tcp
+tree of entries
+set of named
+attributes with values
+values an ldap
+directory often reflects
+reflects various political
+organizational boundaries depending
+define your security
+security policies based
+directory and based
+tree of directory
+entries an entry
+set of attributes
+attributes an attribute
+values the attributes
+attributes are defined
+stack for ldap
+directory based application
+tls this tls
+tls is transport
+transport level security
+talking a lot
+lot about security
+security in future
+give one lecture
+lecture to security
+context a directory
+entire security arrangement
+security arrangement security
+ldap implementations support
+support this tls
+tls the transport
+ssl or sasl
+sasl also computers
+computers networks prof
+networks prof sujoy
+prof sujoy ghosh
+sujoy ghosh indtan
+ghosh indtan institute
+institute of technology
+technology iit kharagpur
+addresses one kind
+kind is mac
+points the end
+address is tough
+address of gateway
+address of mail
+guess what human
+human beings find
+people for surfing
+make some combination
+easier for humans
+remember site names
+require a mapping
+mac addresses done
+reverse mac addresses
+addresses using rarp
+scheme of dns
+translate a host
+domain names comprise
+comprise a hierarchy
+names are unique
+easy to remember
+important to remember
+high speed computations
+session this means
+unique what people
+make a hierarchy
+hierarchy of names
+hierarchy which corresponds
+make them unique
+unique yet easy
+top level domain
+kinds of organizations
+sequence of labels
+separated by periods
+bytes to code
+code these names
+started in usa
+government and whitehouse.gov
+level domain standing
+standing for india
+india and ernet
+dns hierarchy tree
+giving a label
+level we put
+put a dot
+labels that lead
+worldwide naming tree
+subtree under ernet
+sequence of names
+names are case
+fully qualified domain
+.gov for government
+government and .mil
+.mil for military
+military are us-specifications
+means us government
+history of internet
+world has embraced
+top level domains
+recently been proposed
+system is required
+required to map
+map the domain
+mac or rarp
+rarp for mac
+system to map
+distributed database implemented
+implemented in hierarchy
+centralized database centralized
+database centralized database
+difficult to administer
+handle the network
+central name server
+application-layer protocol host
+combine and communicate
+communicate to resolve
+core internet function
+function is implemented
+implemented as application-layer
+protocol o complexity
+complexity at network
+domain name servers
+resolvers and stub
+application to resolve
+names into real
+ip-addresses or vice
+type a domain
+client application program
+program for http
+calls the resolver
+resolver to translate
+translate these domain
+addresses the browser
+browser will send
+send the http
+forwards all queries
+server for processing
+responses are cached
+server for future
+server the local
+local full resolver
+host may connect
+resolver the full
+send the request
+request to foreign
+foreign name servers
+give a response
+response the full
+resolver also maintains
+maintains a cache
+cache this response
+request to resolve
+cache and give
+give the response
+user name server
+server also maintains
+program which forwards
+forwards the queries
+cache but stub
+full resolver runs
+resolver is implemented
+two library routines
+converting host names
+addresses and vice
+sends the query
+response and passes
+naturally the user
+organization that owns
+owns a domain
+responsible for running
+provide the mapping
+mapping between hostnames
+organization like rpi
+rpi is responsible
+typically a number
+number of secondary
+severs containing replicated
+important to understand
+effort to control
+domain now .in
+resolution query coming
+world will direct
+direct their query
+maintaining the domain
+forward the query
+sub domain ernet
+domains to iitkgp
+domains but ernet
+organization under ernet
+iitkgp to decide
+break this domain
+entire domain administration
+administration is decentralized
+kind of addresses
+names are broken
+broken into names
+names which stand
+stand for actual
+administering a domain
+automatically become distinct
+address mappings local
+host dns query
+dns query first
+stores that hosts
+perform name translation
+servers the root
+server a request
+contact dns queries
+server – server
+server is asked
+asked to provide
+asks the nameserver
+nameserver to provide
+provide the host
+find the right
+recursion is desired
+tells the server
+server to find
+out the answer
+possibly by contacting
+contacting other servers
+servers to contact
+server and iterative
+recursion is requested
+directly to find
+local names server
+server may send
+request for recursion
+shot when recursion
+caching and updating
+updating of records
+server learns mapping
+mechanisms under design
+design by ietf
+hostname and value
+common one type
+domain and value
+address of authoritative
+type = cname
+value is canonical
+mail server records
+dns message format
+alternative name server
+reply to query
+number of flags
+identifying a query
+kind of query
+values are reserved
+reserved for future
+answer that means
+switches from udp
+udp to tcp
+udp and tcp
+tcp for transfers
+transfers of entire
+database to secondary
+udp for lookups
+lookups the lookups
+udp protocol udp
+protocol udp protocol
+extra over head
+response to udp
+requester resubmits request
+request using tcp
+message is truncated
+truncated the flag
+sees the flag
+flag it opens
+opens a tcp
+resubmits the request
+discussed the administration
+independent independent means
+universities have departmental
+zone must provide
+multiple name servers
+servers this server
+records the members
+primary name server
+secondary name servers
+secondary retrieves information
+information from primary
+connection the reason
+secondary name server
+server is required
+create extra sub
+extra sub domains
+fails the secondary
+primary will cache
+cache the data
+secondary can start
+bound to give
+servers and good
+good network connection
+connection to handle
+sort of weak
+protection against spoofing
+ptr i.e ptr
+query for lookup
+arp and rarp
+query and reverse
+mechanism to avoid
+dynamic ip address
+reflected so sendmail
+message to identify
+identify the sender
+sender and receiver
+easily be spoofed
+spams are mails
+millions of people
+responsibility to relay
+address this mail
+send a reverse
+query by reverse
+accept the mail
+secure because hosts
+network can spoof
+spoof ip headers
+headers of domains
+sort of respectable
+manages the in-addr
+in-addr arpa space
+responsible for handling
+handling the in-addr.arpa
+dns maps domain
+maps domain names
+names to specific
+specific ip addresses
+stored on disk
+means you connect
+connection for doing
+doing a dynamic
+dynamic dns update
+sort of update
+connection to update
+update the dns
+topic of directories
+similar to dns
+mails and email
+global address book
+find the email
+intention for creating
+creating the directory
+people who produce
+produce spam mails
+mails have sort
+sort of killed
+killed this idea
+send junk mails
+explicit access protocols
+protocols o support
+support relatively complex
+complex queries dns
+queries dns queries
+queries are simple
+supports relatively complex
+assuming that email
+people who live
+live in delhi
+notions of tabular
+originally how directory
+directory was envisaged
+global white pages
+pages o lookup
+developed by telecom
+standard for osi
+idea was distributed
+directory o application
+application uses distributed
+distributed directory structure
+structure o application
+application uses directory
+directory user agent
+agent to access
+access a directory
+directory access point
+connects an access
+find a resource
+resource o information
+information about resource
+names for constructing
+constructing the names
+names recalling names
+resource may move
+move o change
+change in location
+location may change
+requirements o human
+directory information base
+structure o root
+directory o levels
+levels are groups
+structure o unique
+unique name build
+build from tree
+tree o attributes
+pairs o schema
+schema enforces type
+enforces type rules
+top may represent
+represent some organizations
+series of type
+type value pairs
+number of attribute
+x.501 tree structure
+x.511 o query
+entry o compare
+match a set
+entry o search
+kinds of queries
+modify these records
+records – add
+entry o modify
+modify distinguished names
+directory system agent
+requests from user
+system with dissolvers
+system using directory
+directory system agents
+forward the request
+handle the request
+iterative and recursive
+queries in dns
+defined in x.509
+x.509 o access
+access control defined
+give you security
+components in order
+order to ensure
+standards specify basic
+basic access control
+control and individual
+defined in x.525
+replicated to multiple
+primary or master
+two replication schemes
+demand o shadow
+agreed in advance
+required to enforce
+enforce access control
+modification is done
+out of date
+number of protocols
+defined in x.519
+access protocol means
+means the structure
+directory system protocol
+directory information shadowing
+information shadowing protocol
+protocol o dsa-dsa
+dsa-dsa with shadowing
+directory operational binding
+operational binding management
+binding management protocol
+look-up o attributes
+humans can construct
+construct likely names
+pages o aliases
+defined that means
+number of members
+access protocol designed
+people who designed
+designed osi x.500
+heavy and intuits
+intuits the osi
+layer osi stack
+protocol o supports
+interface o doesn
+netscape address book
+set named attributes
+attribute values pair
+service or access
+ldap we require
+tls transport level
+tcp tcp sits
+ldap protocol version
+starts the process
+protect the connection
+connection with transport
+transport layer security
+giving some access
+access to information
+put some security
+retrieve directory entries
+delete an entry
+modify an entry
+move or rename
+rename an entry
+abort a previous
+define other operations
+inverse of bind
+roughly some operations
+operations in lightweight
+notion of security
+protocol is comprised
+identity and authentication
+claiming to identity
+confidentiality is important
+change the data
+log or audit
+changed this data
+applications to maintain
+maintain some signature
+thing this means
+organizations in access
+access control user
+user these identity
+nativity and authorization
+kind of accesses
+four security axes
+context of anticipated
+equal to access
+typical security features
+features of ldap
+simple password based
+password based authentication
+ssl is secure
+secure socket layer
+layer and tls
+issues the idea
+context of specific
+day the topic
+today is congestion
+performance of computer
+large extent depends
+network namely data
+network or internet
+content are coming
+packet based network
+large data network
+effort of delivering
+delivering a packet
+handle the congestion
+packets are pumped
+system congestions occurs
+congestions occurs leading
+leading into degradation
+degradation of performance
+give selective acknowledgement
+packet per round-trip
+round-trip time selective
+receiver can acknowledge
+acknowledge non continuous
+non continuous blocks
+blocks of data
+data which means
+means sack selective
+sack selective acknowledgement
+enters fast recovery
+acks o sender
+sender keeps track
+track of sacks
+sacks and infers
+infers if segments
+segments are lost
+lost sender retransmits
+list of segments
+kinds of heuristics
+heuristics to improve
+improve the performance
+performance of tcp
+two competing demands
+maximize the throughput
+job done faster
+order to push
+push this maximum
+absolutely no congestion
+flavors of tcp
+tcp for doing
+engineering this means
+shape or handle
+handle your traffic
+build to give
+quality of service
+network at routers
+depend on packet
+classification and packet
+scheduling at network
+conditioning at routers
+control between hosts
+hosts and routers
+components of qos
+qos network computer
+network computer networks
+computer networks prof.sujoy
+networks prof.sujoy ghosh
+prof.sujoy ghosh department
+department of computer
+science and engineering
+computer network depends
+network or inter
+contents are coming
+congestion occur leading
+backs up congestion
+congestion shows lack
+lack of balance
+congestion may happen
+packets being pumped
+node or channel
+pumping in packets
+destinations the problem
+outstrips available capacity
+basically the congestion
+problem and added
+general queuing theory
+simple queuing theory
+rate and service
+general the statistics
+data networks follow
+traditionally telecom networks
+networks would follow
+follow some poisson
+distribution with exponential
+traffic or heavy
+heavy tail distribution
+features is bustiness
+bustiness that means
+comparatively long quotient
+long quotient period
+location where control
+problem is solved
+require a distributed
+varying time delays
+makes the problem
+kind of throughput
+throughput versus load
+versus load curve
+increases the throughput
+increase any longer
+increase the load
+slowly and delay
+delay increases fast
+increases fast cliff
+starts to decrease
+decrease very fast
+collapse and delay
+follow this kind
+plot the delay
+delay is low
+beginning and starts
+lots of packet
+collapses the delay
+talk about congestion
+control whose goal
+left of cliff
+cliff that means
+congestion collapse congestion
+collapse congestion avoidance
+right of cliff
+congestion collapse region
+goal of congestion
+guarantee stable operation
+operation of packet
+avoid congestion collapse
+low delay high
+delay high utilization
+systems with insufficient
+provide fair allocation
+allocation of network
+bandwidth among competing
+flows in steady
+kind of fairness
+lot of packet
+running a tcp
+starts getting pushed
+tend to push
+push more packets
+kinds of scenario
+open loop policies
+network with csmacd
+detected a collision
+persistent or non
+receive a packet
+order acknowledgement policy
+packet also takes
+takes up resources
+acknowledge every packet
+lot of acknowledgement
+flow control policy
+control in tcp
+details and variations
+virtual circuit versus
+circuit versus datagram
+qos and multimedia
+multimedia communication suppose
+exchanging a lot
+packets are flowing
+direction so lot
+give a premium
+pair of nodes
+packets and assume
+form some kind
+kind of virtual
+points in order
+order to distinguish
+difficult to distinguish
+distinguish the flow
+two specific nodes
+specific nodes virtual
+nodes virtual circuit
+detail packet queuing
+queuing and service
+service policy means
+router a number
+packet discard policy
+buffer becomes full
+drop ? routing
+kind of routing
+packet lifetime management
+means the lifetime
+drop the packets
+discussing about open
+open loop polices
+closed loop control
+control this means
+monitoring the system
+system to detect
+congestion is occurring
+pass the information
+information to places
+places where actions
+adjust system operation
+operation to correct
+correct the problem
+identify the chief
+sources of trouble
+handle a lot
+send a feedback
+control this behavior
+behavior by sending
+sending less number
+adjust some system
+size in tcp
+kind of thing
+close loop control
+metrics for measuring
+congestion some examples
+examples are percentage
+packets discarded due
+due to lack
+lack of buffer
+measure average queue
+average queue length
+average and standard
+deviation of packet
+congestion is taking
+action in order
+order to prevent
+prevent the performance
+router on sensing
+sensing congestion sends
+sends a control
+source a bit
+reserved to announce
+announce congestion explicit
+congestion explicit probe
+explicit probe packets
+congestion implicit algorithms
+implicit algorithms make
+make only local
+adjusting system operations
+system operations adjust
+adjust time constants
+optimal value decrease
+decrease the load
+threshold increase resources
+aspect of congestion
+done by tcp
+tcp congestion control
+sender can send
+wait for acknowledgements
+acknowledgement the window
+tcp since tcp
+protocol and application
+lot of important
+carried on tcp
+tool for doing
+doing any congestion
+control by tcp
+adjusting the window
+mechanism for congestion
+control the mechanism
+mechanism is implemented
+sender the sender
+variable called cwnd
+cwnd and slow
+slow start threshold
+start threshold value
+variable called ssthresh
+advertised window size
+advertisement of window
+initial ssthresh value
+congestion control works
+phase is slow
+slow at start
+ssthresh and congestion
+congestion avoidance means
+means that cwnd
+value is greater
+greater than equal
+equal to ssthresh
+left of knee
+knee but left
+stress to increase
+knowing initial values
+slow start i.e
+start i.e set
+i.e set cwnd
+bit of information
+segment size i.e
+based on bytes
+bytes and increments
+sends an acknowledgement
+receiver must acknowledge
+send an acknowledgement
+generally a tcp
+tcp receiver sends
+ack is received
+window is increased
+decides that things
+increase in congestion
+congestion window size
+cwnd = cwnd
+acknowledges two segments
+two segments cwnd
+segment that means
+ack it increases
+onlys one segment
+segments then cwnd
+cwnd is increased
+reason to acknowledge
+decrease the number
+number of acknowledgements
+acknowledges a segment
+smaller than mss
+bytes long cwnd
+ack you increase
+slow start phase
+increase of cwnd
+cwnd is exponential
+window size grows
+rises very rapidly
+ack we increase
+number of segments
+cwnd when cwnd
+cwnd > ssthresh
+sends one segment
+segment it receives
+receives one acknowledgement
+send two segments
+two and segment
+back the acknowledgement
+acknowledgement for segment
+two and acknowledgement
+increasing quiet fast
+acknowledgements therefore cwnd
+cwnd is increasing
+congestion avoidance phase
+phase is started
+started if cwnd
+cwnd has reached
+reached the slow
+smaller than cwnd
+fraction while sending
+send a fraction
+current cwnd value
+acknowledged that means
+assume that ssthresh
+cwnd is first
+first increased exponentially
+exponentially it reaches
+reaches the ssthresh
+detects a packet
+response to congestion
+congestion ? tcp
+loss a tcp
+sender can detect
+detect a lost
+timer or receipt
+duplicate ack duplicate
+ack duplicate ack
+dropped it means
+ways to respond
+interprets a time-out
+binary congestion signal
+signal which means
+sender performs cwnd
+ssthresh is set
+half the current
+congestion window ssthresh
+cwnd before sending
+value you divide
+two and make
+value and enter
+enter the slow
+cwnd is equal
+ssthresh = advertised
+size new acknowledgement
+cwnd < ssthresh
+congestion avoidance cwnd
+multiplicative decrease i.e
+decrease i.e ssthresh
+ssthresh = cwnd
+plot of cwnd
+flavor of tcp
+increasing while things
+things are good
+acknowledgement congestion avoidance
+avoidance that means
+ssthresh it increases
+slowly fast retransmit
+retransmit in tcp
+version of tcp
+acknowledgements in tcp
+receiver sends acknowledgement
+control and congestion
+control in error
+send a retransmit
+retransmit in congestion
+control we find
+find that ack
+controlling this ack
+sequence number expected
+number expected delayed
+expected delayed ack
+receiver normally delays
+packets to arrive
+send less number
+delayed when packets
+out of sequence
+out of ordinary
+two different paths
+delay the ack
+ack but send
+send it immediately
+acks are received
+tcp sender believes
+lost this means
+meaning some earlier
+timeout to occur
+performs a retransmission
+segment without waiting
+timeout to happen
+enters slow start
+start that means
+means it brings
+decrease of ssthresh
+ssthresh and sets
+sets the cwnd
+recovery the slow
+start is avoided
+retransmit that means
+fast retransmit intuition
+retransmit intuition duplicate
+intuition duplicate acks
+duplicate acks set
+acks set retransmit
+set retransmit lost
+retransmit lost packet
+i.e decrease ssthresh
+half so ssthresh
+cwnd but cwnd
+enter congestion avoidance
+avoidance so increment
+additional duplicate ack
+enter the congestion
+tune the performance
+throughput without causing
+causing any congestion
+congestion when ack
+arrives that acknowledges
+acknowledges new data
+cwnd = ssthresh
+recovery fast recovery
+fast recovery avoids
+recovery avoids slow
+avoids slow start
+time-out you retransmit
+slow start tcp
+start tcp reno
+tcp reno improves
+improves upon tcp
+packets are dropped
+tcp new reno
+reno has problems
+problems partial ack
+occurs when multiple
+packets are lost
+lost a partial
+partial ack acknowledges
+out of fast
+recovery the sender
+wait until time-out
+reno partial ack
+fast recovery partial
+recovery partial ack
+ack causes retransmission
+segment new reno
+reno can deal
+deal with multiple
+multiple lost segments
+give an acknowledgement
+selective acknowledgement stating
+data that means
+single segment tcp
+segment tcp sack
+tcp sack enters
+duplicate acks sender
+list of segment
+lost like fast
+looked at tcp
+engineering that means
+give a quality
+depend on traffic
+traffic conditioning mechanisms
+enforce that traffic
+kind of specifications
+kinds of things
+people may agree
+parameters but suppose
+negotiated certain parameters
+traffic that violates
+violates the specifications
+specifications the specification
+sender shaping means
+means the buffer
+violates specifications marking
+specifications marking means
+marking means mark
+means mark packets
+specification is violated
+traffic shaping first
+shaping first regulating
+regulating the average
+rate of data
+transmission allows control
+algorithms to work
+network specifically data
+specifically data networks
+networks or internet
+inherently very bursty
+bursty in nature
+design your buffer
+peak or doing
+peak everything works
+make the burstiness
+system will work
+traffic is related
+statistics about data
+data transfer rates
+sensitivity to error
+leaky bucket algorithm
+single server queue
+constant service rate
+drop by drop
+drop that means
+pumping the data
+network the burst
+flow a steady
+steady average kind
+algorithm in short
+implemented in hardware
+hardware or software
+slots are written
+service and finds
+buffer is empty
+send one packet
+packet the algorithm
+algorithm can work
+packets only problem
+inherently bursty traffic
+bit of burstiness
+improves the throughput
+kinds of burstiness
+burstiness will flow
+difficult to handle
+limits the input
+linear bounded arrival
+bounded arrival process
+arrival process excess
+process excess traffic
+tokens are generated
+bucket the underutilized
+slots were written
+collect and accumulate
+longer time average
+average is helpless
+number of tokens
+accumulate tokens anymore
+burstiness is allowed
+amount of burstiness
+improve the throughput
+maximum a variant
+bytes per token
+regulated maximum length
+tokens a leaky
+bucket may follow
+follow a token
+order to make
+tokens are removed
+kinds of traffic
+network service provider
+maximum packet size
+size that defines
+defines how big
+big the packet
+token bucket rate
+rate is token
+token bucket size
+bucket size defines
+defines how burst
+maximum transmission rate
+transmission rate tells
+exact maximum transmission
+flow very sensitive
+sensitive to losses
+doing some file
+sending some voice
+sensitive loss interval
+burst loss sensitivity
+packets minimum delay
+minimum delay noticed
+maximum delay variation
+important for multimedia
+multimedia traffic quality
+specifications of services
+control and signaling
+function that decides
+admit new flow
+reject the flow
+reservation of capacity
+protocol like rsvp
+reserve the capacity
+distributed admission control
+central admission control
+end to end
+travels some reservation
+signal it calculates
+calculates the delay
+accept it send
+send reject message
+message to sender
+sender and release
+commit resource reservation
+reservation and notify
+reserve and release
+reserve one mbps
+control in virtual
+circuits one approach
+approach is admission
+negotiate flow specification
+vcs are set
+resource like buffer
+topic we mentioned
+tcp ip source
+mechanism for handling
+congestion each router
+monitors each output
+line and calculates
+calculates the utilization
+sum of current
+current and past
+threshold a choke
+packet is tagged
+receiving a source
+source choke packet
+packet the source
+source is supposed
+supposed to reduce
+reduce the traffic
+congestion is detected
+detected the source
+source is sort
+sort of distributed
+send this feedback
+multiple choke packets
+choke packets coming
+ripples of congestion
+routers sending choke
+sending choke packets
+packets so multiple
+packet for high
+high speed lines
+lot of hops
+packets may operate
+hop by hop
+distributing the pressure
+pressure on buffers
+buffers these choke
+choke packets add
+hop thus distributing
+done by deciding
+packet to send
+send on output
+output interface suppose
+router or network
+packets are coming
+classify these packets
+kind of services
+scheduler which schedules
+flows in general
+typical internet queuing
+fifo + drop
+fifo ? fifo
+first in first
+widely in internet
+internet this first
+first out implies
+out implies single
+implies single class
+class of traffic
+first for servicing
+servicing this fifo
+tail which means
+means the arriving
+packets get dropped
+dropped when queue
+queue is full
+flow it belongs
+buffer is full
+discipline and drop
+management this means
+buffer gets full
+buffer management policies
+buffer management policy
+hand with hand
+flow is convoluted
+arrivals of packets
+isolation between flows
+send more packets
+lose some packets
+sense it favors
+important but sends
+sends less number
+lesser service compared
+lots of packets
+issue with fifo
+routers are forced
+queues to maintain
+maintain high utilizations
+problem larger buffer
+larger buffer implies
+buffer implies larger
+implies larger steady
+larger steady state
+steady state queues
+queues or delays
+end hosts react
+events because packets
+lost in bursts
+acting in unition
+effect of burstiness
+burstiness and synchronization
+flows can monopolize
+monopolize the queue
+class may depend
+depend on explicit
+source or destination
+tcp port numbers
+transmit a packet
+highest priority class
+non empty queue
+preemptive and non
+non preemptive versions
+kind of scheduling
+classify arriving packets
+classification and packets
+packets are transmitted
+transmitted in order
+order to meet
+meet the qos
+class a service
+class b services
+services and class
+class c services
+attach different priorities
+queues and serve
+router must implement
+implement some queuing
+queuing discipline queuing
+discipline queuing allocates
+queuing allocates bandwidth
+bandwidth and buffer
+tells which packet
+packet to serve
+buffer space tells
+packet to drop
+queuing also affects
+weighted fair queuing
+fair queuing router
+queuing router maintains
+router maintains multiple
+maintains multiple queues
+source the queues
+queues are serviced
+round robin fashion
+packets the volume
+examined and packets
+finishing some sources
+give a greater
+population is low
+bits in header
+branded as cos
+cos lower delay
+delay and low
+likelihood of packet
+drop for high
+high end users
+end users priority
+end of short
+congestion control issue
+kinds of quality
+sets of people
+lose one bit
+fashion or takes
+kind of quality
+quality you require
+require another kind
+doing some kind
+kind of multimedia
+transmission like audio
+bits being lost
+quality of reception
+handle different kinds
+today is qos
+service and multimedia
+service ? qos
+refers to traffic
+traffic control mechanisms
+mechanisms that seek
+differentiate performance based
+based on application
+application or network
+network operator requirements
+predictable or guaranteed
+performance to applications
+aggregates it talks
+things the basic
+applications which require
+require one kind
+service the quality
+delay and packet
+computer networks
+networks prof
+ghosh dept
+computer science
+engineering iit
+iit kharagpur
+kharagpur lecture
+good day
+topic today
+tcp tcp
+important transport
+transport protocol
+discussed udp
+transport layer
+layer responsibilities
+layer creates
+creates packets
+byte steam
+steam received
+application layer
+port numbers
+process-to-process communication
+sliding window
+window protocol
+achieve flow
+flow control
+acknowledgement packets
+achieve error
+error control
+unlike udp
+reliable communication
+connection oriented
+oriented protocol
+congestion control
+control mechanism
+basic thing
+distant nodes
+connection-oriented reliable
+reliable transport
+adds connection
+reliability features
+effort kind
+connection-oriented flavor
+end nodes
+intermediate routers
+communication abstraction
+ordered ordered
+ordered means
+vice versa
+tcp makes
+ordered tcp
+tcp brings
+full loop-less
+loop-less connection
+transmission control
+control protocol
+connection-oriented protocol
+unreliable network
+data transfer
+transfer tcp
+tcp establishes
+connection-oriented network
+classical telephones
+control signals
+actual data
+data transmission
+transmission begins
+end points
+transmission takes
+takes place
+tcp entity
+entity-client contacts
+actual procedure
+server acknowledges
+transfer begins
+connection set
+disconnect phase
+tcp level
+receiver sends
+sends acknowledgements
+basic mechanism
+acknowledged tcp
+tcp maintains
+sender sends
+sender assumes
+duplicate packets
+original sender
+duplicate segment
+achieves reliability
+detect errors
+errors tcp
+udp segment
+invalid checksums
+sequence number
+intermediate sequence
+lower layers
+layers tcp
+tcp handles
+handles data
+higher layer
+layer tcp
+identify boundaries
+higher layers
+application writes
+tcp transmits
+bytes coming
+byte header
+tcp protocol
+bit source
+source port
+port address
+bit destination
+destination port
+acknowledgement number
+header length
+reserved bits
+window size
+urgent pointer
+client-server processes
+tcp session
+standard applications
+first communication
+well-known port
+port number
+ephemeral port
+bit address
+application program
+numbers destination
+address defines
+bit number
+number assigned
+first byte
+data contained
+connection establishment
+random number
+number generator
+initial sequence
+session starts
+finite length
+length sequence
+small segment
+segment size
+segment number
+large sequence
+low number
+high numbers
+low sequence
+sequence numbers
+looped back
+strict loop
+large number
+large range
+acknowledgment number
+acknowledged numbers
+acknowledged number
+receive form
+standard norm
+byte word
+tcp header
+variable length
+bytes depending
+controls flags
+flags urg
+urg defines
+pointer field
+garbage ack
+ack tells
+push rst
+connection syn
+synchronize sequence
+urgent flag
+last urgent
+urgent byte
+data section
+bytes options
+maximum segment
+windows scale
+scale factor
+padding purpose
+option field
+biggest chunk
+tcp segment
+header field
+field out
+window scale
+factor defines
+slicing window
+changed timestamp
+segment leaves
+destination returns
+reply field
+round trip
+sender wait
+trip delay
+segment life
+original packet
+virtual path
+connectionless service
+actual service
+upper layer
+connection-oriented thing
+good things
+connection orientation
+path established
+traditional strict
+connection-oriented service
+sending data
+first host
+initialization information
+information meaning
+three-way handshaking
+first syn
+first sequence
+syn pack
+sends sequence
+sequence number1200
+starting number
+three-way handshake
+connection termination
+direction data
+direction remember
+loop-less communication
+segment announcing
+announcing connection
+segment acknowledging
+segment indicating
+indicating connection
+connection closure
+closure host
+four-way handshaking
+diagram showing
+showing four-way
+acknowledgement reaches
+underlying network
+first fin
+last acknowledgement
+state diagram
+incoming call
+call syn
+syn rcvd
+rcvd means
+connection request
+acknowledgement syn
+connection established
+established means
+normal data
+transfer state
+state fin
+fin wait
+means client
+finished fin
+release timed
+timed wait
+wait means
+means wait
+pending packets
+msl wait
+wait state
+last pending
+pending packet
+closing means
+close simultaneously
+simultaneously close
+close wait
+means server
+last ack
+rcvd state
+established phase
+close width
+destination tcp
+window imposed
+traditional sliding
+make transmission
+sender buffer
+occupied part
+windows size
+receiver side
+destination process
+empty part
+receiver window
+congestion worse
+intervening network
+effective data
+taking place
+large amount
+trade-off suppose
+acknowledgement packet
+duplicated segments
+simply dropped
+segment numbers
+proper sequence
+window slides
+receiving window
+actual congestion
+sender thinks
+transfer data
+lower rate
+sender window
+window value
+empty locations
+receiver buffer
+actual window
+full window
+limited data
+protocol tcp
+tcp delivers
+entire stream
+part lost
+corrupt segments
+detecting lost
+lost segments
+order segments
+detecting duplicated
+correcting errors
+detected detecting
+missing detecting
+detecting segments
+serial number
+error detection
+simple tools
+time-out suppose
+first segment
+sender detects
+offer reliability
+correction capability
+error correction
+time-out counter
+counter expires
+expires segment
+tcp timers
+timers inside
+inside tcp
+file transfer
+transfer protocol
+file useless
+specifically protocols
+absolute error
+voice communication
+carrying voice
+network parameters
+make out
+differing rate
+retransmission timer
+persistence timer
+keep-alive timer
+time-waited timer
+discarded segment
+segment suppose
+timer stamp
+timer starts
+size happened
+timer tcp
+tcp creates
+acknowledgement arrives
+retransmitted segment
+dynamic retransmission
+connection tcp
+simple case
+web server
+active websites
+concurrent server
+application side
+tcp services
+tcp receives
+timer window
+tcp sends
+special segment
+probe segment
+idle connections
+tcp connection
+last communication
+automatically started
+graceful connection
+server hears
+timer times
+tcp closes
+times out
+fin segments
+previous case
+last acknowledgment
+window sizes
+discuss congestion
+control lecture
+networks multicasting
+multicast communication
+communication refers
+many-to-many communication
+communication unicast
+unicast refers
+multicast destinations
+multicasting refers
+individual hosts
+multicast groups
+groups multicasting
+multicast group
+general parameters
+multiple channels
+prairie set
+day today
+multicast communications
+communications refers
+many-to-many communications
+source multiple
+prairie setup
+initial value
+multicast address
+weather updates
+stock updates
+news feed
+distance learning
+learning material
+distance learners
+specific group
+routing updates
+service location
+applied pointcast-type
+pointcast-type push
+push applications
+push means
+actual source
+stock quotes
+pushed teleconferencing
+shared whiteboard
+text editor
+important application
+video conferencing
+video stream
+entire group
+interactive gaming
+distributed fashion
+email distribution
+distribution lists
+content distribution
+software distribution
+web cache
+cache updates
+database replication
+replication multicasting
+operation today
+proper manner
+routers capabilities
+multicast routing
+essential components
+multicast service
+multicast addressing
+group management
+networks connected
+group members
+group membership
+membership protocol
+machines connected
+internet group
+management protocol
+neighboring multicast
+multicast routers
+routing protocol
+protocol running
+picture showing
+service model
+router protocol
+supports udp
+multicast tcp
+tcp udp
+connectionless datagram
+datagram oriented
+chooses udp
+layer protocol
+protocol stack
+network interface
+multicast layers
+network layer
+layer takes
+takes part
+normal routing
+multicast part
+part takes
+takes care
+multicasting routing
+udp protocol
+stream sockets
+datagram sockets
+multicast sockets
+socket layer
+user layer
+multicast messages
+multicast supporting
+supporting routers
+multicast works
+interface card
+group dynamically
+access control
+requires access
+protocol stands
+stands today
+actual practice
+practice constitutes
+small amount
+traffic compared
+potential true
+true multicasting
+simulated multicasting
+actual true
+multicasting traffic
+support multicasting
+cost involved
+floor control
+essentially unreliable
+multicast addresses
+last byte
+first range
+range inclusive
+routing protocols
+low level
+level topology
+topology discovery
+maintenance protocols
+multicast datagram
+destination address
+reserved addresses
+multicast routes
+reserved class
+synchronizing machines
+special addresses
+address translation
+transmitting packets
+local network
+data link
+link layer
+hardware address
+mac address
+ethernet frame
+ethernet address
+handling unicast
+ethernet level
+ethernet mac
+mac addresses
+lowest bit
+left byte
+byte suppose
+significant byte
+last bit
+ethernet cards
+device driver
+done suppose
+simple protocol
+igmp operates
+physical network
+single ethernet
+ethernet segment
+previous diagram
+multicast router
+local multicasting
+multicasting router
+igmp supports
+query membership
+send membership
+membership reports
+send queries
+respond depending
+igmp report
+igmp general
+general query
+igmp group
+group address
+specific query
+source address
+individual host
+host sends
+igmp membership
+membership report
+igmp message
+message format
+type type
+16-bit checksum
+address type
+host group
+multiple processes
+first process
+multicast traffic
+membership list
+process leaves
+igmp query
+host responds
+igmp host
+host reports
+routers sends
+sends query
+regular intervals
+group queries
+queries send
+igmp messages
+bytes long
+ethernet header
+32-bit class
+multiple multicast
+router responds
+igmp queries
+router forwards
+forwards multicast
+multicast packets
+routers connected
+diagram suppose
+practical situations
+simulate multicasting
+doing repeated
+repeated unicast
+original source
+members meaning
+successive unicast
+unicast done
+access list
+packets traveling
+final number
+packet travels
+hop count
+count kind
+weighted measure
+lower overhead
+multicasting capability
+packet forwarding
+send multiple
+multiple copies
+routing algorithm
+algorithm builds
+spanning tree
+tree dynamically
+routing tree
+unicast cases
+multicasting protocol
+supporting multicasting
+main goal
+theoretical problem
+tree suppose
+previous graph
+shortest path
+path tree
+source-based tree
+path cost
+good tree
+single sender
+central news
+news service
+financial advisory
+advisory service
+stock codes
+company collects
+stock value
+regular fashion
+cases making
+tree makes
+multiple senders
+send messages
+unicast routing
+additional service
+reverse shortest
+reverse path
+path forwarding
+total cost
+makes sense
+send packets
+minimum total
+optimum solution
+core-based tree
+good solution
+potential source
+rendezvous point
+receivers build
+point depends
+core based
+based tree
+potential graph
+rpf builds
+taking advantage
+routing tables
+main idea
+potential recipients
+router selects
+upstream neighbor
+next-hop neighbor
+forwarding unicast
+unicast packets
+potential recipient
+single source
+potential routes
+point onwards
+final destination
+automatically formed
+basic idea
+rpf forwarding
+rpf neighbor
+routing table
+table entries
+source-based trees
+core-based trees
+incoming interface
+rpf interface
+outgoing interface
+packet arrives
+outgoing links
+set routing
+non-rpf interfaces
+interfaces receiver
+receiver drops
+drops packets
+rpf interfaces
+routers require
+forwarding multiple
+address means
+outgoing interfaces
+source side
+rpf member
+dynamic system
+non-rpf link
+pruning pruning
+prune message
+non rpf
+routers suppose
+running igmp
+local member
+longer sending
+igmp reports
+distant source
+distant destination
+transit link
+local contributor
+contributor member
+message stating
+anymore packets
+neighboring router
+transit router
+member sends
+group anymore
+group member
+intermediate router
+longer interested
+table entry
+multicast tree
+pruned link
+prune messages
+multicast packet
+non-rpf interface
+graft message
+message disables
+disables prune
+join message
+join messages
+messages creates
+source sends
+sends data
+core forwards
+forwards data
+distance vector
+vector multicast
+first multicasting
+implements flood
+prune distance
+vector routing
+distributed bellman
+bellman ford
+ford algorithm
+centralized diesters
+diesters algorithm
+link state
+state algorithm
+open shortest
+acceptable routing
+multicast extension
+multicast extensions
+router calculates
+tree based
+state database
+pim-sm builds
+distance-vector multicasting
+major components
+conventional distance-vector
+distance-vector routing
+packets based
+packet arrived
+source packet
+neighbor link
+rpf chain
+packet forwarded
+child links
+downstream links
+vector protocols
+transient looping
+count-to-infinity problem
+potential distance
+routing transient
+looping means
+routing loop
+multicast trees
+scaling limitations
+scaling limitation
+flat routing
+routing domain
+autonomous regions
+autonomous domains
+routing problem
+problem remains
+remains simpler
+bigger networks
+pruned parts
+initial broadcast
+network size
+network grows
+bigger broadcast
+small groups
+implement multicasting
+multicast backbone
+overlay network
+multicast-capable routers
+directly connected
+supporting router
+mbone routers
+light blue
+supporting node
+mbone tunnel
+sending multicast
+multicast-ignorant routers
+header destination
+transport header
+intervening routers
+pay load
+network nodes
+multicasting header
+ip-in-ip encapsulation
+tunnels act
+virtual point-to-point
+point-to-point link
+router header
+routing header
+tunnel endpoint
+endpoint recognizes
+protocol type
+unicast address
+special interest
+easy fashion
+dynamic host
+host configuration
+configuration protocol
+chief utility
+chief motivation
+dynamic assignment
+reasons computer
+s.ghosh dept
+keeping machines
+computers connected
+central pool
+remote access
+access server
+network address
+dynamically assigned
+supports mobility
+period people
+bootstrap protocol
+wide usage
+bootp client
+dhcp server
+reverse arp
+arp address
+address resolution
+resolution protocol
+addresses finding
+lan rarp
+rarp finds
+disclosed work
+work station
+address assigned
+address rap
+rap server
+server responds
+default router
+subnet masks
+improved version
+rarp i.e
+i.e bootp
+bootp bootp
+functions host
+address assignment
+assignment detection
+serving machine
+client machine
+machine i.e
+boot file
+protocol i.e
+network mask
+machine requires
+subnet mask
+bootp protocol
+udp message
+udp port
+host port
+limited broadcast
+broadcast address
+downloading memory
+memory image
+diskless workstations
+bootp clients
+extensions support
+support temporary
+temporary allocation
+addresses leasing
+fixed amount
+lease expires
+lease period
+great demand
+temporary period
+dynamic dhcp
+dhcp client
+configuration parameters
+gateway addresses
+preferred mechanism
+dhcp information
+include things
+static route
+ethernet encapsulation
+window manager
+window font
+dhcp message
+message type
+dhcp renewal
+dhcp rebinding
+client fqdn
+network grew
+computers suppose
+centralized print
+print service
+wider networks
+host end
+dhcp operations
+dhcp discover
+address renewing
+server sends
+sends dhcpnack
+dhcp release
+message header
+header fields
+dhcp request
+hardware type
+address length
+ethernet hop
+client started
+boot client
+client hardware
+client sends
+left blank
+blank dhcp
+message types
+dhcpdiscover dhcpoffer
+dhcpoffer dhcprequest
+dhcprequest dhcpdecline
+dhcpdecline dhcp
+dhcp acknowledge
+acknowledge dhcp
+acknowledge dhcprelease
+dhcprelease dhcpinform
+icmp internet
+internet control
+control message
+message protocol
+internet protocol
+effort delivery
+delivery service
+lacks error
+assistance mechanisms
+routers ore
+drop packets
+proper order
+purposes icmp
+live field
+management queries
+type field
+icmp message
+errors code
+code field
+error occurs
+checksum field
+icmp data
+icmp messages
+error reporting
+query response
+reporting type
+error messages
+source suppose
+packet send
+source quench
+quench sending
+parameters problem
+icmp error
+error message
+datagram carrying
+fragment datagram
+first set
+fifty parts
+first fragment
+special address
+original datagram
+specific machine
+source machine
+layer header
+message .this
+.this information
+crude attempt
+control routers
+limited size
+size queues
+limit depending
+fast packets
+sending packets
+quench icmp
+received faster
+host discards
+quench message
+bottlenecks occur
+wan link
+data lost
+turn generate
+generate network
+network congestion
+quench packet
+router receives
+time-to-live value
+exceeded message
+received fragments
+time-to-leave field
+infinite term
+parameter problems
+parameter problem
+problem message
+small routing
+redirection message
+queries icmp
+network problems
+echo request
+address mask
+router solicitation
+request message
+reply message
+network managers
+protocol echo
+ping command
+problem lies
+local subnet
+ping message
+entire network
+timestamp request
+reply messages
+destination machine
+stamp minus
+minus value
+packet returned
+transmit timestamp
+timestamp round-trip
+exact one-way
+address-mask request
+subnetwork mask
+diskless stations
+routing information
+information routers
+send router
+router advertisements
+solicited suppose
+neighboring routers
+router information
+router discovery
+discovery message
+networks host
+host send
+solicitation message
+broadcast message
+entire message
+data combined
+clock synchronization
+stamp message
+message combats
+local host
+remote host
+icmp timestamp
+messages ping
+ping sends
+message traceroute
+ttl fields
+hosts enroute
+specific destination
+ultra sound
+sound signal
+icmp echo
+identifier field
+sending process
+process sequence
+numbers starts
+echo message
+hundred percent
+packet loss
+sixty percent
+forty percent
+ping suppose
+data bytes
+icmp sequence
+packets transmitted
+packets received
+output sequence
+message returned
+return message
+host based
+ping packet
+byte icmp
+icmp header
+byte message
+total datagram
+datagram size
+total size
+crude estimate
+record route
+route option
+ping implementations
+implementations provide
+provide record
+router stores
+options field
+routing hops
+current route
+iterative fashion
+fashion suppose
+distant machine
+small number
+intermediate node
+dummy message
+previous instant
+entire route
+selected port
+destination traceroute
+ttl specifies
+travel trace
+trace route
+route sends
+sends udp
+udp datagrams
+udp packet
+exceeded icmp
+end point
+traceroute sends
+port icmp
+message protocols
+fashion arp
+arp protocol
+level protocol
+icmp helps
+network operation
+giving error
+side protocol
+lecture lecture
+short form
+ethernet addresses
+direct communication
+address includes
+includes information
+network part
+post part
+small part
+mail server
+human beings
+guess humans
+humans find
+domain names
+names domain
+www site
+site names
+names today
+local area
+area network
+reverse mac
+address done
+centralized dns
+single point
+traffic volume
+distant centralized
+centralized database
+address mapping
+isp company
+host query
+address names
+interactive resolver
+dns server
+term nslookup
+unix workstations
+handle requests
+domain directly
+directly servers
+servers handle
+handle request
+contacting remote
+remote dns
+dns servers
+servers servers
+servers cache
+external mappings
+root server
+higher level
+sub domains
+dns queries
+lightweight directory
+directory access
+access protocol
+designed osi
+osi layer
+internet purpose
+layer osi
+layer stack
+directory service
+osi protocol
+internet crowd
+generic addressing
+addressing interface
+address book
+networking protocol
+modifying directory
+directory services
+services running
+ldap directory
+x.500 model
+named attributes
+political geographic
+organizational boundaries
+boundaries depending
+model chosen
+security policies
+policies based
+authentication services
+directory entries
+entry consists
+attribute values
+ldap suppose
+directory based
+based application
+authorization service
+transport level
+level security
+organizational context
+important component
+entire security
+security arrangement
+arrangement security
+complex issue
+ldap implementations
+implementations support
+computers networks
+prof sujoy
+sujoy ghosh
+ghosh indtan
+indtan institute
+technology iit
+beings find
+important thing
+addresses done
+reverse query
+names comprise
+limited length
+high speed
+speed computations
+longer names
+people thought
+logical hierarchy
+external world
+top level
+level domain
+global hierarchy
+dns hierarchy
+labels separated
+domain standing
+hierarchy tree
+worldwide naming
+naming tree
+case sensitive
+absolute domain
+qualified domain
+generic domains
+internet started
+arpa net
+level domains
+letter domain
+map domain
+implementing dns
+distributed database
+database implemented
+database centralized
+network traffic
+application-layer protocol
+protocol host
+resolve names
+core internet
+internet function
+core routers
+full resolver
+full resolvers
+stub resolvers
+naming system
+real ip-addresses
+client application
+http request
+program distinct
+user program
+local full
+local names
+user query
+stub resolver
+routine linked
+processing responses
+resolver runs
+library routines
+converting host
+host names
+routine sends
+dns organization
+distributed organization
+running dns
+machine run
+rpi.edu domain
+primary server
+secondary severs
+replicated databases
+global system
+specific organization
+sub domains.in
+resolution query
+query coming
+domain .in
+organizations maintaining
+domain suppose
+sub domain
+domain ernet
+separate domain
+entire domain
+domain administration
+made unique
+actual organization
+organization administering
+good advantage
+centralize dns
+distributed server
+address mappings
+host dns
+dns query
+server authoritative
+authoritative server
+host stores
+server operation
+contact dns
+server communication
+server cache
+server finds
+target domain
+server asks
+right nameserver
+recursive server
+iterative server
+request recursion
+level contact
+recursive version
+iterative version
+host1 makes
+names server
+iterative case
+iterated queries
+iterated query
+dns caching
+server learns
+learns mapping
+cache entries
+resource records
+format type
+domain type
+canonical type
+server records
+dns message
+authority records
+additional information
+flag identifying
+4-bit field
+standard query
+inverse query
+server status
+authoritative answer
+recursion desired
+return code
+entire database
+secondary servers
+protocol udp
+response requires
+requester resubmits
+resubmits request
+client sees
+longer request
+administration zones
+sub tree
+dns tree
+independently managed
+independent zone
+independent independent
+independent means
+departmental domains
+secondary retrieves
+retrieves information
+zone transfer
+secondary server
+extra sub
+maintain multiple
+server fails
+start acting
+good network
+network connection
+weak protection
+ptr i.e
+i.e ptr
+found out
+reverse queries
+weak mechanism
+avoid spoofing
+identity message
+mail servers
+anti-spam spams
+accept mail
+spurious source
+in-addr arpa
+arpa space
+in-addr.arpa queries
+reverse order
+dynamic dns
+zone table
+addresses means
+secure connection
+dns update
+server database
+dns database
+email clients
+email address
+global address
+original intention
+produce spam
+spam mails
+send junk
+junk mails
+object repositories
+explicit access
+access protocols
+complex queries
+queries dns
+email addresses
+lack notions
+tabular views
+join operations
+stored procedures
+regular rdbms
+telecom industry
+global white
+white pages
+osi networks
+distributed directory
+directory structure
+directory user
+user agent
+access point
+turn connects
+access resource
+names recalling
+recalling names
+performance requirements
+human scale
+directory information
+information base
+tree structure
+entire directory
+entry structure
+schema enforces
+enforces type
+type rules
+alias entries
+sub organizations
+object entry
+type value
+value pairs
+general structure
+x.501 tree
+system defined
+selected attributes
+entry match
+list children
+abandon request
+modify entry
+modify distinguished
+distinguished names
+directory system
+system agent
+local data
+forward request
+system agents
+process requests
+user agents
+server system
+query processing
+make request
+recursive queries
+iterative process
+authentication defined
+control defined
+ensure security
+security purposes
+basic access
+individual dsa
+local databases
+single entries
+multiple dsas
+replication schemes
+cache copies
+shadow copies
+copy required
+enforce access
+protocol means
+system protocol
+information shadowing
+shadowing protocol
+shadowing agreement
+operational binding
+binding management
+yellow pages
+authentication information
+protocol designed
+osi x.500
+osi stack
+netscape address
+set named
+authentication service
+ldap ldap
+tls transport
+tcp sits
+tcp layer
+ldap protocol
+protocol version
+start tls
+layer security
+security feature
+retrieve directory
+access controls
+named entry
+attribute value
+ldap operations
+previous request
+extended operation
+generic operation
+security issue
+network protocol
+kind encryption
+confidentiality purpose
+audit trail
+signature kind
+control user
+authorization kind
+security axes
+anticipated threats
+information stored
+data security
+access security
+typical security
+security features
+simple password
+password based
+based authentication
+secure socket
+grand idea
+security boundary
+large extent
+extent depends
+congestion present
+large topic
+general network
+data network
+packet based
+based network
+large data
+system congestions
+congestions occurs
+occurs leading
+selective acknowledgement
+reno retransmit
+lost packet
+acknowledge non
+continuous blocks
+means sack
+sack selective
+multiple blocks
+single segment
+tcp sack
+duplicate acks
+lost sender
+sender retransmits
+fast retransmit
+competing demands
+job done
+done faster
+maximum throughput
+congestion collapse
+traffic engineering
+give quality
+packet classification
+packet scheduling
+network entrance
+traffic conditioning
+admission control
+qos network
+network computer
+prof.sujoy ghosh
+ghosh department
+computer network
+network depends
+inter network
+efforts depend
+handle congestion
+congestion occur
+occur leading
+performance congestion
+congestion shows
+shows lack
+network components
+global issue
+sources pumping
+channel capacity
+router capacity
+demand outstrips
+congestion problem
+added dimension
+general queuing
+queuing theory
+arrival rate
+service rates
+data networks
+telecom networks
+poisson distribution
+exponential interval
+similar traffic
+heavy tail
+tail distribution
+complex distribution
+key features
+means data
+quotient period
+bust arrives
+central location
+incomplete information
+distributed solution
+throughput versus
+versus load
+load curve
+alocha networks
+load increases
+starts sort
+intermediate delays
+bottlenecks coming
+catastrophic fall
+throughput increases
+delay increases
+increases fast
+fast cliff
+delay approaches
+queue delay
+simple formulation
+previous curve
+starts increasing
+packet losses
+throughput collapses
+hyperbolic curve
+collapse congestion
+congestion avoidance
+collapse region
+stable operation
+packet networks
+sub goal
+avoid congestion
+networks working
+efficient manner
+high throughput
+low loss
+low delay
+high utilization
+distributed systems
+insufficient information
+global picture
+fair allocation
+network bandwidth
+competing flows
+steady state
+start retransmitting
+traffic jam
+network throughput
+people tend
+open loop
+loop policies
+retransmission policy
+transmission policy
+ethernet network
+non persistent
+exponential back
+order policy
+order acknowledgement
+acknowledgement policy
+high overhead
+control policy
+virtual circuit
+circuit versus
+versus datagram
+important issue
+discuss qos
+multimedia communication
+communication suppose
+important communication
+premium service
+specific nodes
+detail packet
+packet queuing
+service policy
+policy means
+packet discard
+discard policy
+buffer management
+packet lifetime
+lifetime management
+loop polices
+closed loop
+loop control
+occurring pass
+adjust system
+system operation
+chief sources
+system parameters
+close loop
+measuring congestion
+packets discarded
+buffer space
+measure average
+average queue
+queue length
+standard deviation
+packet delay
+measure congestion
+performance degradation
+sharp manner
+feedback mechanisms
+sensing congestion
+congestion sends
+control packet
+announce congestion
+congestion explicit
+explicit probe
+probe packets
+congestion implicit
+implicit algorithms
+algorithms make
+local observations
+adjusting system
+system operations
+operations adjust
+optimal value
+value decrease
+threshold increase
+increase resources
+tcp congestion
+basic tcp
+important protocol
+application protocols
+important traffic
+chief tool
+congestion window
+slow start
+start threshold
+threshold value
+advertised window
+initial ssthresh
+ssthresh value
+control works
+cwnd value
+avoidance means
+load stress
+initial values
+start i.e
+i.e set
+set cwnd
+small i.e
+small bit
+information note
+size i.e
+first packet
+acknowledgement note
+tcp receiver
+sender decides
+increase cwnd
+i.e cwnd
+ack acknowledges
+segments cwnd
+acknopwledges onlys
+mss bytes
+start phase
+size grows
+cwnd rises
+segments ack
+tcp slows
+quiet fast
+increasing exponentially
+avoidance phase
+increment cwnd
+larger integer
+current cwnd
+cwnd segments
+cwnd increases
+increased exponentially
+increases slowly
+tcp assumes
+congestion detects
+tcp sender
+duplicate ack
+ack duplicate
+tcp interprets
+binary congestion
+congestion signal
+sender performs
+performs cwnd
+current size
+window ssthresh
+avoidance cwnd
+multiplicative decrease
+decrease i.e
+i.e ssthresh
+typical plot
+tcp tahoe
+acknowledgement congestion
+tcp reno
+sends acknowledgement
+sender acknowledgement
+ack number
+number expected
+expected delayed
+delayed ack
+delays transmissions
+sequence i.e
+sender believes
+means acks
+earlier packets
+tcp performs
+missing segment
+fast recovery
+retransmit intuition
+intuition duplicate
+acks set
+set retransmit
+retransmit lost
+i.e decrease
+decrease ssthresh
+enter congestion
+additional duplicate
+ack arrives
+data cwnd
+recovery avoids
+start tcp
+reno improves
+single packet
+multiple packets
+partial ack
+takes sender
+time-out occurs
+acknowledged segment
+multiple lost
+selectively acknowledge
+original tcp
+acknowledgement stating
+segment tcp
+sack enters
+acks sender
+conditioning mechanisms
+network boundary
+exceed specification
+things people
+drop traffic
+service provider
+sender shaping
+shaping means
+buffer traffic
+violates specifications
+specifications marking
+marking means
+means mark
+mark packets
+lower priority
+traffic specification
+traffic shaping
+shaping first
+first regulating
+average rate
+control algorithms
+specifically data
+internet traffic
+big bunch
+long periods
+burst peak
+average ratio
+network provisioning
+inherent problem
+burstiness smooth
+transfer rates
+delay jitter
+famous algorithm
+leaky bucket
+bucket algorithm
+single server
+server queue
+constant service
+service rate
+leaking drop
+means water
+constant rate
+single queue
+steady kind
+steady average
+average kind
+intermediate nodes
+input buffer
+bursty flow
+operating system
+underutilized slots
+slow response
+bursty traffic
+token bucket
+accommodate burstiness
+burst size
+bounded arrival
+arrival process
+process excess
+excess traffic
+fixed rate
+main point
+token differs
+.the longer
+accumulate tokens
+tokens anymore
+regulated maximum
+maximum length
+maximum number
+absolutely smooth
+bucket holds
+packet burst
+traffic parameters
+network service
+maximum packet
+packet size
+bucket rate
+bucket size
+size defines
+maximum transmission
+transmission rate
+rate tells
+exact maximum
+loss sensitivity
+sensitive loss
+loss interval
+burst loss
+minimum delay
+delay noticed
+maximum delay
+delay variation
+multimedia traffic
+traffic quality
+flow specifications
+discuss rsvp
+disscuss qos
+resources admit
+distributed admission
+central admission
+end delay
+delay bound
+reserve resources
+reservation signal
+send reject
+reject message
+release resources
+accept flow
+commit resource
+resource reservation
+notify sender
+signaling protocol
+virtual circuits
+problem areas
+negotiate flow
+flow specification
+requires resource
+waste resources
+choke packets
+crude mechanism
+handling congestion
+router monitors
+output line
+weighted sum
+past utilization
+choke packet
+source choke
+distributed algorithm
+local information
+source waits
+packets coming
+created ripples
+routers sending
+sending choke
+multiple choke
+speed lines
+operate hop
+packets add
+operates hop
+output link
+output interface
+interface suppose
+network node
+worst effort
+premium services
+vital role
+micro level
+typical internet
+internet queuing
+drop tail
+first out
+simplest choice
+out implies
+single class
+arriving packets
+scheduling discipline
+drop policy
+management policies
+scheduling policy
+management policy
+fifo issues
+fifo discipline
+policing send
+pumping data
+higher rate
+row node
+lesser service
+service compared
+pumping lots
+drop-tail issues
+large queues
+high utilizations
+problem larger
+larger buffer
+buffer implies
+larger steady
+state queues
+end hosts
+hosts react
+packets tend
+bursty lock
+side effect
+queue space
+priority queuing
+explicit marking
+tcp port
+highest priority
+priority class
+non empty
+empty queue
+preemptive versions
+scheduling policies
+classify arriving
+qos requirements
+premium class
+queuing discipline
+discipline queuing
+queuing allocates
+allocates bandwidth
+bandwidth tells
+space tells
+buff management
+affects latency
+fair queuing
+queuing router
+router maintains
+maintains multiple
+multiple queues
+round robin
+robin fashion
+greater weight
+lower delay
+low likelihood
+packet drop
+high end
+end users
+users priority
+short handling
+control issue
+easy issue
+global problem
+local action
+mentioned today
+quality requirements
+vital bit
+jerky fashion
+multimedia transmission
+qos refers
+traffic control
+control mechanisms
+differentiate performance
+performance based
+network operator
+operator requirements
+guaranteed performance
+traffic aggregates
+basic notion
+network delay
+computer
+networks
+prof
+ghosh
+dept
+science
+engineering
+iit
+kharagpur
+lecture
+tcp
+start
+good
+day
+topic
+today
+important
+transport
+protocol
+widely
+applications
+discussed
+udp
+complex
+advantages
+layer
+responsibilities
+creates
+packets
+byte
+steam
+received
+application
+order
+multiplex
+de-multiplex
+port
+numbers
+create
+process-to-process
+communication
+sliding
+window
+achieve
+flow
+control
+acknowledgement
+out
+retransmission
+error
+unlike
+unreliable
+seeks
+provide
+reliable
+means
+free
+connection
+oriented
+kind
+congestion
+mechanism
+basic
+thing
+connecting
+processors
+two
+distant
+nodes
+54-03
+connection-oriented
+adds
+reliability
+features
+services
+effort
+service
+give
+connectionless
+flavor
+proposal
+implemented
+end
+intermediate
+routers
+role
+play
+35-04
+abstraction
+ordered
+guaranteed
+arrive
+happen
+packet
+routed
+direction
+first
+land
+destination
+earlier
+vice
+versa
+makes
+brings
+point-to-point
+unicast
+takes
+byte-stream
+input
+output
+full
+loop-less
+connected
+communicate
+22-04
+transmission
+end-to-end
+network
+58-05
+data
+transfer
+establishes
+classical
+telephones
+set
+kinds
+signals
+similarly
+atm
+actual
+begins
+points
+place
+sets
+entity
+waiting
+server
+entity-client
+contacts
+procedure
+setting
+client
+request
+acknowledges
+accepts
+disconnect
+phase
+broken
+chunks
+segments
+level
+receiver
+sends
+acknowledgements
+brought
+segment
+acknowledged
+maintains
+timer
+ack
+retransmitted
+sender
+waits
+acknowledgment
+assumes
+lost
+hoping
+eventually
+reach
+send
+lead
+duplicate
+naturally
+original
+receive
+eliminate
+achieves
+detect
+errors
+checksum
+header
+invalid
+checksums
+discarded
+transmitted
+sequence
+number
+missing
+lower
+layers
+handles
+blocks
+originate
+higher
+bytes
+identify
+boundaries
+beginning
+stream
+writes
+queue
+queues
+transmits
+reads
+coming
+units
+unit
+devices
+options
+option
+field
+run
+details
+bit
+source
+address
+length
+hlen
+reserved
+bits
+flags
+size
+urgent
+pointer
+padding
+client-server
+processes
+ports
+form
+socket
+uniquely
+identifies
+session
+sides
+assigned
+standard
+well-known
+switch
+ephemeral
+defines
+program
+host
+sending
+receiving
+contained
+establishment
+random
+generator
+initial
+isn
+big
+reason
+small
+starts
+back
+finite
+point
+confusion
+arise
+done
+large
+generated
+low
+high
+looped
+strict
+loop
+range
+lian
+generate
+expected
+clash
+exchanged
+side
+circumstances
+communicated
+expecting
+party
+norm
+53-14
+word
+required
+variable
+depending
+future
+controls
+urg
+determines
+valid
+garbage
+tells
+psh
+push
+rst
+resetting
+syn
+synchronize
+fin
+terminate
+connections
+termination
+maintain
+sort
+controlled
+ubp
+flag
+added
+determine
+last
+section
+single-byte
+multiple-byte
+maximum
+windows
+scale
+factor
+timestamp
+operation
+purpose
+filler
+hand
+biggest
+chunk
+taking
+slicing
+changed
+filled
+leaves
+returns
+echo
+reply
+round
+trip
+estimation
+essential
+suppose
+long
+wait
+make
+estimate
+based
+delay
+life
+conclusion
+case
+calculation
+inclusion
+mandatory
+virtual
+path
+established
+remember
+working
+underlying
+feeling
+upper
+things
+orientation
+arriving
+present
+work
+traditional
+physical
+four
+actions
+combined
+establish
+announce
+includes
+initialization
+information
+acknowledge
+21-21
+steps
+meaning
+three-way
+handshaking
+09-24
+synchronization
+consumes
+acknowledging
+value
+sitting
+pack
+persistent
+finally
+achieved
+number1200
+replies
+starting
+handshake
+53-24
+close
+terminated
+continue
+communicating
+initialize
+continued
+directions
+announcing
+34-25
+closed
+44-25
+finished
+indicating
+closure
+51-25
+step
+11-26
+allowing
+four-way
+32-29
+diagram
+showing
+assume
+receives
+right
+closing
+arrived
+reaches
+gracefully
+missed
+trouble
+fins
+story
+fellow
+completed
+longer
+36-29
+state
+42-31
+states
+11-32
+active
+pending
+listening
+incoming
+call
+rcvd
+made
+started
+open
+normal
+agreed
+release
+timed
+msl
+estimated
+simultaneously
+initiated
+21-33
+happening
+explained
+width
+05-33
+amount
+imposed
+buffer
+limit
+efficient
+overwhelmed
+23-35
+occupied
+part
+automatically
+02-35
+process
+consuming
+empty
+48-39
+fixed
+lot
+channel
+absolutely
+bad
+fast
+congested
+worse
+intervening
+overflowed
+router
+dropped
+bearing
+speed
+effective
+efficiency
+travel
+overhead
+minimum
+rate
+witch
+transferred
+trade-off
+realize
+pumping
+gap
+duplicated
+simply
+put
+proper
+recovered
+slides
+59-40
+17-41
+find
+thinks
+reducing
+built
+variations
+talk
+32-41
+totally
+locations
+smaller
+worth
+limited
+increased
+decreased
+delivers
+entire
+detects
+corrupt
+detecting
+correcting
+detected
+wrong
+drop
+correct
+delayed
+serial
+detection
+simple
+tools
+time-out
+re-transmitted
+offer
+correction
+capability
+52-48
+counter
+expires
+considered
+corrupted
+timers
+inside
+file
+transferring
+machine
+misplacing
+useless
+specifically
+protocols
+ftp
+actp
+absolute
+nature
+loss
+matter
+carrying
+voice
+quality
+impaired
+multimedia
+sensitive
+parameters
+person
+differing
+transmit
+varying
+acceptable
+cases
+http
+examples
+persistence
+keep-alive
+time-waited
+stamp
+idea
+constant
+immediately
+happened
+maintaining
+timed-out
+retransmit
+destroyed
+57-52
+arrives
+reset
+dynamic
+web
+people
+websites
+hitting
+concurrent
+spawn
+serving
+belongs
+clients
+roundtrip
+dynamically
+assessed
+03-52
+40-52
+accept
+moment
+special
+probe
+23-53
+prevents
+deadlock
+occurring
+29-54
+idle
+setup
+switched
+times
+disruption
+graceful
+hears
+resets
+countdown
+hear
+alive
+unanswered
+action
+closes
+previous
+condition
+stopped
+discussion
+variance
+sizes
+discuss
+multicasting
+modes
+broadcast
+receivers
+group
+hosts
+multicast
+refers
+one-to-many
+many-to-many
+destinations
+implementation
+internet
+individual
+configured
+members
+groups
+identified
+class
+general
+user
+member
+understood
+multiple
+channels
+prairie
+communications
+understand
+fashion
+news
+sports
+stock
+weather
+updates
+interested
+interest
+feed
+applied
+distance
+learning
+material
+distributed
+learners
+specific
+configuration
+routing
+location
+areas
+pointcast-type
+quotes
+pushed
+teleconferencing
+audio
+video
+shared
+whiteboard
+text
+editor
+interesting
+conferencing
+interactive
+gaming
+simulations
+participating
+game
+email
+distribution
+lists
+content
+software
+cache
+database
+replication
+technology
+fact
+manner
+toll
+capabilities
+components
+addressing
+management
+machines
+decide
+join
+choose
+leave
+membership
+question
+igmp
+runs
+neighboring
+running
+picture
+model
+types
+supports
+datagram
+essentially
+chooses
+stack
+interface
+care
+sockets
+messages
+supporting
+works
+addresses
+224.0.0.0
+239.255.255.255
+precisely
+card
+access
+requires
+stands
+included
+reasons
+practice
+constitutes
+traffic
+compared
+potential
+true
+simulated
+support
+cost
+involved
+security
+floor
+detail
+224.0.0.255
+inclusive
+topology
+discovery
+maintenance
+forward
+routes
+224.0.0.1
+systems
+subnet
+224.0.0.2
+224.0.1.1
+ntp
+synchronizing
+224.0.0.9
+rip-2
+translation
+transmitting
+local
+link
+hardware
+ethernet
+mac
+frame
+handling
+representing
+handle
+lowest
+left
+significant
+cards
+filter
+filtering
+device
+driver
+mapping
+straight
+matched
+move
+defined
+rfc
+operates
+single
+track
+ceased
+joining
+query
+reports
+queries
+respond
+report
+equal
+message
+format
+version
+type
+16-bit
+32-bit
+response
+reported
+joins
+note
+aging
+list
+regularly
+multicasts
+responds
+fails
+regular
+intervals
+unused
+smallest
+querier
+forwards
+forwarder
+constituted
+querying
+whichever
+practical
+situations
+simulate
+doing
+repeated
+successive
+packed
+hops
+measure
+strictly
+advantage
+closely
+impose
+ultimately
+destined
+multiplied
+traveling
+minimized
+final
+users
+travels
+hop
+count
+weighted
+sense
+links
+forwarding
+copies
+supposed
+algorithm
+builds
+spanning
+tree
+found
+similar
+forming
+differences
+goal
+main
+build
+looked
+graph
+theoretical
+problem
+embed
+solution
+shortest
+source-based
+minimizes
+talking
+central
+financial
+advisory
+codes
+quotation
+stocks
+company
+collects
+pushing
+making
+senders
+difficult
+democratic
+interacting
+easy
+compute
+osp
+additional
+table
+building
+reverse
+rpf
+total
+edges
+frequently
+optimum
+core-based
+keeping
+expensive
+selects
+core
+rendezvous
+depends
+chosen
+center
+19-34
+tables
+root
+formed
+sources
+recipients
+upstream
+neighbor
+next-hop
+recipient
+minimize
+unicasting
+node
+follow
+onwards
+27-34
+accordance
+49-35
+entries
+trees
+entry
+outgoing
+copy
+flood-and-prune
+flood
+non-rpf
+interfaces
+drops
+require
+respect
+forwarded
+system
+concerned
+pruning
+prune
+non
+finding
+retired
+remain
+transit
+contributor
+stating
+anymore
+route
+distribute
+prunes
+temporarily
+disables
+effect
+removes
+pruned
+satisfies
+conditions
+08-43
+disabling
+temporary
+disabled
+reactivate
+aware
+rest
+grafting
+graft
+reactivates
+complimentary
+disable
+enable
+situation
+star
+mentioned
+switches
+dvmrp
+rarely
+vector
+implements
+bellman
+ford
+rip
+centralized
+diesters
+ospf
+recall
+extension
+mospf
+extensions
+calculates
+pim-sm
+distance-vector
+consists
+major
+conventional
+determining
+chain
+child
+provided
+downstream
+limitations
+affected
+count-to-infinity
+transient
+looping
+failed
+counting
+vulnerable
+problems
+shares
+scaling
+limitation
+written
+hierarchy
+flat
+domain
+break
+autonomous
+regions
+domains
+remains
+simpler
+bigger
+ideas
+parts
+broadcast-and-prune
+flooding
+grows
+unacceptable
+undesired
+forms
+implement
+told
+backbone
+mbone
+overlay
+multicast-capable
+places
+locality
+directly
+cloud
+tunnel
+shown
+light
+blue
+supported
+method
+multicast-ignorant
+encapsulated
+ip-in-ip
+addressed
+multicast-enabled
+pay
+load
+discard
+encapsulation
+tunneling
+tunnels
+act
+endpoint
+recognizes
+de-capsulate
+processing
+manually
+environment
+dmrp
+world
+networked
+considerable
+explode
+potentially
+controlling
+dhcp
+icmp
+configuring
+chief
+utility
+discussing
+motivation
+assignment
+desirable
+s.ghosh
+14-1
+18-1
+computers
+35-3
+demand
+scarcity
+real
+pool
+line
+assigns
+withdrawn
+ras
+remote
+dial
+visit
+laptop
+avoids
+manual
+prone
+mobility
+laptops
+30-3
+rarp
+period
+bootp
+bootstrap
+wide
+usage
+08-5
+arp
+resolution
+lan
+finds
+disclosed
+station
+boosts
+signal
+typically
+rap
+default
+masks
+34-5
+rrap
+45-6
+improved
+i.e
+functions
+configure
+boot
+basically
+loaded
+executed
+booting
+40-7
+mask
+gateway
+51-8
+downloading
+memory
+image
+diskless
+workstations
+static
+drawback
+16-8
+versatile
+giving
+designed
+similarities
+52-10
+lots
+allocation
+leases
+leasing
+dialing
+lease
+half
+great
+extended
+acquire
+downloaded
+16-10
+preferred
+interoperate
+24-12
+mention
+greater
+include
+manager
+font
+renewal
+rebinding
+smtp
+fqdn
+printer
+grew
+originally
+print
+wider
+18-12
+operations
+discover
+renewing
+expired
+dhcpnack
+released
+renewed
+49-12
+56-13
+fields
+opcode
+transaction
+integer
+match
+38-14
+seconds
+fill
+puts
+blank
+pick
+29-14
+dhcpdiscover
+dhcpoffer
+dhcprequest
+dhcpdecline
+dhcprelease
+dhcpinform
+48-14
+05-15
+deficiencies
+drawbacks
+delivery
+lacks
+lack
+assistance
+mechanisms
+ore
+occur
+purposes
+36-16
+live
+fragments
+predetermined
+05-17
+reached
+compensate
+25-18
+code
+occurs
+verify
+integrity
+00-18
+reporting
+23-18
+job
+due
+23-19
+unreachable
+quench
+exceeding
+redirection
+51-21
+dropping
+trigger
+fragment
+fragmented
+fifty
+0.0.0.0.0
+30-23
+inform
+relates
+.this
+16-23
+deliver
+preventing
+crude
+attempt
+overflow
+processed
+stored
+desperately
+slow
+overload
+faster
+asks
+32-25
+discards
+relieved
+44-26
+bottlenecks
+wan
+reduce
+warning
+turn
+die
+48-27
+exceeded
+time-to-live
+time-to-leave
+decrementing
+floating
+infinite
+term
+slowly
+burden
+parameter
+35-28
+ambiguity
+47-28
+gradually
+augmented
+updated
+accomplish
+helps
+00-29
+diagnose
+solicitation
+advertisements
+22-30
+managers
+check
+test
+reachability
+invoking
+ping
+command
+logged
+lies
+probing
+16-31
+calculate
+round-trip
+clocks
+synchronized
+minus
+ways
+49-32
+returned
+exact
+one-way
+duration
+14-32
+address-mask
+enables
+subnetwork
+stations
+23-32
+advertisement
+periodically
+solicited
+bgp
+advertises
+exchange
+44-34
+learn
+gateways
+begin
+advertise
+16-34
+calculated
+26-34
+clock
+combats
+current
+47-35
+universal
+05-35
+traceroute
+15-35
+overview
+lets
+responding
+ttl
+enroute
+map
+tracing
+58-36
+named
+sonar
+ultra
+sound
+radar
+bounces
+expect
+kernel
+unix
+identifier
+pid
+incremented
+noisy
+sufficient
+expects
+hundred
+percent
+sixty
+forty
+37-39
+16.182.1
+pinged
+result
+milliseconds
+statistics
+average
+max
+51-40
+return
+displayed
+14-41
+bandwidth
+ppp
+add
+feel
+56-42
+record
+implementations
+linux
+stores
+paths
+trace
+store
+12-46
+iterative
+time-to
+dummy
+increasing
+pass
+instant
+iteratively
+randomly
+selected
+traced
+specifies
+datagrams
+20-46
+41-46
+reference
+assigning
+preview
+dns
+directory
+topics
+29-48
+35-50
+short
+direct
+post
+tough
+humans
+mail
+human
+beings
+impossible
+guess
+easier
+names
+surfing
+www
+site
+guesses
+combination
+.com
+.net
+area
+51-52
+failure
+volume
+servers
+isp
+authoritative
+perform
+37-53
+.centric
+usa
+10-53
+nslookup
+resolver
+38-53
+requests
+contacting
+external
+mappings
+56-54
+clue
+hostname
+contact
+iitkgp
+connect
+ernet
+sub
+administering
+india
+japan
+sever
+resolved
+30-56
+ldap
+lightweight
+osi
+x.500
+heavy
+crowd
+generic
+netscape
+book
+41-56
+networking
+modifying
+58-57
+attributes
+values
+reflects
+political
+geographic
+organizational
+define
+policies
+authentication
+33-57
+attribute
+schema
+43-59
+authorization
+organization
+tls
+ssl
+context
+component
+arrangement
+issue
+securely
+sasl
+sujoy
+indtan
+institute
+54-00
+57-4
+scheme
+20-5
+translate
+comprise
+unique
+ran
+easily
+computations
+thought
+logical
+corresponds
+remembered
+administered
+59-6
+top
+org
+nations
+mit
+albany
+organizations
+global
+49-8
+labels
+separated
+periods
+label
+characters
+whitehouse.gov
+.gov
+government
+csc.iitkgp.ernet.in
+.in
+standing
+csc
+leaf
+dot
+35-9
+worldwide
+naming
+subtree
+05-9
+fully
+qualified
+ends
+26-10
+.edu
+international
+.mil
+military
+us-specifications
+history
+arpa
+net
+evolved
+centric
+embraced
+recently
+proposed
+popular
+countries
+letter
+implementing
+administer
+contribute
+tremendous
+login
+study
+application-layer
+combine
+resolve
+function
+complexity
+edge
+strain
+46-14
+resolving
+resolvers
+stub
+transparent
+ip-addresses
+browser
+calls
+distinct
+responses
+cached
+30-15
+foreign
+20-16
+routine
+linked
+library
+routines
+gethostbyname
+gethostbyaddr
+converting
+17-16
+passes
+35-20
+owns
+responsible
+hostnames
+rpi
+rpi.edu
+primary
+secondary
+severs
+replicated
+databases
+organized
+centrally
+responsibility
+domains.in
+bother
+separate
+administration
+decentralized
+stand
+05-20
+centralize
+55-21
+28-21
+55-22
+13-23
+44-24
+asked
+target
+nameserver
+04-25
+recursion
+desired
+answer
+possibly
+requested
+versions
+recursive
+honored
+21-25
+host1
+49-26
+knew
+shot
+deep
+14-26
+iterated
+38-26
+caching
+updating
+records
+learns
+caches
+timeout
+disappear
+design
+ietf
+managed
+00-27
+resource
+common
+cname
+alias
+canonical
+handled
+27-28
+authority
+alternative
+03-28
+identification
+19-28
+identifying
+4-bit
+inverse
+status
+45-29
+truncated
+rcode
+11-30
+transfers
+lookups
+extra
+head
+requester
+resubmits
+sees
+opens
+20-30
+zones
+zone
+independently
+ernet.in
+independent
+iitkgp.ernet.in
+sub-domain
+business
+universities
+departmental
+47-32
+retrieves
+vital
+shifted
+sync
+acting
+bound
+25-33
+weak
+protection
+spoofing
+ptr
+lookup
+03-33
+avoid
+connects
+modem
+reflected
+sendmail
+identity
+spoofed
+43-35
+anti-spam
+spams
+mails
+spuriously
+programs
+millions
+majority
+spam
+relay
+university
+spurious
+secure
+spoof
+headers
+respectable
+19-35
+manages
+in-addr
+space
+portion
+in-addr.arpa
+36-35
+maps
+statically
+disk
+implies
+update
+35-37
+directories
+intention
+creating
+produce
+killed
+universally
+junk
+59-38
+object
+repositories
+read
+explicit
+assuming
+delhi
+ram
+49-39
+meant
+rdbmss
+notions
+tabular
+views
+procedures
+rdbms
+04-39
+envisaged
+telecom
+industry
+white
+pages
+developed
+iso
+structure
+agent
+42-39
+54-40
+constructing
+recalling
+change
+performance
+requirements
+40-41
+base
+x.501
+levels
+country
+pairs
+enforces
+rules
+13-41
+represent
+objects
+series
+pair
+54-42
+x.511
+compare
+children
+search
+abandon
+modification
+modify
+remove
+distinguished
+29-43
+agents
+dissolvers
+locally
+referrals
+dsa
+dua
+15-44
+protected
+issues
+x.509
+ensure
+standards
+x.525
+dsas
+master
+schemes
+shadow
+advance
+enforce
+policy
+date
+00-45
+x.519
+shadowing
+dsa-dsa
+agreement
+operational
+binding
+31-46
+look-up
+construct
+browsing
+yellow
+aliases
+08-47
+intuits
+doesn
+21-47
+36-48
+boundary
+12-48
+22-49
+sits
+59-50
+mentions
+bind
+authenticate
+protect
+feature
+retrieve
+51-51
+delete
+09-51
+rename
+abort
+unbind
+roughly
+touch
+notion
+comprised
+axes
+claiming
+false
+confidentiality
+passed
+snoop
+encryption
+muck
+authorized
+log
+audit
+trail
+signature
+nativity
+accesses
+19-53
+separately
+anticipated
+threats
+perspectives
+requesters
+45-55
+typical
+password
+configurability
+generating
+sun
+grand
+07-56
+extent
+aspects
+delivering
+efforts
+19-56
+pumped
+congestions
+leading
+degradation
+selective
+reno
+continuous
+sack
+53-57
+enters
+recovery
+acks
+sacks
+infers
+retransmits
+deemed
+18-58
+heuristics
+improve
+competing
+demands
+maximize
+throughput
+collapse
+guard
+flavors
+shape
+23-58
+depend
+classification
+scheduling
+entrance
+conditioning
+admission
+signaling
+qos
+prof.sujoy
+department
+lecture-35
+42-57
+48-02
+inter
+contents
+announced
+01-02
+39-04
+backs
+shows
+balance
+19-04
+rates
+serviced
+capacity
+outstrips
+dimension
+queuing
+theory
+arrival
+complicated
+traditionally
+poisson
+exponential
+interval
+tail
+key
+bustiness
+busts
+comparatively
+quotient
+burst
+bust
+overloaded
+46-05
+effected
+instantaneously
+delays
+solved
+incomplete
+44-06
+versus
+curve
+alocha
+ccna
+increases
+increase
+catastrophic
+fall
+knee
+cliff
+13-06
+decrease
+approaches
+utilization
+formulation
+43-07
+plot
+losses
+collapses
+hyperbolic
+precautions
+04-07
+stay
+avoidance
+region
+46-09
+guarantee
+stable
+goals
+achievable
+insufficient
+fair
+flows
+steady
+fairness
+retransmitting
+jam
+tend
+scenario
+48-13
+csmacd
+collision
+resources
+19-14
+circuit
+mission
+critical
+exchanging
+flowing
+premium
+distinguish
+rsvp
+diffsservent
+priorities
+lifetime
+polices
+26-15
+monitoring
+adjust
+sophisticated
+feedback
+behavior
+27-16
+metrics
+measuring
+percentage
+deviation
+prevent
+sharp
+08-16
+sensing
+implicit
+algorithms
+observations
+45-17
+adjusting
+constants
+optimal
+selectively
+served
+threshold
+57-18
+aspect
+stp
+carried
+tool
+variants
+30-19
+cwnd
+ssthresh
+advertised
+17-20
+figure
+careful
+stress
+08-21
+knowing
+conservative
+increments
+mss
+generally
+18-21
+decides
+acknopwledges
+onlys
+anytime
+increment
+36-22
+rapidly
+rises
+irrespective
+slows
+25-23
+quiet
+exponentially
+01-23
+larger
+fraction
+floured
+22-23
+cautious
+43-24
+27-25
+receipt
+previously
+03-25
+interprets
+binary
+performs
+divide
+enter
+initially
+37-25
+multiplicative
+59-26
+tahoe
+decreasing
+33-27
+slowstart
+sack,red
+38-28
+transmissions
+thinking
+ordinary
+43-29
+row
+believes
+51-30
+avoided
+intuition
+tune
+causing
+19-30
+improves
+43-30
+partial
+outstanding
+59-31
+deal
+43-32
+1024-2047
+08-33
+13-33
+01-35
+03-36
+exceed
+specification
+specifications
+agree
+negotiate
+negotiated
+sticking
+policing
+violates
+provider
+shaping
+marking
+mark
+priority
+violated
+57-38
+regulating
+inherently
+bursty
+bunch
+peak
+ratio
+provisioning
+designing
+inherent
+burstiness
+smooth
+somewhere.the
+related
+sensitivity
+jitter
+famous
+leaky
+bucket
+leaking
+water
+absorbed
+smoothed
+operating
+underutilized
+slots
+ray
+59-41
+token
+accommodate
+degree
+limits
+linear
+bounded
+lbap
+excess
+queued
+marked
+20-41
+tokens
+accumulated
+differs
+collect
+accumulate
+.the
+helpless
+allowed
+variant
+bursts
+regulated
+45-42
+holds
+accumulating
+removed
+19-43
+talked
+09-43
+averaged
+terms
+noticed
+variation
+40-44
+disscuss
+admit
+reject
+07-44
+reservation
+reserve
+21-44
+49-45
+commit
+notify
+13-45
+mbps
+40-47
+circuits
+approach
+vcs
+waste
+02-47
+choke
+monitors
+sum
+past
+tagged
+00-48
+created
+ripples
+necessarily
+lines
+operate
+distributing
+pressure
+buffers
+17-49
+43-51
+deciding
+classify
+worst
+classifications
+scheduler
+schedules
+micro
+18-52
+fifo
+simplest
+choice
+attended
+servicing
+importance
+discipline
+34-53
+convoluted
+arrivals
+isolation
+lose
+favors
+differentiate
+lesser
+36-54
+drop-tail
+forced
+utilizations
+react
+events
+unition
+lock
+monopolize
+03-54
+classes
+info
+highest
+preemptive
+12-54
+meet
+28-54
+attach
+serve
+42-55
+allocates
+buff
+affects
+latency
+23-57
+robin
+examined
+finishing
+weight
+population
+43-57
+branded
+cos
+likelihood
+aggregation
+jerky
+mind
+insensitive
+reception
+52-58
+seek
+operator
+predictable
+sessions
+aggregates
+talks

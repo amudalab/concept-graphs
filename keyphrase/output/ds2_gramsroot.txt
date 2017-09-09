@@ -1,0 +1,1412 @@
+talking about stacks::talking about stacks
+talking about abstract::talking about abstract
+abstract data types::abstract data types
+data types interfaces::data types interfaces
+interfaces and exceptions::interfaces and exceptions
+exceptions how stacks::exceptions how stacks
+stacks are implemented::stacks are implemented
+implemented in java::implemented in java
+application one application::application one application
+series will talk::series will talk
+talk about global::talk about global
+bit of mortise::bit of mortise
+talk about stacks::talk about stacks
+stacks in java::stacks in java
+java virtual machines::java virtual machines
+machines okay whats::machines okay whats
+whats an abstract::whats an abstract
+abstract data type::abstract data type
+basically a specification::basically a specification
+set of axioms::set of axioms
+axioms that define::axioms that define
+define this semantics::define this semantics
+types for instances::types for instances
+integer this right::integer this right
+understand the notion::understand the notion
+notion of addition::notion of addition
+add two integers::add two integers
+integers in math::integers in math
+define data types::define data types
+define certain operations::define certain operations
+case of integers::case of integers
+defined in math::defined in math
+add n variable::add n variable
+variable of type::variable of type
+kind of operations::kind of operations
+method in java::method in java
+create an instance::create an instance
+talking about sophisticated::talking about sophisticated
+sophisticated data types::sophisticated data types
+types this method::types this method
+lot of work::lot of work
+work access functions::work access functions
+access functions functions::access functions functions
+type and manipulation::type and manipulation
+manipulate or modify::manipulate or modify
+modify the data::modify the data
+talking about data::talking about data
+types here data::types here data
+talk at higher::talk at higher
+level of abstraction::level of abstraction
+talk in terms::talk in terms
+terms of integer::terms of integer
+adding to integers::adding to integers
+stacks or queues::stacks or queues
+advanced data type::advanced data type
+encapsulate the data::encapsulate the data
+data is organized::data is organized
+algorithms that work::algorithms that work
+structures they encapsulate::structures they encapsulate
+encapsulate that right::encapsulate that right
+separate the issues::separate the issues
+issues of correctness::issues of correctness
+correctness and efficiency::correctness and efficiency
+give you start::give you start
+start by giving::start by giving
+giving a simple::giving a simple
+high school classes::high school classes
+collection of objects::collection of objects
+objects and suppose::objects and suppose
+modify that collection::modify that collection
+objects which means::objects which means
+add an object::add an object
+remove an object::remove an object
+dynamic set dynamic::dynamic set dynamic
+changing the set::changing the set
+changing the collection::changing the collection
+create data types::create data types
+kind of methods::kind of methods
+method to create::method to create
+create dynamic set::create dynamic set
+insert to insert::insert to insert
+insert an element::insert an element
+result an instance::result an instance
+set another set::set another set
+includes the element::includes the element
+removes the element::removes the element
+methods for updating::methods for updating
+updating the set::updating the set
+method for creating::method for creating
+method the return::method the return
+true otherwise false::true otherwise false
+talked about axioms::talked about axioms
+axioms which define::axioms which define
+operations should behave::operations should behave
+set its empty::set its empty
+false no matter::false no matter
+operation yeah provided::operation yeah provided
+set is present::set is present
+implement the dynamic::implement the dynamic
+talking abstract data::talking abstract data
+axioms that govern::axioms that govern
+govern those operations::govern those operations
+operations that dictate::operations that dictate
+operations are doing::operations are doing
+simple abstract data::simple abstract data
+stacks and stacks::stacks and stacks
+skip to stacks::skip to stacks
+collection of elements::collection of elements
+last in first::last in first
+first out principle::first out principle
+remove an element::remove an element
+inserted the last::inserted the last
+operation of inserting::operation of inserting
+inserting an element::inserting an element
+operation of removing::operation of removing
+removing an element::removing an element
+popping the stack::popping the stack
+kind of toys::kind of toys
+stack of trays::stack of trays
+put a stack::put a stack
+stack a tray::stack a tray
+create a stack::create a stack
+element o push::element o push
+adds this element::adds this element
+type it inserts::type it inserts
+stack pop pop::stack pop pop
+taking any parameter::taking any parameter
+taking the stack::taking the stack
+pop the stack::pop the stack
+remove the top::remove the top
+stack is empty::stack is empty
+flag an error::flag an error
+top operation returns::top operation returns
+returns the top::returns the top
+differs from push::differs from push
+differ from pop::differ from pop
+pop also removes::pop also removes
+removes that element::removes that element
+empty then top::empty then top
+doesnt not making::doesnt not making
+making any sense::making any sense
+operation so size::operation so size
+method so size::method so size
+talked of push::talked of push
+pop new top::pop new top
+methods are doing::methods are doing
+axioms which govern::axioms which govern
+stack when push::stack when push
+push an element::push an element
+stack abstract data::stack abstract data
+define the methods::define the methods
+methods we define::methods we define
+define two axioms::define two axioms
+translate abstract data::translate abstract data
+type into code::type into code
+machine of interfaces::machine of interfaces
+interface an interface::interface an interface
+methods are done::methods are done
+names of parameter::names of parameter
+types of parameter::types of parameter
+write a class::write a class
+provide the code::provide the code
+implement that interface::implement that interface
+interface right write::interface right write
+write the classes::write the classes
+write different classes::write different classes
+implement the interface::implement the interface
+completely different ways::completely different ways
+classes your implementation::classes your implementation
+provided the meet::provided the meet
+meet the specification::meet the specification
+provide the meet::provide the meet
+meet the interface::meet the interface
+class any implementation::class any implementation
+provided that implementation::provided that implementation
+meets this specification::meets this specification
+meets the interface::meets the interface
+helps us separate::helps us separate
+separate the implementation::separate the implementation
+technique so lets::technique so lets
+built in stack::built in stack
+stack data structure::stack data structure
+define a stack::define a stack
+method called size::method called size
+method and stuff::method and stuff
+pushing it takes::pushing it takes
+takes a parameter::takes a parameter
+parameter of type::parameter of type
+object right object::object right object
+type in java::type in java
+java all objects::java all objects
+objects are derived::objects are derived
+instance the method::instance the method
+method is empty::method is empty
+empty returns boolean::empty returns boolean
+returns boolean right::returns boolean right
+right just tells::right just tells
+recall the top::recall the top
+returns an object::returns an object
+stack empty exception::stack empty exception
+signal that right::signal that right
+notion of exceptions::notion of exceptions
+nt um return::nt um return
+return a stack::return a stack
+stack it modifies::stack it modifies
+modifies the stack::modifies the stack
+nt consider stack::nt consider stack
+exceptions are mechanisms::exceptions are mechanisms
+mechanisms to handle::mechanisms to handle
+reach some exceptional::reach some exceptional
+conditional or exceptional::conditional or exceptional
+execution of program::execution of program
+program we throw::program we throw
+term is throw::term is throw
+throw with throw::throw with throw
+throw an exception::throw an exception
+exception is thrown::exception is thrown
+thrown the flow::thrown the flow
+flow of control::flow of control
+delegate the responsibility::delegate the responsibility
+responsibility of handling::responsibility of handling
+handling that exceptional::handling that exceptional
+exceptional case upwards::exceptional case upwards
+upwards you delegate::upwards you delegate
+handling that problem::handling that problem
+eat pizza method::eat pizza method
+method which throws::method which throws
+throws a stomachache::throws a stomachache
+throw stomachache exception::throw stomachache exception
+exception this procedure::exception this procedure
+stimulate meeting procedure::stimulate meeting procedure
+exist this method::exist this method
+statement these dot::statement these dot
+dot dot dot::dot dot dot
+dot dot means::dot dot means
+bunch of statements::bunch of statements
+executed the flow::executed the flow
+control would interrupt::control would interrupt
+interrupt this point::interrupt this point
+block and catch::block and catch
+depends your question::depends your question
+variables locals variables::variables locals variables
+modification get carried::modification get carried
+enclose the method::enclose the method
+method you calling::method you calling
+calling those bracket::calling those bracket
+skip this catch::skip this catch
+block which means::block which means
+exception was raised::exception was raised
+method might raise::method might raise
+raise many exceptions::raise many exceptions
+block and execute::block and execute
+execute the statements::execute the statements
+raises an exception::raises an exception
+execute whatever statements::execute whatever statements
+system a dot::system a dot
+dot out exception::dot out exception
+right to explain::right to explain
+write this catch::write this catch
+nt not write::nt not write
+procedure simulate meeting::procedure simulate meeting
+throw the exception::throw the exception
+thrown an exception::thrown an exception
+exception the control::exception the control
+catching this exception::catching this exception
+high level procedure::high level procedure
+finally you procedure::finally you procedure
+procedure will stop::procedure will stop
+exception finally appearing::exception finally appearing
+method to print::method to print
+out the statement::out the statement
+creating an object::creating an object
+creating an instance::creating an instance
+initializing that instance::initializing that instance
+set of parameters::set of parameters
+making this call::making this call
+propagate upward move::propagate upward move
+upward move upward::upward move upward
+exception was thrown::exception was thrown
+procedure would throw::procedure would throw
+reach the console::reach the console
+console that signifies::console that signifies
+java in java::java in java
+java that signifies::java that signifies
+class your invoking::class your invoking
+invoking the constructor::invoking the constructor
+method of listening::method of listening
+listening for exceptions::listening for exceptions
+mention before catch::mention before catch
+dot out dot::dot out dot
+out dot printline::out dot printline
+threw an exception::threw an exception
+exception in turn::exception in turn
+exception has happen::exception has happen
+add a throws::add a throws
+wrote the method::wrote the method
+throws this exception::throws this exception
+exception yes proc::exception yes proc
+proc a method::proc a method
+defining a stomachache::defining a stomachache
+stomach ache exception::stomach ache exception
+class right recall::class right recall
+taking a single::taking a single
+calling the super::calling the super
+catch an exception::catch an exception
+chain of methods::chain of methods
+reaches the console::reaches the console
+console any questions::console any questions
+questions it calls::questions it calls
+calls the constructor::calls the constructor
+constructor of parent::constructor of parent
+class the class::class the class
+class this classes::class this classes
+run time exception::run time exception
+pass that question::pass that question
+understand little bit::understand little bit
+bit more java::bit more java
+java before right::java before right
+catch this exception::catch this exception
+catch third exception::catch third exception
+created the interface::created the interface
+ways of implementing::ways of implementing
+implementing a stack::implementing a stack
+stack is capital::stack is capital
+element this array::element this array
+hold the elements::hold the elements
+elements would stack::elements would stack
+push another element::push another element
+out an entire::out an entire
+array to implement::array to implement
+implement the stack::implement the stack
+implementing the stack::implementing the stack
+array stack implement::array stack implement
+stack implement stack::stack implement stack
+stack by implement::stack by implement
+implement stack means::implement stack means
+interface we provide::interface we provide
+set a default::set a default
+variable n final::variable n final
+elements of stack::elements of stack
+right t equals::right t equals
+equals zero means::equals zero means
+means the top::means the top
+minus one right::minus one right
+two constructor methods::two constructor methods
+call array stack::call array stack
+stack whose capacity::stack whose capacity
+capacity are thousand::capacity are thousand
+lets say thirty::lets say thirty
+stack of size::stack of size
+size should return::size should return
+empty the stack::empty the stack
+method could return::method could return
+push an object::push an object
+push this object::push this object
+stack already equals::stack already equals
+throw a stack::throw a stack
+stack full exception::stack full exception
+put the object::put the object
+location incremented location::location incremented location
+increment then put::increment then put
+check the stack::check the stack
+control would exit::control would exit
+return the top::return the top
+element is empty::element is empty
+element in location::element in location
+element i decrement::element i decrement
+removing the top::removing the top
+element and lets::element and lets
+location i set::location i set
+set a null::set a null
+null i dereference::null i dereference
+right because earlier::right because earlier
+remove that object::remove that object
+top element pop::top element pop
+element pop returns::element pop returns
+remove those objects::remove those objects
+understand your question::understand your question
+array of objects::array of objects
+access the tth::access the tth
+operations were taking::operations were taking
+required time propositional::required time propositional
+number of elements::number of elements
+methods take order::methods take order
+creation of stack::creation of stack
+hand whats size::hand whats size
+whats size stack::whats size stack
+large size stack::large size stack
+waste of memory::waste of memory
+allocate very small::allocate very small
+run our procedure::run our procedure
+procedure to completion::procedure to completion
+stack is full::stack is full
+full the stack::full the stack
+raise a stack::raise a stack
+make a stack::make a stack
+grow the stack::grow the stack
+application of stacks::application of stacks
+daily stock prices::daily stock prices
+prices of lets::prices of lets
+price on day::price on day
+span s sub::span s sub
+number of consecutives::number of consecutives
+make it clear::make it clear
+number of days::number of days
+days the price::days the price
+span of stock::span of stock
+day five equals::day five equals
+equals four inclusive::equals four inclusive
+inclusive of kind::inclusive of kind
+make clear right::make clear right
+instance for days::instance for days
+compute this span::compute this span
+array of numbers::array of numbers
+numbers i give::numbers i give
+compute s sub::compute s sub
+stock on day::stock on day
+day i minus::day i minus
+two i minus::two i minus
+moment you find::moment you find
+find a case::find a case
+price of stock::price of stock
+stop you stop::stop you stop
+stop this loop::stop this loop
+done is true::done is true
+repeat until loop::repeat until loop
+loop if done::loop if done
+span then span::span then span
+span stock price::span stock price
+implementing this doing::implementing this doing
+doing this thing::doing this thing
+computing this span::computing this span
+times this loop::times this loop
+case i times::case i times
+executed i times::executed i times
+number of times::number of times
+square n square::square n square
+algorithm is big::algorithm is big
+case so question::case so question
+talking of stacks::talking of stacks
+compute the span::compute the span
+closet day preceding::closet day preceding
+stock prices greater::stock prices greater
+greater than price::greater than price
+closest day preceding::closest day preceding
+day preceding day::day preceding day
+price of day::price of day
+call this quantity::call this quantity
+quantity closet day::quantity closet day
+price is greater::price is greater
+conventionally lets defined::conventionally lets defined
+determine s sub::determine s sub
+sub i span::sub i span
+span this span::span this span
+told you price::told you price
+closest tape preceding::closest tape preceding
+price is larger::price is larger
+larger than price::larger than price
+two is larger::two is larger
+similarly that day::similarly that day
+store these indices::store these indices
+compare the price::compare the price
+day six suppose::day six suppose
+suppose the price::suppose the price
+compare with price::compare with price
+first price larger::first price larger
+update my stack::update my stack
+things and lets::things and lets
+compare that price::compare that price
+recall the previous::recall the previous
+right the index::right the index
+stack will give::stack will give
+recall from previous::recall from previous
+done becomes true::done becomes true
+true when done::true when done
+found a price::found a price
+current days price::current days price
+stack becomes empty::stack becomes empty
+exit this loop::exit this loop
+loop the stack::loop the stack
+top value stack::top value stack
+push i back::push i back
+execute whole lot::execute whole lot
+lot of times::lot of times
+execute a lot::execute a lot
+case n square::case n square
+stack each element::stack each element
+element is pushed::element is pushed
+loop is executed::loop is executed
+executed yeah pop::executed yeah pop
+pop of elements::pop of elements
+elements ever pushed::elements ever pushed
+times loop executes::times loop executes
+loop this execute::loop this execute
+times exactly execute::times exactly execute
+execute so whats::execute so whats
+whats the total::whats the total
+number of total::number of total
+square i hear::square i hear
+grow this loop::grow this loop
+move an element::move an element
+pushed n elements::pushed n elements
+elements total total::elements total total
+total total number::total total number
+give maximum size::give maximum size
+stack yeah suppose::stack yeah suppose
+pushing an elemnt::pushing an elemnt
+elemnt the size::elemnt the size
+array of length::array of length
+array i copy::array i copy
+increase the size::increase the size
+push i increment::push i increment
+increment the top::increment the top
+push top location::push top location
+strategy for growth::strategy for growth
+increment the size::increment the size
+increment additive increment::increment additive increment
+strategy we double::strategy we double
+double the size::double the size
+regular push push::regular push push
+push the element::push the element
+takes one unit::takes one unit
+create a larger::create a larger
+stack and copy::stack and copy
+copy the elements::copy the elements
+form the earlier::form the earlier
+earlier stack stack::earlier stack stack
+created a stack::created a stack
+unit you copied::unit you copied
+special push operation::special push operation
+lets see lets::lets see lets
+incrementing the size::incrementing the size
+initially i started::initially i started
+array of size::array of size
+size four right::size four right
+push this first::push this first
+enlarge my stack::enlarge my stack
+cost one unit::cost one unit
+create an array::create an array
+cost becomes cost::cost becomes cost
+four four units::four four units
+twelve i copy::twelve i copy
+phase one size::phase one size
+beginning of phase::beginning of phase
+copy the previous::copy the previous
+previous four elements::previous four elements
+minus one elements::minus one elements
+cost of copying::cost of copying
+copying the element::copying the element
+array gets fulled::array gets fulled
+four regular pushes::four regular pushes
+doing c pushes::doing c pushes
+cost of phase::cost of phase
+phases and total::phases and total
+two c times::two c times
+quantity this sum::quantity this sum
+roughly n square::roughly n square
+approximately n order::approximately n order
+equal to order::equal to order
+tight strategy concerned::tight strategy concerned
+case the analysis::case the analysis
+analysis would change::analysis would change
+creating an array::creating an array
+quickly through growth::quickly through growth
+strategy i start::strategy i start
+first element create::first element create
+double this array::double this array
+size two push::size two push
+push this element::push this element
+element i double::element i double
+size two size::size two size
+four and push::four and push
+push ill pushing::push ill pushing
+size of array::size of array
+size eight copy::size eight copy
+copy these element::copy these element
+analyze the cost::analyze the cost
+cost of creating::cost of creating
+creating the array::creating the array
+created an array::created an array
+array of cost::array of cost
+two we copied::two we copied
+copied one element::copied one element
+cost of pushing::cost of pushing
+pushing we created::pushing we created
+pushing the elements::pushing the elements
+define a face::define a face
+two we call::two we call
+four we call::four we call
+call it phase::call it phase
+array has size::array has size
+size eight phase::size eight phase
+left after copied::left after copied
+minus one cost::minus one cost
+log in phases::log in phases
+discussion about stacks::discussion about stacks
+stacks next class::stacks next class
+queues and linked::queues and linked
+linked lists stop::linked lists stop
+todays class::todays class
+abstract data::abstract data
+data types::data types
+types interfaces::types interfaces
+java application::java application
+global stacks::global stacks
+mortise analysis::mortise analysis
+virtual machines::virtual machines
+data type::data type
+real numbers::real numbers
+define data::define data
+operation required::operation required
+mathematic class::mathematic class
+constructor operation::constructor operation
+constructor method::constructor method
+sophisticated data::sophisticated data
+work access::work access
+access functions::access functions
+functions functions::functions functions
+access elements::access elements
+manipulation procedure::manipulation procedure
+building blocks::building blocks
+algorithmic procedure::algorithmic procedure
+higher level::higher level
+advanced data::advanced data
+data structure::data structure
+data structures::data structures
+dynamic set::dynamic set
+high school::high school
+school classes::school classes
+add operations::add operations
+collection remove::collection remove
+create data::create data
+dynamic sets::dynamic sets
+method insert::method insert
+creating constructing::creating constructing
+access method::access method
+return value::return value
+type boolean::type boolean
+write axioms::write axioms
+resulting set::resulting set
+previous set::previous set
+basic axioms::basic axioms
+behavior functionality::behavior functionality
+algorithm procedure::algorithm procedure
+talking abstract::talking abstract
+simple abstract::simple abstract
+doing today::doing today
+out principle::out principle
+instance stack::instance stack
+tray put::tray put
+key methods::key methods
+stack push::stack push
+push adds::push adds
+stack pop::stack pop
+pop pop::pop pop
+top element::top element
+top operation::top operation
+operation returns::operation returns
+element top::element top
+top doesnt::top doesnt
+support methods::support methods
+size tells::size tells
+empty tells::empty tells
+push pop::push pop
+top size::top size
+methods understand::methods understand
+govern behavior::govern behavior
+stack abstract::stack abstract
+translate abstract::translate abstract
+methods asscoaited::methods asscoaited
+interface implementation::interface implementation
+write implement::write implement
+implementation provided::implementation provided
+specification provide::specification provide
+interface specification::interface specification
+implementation stick::implementation stick
+implementation meets::implementation meets
+specification meets::specification meets
+programming technique::programming technique
+stack implementation::stack implementation
+stack data::stack data
+stack interface::stack interface
+return type::return type
+type object::type object
+generic type::generic type
+empty returns::empty returns
+boolean right::boolean right
+stack empty::stack empty
+empty exception::empty exception
+exception exception::exception exception
+void means::void means
+handle errors::handle errors
+exceptional conditional::exceptional conditional
+exceptional case::exceptional case
+java term::java term
+control moves::control moves
+current method::current method
+exception occurs::exception occurs
+case upwards::case upwards
+delegate responsibility::delegate responsibility
+eat pizza::eat pizza
+pizza method::pizza method
+stomachache exception::stomachache exception
+dot coded::dot coded
+procedure eatpizza::procedure eatpizza
+stimulate meeting::stimulate meeting
+meeting procedure::meeting procedure
+method eatpizza::method eatpizza
+dot dot::dot dot
+dot means::dot means
+catch blocks::catch blocks
+procedure call::procedure call
+variables locals::variables locals
+locals variables::locals variables
+global variables::global variables
+catch block::catch block
+method raises::method raises
+statements return::statements return
+out exception::out exception
+procedure simulate::procedure simulate
+simulate meeting::simulate meeting
+parent procedure::parent procedure
+high level::high level
+level procedure::level procedure
+procedure stops::procedure stops
+java class::java class
+call creating::call creating
+calling procedure::calling procedure
+propagate upward::propagate upward
+upward move::upward move
+move upward::move upward
+procedural hierarchyright::procedural hierarchyright
+signifies creating::signifies creating
+parameters written::parameters written
+signifying java::signifying java
+exceptions catching::exceptions catching
+system dot::system dot
+out dot::out dot
+dot printline::dot printline
+throws class::throws class
+previous slides::previous slides
+method epizza::method epizza
+single parameter::single parameter
+super class::super class
+propagate upwards::propagate upwards
+parent class::parent class
+stomach ache::stomach ache
+ache exception::ache exception
+extending run::extending run
+methods throw::methods throw
+catch statement::catch statement
+java book::java book
+implement methods::implement methods
+array lets::array lets
+maximum size::maximum size
+first element::first element
+entire implementation::entire implementation
+array stack::array stack
+stack implement::stack implement
+implement stack::implement stack
+stack means::stack means
+default capacity::default capacity
+thousand twenty::thousand twenty
+constructor methods::constructor methods
+call array::call array
+number lets::number lets
+size thirty::size thirty
+easy right::easy right
+return false::return false
+full exception::full exception
+location incremented::location incremented
+incremented location::incremented location
+location element::location element
+earlier index::earlier index
+top location::top location
+location number::location number
+location thirty::location thirty
+element pop::element pop
+pop returns::pop returns
+type class::type class
+private member::private member
+tth element::tth element
+array implementation::array implementation
+operations required::operations required
+virtual depend::virtual depend
+upper bound::upper bound
+default value::default value
+hand whats::hand whats
+whats size::whats size
+size stack::size stack
+large size::large size
+small stack::small stack
+pop methods::pop methods
+stock prices::stock prices
+daily stock::daily stock
+stock price::stock price
+maximum number::maximum number
+consecutives days::consecutives days
+days price::days price
+clear right::clear right
+price day::price day
+decrementing incrementing::decrementing incrementing
+true done::true done
+exit repeat::exit repeat
+span stock::span stock
+thing computing::thing computing
+worst case::worst case
+last class::last class
+total number::total number
+closet day::closet day
+day preceding::day preceding
+closest day::closest day
+preceding day::preceding day
+first day::first day
+quantity closet::quantity closet
+quantities suppose::quantities suppose
+closest tape::closest tape
+tape preceding::tape preceding
+first compare::first compare
+first price::first price
+price larger::price larger
+previous lecture::previous lecture
+true means::true means
+current days::current days
+top value::top value
+value stack::value stack
+computation great::computation great
+loop execute::loop execute
+elements stack::elements stack
+elements begin::elements begin
+loop executed::loop executed
+loop executes::loop executes
+times loop::times loop
+statements execute::statements execute
+iteration put::iteration put
+loop move::loop move
+element stack::element stack
+elements total::elements total
+elements pushed::elements pushed
+good question::good question
+give maximum::give maximum
+stack grow::stack grow
+original stack::original stack
+regular thing::regular thing
+top counter::top counter
+tight strategy::tight strategy
+growth strategy::growth strategy
+additive increment::additive increment
+regular push::regular push
+push push::push push
+special push::special push
+larger stack::larger stack
+elements form::elements form
+earlier stack::earlier stack
+stack stack::stack stack
+total cost::total cost
+push operation::push operation
+regular pushes::regular pushes
+size twelve::size twelve
+element twelve::element twelve
+call phase::call phase
+right lets::right lets
+small problem::small problem
+multiplication operator::multiplication operator
+previous array::previous array
+phase total::phase total
+square times::square times
+order square::order square
+strategy concerned::strategy concerned
+purposes analysis::purposes analysis
+element create::element create
+array size::array size
+array create::array create
+cost push::cost push
+cost pushing::cost pushing
+size sixteen::size sixteen
+copy elements::copy elements
+elements left::elements left
+stop discussion::stop discussion
+discuss queues::discuss queues
+linked lists::linked lists
+lists stop::lists stop
+todays::todays
+class::class
+talking::talking
+stacks::stacks
+abstract::abstract
+data::data
+types::types
+interfaces::interfaces
+exceptions::exceptions
+implemented::implemented
+java::java
+application::application
+analysis::analysis
+series::series
+talk::talk
+global::global
+bit::bit
+mortise::mortise
+virtual::virtual
+machines::machines
+whats::whats
+type::type
+basically::basically
+specification::specification
+instances::instances
+set::set
+axioms::axioms
+define::define
+semantics::semantics
+operations::operations
+integer::integer
+right::right
+real::real
+numbers::numbers
+two::two
+integers::integers
+addition::addition
+understand::understand
+notion::notion
+add::add
+math::math
+similarly::similarly
+defined::defined
+interface::interface
+giving::giving
+signature::signature
+operation::operation
+parameters::parameters
+required::required
+results::results
+case::case
+sum::sum
+variable::variable
+answer::answer
+mathematic::mathematic
+clearer::clearer
+kind::kind
+essentially::essentially
+constructor::constructor
+method::method
+create::create
+instance::instance
+sophisticated::sophisticated
+lot::lot
+work::work
+access::access
+functions::functions
+elements::elements
+manipulation::manipulation
+procedure::procedure
+manipulate::manipulate
+modify::modify
+identify::identify
+requirements::requirements
+building::building
+blocks::blocks
+algorithmic::algorithmic
+out::out
+language::language
+higher::higher
+level::level
+abstraction::abstraction
+terms::terms
+adding::adding
+queues::queues
+advanced::advanced
+discuss::discuss
+encapsulate::encapsulate
+structure::structure
+organized::organized
+algorithms::algorithms
+structures::structures
+separate::separate
+issues::issues
+correctness::correctness
+efficiency::efficiency
+show::show
+give::give
+start::start
+simple::simple
+dynamic::dynamic
+high::high
+school::school
+classes::classes
+collection::collection
+objects::objects
+suppose::suppose
+means::means
+object::object
+remove::remove
+changing::changing
+sets::sets
+methods::methods
+insert::insert
+element::element
+result::result
+includes::includes
+removes::removes
+updating::updating
+creating::creating
+constructing::constructing
+telling::telling
+return::return
+value::value
+boolean::boolean
+true::true
+false::false
+talked::talked
+behave::behave
+write::write
+form::form
+empty::empty
+matter::matter
+resulting::resulting
+asked::asked
+previous::previous
+provided::provided
+delete::delete
+present::present
+basic::basic
+nature::nature
+behavior::behavior
+functionality::functionality
+algorithm::algorithm
+thing::thing
+code::code
+implement::implement
+interested::interested
+permitted::permitted
+govern::govern
+dictate::dictate
+doing::doing
+familiar::familiar
+nt::nt
+today::today
+skip::skip
+stack::stack
+last::last
+first::first
+principle::principle
+inserted::inserted
+removed::removed
+inserting::inserting
+pushing::pushing
+removing::removing
+popping::popping
+toys::toys
+trays::trays
+mess::mess
+put::put
+tray::tray
+top::top
+pop::pop
+supported::supported
+four::four
+key::key
+push::push
+adds::adds
+inserts::inserts
+taking::taking
+parameter::parameter
+flag::flag
+error::error
+returns::returns
+differs::differs
+differ::differ
+doesnt::doesnt
+making::making
+sense::sense
+support::support
+size::size
+tells::tells
+pushed::pushed
+back::back
+complete::complete
+translate::translate
+construct::construct
+machine::machine
+declare::declare
+asscoaited::asscoaited
+done::done
+part::part
+implementation::implementation
+slight::slight
+names::names
+fact::fact
+provide::provide
+short::short
+completely::completely
+ways::ways
+meet::meet
+program::program
+written::written
+stick::stick
+meets::meets
+coding::coding
+helps::helps
+programming::programming
+technique::technique
+lets::lets
+built::built
+stuff::stuff
+question::question
+takes::takes
+generic::generic
+derived::derived
+recall::recall
+exception::exception
+signal::signal
+minute::minute
+void::void
+executed::executed
+modifies::modifies
+mechanisms::mechanisms
+handle::handle
+errors::errors
+reach::reach
+exceptional::exceptional
+conditional::conditional
+execution::execution
+throw::throw
+term::term
+thrown::thrown
+flow::flow
+control::control
+moves::moves
+current::current
+point::point
+idea::idea
+occurs::occurs
+delegate::delegate
+responsibility::responsibility
+handling::handling
+upwards::upwards
+problem::problem
+clear::clear
+eat::eat
+pizza::pizza
+throws::throws
+stomachache::stomachache
+dot::dot
+coded::coded
+ate::ate
+eatpizza::eatpizza
+stimulate::stimulate
+meeting::meeting
+exist::exist
+statement::statement
+statements::statements
+bunch::bunch
+interrupt::interrupt
+block::block
+catch::catch
+depends::depends
+modified::modified
+call::call
+returning::returning
+variables::variables
+locals::locals
+modification::modification
+carried::carried
+thought::thought
+enclose::enclose
+bracket::bracket
+calling::calling
+raised::raised
+raise::raise
+execute::execute
+follow::follow
+raises::raises
+caught::caught
+system::system
+explain::explain
+happen::happen
+simulate::simulate
+parent::parent
+catching::catching
+finally::finally
+stop::stop
+appearing::appearing
+console::console
+manner::manner
+propagated::propagated
+stops::stops
+shown::shown
+user::user
+print::print
+initializing::initializing
+assign::assign
+created::created
+moved::moved
+enclosed::enclosed
+propagate::propagate
+upward::upward
+move::move
+procedural::procedural
+hierarchyright::hierarchyright
+signifies::signifies
+brackets::brackets
+signifying::signifying
+invoking::invoking
+side::side
+listening::listening
+mention::mention
+printline::printline
+threw::threw
+turn::turn
+things::things
+gracefully::gracefully
+exit::exit
+slides::slides
+wrote::wrote
+epizza::epizza
+proc::proc
+defining::defining
+stomach::stomach
+ache::ache
+single::single
+string::string
+super::super
+chain::chain
+reaches::reaches
+questions::questions
+calls::calls
+extending::extending
+run::run
+pass::pass
+book::book
+implementing::implementing
+array::array
+maximum::maximum
+capital::capital
+hold::hold
+index::index
+location::location
+listed::listed
+entire::entire
+earlier::earlier
+default::default
+capacity::capacity
+thousand::thousand
+twenty::twenty
+final::final
+constant::constant
+changed::changed
+declared::declared
+initially::initially
+minus::minus
+inside::inside
+equals::equals
+number::number
+thirty::thirty
+easy::easy
+started::started
+full::full
+increment::increment
+incremented::incremented
+check::check
+decrement::decrement
+null::null
+dereference::dereference
+necessarily::necessarily
+deference::deference
+rid::rid
+lie::lie
+memory::memory
+clarify::clarify
+private::private
+member::member
+tth::tth
+continue::continue
+propositional::propositional
+depend::depend
+order::order
+working::working
+upper::upper
+bound::bound
+creation::creation
+hand::hand
+allocate::allocate
+large::large
+waste::waste
+small::small
+completion::completion
+requirement::requirement
+artifact::artifact
+make::make
+grow::grow
+quickly::quickly
+stock::stock
+prices::prices
+daily::daily
+price::price
+day::day
+span::span
+sub::sub
+consecutives::consecutives
+days::days
+equal::equal
+inclusive::inclusive
+counting::counting
+compute::compute
+moment::moment
+find::find
+loop::loop
+decrementing::decrementing
+incrementing::incrementing
+quantity::quantity
+repeat::repeat
+determine::determine
+enters::enters
+computing::computing
+squared::squared
+square::square
+repeatedly::repeatedly
+comparing::comparing
+worst::worst
+times::times
+varying::varying
+summation::summation
+total::total
+running::running
+big::big
+closet::closet
+preceding::preceding
+greater::greater
+closest::closest
+conventionally::conventionally
+computed::computed
+easily::easily
+quantities::quantities
+told::told
+definition::definition
+tape::tape
+larger::larger
+values::values
+store::store
+indices::indices
+bottom::bottom
+compare::compare
+bar::bar
+drawn::drawn
+comparison::comparison
+update::update
+lecture::lecture
+found::found
+computation::computation
+great::great
+student::student
+begin::begin
+executes::executes
+hear::hear
+iteration::iteration
+good::good
+fulled::fulled
+elemnt::elemnt
+length::length
+copy::copy
+original::original
+rename::rename
+locations::locations
+increase::increase
+regular::regular
+counter::counter
+chosen::chosen
+strategies::strategies
+adopt::adopt
+tight::tight
+strategy::strategy
+growth::growth
+additive::additive
+double::double
+kinds::kinds
+space::space
+unit::unit
+special::special
+copied::copied
+units::units
+cost::cost
+behaves::behaves
+enlarge::enlarge
+pushes::pushes
+fill::fill
+twelve::twelve
+phase::phase
+curved::curved
+pound::pound
+multiplication::multiplication
+operator::operator
+multiply::multiply
+beginning::beginning
+copying::copying
+faces::faces
+phases::phases
+roughly::roughly
+approximately::approximately
+concerned::concerned
+change::change
+slightly::slightly
+purposes::purposes
+analyze::analyze
+face::face
+sixteen::sixteen
+spent::spent
+left::left
+tminus::tminus
+log::log
+discussion::discussion
+linked::linked
+lists::lists

@@ -1,0 +1,6551 @@
+important nonlinear data
+nonlinear data structures
+structures in computing
+computing trees tree
+trees tree structures
+breakthrough in data
+implement a host
+host of algorithms
+algorithms much faster
+linear data structures
+lists or linked
+linked lists trees
+trees also provide
+provide a natural
+organization for data
+structures in file
+graphical user interfaces
+clear what productivity
+trees are nonlinear
+relationships between objects
+objects in sequences
+sequences the relationships
+tree are hierarchical
+terminology for tree
+tree data structures
+relationships we show
+tree in figure
+trees 8.1.1 tree
+8.1.1 tree definitions
+definitions and properties
+properties a tree
+abstract data type
+type that stores
+stores elements hierarchically
+elements a tree
+visualized by placing
+placing elements inside
+elements inside ovals
+ovals or rectangles
+drawing the connections
+connections between parents
+parents and children
+children with straight
+call the top
+element the root
+elements being connected
+africa europe asia
+europe asia australia
+asia australia canada
+canada s america
+america overseas domestic
+overseas domestic international
+tuner r&d sales
+r&d sales purchasing
+sales purchasing manufacturing
+purchasing manufacturing electronics
+representing the organization
+corporation the root
+root stores electronics
+root store r&d
+manufacturing the internal
+internal nodes store
+nodes store sales
+manufacturing formal tree
+formal tree definition
+define a tree
+set of nodes
+nodes storing elements
+relationship that satisfies
+parent each node
+unique parent node
+node with parent
+nodes this convention
+empty or consists
+set of subtrees
+subtrees whose roots
+trees other node
+relationships two nodes
+parent are siblings
+siblings a node
+children a node
+children external nodes
+discussed the hierarchical
+relationship between files
+files and directories
+computer s file
+emphasize the nomenclature
+revisit an earlier
+unix and linux
+linux operating systems
+hw1 hw2 hw3
+hw2 hw3 pr1
+hw3 pr1 pr2
+pr1 pr2 pr3
+pr2 pr3 grades
+pr3 grades buylow
+grades buylow sellhigh
+buylow sellhigh market
+sellhigh market grades
+market grades figure
+representing a portion
+system a node
+cs016 the subtree
+edges and paths
+paths in trees
+trees an edge
+edge of tree
+pair of nodes
+versa a path
+sequence of nodes
+two consecutive nodes
+form an edge
+relation between classes
+python program forms
+forms a tree
+tree when single
+provided a summary
+hierarchy for python
+python s exception
+portrayed in figure
+user-defined exception classes
+conventionally be declared
+declared as descendants
+specific exception class
+class we introduced
+introduced in code
+portion of python
+python s hierarchy
+hierarchy of exception
+types in python
+classes are organized
+exists a built-in
+built-in class named
+class named object
+ultimate base class
+direct or indirect
+indirect base class
+pictured in figure
+python s complete
+complete class hierarchy
+hierarchy of classes
+classes for representing
+representing various forms
+tree arraybinarytree linkedbinarytree
+arraybinarytree linkedbinarytree tree
+linkedbinarytree tree binarytree
+tree binarytree linkedtree
+binarytree linkedtree figure
+hierarchy for modeling
+modeling various abstractions
+abstractions and implementations
+implementations of tree
+linkedtree and arraybinarytree
+trees ordered trees
+trees a tree
+tree is ordered
+meaningful linear order
+identify the children
+visualized by arranging
+arranging siblings left
+tree whose internal
+nodes are parts
+leaves are paragraphs
+expanding the tree
+show paragraphs consisting
+consisting of sentences
+consisting of words
+consisting of characters
+examples of trees
+order of children
+children is significant
+significant a family
+tree that describes
+describes generational relationships
+birth in contrast
+considered an unordered
+unordered tree likewise
+tree to describe
+describe an inheritance
+tree in modeling
+modeling a computer
+system often displays
+system s representation
+8.1.2 the tree
+tree abstract data
+lists in section
+tree an element
+element is stored
+positions satisfy parent-child
+satisfy parent-child relationships
+relationships that define
+define the tree
+structure a position
+supports the method
+return the element
+stored at position
+adt then supports
+allowing a user
+user to navigate
+return the position
+root of tree
+empty t.is root
+true if position
+tree t t.parent
+parent of position
+return the number
+number of children
+children of position
+position p t.children
+generate an iteration
+position p t.is
+number of positions
+contained in tree
+tree t t.is
+true if tree
+positions of tree
+tree t iter
+stored within tree
+methods that accepts
+accepts a position
+argument should generate
+generate a valueerror
+position is invalid
+reports the children
+generates an empty
+iteration in similar
+generate empty iterations
+discuss general means
+means for iterating
+tree in sections
+define any methods
+methods for creating
+creating or modifying
+point we prefer
+prefer to describe
+describe different tree
+tree update methods
+methods in conjunction
+conjunction with specific
+applications of trees
+tree abstract base
+abstract base class
+class in python
+python in discussing
+discussing the object-oriented
+object-oriented design principle
+principle of abstraction
+abstraction in section
+managed in python
+python via duck
+defined the notion
+adt in section
+presented several classes
+classes that implement
+implement the queue
+arrayqueue in section
+linkedqueue in section
+circularqueue in section
+gave any formal
+adt in python
+implementations were self-contained
+happen to adhere
+mechanism to designate
+designate the relationships
+class that serves
+choose to define
+adt our reason
+reason for doing
+level of abstraction
+allowing greater code
+greater code reuse
+concrete tree implementations
+nested position class
+accessor methods included
+define any internal
+representation for storing
+storing a tree
+code fragment remain
+fragment remain abstract
+raises a notimplementederror
+approach for defining
+defining abstract base
+abstract base classes
+classes and abstract
+python s abc
+described in section
+subclasses are responsible
+responsible for overriding
+overriding abstract methods
+provide a working
+chosen internal representation
+includes several concrete
+methods with implementations
+rely on calls
+class in defining
+defining the tree
+declare ten accessor
+ten accessor methods
+left as abstract
+implementations for methods
+methods is root
+empty in section
+explore general algorithms
+algorithms for traversing
+traversing a tree
+provide concrete implementations
+positions and iter
+class the beauty
+concrete methods defined
+subclasses this promotes
+promotes greater code
+subclasses to reimplement
+reimplement such behaviors
+behaviors we note
+class being abstract
+reason to create
+create a direct
+exists to serve
+base for inheritance
+users will create
+instances of concrete
+8.1.3 computing depth
+depth and height
+number of ancestors
+tree of figure
+node storing international
+international has depth
+present a simple
+computing the depth
+number of levels
+levels separating position
+class the running
+denotes the depth
+performs a constant-time
+constant-time recursive step
+form a single
+informative to characterize
+characterize the running
+height the height
+children the height
+positions we leave
+leave the justification
+present an algorithm
+implemented in code
+nonpublic method height1
+class it computes
+computes the height
+tree t based
+based on proposition
+depth from code
+defined the positions
+implemented to run
+height1 calls algorithm
+calls algorithm depth
+set of leaf
+algorithm height1 runs
+compute the height
+original recursive definition
+parameterize a function
+calculate the height
+important to understand
+understand why algorithm
+efficient than height1
+height1 the algorithm
+algorithm is recursive
+root eventually invokes
+invokes the recursion
+determine the running
+algorithm by summing
+analyses of recursive
+amount of work
+work per position
+overhead of computing
+computing the maximum
+iteration of children
+implementation of children
+iteration is generated
+denotes the number
+algorithm height2 spends
+compute the maximum
+order to complete
+complete the analysis
+denote the number
+contributes one unit
+sum by proposition
+revisiting the public
+ability to compute
+heights of subtrees
+subtrees is beneficial
+user might expect
+designating the tree
+wrap the nonpublic
+public height method
+interpretation when invoked
+invoked on tree
+trees a binary
+node is labeled
+left child precedes
+precedes a right
+node the subtree
+tree is proper
+children some people
+full binary trees
+proper binary tree
+children a binary
+proper is improper
+class of binary
+binary trees arises
+arises in contexts
+represent a number
+result from answering
+answering a series
+series of yes-or-no
+questions each internal
+follow an edge
+tracing a path
+leaf such binary
+represents a decision
+ancestors are answered
+binary tree figure
+illustrates a decision
+prospective investor chapter
+binary treewhose leaves
+variables or constants
+node is leaf
+variable or constant
+node is internal
+value is defined
+defined by applying
+applying its operation
+children an arithmetic
+arithmetic expression tree
+improper binary tree
+binary tree representing
+representing an arithmetic
+expression this tree
+represents the expression
+internal node labeled
+recursive binary tree
+binary tree definition
+define a binary
+stores an element
+element a binary
+8.2.1 the binary
+binary tree abstract
+tree that supports
+supports three additional
+additional accessor methods
+position that represents
+represents the left
+left child t.right
+represents the right
+right child t.sibling
+represents the sibling
+define specialized update
+specialized update methods
+methods for binary
+describe specific implementations
+implementations and applications
+applications of binary
+trees the binarytree
+binarytree abstract base
+tree was defined
+class in section
+binary tree adt
+rely on inheritance
+inheritance to define
+define the binarytree
+binarytree class based
+existing tree class
+binarytree class remains
+class remains abstract
+provide complete specifications
+behaviors our python
+binary tree supports
+defined for general
+class also inherits
+inherits the nested
+tree class definition
+definition in addition
+class provides declarations
+abstract methods left
+supported by concrete
+subclasses of binarytree
+two concrete implementations
+implementations of methods
+method is derived
+combination of left
+identify the sibling
+method is abstract
+derive a generator
+ordered children based
+behavior of abstract
+left and right
+properties of binary
+binary trees binary
+trees binary trees
+interesting properties dealing
+dealing with relationships
+heights and number
+number of nodes
+nodes we denote
+denote the set
+binary tree grows
+relating the height
+nodes a detailed
+properties is left
+left as exercise
+exercise r-8.8 proposition
+nonempty binary tree
+number of external
+number of internal
+trees relating internal
+relating internal nodes
+nodes to external
+tree in addition
+earlier binary tree
+binary tree properties
+nodes and external
+binary tree proposition
+nonempty proper binary
+justify this proposition
+proposition by removing
+empty the piles
+pile is empty
+node we place
+shown in figure
+removes one internal
+leaves the tree
+binary tree repeating
+repeating this operation
+eventually are left
+final tree consisting
+single node note
+external and internal
+sequence of operations
+remove the node
+internal-node pile figure
+operation that removes
+removes an external
+justification of proposition
+improper binary trees
+trees and nonbinary
+c-8.32 through c-8.34
+trees the tree
+tree and binarytree
+formally abstract base
+provide a great
+deal of support
+defined key implementation
+key implementation details
+navigate between parents
+tree must provide
+provide methods root
+case of binarytree
+additional accessors left
+representation of trees
+trees we describe
+section we begin
+defined 8.3.1 linked
+8.3.1 linked structure
+structure for binary
+trees a natural
+realize a binary
+children and parent
+tree itself maintains
+maintains an instance
+instance variable storing
+storing a reference
+linked structure representation
+figure 8.11b figure
+structure for representing
+trees python implementation
+linked binary tree
+binary tree structure
+define a concrete
+concrete linkedbinarytree class
+class that implements
+implements the binary
+adt by subclassing
+subclassing the binarytree
+class our general
+developing the positionallist
+positionallist in section
+define a simple
+nonpublic node class
+class to represent
+represent a node
+public position class
+class that wraps
+wraps a node
+node we provide
+provide a validate
+checking the validity
+instance when unwrapping
+make position utility
+utility for wrapping
+wrapping a node
+position to return
+caller those definitions
+definitions are provided
+provided in code
+class is declared
+declared to inherit
+immediately from binarytree.position
+binarytree class definition
+tree.position a minor
+position class inherits
+derived appropriately relative
+class definition continues
+methods that remain
+classes the constructor
+creates an empty
+tree by initializing
+methods are implemented
+implemented with careful
+validate and make
+make position utilities
+utilities to safeguard
+safeguard against boundary
+boundary cases operations
+operations for updating
+updating a linked
+functionality for examining
+examining an existing
+existing binary tree
+linkedbinarytree class results
+provided any means
+means for changing
+changing the structure
+structure or content
+tree we chose
+declare update methods
+methods as part
+tree or binarytree
+principle of encapsulation
+representation we prefer
+tree class offer
+options for updating
+updating a tree
+provide update methods
+forms of update
+place an update
+class that inherits
+base will inherit
+inherit the update
+replaces the element
+study in section
+enforce that internal
+store only operators
+operators as elements
+linked binary trees
+set of update
+methods to support
+support for general
+create a root
+empty t.add left
+node storing element
+link the node
+child of position
+return the resulting
+left child t.add
+child t.add right
+right child t.replace
+replace the element
+previously stored element
+stored element t.delete
+node at position
+two children t.attach
+attach the internal
+structure of trees
+subtrees of leaf
+error condition occurs
+chosen this collection
+collection of operations
+case analyses involving
+relationships and boundary
+number of operations
+operations to perform
+treatment of positional
+avoid the problem
+problem of undesirable
+undesirable update methods
+methods being inherited
+inherited by subclasses
+subclasses of linkedbinarytree
+chosen an implementation
+provide nonpublic versions
+providing the underscored
+delete in lieu
+delete our implementations
+methods are provided
+linkedbinarytree can invoke
+invoke the nonpublic
+preserving a public
+application a subclass
+choose to wrap
+nonpublic update methods
+method to expose
+user we leave
+task of defining
+defining a mutablelinkedbinarytree
+public methods wrapping
+binary tree implementation
+implementation to summarize
+summarize the efficiencies
+analyze the running
+including derived methods
+implemented in linkedbinarytree
+storing the number
+method is empty
+inherited from tree
+call to len
+accessor methods root
+children are implemented
+directly in linkedbinarytree
+sibling and children
+methods are derived
+derived in binarytree
+number of calls
+root calls root
+relies on equivalence
+testing of positions
+leaf calls left
+right and verifies
+analyzed in section
+8.1.3 the depth
+method at position
+position p runs
+update methods add
+methods add root
+nodes per operation
+summarizes the performance
+linked structure implementation
+binary tree operation
+tree operation running
+running time len
+n-node binary tree
+binary tree implemented
+structure the space
+8.3.2 array-based representation
+tree an alternative
+numbering the positions
+numbers the positions
+order from left
+left to right
+numbering is based
+based on potential
+nodes with level
+node with level
+trees the level
+level numbering function
+function f suggests
+suggests a representation
+element at position
+stored at index
+array we show
+tree by means
+array one advantage
+implemented using simple
+simple arithmetic operations
+leave the details
+array-based representation depends
+array a requires
+number of empty
+worst-case space usage
+tree is space
+general binary trees
+exponential worst-case space
+worst-case space requirement
+representation is prohibitive
+prohibitive another drawback
+operations for trees
+deleting a node
+node and promoting
+promoting its child
+child that moves
+8.3.3 linked structure
+structure for general
+trees when representing
+representing a binary
+node explicitly maintains
+explicitly maintains fields
+maintains fields left
+right as references
+references to individual
+realize a general
+store a single
+container of references
+list of references
+linked representation .figure
+structure the analysis
+analysis is left
+collection to store
+store the children
+iterating that collection
+collection operation running
+n-node general tree
+general tree implemented
+tree traversal algorithms
+algorithms a traversal
+position p depends
+incrementing a counter
+counter to performing
+performing some complex
+describe several common
+common traversal schemes
+schemes for trees
+discuss several common
+applications of tree
+traversals 8.4.1 preorder
+preorder and postorder
+traversals of general
+children are traversed
+subtrees are traversed
+children the pseudo-code
+shown in code
+perform the visit
+action for position
+traverse the subtree
+preorder for performing
+performing the preorder
+rooted at position
+tree t figure
+portrays the order
+tree are visited
+preorder traversal algorithm
+traversal algorithm paper
+algorithm paper title
+paper title abstract
+position are ordered
+ordered from left
+traversal algorithms postorder
+algorithms postorder traversal
+traversal another important
+important tree traversal
+tree traversal algorithm
+traverses the subtrees
+visits the root
+traversal is portrayed
+position p code
+postorder for performing
+performing the postorder
+tree t paper
+analysis both preorder
+postorder traversal algorithms
+algorithms are efficient
+ways to access
+tree the analysis
+algorithms is similar
+traversal algorithm requires
+visit itself takes
+traversal of tree
+tree this running
+traversal must visit
+trees 8.4.2 breadth-first
+8.4.2 breadth-first tree
+breadth-first tree traversal
+traversals are common
+ways of visiting
+visiting the positions
+traverse a tree
+positions at depth
+visit the positions
+traversal a breadth-first
+software for playing
+games a game
+game tree represents
+choices of moves
+displays a partial
+partial game tree
+tree for tic-tac-toe
+displaying the order
+positions are visited
+unable to explore
+explore a complete
+complete game tree
+deep as computational
+traversing entire subtrees
+queue to produce
+produce a fifo
+calls to enqueue
+calls to dequeue
+dequeue algorithm breadthfirst
+algorithm for performing
+performing a breadth-first
+8.4.3 inorder traversal
+tree the standard
+introduced for general
+applied to binary
+introduce another common
+common traversal algorithm
+visit a position
+subtrees the inorder
+viewed as visiting
+visiting the nodes
+inorder traversal visits
+inorder traversal algorithm
+traverse the left
+traverse the right
+inorder for performing
+performing an inorder
+tree the inorder
+tree to represent
+represent an arithmetic
+traversal visits positions
+albeit without parentheses
+trees binary search
+binary search trees
+trees an important
+traversal algorithm arises
+store an ordered
+sequence of elements
+defining a structure
+structure we call
+call a binary
+binary search tree
+set whose unique
+set of integers
+integers a binary
+position p stores
+tree is shown
+tree t visits
+visits the elements
+elements in nondecreasing
+search tree storing
+tree storing integers
+integers the solid
+path is traversed
+traversed when searching
+traversing a path
+position p encountered
+compare our search
+search terminates successfully
+reach an empty
+search terminates unsuccessfully
+binary decision tree
+element being searched
+illustrate several examples
+operation in figure
+recall from proposition
+small as log
+small height chapter
+study of search
+8.4.4 implementing tree
+implementing tree traversals
+traversals in python
+python when first
+stated that tree
+make any assumption
+report their results
+produce these iterations
+iterations to begin
+easy to produce
+produce an iteration
+special method iter
+base class tree
+rely on python
+python s generator
+mechanism for producing
+implementation of tree
+tree s elements
+order as positions
+yield each element
+element code fragment
+iterating all elements
+tree this code
+class to implement
+implement the positions
+choice of tree
+provide independent implementations
+tree adt preorder
+adt preorder traversal
+traversal we begin
+support a public
+method with calling
+calling signature t.preorder
+generates a preorder
+algorithm for generating
+generating a preorder
+described in code
+tree that serves
+subtree to traverse
+traverse a standard
+define a nonpublic
+nonpublic utility method
+desired recursive parameterization
+public method preorder
+method preorder invoke
+tree our implementation
+generate a preorder
+iteration of positions
+def subtree preorder
+positions in subtree
+caller code fragment
+support for performing
+performing a preorder
+utility subtree preorder
+preorder are generators
+perform a visit
+yield each position
+decide what action
+action to perform
+position the subtree
+subtree preorder method
+relying on generators
+slightly different form
+form in order
+order to yield
+yield all positions
+subtree of child
+call self subtree
+reyield each position
+outer context note
+loop over self.children
+public preorder method
+method to re-yield
+re-yield all positions
+recursive process starting
+tree is empty
+provided full support
+generator a user
+official tree adt
+tree adt requires
+support a positions
+order of iteration
+include the definition
+return the entire
+tree s positions
+return entire preorder
+entire preorder iteration
+preorder iteration code
+iteration code fragment
+class that relies
+traversal to generate
+generate the results
+implement a postorder
+postorder we wait
+wait to yield
+yield the positions
+subtrees an implementation
+generate a postorder
+def subtree postorder
+subtrees code fragment
+performing a postorder
+tree class breadth-first
+class breadth-first traversal
+traversal in code
+provide an implementation
+breadth-first traversal algorithm
+tree class recall
+queue of positions
+positions to manage
+manage the traversal
+process our implementation
+class from section
+adt would suffice
+suffice inorder traversal
+traversal for binary
+trees the preorder
+breadth-first traversal algorithms
+algorithms are applicable
+include their implementations
+class those methods
+methods are inherited
+abstract binarytree class
+dependent tree classes
+develop the inorder
+applies to binary
+include its definition
+technique to implement
+implement an inorder
+generate a breadth-first
+fringe = linkedqueue
+remove from front
+report this position
+children to back
+back of queue
+queue code fragment
+generate an inorder
+def subtree inorder
+left child exists
+traverse its subtree
+right child exists
+yield other code
+class by overriding
+overriding the positions
+override inherited version
+version to make
+inorder the default
+default code fragment
+defining the binarytree.position
+positions are reported
+reported using inorder
+demonstrate several representative
+including some customizations
+standard traversal algorithms
+traversal algorithms table
+table of contents
+represent the hierarchical
+produce a table
+tree from figure
+displayed in figure
+element per line
+line ; part
+attractive presentation produced
+produced by indenting
+indenting each element
+tree a similar
+display the contents
+paper paper title
+paper title title
+title title abstract
+title abstract abstract
+based on depth
+tree the unindented
+produce the presentation
+presentation of figure
+indent each element
+number of spaces
+element s depth
+element was unindented
+replace the body
+work to produce
+produce the preorder
+preorder traversal runs
+analysis of section
+calls to depth
+incur a hidden
+hidden cost making
+making a call
+call to depth
+noted when analyzing
+analyzing the algorithm
+height1 in section
+trees a preferred
+approach to producing
+producing an indented
+redesign a top-down
+recursion that includes
+includes the current
+implementation is provided
+runs in worst-case
+takes to print
+strings of increasing
+def preorder indent
+print preorder representation
+representation of subtree
+depth for indentation
+recursion for printing
+printing indented version
+started with form
+form preorder indent
+numbering was embedded
+traversal to display
+display the structure
+display the tree
+international 2.2.1 canada
+2.2.2 s america
+labels are implicit
+tree a label
+position to accomplish
+accomplish the task
+add a representation
+list of zero-indexed
+convert those numbers
+numbers to oneindexed
+form when printing
+avoid the inefficiency
+inefficiency of duplicating
+duplicating such lists
+lists when sending
+list before making
+making further recursive
+calls in order
+order to leave
+leave no trace
+block of code
+code must remove
+remove the extraneous
+list before completing
+completing its task
+task an implementation
+def preorder label
+print labeled representation
+labels are one-indexed
+entries are zero-indexed
+printing an indented
+indented and labeled
+preorder traversal parenthetic
+traversal parenthetic representations
+reconstruct a general
+indentation or numbered
+concise string representations
+representations of trees
+representation the parenthetic
+parenthetic string representation
+denote string concatenation
+breaks are cosmetic
+essentially a preorder
+produce the additional
+implementation of preorder
+position s children
+produced the python
+python function parenthesize
+traversal that prints
+print parenthesized representation
+end avoids trailing
+avoids trailing newline
+determine proper separator
+recur on child
+include closing parenthesis
+closing parenthesis code
+parenthesis code fragment
+function that prints
+prints parenthetic string
+tree computing disk
+computing disk space
+internal positions representing
+positions representing directories
+directories and leaves
+leaves representing files
+files in fact
+back in chapter
+examined the topic
+topic of file
+gave an implementation
+algorithm for computing
+computing the disk
+computation of disk
+space is emblematic
+compute the total
+implementation of postorder
+visits the position
+previous positions represent
+positions represent children
+recursive disk space
+space was allocated
+mechanism for children
+children to return
+parent as part
+process a custom
+disk space problem
+level of recursion
+providing a return
+def disk space
+return total disk
+total disk space
+space for subtree
+subtotal = p.element
+child s space
+space to subtotal
+return subtotal code
+subtotal code fragment
+tree we assume
+tree element reports
+reports the local
+8.4.6 euler tours
+template method pattern
+section 8.4.5 demonstrate
+demonstrate the great
+power of recursive
+recursive tree traversals
+capture the range
+range of computations
+computations we desire
+initial work performed
+performed before recurring
+recurring on subtrees
+additional work performed
+two possible recursions
+develop a custom
+adapt the recursive
+principles of object-oriented
+object-oriented programming introduced
+introduced in section
+section 2.1.1 include
+2.1.1 include adaptability
+adaptability and reusability
+framework for implementing
+tree traversals based
+euler tour traversal
+traversal the euler
+viewing the edges
+tree the complexity
+edge to unify
+unify the concept
+concept of preorder
+two notable visits
+pre visit occurs
+occurs when first
+reaching the position
+passes immediately left
+visualization a post
+post visit occurs
+walk later proceeds
+trees the process
+easily be viewed
+visit and post
+node with element
+two contiguous subtours
+traversing that position
+position s left
+traversing the right
+subtree the pseudo-code
+perform the pre
+pre visit action
+tour the subtree
+perform the post
+post visit action
+eulertour for performing
+performing an euler
+tree the template
+pattern to provide
+provide a framework
+reusable and adaptable
+interesting object-oriented software
+object-oriented software design
+software design pattern
+pattern the template
+method pattern describes
+describes a generic
+generic computation mechanism
+application by redefining
+redefining certain steps
+primary algorithm calls
+algorithm calls auxiliary
+calls auxiliary functions
+hooks at designated
+define two separate
+two separate hooks
+traversals our implementation
+class that manages
+manages the process
+defines trivial definitions
+customized by defining
+defining a subclass
+eulertour and overriding
+hooks to provide
+provide specialized behavior
+specialized behavior python
+behavior python implementation
+implementation our implementation
+class is provided
+primary recursive process
+process is defined
+nonpublic tour method
+method a tour
+instance is created
+created by sending
+sending a reference
+calling the public
+public execute method
+beings the tour
+tour and returns
+returns a final
+class for performing
+performing euler tour
+previsit and hook
+overridden by subclasses
+prepare an euler
+euler tour template
+tree = tree
+tree being traversed
+return self tree
+perform the tour
+tour and return
+return any result
+result from post
+visit of root
+return self tour
+start the recursion
+tour of subtree
+position of current
+node being visited
+list of indices
+indices of children
+children on path
+path from root
+add new index
+index to end
+end of path
+path before recursion
+child s subtree
+remove extraneous index
+index from end
+def hook previsit
+def hook postvisit
+pass code fragment
+eulertour base class
+base class providing
+providing a framework
+framework for performing
+euler tour traversals
+experience of customizing
+traversals for sample
+sample applications section
+eulertour for maintaining
+maintaining the recursive
+provide a mechanism
+level to return
+return a value
+method hook previsit
+discussion of code
+value is expected
+function method hook
+method hook postvisit
+traversed the first
+first three parameters
+previsit the final
+list of objects
+provided as return
+choose to initialize
+initialize and maintain
+maintain additional state
+form of instance
+euler tour framework
+framework to demonstrate
+demonstrate the flexibility
+revisit the sample
+applications from section
+indented preorder traversal
+produced by code
+eulertour that produces
+produces an indented
+indented preorder list
+started by creating
+creating an instance
+invoking its execute
+tour = preorderprintindentedtour
+akin to code
+produces a labeled
+labeled and indented
+elements to produce
+produce the parenthetic
+achieved with code
+define a subclass
+subclass that overrides
+previsit and postvisit
+path and path
+print opening parenthesis
+print closing parenthesis
+eulertour that prints
+prints a parenthetic
+invoke a method
+hooks the public
+eulertour class serves
+task of computing
+eulertour subclass shown
+call to execute
+simply add space
+eulertour that computes
+computes disk space
+trees the euler
+tree in section
+introduced the concept
+pattern in designing
+designing the eulertour
+class that class
+class provided methods
+provided methods hook
+methods hook previsit
+overridden to customize
+customize a tour
+tour in code
+provide a binaryeulertour
+specialization that includes
+includes an additional
+additional hook invisit
+subtree is traversed
+traversed our implementation
+replaces the original
+original tour utility
+utility to specialize
+visit taking place
+sole left child
+sole right child
+update with results
+results of recursions
+def hook invisit
+overridden code fragment
+binaryeulertour base class
+providing a specialized
+tour for binary
+trees the original
+original eulertour base
+tree to demonstrate
+develop a subclass
+subclass that computes
+computes a graphical
+geometry is determined
+algorithm that assigns
+common in computer
+graphics that xcoordinates
+xcoordinates increase left
+right and y-coordinates
+y-coordinates increase top
+top to bottom
+upper left corner
+computer screen code
+screen code fragment
+subclass that implements
+algorithm for assigning
+tree we adapt
+adapt the binaryeulertour
+framework by introducing
+introducing additional state
+count instance variable
+variable that represents
+represents the number
+performed the x-coordinate
+position is set
+class for computing
+call the parent
+count of processed
+serialized by count
+y-coordinate is depth
+processed nodes code
+nodes code fragment
+class that computes
+original tree supports
+tree supports setx
+setx and sety
+represent the structure
+support for constructing
+constructing such trees
+displaying and evaluating
+evaluating the arithmetic
+represents our expressiontree
+class is defined
+subclass of linkedbinarytree
+mutators to construct
+construct such trees
+trees each internal
+node must store
+store a string
+string that defines
+defines a binary
+leaf must store
+store a numeric
+representing a numeric
+build arbitrarily complex
+arbitrarily complex expression
+complex expression trees
+trees for compound
+compound arithmetic expressions
+class to support
+support two basic
+two basic forms
+forms of initialization
+create a tree
+tree storing string
+structures of existing
+existing expressiontree instances
+class formally inherits
+inherits from linkedbinarytree
+defined in section
+root to create
+create an initial
+storing the token
+perform run-time checking
+parameters to determine
+invoked the one-parameter
+inherited attach method
+method to incorporate
+incorporate the structure
+trees as subtrees
+composing a parenthesized
+parenthesized string representation
+representation a string
+existing expression tree
+expression tree instance
+produced by displaying
+displaying tree elements
+opening and closing
+closing parentheses inserted
+support a special
+special str method
+efficient to first
+build a sequence
+sequence of individual
+discussion of composing
+strings in section
+implementation of str
+recursive method named
+method named parenthesize
+named parenthesize recur
+recur that appends
+appends a series
+series of strings
+list these methods
+methods are included
+included in code
+create an expression
+single parameter form
+return string representation
+sequence of piecewise
+strings to compose
+def parenthesize recur
+append piecewise representation
+subtree to resulting
+trees expression tree
+expression tree evaluation
+evaluation the numeric
+calculate the result
+computation that position
+position designates pseudo-code
+algorithm evaluate recur
+leaf then return
+return the value
+recur for evaluating
+evaluating the expression
+expression tree rooted
+implement this algorithm
+python expressiontree class
+provide a public
+public evaluate method
+invoked on instance
+nonpublic evaluate recur
+evaluate recur method
+method that computes
+computes the value
+return the numeric
+return self evaluate
+def evaluate recur
+result of subtree
+element is numeric
+return left val
+val + right
+val right val
+val # treat
+multiplication code fragment
+support for evaluating
+evaluating an expressiontree
+building an expression
+tree the constructor
+functionality for combining
+combining existing trees
+trees to build
+build larger expression
+larger expression trees
+question still remains
+construct a tree
+tree that represents
+represents an expression
+automate this process
+bottom-up construction algorithm
+first be tokenized
+numbers are treated
+parenthesized the algorithm
+push that string
+create a single-node
+single-node expression tree
+tree t storing
+pop the top
+top three items
+represent a subexpression
+push the resulting
+stack we repeat
+stand-alone function named
+function named build
+named build expression
+build expression tree
+produces and returns
+assuming the input
+def build expression
+returns an expressiontree
+list as stack
+push the operator
+symbol in chapter
+introduced the tree
+tree data structure
+structure and demonstrated
+demonstrated a variety
+variety of applications
+applications one important
+described on page
+search tree structure
+implement a sorted
+raise a keyerror
+keyerror ; implemented
+implemented with getitem
+replacing the existing
+item with key
+implemented with setitem
+setitem method del
+remove from map
+implemented with delitem
+method the sorted
+sorted map adt
+map adt includes
+adt includes additional
+includes additional functionality
+iteration reports keys
+keys in sorted
+supporting additional searches
+excellent data structure
+structure for storing
+order relation defined
+position p storing
+storing a key-value
+matter of convenience
+diagram the values
+affect the placement
+placement of items
+search tree figure
+tree with integer
+keys we omit
+omit the display
+order of items
+search trees navigating
+navigating a binary
+tree we begin
+begin by demonstrating
+tree hierarchically represents
+represents the sorted
+placement of keys
+search tree assures
+search tree visits
+tree visits positions
+positions in increasing
+visited in order
+subtree by induction
+recursive inorder traversal
+subtree will produce
+subtree in increasing
+search tree property
+subtree have keys
+keys strictly smaller
+visiting the root
+extends the increasing
+order of keys
+subtree will visit
+visit those keys
+keys in increasing
+executed in linear
+produce a sorted
+map in linear
+provide nonrecursive descriptions
+descriptions of operations
+binary search relative
+keys our generic
+generic binary tree
+adt from chapter
+allowing direct navigation
+navigation using methods
+provide additional navigation
+additional navigation based
+last position chapter
+trees the first
+located by starting
+starting a walk
+root and continuing
+exists by symmetry
+position is reached
+reached by repeated
+steps rightward starting
+root the successor
+successor is leftmost
+computing the successor
+tree the rationale
+process is based
+correspondence of proposition
+flow of control
+inorder traversal returns
+parent s subtree
+traversal is complete
+ancestor is reached
+recursion is returning
+ancestor is found
+successor a symmetric
+defined to determine
+determine the predecessor
+single downward walk
+single upward walk
+position will execute
+leave a formal
+fact to exercise
+intuitively the upward
+upward and downward
+downward paths mimic
+paths mimic steps
+argument was made
+namesake search algorithm
+attempt to locate
+tree by viewing
+denote as p.key
+answer is equal
+answer is greater
+search for key
+describe this approach
+approach in code
+key k occurs
+call to treesearch
+key is found
+getitem map operation
+operation would return
+treesearch algorithm returns
+returns the final
+final position explored
+search trees analysis
+analysis of binary
+binary tree searching
+searching the analysis
+simple algorithm treesearch
+treesearch is recursive
+recursive and executes
+executes a constant
+number of primitive
+call each recursive
+call of treesearch
+treesearch is made
+positions is bounded
+illustrating the running
+tree the figure
+figure uses standard
+subroutine for implementing
+implementing the getitem
+setitem and delitem
+locate an existing
+key to implement
+implement sorted map
+sorted map operations
+combine this search
+search with traversal
+operations will run
+run in worst-case
+tree with height
+implement the find
+find range method
+number of items
+number of entries
+chapter we show
+show various strategies
+strategies to maintain
+maintain an upper
+insertions and deletions
+algorithms for inserting
+inserting or deleting
+insertion the map
+assuming the map
+map is nonempty
+item s existing
+value is reassigned
+search the binary
+property is sustained
+search would expect
+node with item
+algorithm for inserting
+inserting a key-value
+finding the position
+position to insert
+insert is shown
+search trees deletion
+trees deletion deleting
+deleting an item
+bit more complex
+complex than inserting
+delete an item
+begin by calling
+find the position
+storing an item
+search is successful
+implemented when introducing
+introducing update methods
+declared a nonpublic
+deletes a node
+precisely the desired
+behavior it removes
+removes the item
+map while maintaining
+assuring the upkeep
+create a hole
+two orphaned children
+notation of section
+deleted at position
+immediately preceding key
+property is satisfied
+delete the node
+searching and insertion
+involves the traversal
+single path downward
+moving an item
+removing a node
+path and promoting
+item to delete
+trees 11.1.4 python
+11.1.4 python implementation
+implementation in code
+define a treemap
+implements the sorted
+tree in fact
+general we support
+standard map operations
+additional sorted map
+positional operations including
+treemap class takes
+class takes advantage
+advantage of multiple
+inheritance for code
+class of section
+positional binary tree
+class from code
+10.1.4 to provide
+key-value composite item
+collections.mutablemapping abstract base
+class we subclass
+subclass the nested
+support more specific
+adt we define
+define several nonpublic
+notably a subtree
+method that corresponds
+algorithm of code
+returns a position
+nearest key greater
+public find position
+adt when making
+making structural modifications
+rely on nonpublic
+inherited methods remain
+methods remain nonpublic
+violated through misuse
+code is peppered
+peppered with calls
+calls to presumed
+presumed methods named
+methods named rebalance
+named rebalance insert
+access these methods
+serve as hooks
+hooks for future
+balancing search trees
+code code fragment
+beginning of treemap
+treemap class including
+class including redefined
+including redefined position
+redefined position class
+class and nonpublic
+nonpublic search utilities
+search utilities code
+utilities code fragment
+accessor code fragment
+methods are omitted
+sake of brevity
+brevity code fragment
+tree an analysis
+maximum path length
+tree is proportional
+implementations of map
+map operations getitem
+delitem each begin
+subtree search utility
+utility which traces
+traces a path
+node to determine
+continue the search
+search similar paths
+paths are traced
+computing a position
+position s inorder
+predecessor or successor
+successor we note
+method has worst-case
+successive calls made
+call to iter
+require a total
+edge is traced
+amortized time bounds
+bounds a similar
+call to find
+range that reports
+reports s results
+search trees table
+worst-case running times
+denote the current
+reported by find
+map a binary
+height is small
+yields logarithmic-time performance
+ordered list implementation
+worst-case configuration arises
+items with keys
+increasing or decreasing
+decreasing order figure
+tree with linear
+obtained by inserting
+entries with keys
+series of insertions
+insertions and removals
+removals of keys
+keys has expected
+requiring careful mathematical
+careful mathematical language
+sophisticated probability theory
+theory in applications
+guarantee the random
+nature of updates
+rely on variations
+variations of search
+guarantee a worst-case
+balanced search trees
+assume a random
+standard binary search
+search tree supports
+expected running times
+basic map operations
+sequences of operations
+operations may lead
+explore four search
+four search tree
+search tree algorithms
+algorithms that provide
+provide stronger performance
+stronger performance guarantees
+four data structures
+based on augmenting
+augmenting a standard
+tree with occasional
+operations to reshape
+reshape the tree
+tree and reduce
+reduce its height
+height the primary
+operation to rebalance
+rebalance a binary
+rotate a child
+diagrammed in figure
+tree a rotation
+performed to transform
+transform the left
+keys in subtree
+maintain the binary
+relink the subtree
+subtree of items
+keys that lie
+labeled t2 represents
+subtree of position
+single rotation modifies
+modifies a constant
+number of parent-child
+binary tree representation
+modified while maintaining
+maintaining the search
+performed to avoid
+avoid highly unbalanced
+highly unbalanced tree
+unbalanced tree configurations
+formation of figure
+reduces the depth
+node in subtree
+increasing the depth
+depth of nodes
+nodes in subtree
+combined to provide
+provide broader rebalancing
+restructure the subtree
+order to reduce
+illustrated in figure
+describing a trinode
+rename the positions
+four possible orientations
+relabeling the trinode
+trinode restructuring replaces
+makes the children
+four previous children
+maintaining the inorder
+grandparent z output
+single or double
+replace the subtree
+trinode restructuring operation
+tree in practice
+tree t caused
+implemented through case
+double rotation arises
+arises when position
+originally its grandparent
+restructuring is completed
+require a single
+require a double
+trees 11.2.1 python
+11.2.1 python framework
+framework for balancing
+trees our treemap
+concrete map implementation
+perform any explicit
+explicit balancing operations
+designed that class
+subclasses that implement
+implement more advanced
+advanced tree-balancing algorithms
+algorithms a summary
+hierarchy is shown
+hooks for rebalancing
+operations our implementation
+operations in section
+section 11.1.4 includes
+11.1.4 includes strategic
+includes strategic calls
+methods that serve
+call to rebalance
+node is added
+tree at position
+position p identifying
+identifying the parent
+provide a hook
+item at position
+tree is accessed
+splay tree structure
+restructure a tree
+frequently accessed items
+items are brought
+root we provide
+provide trivial declarations
+subclass of treemap
+treemap may override
+methods to implement
+implement a nontrivial
+action to rebalance
+rebalance a tree
+template method design
+method design pattern
+def rebalance insert
+def rebalance delete
+def rebalance access
+continued from code
+rebalancing hooks nonpublic
+hooks nonpublic methods
+methods for rotating
+rotating and restructuring
+form of support
+support for balanced
+inclusion of nonpublic
+nonpublic utility methods
+utility methods rotate
+rotate and restructure
+implement a single
+beginning of section
+public treemap operations
+promote code reuse
+reuse by providing
+providing these implementation
+subclasses our implementations
+implementations are provided
+simplify the code
+define an additional
+additional relink utility
+properly links parent
+parent and child
+including the special
+reference the focus
+redefining the relationship
+relinking a rotated
+shifting the middle
+perform a single
+described in figure
+factory for creating
+creating tree nodes
+nodes we draw
+original linkedbinarytree subclass
+subclass the low-level
+node is provided
+nested node class
+class within linkedbinarytree
+tree-balancing strategies require
+require that auxiliary
+information be stored
+node to guide
+guide the balancing
+process those classes
+classes will override
+override the nested
+class to provide
+add right method
+instantiate the node
+syntax self node
+qualified name linkedbinarytree
+expression self node
+node is applied
+subclass has overridden
+overridden the definition
+newly defined node
+defined node class
+class this technique
+factory method design
+provide a subclass
+subclass the means
+means to control
+control the type
+type of node
+created within methods
+parent class chapter
+search trees code
+trees code fragment
+provide nonpublic utilities
+utilities for balanced
+balanced search tree
+search tree subclasses
+trees the treemap
+efficient map data
+map data structure
+operations is linear
+series of operations
+describe a simple
+simple balancing strategy
+strategy that guarantees
+guarantees worst-case logarithmic
+worst-case logarithmic running
+fundamental map operations
+map operations definition
+tree the simple
+add a rule
+search tree definition
+maintain a logarithmic
+defined the height
+number of edges
+easier for explanation
+position has height
+define the height
+characterizes the structure
+nodes height-balance property
+differ by atmost
+satisfies the height-balance
+adel son-vel skii
+skii and landis
+tree the keys
+items are shown
+inside the nodes
+nodes are shown
+subtrees having height
+tree the height-balance
+consequence of keeping
+keeping the height
+avl tree storing
+storing n entries
+find an upper
+easier to work
+problem of finding
+finding a lower
+step to derive
+begin by noting
+tree of height
+nodes having height
+subtrees are avl
+taking the root
+root into account
+formula that relates
+properties of fibonacci
+formalize that observation
+strictly increasing function
+exponentially to show
+show this fact
+series of inequalities
+trees by substituting
+entries has height
+maintain the height-balance
+insertion or deletion
+deletion 11.3.1 update
+11.3.1 update operations
+position is balanced
+height-balance property characterizing
+property characterizing avl
+characterizing avl trees
+trees is equivalent
+balanced the insertion
+insertion and deletion
+operations for avl
+avl trees begin
+operation to restore
+restore the balance
+change insertion suppose
+suppose that tree
+tree t satisfies
+item an insertion
+action may violate
+violate the height-balance
+unbalanced are ancestors
+positions whose subtrees
+subtrees have changed
+fix any unbalance
+search trees figure
+node for key
+nodes storing keys
+trinode restructuring restores
+restores the height-balance
+property we show
+show the heights
+heights of nodes
+identify the nodes
+restructuring we restore
+simple search-and-repair strategy
+position we encounter
+denote the child
+tie and position
+rebalance the subtree
+calling the trinode
+trinode restructuring method
+insertion is portrayed
+argue the correctness
+process in reestablishing
+reestablishing the avl
+avl height-balance property
+subtrees with equal
+increased its height
+previously had equal-height
+denote the height
+restructuring has height
+precisely the height
+unbalanced becomes balanced
+restores the heightbalance
+heightbalance property globally
+property globally figure
+insertion in subtree
+balance with trinode
+trinode restructuring notice
+trees deletion recall
+regular binary search
+search tree results
+change may violate
+position p represents
+represents the parent
+node in tree
+unbalanced node figure
+removing the node
+node storing key
+root becomes unbalanced
+restructuring to restore
+first unbalanced position
+unbalanced position encountered
+note that position
+perform a restructure
+subtree is rooted
+middle position denoted
+operation the height-balance
+property is guaranteed
+restructuring may reduce
+reduce the height
+restore its balance
+restructurings are sufficient
+sufficient to restore
+restore the height-balance
+height-balance property performance
+performance of avl
+trees by proposition
+items is guaranteed
+search tree operation
+operation had running
+running times bounded
+work in maintaining
+maintaining balance factors
+factors and restructuring
+restructuring an avl
+traditional map operations
+map operations run
+tree we summarize
+summarize these results
+results in table
+illustrate this performance
+performance in figure
+multiway search tree
+children other forms
+forms of multiway
+multiway search trees
+discussed in section
+11.5.1 multiway search
+search trees recall
+recall that general
+trees are defined
+discuss how general
+search trees map
+trees map items
+map items stored
+tree are pairs
+children we define
+define a multiway
+stores an ordered
+set of keys
+special fictitious keys
+key k stored
+two keys stored
+viewpoint gives rise
+forms the basis
+algorithm for searching
+store any data
+data and serve
+placeholders these external
+convention with binary
+sake of exposition
+store anything based
+number of key-value
+search tree proposition
+n-item multiway search
+nodes we leave
+search trees searching
+multiway tree searching
+simple we perform
+search by tracing
+compare the key
+reach an external
+terminates unsuccessfully data
+unsuccessfully data structures
+structures for representing
+representing multiway search
+trees in section
+discuss a linked
+linked data structure
+representing a general
+tree this representation
+tree to implement
+implement a multiway
+collection that stores
+stores the items
+primary operation needed
+needed when navigating
+navigating a node
+node is finding
+finding the smallest
+natural to model
+model the information
+secondary data structure
+structure to support
+support the primary
+primary data structure
+data structure represented
+entire multiway search
+tree this reasoning
+map to represent
+avoid any circular
+problem to create
+sortedtablemap of section
+value in case
+match for key
+secondary structure map
+processing a d-node
+binary search operation
+denote the maximum
+performing a search
+primary efficiency goal
+height as small
+discuss a strategy
+strategy that caps
+guaranteeing a height
+operations a multiway
+secondary data structures
+data structures stored
+primary multiway tree
+multiway tree balanced
+tree this data
+data structure achieves
+achieves these goals
+goals by maintaining
+maintaining two simple
+two simple properties
+four children depth
+children depth property
+assume that external
+nodes are empty
+sake of simplicity
+describe our search
+search and update
+update methods assuming
+assuming that external
+nodes are real
+strictly needed enforcing
+enforcing the size
+search tree simple
+children another implication
+represent the secondary
+secondary map stored
+enforces an important
+storing n items
+items we justify
+justify the proposition
+proposition by showing
+showing the claim
+justify this claim
+nodes at depth
+taking the logarithm
+logarithm in base
+justifies our claim
+terms are rearranged
+size and depth
+properties are sufficient
+sufficient for keeping
+keeping a multiway
+implies that performing
+crucial design choice
+maintaining the size
+depth properties requires
+requires some effort
+effort after performing
+discuss these operations
+operations next insertion
+insertion to insert
+perform a search
+item into node
+insertion method preserves
+preserves the depth
+level as existing
+existing external nodes
+violate the size
+previously a 4-node
+tree this type
+type of violation
+overflow at node
+resolved in order
+order to restore
+restore the properties
+remedy the overflow
+perform a split
+3-node with children
+children c1,c2,c3 storing
+c1,c2,c3 storing keys
+2-node with children
+children c4,c5 storing
+c4,c5 storing key
+w__ become children
+operation on node
+overflow may occur
+triggers in turn
+turn a split
+split at node
+operation either eliminates
+eliminates the overflow
+overflow or propagates
+node we show
+show a sequence
+sequence of insertions
+causing an overflow
+analysis of insertion
+tree because dmax
+node to insert
+key and child
+single split operation
+operation the number
+number of cascading
+cascading split operations
+operations is bounded
+process also runs
+perform an insertion
+tree t webegin
+operation by performing
+key k removing
+removing an item
+removed is stored
+children are external
+external nodes suppose
+remove is stored
+swap the item
+find the rightmost
+rightmost internal node
+children of node
+item to remove
+remove the item
+described above preserves
+remove an external
+previously a 2-node
+underflow at node
+remedy an underflow
+perform a transfer
+move a child
+perform a fusion
+move a key
+sequence of removals
+causing an underflow
+operation at node
+underflow to occur
+triggers a transfer
+transfer or fusion
+number of fusion
+sequence of fusions
+final tree performance
+trees the asymptotic
+tree is identical
+guaranteed logarithmic bounds
+pairs is based
+fusion operation takes
+provide for fast
+fast map search
+structure we discuss
+trees although avl
+number of nice
+disadvantages for instance
+trees may require
+require many restructure
+require many split
+split or fusing
+insertion or removal
+removal the data
+update in order
+order to stay
+nodes colored red
+red and black
+root is black
+black red property
+black depth property
+number of black
+red nodes drawn
+drawn in white
+white the common
+common black depth
+make the red-black
+red-black tree definition
+definition more intuitive
+intuitive by noting
+noting an interesting
+correspondence between red-black
+excluding their trivial
+trivial external nodes
+tree by merging
+merging every red
+storing the entry
+red-black tree corresponds
+red-black tree contributes
+tree by coloring
+coloring each node
+node w black
+grouping of red
+make the first
+two new red
+red-black tree storing
+correspondence between nodes
+search trees justification
+proposition by establishing
+excluding trivial leaves
+nodes 11.6.1 red-black
+11.6.1 red-black tree
+red-black tree operations
+operations the algorithm
+red-black tree takes
+takes time proportional
+trees and red-black
+trees provides important
+updates in red-black
+algorithms for red-black
+split and fuse
+mimicked by recoloring
+recoloring neighboring red-black
+neighboring red-black tree
+red-black tree nodes
+nodes a rotation
+algorithm initially proceeds
+reach a null
+storing the item
+color it black
+color x red
+red this action
+corresponds to inserting
+children the insertion
+preserves the root
+root and depth
+violate the red
+parent are red
+call this violation
+property a double
+red at node
+remedy a double
+red-black trees case
+double red denotes
+denotes the fact
+creating a malformed
+4-node this formation
+two red nodes
+nodes as siblings
+fix this problem
+perform a trinode
+restructuring is done
+inorder tree traversal
+tree traversal replace
+replace the grandparent
+keeping inorder relationships
+inorder relationships unchanged
+unchanged after performing
+performing the restructure
+color b black
+eliminates the double-red
+double-red problem notice
+tree is incident
+tree is unaffected
+restructuring a red-black
+tree to remedy
+search trees case
+denotes an overflow
+fix the problem
+perform the equivalent
+parent z red
+double-red problem reappears
+repeat the consideration
+recoloring either eliminates
+problem at node
+resolve the double-red
+number of recolorings
+half the height
+height of tree
+recoloring to remedy
+remedy the double-red
+sequence of insertion
+root remains black
+continues in figure
+continued from figure
+removal a node
+originally containing key
+node was red
+affect the black
+introduce any red
+resulting tree remains
+remains a valid
+valid red-black tree
+denotes the shrinking
+node was black
+node has black
+removed node represents
+represents the black
+restore the redblack
+properties by recoloring
+recoloring the promoted
+child to black
+leaf is removed
+denotes the removal
+2-node without rebalancing
+item by necessity
+sibling whose subtree
+subtree has black
+remedy this scenario
+theavy and tlight
+root of tlight
+depth of theavy
+removed black leaf
+leaf and tlight
+trivially the empty
+subtree that remains
+deletion we describe
+algorithm for rebalancing
+rebalancing the tree
+push the deficit
+tree sometimes cascades
+denote the root
+root of theavy
+exists because theavy
+theavy has black
+tlight z figure
+subtrees of node
+color in illustrating
+colored either black
+black or red
+cases to remedy
+remedy a deficit
+takes the node
+two we color
+path to tlight
+includes one additional
+additional black node
+resolving its deficit
+deficit in contrast
+nodes on paths
+remains unchanged resolving
+resolving this case
+red child assures
+4-node in effect
+item previously stored
+2-node to resolve
+resolve the deficiency
+child is promoted
+resolving a black
+deficit in tlight
+tlight by performing
+performing a trinode
+restructuring as restructure
+two possible configurations
+configurations are shown
+two other configurations
+configurations are symmetric
+left figures denotes
+colored either red
+red or black
+black the root
+color y red
+resolves the deficit
+leading to tlight
+affect the number
+subtrees of theavy
+increased the number
+reduced the number
+path to theavy
+entire tree rooted
+propogating the problem
+reversing the colors
+resolves the black
+ending the process
+requiring a cascading
+red and theavy
+black depth equal
+perform a rotation
+recolor y black
+red this denotes
+denotes a reorientation
+resolve the deficit
+black height equal
+reapply the algorithm
+algorithm to resolve
+applies or case
+terminal and case
+rotation and recoloring
+recoloring about red
+assuming a black
+change of orientation
+tree this operation
+black deficit remains
+remains at node
+transformation in figure
+sequence of deletions
+tree a dashed
+represents a branch
+resolved we illustrate
+illustrate a case
+restructuring in parts
+recoloring in parts
+rotation between parts
+recoloring in part
+causing a black
+handled by restructuring
+handled by recoloring
+rotation the black
+search trees performance
+performance of red-black
+tree in terms
+logarithmic time bounds
+number of restructuring
+contrast to avl
+require a logarithmic
+number of structural
+red-black tree requires
+tree requires logarithmic
+number of recoloring
+operations that cascade
+number of rotations
+rotations or restructure
+single map operation
+map operation proposition
+trinode restructuring justification
+potential upward effort
+effort to remedy
+remedy a double-red
+logarithmically many recoloring
+recoloring operations due
+cascading of case
+operation is needed
+red-black tree insertion
+tree insertion proposition
+algorithm for deleting
+two restructuring operations
+restructuring operations justification
+search tree deletion
+tree deletion algorithm
+requires time proportional
+subsequent rebalancing takes
+rebalancing takes place
+node we considered
+considered three cases
+remedy a resulting
+resulting black deficit
+black deficit case
+requires a trinode
+completes the process
+case is applied
+logarithmically many times
+involves a recoloring
+nodes per application
+requires a rotation
+resolve the problem
+recolorings from case
+rotation from case
+restructuring from case
+11.6.2 python implementation
+implementation a complete
+standard treemap class
+class and relies
+balancing framework described
+11.2.1 we begin
+overriding the definition
+class to introduce
+introduce an additional
+additional boolean field
+field to denote
+node our constructor
+constructor intentionally sets
+sets the color
+node to red
+approach for inserting
+items we define
+define several additional
+additional utility functions
+top of code
+aid in setting
+setting the color
+color of nodes
+nodes and querying
+querying various conditions
+rebalance insert hook
+opportunity to modify
+modify the tree
+node is red
+red by default
+node s parent
+red to remedy
+remedy such violations
+follow the case
+case analysis described
+11.6.1 the rebalancing
+11.6.1 an additional
+tree that hook
+hook is invoked
+case analysis depends
+depends on knowing
+engineer that information
+information by relying
+red-black tree properties
+denotes the parent
+causing a deficit
+productivity experts
+thinking nonlinearly
+important nonlinear
+nonlinear data
+data structures
+computing trees
+trees tree
+tree structures
+data organization
+linear data
+array-based lists
+linked lists
+lists trees
+natural organization
+ubiquitous structures
+file systems
+graphical user
+user interfaces
+web sites
+computer systems
+organizational relationship
+main terminology
+tree data
+family trees
+terms parent
+common words
+describe relationships
+family tree
+general trees
+tree definitions
+abstract data
+data type
+stores elements
+elements hierarchically
+top element
+parent element
+children elements
+placing elements
+elements inside
+inside ovals
+straight lines
+highest element
+botanical tree
+africa europe
+europe asia
+asia australia
+australia canada
+domestic international
+r&d sales
+sales purchasing
+purchasing manufacturing
+manufacturing electronics
+nodes representing
+fictitious corporation
+root stores
+stores electronics
+root store
+internal nodes
+nodes store
+store sales
+formal tree
+tree definition
+nodes storing
+storing elements
+parent-child relationship
+special node
+unique parent
+parent node
+node relationships
+external nodes
+hierarchical relationship
+file system
+regular files
+linux operating
+operating systems
+root directory
+hw1 hw2
+hw2 hw3
+hw3 pr1
+pr1 pr2
+pr2 pr3
+pr3 grades
+buylow sellhigh
+sellhigh market
+market grades
+grades figure
+tree representing
+tree consisting
+subtree rooted
+pr3 edges
+vice versa
+consecutive nodes
+sequence form
+inheritance relation
+python program
+program forms
+single inheritance
+exception types
+originally figure
+baseexception class
+user-defined exception
+exception classes
+specific exception
+exception class
+empty class
+code fragment
+single hierarchy
+built-in class
+class named
+named object
+ultimate base
+base class
+indirect base
+hierarchy pictured
+complete class
+class hierarchy
+tree arraybinarytree
+arraybinarytree linkedbinarytree
+linkedbinarytree tree
+tree binarytree
+binarytree linkedtree
+linkedtree figure
+inheritance hierarchy
+provide implementations
+linkedbinarytree classes
+highlevel sketches
+trees ordered
+ordered trees
+meaningful linear
+linear order
+arranging siblings
+siblings left
+structured document
+tree corresponds
+show paragraphs
+paragraphs consisting
+sentences consisting
+words consisting
+ordered tree
+well-defined order
+node figure
+generational relationships
+siblings ordered
+organizational chart
+unordered tree
+tree likewise
+parent class
+operating system
+displays entries
+tree abstract
+positional lists
+tree adt
+positions satisfy
+parent-child relationships
+tree structure
+position object
+tree supports
+element stored
+accessor methods
+empty t.is
+t.is root
+return true
+t.num children
+t.is leaf
+children len
+t.is empty
+positions t.positions
+elements stored
+natural order
+empty iteration
+similar regard
+generate empty
+empty iterations
+general means
+modifying trees
+tree update
+update methods
+specific implementations
+tree interface
+specific applications
+abstract base
+object-oriented design
+design principle
+public interface
+duck typing
+queue adt
+queue interface
+formal definition
+concrete implementations
+self-contained classes
+formal mechanism
+concrete classes
+tree class
+greater code
+code reuse
+concrete tree
+tree implementations
+nested position
+position class
+methods included
+internal representation
+fragment remain
+remain abstract
+num children
+methods raises
+formal approach
+defining abstract
+base classes
+abstract methods
+abc module
+overriding abstract
+working implementation
+concrete methods
+previous section
+ten accessor
+general algorithms
+iter methods
+methods defined
+direct instance
+class exists
+create instances
+concrete subclasses
+computing depth
+node storing
+definition implies
+recursive algorithm
+method calls
+value returned
+def depth
+levels separating
+separating position
+self.is root
+method depth
+algorithm performs
+constant-time recursive
+recursive step
+total number
+nodes form
+single branch
+input size
+nonempty tree
+leaf positions
+nonpublic method
+method height1
+algorithm depth
+algorithm height1
+height1 calls
+calls algorithm
+worst case
+exercise c-8.33
+height1 runs
+original recursive
+recursive definition
+function based
+algorithm height2
+top-down fashion
+turn invokes
+height2 algorithm
+nonrecursive part
+review section
+recursive processes
+constant amount
+concrete implementation
+height2 spends
+property proposition
+compute heights
+entire tree
+tree root
+nonpublic height2
+public height
+height method
+default interpretation
+binary trees
+binary tree
+child node
+left child
+right child
+child precedes
+internal node
+left subtree
+full binary
+proper binary
+important class
+trees arises
+yes-or-no questions
+question starting
+current node
+decision trees
+leaf position
+tree represents
+decision tree
+tree figure
+prospective investor
+investor chapter
+arithmetic expression
+binary treewhose
+treewhose leaves
+expression tree
+unary operators
+improper binary
+node labeled
+recursive binary
+right subtree
+additional accessor
+child t.sibling
+specialized update
+binarytree abstract
+binarytree class
+class based
+existing tree
+class remains
+remains abstract
+complete specifications
+python implementation
+class definition
+methods left
+sibling method
+children method
+ordered children
+children based
+implied behavior
+interesting properties
+properties dealing
+nodes figure
+maximum number
+tree grows
+simple observation
+properties relating
+detailed justification
+exercise r-8.8
+r-8.8 proposition
+nonempty binary
+trees relating
+earlier binary
+tree properties
+relationship exists
+tree proposition
+nonempty proper
+removing nodes
+internal-node pile
+external-node pile
+initially empty
+empty case
+external node
+tree repeating
+final tree
+single node
+node note
+respective piles
+operations leading
+pile figure
+nonbinary trees
+interesting relationships
+implementing trees
+binarytree classes
+formally abstract
+great deal
+directly instantiated
+key implementation
+implementation details
+provide methods
+methods root
+additional accessors
+accessors left
+common representations
+narrowly defined
+linked structure
+maintains references
+parent field
+variable storing
+root node
+structure representation
+concrete linkedbinarytree
+linkedbinarytree class
+general approach
+nonpublic node
+node class
+public position
+validate utility
+position instance
+make position
+position utility
+nested class
+minor benefit
+class inherits
+special method
+definition continues
+constructor creates
+empty tree
+initializing root
+position utilities
+boundary cases
+cases operations
+linked binary
+provided functionality
+class results
+encapsulation suggests
+outward behaviors
+operations depends
+class offer
+suitable options
+update operations
+update method
+method t.replace
+general method
+case study
+reasonable set
+general usage
+t.add root
+error occurs
+empty t.add
+t.add left
+storing element
+resulting position
+child t.add
+t.add right
+child t.replace
+stored element
+internal structure
+empty trees
+error condition
+condition occurs
+linked representation
+case analyses
+boundary conditions
+constant number
+tree representation
+sentinel node
+undesirable update
+publicly supported
+nonpublic versions
+public delete
+code fragments
+nonpublic methods
+nonpublic update
+public method
+mutablelinkedbinarytree subclass
+public methods
+methods wrapping
+trees performance
+tree implementation
+running times
+linkedbinarytree methods
+derived methods
+len method
+single call
+children methods
+leaf methods
+root calls
+calls root
+equivalence testing
+leaf calls
+methods depth
+depth method
+tree runs
+methods add
+add root
+add left
+add right
+nonpublic implementations
+operation table
+structure implementation
+tree operation
+operation running
+n-node binary
+tree implemented
+space usage
+array-based representation
+alternative representation
+integer defined
+numbering function
+level numbering
+increasing order
+potential positions
+actual positions
+necessarily consecutive
+array-based structure
+python list
+single integer
+position-based methods
+arithmetic operations
+complete implementation
+representation depends
+maximum value
+requires length
+elements range
+empty cells
+existing nodes
+worst-case space
+array representation
+space efficient
+general binary
+exponential worst-case
+space requirement
+efficiently supported
+child takes
+moves locations
+maintains fields
+fields left
+individual children
+general tree
+priori limit
+node store
+single container
+children field
+representation .figure
+larger portion
+data structure
+implement children
+collection operation
+n-node general
+tree traversal
+traversal algorithms
+specific action
+complex computation
+common traversal
+traversal schemes
+tree classes
+common applications
+tree traversals
+postorder traversals
+preorder traversal
+subtrees rooted
+traversed recursively
+algorithm preorder
+visit action
+sample tree
+traversal algorithm
+algorithm paper
+paper title
+title abstract
+algorithms postorder
+postorder traversal
+important tree
+algorithm postorder
+running-time analysis
+efficient ways
+algorithm requires
+breadth-first tree
+common ways
+common approach
+breadth-first traversal
+playing games
+game tree
+initial configuration
+partial game
+tic-tac-toe figure
+annotations displaying
+complete game
+limited amount
+entire subtrees
+first-in first-out
+visit nodes
+dequeue algorithm
+algorithm breadthfirst
+initialize queue
+oldest entry
+inorder traversal
+standard preorder
+breadth-first traversals
+recursive traversals
+right subtrees
+traversal visits
+algorithm inorder
+important applications
+visits positions
+consistent order
+standard representation
+binary search
+search trees
+important application
+algorithm arises
+ordered sequence
+search tree
+unique elements
+order relation
+properties assure
+nondecreasing order
+tree storing
+storing integers
+solid path
+dashed path
+search value
+internal position
+search continues
+search terminates
+terminates successfully
+empty subtree
+terminates unsuccessfully
+binary decision
+question asked
+search operation
+small height
+height chapter
+implementing tree
+first defining
+include support
+iterations report
+presumed iteration
+method iter
+class tree
+generator syntax
+producing iterations
+tree iter
+def iter
+element code
+tree instance
+positions method
+traversal orders
+independent implementations
+default order
+adt preorder
+calling signature
+signature t.preorder
+preorder iteration
+specific position
+standard solution
+nonpublic utility
+utility method
+recursive parameterization
+method preorder
+preorder invoke
+def preorder
+self.is empty
+subtree preorder
+start recursion
+def subtree
+caller code
+utility subtree
+caller decide
+preorder method
+traditional functions
+positions yielded
+recursive call
+outer context
+context note
+base case
+similar technique
+public preorder
+recursive process
+process starting
+full support
+preorder generator
+write code
+visit position
+official tree
+adt requires
+trees support
+definition shown
+results returned
+preorder call
+entire iteration
+def positions
+return self.preorder
+return entire
+entire preorder
+iteration code
+recursive utility
+yield position
+def postorder
+postorder iteration
+subtree postorder
+subtrees code
+class breadth-first
+class recall
+traversal process
+linkedqueue class
+suffice inorder
+abstract binarytree
+dependent tree
+def breadthfirst
+breadth-first iteration
+fringe.is empty
+add children
+queue code
+def inorder
+inorder iteration
+subtree inorder
+child exists
+natural iteration
+inherited version
+make inorder
+return self.inorder
+default code
+binarytree.position method
+representative applications
+standard traversal
+algorithms table
+hierarchical structure
+simple presentation
+attractive presentation
+presentation produced
+element based
+similar presentation
+paper paper
+title title
+abstract abstract
+document represented
+indentation based
+unindented version
+root element
+statement print
+unnecessarily inefficient
+traversal runs
+depth incur
+hidden cost
+cost making
+tree results
+preferred approach
+indented table
+top-down recursion
+current depth
+additional parameter
+implementation runs
+print strings
+increasing lengths
+preorder indent
+print preorder
+preorder representation
+child depth
+efficient recursion
+printing indented
+indented version
+complete tree
+form preorder
+label depends
+current position
+recursive signature
+zero-indexed numbers
+downward path
+oneindexed form
+implementation level
+list instance
+recursive calls
+extraneous entry
+implementation based
+preorder label
+print labeled
+labeled representation
+displayed labels
+path entries
+labeled presentation
+parenthetic representations
+preorder sequence
+additional context
+numbered labels
+human-friendly presentation
+concise string
+string representations
+parenthetic string
+string representation
+single position
+denote string
+string concatenation
+parenthetic representation
+line breaks
+additional punctuation
+formal implementation
+opening parenthesis
+closing parenthesis
+separating commas
+python function
+function parenthesize
+custom traversal
+def parenthesize
+print parenthesized
+parenthesized representation
+end avoids
+avoids trailing
+trailing newline
+determine proper
+proper separator
+future passes
+include closing
+parenthesis code
+tree computing
+computing disk
+disk space
+file-system structure
+internal positions
+positions representing
+representing directories
+leaves representing
+representing files
+disk usage
+recursive computation
+total space
+children directories
+previous positions
+positions represent
+represent children
+recursive disk
+return information
+custom solution
+space problem
+recursion providing
+return value
+def disk
+return total
+total disk
+add child
+return subtotal
+subtotal code
+tree element
+element reports
+local space
+euler tours
+template method
+method pattern
+applications described
+great power
+recursive tree
+postorder methods
+inorder method
+initial work
+work performed
+additional work
+complete path
+previous applications
+custom implementation
+recursive ideas
+great principles
+object-oriented programming
+programming introduced
+include adaptability
+general framework
+traversals based
+euler tour
+tour traversal
+leftmost child
+notable visits
+pre visit
+visit occurs
+first reaching
+walk passes
+post visit
+proceeds upward
+recursive tour
+contiguous portion
+entire tour
+contiguous subtours
+algorithm eulertour
+interesting object-oriented
+object-oriented software
+software design
+design pattern
+pattern describes
+generic computation
+computation mechanism
+primary algorithm
+algorithm calls
+auxiliary functions
+designated steps
+separate hooks
+previsit hook
+postvisit hook
+subtree traversals
+eulertour class
+trivial definitions
+specialized behavior
+behavior python
+primary recursive
+nonpublic tour
+tour method
+tour instance
+specific tree
+public execute
+execute method
+final result
+class eulertour
+hook previsit
+hook postvisit
+def init
+tour template
+def tree
+return reference
+def execute
+def tour
+perform tour
+path list
+increment index
+extraneous index
+return answer
+def hook
+pass code
+eulertour base
+class providing
+tour traversals
+trees based
+customizing traversals
+sample applications
+applications section
+build support
+primary eulertour
+recursive depth
+recursive path
+recursive level
+framework relies
+method hook
+traversed parameter
+convention described
+function method
+final parameter
+return values
+post visits
+respective subtrees
+complex tasks
+additional state
+instance variables
+tour framework
+indented preorder
+simple subclass
+class preorderprintindentedtour
+preorder list
+labeled version
+preorder presentation
+class preorderprintindentedlabeledtour
+postvisit hooks
+class parenthesizetour
+print element
+.is leaf
+print opening
+print closing
+tree notice
+public tree
+class serves
+eulertour subclass
+subclass shown
+postvisit result
+class diskspacetour
+add space
+computes disk
+general graph
+class provided
+provided methods
+methods hook
+binaryeulertour specialization
+additional hook
+hook invisit
+original tour
+tour utility
+tour differentiates
+visit taking
+taking place
+sole left
+sole right
+class binaryeulertour
+version includes
+assigned index
+left sibling
+overridden code
+binaryeulertour base
+specialized tour
+original eulertour
+inorder drawing
+binaryeulertour framework
+graphical layout
+positions visited
+computer graphics
+xcoordinates increase
+increase left
+y-coordinates increase
+upper left
+left corner
+computer screen
+screen code
+binarylayout subclass
+count instance
+parent constructor
+initialize count
+processed nodes
+x-coordinate serialized
+advance count
+nodes code
+binarylayout class
+draw positions
+element type
+original tree
+supports setx
+sety methods
+expressiontree class
+nonpublic mutators
+binary operator
+numeric value
+string representing
+eventual goal
+complex expression
+expression trees
+arithmetic expressions
+basic forms
+root expressiontree
+storing string
+expressiontree instances
+initial root
+token provided
+first parameter
+run-time checking
+caller invoked
+one-parameter version
+three-parameter form
+inherited attach
+attach method
+existing trees
+root composing
+parenthesized string
+existing expression
+displaying tree
+tree elements
+closing parentheses
+parentheses inserted
+postorder step
+special str
+str method
+first build
+individual strings
+composing strings
+str relies
+recursive method
+method named
+named parenthesize
+parenthesize recur
+class expressiontree
+single parameter
+parameter form
+leaf value
+isolated node
+three-parameter version
+linkedbinarytree initialization
+raise typeerror
+raise valueerror
+valid operator
+def str
+return string
+piecewise strings
+append piecewise
+piecewise representation
+resulting list
+self.is leaf
+trees expression
+tree evaluation
+numeric evaluation
+simple application
+values represented
+position designates
+designates pseudo-code
+recursive evaluation
+value represented
+algorithm evaluate
+evaluate recur
+value stored
+operator stored
+expression represented
+tree rooted
+python expressiontree
+public evaluate
+evaluate method
+nonpublic evaluate
+recur method
+designated subtree
+def evaluate
+numeric result
+return float
+assume element
+left val
+right val
+return left
+multiplication code
+expressiontree instance
+basic functionality
+combining existing
+larger expression
+bottom-up construction
+construction algorithm
+multidigit numbers
+fully parenthesized
+scanning tokens
+input expression
+find values
+right parentheses
+left parentheses
+literal value
+single-node expression
+right parenthesis
+root storing
+resulting tree
+total running
+stand-alone function
+function named
+named build
+build expression
+def build
+tokenized expression
+operator symbol
+sorted map
+fundamental methods
+getitem method
+associate value
+existing value
+key equal
+setitem method
+method del
+delitem method
+map adt
+adt includes
+additional functionality
+iteration reports
+reports keys
+sorted order
+additional searches
+find range
+excellent data
+storing items
+relation defined
+key-value pair
+keys stored
+integer keys
+trees navigating
+structural property
+tree assures
+important consequence
+tree visits
+keys justification
+tree consists
+recursive traversal
+recursive inorder
+tree property
+subtree extends
+sorted iteration
+nonrecursive descriptions
+finegrained navigation
+generic binary
+positional structure
+direct navigation
+additional navigation
+navigation based
+greatest key
+first position
+last position
+position chapter
+repeated steps
+algorithm algorithm
+leftmost position
+traversal returns
+subtree traversal
+control progresses
+position visited
+full tree
+symmetric algorithm
+single downward
+downward walk
+single upward
+upward walk
+worst-case running
+methods run
+formal justification
+downward paths
+mimic steps
+related argument
+namesake search
+search algorithm
+recall figure
+successful search
+unsuccessful search
+getitem map
+map operation
+treesearch algorithm
+algorithm returns
+final position
+position explored
+search path
+trees analysis
+tree searching
+simple algorithm
+algorithm treesearch
+primitive operations
+previous position
+position encountered
+search runs
+standard caricature
+big triangle
+zig-zag line
+delitem methods
+existing item
+map operations
+traversal methods
+range method
+items reported
+upper bound
+deletions algorithms
+deleting entries
+trivial insertion
+map command
+underlying tree
+failed search
+treeinsert algorithm
+algorithm treeinsert
+search key
+add node
+trees deletion
+deletion deleting
+calling treesearch
+increasing difficulty
+easily implemented
+introducing update
+desired behavior
+ancestor-descendant relationships
+orphaned children
+locate position
+rightmost position
+deletion involves
+single path
+path downward
+deletion figure
+treemap class
+standard map
+positional operations
+operations including
+find position
+class takes
+takes advantage
+multiple inheritance
+positional binary
+mapbase class
+key-value composite
+composite item
+concrete behaviors
+collections.mutablemapping abstract
+specific p.key
+syntax inherited
+nonpublic utilities
+subtree search
+nearest key
+key greater
+search utility
+public find
+deleting items
+robust searches
+structural modifications
+inherited methods
+methods remain
+presumed methods
+methods named
+named rebalance
+rebalance insert
+rebalance delete
+rebalance access
+methods serve
+balancing search
+code code
+class including
+redefined position
+nonpublic search
+search utilities
+utilities code
+positional methods
+accessor code
+selected methods
+find min
+related methods
+brevity code
+current tree
+maximum path
+path length
+operations getitem
+similar paths
+inorder predecessor
+successive calls
+iter require
+similar argument
+worst-case bound
+current height
+items stored
+efficient implementation
+yields logarithmic-time
+logarithmic-time performance
+ordered list
+list implementation
+worst-case configuration
+configuration arises
+insert items
+decreasing order
+order figure
+linear height
+inserting entries
+keys generated
+random series
+expected height
+careful mathematical
+mathematical language
+sophisticated probability
+probability theory
+random nature
+worst-case height
+balanced search
+standard binary
+basic map
+unbalanced tree
+tree algorithms
+stronger performance
+performance guarantees
+avl trees
+splay trees
+red-black trees
+occasional operations
+primary operation
+rotation operation
+left formation
+right formation
+left note
+represents items
+first configuration
+single rotation
+rotation modifies
+tree-balancing algorithm
+tree configurations
+rightward rotation
+first formation
+broader rebalancing
+compound operation
+trinode restructuring
+subtrees pseudo-code
+orientations mapping
+restructuring replaces
+node identified
+previous children
+inorder relationships
+algorithm restructure
+double rotation
+involving positions
+restructuring operation
+case analysis
+rotation arises
+relevant keys
+schematic illustration
+python framework
+concrete map
+map implementation
+explicit balancing
+balancing operations
+advanced tree-balancing
+tree-balancing algorithms
+rebalancing operations
+strategic calls
+rebalancing algorithms
+public delitem
+splay tree
+accessed items
+trivial declarations
+pass statement
+nontrivial action
+method design
+def rebalance
+additional code
+providing stubs
+rebalancing hooks
+utility methods
+methods rotate
+public treemap
+treemap operations
+promote code
+balanced-tree subclasses
+additional relink
+relink utility
+links parent
+child nodes
+special case
+rotate method
+rotated node
+original grandparent
+middle subtree
+rotated nodes
+creating tree
+tree nodes
+draw attention
+important subtlety
+original linkedbinarytree
+linkedbinarytree subclass
+low-level definition
+nested node
+tree-balancing strategies
+strategies require
+auxiliary information
+balancing process
+provide storage
+additional field
+linkedbinarytree node
+inheritance structure
+node relies
+defined node
+factory method
+class chapter
+trees code
+tree subclasses
+efficient map
+map data
+worst-case performance
+operations results
+simple balancing
+balancing strategy
+worst-case logarithmic
+logarithmic running
+fundamental map
+operations definition
+avl tree
+simple correction
+logarithmic height
+longest path
+null child
+height-balance property
+nodes height-balance
+adel son-vel
+son-vel skii
+shown inside
+empty subtrees
+proposition proposition
+inverse problem
+lower bound
+minimum number
+easy step
+reader familiar
+fibonacci progressions
+function exponential
+increasing function
+grows exponentially
+operation getitem
+map implemented
+absolute value
+property characterizing
+characterizing avl
+deletion operations
+trees begin
+change insertion
+insertion suppose
+occurred chapter
+trees figure
+storing keys
+restructuring restores
+simple search-and-repair
+search-and-repair strategy
+higher height
+restructuring method
+avl insertion
+avl height-balance
+nearest ancestor
+equal heights
+height changed
+equal-height subtrees
+tallest child
+heightbalance property
+property globally
+globally figure
+typical insertion
+restoring balance
+restructuring notice
+insertion chapter
+deletion recall
+regular binary
+structural removal
+removed node
+unbalanced node
+rotation restores
+restore balance
+unbalanced position
+larger height
+taller child
+restructured subtree
+middle position
+position denoted
+unbalanced positions
+restructure operation
+trinode restructurings
+property performance
+times bounded
+maintaining balance
+balance factors
+traditional map
+operations run
+general structure
+multiway search
+trees recall
+trees map
+map items
+key definition
+internal d-node
+,cd stores
+ordered set
+key-value pairs
+special fictitious
+fictitious keys
+simple viewpoint
+d-node stores
+regular keys
+actual nodes
+interesting relationship
+n-item multiway
+trees searching
+multiway tree
+successfully completed
+unsuccessfully data
+representing multiway
+linked data
+operation needed
+smallest key
+map serves
+secondary data
+primary data
+structure represented
+entire multiway
+circular argument
+ordered map
+circular dependence
+bootstrapping technique
+simple solution
+advanced solution
+natural choice
+secondary structure
+structure map
+dmax denote
+hlog dmax
+primary efficiency
+efficiency goal
+caps dmax
+-tree operations
+structures stored
+primary multiway
+tree balanced
+structure achieves
+simple properties
+size property
+children depth
+depth property
+methods assuming
+real nodes
+strictly needed
+needed enforcing
+tree simple
+secondary map
+map stored
+unordered list
+ordered array
+-time performance
+important bound
+claim note
+rearranged proposition
+depth properties
+proposition implies
+tree takes
+specific realization
+secondary structures
+crucial design
+design choice
+children dmax
+constant maintaining
+properties requires
+performing insertions
+insertion method
+method preserves
+split operation
+insert key
+w__ children
+overflow occurs
+cascading split
+initial tree
+original search
+single split
+split operations
+insertion process
+nodes suppose
+internal-node children
+external-node children
+rightmost internal
+last item
+externalnode children
+external child
+external children
+transfer operation
+fusion operation
+turn triggers
+fusion operations
+underflow propagates
+simply deleted
+propagating sequence
+tree performance
+asymptotic performance
+logarithmic bounds
+complexity analysis
+keyvalue pairs
+operation takes
+entry visits
+trees provide
+fast map
+map search
+nice properties
+restructure operations
+fusing operations
+red-black tree
+stay balanced
+nodes colored
+root property
+black red
+red property
+red node
+black depth
+black ancestors
+red nodes
+nodes drawn
+common black
+interesting correspondence
+trivial external
+black node
+tree contributes
+black parents
+first child
+black parent
+construction proposition
+trees justification
+trivial leaves
+tree operations
+important intuition
+perform updates
+update algorithms
+intuition split
+fuse operations
+recoloring neighboring
+change orientations
+null subtree
+action corresponds
+insertion preserves
+red note
+trees case
+double red
+red denotes
+operation restructure
+temporarily relabel
+left-to-right order
+inorder tree
+traversal replace
+make nodes
+keeping inorder
+relationships unchanged
+restructuring eliminates
+double-red problem
+problem notice
+restructured part
+unaffected figure
+affected part
+problem reappears
+red parent
+performing recolorings
+final recoloring
+recolorings caused
+insertion operations
+root remains
+process results
+remaining child
+structural change
+black depths
+red violations
+tree remains
+valid red-black
+case denotes
+red leaf
+black height
+node represents
+black part
+redblack properties
+promoted child
+complex case
+black leaf
+change results
+path leading
+deleted item
+general setting
+removed black
+general case
+node exists
+theavy tlight
+black heights
+gray color
+deficit case
+red child
+result includes
+additional black
+black nodes
+subtrees illustrated
+remains unchanged
+unchanged resolving
+case corresponds
+child assures
+item stored
+black deficit
+left figures
+figures denotes
+restructured portion
+colored black
+red violation
+recoloring resolves
+tlight includes
+repeat consideration
+remedy figure
+recoloring operation
+entire subtree
+cascading remedy
+black root
+original theavy
+red figure
+deficit remains
+dashed edge
+black deficiency
+avl performance
+primary advantage
+deletion requires
+restructuring operations
+logarithmic number
+tree requires
+recoloring operations
+cascade upward
+single map
+operation proposition
+restructuring justification
+insertion begins
+downward search
+leaf node
+potential upward
+upward effort
+double-red violation
+upward cascading
+single application
+action eliminates
+tree insertion
+insertion proposition
+items takes
+operations justification
+deletion begins
+tree deletion
+deletion algorithm
+subsequent rebalancing
+rebalancing takes
+takes place
+upward path
+deleted node
+resulting black
+application case
+terminal application
+redblacktreemap class
+standard treemap
+balancing framework
+framework described
+additional boolean
+boolean field
+current color
+inserting items
+additional utility
+utility functions
+insert hook
+analysis described
+additional challenge
+rebalance hook
+analysis depends
+reverse engineer
+exercise r-11.26
+exercise r-11.27
+productivity
+experts
+breakthroughs
+thinking
+nonlinearly
+chapter
+discuss
+important
+nonlinear
+data
+structures
+computing
+trees
+tree
+breakthrough
+organization
+implement
+host
+algorithms
+faster
+linear
+array-based
+lists
+linked
+provide
+natural
+ubiquitous
+file
+systems
+graphical
+user
+interfaces
+databases
+web
+sites
+computer
+clear
+referring
+organizational
+relationship
+richer
+simple
+relationships
+objects
+sequences
+hierarchical
+main
+terminology
+family
+terms
+parent
+child
+ancestor
+descendant
+common
+words
+describe
+show
+figure
+general
+8.1.1
+definitions
+properties
+abstract
+type
+stores
+elements
+hierarchically
+exception
+top
+element
+children
+visualized
+placing
+inside
+ovals
+rectangles
+drawing
+connections
+parents
+straight
+lines
+typically
+call
+root
+drawn
+highest
+connected
+opposite
+botanical
+africa
+europe
+asia
+australia
+canada
+america
+overseas
+domestic
+international
+tuner
+r&d
+sales
+purchasing
+manufacturing
+electronics
+nodes
+representing
+fictitious
+corporation
+store
+internal
+formal
+definition
+formally
+define
+set
+storing
+parent-child
+satisfies
+nonempty
+special
+node
+unique
+note
+empty
+meaning
+convention
+recursively
+consists
+possibly
+subtrees
+roots
+two
+siblings
+external
+leaves
+section
+4.1.4
+discussed
+files
+directories
+system
+emphasize
+nomenclature
+revisit
+earlier
+regular
+unix
+linux
+operating
+appropriately
+directory
+represented
+symbol
+hw1
+hw2
+hw3
+pr1
+pr2
+pr3
+grades
+buylow
+sellhigh
+market
+portion
+conversely
+cs252
+subtree
+rooted
+consisting
+descendants
+including
+cs016
+edges
+paths
+edge
+pair
+u,v
+vice
+versa
+path
+sequence
+consecutive
+form
+inheritance
+relation
+classes
+python
+program
+forms
+single
+provided
+summary
+hierarchy
+types
+portrayed
+originally
+baseexception
+class
+user-defined
+conventionally
+declared
+specific
+introduced
+code
+fragment
+organized
+exists
+built-in
+named
+object
+ultimate
+base
+direct
+indirect
+defining
+pictured
+complete
+preview
+remainder
+portrays
+arraybinarytree
+linkedbinarytree
+binarytree
+linkedtree
+modeling
+abstractions
+implementations
+highlevel
+sketches
+designed
+ordered
+meaningful
+order
+purposefully
+identify
+first
+arranging
+left
+right
+components
+structured
+document
+book
+parts
+chapters
+sections
+paragraphs
+tables
+figures
+corresponds
+fact
+expanding
+sentences
+characters
+well-defined
+back
+examples
+described
+significant
+describes
+generational
+modeled
+birth
+contrast
+chart
+company
+considered
+unordered
+likewise
+significance
+subclasses
+finally
+displays
+entries
+e.g
+alphabetical
+chronological
+inherent
+representation
+8.1.2
+positional
+adt
+concept
+position
+abstraction
+stored
+positions
+satisfy
+structure
+supports
+method
+p.element
+return
+accessor
+methods
+allowing
+navigate
+t.root
+t.is
+true
+t.parent
+t.num
+number
+t.children
+generate
+iteration
+leaf
+len
+contained
+t.positions
+iter
+accepts
+argument
+valueerror
+invalid
+reports
+generates
+similar
+regard
+iterations
+means
+iterating
+creating
+modifying
+point
+prefer
+update
+conjunction
+interface
+applications
+discussing
+object-oriented
+design
+principle
+2.1.2
+noted
+public
+managed
+duck
+typing
+defined
+notion
+queue
+presented
+arrayqueue
+6.2.2
+linkedqueue
+7.1.2
+circularqueue
+7.2.2
+gave
+concrete
+self-contained
+happen
+adhere
+mechanism
+designate
+serves
+2.4.3
+choose
+reason
+doing
+bit
+level
+greater
+reuse
+nested
+declarations
+included
+remain
+num
+raises
+notimplementederror
+approach
+abc
+module
+responsible
+overriding
+working
+implementation
+behavior
+based
+chosen
+includes
+rely
+calls
+previous
+declare
+ten
+implemented
+explore
+traversing
+beauty
+inherited
+promotes
+reimplement
+behaviors
+create
+instance
+serve
+users
+instances
+8.1.3
+depth
+height
+ancestors
+excluding
+implies
+present
+recursive
+algorithm
+adds
+value
+returned
+def
+levels
+separating
+self.is
+self.depth
+self.parent
+running
+t.depth
+denotes
+performs
+constant-time
+step
+runs
+worstcase
+total
+branch
+function
+input
+size
+informative
+characterize
+parameter
+smaller
+maximum
+heights
+addition
+viewed
+proposition
+equal
+depths
+leave
+justification
+exercise
+r-8.3
+height1
+nonpublic
+computes
+efficient
+run
+worst
+case
+sum
+proportional
+c-8.33
+worst-case
+compute
+efficiently
+relying
+original
+parameterize
+calculate
+understand
+height2
+progresses
+top-down
+fashion
+initially
+eventually
+invokes
+recursion
+turn
+determine
+summing
+amount
+spent
+nonrecursive
+part
+review
+analyses
+processes
+constant
+work
+overhead
+assume
+generated
+spends
+analysis
+make
+property
+denote
+contributes
+unit
+revisiting
+ability
+beneficial
+expect
+entire
+explicitly
+designating
+wrap
+default
+interpretation
+invoked
+syntax
+t.height
+binary
+labeled
+precedes
+proper
+people
+full
+improper
+arises
+contexts
+represent
+outcomes
+result
+answering
+series
+yes-or-no
+questions
+question
+starting
+current
+depending
+answer
+decision
+follow
+tracing
+represents
+answered
+leads
+illustrates
+recommendations
+prospective
+investor
+arithmetic
+expression
+treewhose
+variables
+constants
+operators
+variable
+applying
+operation
+values
+operator
+takes
+operands
+unary
+negation
+incidentally
+8.2.1
+specialization
+additional
+t.left
+t.right
+t.sibling
+sibling
+specialized
+existing
+remains
+specifications
+internally
+functionality
+inherits
+supported
+derived
+combination
+derive
+generator
+implied
+8.2.2
+interesting
+dealing
+four
+grows
+exponentially
+observation
+relating
+detailed
+r-8.8
+justify
+removing
+dividing
+piles
+internal-node
+pile
+external-node
+end
+cases
+remove
+place
+arbitrary
+reconnect
+shown
+removes
+repeating
+final
+removed
+respective
+operations
+leading
+hold
+nonbinary
+exercises
+c-8.32
+c-8.34
+implementing
+great
+deal
+support
+directly
+instantiated
+key
+details
+effectively
+specifically
+accessors
+choices
+representations
+begin
+shape
+narrowly
+8.3.1
+realize
+8.11a
+maintains
+references
+field
+reference
+8.11b
+implements
+subclassing
+developing
+positionallist
+wraps
+validate
+utility
+robustly
+checking
+validity
+unwrapping
+wrapping
+caller
+formality
+inherit
+immediately
+binarytree.position
+technically
+trivially
+tree.position
+minor
+benefit
+relative
+continues
+constructor
+creates
+initializing
+careful
+utilities
+safeguard
+boundary
+updating
+examining
+results
+changing
+content
+chose
+reasons
+encapsulation
+suggests
+outward
+depend
+efficiency
+depends
+greatly
+offer
+suitable
+options
+application
+unacceptable
+possibility
+t.replace
+replaces
+context
+page
+study
+enforce
+reasonable
+usage
+t.add
+error
+occurs
+link
+resulting
+replace
+previously
+t.delete
+replacing
+t.attach
+attach
+reset
+condition
+collection
+complex
+delete
+due
+involving
+conditions
+perform
+simplified
+sentinel
+akin
+treatment
+c-8.40
+avoid
+problem
+undesirable
+publicly
+versions
+providing
+underscored
+lieu
+fragments
+invoke
+preserving
+subclass
+expose
+r-8.15
+task
+mutablelinkedbinarytree
+performance
+summarize
+efficiencies
+analyze
+times
+relies
+equivalence
+testing
+verifies
+analyzed
+add
+involve
+relinking
+table
+summarizes
+n-node
+space
+8.3.2
+alternative
+numbering
+integer
+numbers
+increasing
+potential
+actual
+necessarily
+list
+index
+array
+advantage
+position-based
+formula
+r-8.18
+requires
+length
+range
+cells
+r-8.16
+heaps
+spite
+exponential
+requirement
+prohibitive
+drawback
+deleting
+promoting
+moves
+locations
+8.3.3
+fields
+individual
+priori
+limit
+container
+.figure
+larger
+r-8.14
+simply
+traversal
+systematic
+accessing
+visiting
+action
+visit
+incrementing
+counter
+performing
+computation
+schemes
+traversals
+8.4.1
+preorder
+postorder
+visited
+traversed
+pseudo-code
+traverse
+sample
+paper
+title
+sense
+traverses
+visits
+running-time
+ways
+access
+assumption
+asymptotically
+optimal
+8.4.2
+breadth-first
+software
+playing
+games
+game
+made
+player
+initial
+configuration
+partial
+tic-tac-toe
+annotations
+displaying
+performed
+unable
+limited
+responses
+deep
+computational
+process
+produce
+fifo
+i.e
+first-in
+first-out
+semantics
+enqueue
+dequeue
+breadthfirst
+initialize
+q.dequeue
+oldest
+entry
+q.enqueue
+8.4.3
+inorder
+standard
+applied
+introduce
+informally
+consistent
+albeit
+parentheses
+search
+integers
+denoted
+assure
+nondecreasing
+solid
+searching
+successfully
+dashed
+unsuccessfully
+find
+encountered
+compare
+terminates
+reach
+recall
+asked
+searched
+illustrate
+small
+log
+large
+devoted
+8.4.4
+stated
+include
+report
+demonstrate
+easy
+presumed
+producing
+self.positions
+yield
+body
+choice
+advantages
+orders
+independent
+strategy
+adapt
+calling
+signature
+t.preorder
+generating
+parameterized
+solution
+circumstance
+desired
+parameterization
+self.root
+start
+self.children
+yielding
+generators
+decide
+traditional
+functions
+slightly
+loop
+yielded
+reyield
+outer
+trivial
+technique
+re-yield
+write
+official
+self.preorder
+difference
+wait
+manage
+suffice
+applicable
+dependent
+develop
+applies
+fringe
+fringe.enqueue
+fringe.is
+fringe.dequeue
+front
+self.left
+self.right
+override
+version
+self.inorder
+reported
+8.4.5
+representative
+customizations
+contents
+naturally
+displayed
+presentation
+line
+shows
+attractive
+produced
+indenting
+display
+indentation
+unindented
+print
+indent
+spaces
+statement
+str
+unnecessarily
+inefficient
+incur
+hidden
+cost
+making
+analyzing
+preferred
+indented
+redesign
+strings
+lengths
+printing
+started
+fortunate
+embedded
+generally
+interested
+explicit
+beginning
+2.2.1
+2.2.2
+challenging
+labels
+implicit
+label
+accomplish
+zero-indexed
+downward
+convert
+oneindexed
+inefficiency
+duplicating
+sending
+share
+temporarily
+added
+trace
+block
+extraneous
+completing
+.join
+one-indexed
+path.append
+path.pop
+parenthetic
+reconstruct
+numbered
+human-friendly
+concise
+string
+computer-friendly
+t1,t2
+,tk
+concatenation
+breaks
+cosmetic
+essentially
+easily
+punctuation
+opening
+parenthesis
+closing
+commas
+parenthesize
+custom
+prints
+parenthesized
+avoids
+trailing
+newline
+sep
+separator
+false
+future
+passes
+recur
+disk
+model
+file-system
+introducing
+examined
+topic
+emblematic
+purpose
+discern
+allocated
+information
+subtotal
+.space
+local
+8.4.6
+euler
+tours
+template
+pattern
+power
+capture
+computations
+desire
+blending
+approaches
+recurring
+recursions
+properly
+ideas
+principles
+programming
+2.1.1
+adaptability
+reusability
+framework
+tour
+walk
+leftmost
+viewing
+walls
+complexity
+upward
+unify
+notable
+pre
+reaching
+visualization
+post
+proceeds
+contiguous
+subtours
+eulertour
+reusable
+adaptable
+generic
+redefining
+steps
+customization
+primary
+auxiliary
+hooks
+designated
+separate
+previsit
+hook
+postvisit
+completion
+manages
+defines
+customized
+created
+execute
+beings
+returns
+overridden
+init
+prepare
+tree.root
+indices
+tree.children
+results.append
+increment
+pass
+experience
+customizing
+build
+maintaining
+post-processing
+discussion
+expected
+parameters
+tasks
+maintain
+state
+accessed
+bodies
+flexibility
+preorderprintindentedtour
+produces
+invoking
+expressed
+tour.execute
+preorderprintindentedlabeledtour
+achieved
+overrides
+parenthesizetour
+preface
+self.tree
+.is
+notice
+diskspacetour
+graph
+designing
+customize
+binaryeulertour
+invisit
+specialize
+differentiates
+taking
+sole
+succession
+assigned
+tree.left
+tree.right
+layout
+geometry
+determined
+assigns
+y-coordinates
+rules
+graphics
+xcoordinates
+increase
+bottom
+origin
+upper
+corner
+screen
+binarylayout
+assigning
+x,y
+coordinates
+count
+x-coordinate
+super
+processed
+.setx
+serialized
+.sety
+y-coordinate
+advance
+draw
+setx
+sety
+expressiontree
+constructing
+evaluating
+mutators
+construct
+numeric
+eventual
+goal
+arbitrarily
+compound
+expressions
+suffices
+basic
+initialization
+op,e1,e2
+token
+run-time
+one-parameter
+done
+three-parameter
+incorporate
+composing
+9-5
+inserted
+2.3.2
+joined
+5.4.2
+appends
+isolated
+isinstance
+raise
+typeerror
+valid
+pieces
+piecewise
+compose
+append
+result.append
+evaluation
+accomplished
+designates
+evaluate
+t.evaluate
+float
+val
+elif
+treat
+multiplication
+building
+combining
+automate
+bottom-up
+construction
+assuming
+tokenized
+multidigit
+treated
+atomically
+r-8.30
+fully
+stack
+scanning
+tokens
+push
+literal
+single-node
+pop
+items
+subexpression
+repeat
+stand-alone
+s.append
+demonstrated
+variety
+sorted
+map
+fundamental
+10.1.1
+keyerror
+getitem
+associate
+item
+setitem
+del
+delitem
+guaranteeing
+keys
+supporting
+searches
+stop
+excellent
+key-value
+k,v
+matter
+convenience
+diagram
+affect
+placement
+omit
+relevant
+navigating
+demonstrating
+structural
+assures
+consequence
+prove
+induction
+sub
+strictly
+extends
+executed
+descriptions
+finegrained
+navigation
+7.4.1
+last
+greatest
+located
+continuing
+long
+symmetry
+reached
+repeated
+rightward
+successor
+rationale
+purely
+workings
+correspondence
+flow
+control
+returning
+found
+rightmost
+symmetric
+predecessor
+bounded
+amortized
+c-11.34
+intuitively
+mimic
+related
+11.1.2
+namesake
+attempt
+locate
+p.key
+successful
+unsuccessful
+treesearch
+event
+explored
+determining
+insert
+executes
+primitive
+starts
+spend
+illustrating
+caricature
+big
+triangle
+zig-zag
+subroutine
+begins
+combine
+variation
+admittedly
+strategies
+bound
+logn
+11.1.3
+insertions
+deletions
+inserting
+fairly
+straightforward
+insertion
+command
+reassigned
+underlying
+failed
+sustained
+treeinsert
+t,t.root
+finding
+deletion
+location
+enacted
+distinguish
+difficulty
+deletes
+presuming
+precisely
+ancestor-descendant
+assuring
+upkeep
+hole
+orphaned
+proceed
+is,r
+notation
+11.1.1
+replacement
+deleted
+preceding
+satisfied
+fortunately
+simpler
+involves
+moving
+11.4b
+11.5b
+replaced
+11.1.4
+treemap
+multiple
+inheriting
+mapbase
+10.1.4
+composite
+collections.mutablemapping
+p.value
+notably
+ideally
+nearest
+basis
+robust
+modifications
+violated
+misuse
+peppered
+rebalance
+balancing
+conclude
+guide
+redefined
+selected
+min
+omitted
+sake
+brevity
+11.1.5
+traces
+continue
+traced
+successive
+require
+bounds
+yields
+logarithmic-time
+feel
+decreasing
+obtained
+comfort
+average
+random
+removals
+scope
+requiring
+mathematical
+language
+sophisticated
+probability
+theory
+guarantee
+nature
+updates
+variations
+balanced
+claim
+lead
+unbalanced
+stronger
+guarantees
+avl
+splay
+red-black
+augmenting
+occasional
+reshape
+reduce
+rotation
+rotate
+diagrammed
+transform
+formation
+prior
+relink
+lie
+rotated
+modifies
+tree-balancing
+modified
+wisely
+highly
+configurations
+reduces
+unaffected
+rotations
+combined
+broader
+rebalancing
+trinode
+restructuring
+manipulation
+grandparent
+restructure
+illustrated
+describing
+rename
+orientations
+mapping
+unified
+relabeling
+identified
+makes
+output
+double
+left-to-right
+listing
+t1,t2,t3,t4
+practice
+modification
+caused
+11.9a
+11.9c
+middle
+completed
+schematic
+illustration
+11.2.1
+advanced
+strategic
+identifying
+indirectly
+frequently
+brought
+closer
+nontrivial
+continued
+stubs
+rotating
+inclusion
+promote
+balanced-tree
+simplify
+links
+focus
+shifting
+factory
+attention
+subtlety
+low-level
+storage
+intentionally
+instantiate
+qualified
+vital
+resolution
+2.5.2
+instantiation
+newly
+logarithmic
+correction
+rule
+longest
+easier
+explanation
+null
+height-balance
+characterizes
+differ
+atmost
+initials
+inventors
+adel
+son-vel
+skii
+landis
+keeping
+turns
+out
+inverse
+lower
+minimum
+noting
+account
+obtain
+relates
+reader
+familiar
+fibonacci
+progressions
+c-3.49
+formalize
+dropping
+doubles
+increases
+apply
+repeatedly
+inequalities
+substituting
+2log
+2logn
+11.3.1
+absolute
+characterizing
+equivalent
+similarly
+restore
+balance
+portions
+adversely
+affected
+change
+suppose
+violate
+11.12a
+changed
+fix
+unbalance
+occurred
+adding
+restores
+participating
+search-and-repair
+encounter
+higher
+tie
+argue
+correctness
+reestablishing
+implication
+increased
+equal-height
+letting
+tallest
+scenario
+heightbalance
+globally
+typical
+imbalance
+restoring
+removal
+11.12b
+taller
+side
+11.14b
+restructured
+description
+guaranteed
+locally
+restored
+r-11.11
+r-11.12
+walking
+marching
+restructurings
+sufficient
+factors
+2,4
+multiway
+11.5.1
+pairs
+d-node
+11.23a
+,cd
+k1,v1
+1,vd
+viewpoint
+rise
+placeholders
+exposition
+n-item
+c-11.52
+11.23b
+,kd
+needed
+smallest
+secondary
+reasoning
+circular
+dependence
+bootstrapping
+sortedtablemap
+10.3.1
+match
+recommend
+vi,ci
+realization
+processing
+logd
+dmax
+hlog
+caps
+11.5.2
+-tree
+2-4
+2-3-4
+achieves
+goals
+simplicity
+real
+enforcing
+achieve
+-time
+hand
+enforces
+showing
+logarithm
+justifies
+rearranged
+states
+crucial
+effort
+preserves
+4-node
+5-node
+longer
+violation
+overflow
+resolved
+,c5
+,k4
+remedy
+split
+w__
+3-node
+c1,c2,c3
+2-node
+c4,c5
+occur
+triggers
+eliminates
+propagates
+cascading
+causing
+creation
+phase
+ino
+webegin
+reduced
+ki,vi
+swap
+11.28d
+ensure
+externalnode
+swapped
+1-node
+11.28a
+allowed
+underflow
+check
+transfer
+move
+11.28b
+2-nodes
+fusion
+merge
+11.28e
+11.29c
+propagating
+fusions
+asymptotic
+identical
+keyvalue
+fast
+nice
+disadvantages
+fusing
+drawbacks
+stay
+colored
+red
+black
+white
+intuitive
+merging
+coloring
+transformations
+highlighted
+grouping
+give
+establishing
+inequality
+11.6.1
+intuition
+mysteriously
+fuse
+mimicked
+recoloring
+neighboring
+color
+malformed
+relabel
+unchanged
+double-red
+incident
+reappears
+consideration
+recolorings
+resolve
+half
+handled
+structurally
+promotion
+remaining
+violations
+shrinking
+redblack
+promoted
+nonroot
+deficit
+necessity
+setting
+theavy
+tlight
+cascades
+portrayal
+gray
+resolving
+effect
+demoted
+deficiency
+resolves
+11.39a
+11.39b
+deficient
+propogating
+reversing
+colors
+ending
+recolor
+reorientation
+reapply
+knowing
+terminal
+amounts
+orientation
+transformation
+concluding
+cascade
+propositions
+logarithmically
+subsequent
+completes
+11.6.2
+redblacktreemap
+boolean
+sets
+aid
+querying
+opportunity
+modify
+closely
+challenge
+reverse
+engineer
+r-11.26
+r-11.27

@@ -1,0 +1,10 @@
+Row 1::Height 2::sorting while scanning
+Row 2::Height 1::sort-scan operator sorts a relation r
+Row 2::Height 1::while scanner it into memory
+Row 3::Height 1::if sorting is done on an indexed key
+Row 4::Height 1::attribute no need to do anything;scanning
+Row 5::Height 1::will read r in sorted order
+Row 6::Height 1::if r is small enough to fit in main memory,
+Row 7::Height 1::perform sorting after scanning
+Row 8::Height 1::else, use external sort-merge techniques
+Row 9::Height 1::to implement sort scan

@@ -1,0 +1,10 @@
+Row 1::Height 2::examples
+Row 2::Height 1::consider expression: x = y-2. assume that y
+Row 3::Height 1::has value 10
+Row 4::Height 1::the value of the expression is 8, the
+Row 5::Height 1::side effect is to set the value of x to 8
+Row 6::Height 1::consider expression z = x= y-2. the =
+Row 7::Height 1::operator has lesser precedence than - and
+Row 8::Height 1::associates right to left. hence this is same as
+Row 9::Height 1::z= ( x= (y-2)). the value is thus 8 and the
+Row 10::Height 1::side effect is to set x and z to 8

@@ -1,0 +1,11 @@
+Row 1::Height 2::physical query plan operator
+Row 2::Height 1::types
+Row 3::Height 1::tuple at a time unary operators
+Row 4::Height 1::can read only one block at a time and required to
+Row 5::Height 1::work with only one tuple
+Row 6::Height 1::full relation unary operators
+Row 7::Height 1::requires knowledge of all or most of the relation
+Row 8::Height 1::reed into memory for small relations in one-pass
+Row 9::Height 1::algorithms
+Row 10::Height 1::full relation binary operators
+Row 11::Height 1::same as above but on two relations

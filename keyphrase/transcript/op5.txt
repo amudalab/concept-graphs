@@ -1,0 +1,127 @@
+Lecture 1: Introduction to Operating Systems
+• An operating system is a program that acts as an
+intermediary between a user of a computer and the
+computer hardware.
+• The purpose of an operating system is to provide an
+environment in which a user can execute programs.
+The primary goal of an operating system is thus to
+make the computer system convenient to use.
+• A secondary goal is to use the computer hardware in
+an efficient manner.
+Lecture 1: Introduction to Operating Systems
+• In brief, an operating system is the set of programs
+that controls a computer. Some examples of
+operating systems are UNIX, Mach, MS-DOS, MSWindows,
+Windows/NT, OS/2 and MacOS.
+• An operating system is an important part of almost
+every computer system.
+• A computer system can be divided roughly into four
+components: the hardware, the operating system,
+the application programs and the users (Figure 1.1).
+
+Objectives of Operating Systems
+• To hide details of hardware by creating abstraction.
+• To allocate resources to processes (Manage
+resources).
+• Provide a pleasant and effective user interface.
+History of Operating Systems
+• The 1940's - First Generations
+The earliest electronic digital computers had no operating systems.
+Machines of the time were so primitive that programs were often entered
+one bit at time on rows of mechanical switches (plug boards).
+Programming languages were unknown (not even assembly languages).
+Operating systems were unheard of.
+• The 1950's - Second Generation
+By the early 1950's, the routine had improved somewhat with the
+introduction of punch cards. The General Motors Research Laboratories
+implemented the first operating systems in early 1950's for their IBM 701.
+The system of the 50's generally ran one job at a time.
+• The 1960's - Third Generation
+The systems of the 1960's were also batch processing systems, but they
+were able to take better advantage of the computer's resources by running
+several jobs at once.
+• Fourth Generation
+With the development of LSI (Large Scale Integration) circuits, chips,
+operating system entered in the personal computer and the workstation
+age. Microprocessor technology evolved to the point that it becomes
+possible to build desktop computers as powerful as the mainframes of the
+1970s.
+History of Operating Systems
+Lecture 2: Operating Systems Structure
+• System Components
+• Operating Systems Services
+• System Calls and System Programs
+System Components
+• Process Management
+A process is only ONE instant of a program in execution.
+There are many processes can be running the same program.
+The five major activities of an operating system in regard to process
+management are:
+• Creation and deletion of user and system processes.
+• Suspension and resumption of processes.
+• A mechanism for process synchronization.
+• A mechanism for process communication.
+• A mechanism for deadlock handling.
+System Components
+• Main-Memory Management
+Main-Memory is a large array of words or bytes. Each word or byte
+has its own address. Main memory is a repository of quickly accessible
+data shared by the CPU and I/O devices.
+The major activities of an operating system in regard to memory-management
+are:
+• Keep track of which part of memory are currently being used and by whom.
+• Decide which processes are loaded into memory when memory space
+becomes available.
+• Allocate and deallocate memory space as needed.
+System Components
+• File Management
+A file is a collected of related information defined by its
+creator. Computer can store files on the disk (secondary
+storage), which provide long term storage.
+• The creation and deletion of files.
+• The creation and deletion of directions.
+• The support of primitives for manipulating files and directions.
+• The mapping of files onto secondary storage.
+• The backup of files on stable storage media. 
+System Components
+• I/O System Management
+One of the purposes of an operating system is to hide the
+peculiarities of specific hardware devices from the user.
+• Secondary-Storage Management
+Generally speaking, systems have several levels of
+storage, including primary storage, secondary storage and
+cache storage. Instructions and data must be placed in primary
+storage or cache to be referenced by a running program.
+System Components
+• Networking
+A distributed system is a collection of processors that do not share
+memory, peripheral devices, or a clock. The processors communicate with
+one another through communication lines called network.
+• Protection System
+Protection refers to mechanism for controlling the access of
+programs, processes, or users to the resources defined by a computer
+system.
+• Command Interpreter System
+A command interpreter is an interface of the operating system with
+the user. The user gives commands with are executed by operating system
+(usually by turning them into system calls).
+Operating Systems Services
+• Program Execution
+The system must be able to load a program into memory and to run
+it. The program must be able to end its execution, either normally or
+abnormally (indicating error).
+• I/O Operations
+A running program may require I/O. This I/O may involve a file or an
+I/O device.
+• File System Manipulation
+The output of a program may need to be written into new files or
+input taken from some files. The operating system provides this service.
+• Error Detection
+An error is one part of the system may cause malfunctioning of the
+complete system. To avoid such a situation the operating system constantly
+monitors the system for detecting the errors.
+System Calls and System Programs
+• System calls provide the interface between a process and the
+operating system. These calls are generally available as
+assembly-language instructions, and are usually listed in the
+manuals used by assembly-language programmers.

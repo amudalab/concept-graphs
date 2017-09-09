@@ -1,0 +1,7207 @@
+operating systems administration
+administration in unix
+unix lecture notes
+lecture notes pcp
+system administration plays
+plays a pivotal
+system is accessed
+accessed by multiple
+users the primary
+management is assured
+assured of efficiency
+efficiency in utilization
+system s resources
+general user community
+system administrators ensure
+system s performance
+performance or service
+availability in linux
+environment with single
+user pc usage
+user also doubles
+discuss in unix
+unix context applies
+applies to linux
+privilege most major
+major administrative tasks
+administrative tasks require
+system administrator operates
+mode with root
+privileges these tasks
+tasks include starting
+opening an account
+user and giving
+proper working set-up
+working set-up administration
+set-up administration tasks
+tasks also involve
+distributing user disk
+user disk space
+taking regular back-ups
+keeping system logs
+ensuring secure operations
+operations and providing
+providing network services
+services and web
+begin this module
+module by enlisting
+enlisting the tasks
+tasks in system
+administration and offering
+unix administration tasks
+tasks most users
+running a set
+set of basic
+releases and patches
+done with superuser
+superuser privileges users
+privileges users share
+users share resources
+resources like disk
+space a system
+policy system administration
+administration also helps
+helps in setting
+setting up user
+user s working
+keen to ensure
+properly and efficiently
+efficiently they seek
+seek to monitor
+monitor the usage
+account of system
+usage in fact
+system usage pattern
+determine the efficacy
+efficacy of operating
+managements  main
+main concerns include
+concerns include performance
+performance and utilisation
+utilisation of resources
+resources to ensure
+ensure that operations
+list major tasks
+performed by system
+operates in superuser
+privileges 19.1.1 administration
+19.1.1 administration tasks
+administration tasks list
+tasks which system
+system administrators perform
+startup and shutdown
+basic steps required
+required to start
+unix operational environment
+opening and closing
+closing user accounts
+unix an administrator
+privileges to open
+open or close
+close user accounts
+accounts in section
+users to set
+user to customize
+customize his working
+files many users
+user may modify
+modify his .rc
+files to suit
+suit his requirements
+requirements in section
+maintaining user services
+users require services
+services for printing
+mail web access
+access and chat
+deal with mail
+chat in section
+discuss .rc files
+services in section
+discuss device management
+management and services
+services these services
+services include spooling
+spooling of print
+provisioning of print
+allocating disk space
+space and re-allocating
+imperative to enhance
+enhance the allocation
+device oriented services
+services and management
+issues in section
+installing and maintaining
+require installing software
+installing software patches
+oss are released
+bugs still present
+usage these bugs
+bugs are identified
+identified and patches
+installed which satisfies
+nature of software
+discuss the software
+learned from experienced
+experienced system administrators
+administrators by assisting
+installing new devices
+devices and upgrading
+upgrading the configuration
+installed the system
+edit configuration files
+files to identify
+identify these devices
+devices some related
+covered in section
+provisioning the mail
+mail and internet
+host shall seek
+internet web access
+access in addition
+local area network
+makes the task
+task of system
+administration both interesting
+interesting and challenging
+challenging the administrators
+check on spoofing
+spoofing and misuse
+maintaining system logs
+logs and profiling
+profiling the users
+administrator is required
+determine the usage
+usage of resources
+achieved by analysing
+analysing system logs
+logs the system
+profile the users
+users in fact
+user profiling helps
+helps in identifying
+identifying security breaches
+helps system administrators
+administrators to tune
+system to meet
+meet the user
+maintaining and analysing
+reconfiguring the kernel
+kernel whenever required
+patches are installed
+imperative to compile
+compile the kernel
+kernel linux users
+releases and extensions
+begin our discussions
+shutdown procedures operating
+starting and shutting
+shutting down first
+system is powered
+examine the shutdown
+procedure for unix
+unix systems unix
+systems unix systems
+choice be made
+made to operate
+mode most systems
+operate in multi-user
+administrators use single-user
+reconfiguration or installation
+task to perform
+family of unix
+unix systems emanating
+emanating from system
+level the single-user
+mode is identified
+identified with run
+common for multi-user
+mode of operation
+unix usually initiates
+sequence of tasks
+performs a sequence
+sequence of self-tests
+self-tests to determine
+kernel gets loaded
+runs and initializes
+starts the init
+process all subsequent
+processes are spawned
+spawned from init
+out the file
+system using fsck
+init process executes
+executes a system
+system boot script
+init process spawns
+spawns a process
+process to check
+done by checking
+checking the terminals
+terminal a getty
+process is launched
+launched this reconciles
+reconciles communication characteristics
+characteristics like baud
+rate and type
+getty process initiates
+initiates a login
+process to enable
+enable a prospective
+startup we notice
+notice that fsck
+out the integrity
+system in case
+case the fsck
+throws up messages
+working configuration made
+monitor disk usage
+usage and reconcile
+reconcile the disk
+integrity the starting
+thing to note
+files under tmp
+directory are cleaned
+zombies are cleaned
+cleaned up system
+system administrators resort
+resort to booting
+number of zombies
+considerable disk space
+space is blocked
+shutdown most unix
+unix systems require
+systems require invoking
+invoking the shutdown
+utility the shutdown
+shutdown utility offers
+utility offers options
+period usually system
+system administrators choose
+choose to shutdown
+results in sending
+sending a message
+minutes this cautions
+close their files
+files and terminate
+terminate their active
+reboot with obvious
+commonly used shutdown
+period and message
+message is optional
+intended to advise
+precautions to terminate
+terminate their activity
+gracefully this mode
+mode also prepares
+prepares to turn
+readers are encouraged
+encouraged to find
+unix man pages
+discuss the user
+user accounts management
+management and run
+run command files
+managing user accounts
+joins an organisation
+unix systems support
+support an admin
+tool which seeks
+administrator to open
+password the users
+users are advised
+select a password
+comfortable using user
+user s password
+files in encrypted
+program to authenticate
+authenticate the login
+initiate appropriate shell
+shell as shown
+user the first
+indicator of password
+shadow file password
+file password programs
+algorithm for encryption
+home directory defined
+default login directory
+system administrators prepare
+administrators prepare .login
+.login and .profile
+users to obtain
+obtain an initial
+set-up for login
+login the administrator
+administrator may prepare
+.xinitrc .mailrc .ircrc
+.mailrc .ircrc files
+files in section
+helpful in customizing
+customizing a user
+environment a natural
+point of curiosity
+out ? unix
+unix systems receive
+systems receive signals
+signals when users
+users log out
+log out recall
+login process initiated
+initiated by getty
+getty process process
+process process getty
+process getty identifies
+identifies the terminal
+running to communicate
+terminal is first
+launched to enable
+terminal the working
+files these files
+customize the user
+environment for instance
+user s .cshrc
+variable which defines
+defines the access
+unix built-in shell
+built-in shell commands
+shell environmental variables
+variables like home
+set up automatically
+automatically in addition
+.rc files define
+define the access
+access to network
+software or databases
+extent the .rc
+discuss the role
+role of run
+user-id under unix
+unix the access
+privileges are determined
+group a user
+user is assigned
+assigned a group-id
+command as shown
+bhatt @ iiitbsun
+amount of disk
+space is allocated
+allocated by default
+default in cases
+situation so warrants
+user may seek
+seek additional disk
+additional disk space
+space a user
+user may interrogate
+interrogate the disk
+command its usage
+usage is shown
+free disk space
+mounted file system
+local or remote
+local file system
+blocks and i-nodes
+device the unix
+command du reports
+reports the number
+number of disk
+disk blocks occupied
+file its usage
+produce output line
+i.e not individual
+messages for files
+read or opened
+role of .mailrc
+context in section
+access to web
+default terminal settings
+default terminal setting
+attempt alternate terminal
+alternate terminal settings
+settings using tset
+control sequences defined
+defined in terminfo
+termcap with details
+shell variable term
+details are discussed
+discussed in section
+deals with terminal
+settings the reader
+reader is encouraged
+section for details
+opened the user
+change the pass-word
+pass-word for access
+closing a user
+password file plays
+plays a role
+recall in section
+users  home
+user and group-id
+user s account
+erased system administrators
+system administrators login
+login as root
+root and delete
+delete the user
+file to delete
+delete the account
+files usually system
+system administration offers
+offers a set
+set of start-up
+start-up run command
+login shell typical
+shell typical allocations
+bourne or korn
+bash is referred
+referred as bourne-again
+bourne-again shell tcsh
+shortcuts like pressing
+pressing a tab
+tab may complete
+complete a partial
+important to understand
+files facilitate role
+role of .login
+set-ups ? set
+include terminal type
+set up editors
+editor like emacs
+emacs ? set
+set up protection
+file may set
+set up umask
+user mask umask
+mask umask determines
+umask determines access
+right to files
+files ? set
+set up environment
+variable the path
+path variable defines
+defines the sequence
+directories are searched
+searched for locating
+locating the commands
+commands and utilities
+system ? set
+things like selecting
+icons for mail
+mail or core
+core dump size
+preferences a typical
+typical .login file
+.login file umask
+setenv printer labprinter
+printer labprinter operating
+editor vi biff
+biff y set
+prompt = hostname
+explanation we advanced
+describe .cshrc files
+readers should note
+note the commonalities
+definitions of initialisation
+files the .cshrc
+shell for instance
+common to define
+aliases in .cshrc
+frequently used commands
+give some typical
+entries for .cshrc
+file in addition
+setenv term unknown
+echo -n term
+endif setenv term
+term $ ttype
+ttype endif alias
+alias cl clear
+alias gh ghostview
+ghostview set history
+set nobeep note
+first few lines
+identifies the nature
+nature of terminal
+terminal and sets
+operate as vt100
+reader should examine
+examine and walk-through
+walk-through the initialization
+files and modify
+two more files
+files of interest
+interest one corresponds
+corresponds to regulating
+regulating the mail
+controls the screen
+initialized through .mailrc
+.mailrc and .xinitrc
+.xinitrc we discussed
+discuss the settings
+settings in .mailrc
+mail system operating
+user s host
+program truly acts
+communication the unix
+unix sendmail program
+class of programs
+mail under unix
+mail is picked
+mail server periodically
+periodically the mail
+program under unix
+copy have provided
+provided the basis
+basis for developing
+developing the mail
+tools in fact
+file attachments facility
+invoke the mail
+auto-login or .cshrc
+program every unix
+directory each person
+person s mail
+box is named
+username in table
+users to manage
+manage their mails
+options for mail
+delete all read
+delete all messages
+messages with usenet
+usenet in body
+print all read
+user is composing
+composing a mail
+mail system tools
+tools usually offer
+facility to escape
+edited along side
+side the mail
+escape to shell
+edit header field
+field the mail
+command line interface
+interface to facilitate
+facilitate mail operations
+commands for instance
+default mail box
+box called mbox
+wishes to give
+processed we show
+usage with mail
+command below mail
+user @ machine.domain
+send a mail
+mail with subject
+mails  progress
+progress -f mailbox
+option allows user
+mail box mail
+mail -f newm
+mail box option
+user may opt
+place of mbox
+inside .mailrc user
+.mailrc user files
+full mail address
+set or unset
+unset some flags
+flags as shown
+unset askcc set
+askcc set verbose
+set verbose set
+verbose set append
+set append operating
+options for .mailrc
+file in table
+initially in .mailrc
+files in addition
+subscribe to listserv
+listserv @ machine.domain
+group to subscribe
+subscribers  e-mail
+address as shown
+allmusic in addition
+programs which send
+encrypted for instance
+pretty good privacy
+encrypting mails facilitating
+chat with .ircrc
+administrators may prepare
+terminals and offer
+offer inter relay
+chat or irc
+irc enables real-time
+enables real-time conversation
+scattered anywhere globally
+unix-based irc versions
+set the terminal
+emulation to vt100
+term = vt100
+vt100 $ stty
+make a telnet
+servers some servers
+servers require specification
+accesses the irc
+channels are presented
+presented a channel
+choose a channel
+switch a channel
+ircs require setting
+give some sample
+file the .ircrc
+set internal variables
+irc commands begin
+character in table
+commands for irc
+commands with interpretation
+ircs usually support
+support a range
+range of channels
+limbo or null
+null public private
+public private secret
+private secret moderated
+secret moderated operating
+limited topic limited
+topic limited invite
+invite only message
+types are realized
+command the modes
+modes are set
+shown in table
+mode of channel
+parameters > table
+options for channels
+channels 19.4.1 sourcing
+19.4.1 sourcing files
+provide adequate support
+variety of services
+system and seek
+seek a service
+service that requires
+requires a change
+affect the changed
+source the file
+execute the source
+argument as shown
+source the .cshrc
+technically the system
+administrator is responsible
+usage and operation
+quotas to service
+service the user
+space and file
+settings and related
+19.5.1 the terminal
+terminal settings operating
+context of terminal
+things are important
+unix recognizes terminals
+terminals as special
+operate on serial
+serial lines unix
+deal with files
+essentially using serial
+serial communication lines
+variety of settings
+protocols of communication
+point of terminal
+terminal services provisioning
+provisioning and system
+administration must bear
+factors in mind
+mind unix maintains
+maintains all terminal
+terminal related information
+information in tty
+directory these files
+files are special
+communication with serial
+lines this includes
+includes those terminals
+modems for communication
+communication some systems
+file for console
+monitored for messages
+messages as explained
+chapter on x-windows
+type a serial
+serial line control
+line control protocol
+interrogate or activate
+activate appropriate pins
+hardware interface plug
+termcap and terminfo
+provide the terminal
+information and programs
+environment the database
+database includes programs
+compiled to elicit
+installed the programs
+programs that control
+control the usage
+terminal are identified
+environment variable term
+term as shown
+bhatt @ localhost
+echo $ term
+options under stty
+commands like tic
+short for terminal
+terminal information compilation
+programs that convert
+termcap to terminfo
+terminfo whenever required
+required for detailed
+discussions on terminal
+exploit various features
+features the reader
+two specific commands
+tset and stty
+initialize a terminal
+sets up initial
+settings for characters
+characters like erase
+term ` tset
+prepare a temporary
+file and source
+encountered the stty
+command in section
+elaborate on stty
+context of options
+command in table
+options in table
+shown the setting
+stty -a speed
+baud ; rows
+-parenb -parodd cs8
+-parodd cs8 hupcl
+-cstopb cread -clocal
+cread -clocal -crtscts
+-clocal -crtscts -ignbrk
+-crtscts -ignbrk -brkint
+-ignbrk -brkint -ignpar
+-brkint -ignpar -parmrk
+-ignpar -parmrk -inpck
+-parmrk -inpck -istrip
+-inpck -istrip -inlcr
+-istrip -inlcr -igncr
+-inlcr -igncr icrnl
+-igncr icrnl ixon
+icrnl ixon -ixoff
+ixon -ixoff -iuclc
+-ixoff -iuclc ixany
+-iuclc ixany imaxbel
+ixany imaxbel operating
+opost -olcuc -ocrnl
+-olcuc -ocrnl onlcr
+-ocrnl onlcr -onocr
+onlcr -onocr -onlret
+-onlret -ofill -ofdel
+-ofill -ofdel nl0
+-ofdel nl0 cr0
+nl0 cr0 tab0
+cr0 tab0 bs0
+tab0 bs0 vt0
+bs0 vt0 ff0
+vt0 ff0 isig
+ff0 isig icanon
+isig icanon iexten
+icanon iexten echo
+iexten echo echoe
+echo echoe echok
+echoe echok -echonl
+echok -echonl -noflsh
+-echonl -noflsh -xcase
+-noflsh -xcase -tostop
+-xcase -tostop -echoprt
+-tostop -echoprt echoctl
+-echoprt echoctl echoke
+connect a terminal
+set-up the entries
+entries in termcap
+terminfo and configuration
+helps to reboot
+reboot the system
+occasions to ensure
+ensure proper initialization
+attempt 19.5.2 printer
+19.5.2 printer services
+printer services users
+services users obtain
+users obtain print
+obtain print services
+daemon the system
+arranges to offer
+offer print services
+services by spooling
+spooling print jobs
+mechanism to service
+service the print
+directory in addition
+familiar with commands
+monitoring the printer
+file the printcap
+print services offered
+system the spooling
+spooling system recognizes
+system recognizes print
+recognizes print devices
+printcap file serves
+edit ! manual
+file is autogenerated
+autogenerated by printconf-backend
+printconf-backend during lpd
+lpd_bounce = true
+edited by superuser
+root the entries
+entries in printcap
+explained using table
+printer name iiitb
+limit on file
+printer characteristics printer
+characteristics printer spooling
+printer spooling directory
+requests get spooled
+printer daemon lpd
+daemon lpd honours
+honours the print
+request to print
+print to achieve
+two layered design
+layered design viewing
+viewing it bottom
+bottom layer maintain
+maintain a separate
+separate spooling directory
+process which receives
+receives each print
+group daemon printer
+daemon printer monitoring
+printer monitoring commands
+work in progress
+progress in table
+commands to add
+add a printer
+system administration practices
+learned by assisting
+assisting experienced system
+19.5.3 disk space
+disk space allocation
+allocation and management
+system administrator manage
+manage the disk
+disk get defined
+defined the partitions
+physical or logical
+logical in case
+file system resident
+drive in case
+case of logical
+system may extend
+disk file system
+files are resident
+root file system
+information is maintained
+maintained in home
+home file system
+file system created
+physical disk drive
+file systems resident
+shown in figure
+drives with mapping
+mapping or root
+names of file
+systems are shown
+shown in bold
+bold letters figure
+mapping file systems
+systems on physical
+drives other file
+file systems note
+file system co-locates
+co-locates the var
+var file system
+file system home
+system home extends
+system programmers follow
+follow some method
+partitioning and allocating
+allocating the partitions
+file system maintains
+maintains some data
+reallocate the file
+disk suffers damage
+damage to sectors
+sectors or tracks
+mounting and unmounting
+essentially a tree
+point of mount
+tree a typical
+typical mount instruction
+format mount a-block-special-file
+mount a-block-special-file point-of-mount
+instruction to unmount
+unmount in unix
+format as mount
+mount in unix
+case the mount
+disk is assumed
+allocated by reconfiguring
+reconfiguring the file
+system usually located
+extend the allocation
+file the system
+administration can set
+hard or soft
+limits of user
+exceed the allocated
+limit is set
+user is cautioned
+approaches the soft
+user will resort
+resort to purging
+files no longer
+space some systems
+systems have quota
+quota for individual
+situations require executing
+executing an edit
+edit quota instruction
+instruction with user
+argument the format
+format of edquota
+instruction is shown
+shown below edquota
+integrity of file
+dynamics of temporary
+allocations and moving
+ways the integrity
+integrity is lost
+user ahs opened
+file from multiple
+windows and edited
+file system table
+table and actual
+system is checked
+instruction the argument
+check as shown
+shown below fsck
+file-system-to-be-checked on rebooting
+rebooting the system
+system these checks
+checks are mandatory
+restored on rebooting
+account is opened
+user is allocated
+allocated a group
+group the group
+determines the access
+offer an initial
+access to special
+software like matlab
+suite of software
+regular back-up procedure
+stable previous state
+listed many tasks
+administrators are required
+required to perform
+lessons in system
+administration are learned
+experienced system administrator
+hands-on " learning
+linux lecture notes
+linux linux kernel
+linux kernel architecture
+architecture the big
+user application running
+system these applications
+typically include applications
+applications like email
+services include utilities
+utilities and services
+traditionally considered part
+libraries and compilers
+compilers etc linux
+abstracts the hardware
+layers the kernel
+hardware is ifferent
+ifferent it mediates
+mediates and controls
+access to system
+system resources hardware
+work this includes
+includes the cpu
+parallel port controllers
+closer look purpose
+linux kernel presents
+presents a virtual
+virtual machine interface
+interface to user
+user processes processes
+processes are written
+written without needing
+needing any knowledge
+hardware that constitutes
+constitutes the computer
+computer the linux
+linux kernel abstracts
+abstracts all hardware
+consistent interface operating
+linux kernel supports
+kernel supports multi-tasking
+transparent to user
+process can act
+resources the kernel
+kernel actually runs
+runs several processes
+access to hardware
+process has fair
+access while inter-process
+security is maintained
+maintained the kernel
+kernel code executes
+executes in privileged
+mode called kernel
+mode any code
+run in privileged
+mode is put
+library the interesting
+thing about linux
+kernel can load
+load or unload
+unload the system
+system library modules
+explore the conceptual
+resources kernel supports
+kernel supports services
+system libraries system
+libraries system calls
+calls within applications
+library for instance
+buffered file handling
+handling is operated
+operated and managed
+managed by linux
+kernel through system
+system libraries programs
+programs like utilities
+needed to initialize
+initialize the system
+system and configure
+configure network devices
+devices are classed
+classed as user
+user mode programs
+run with kernel
+unlike in unix
+handle login requests
+requests are run
+run as system
+require kernel privileges
+linux kernel structure
+kernel structure overview
+loadable ? kernel
+kernel modules execute
+privileged kernel mode
+capabilities to communicate
+linux kernel source
+kernel source code
+code is free
+people may develop
+linking and loading
+distributed under gpl
+standard minimal basic
+minimal basic kernel
+basic kernel module
+enrich the environment
+addition of customized
+presently most people
+embedded system area
+area are adopting
+commonly loaded linux
+loaded linux system
+linux system kernel
+thought of comprising
+kernel processes seek
+seek the cpu
+fork system call
+system call results
+results in creating
+process system call
+system call execve
+call execve results
+results in execution
+newly forked process
+forked process processes
+range of implementations
+forked process inherits
+process inherits parent
+environment in linux
+linux two vectors
+two vectors define
+define a process
+vector and environment
+vector the environment
+environment variable values
+command line arguments
+environment is inherited
+execution of execve
+execve the process
+set of environment
+variables this helps
+typically a process
+process context includes
+context includes information
+information on scheduling
+capability on signal
+handling and virtual
+virtual memory context
+context in linux
+processes and threads
+kind of representation
+representation linux processes
+threads library package
+kinds of threads
+user and kernel
+kernel user-controlled scheduling
+threads the kernel
+threads are scheduled
+single processor environment
+kernel thread scheduled
+kernel supported library
+library and clone
+clone system call
+multiple kernel threads
+kernel threads created
+created and scheduled
+control the access
+access to cpu
+cpu by implementing
+implementing some policy
+cpu is shared
+stability is maintained
+maintained in linux
+scheduling is required
+kernel tasks kernel
+tasks kernel tasks
+tasks on behalf
+drivers or initiated
+initiated by user
+user processes requiring
+processes requiring specific
+specific os services
+device driver raises
+raises an interrupt
+interrupt in linux
+pre-empted kernel code
+kernel code runs
+runs to completion
+kind or kernel
+calls the scheduler
+credit based scheduling
+based scheduling algorithm
+algorithm the process
+credits gets scheduled
+scheduled the credits
+credits are revised
+run-able processes exhaust
+credits a priority
+priority based fresh
+based fresh credit
+fresh credit allocation
+credit allocation takes
+allocation takes place
+place the crediting
+credits to interactive
+require immediate responses
+linux also implements
+unix like nice
+nice process characterization
+characterization the memory
+memory manager manages
+manages the allocation
+allocation and de-allocation
+de-allocation of system
+system the memory
+memory manager ensures
+end up corrupting
+module is responsible
+responsible for implementing
+implementing virtual memory
+loadable kernel modules
+modules are managed
+first the loader
+loader seeks memory
+seeks memory allocation
+returns the address
+area for loading
+linking for symbols
+symbols is handled
+module is loaded
+recompilation is imperative
+imperative the virtual
+virtual file system
+presents a consistent
+consistent file system
+file system interface
+details on virtual
+file system vfs
+system vfs follow
+hardware and protocols
+inter process communication
+primitives for processes
+processes also reside
+typical loadable kernel
+loadable kernel module
+module in linux
+conflict resolution mechanism
+resolution mechanism module
+mechanism module management
+management of kernel
+kernel referenced symbols
+code in kernel
+memory the linux
+linux kernel maintains
+maintains a symbol
+table and symbols
+module must seek
+seek these symbols
+symbols in fact
+module management system
+system also defines
+required communications interfaces
+newly inserted module
+processes can request
+request the services
+module driver registration
+maintains a dynamic
+module is added
+writing these modules
+ensure that initializations
+initializations and cleaning
+cleaning up operations
+operations are defined
+driver a module
+module may register
+types of drivers
+registration of drivers
+drivers is maintained
+module the registration
+registration of drives
+driver context identification
+character or bulk
+file system context
+essentially the routines
+employed to store
+files in linux
+linux virtual file
+system or network
+network file system
+system like nfs
+protocols and packet
+packet filtering rules
+formats for executable
+files conflict resolution
+configuration is supported
+number of chip
+chip set configurations
+range of drivers
+drivers for scsi
+video display devices
+devices and adapters
+cards this results
+module device drivers
+drivers which vary
+range of capabilities
+capabilities and options
+options this necessitates
+necessitates a conflict
+mechanism to resolve
+variety of conflicting
+conflicting concurrent accesses
+accesses the conflict
+conflict resolution mechanisms
+modules usually identify
+table the kernel
+kernel usually maintains
+line the drivers
+drivers avail kernel
+avail kernel services
+services to access
+access hw resources
+resources system calls
+explore how system
+calls are handled
+handled a user
+user space process
+space process enters
+enters the kernel
+point the mechanism
+cpu architecture dependent
+dependent most common
+examples of system
+non preemptable implying
+call is executing
+made partly preemptable
+improved the responsiveness
+systems call interface
+interface in linux
+program in user
+user space program
+space program accesses
+program accesses kernel
+accesses kernel functionality
+user process calling
+calling a function
+normal c function
+fact handled differently
+differently the user
+issue a system
+number of system
+reconciled at compile
+process can access
+set of services
+system call interface
+interface each system
+unique identifying number
+number the exact
+system call implementation
+implementation is platform
+architecture to invoke
+invoke a system
+call in x86
+system call number
+number is put
+eax hardware register
+hardware register arguments
+call are put
+int0x80 software interrupt
+interrupt is operating
+invokes the kernel
+kernel service adding
+pretty straight forward
+simple system call
+call ? simple
+put in simple.c
+compiled and tested
+asmlinkage int sys_simple
+dumb system call
+purpose of understanding
+understanding the basics
+basics this file
+linux source tree
+tree for compilation
+compilation by executing
+familiar with kernel
+asmlinkage ? stands
+access hardware directly
+code is required
+required to access
+access the eax
+dirty work fortunately
+fortunately the asmlinkage
+macro is defined
+xxxx it initiates
+initiates another macro_syscall
+xxxxx the header
+typical system call
+defining the system
+assign a system
+done by adding
+adding a line
+last system call
+bottom # define
+assigning a number
+entered into system
+system call table
+table the system
+routine this table
+table is defined
+file ? entry.s
+entry.s ? .we
+modify the makefile
+call is added
+obj_y = sched.o
+sched.o + dn.o
+.etc we add
+recompile the kernel
+change the config
+users to make
+kernel a user
+source code select
+out the rest
+working linux kernel
+kernel in single
+disk a user
+user can modify
+modify the source
+suits a targeted
+reasons why linux
+platform for developing
+developing embedded systems
+systems in fact
+linux has reopened
+reopened the world
+world of system
+programming the memory
+memory management issues
+two major components
+components in linux
+linux memory management
+virtual memory management
+main memory linux
+memory linux allocates
+allocates a group
+group of pages
+system the allocation
+page allocator software
+software is responsible
+freeing the memory
+memory the basic
+basic memory allocator
+heap which allocates
+allocates a contiguous
+area of size
+memory with minimum
+minimum n obtained
+obtained by successive
+size we explain
+explain the buddy
+memory of size
+buddies of size
+create two buddies
+recently generated buddies
+buddies to accommodate
+size memory requirement
+memory requirement note
+chunk of size
+size 2k words
+satisfies the property
+smallest chunk larger
+concepts on page
+done in linux
+virtual memory system
+expose address space
+process a process
+entire address space
+address space exposed
+make an allocation
+allocation or deallocation
+deallocation linux makes
+makes a conscious
+effort to allocate
+aligned ? contiguous
+contiguous address space
+space such page
+page aligned logical
+aligned logical spaces
+organizes these regions
+regions to form
+form a binary
+binary tree structure
+structure for fast
+view the linux
+maintains the physical
+view ie maps
+maps the hardware
+hardware page table
+page table entries
+entries that determine
+determine the location
+disk the process
+process address space
+private or shared
+pages changes made
+require that locality
+locality is preserved
+process by maintaining
+maintaining a copy-on-write
+pages are private
+shared a process
+finds its allocation
+parent and child
+count is maintained
+efficient page swapping
+page swapping algorithm
+chance algorithm dependent
+pattern the manner
+manner it manifests
+chances of survival
+frequently used pages
+higher age value
+reduction in usage
+brings the age
+exit the kernel
+kernel virtual memory
+kernel also maintains
+marked ? protected
+memory is split
+two regions first
+kernel and page
+page table references
+region is dynamic
+table entries created
+linking and execution
+process the execution
+mode is entered
+exec system call
+rewriting the previous
+previous execution context
+process is entitled
+entitled an access
+code is initiated
+initiated older versions
+versions of linux
+load binary files
+format the current
+version also loads
+loads binary files
+files in elf
+format the elf
+format is flexible
+permits adding additional
+adding additional information
+information for debugging
+needed library routines
+linked to form
+form an executable
+executable module linux
+module linux supports
+linux supports dynamic
+supports dynamic linking
+linking the dynamic
+linking is achieved
+first the linking
+linking process downloads
+small statically linked
+statically linked function
+read the list
+list of library
+resolving all symbolic
+loadable executable linux
+executable linux file
+linux file systems
+file systems introduction
+retains most fundamentals
+unix file systems
+linux systems retain
+systems retain minix
+retain minix file
+minix file systems
+commonly used file
+systems are vfs
+vfs and ext2fs
+ext2fs which stand
+stand for virtual
+system and extended
+extended file systems
+examine some details
+details of proc
+proc file system
+system and motivation
+presence in linux
+unixes in linux
+linux the files
+files are mounted
+huge tree rooted
+remotely networked machines
+machines unlike windows
+notion of mount
+operation the mount
+attach a filesystem
+block oriented device
+device the idea
+attach the filesystem
+point the mount
+point is defined
+point has contents
+system is un-mounted
+un-mounted the un-mount
+un-mount requires issuance
+issuance of umount
+umount command linux
+command linux supports
+linux supports multiple
+supports multiple filesystems
+filesystems these include
+affs and ufs
+supported in future
+linux all block
+block capable devices
+devices like floppy
+ide hard disks
+type of underlying
+underlying block media
+media the linux
+linux filesystems treat
+collection of blocks
+driver to translate
+translate the file
+file system calls
+cylinder head number
+needed a single
+single disk partition
+half the file
+file partition running
+partition running ext2
+remaining half running
+half running fat32
+fat32 the minimum
+hard disk partition
+successful file system
+popular linux distributions
+linux distributions linux
+primitive and academic
+nature to improve
+improve the situation
+system was designed
+designed for linux
+exteneded file system
+ext file system
+system mr remy
+laboratoire masi--institut blaise
+masi--institut blaise pascal
+card @ masi.ibp.fr
+improved the system
+system to offer
+offer the extended
+extended file system
+ext-2 file system
+addition to linux
+system which permitted
+linux to interoperate
+basic file systems
+file systems concepts
+linux file system
+file system implements
+implements the basic
+set of concepts
+unix ? book
+book by maurice
+file is represented
+list of entries
+i to devices
+reading or writing
+writing into special
+entire filesystem inodes
+inode inode stores
+stores the attributes
+file which include
+include file type
+owner time stamp
+pointers to data
+file is accessed
+accessed the kernel
+translates the offset
+inode to figure
+out the actual
+block this address
+actual physical block
+disk the structure
+directories are implemented
+implemented as special
+entries each entry
+path is resolved
+number is found
+file access links
+unix operating systems
+operating systems implement
+implement the concept
+concept of links
+types of links
+links and soft
+soft links hard
+links hard link
+entry in directory
+directory structure pointing
+inode is incremented
+link is deleted
+deleted the link
+count is decremented
+name1 i1 name2
+name2 i2 name3
+name3 i3 name4
+name4 i4 name5
+name5 i5 directory
+directory inode table
+inode table operating
+inode is deallocated
+cross file systems
+systems hard links
+hard links soft
+links soft links
+encounters a soft
+path it replaces
+replaces the soft-link
+contents and restarts
+restarts the path
+resolution with soft
+cross file system
+file system links
+system links softlinks
+linked to absolute
+paths can lead
+lead to havoc
+softlinks also degrade
+degrade system performance
+system performance device
+performance device specific
+device specific files
+operating systems enable
+systems enable access
+access to devices
+devices using special
+files these file
+connect the device
+correct device driver
+driver the device
+driver is located
+file the minor
+number is passed
+argument linux kernel
+system for accessing
+accessing device files
+device file system
+section on device
+access a filesystem
+filesystem type independent
+type independent interface
+system to carry
+carry out operations
+system without knowing
+knowing its construction
+construction or type
+kernel is independent
+independent of file
+file system type
+type or construction
+accommodate future file
+future file systems
+operating system kernel
+file systems operating
+structure and file
+management in vfs
+management of files
+employs an underlying
+kinds of objects
+file system object
+type of object
+performed the function
+table basically maintains
+maintains the addresses
+routines the file
+objects and inode
+inode objects maintain
+access to access
+access an inode
+object the process
+process must obtain
+obtain a pointer
+object the file
+file object maintains
+read or written
+written to ensure
+sequential io file
+objects usually belong
+single user process
+user process system
+call interface vfs
+buffer cache device
+cache device driver
+device driver disk
+driver disk controller
+disk controller linux
+controller linux kernel
+linux kernel hardware
+kernel hardware operating
+process the inode
+inode object maintains
+maintains such information
+creation and modification
+modification the vfs
+file-system types supported
+configuration each entry
+table describes filesystem
+describes filesystem type
+function is responsible
+responsible for reading
+reading the super-block
+initializing its internal
+returning a mounted
+mounted file-system descriptor
+vfs the vfs
+descriptor to access
+access the physical
+physical file-system routines
+file-system routines subsequently
+subsequently a mounted
+kinds of data
+pointers to functions
+physical file-system kernel
+file-system kernel code
+private data maintained
+physical filesystem code
+code the function
+function pointers contained
+vfs to access
+access the file-system
+file-system internal routines
+two other types
+types of descriptors
+open file descriptor
+descriptor each descriptor
+descriptor contains information
+related to files
+set of operations
+descriptor contains pointers
+descriptors contains pointer
+pointer to functions
+act on open
+standard ext2fs features
+system in linux
+linux in fact
+extends the original
+file name length
+length being limited
+file system size
+system size limited
+permits three levels
+levels of indirections
+indirections to store
+store really large
+bsd fast file
+fast file system
+files and fragments
+fragments are stored
+4kb blocks sizes
+size the ext2fs
+ext2fs supports standard
+standard * nix
+nix file types
+device special files
+files and symbolic
+symbolic links ext2fs
+manage file systems
+file systems created
+original kernel code
+kernel code restricted
+restricted the maximal
+maximal file-system size
+layer have raised
+raised this limit
+creating many partitions
+ext2fs provide long
+provide long file
+long file names
+variable length directory
+length directory entries
+entries the maximal
+file name size
+characters this limit
+needed ext2fs reserves
+reserves some blocks
+blocks are reserved
+administrator to recover
+easily from situations
+situations where user
+user processes fill
+fill up file
+earlier mentioned physical
+mentioned physical block
+physical block allocation
+block allocation policy
+allocation policy attempts
+attempts to place
+place logically related
+logically related blocks
+blocks physically close
+forms of groups
+allocation is attempted
+block group physical
+group physical proximity
+proximity is attempted
+optimized advanced ext2fs
+advanced ext2fs features
+features in addition
+nix file systems
+file systems ext2fs
+systems ext2fs supports
+supports several advanced
+advanced features file
+features file attributes
+users to modify
+modify the kernel
+behavior when acting
+set of files
+inherit these attributes
+bsd or system
+system v release
+selected at mount
+administrator to choose
+choose the file
+file creation semantics
+mounted with bsd
+files are created
+parent directory system
+system v semantics
+bit more complex
+setgid bit set
+inherit the group
+directory and subdirectories
+files and subdirectories
+subdirectories are created
+calling process bsd-like
+process bsd-like synchronous
+bsd-like synchronous updates
+ext2fs a mount
+administrator to request
+request that metadata
+blocks and directory
+maintain a strict
+strict metadata consistency
+leads to poor
+poor performances operating
+choose the logical
+logical block size
+size when creating
+creating the filesystem
+filesystem block sizes
+bytes ext2fs implements
+ext2fs implements fast
+implements fast symbolic
+fast symbolic links
+links a fast
+fast symbolic link
+file-system the target
+inode itself ext2fs
+ext2fs keeps track
+state a special
+file-system is mounted
+mounted in read
+read or write
+state is set
+clean whenever filesystem
+filesystem is unmounted
+re-mounted in read-only
+state is reset
+clean at boot
+information to decide
+checked the kernel
+code also records
+inconsistency is detected
+file-system is marked
+erroneous the file-system
+file-system checker tests
+force the check
+apparently clean state
+state always skipping
+skipping filesystem checks
+ways to force
+checks at regular
+intervals a mount
+counter is maintained
+filesystem is mounted
+counter is incremented
+reaches a maximal
+filesystem checker forces
+forces the check
+clean a last
+maximal check interval
+request periodical checks
+ignores the filesystem
+state and forces
+forces a filesystem
+filesystem check ext2fs
+check ext2fs offers
+ext2fs offers tools
+tools to tune
+tune the filesystem
+behavior like tune2fs
+tune2fs physical structure
+structure of ext2
+filesystem .a filesystem
+filesystem is made
+groups the physical
+filesystem is represented
+boot sector block
+sector block grp
+copy of crucial
+crucial filesystem control
+filesystem control informations
+group is represented
+block fs descriptors
+descriptors block bitmap
+block bitmap inode
+bitmap inode bitmap
+inode bitmap inode
+bitmap inode table
+inode table data
+table data blocks
+data blocks operating
+big factor contributing
+structures are replicated
+easy to recover
+corrupted this structure
+structure also helps
+reducing the distance
+reduce the disk
+disk head seeks
+i on files
+files in ext2fs
+directories are managed
+managed as linked
+lists of variable
+variable length entries
+implement long file
+names without wasting
+wasting disk space
+space in directories
+represents the structure
+table is inode
+entire entry length
+very_very_very_long_file_name inode table
+ext3 file system
+ext2 file system
+fact a robust
+identified with ext2fs
+filesystem health check
+long to set
+right using e2fsck
+line about journaling
+journaling another issue
+capability to scale
+drives and files
+files the ext3
+sense an extension
+address these shortcomings
+enhancements the proc
+file system shows
+shows the power
+system the proc
+special file system
+displays the present
+system in fact
+pretend ? file
+directory one notices
+size many commands
+files to generate
+generate their output
+interestingly enough linux
+accessed by reading
+reading the proc
+wealth of information
+lot of things
+processor a sample
+authenticamd cpu family
+vme de pse
+pse tsc msr
+tsc msr mce
+msr mce cx8
+mce cx8 pge
+cx8 pge mmx
+pge mmx syscall
+syscall 3dnow k6_mtrr
+3dnow k6_mtrr bogomips
+moment each property
+property is grouped
+obtained is shown
+current and last
+current working directory
+values of environment
+maps to executables
+executables and library
+process memory status
+memory status information
+status in human
+human readable form
+readable form device
+form device drivers
+drivers on linux
+code is independent
+hardware it runs
+runs on applications
+device they interact
+box using operating
+operating system defined
+system defined interfaces
+applications are concerned
+inside the black
+black box sits
+sits a program
+program that exercises
+exercises a protocol
+protocol to interact
+completely this program
+level and abstracts
+oddities and peculiarities
+driver the demand
+demand for device
+drivers is increasing
+context of linux
+two principal drivers
+ship a linux
+open source community
+community to implement
+implement a driver
+driver second reason
+proliferation of linux
+embedded system market
+today is number
+number one choice
+choice for embedded
+embedded system development
+system development work
+development work embedded
+work embedded devices
+devices have special
+special devices attached
+require specialized drivers
+microwave oven running
+oven running linux
+special device driver
+driver to control
+control its turntable
+motor in linux
+linux the device
+kernel at compile
+loaded the device
+dynamically at runtime
+pluggable module operating
+call eventually maps
+device control operations
+operations are performed
+performed by code
+device this code
+device driver kernel
+disk etc device
+stream oriented nature
+nature where data
+data is accessed
+stream of bytes
+bytes example serial
+ports the drivers
+char device drivers
+devices are accessed
+normal file system
+command is typed
+directory these devices
+ptya3 block devices
+applicati on code
+code kernel subsystems
+systems etc device
+driver etc physical
+disk etc system
+call interface hardware
+interface hardware interface
+hardware interface operating
+block ? oriented
+data is provided
+devices in blocks
+blocks the drivers
+block device drivers
+device drivers classic
+disk these devices
+fd0 network devices
+handle the network
+system these devices
+handles these devices
+devices by providing
+providing special names
+network interfaces e.g
+interfaces e.g eth0
+eth0 etc note
+note that linux
+permits a lot
+lot of experimentation
+out new device
+learn to load
+unload and recompile
+recompile to check
+out the efficacy
+newly introduced device
+introduced device driver
+driver the cycle
+cycle of testing
+scope of discussion
+accessed through nodes
+system these nodes
+files or device
+file system tree
+tree these names
+command is issued
+two comma separated
+size is mentioned
+mentioned the first
+device major number
+device minor number
+kernel to locate
+locate the device
+device driver entry
+driver entry points
+driver to distinguish
+type it supports
+major and minor
+types of devices
+system this value
+increase in future
+system to handle
+device this file
+system the management
+management of devices
+lot of user
+user visible incompatibilities
+previous file system
+present device file
+distributions in future
+things might change
+actual source code
+device class drivers
+character and network
+detail character drivers
+register a device
+kernel by invoking
+invoking a routine
+unsigned int major
+file_operations * fops
+device name signifies
+signifies the device
+registered the fops
+structure containing function
+devices ? functionalities
+fops in detail
+assign a major
+assigning major numbers
+devices the reader
+writing device drivers
+allocated for experimental
+experimental usage major
+usage major numbers
+experimental usage operating
+shipping a driver
+assign the major
+number the idea
+free major number
+function is invoked
+major number field
+registers the driver
+returns the major
+major number allocated
+searches the system
+unused major number
+access our device
+add our device
+statically assigned major
+assigned major number
+number you assigned
+dynamically assigned number
+file and find
+out the major
+major number assigned
+device a script
+removing a driver
+system is easy
+easy we invoke
+invoke the unregister_chrdev
+important data structure
+linux open file
+driver is invoked
+invoked the kernel
+kernel will pass
+method the method
+job we list
+structure mode_t f_mode
+i.e for read
+file unsigned int
+unsigned int f_flags
+flags for driver
+access etc struct
+methods that device
+device driver supports
+void * private_data
+function calls sruct
+calls sruct dentry
+dentry * f_dentry
+file operations structure
+device driver writer
+writer are concerned
+functions the file
+file structure discussed
+structure the file
+object and fops
+methods that act
+object oriented approach
+taggd structure initialization
+tagged structure initializations
+lead to compatibility
+versions this problem
+problem is solved
+tagged structure initialization
+structure initialization tagged
+initialization tagged structure
+extension of ansi
+initialization of structure
+struct fops myfops
+myopen ; close
+driver are stored
+fops structure methods
+implemented are made
+file * ,loff_t
+change the present
+file * ,char
+,char * ,size_t,loff_t
+file * ,const
+char * ,size_t,loff_t
+file * ,void
+,void * ,fill_dir_t
+file * ,struct
+check the state
+inode * ,struct
+file * ,unsigned
+,unsigned int,unsigned long
+issue device specific
+device specific calls
+setting the baud
+map to primary
+flush the device
+release the file
+flush any pending
+advance char driver
+char driver operations
+discussion is valid
+valid to character
+network and block
+features is explained
+explained with respect
+respect to char
+char drivers operating
+blocking and non-blocking
+drivers usually interact
+interact with hardware
+modern pc processor
+process a byte
+byte of data
+years to produce
+produce a single
+waiting for data
+data to arrive
+performance and throughput
+lead to delays
+delays in accessing
+policy in accessing
+accessing the device
+cases where device
+processor is freed
+freed to perform
+perform other tasks
+synchronous driver access
+process to sleep
+arrives the cpu
+system the process
+device is ready
+ready another method
+allowing the application
+application to poll
+poll the device
+provided asynchronous methods
+methods for indicating
+mechanisms to achieve
+flag called o_nonblock
+flag in filp
+filp > f_flags
+flag is set
+set it implies
+access this flag
+flag is cleared
+cleared by default
+default this flag
+flag is examined
+driver to implement
+implement the correct
+correct semantics blocking
+sleep in linux
+basic data structure
+maintains a linked
+list of processes
+event a wait
+queue is declared
+declared and initialized
+intialize the wait
+made to sleep
+sleep by calling
+wait_queue_head_t * queue
+puts the process
+process into non-interruptible
+process may end
+end up sleeping
+wait_queue_head_t * queue,long
+parameter is measured
+measured in jiffies
+wait_queue_head_t * queue,int
+evaluates to true
+puts a process
+driver that awakens
+interrupt service routine
+occurred the driver
+put a process
+process in sleep
+loop the kernel
+sleeping on interruptible
+procccess are left
+wait_queue_head_t_ * queue
+wake up calls
+state without rescheduling
+rescheduling the cpu
+call to complete
+complete the normal
+tells the invoking
+poll system call
+call to find
+accessing multiple devices
+devices without blocking
+blocking polling methods
+select  system
+calls to check
+ready without blocking
+two system calls
+system calls offering
+functionality for historical
+reasons these calls
+calls were implemented
+implemented in unix
+two different distributions
+file * ,poll_table
+poll method returns
+returns a bit
+bit mask describing
+describing what operations
+device without blocking
+blocking asynchronous notification
+notify the application
+application if data
+basically a driver
+driver can signal
+signal a process
+data arrives user
+arrives user processes
+execute two steps
+steps to enable
+enable asynchronous notification
+invokes the f_setown
+fcntl system call
+process is saved
+saved in filp
+filp > f_owner
+kernel to route
+route the signal
+enabled by setting
+setting the fasync
+device by means
+means of f_setfel
+f_setfel fcntl command
+executed the user
+process can request
+request the delivery
+signal whenever data
+data arrives interrupt
+arrives interrupt handling
+handling in linux
+single entry point
+interrupts the number
+number of interrupt
+lines is platform
+dependent the earlier
+earlier x86 processors
+lines but operating
+true the current
+programmable interrupt controllers
+things to distribute
+fortunately the device
+kernel nicely abstracts
+intel x86 architecture
+architecture the linux
+lines the linux
+linux kernel handles
+interrupt the kernel
+kernel first acknowledges
+acknowledges the interrupt
+handler is registered
+invoked the device
+register a handler
+register an interrupt
+linux > int
+unsigned int irq
+void * ,struct
+unisgned long flags
+char * dev_name
+void * dev_id
+number being requested
+bitwise orable flags
+sa_interrupt implies fast
+implies fast handler
+interrupt handler finishes
+finishes its job
+context with interrupts
+interrupts disabled sa_shirq
+disabled sa_shirq implies
+interrupt is shared
+shared sa_sample_random implies
+increase the entropy
+signify the owner
+unique identifier signifying
+signifying which device
+device is interrupting
+line is shared
+unsigned int irq,void
+irq,void * dev_id
+question that arises
+line our device
+device use predefined
+predefined fixed interrupt
+fixed interrupt lines
+devices have jumper
+decide which interrupt
+line the device
+hand which interrupt
+driver to probe
+probe the irq
+device is asked
+asked to interrupt
+free interrupt lines
+lines to figure
+out which line
+line got interrupted
+ideally a device
+announce which interrupt
+kernel provides helper
+functions for probing
+probing of interrupts
+probing for interrupts
+interrupts top half
+half and bottom
+bottom half processing
+problem with interrupt
+interrupt service routines
+long time degrading
+degrading system responsiveness
+responsiveness and performance
+performance the method
+solve this problem
+minimum required processing
+half the top
+short and fast
+fast the bottom
+predefined fixed number
+number of bottom
+half processing tasklet
+scheduled to run
+run in interrupt
+system determined safe
+run multiple times
+executed several times
+chance to execute
+situation the top
+number of interrupts
+happened the tasklet
+count to figure
+takelets are declared
+tasklet the function
+communication in linux
+similarity with unix
+utilized for communication
+communication between parent
+child processes processes
+processes may synchronize
+synchronize using wait
+wait instruction processes
+processes may communicate
+communicate using pipe
+pipe mechanism processes
+shared memory mechanism
+mechanism for communication
+topic on ipc
+found a good
+url ? http
+communication is done
+environment the networking
+features in linux
+linux are implemented
+typically a user
+applications ? first
+socket the socket
+definition is similar
+similar to bsd
+general purpose interconnection
+purpose interconnection framework
+framework the protocol
+protocol layer supports
+stack the data
+driver the protocol
+protocol layer manages
+layer manages routing
+retransmission of data
+data for networking
+suite which guides
+guides in routing
+routing of packets
+packets between hosts
+hosts on top
+routing are built
+built higher layers
+layers like udp
+udp or tcp
+tcp the routing
+driver also helps
+packets the routing
+routing gets done
+recent cached routing
+cached routing decisions
+table which acts
+persistent forwarding base
+generally the packets
+packets are stored
+tag to identify
+identify the protocol
+driver then hands
+network device driver
+driver to manage
+manage the packet
+packet movement operating
+firewall management maintains
+maintains several chains
+set of rules
+rules of filtering
+filtering the packets
+real time linux
+number of projects
+projects both open
+source and commercial
+real time functionality
+projects are listed
+listed below commercial
+rtlinuxpro lineo solutions
+bluecat rt montavista
+solutions for linux
+redice-linux open source
+open source distributions
+adeos ? art
+art linux kurt
+linux linux qlinuxrealtimelinux.org
+qlinuxrealtimelinux.org red-linux rtai
+red-linux rtai rtlinux
+rtai rtlinux linux
+rtlinux linux installation
+flavors of unix
+popular os linux
+movement which believes
+believes in free
+free software distribution
+distribution a large
+community of programmers
+efforts of linus
+torvalds from finland
+finland who wanted
+wanted a unix
+student he drew
+inspiration from prof
+prof andrew tanenbaum
+tanenbaum of university
+university of amsterdam
+designed a small
+distributed minix code
+capability extended linus
+extended linus torvalds
+designed a pc-based
+large linux community
+linux community worldwide
+worldwide every major
+linux group linux
+group linux found
+linux found ready
+found ready acceptance
+spirit of free
+distribution has attracted
+days linux community
+linux community regulates
+evaluated to ensure
+care of compatibility
+compatibility this helps
+helps in ensuring
+level of acceptance
+lot of information
+information on linux
+category of unix-based
+range of machines
+machines the range
+range may span
+set of machines
+machines which cooperate
+cooperate like google
+node linux cluster
+bootable cd player
+player and bios
+bios this means
+boot and install
+install procedure older
+set of floppies
+floppies the first
+section we describe
+describe the linux
+installation the main
+select the correct
+configuration typically red
+red hat linux
+linux is installed
+installed by booting
+options may include
+booting to install
+hard drive partition
+partition to hold
+hold the installation
+software * booting
+dos command line
+line * booting
+install and installing
+software using ftp
+ftp or http
+protocols * booting
+nfs-mounted hard drive
+hard drive installing
+installing from cd-rom
+pcs support booting
+cd-rom drive set
+insert the cd-rom
+cd-rom and reboot
+install red hat
+screen that offers
+offers a variety
+variety of options
+options for booting
+booting .the options
+start the installation
+interface * text
+start the install
+text interface operating
+video frame buffer
+buffer * expert
+expert * linux
+rescue * linux
+text-based installation type
+type the word
+prompt and press
+enter to continue
+asked to select
+select a language
+language so select
+highlight ok button
+button and press
+select a keyboard
+keyboard for install
+install so highlight
+enter after selecting
+selecting a keyboard
+select a pointing
+select a suitable
+mouse and press
+select the type
+type of installation
+workstation * server
+server * laptop
+laptop * custom
+custom * upgrade
+upgrade an existing
+existing system select
+select the suitable
+select server install
+install and press
+choose a partitioning
+scheme the choices
+partition * disk
+druid * fdisk
+fdisk the auto
+format hard drive
+type of selected
+configure the partitions
+linux the disk
+druid will launch
+launch a graphical
+graphical editor listing
+listing the free
+fdisk option offers
+offers an ability
+ability to create
+types of partitions
+partitions on clicking
+clicking disk druid
+option of creating
+creating new partitions
+disk the partitions
+partitions are recognized
+hat linux requires
+requires a minimum
+partition the swap
+amount of memory
+memory other partitions
+select a boot-loader
+boot-loader for booting
+linux the choice
+grub and lilo
+loader and press
+press ok grub
+ide hard drive
+choose kernel parameters
+parameters for booting
+booting linux enter
+enter the arguments
+button to continue
+arrive at dual
+add this code
+file title windows
+title windows rootnoverify
+configure a dual
+dual boot system
+required by configuring
+configuring the boot-loader
+boot-loader when finished
+select a firewall
+high * medium
+set the incoming
+incoming service requests
+time-zone selection dialog
+selection dialog box
+dialog box select
+settings and press
+prompted to enter
+enter a user-id
+user-id and password
+password the password
+create user accounts
+home directory home
+spacebar to select
+groups of software
+packages the size
+reflect the choices
+select individual package
+individual package item
+item to choose
+choose the individual
+individual software packages
+packages the installer
+installing the packages
+creating a boot-disk
+create the boot
+mkbootdisk command operating
+installation is done
+linux will eject
+rom and reboot
+reboot after rebooting
+session to shutdown
+shutdown your computer
+test the set-up
+set-up it helps
+works the auto
+cards and monitor
+types 20.2.1 finishing
+finishing the installation
+installed a good
+good working linux
+working linux machine
+machine the install
+out all boot-disks
+linux loader coming
+lilo newer versions
+versions or distributions
+distributions like mandrake
+screen and menu
+menu for startup
+options like linux
+linux and dos
+dos or windows
+installations another popular
+boot-loader called grub
+unix lecture
+lecture notes
+notes pcp
+system administration
+service provisioning
+administration plays
+pivotal role
+multiple users
+primary task
+system administrator
+top management
+general user
+user community
+system administrators
+administrators ensure
+service availability
+linux environment
+single user
+unix context
+context applies
+unix flavours
+superuser privilege
+major administrative
+administrative tasks
+tasks require
+administrator operates
+superuser mode
+root privileges
+tasks include
+proper working
+working set-up
+set-up administration
+administration tasks
+involve installation
+distributing user
+user disk
+disk space
+regular back-ups
+keeping system
+system logs
+ensuring secure
+secure operations
+providing network
+network services
+web access
+offering exposition
+chapter develops
+basic applications
+software releases
+non-trivial tasks
+superuser privileges
+privileges users
+users share
+share resources
+allocation policy
+policy system
+working environments
+system usage
+usage pattern
+main concerns
+concerns include
+include performance
+major tasks
+tasks list
+exhaustive list
+administrators perform
+system startup
+basic steps
+steps required
+stop operations
+operational environment
+closing user
+user accounts
+super-user mode
+close user
+nuances involved
+helping users
+working environment
+.rc files
+initial set-up
+maintaining user
+user services
+users require
+require services
+mail web
+print services
+discuss device
+device management
+services include
+print jobs
+print quota
+allocating disk
+re-allocating quotas
+default allocation
+device oriented
+oriented services
+management issues
+maintaining software
+installing software
+software patches
+patches released
+software installed
+user operating
+software installation
+experienced system
+system grows
+additional devices
+edit configuration
+configuration files
+related issues
+internet services
+users connected
+seek mail
+internet web
+local area
+area network
+.mailrc files
+ensuring security
+internet makes
+discussed security
+maintaining system
+analysing system
+user profiling
+profiling helps
+identifying security
+security breaches
+module entitled
+system accounting
+helps system
+operating system
+user requirements
+analysing logs
+system operation
+kernel linux
+linux users
+shutdown procedures
+procedures operating
+shutdown procedure
+unix systems
+systems unix
+multiple-user mode
+systems operate
+multi-user mode
+single-user mode
+installation task
+perform family
+systems emanating
+run level
+unix performs
+hardware problems
+unix kernel
+root device
+kernel runs
+kernel starts
+init process
+subsequent processes
+init checks
+file system
+process executes
+system boot
+boot script
+process spawns
+terminals defined
+getty process
+reconciles communication
+communication characteristics
+baud rate
+process initiates
+login process
+prospective login
+fsck checks
+fsck throws
+working configuration
+configuration made
+monitor disk
+disk usage
+disk integrity
+routine activity
+important thing
+temporary files
+tmp directory
+administrators resort
+considerable disk
+systems require
+shutdown utility
+utility offers
+offers options
+pre-assigned period
+administrators choose
+preassigned period
+shutdown results
+active processes
+shutdown option
+obvious implications
+shutdown command
+advise users
+activity gracefully
+turn power
+proper shutdown
+find details
+unix man
+man pages
+accounts management
+run command
+command files
+managing user
+person joins
+login account
+systems support
+admin tool
+simple password
+password appears
+shadow files
+encrypted forms
+information required
+login program
+first field
+dummy indicator
+shadow file
+file password
+password programs
+trap-door algorithm
+encryption operating
+home directory
+directory defined
+default login
+login directory
+administrators prepare
+.profile files
+.xinitrc .mailrc
+.mailrc .ircrc
+.ircrc files
+natural point
+users log
+systems receive
+receive signals
+log out
+out recall
+user logs
+process initiated
+process process
+process getty
+getty identifies
+first killed
+startup files
+.cshrc file
+unix built-in
+built-in shell
+shell commands
+environmental variables
+files define
+need-based access
+licensed software
+user login
+access privileges
+user belongs
+additional disk
+free disk
+mounted file
+additional information
+local file
+reports total
+allocated blocks
+unix command
+disk blocks
+blocks occupied
+default refers
+current directory
+produce output
+output line
+total usage
+directory i.e
+individual files
+produce messages
+mail account
+.mailrc file
+web services
+terminal settings
+terminal setting
+alternate terminal
+control sequences
+sequences defined
+terminfo termcap
+details recorded
+variable term
+user account
+password file
+file plays
+role recall
+erased system
+administrators login
+user entry
+account operating
+administration offers
+start-up run
+.bashrc .xinitrc
+choice depends
+login shell
+typical allocations
+korn shell
+.tcshrc bash
+bourne-again shell
+shell tcsh
+advanced c-shell
+partial string
+files facilitate
+facilitate role
+basic role
+terminal characteristics
+terminal type
+character settings
+default editor
+specific editor
+protection mode
+user mask
+mask umask
+umask determines
+determines access
+environment variables
+path variable
+variable defines
+customization variables
+limit things
+selecting icons
+core dump
+dump size
+maximum value
+command history
+typical .login
+.login file
+file umask
+setenv path
+setenv printer
+printer labprinter
+labprinter operating
+setenv editor
+set prompt
+advanced earlier
+.cshrc files
+initialisation files
+c-shell makes
+bourne shell
+define aliases
+typical entries
+setenv term
+term unknown
+set ttype
+endif setenv
+endif alias
+clear alias
+ghostview set
+set history
+set nobeep
+nobeep note
+system identifies
+initialization scripts
+files entails
+screen display
+mail system
+system operating
+host machine
+mail program
+main anchor
+internet-based communication
+unix sendmail
+sendmail program
+programs form
+forward system
+mail server
+server periodically
+mail daemon
+mail running
+background process
+mail tools
+file attachments
+attachments facility
+unix system
+.cshrc program
+unix user
+mailbox entry
+mail box
+mail commands
+wild card
+command options
+read messages
+bhatt operating
+system tools
+offer facility
+large files
+interpretations shown
+edit header
+header field
+command line
+line interface
+facilitate mail
+mail operations
+default mail
+mail command
+verbose option
+shows mails
+box mail
+box option
+default option
+inside .mailrc
+.mailrc user
+user files
+full mail
+mail address
+unset askcc
+askcc set
+set verbose
+verbose set
+set append
+append operating
+additional facilities
+e-mail address
+subscribe allmusic
+logout allmusic
+vacation programs
+send mails
+vacation mails
+good privacy
+encrypting mails
+mails facilitating
+.ircrc file
+prepare terminals
+offer inter
+inter relay
+irc facility
+irc enables
+real-time conversation
+globally irc
+multi-user system
+unix-based irc
+irc versions
+terminal emulation
+auto-login file
+set term
+stty erase
+irc system
+telnet call
+irc server
+irc servers
+servers require
+require specification
+port number
+first accesses
+discussion area
+ircs require
+sample entries
+internal variables
+irc commands
+commands begin
+interpretation ircs
+channels listed
+channel types
+null public
+public private
+private secret
+secret moderated
+moderated operating
+message disabled
+mode command
+channel options
+sourcing files
+adequate support
+services suppose
+changed behavior
+source command
+source .cshrc
+allocating quotas
+terminal-based services
+printer services
+disc space
+file services
+settings operating
+recognizes terminals
+special files
+terminals operate
+serial lines
+lines unix
+serial communication
+communication lines
+terminal services
+services provisioning
+system configuration
+mind unix
+unix maintains
+terminal related
+related information
+tty files
+special file
+x-windows depending
+serial line
+line control
+control protocol
+hardware interface
+interface plug
+session shows
+bhatt password
+last login
+tue nov
+iiitbsun bhatt
+hostname iiitbsun
+terminfo files
+terminal database
+unix environment
+database includes
+includes programs
+elicit services
+specific terminal
+localhost dft02
+term xterm
+specific commands
+terminal information
+information compilation
+convert termcap
+detailed discussions
+stty commands
+tset command
+command sets
+initial settings
+temporary file
+stty command
+command stty
+-parenb -parodd
+-parodd cs8
+cs8 hupcl
+-clocal -crtscts
+-ignbrk -brkint
+-brkint -ignpar
+-ignpar -parmrk
+-parmrk -inpck
+-inpck -istrip
+-istrip -inlcr
+-inlcr -igncr
+-igncr icrnl
+icrnl ixon
+ixon -ixoff
+-ixoff -iuclc
+-iuclc ixany
+ixany imaxbel
+imaxbel operating
+-olcuc -ocrnl
+-ocrnl onlcr
+onlcr -onocr
+-onocr -onlret
+-ofdel nl0
+nl0 cr0
+cr0 tab0
+tab0 bs0
+bs0 vt0
+vt0 ff0
+ff0 isig
+isig icanon
+icanon iexten
+iexten echo
+echo echoe
+echoe echok
+echok -echonl
+-noflsh -xcase
+-tostop -echoprt
+-echoprt echoctl
+echoctl echoke
+proper initialization
+set-up attempt
+services users
+users obtain
+printer daemon
+system arranges
+spooling print
+spooling directory
+print requests
+printer usage
+printcap file
+services offered
+spooling system
+system recognizes
+recognizes print
+print devices
+file serves
+configuration file
+lpd init
+hand edited
+included iiitb
+read-only file
+superuser root
+printcap files
+file description
+file size
+printer characteristics
+characteristics printer
+printer spooling
+spooled first
+daemon lpd
+lpd honours
+print request
+layered design
+design viewing
+bottom layer
+layer maintain
+separate spooling
+top level
+spooling process
+finally spools
+spool process
+group daemon
+daemon printer
+printer monitoring
+monitoring commands
+printer commands
+lpadmin tool
+administration practices
+assisting experienced
+textbook operating
+space allocation
+administrator manage
+physical partition
+system resident
+disk drive
+logical partition
+disk file
+system files
+root file
+user information
+home file
+system created
+physical disk
+file systems
+systems resident
+mapping shown
+physical drives
+bold letters
+letters figure
+mapping file
+systems note
+system co-locates
+var file
+system home
+home extends
+disk partitions
+system programmers
+programmers follow
+partitions recall
+system maintains
+disk suffers
+suffers damage
+directory structure
+directory tree
+typical mount
+mount instruction
+format mount
+a-block-special-file point-of-mount
+disk added
+suitable point
+disk quota
+allocation quota
+soft limits
+user quota
+hard limit
+allocated space
+soft limit
+purging files
+quota set
+group level
+set quota
+individual users
+situations require
+edit quota
+quota instruction
+edquota instruction
+temporary allocations
+moving files
+lost files
+user ahs
+multiple windows
+link counts
+system table
+actual files
+fsck instruction
+routinely performed
+access control
+group determines
+matlab suite
+periodic back-up
+good administrator
+regular back-up
+back-up procedure
+severe breakdown
+previous state
+learning operating
+linux lecture
+linux linux
+linux kernel
+kernel architecture
+big picture
+good idea
+context applications
+user application
+application running
+linux system
+include applications
+email clients
+text processors
+include utilities
+considered part
+windowing system
+programming interface
+kernel abstracts
+upper layers
+kernel presents
+underlying hardware
+controls access
+system resources
+resources hardware
+layer consists
+physical resources
+actual work
+hard disk
+parallel port
+port controllers
+system ram
+virtual machine
+machine interface
+user processes
+processes processes
+physical hardware
+consistent interface
+interface operating
+kernel supports
+main memory
+hardware resources
+mediates access
+fair access
+inter-process security
+kernel code
+code executes
+privileged mode
+kernel mode
+system library
+interesting thing
+modular architecture
+binary codes
+library modules
+conceptual view
+implementation issues
+protected access
+resources kernel
+supports services
+system libraries
+libraries system
+system calls
+buffered file
+file handling
+libraries programs
+configure network
+network devices
+user mode
+mode programs
+kernel privileges
+handle login
+login requests
+system utilities
+require kernel
+kernel structure
+structure overview
+kernel modules
+modules execute
+privileged kernel
+kernel source
+source code
+free people
+standard minimal
+minimal basic
+basic kernel
+kernel module
+customized drivers
+embedded system
+system area
+adopting worldwide
+loaded linux
+system kernel
+main components
+process management
+user process
+kernel processes
+processes seek
+fork system
+system call
+call results
+process system
+call execve
+execve results
+forked process
+process processes
+unix linux
+process personality
+emulation libraries
+process inherits
+inherits parent
+vectors define
+argument vector
+environment vector
+value list
+variable values
+line arguments
+process body
+scheduling context
+process context
+context includes
+includes information
+file tables
+signal handling
+virtual memory
+memory context
+representation linux
+linux processes
+library package
+user-controlled scheduling
+user threads
+kernel threads
+single processor
+processor environment
+kernel thread
+thread scheduled
+multiprocessor environment
+kernel supported
+clone system
+multiple kernel
+threads created
+scheduled scheduler
+schedulers control
+system stability
+linux scheduling
+kernel tasks
+tasks kernel
+internal tasks
+processes requiring
+services examples
+page fault
+device driver
+driver raises
+pre-empted kernel
+code runs
+scheduler linux
+sharing system
+timer interrupt
+linux operating
+credit based
+scheduling algorithm
+highest credits
+run-able processes
+processes exhaust
+priority based
+fresh credit
+credit allocation
+allocation takes
+takes place
+crediting system
+higher credits
+bound processes
+user linux
+implements unix
+nice process
+process characterization
+memory manager
+manager manages
+system memory
+manager ensures
+memory area
+paging mechanism
+loadable kernel
+loader seeks
+seeks memory
+memory allocation
+kernel returns
+loaded recompilation
+virtual file
+consistent file
+system interface
+system vfs
+vfs follow
+files system
+network interface
+kernel access
+network hardware
+protocols operating
+inter process
+process communication
+ipc primitives
+typical loadable
+module management
+driver registration
+conflict resolution
+resolution mechanism
+mechanism module
+kernel referenced
+referenced symbols
+kernel memory
+kernel maintains
+symbol table
+symbols defined
+external definition
+kernel compile
+management system
+required communications
+communications interfaces
+inserted module
+module driver
+dynamic table
+modules care
+registration table
+drives entails
+driver context
+context identification
+bulk device
+network driver
+system context
+routines employed
+store files
+network file
+network protocols
+packet filtering
+filtering rules
+file formats
+files conflict
+hardware configuration
+large number
+chip set
+set configurations
+large range
+scsi devices
+video display
+display devices
+network cards
+module device
+device drivers
+wide range
+resolve accesses
+conflicting concurrent
+concurrent accesses
+resolution mechanisms
+preventing modules
+access conflict
+printer modules
+kernel makes
+reservation table
+maintains information
+dma channel
+interrupt line
+drivers avail
+avail kernel
+kernel services
+resources system
+user space
+space process
+process enters
+cpu architecture
+architecture dependent
+common examples
+socket calls
+non preemptable
+preemptable implying
+relinquishes control
+partly preemptable
+system behavior
+systems call
+call interface
+space program
+program accesses
+accesses kernel
+kernel functionality
+high level
+process calling
+function call
+fact handled
+handled differently
+library linux
+fixed number
+finite set
+unique identifying
+identifying number
+exact mechanism
+call implementation
+platform dependent
+x86 architecture
+call number
+eax hardware
+hardware register
+register arguments
+hardware registers
+int0x80 software
+software interrupt
+kernel service
+service adding
+straight forward
+simple system
+asmlinkage int
+int sys_simple
+dumb system
+linux source
+source tree
+kernel programming
+access hardware
+hardware directly
+eax register
+asmlinkage macro
+dirty work
+work fortunately
+header file
+typical system
+define _nr_sys_exit
+last system
+define _nr_sys_simple
+call table
+actual routine
+kernel file
+.we add
+format obj_y
+kernel note
+config file
+code select
+working linux
+floppy disk
+kernel suits
+targeted application
+embedded systems
+system programming
+memory management
+major components
+linux memory
+page management
+memory linux
+linux allocates
+buddy system
+page allocator
+allocator software
+basic memory
+memory allocator
+buddy heap
+contiguous area
+required memory
+successive generation
+equal size
+buddy allocation
+words starting
+memory size
+first create
+buddy create
+generated buddies
+size memory
+memory requirement
+requirement note
+memory chunk
+words satisfies
+smallest chunk
+required size
+page replacement
+page aging
+page flushing
+basic idea
+memory system
+expose address
+address space
+entire address
+space exposed
+deallocation linux
+linux makes
+conscious effort
+page aligned
+contiguous address
+logical spaces
+memory operating
+linux organizes
+binary tree
+tree structure
+fast access
+logical view
+physical view
+hardware page
+page table
+table entries
+logical page
+exact location
+process address
+shared pages
+page require
+inherited entries
+reference count
+maintained linux
+efficient page
+page swapping
+swapping algorithm
+chance algorithm
+algorithm dependent
+higher age
+age value
+usage brings
+age closer
+static region
+table references
+allocated pages
+entries created
+modified loading
+execution mode
+exec system
+previous execution
+execution context
+calling process
+initiated older
+older versions
+binary files
+a.out format
+current version
+elf format
+needed library
+library routines
+executable module
+module linux
+linux supports
+dynamic linking
+linking process
+process downloads
+linked function
+library functions
+dynamically linked
+symbolic references
+loadable executable
+executable linux
+linux file
+systems introduction
+linux retains
+unix file
+linux systems
+systems retain
+retain minix
+minix file
+extended file
+proc file
+huge tree
+tree rooted
+networked machines
+unlike windows
+drive numbers
+mount operation
+existing filesystem
+block oriented
+oriented device
+file hierarchy
+mount point
+identified directory
+un-mount requires
+requires issuance
+umount command
+command linux
+supports multiple
+multiple filesystems
+include ext
+future versions
+capable devices
+floppy drives
+hard disks
+underlying block
+block media
+linux filesystems
+filesystems treat
+linear collection
+cylinder head
+head number
+single disk
+disk partition
+entire disk
+file partition
+partition running
+running ext2
+remaining half
+half running
+running fat32
+minimum granularity
+ext2 filesystem
+successful file
+popular linux
+linux distributions
+distributions linux
+minix filesystem
+exteneded file
+ext file
+remy card
+important addition
+permitted linux
+filesystems description
+basic file
+systems concepts
+system implements
+basic set
+unix filesystem
+lines described
+maurice bach
+inode directories
+read data
+serial port
+super block
+entire filesystem
+filesystem inodes
+inode inode
+inode stores
+include file
+file type
+size pointers
+data blocks
+kernel translates
+block number
+actual address
+actual physical
+physical block
+figure operating
+inode number
+file access
+access links
+unix operating
+operating systems
+systems implement
+hard links
+soft links
+links hard
+hard link
+structure pointing
+link count
+pointed inode
+directory inode
+inode table
+table operating
+linkcount becoms
+links soft
+kernel encounters
+soft link
+path resolution
+system links
+links softlinks
+absolute paths
+cases softlinks
+degrade system
+system performance
+performance device
+device specific
+specific files
+enable access
+correct device
+major number
+device file
+minor number
+argument linux
+accessing device
+device files
+filesystem type
+type independent
+independent interface
+out operations
+system type
+future file
+interface providing
+defined link
+systems operating
+vfs structure
+file management
+vfs employs
+underlying definition
+inode object
+file object
+system object
+function table
+operational routines
+file objects
+inode objects
+objects maintain
+access mechanism
+object maintains
+interface vfs
+buffer cache
+cache device
+driver disk
+disk controller
+controller linux
+kernel hardware
+hardware operating
+file creation
+file-system types
+types supported
+kernel configuration
+table describes
+describes filesystem
+mount function
+mounted file-system
+file-system descriptor
+vfs functions
+physical file-system
+file-system routines
+routines subsequently
+file-system type
+functions provided
+file-system kernel
+private data
+data maintained
+physical filesystem
+filesystem code
+function pointers
+pointers contained
+file-system descriptors
+file-system internal
+internal routines
+inode descriptor
+open file
+file descriptor
+information related
+operations provided
+e.g create
+file descriptors
+open files
+e.g read
+standard ext2fs
+ext2fs features
+original minix
+system size
+size limited
+ext2fs permits
+bsd fast
+fast file
+small files
+kilo bytes
+blocks sizes
+default size
+ext2fs supports
+file types
+regular files
+symbolic links
+links ext2fs
+manage file
+systems created
+big partitions
+original kernel
+code restricted
+maximal file-system
+file-system size
+recent work
+vfs layer
+big disks
+partitions operating
+ext2fs provide
+long file
+file names
+variable length
+length directory
+directory entries
+maximal file
+needed ext2fs
+ext2fs reserves
+super user
+processes fill
+block allocation
+policy attempts
+related blocks
+block group
+cylinder group
+file allocation
+physical proximity
+distribution depends
+head movement
+optimized advanced
+advanced ext2fs
+standard features
+systems ext2fs
+advanced features
+features file
+file attributes
+kernel behavior
+set attributes
+files created
+directory inherit
+compression immutability
+mount option
+creation semantics
+bsd semantics
+parent directory
+directory system
+setgid bit
+bit set
+files inherit
+subdirectories inherit
+primary group
+process bsd-like
+synchronous updates
+bitmap blocks
+indirect blocks
+directory blocks
+strict metadata
+metadata consistency
+poor performances
+performances operating
+logical block
+block size
+filesystem block
+block sizes
+bytes ext2fs
+ext2fs implements
+fast symbolic
+symbolic link
+data block
+file-system state
+special field
+write mode
+read-only mode
+file-system checker
+records errors
+checker tests
+clean state
+skipping filesystem
+filesystem checks
+force checks
+regular intervals
+mount counter
+maximal value
+filesystem checker
+checker forces
+last check
+maximal check
+check interval
+periodical checks
+checker ignores
+filesystem state
+filesystem check
+check ext2fs
+ext2fs offers
+offers tools
+filesystem behavior
+physical structure
+ext2 filesystems
+bsd filesystem
+block groups
+boot sector
+sector block
+block grp
+block grp2
+redundant copy
+crucial filesystem
+filesystem control
+control informations
+filesystem descriptors
+block bitmap
+inode bitmap
+descriptors block
+bitmap inode
+table data
+blocks operating
+big factor
+factor contributing
+control structures
+good performances
+disk head
+head seeks
+linked lists
+length entries
+entry length
+wasting disk
+table represents
+first entry
+entire entry
+last entry
+very_very_very_long_file_name inode
+ext3 file
+ext2 file
+tested system
+problem areas
+shutdown fsck
+filesystem health
+health check
+add journaling
+poor capability
+large drives
+system shows
+present state
+process information
+host processor
+sample output
+authenticamd cpu
+cpu family
+processor stepping
+cpu mhz
+cache size
+cpuid level
+fpu vme
+pse tsc
+tsc msr
+msr mce
+mce cx8
+cx8 pge
+pge mmx
+mmx syscall
+k6_mtrr bogomips
+processes running
+last cpu
+current working
+working directory
+memory maps
+library files
+memory held
+root directory
+process status
+process memory
+memory status
+status information
+readable form
+form device
+linux introduction
+linux code
+hardware device
+black box
+system defined
+defined interfaces
+box sits
+device completely
+program interacts
+low level
+invoking application
+open source
+great demand
+principal drivers
+hardware manufacturers
+linux driver
+source community
+large proliferation
+system market
+linux today
+system development
+development work
+work embedded
+embedded devices
+special devices
+devices attached
+require specialized
+specialized drivers
+microwave oven
+running linux
+special device
+turntable motor
+pluggable module
+module operating
+physical device
+device control
+control operations
+driver kernel
+device classes
+char devices
+stream oriented
+oriented nature
+serial ports
+char device
+normal file
+command prompt
+first column
+root tty
+ptya0 crw-rw-rw
+ptya1 crw-rw-rw
+ptya2 crw-rw-rw
+ptya3 block
+block devices
+code kernel
+kernel subsystems
+keyboard driver
+scsi driver
+interface hardware
+block device
+root disk
+root floppy
+fd0 network
+devices handle
+kernel handles
+special names
+network interfaces
+interfaces e.g
+e.g eth0
+linux permits
+introduced device
+system tree
+separated numbers
+first number
+left side
+device minor
+static array
+driver entry
+entry points
+types operating
+minor numbers
+bit quantities
+devices loaded
+future releases
+kernel kernel
+handle device
+visible incompatibilities
+previous file
+present device
+standard part
+actual source
+device class
+class drivers
+network drivers
+detail character
+character drivers
+int register_chrdev
+unsigned int
+const char
+struct file_operations
+major argument
+successfully registered
+discuss fops
+question arises
+major numbers
+common devices
+writing device
+experimental usage
+usage operating
+free major
+register_chrdev function
+number field
+number allocated
+assigned number
+number assigned
+job removing
+important data
+data structure
+file structure
+important fields
+structure mode_t
+mode_t f_mode
+file i.e
+read write
+loff_t f_pos
+current offset
+file unsigned
+int f_flags
+driver access
+synchronous access
+non blocking
+driver supports
+important structure
+sections operating
+allocated memory
+maintaining states
+function calls
+calls sruct
+sruct dentry
+directory entry
+file operations
+operations structure
+driver writer
+driver functions
+structure discussed
+previous section
+fops structure
+oriented approach
+taggd structure
+structure initialization
+tagged structure
+structure initializations
+kernel release
+compatibility problems
+kernel versions
+initialization tagged
+positional initialization
+struct fops
+fops myfops
+structure methods
+made null
+struct file
+present offset
+,const char
+write data
+reading directories
+,struct poll_table_struct
+struct inode
+,struct file
+,unsigned int,unsigned
+int,unsigned long
+issue device
+specific calls
+,struct vm_area_struct
+primary memory
+open device
+,struct dentry
+pending data
+advance char
+char driver
+driver operations
+block drivers
+actual implementation
+char drivers
+drivers operating
+non-blocking operations
+hardware devices
+processor takes
+keyboard takes
+single byte
+processor waiting
+severe impact
+accessing devices
+device characteristics
+paramount importance
+synchronous driver
+invoking process
+data arrives
+driver returns
+asynchronous methods
+o_nonblock flag
+non-blocking access
+correct semantics
+semantics blocking
+basic data
+wait queue
+queue maintains
+linked list
+wait_queue_head_t my_queue
+kernel requires
+earlier versions
+routine puts
+non-interruptible sleep
+dangerous sleep
+sleeping forever
+timeout parameter
+void wait_event
+queue,int condition
+int wait_event_interruptible
+int condition
+condition evaluates
+non-zero value
+driver puts
+interrupt service
+service routine
+important point
+interruptible sleep
+case put
+loop checking
+kernel routines
+wake proccess
+wake process
+queue rest
+normal wake
+runnable state
+normal semantics
+poll system
+accessing multiple
+multiple devices
+blocking polling
+polling methods
+calls offering
+historical reasons
+bsd unix
+poll method
+method returns
+bit mask
+mask describing
+asynchronous notification
+arrives user
+enable asynchronous
+process invokes
+f_setown command
+fcntl system
+step needed
+correct process
+fasync flag
+f_setfel fcntl
+fcntl command
+sigio signal
+arrives interrupt
+interrupt handling
+single entry
+entry point
+interrupt lines
+earlier x86
+x86 processors
+longer true
+current processors
+programmable interrupt
+interrupt controllers
+distribute interrupts
+multi-processors system
+intel x86
+registered handlers
+interrupts caused
+interrupt handler
+int request_irq
+int irq
+,struct pt_regs
+long flags
+interrupt number
+function pointer
+orable flags
+sa_interrupt implies
+fast handler
+handler finishes
+interrupt context
+interrupts disabled
+disabled sa_shirq
+sa_shirq implies
+shared sa_sample_random
+sa_sample_random implies
+unique identifier
+identifier signifying
+fixed interrupt
+jumper settings
+device complying
+pci standard
+irq number
+free interrupt
+clean method
+helper functions
+manual probing
+interrupts top
+top half
+bottom half
+half processing
+interrupt processing
+service routines
+degrading system
+system responsiveness
+required processing
+consuming processing
+earlier linux
+bottom halves
+processing tasklet
+special function
+system determined
+determined safe
+run multiple
+multiple times
+interesting consequence
+single tasklet
+void function
+interprocess communication
+considerable similarity
+child processes
+wait instruction
+instruction processes
+pipe mechanism
+mechanism processes
+shared memory
+memory mechanism
+good url
+networked environment
+networking features
+socket interface
+protocol drivers
+user applications
+socket definition
+general purpose
+purpose interconnection
+interconnection framework
+protocol layer
+layer supports
+protocol stack
+layer manages
+manages routing
+error reporting
+reliable retransmission
+important support
+higher layers
+recent cached
+cached routing
+routing decisions
+persistent forwarding
+forwarding base
+network device
+packet movement
+movement operating
+firewall management
+management maintains
+commercial distributions
+rtlinuxpro lineo
+lineo solutions
+ulinux lynuxworks
+montavista software
+real-time solutions
+linux concurrent
+redice-linux open
+source distributions
+art linux
+linux kurt
+real-time linux
+qlinuxrealtimelinux.org red-linux
+red-linux rtai
+rtai rtlinux
+rtlinux linux
+linux installation
+gnu movement
+free software
+software distribution
+large community
+programmers subscribe
+linus torvalds
+university student
+drew inspiration
+prof andrew
+andrew tanenbaum
+minix minix
+teaching tool
+code made
+distributed minix
+minix code
+capability extended
+extended linus
+pc-based unix
+large linux
+linux community
+community worldwide
+major university
+urban centre
+linux group
+group linux
+linux found
+ready acceptance
+free distribution
+voluntary contributors
+days linux
+community regulates
+contributions evaluated
+ensure quality
+google search
+broad category
+unix-based oss
+installation linux
+node linux
+linux cluster
+install procedure
+procedure older
+first part
+basic guide
+installation program
+main point
+correct configuration
+hat linux
+install directory
+hard drive
+drive partition
+installation software
+dos command
+http protocols
+nfs-mounted hard
+drive installing
+pcs support
+support booting
+cd-rom drive
+drive set
+boot screen
+.the options
+graphical interface
+text interface
+video frame
+frame buffer
+text-based installation
+installation type
+word text
+boot prompt
+press enter
+choice highlight
+pointing device
+suitable mouse
+existing system
+system select
+suitable option
+select server
+server install
+partitioning scheme
+choices include
+auto partition
+format hard
+selected installation
+disk druid
+graphical editor
+editor listing
+free spaces
+fdisk option
+option offers
+clicking disk
+recognized create
+continue red
+linux requires
+swap partition
+installed amount
+booting linux
+lilo select
+boot loader
+first ide
+choose kernel
+kernel parameters
+linux enter
+dialog box
+dual booting
+file title
+title windows
+windows rootnoverify
+dual boot
+boot system
+finished click
+firewall configuration
+security level
+incoming service
+service requests
+time-zone selection
+selection dialog
+box select
+create user
+directory home
+select packages
+software packages
+installed software
+individual package
+package item
+individual software
+packages selected
+linux partitions
+boot disk
+mkbootdisk command
+command operating
+done press
+linux session
+auto detection
+red hat
+takes care
+monitor types
+good working
+linux machine
+install program
+linux loader
+loader coming
+lilo newer
+newer versions
+graphical screen
+popular boot-loader
+operating
+administration
+unix
+lecture
+notes
+pcp
+bangalore
+m19
+module
+system
+context
+service
+provisioning
+plays
+pivotal
+role
+case
+accessed
+multiple
+users
+primary
+task
+administrator
+ensure
+top
+management
+assured
+efficiency
+utilization
+resources
+general
+user
+community
+services
+seeking
+words
+administrators
+complain
+performance
+availability
+linux
+environment
+single
+usage
+doubles
+discuss
+applies
+flavours
+notion
+superuser
+privilege
+major
+administrative
+tasks
+require
+operates
+mode
+root
+privileges
+include
+starting
+shutting
+opening
+account
+giving
+proper
+working
+set-up
+involve
+installation
+software
+distributing
+disk
+space
+taking
+regular
+back-ups
+keeping
+logs
+ensuring
+secure
+operations
+providing
+network
+web
+access
+begin
+enlisting
+offering
+exposition
+chapter
+develops
+primarily
+interested
+running
+set
+basic
+applications
+professional
+afford
+track
+releases
+patches
+announced
+rarely
+install
+addition
+non-trivial
+done
+share
+allocation
+policy
+implement
+helps
+setting
+environments
+hand
+keen
+properly
+efficiently
+seek
+monitor
+fact
+pattern
+analysed
+determine
+efficacy
+managements
+main
+concerns
+utilisation
+organisation
+suffer
+juncture
+worth
+list
+performed
+note
+19.1.1
+exhaustive
+represents
+perform
+startup
+shutdown
+section
+steps
+required
+start
+stop
+operational
+closing
+accounts
+super-user
+switch
+open
+close
+nuances
+involved
+activity
+helping
+customize
+achieved
+.rc
+files
+initial
+modify
+suit
+requirements
+interpretations
+settings
+maintaining
+printing
+mail
+chat
+deal
+print
+device
+spooling
+jobs
+quota
+allocating
+re-allocating
+quotas
+grow
+default
+cases
+imperative
+enhance
+oriented
+issues
+installing
+oss
+released
+bugs
+present
+identified
+installed
+satisfies
+specialized
+convention
+directory
+local
+indicator
+non-standard
+nature
+learned
+experienced
+assisting
+devices
+upgrading
+configuration
+demand
+grows
+additional
+edit
+identify
+related
+covered
+internet
+connected
+host
+machine
+resource
+area
+address
+accessible
+show
+.mailrc
+security
+makes
+interesting
+challenging
+check
+spoofing
+misuse
+discussed
+detail
+profiling
+analysing
+profile
+identifying
+breaches
+explained
+entitled
+accounting
+interest
+tune
+meet
+involves
+operation
+reconfiguring
+kernel
+release
+received
+compile
+extensions
+discussions
+initiation
+procedures
+first
+examine
+powered
+procedure
+systems
+choice
+made
+operate
+multiple-user
+multi-user
+single-user
+reconfiguration
+family
+emanating
+run
+level
+levels
+common
+initiates
+sequence
+performs
+self-tests
+hardware
+problems
+loaded
+runs
+initializes
+starts
+init
+process
+subsequent
+processes
+spawned
+checks
+out
+file
+fsck
+executes
+boot
+script
+spawns
+terminals
+checking
+defined
+terminal
+getty
+launched
+reconciles
+communication
+characteristics
+baud
+rate
+type
+login
+enable
+prospective
+notice
+integrity
+throws
+messages
+work
+suffice
+mention
+reconcile
+routine
+important
+thing
+booting
+temporary
+tmp
+cleaned
+zombies
+resort
+number
+considerable
+blocked
+invoking
+utility
+offers
+options
+halt
+immediately
+pre-assigned
+period
+choose
+preassigned
+results
+sending
+message
+interval
+minutes
+cautions
+terminate
+active
+option
+reboot
+obvious
+implications
+commonly
+command
+optional
+intended
+advise
+precautions
+gracefully
+prepares
+turn
+power
+readers
+encouraged
+find
+details
+man
+pages
+move
+managing
+person
+joins
+days
+support
+admin
+tool
+seeks
+information
+username
+serves
+password
+simple
+advised
+select
+feel
+comfortable
+appears
+shadow
+encrypted
+forms
+program
+authenticate
+initiate
+shell
+shown
+description
+bhatt
+damu
+line
+field
+dummy
+programs
+trap-door
+algorithm
+encryption
+home
+prepare
+.login
+.profile
+obtain
+.cshrc
+.xinitrc
+.ircrc
+helpful
+customizing
+natural
+point
+curiosity
+log
+receive
+signals
+recall
+mentioned
+initiated
+identifies
+communicate
+killed
+completely
+determined
+basically
+instance
+path
+variable
+defines
+built-in
+commands
+utilities
+libraries
+environmental
+variables
+zone
+automatically
+define
+need-based
+licensed
+databases
+extent
+group-id
+user-id
+group
+belongs
+assigned
+iiitbsun
+uid
+gid
+disc
+amount
+allocated
+situation
+warrants
+interrogate
+free
+refers
+mounted
+remote
+reports
+total
+blocks
+i-nodes
+occupied
+current
+produce
+output
+report
+i.e
+individual
+read
+opened
+vt100
+attempt
+alternate
+tset
+stty
+tput
+tabs
+control
+sequences
+terminfo
+termcap
+recorded
+term
+19.5.1
+specifically
+deals
+reader
+change
+pass-word
+liking
+deleted
+erased
+delete
+entry
+start-up
+.bashrc
+depends
+typical
+allocations
+bourne
+korn
+c-shell
+bash
+.bashrci
+tcsh
+.tcshrc
+referred
+bourne-again
+advanced
+shortcuts
+pressing
+tab
+complete
+partial
+string
+unambiguously
+understand
+facilitate
+set-ups
+character
+prompt
+erase
+editors
+editor
+specific
+emacs
+protection
+umask
+stands
+mask
+determines
+right
+directories
+searched
+locating
+customization
+limit
+things
+selecting
+icons
+core
+dump
+size
+maximum
+value
+scope
+history
+preferences
+entries
+setenv
+printer
+labprinter
+biff
+hostname
+meanings
+lines
+explanation
+earlier
+describe
+commonalities
+definitions
+initialisation
+features
+aliases
+frequently
+ghostview
+clear
+give
+unknown
+echo
+term
+ttype
+endif
+alias
+nobeep
+sets
+highly
+recommended
+walk-through
+initialization
+scripts
+entails
+two
+corresponds
+regulating
+controls
+screen
+display
+initialized
+windows
+viewpoint
+acts
+anchor
+internet-based
+sendmail
+class
+form
+basis
+essentially
+store
+forward
+picked
+server
+periodically
+daemon
+picks
+background
+unix-to-unix
+copy
+provided
+developing
+tools
+attachments
+facility
+invoke
+auto-login
+mailbox
+box
+named
+table
+briefly
+review
+wild
+card
+manage
+mails
+usenet
+body
+bhatt
+composing
+offer
+escape
+large
+edited
+side
+dead.letter
+header
+interface
+mbox
+wishes
+facilities
+composed
+subject
+progress
+processed
+machine.domain
+send
+verbose
+shows
+newm
+opt
+place
+inside
+generally
+nick-names
+full
+unset
+flags
+askcc
+append
+initially
+utilized
+subscribe
+listserv
+subscribers
+e-mail
+allmusic
+mymachine.mydomain
+unsubscribe
+logout
+vacation
+receiver
+pretty
+good
+privacy
+pgp
+encrypting
+facilitating
+inter
+relay
+irc
+enables
+real-time
+conversation
+persons
+scattered
+globally
+unix-based
+versions
+emulation
+keyboard
+make
+telnet
+call
+servers
+specification
+port
+irc.ibmpcug.co.uk9999
+accesses
+channels
+presented
+channel
+discussion
+online
+ircs
+sample
+internal
+interpretation
+range
+listed
+types
+limbo
+null
+public
+private
+secret
+moderated
+limited
+topic
+invite
+disabled
+realized
+modes
+unsets
+parameters
+19.4.1
+sourcing
+described
+provide
+adequate
+variety
+suppose
+logged
+requires
+affect
+changed
+behavior
+source
+execute
+argument
+technically
+responsible
+upgrade
+scheduling
+restrict
+terminal-based
+19.5.2
+19.5.3
+recognizes
+special
+serial
+protocols
+similar
+bear
+factors
+mind
+maintains
+tty
+adhere
+includes
+modems
+console
+monitored
+x-windows
+depending
+protocol
+activate
+pins
+plug
+session
+last
+tue
+nov
+203.197.175.174
+hostname
+database
+compiled
+elicit
+localhost
+dft02
+xterm
+tic
+short
+compilation
+convert
+detailed
+exploit
+elaborate
+initialize
+characters
+kill
+encountered
+values
+availed
+speed
+rows
+columns
+intr
+quit
+eof
+eol
+eol2
+susp
+rprnt
+werase
+lnext
+flush
+min
+-parenb
+-parodd
+cs8
+hupcl
+-cstopb
+cread
+-clocal
+-crtscts
+-ignbrk
+-brkint
+-ignpar
+-parmrk
+-inpck
+-istrip
+-inlcr
+-igncr
+icrnl
+ixon
+-ixoff
+-iuclc
+ixany
+imaxbel
+opost
+-olcuc
+-ocrnl
+onlcr
+-onocr
+-onlret
+-ofill
+-ofdel
+nl0
+cr0
+tab0
+bs0
+vt0
+ff0
+isig
+icanon
+iexten
+echoe
+echok
+-echonl
+-noflsh
+-xcase
+-tostop
+-echoprt
+echoctl
+echoke
+lastly
+attach
+connect
+occasions
+arranges
+mechanism
+requests
+familiar
+monitoring
+printcap
+offered
+manual
+lost
+autogenerated
+printconf-backend
+lpd
+put
+included
+iiitb
+lpd_bounce
+true
+read-only
+printed
+spooled
+subsequently
+honours
+request
+achieve
+employ
+layered
+design
+viewing
+bottom
+layer
+maintain
+separate
+printers
+create
+receives
+finally
+spools
+owner
+spool
+health
+add
+lpadmin
+practices
+taught
+textbook
+2.7.1
+stated
+formatting
+partitions
+physical
+logical
+partition
+resident
+drive
+extend
+drives
+stake
+similarly
+maintained
+created
+mapping
+figure
+names
+bold
+letters
+co-locates
+var
+extends
+assignment
+programmers
+follow
+method
+partitioning
+data
+reallocate
+disks
+suffers
+damage
+sectors
+tracks
+longer
+mounting
+unmounting
+structure
+tree
+mount
+instruction
+format
+a-block-special-file
+point-of-mount
+unmount
+umount
+added
+suitable
+assumed
+formatted
+located
+hard
+soft
+limits
+simply
+exceed
+cautioned
+approaches
+expected
+purging
+situations
+executing
+edquota
+user-name
+due
+dynamics
+moving
+compromised
+ways
+happen
+ahs
+block
+marked
+link
+counts
+correct
+actual
+checked
+file-system-to-be-checked
+rebooting
+mandatory
+routinely
+consistency
+restored
+matlab
+suite
+periodic
+back-up
+severe
+breakdown
+stable
+previous
+state
+after-word
+moduler
+remarked
+lessons
+tutelage
+substitute
+hands-on
+learning
+architecture
+big
+picture
+idea
+application
+fixed
+typically
+email
+clients
+text
+processors
+traditionally
+considered
+part
+windowing
+shells
+programming
+compilers
+abstracts
+upper
+layers
+presents
+view
+underlying
+ifferent
+mediates
+consists
+cpu
+parallel
+controllers
+ram
+zoom
+closer
+purpose
+virtual
+written
+needing
+knowledge
+constitutes
+computer
+consistent
+supports
+multi-tasking
+manner
+transparent
+act
+exclusive
+memory
+concurrently
+fair
+inter-process
+code
+privileged
+library
+modular
+binary
+codes
+load
+unload
+modules
+dynamically
+explore
+conceptual
+bothering
+implementation
+constantly
+changing
+arbitrations
+protected
+calls
+buffered
+handling
+operated
+managed
+needed
+configure
+classed
+unlike
+handle
+overview
+loadable
+capabilities
+people
+develop
+recompiling
+linking
+loading
+distributed
+gpl
+modality
+standard
+minimal
+enrich
+customized
+drivers
+route
+presently
+embedded
+adopting
+worldwide
+thought
+comprising
+components
+fork
+creating
+execve
+execution
+newly
+forked
+pid
+additionally
+personality
+cater
+implementations
+inherits
+parent
+vectors
+vector
+arguments
+inherited
+redefined
+indication
+tables
+capability
+signal
+internally
+threads
+kind
+representation
+posix
+compliant
+supported
+package
+kinds
+user-controlled
+scheduled
+processor
+thread
+multiprocessor
+clone
+scheduler
+schedulers
+implementing
+shared
+stability
+behalf
+requiring
+examples
+page
+fault
+induced
+driver
+raises
+interrupt
+pre-empted
+completion
+sharing
+timer
+rescheduling
+credit
+based
+highest
+credits
+revised
+run-able
+exhaust
+priority
+fresh
+takes
+crediting
+higher
+interactive
+bound
+responses
+implements
+nice
+characterization
+manager
+manages
+de-allocation
+ensures
+end
+corrupting
+paging
+stages
+loader
+returns
+symbols
+handled
+compiler
+recompilation
+vfs
+independent
+ipc
+primitives
+reside
+registration
+conflict
+resolution
+referenced
+symbol
+exported
+explicitly
+external
+definition
+communications
+interfaces
+inserted
+dynamic
+modified
+times
+writing
+care
+initializations
+cleaning
+register
+identification
+bulk
+routines
+employed
+nfs
+packet
+filtering
+rules
+formats
+executable
+chip
+configurations
+scsi
+video
+adapters
+cards
+vary
+wide
+necessitates
+resolve
+conflicting
+concurrent
+mechanisms
+preventing
+reservation
+accessing
+dma
+avail
+enters
+dependent
+write
+exit
+exec
+socket
+non
+preemptable
+implying
+finished
+relinquishes
+partly
+improved
+responsiveness
+considerably
+jerky
+functionality
+high
+calling
+function
+normal
+differently
+issue
+directly
+stead
+invoked
+reconciled
+finite
+unique
+exact
+platform
+x86
+eax
+registers
+int0x80
+issued
+invokes
+adding
+straight
+simple.c
+tested
+asmlinkage
+int
+sys_simple
+void
+return
+dumb
+understanding
+basics
+language
+assembly
+macro
+dirty
+fortunately
+xxxx
+macro_syscall
+defining
+assign
+unistd.h
+series
+_nr_sys_exit
+enter
+_nr_sys_simple
+assigning
+entered
+index
+pointer
+entry.s
+.we
+sysmbol_name
+makefile
+obj_y
+sched.o
+dn.o
+.etc
+simple.o
+recompile
+config
+freely
+parts
+relevant
+leave
+rest
+floppy
+suits
+targeted
+reasons
+successful
+preferred
+reopened
+world
+allocates
+buddy
+responsibility
+allocator
+freeing
+heap
+contiguous
+minimum
+obtained
+successive
+generation
+buddies
+equal
+explain
+16k
+proceed
+recently
+generated
+accommodate
+requirement
+chunk
+property
+smallest
+larger
+possibly
+concepts
+replacement
+aging
+flushing
+areas
+expose
+entire
+exposed
+deallocation
+conscious
+effort
+allocate
+logically
+aligned
+spaces
+regions
+organizes
+fast
+maps
+location
+locality
+preserved
+copy-on-write
+visible
+finds
+child
+reference
+count
+efficient
+swapping
+chance
+manifests
+chances
+survival
+age
+reduction
+brings
+leading
+split
+static
+region
+references
+result
+rewriting
+older
+a.out
+version
+loads
+elf
+flexible
+permits
+debugging
+executed
+linked
+downloads
+small
+statically
+functions
+resolving
+symbolic
+introduction
+retains
+fundamentals
+retain
+minix
+ext2fs
+stand
+extended
+proc
+motivation
+presence
+unixes
+huge
+rooted
+remotely
+networked
+machines
+numbers
+filesystem
+existing
+hierarchy
+contents
+hidden
+un-mounted
+un-mount
+issuance
+filesystems
+ext
+ext2
+xia
+umsdos
+msdos
+vfat
+smb
+ncp
+iso9660,sysv
+hpfs
+affs
+ufs
+future
+capable
+ide
+media
+treat
+linear
+collection
+translate
+cylinder
+head
+half
+remaining
+fat32
+granularity
+popular
+distributions
+originally
+primitive
+academic
+improve
+designed
+exteneded
+remy
+laboratoire
+masi--institut
+blaise
+pascal
+masi.ibp.fr
+ext-2
+permitted
+interoperate
+book
+maurice
+bach
+represented
+inode
+reading
+cat
+superblock
+super
+meta-data
+inodes
+stores
+attributes
+stamp
+pointers
+translates
+offset
+implemented
+resolved
+found
+links
+concept
+pointing
+pointed
+incremented
+decremented
+name1
+name2
+name3
+name4
+name5
+deallocated
+linkcount
+becoms
+impossible
+cross
+encounters
+replaces
+soft-link
+restarts
+softlinks
+absolute
+paths
+lead
+havoc
+degrade
+minor
+passed
+introduced
+carry
+knowing
+construction
+employs
+objects
+object
+addresses
+sequential
+belong
+buffer
+cache
+controller
+creation
+modification
+file-system
+describes
+super-block
+initializing
+returning
+descriptor
+contained
+descriptors
+e.g
+unlink
+original
+restrictions
+length
+indirections
+bsd
+fragments
+stored
+1kb
+kilo
+bytes
+2kb
+4kb
+sizes
+nix
+restricted
+maximal
+recent
+raised
+long
+reserves
+reserved
+recover
+easily
+fill
+attempts
+physically
+expedited
+groups
+attempted
+proximity
+distribution
+movement
+optimized
+acting
+inherit
+compression
+immutability
+semantics
+selected
+bit
+complex
+setgid
+subdirectories
+bsd-like
+synchronous
+updates
+metadata
+bitmap
+indirect
+synchronously
+strict
+leads
+poor
+performances
+target
+status
+clean
+unmounted
+re-mounted
+reset
+checker
+decide
+records
+errors
+inconsistency
+detected
+erroneous
+tests
+force
+apparently
+clean
+skipping
+dangerous
+intervals
+counter
+reaches
+forces
+fields
+periodical
+reached
+ignores
+tune2fs
+strongly
+influenced
+layout
+sector
+grp
+grp2
+redundant
+crucial
+informations
+piece
+factor
+contributing
+reliability
+structures
+replicated
+easy
+corrupted
+reducing
+distance
+reduce
+lists
+wasting
+very_long_name
+very_very_very_long_file_name
+ext3
+robust
+problem
+unduly
+e2fsck
+solution
+journaling
+scale
+sense
+extension
+shortcomings
+enhancements
+displays
+pretend
+explores
+notices
+parse
+generate
+interestingly
+wealth
+lot
+vendor_id
+authenticamd
+model
+amd-k6
+stepping
+mhz
+fdiv_bug
+hlt_bug
+f00f_bug
+coma_bug
+fpu
+fpu_exception
+cpuid
+vme
+pse
+tsc
+msr
+mce
+cx8
+pge
+mmx
+syscall
+3dnow
+k6_mtrr
+bogomips
+properties
+moment
+grouped
+executables
+held
+human
+readable
+agnostic
+internals
+interact
+black
+concerned
+sits
+exercises
+interacts
+low
+oddities
+peculiarities
+increasing
+obsolete
+great
+principal
+firstly
+manufacturers
+ship
+left
+reason
+proliferation
+market
+today
+development
+attached
+microwave
+oven
+turntable
+motor
+implies
+runtime
+pluggable
+eventually
+exception
+entities
+peripherals
+classes
+char
+stream
+ports
+typed
+column
+crw-rw-rw
+apr
+ptya0
+ptya1
+ptya2
+ptya3
+applicati
+subsystems
+classic
+brw-rw
+aztcd
+bpcd
+fd0
+handles
+eth0
+experimentation
+learn
+cycle
+testing
+nodes
+separated
+locate
+array
+points
+bother
+distinguish
+quantities
+utmost
+increase
+simplified
+incompatibilities
+favour
+grep
+register_chrdev
+unsigned
+const
+struct
+file_operations
+fops
+signifies
+successfully
+registered
+functionalities
+question
+arises
+permanently
+experimental
+60-63
+120-127
+240-254
+shipping
+approach
+searches
+unused
+assigns
+story
+mknod
+answer
+job
+removing
+unregister_chrdev
+pass
+mode_t
+f_mode
+loff_t
+f_pos
+f_flags
+blocking
+asynchronus
+methods
+sections
+private_data
+personal
+states
+sruct
+dentry
+f_dentry
+writer
+members
+taggd
+tagged
+expanding
+compatibility
+solved
+ansi
+gnu
+tags
+positional
+myfops
+myopen
+myclose
+intilization
+oblivious
+removed
+llseek
+,loff_t
+ssize_t
+,char
+,size_t,loff_t
+,const
+readdir
+,void
+,fill_dir_t
+poll
+,struct
+poll_table_struct
+ioctl
+,unsigned
+int,unsigned
+mmap
+vm_area_struct
+map
+fsync
+pending
+advance
+valid
+respect
+non-blocking
+orders
+slower
+modern
+byte
+thousand
+years
+foolish
+waiting
+arrive
+impact
+throughput
+delays
+paramount
+importance
+freed
+ready
+sleep
+arrives
+awakened
+allowing
+asynchronous
+indicating
+flag
+o_nonblock
+filp
+cleared
+examined
+wait
+queue
+wait_queue_head_t
+event
+declared
+my_queue
+declaration
+init_waitqueue_head
+&my_queue
+intialize
+sleep_on
+puts
+non-interruptible
+sleeping
+forever
+interruptible_sleep_on
+awoken
+sleep_on_timeout
+queue,long
+timeout
+parameter
+measured
+jiffies
+interruptible_sleep_on_timeout
+wait_event
+queue,int
+condition
+wait_event_interruptible
+evaluates
+non-zero
+awakens
+interruptible
+wake
+occurred
+loop
+wake_up
+proccess
+wake_up_interruptible
+procccess
+undisturbed
+wake_up_sync
+wait_queue_head_t_
+wake_up_interruptible_sync
+reschedule
+runnable
+-eagain
+tells
+polling
+poll
+select
+historical
+prototype
+,poll_table
+describing
+notification
+asynchronously
+notify
+f_setown
+fcntl
+saved
+f_owner
+step
+enabled
+fasync
+means
+f_setfel
+delivery
+sigio
+interrupts
+programmable
+programmed
+distribute
+intelligent
+multi-processors
+nicely
+intel
+receipt
+acknowledges
+handlers
+handler
+caused
+api
+request_irq
+irq
+interrupthandler
+pt_regs
+unisgned
+dev_name
+dev_id
+requested
+bitwise
+orable
+sa_interrupt
+fast
+finishes
+quickly
+sa_shirq
+sa_sample_random
+entropy
+signify
+identifier
+signifying
+interrupting
+freeed
+free_irq
+irq,void
+meaning
+predefined
+jumper
+complying
+pci
+probe
+asked
+interrupted
+ideally
+announce
+helper
+probing
+probe_irq_on
+probe_irq_off
+processing
+degrading
+solve
+consuming
+safer
+halves
+tasklets
+tasklet
+safe
+consequence
+happened
+takelets
+declare_tasklet
+taskletname,function,data
+taskletname
+usigned
+tasklet_schedule
+&takletname
+interprocess
+similarity
+synchronize
+pipe
+url
+http
+animation
+networking
+interconnection
+framework
+stack
+routing
+error
+reporting
+reliable
+retransmission
+guides
+packets
+hosts
+built
+udp
+tcp
+disassembly
+cached
+decisions
+persistent
+forwarding
+base
+tag
+selection
+hands
+firewall
+chains
+chain
+real
+projects
+commercial
+dedicated
+fsmlabs
+rtlinuxpro
+lineo
+solutions
+ulinux
+lynuxworks
+bluecat
+montavista
+redhawk
+redsonic
+redice-linux
+adeos
+art
+kurt
+qlinuxrealtimelinux.org
+red-linux
+rtai
+rtlinux
+flavors
+believes
+efforts
+linus
+torvalds
+finland
+wanted
+university
+student
+drew
+inspiration
+prof
+andrew
+tanenbaum
+amsterdam
+teaching
+widely
+pc-based
+urban
+centre
+acceptance
+spirit
+attracted
+voluntary
+contributors
+regulates
+contributions
+evaluated
+quality
+google
+search
+practice
+broad
+category
+span
+pda
+cooperate
+node
+cluster
+assume
+pcs
+bootable
+player
+bios
+floppies
+guide
+red
+hat
+cd-rom
+hold
+dos
+ftp
+nfs-mounted
+insert
+.the
+graphical
+nofb
+frame
+expert
+rescue
+stage
+press
+key
+text-based
+word
+continue
+highlight
+button
+mouse
+workstation
+laptop
+custom
+scheme
+choices
+auto
+druid
+fdisk
+launch
+listing
+ability
+clicking
+recognized
+swap
+boot-loader
+grub
+lilo
+mbr
+dialog
+dual
+title
+rootnoverify
+hd0,0
+chainloader
+makeactive
+configuring
+click
+medium
+incoming
+time-zone
+prompted
+echoed
+packages
+spacebar
+reflect
+item
+installer
+boot-disk
+mkbootdisk
+eject
+rom
+test
+works
+detection
+20.2.1
+finishing
+boot-disks
+rebooted
+coming
+newer
+mandrake
+redhat
+7.x
+menu
+installations

@@ -1,0 +1,9 @@
+Disk file allocation based on the buddy system is covered in Koch
+[1987]. A file-organization scheme that guarantees retrieval in one access
+is described by Larson and Kajla [1984]. Log-structured file organizations
+for enhancing both performance and consistency are discussed in
+Rosenblum and Ousterhout [1991], Seltzer et al. [1993], and Seltzer et aL
+[1995]. Algorithms such as balanced trees (and much more) are covered
+by Knuth [1998] and Carmen et aL [2001]. The ZFS source code for space
+maps can be found at http://src.opensolaris.org/source/xref/onnv/onnvgate/
+usr I src/uts/ common/ fs/ zfs/ space_map.c.

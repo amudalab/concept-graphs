@@ -1,0 +1,487 @@
+
+[pic]
+
+
+Introduction To Problem Solving And Programming
+Lecture - 8
+Professor: Deepak Gupta
+In the last lecture we had talked about the expressions and operators  we
+had looked at  arithmetic conditional and logical operators we will
+continue the discussion today with operators which have  side effects
+(refer slide time 00:35)
+[pic]
+
+so far the operators that we have seen when an expression with the
+operators that are evaluated it results in a value but as the result of the
+evaluation of the expression the value of the variable of the variable
+doesn't change
+
+on the other hand there are certain operators that we will discuss today
+were the evaluation of the expression containing such an operator can also
+result in a change the value of the some variable these kinds of changes
+are called side effects and such operator are called operators with side
+effect (refer slide time 01:10)
+
+[pic]
+
+lets start with the very familiar operator the assignment operator we have
+already used   the assignment statement in all the programs that we have
+written so far you will be surprised to know that the assignment is
+actually a operator in c
+
+and it has two operands the left operand always has to be a variable lets
+the variable whose value has to assigned  and the right hand side or the
+right operand can be any arbitrary expression
+
+so what we  seen to evaluate the assignment operator we have defined the
+effect of evaluating such an expression in terms of what is the value of
+the expression as well as what is the side effect of the evaluating such an
+expression so an example
+
+consider  the expression x assigned e if we evaluate this expression what
+is going to happen is that the expression e gets evaluated to some value
+that value becomes the new value of the x that is the side effect of
+evaluating the particular expression and the value at was obtained by
+evaluating the expression e is also the value of the expression  thus the
+value of expression is the same as the final value of the x  which is the
+value of the expression e (refer slide time 02:27 )
+[pic]
+
+so lets see some example so consider the expression x assigned y minus two
+lets assume that y has value ten so when we evaluate the expression the
+expression on the right hand side y minus two gets evaluated which results
+in the value x and so the side effects of the special evaluation is that
+the value of x becomes eight as well as the value of the entire expression
+x is equals to y minus two is also eight
+
+as it is slightly more complicated example consider this expression z
+assigned x assigned y minus two we have to first evaluate the expression of
+??03:10 the equal to operator or the assignment operator has the precedence
+les than that of the minus operator we will see the complete list of
+operator precedence and  associativity slide later on and the equal to
+operator has associate right to left not left to right as in the case with
+the more  arithmetic operators
+
+so which means that the subtraction will be performed first and then the
+two assignments will happen and the assignment on the right  will happen
+first   because the associativity of the assignment is right to left not
+left to right and so therefore this expression is same as this bracketed
+expression
+
+first y minus two is evaluated that assigned to x and the resulting value
+of the expression x assigned y minus two is assigned to the vale z so when
+y minus two is evaluated  the value that we get of course is ten again
+eight again again in this case assuming that the old value of y was ten and
+that assigned to the variable x the value of x becomes eight
+
+now the value of this smaller assignment expression is also going to the is
+also going to be eight which is the final value of the variable x and that
+is the value that gets assigned to the variable z and so that also get the
+value of eight and the value of the over all expression also happens to be
+eight which is the final value of the z(refer slide time 04:41)
+[pic]
+
+
+now the reason we were able to use assignment a statement is a general rule
+in c which is that any c expression can actually be used as the statement
+by adding a semicolon after it so we just saw the expression x is y minus
+two if you add a semicolon after this then it becomes a valid c statement
+
+when we use the such a statement  the meaning is that the expression is
+evaluated and its value is discarded that the value of the expression is
+discarded so this makes sense this is useful only if the expression has
+certain side effect because it has no side effects only its value is
+important then it doesn't makes sense to use that expression
+
+as a statement because the value is  discarded anyway the most common
+example of course is the assignment statement which is which is very common
+in all c program and thus we understand now the assignment statement is
+actually nothing but an assignment expression followed by a semicolon which
+converts  into this statement
+
+so either side in such case the expression is evaluated and it value is
+discarded but whatever side effect happens as the result of evaluating the
+expression that ??05:58 so you can see clearly not useful to use an
+expression that has no side effects as a statement for example consider the
+statement x plus y semicolon
+
+now this statement itself is a valid c statement because x plus y is a
+valid c expression but this is quite useless c statement because the value
+of the expression x plus y is the target and the expression has no side
+effects so whether you have not quote such a statement in a program that
+makes absolutely no difference in the working of the program ok
+
+so we have now have to talk about type conversion or we move to the
+implicit type conversion in assignment expression the rules for type
+conversion in assignment are slightly different from those tat happened in
+the other arithmetic operator can so on
+
+so if you recall an operator  such that plus minus etcetera the rule was
+that as the two operand are of different type then the operand which is of
+lower type its value gets promoted or gets converted to the higher type
+
+in assignment on the other hand what happens is that regardless of which of
+the two types is lower or higher the value of the right hand operand always
+get converted to the type of the left hand operand because is that left
+hand the left hand operand is a  variable and it is into this variable
+where the value is going to get stored therefore whatever the value we get
+as the result of evaluating  right hand side operand must be converted to
+whatever is the type of the variable
+
+of course this may in general result in loss of information or accuracy for
+example suppose x is an integer variable and we have an assignment x
+assigned five five point two you know that five point two is an constant
+literal of floating point type and is a type therefore it is double (refer
+slide time 07:51)
+[pic]
+now the double type is higher than the integer type as we know but because
+of the special rule in assignment  the type of the expression on the right
+hand side is going to get converted to the type of the variable on the left
+hand side which means that the type of the expression five point two which
+is double is going to get converted to an integer before that the value is
+stored in the variable x
+
+so the variable x cannot be of course stored the value of five point two so
+when five point two double value is converted to an integer the fractional
+part is proper and the resultant value is of integer five and therefore
+that assign to the variable x
+
+so in this case what is happening  is the loss of information from five
+point two the original value what actually get assigned to the integer five
+so while using this kind of assignments where the two operands are of
+different types one has  to aware of this
+
+similarly is on the right hand side we happened to have long integer and on
+the left hand side we happened to have a variable of type simple int then
+the possible that the value of right hand side may not  actually exist in
+the in an integer if the value happens to be large and cannot ??09:13
+integer then what will happen is that some of the bit will get dropped out
+and the result will probably not the what we expect so one has to be
+careful in making such an assignment ok here is another example of the same
+kind (refer slide time 09:33 )
+[pic]
+
+so in this example x is an integer variable and y s a floating point
+variable and you have the statement y assigned x assigned seven point zero
+divided by five and of course that you know that  the slash operator has
+the highest precedence
+
+so the best things is  going to look some thing like this  the second
+assignment is going to be evaluated first because the assignment operator
+associate from right to left and not left to right so the division is
+carried out first now in division one of the operand is of size double
+seven point zero other is int
+
+if you remember the rule the value five get promote to a double that
+becomes five point zero and we divide seven point zero by five point zero
+that will give you the value one point four
+
+now if you look at the assignment which is carried out next the left hand
+side x is of type int where as the expression on the right hand side has
+the type double and the value one point four so what is going to happen in
+this case
+
+according to the rule for the assignment is that the value on the right
+hand side is going to get converted to an integer which means that the
+fractional part  will be removed so one point four will that converted
+simply to one so the value that x gets is one and the value of the over all
+expression x is equal to seven point seven point zero divided by five is
+also one and the size is an integer
+
+now the first assignment y assigned rest of it it happens now the right
+hand side of this expression has already been evaluated and that has been
+evaluated to the value one of the type integer on the left hand side we
+have the variable y which is of type float so the value one of the type
+integer  is going to get converted to float that becomes one point zero
+
+so y get the value one point zero so in this example both x and y get the
+value one  on the other hand suppose the assignment was x assigned y
+assigned seven point zero divide by five so what is going to happen in this
+case this assignment is going to happen first now seven point zero divide
+by five is evaluated it is again evaluate to double value one point four
+
+now y is a float the double value one point four gets   converted to the
+float value one point four and that's the value that get assigned  to the
+variable y so y get the value one point four and the value of this over all
+expression is one point four of type double of type float and then this
+assignment happen
+
+now where the left hand side is of the type integer and the right hand side
+is of the type float  so the right hand side value gets converted to an
+integer so one point four when it get converted to an integer  the
+fractional part is dropped of and the resultant value is one so the value
+of x becomes one and of course that also be value of the over all
+expression
+
+so in this case y would get the value one point four while x could get the
+value one ok lets now look at some more operators which are similar to
+assignment they all have side effects and in fact can be described in terms
+of the assignment operators there are five of the plus equal to minus equal
+to star equal to slash equal to and percent equal to and essentially these
+combined assignment where some arithmetic operations like plus or minus or
+multiplication notification  are remainder and so on (refer slide time
+13:17)
+[pic]
+of the size first four can be used with fourteen points as well as the
+integer quantity while the sixth one can be used only with the integer
+quantity
+
+ so in all these cases again  the left hand operand must be a variable and
+the right hand operand can be any can be any expression so for example lets
+look at an expression x plus equal to e this is exactly the same in terms
+of both value as well as the side effect as the expression x assigned  x
+plus e
+
+therefore the side effect is to add the value of e to the current value of
+x and the new value of x is the value of the expression and the same with
+the case with the other operators that we have  listed here the only
+difference is that instead of this plus this would be replace with
+subtraction multiplication division or remainder operation as the case it
+might be another two commonly used operators in c are   the increment and
+decrement operator  (refer slide time 14:11)
+[pic]
+
+
+these are denoted by plus plus and the minus minus symbol there should not
+be any space between the two pluses or the two minuses  both are unary
+operators that is there is only one operand and the operand must be a
+variable and the interesting this is that both can be used as the prefix as
+well as the postfix form but the meaning in the two cases is different
+prefix form mean that the operator comes before the operand and the postfix
+means that the  operand comes before the operator so lets see what these
+operators really mean
+
+lets assume that x is a variable of type int with some initial value x zero
+so to look at the expression x plus plus the value of the expression is x
+zero and the side effect is to increment the value of x by one that is the
+new value of x is the old value of x zero plus one
+
+so this is the postfix form of the plus plus operator in the prefix form
+the value of expression is x zero plus one and the side effect is the same
+which is to add one to the whole value of x so the new value of x become
+the old value that is x zero plus one
+
+so the only difference really in these two is the value of the overall
+expression one way to understand this is that the in the postfix form we
+could say the value of x is used as the value of the expression and then
+the side effect happens that is the value of x then gets incremented once
+the value of the expression can be computed
+
+where as in the prefix case here the value of x first gets incremented that
+is the side effect first happens and then the new value of the x is used as
+the value of the expression so to clarify these operators lets take some
+examples
+
+you can see the that the minus minus operator is exactly the same as the
+plus plus operator except that these pluses or replace with the minuses
+that is the side effect is to decrement the value of x by one and the value
+of the expression is either the old value of x or the new value of x which
+will be the old value of x minus one ok
+
+so here are some examples to clarify this  lets assume that x and y are
+integer variable can be initial value of y is five so let us assume that
+the expression x is equal to y plus plus is evaluated so now if you look at
+this expression y plus plus the value of the expression is same as the old
+value of y right
+
+because this is the postfix form of the plus plus operator so the value is
+same as the old value the value of the expression y plus plus is the old
+value of y which is five and the side effect is to increment the value of y
+by one
+
+so now what get assigned into the x is the value of the expression y plus
+plus which  is the old value of y which is five and so x gets the value
+five while x while gets the value six after the entire expression have been
+evaluated (refer slide time 17:44)
+
+
+[pic]
+now on the other hand if we had evaluated the same declaration that the
+expression x is equals to plus plus y now what is going to happen is that
+plus plus y is evaluated it the value of y is increased by one it becomes
+six and the value of the expression is the new value of y which is also the
+same and so therefore the value that tx gets in this case six and not five
+
+lets consider some more trickier example look at this program segment
+(refer slide time 18:13)
+
+[pic]
+
+
+x and y are declared to be integer variable and y has the initial value ten
+and we have the assignment statement x assigned plus plus y plus minus
+minus y the question is after the evaluation of the statement or after the
+execution of the statement what are going to be the variables x and y now
+with respect to y you can see that there is one increment and one decrement
+happening to the value of y which means the value of y  is going to be ten
+it is going to be remain ten
+
+because ten plus one becomes eleven and ten minus eleven minus one again
+become ten regardless of the order in which this two expression two sub
+expression plus plus z and minus minus y get evaluated the final value of y
+will be ten but what about the value of x the value of x is stands out will
+vary depending on which of these two expression is evaluated first right
+note that plus plus and minus minus  both have high precedence higher than
+that of the binary plus operator and higher also than the precedence of the
+assignment operator
+
+
+so therefore these are going to get evaluated before the plus operator  but
+if you recall the c language doesn't satisfy or a plus operator which of
+the two operand is evaluated first and as turns out in the  example the
+answer for the final value of the x will be different depending on which of
+the two is the case
+
+so lets assume that plus plus y happens first so a plus plus y is evaluated
+first then what happen after the evaluation of this expression the value of
+y becomes eleven and the value of this entire expression plus plus y this
+also eleven because remember this is pre increment that is the increment
+happens before the value of the expression is computed
+
+so the value of this expression is eleven and y has also changed to eleven
+and then the expression minus minus y gets computed which means that y gets
+ incremented from eleven to ten and the value of the expression minus minus
+y also is  the final value of y which is ten which means that x gets
+assigned eleven plus ten this expression get evaluated to the eleven and
+this expression is gets evaluated to ten so the result is twenty one
+
+on the other hand suppose minus minus y was evaluated first so indexes it
+will result in the value nine and then plus plus y is evaluated to the
+result ten the final value of x becomes ten plus nine that is nineteen
+
+so in this case you can see the final value of x will depend upon  those or
+this expression get evaluated first and the c language does not specified
+as the which one will happen the step for the two operators these two
+exceptions we have noted in the last lecture will come back shortly except
+for these two operators (refer slide time 21:23)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+????????????21:26
+c does not specify the order which the operand of the particular operator
+are evaluated  this is left to the compiler  which means that some compiler
+may evaluate the second operand first and some compilers may evaluate right
+operand first and if you are using an expression  which the final results
+can be vary depending on this order depending on the order in which the two
+operands are evaluated then what that means is that depending on the
+compiler that it being used the reverse might be different so construct
+like the one like we saw just now plus plus y plus minus minus y  they are
+inherently ambiguous they can be   interferated in two different way which
+are not the same and therefore we must avoid them because our influence is
+only one of these two possible interferation but on different machine on
+different compiler the same program may actually give a different result
+and so there fore these expression and these concepts should be strictly
+avoided for the logical and and logical or operator the c language does
+define the order in which the two operand are evaluated as the matter of
+fact be left operand is always evaluated first and the right operand is
+evaluated only if the result of the expression cannot be computed based
+only on the value of the left operand so if you remember that for logical
+and operator is the first operand the left operand evaluate to ??22:55 then
+the entire expression must evaluate to false because for it to evaluate to
+both the operands must be true so the first operand evaluates to false then
+the second operand will not be evaluated at all and if the second operand
+has happen to have some side effects then those side effect will not takes
+place simply because the second operand does not get evaluated at all and
+similarly for the logical or operator if the first operand evaluates to
+true then regardless of the value of the second operand the entire
+expression will get the value true and therefore the second operand will
+not get evaluated at all and again if it has side effects  then those side
+effects will not takes place therefore again these operators ??23:35 has to
+be careful as what the final value of the various variable are going to be
+lets take the simple example here x is initialize to ten and y is
+initialize to twenty and we have an if condition if x plus plus or y plus
+plus so this is the logical or operator what going to happen is that first
+operand which is x plus plus is going to evaluate first now the value of x
+plus plus will be ten this is post increment and of course the side effect
+is the value of x becomes the eleven since the value of this expression
+comes out to be ten which is non zero and therefore considered as true so
+therefore second operand be not evaluated at all that is the expression y
+plus plus will not get evaluated at all so and the entire expression will
+result in the value true because this first operand is itself true so which
+means that at the end of the evaluation of the entire expression the result
+will be true the value of x will become eleven and the value of y will
+remain twenty on the other hand is inside of the or logical or operator we
+had the logical and operator then what should have happened is that x plus
+plus is evaluated that results in value ten the x is incremented to eleven
+but since this is true the second operand must also be evaluated because
+the second operand turns out to be false and the over all result to be
+false and the second operand turns out to be true the over all result will
+be true  y plus plus is also get the value  so it is in that case so y plus
+plus id of course result in the value of twenty and y would get incremented
+to twenty one so since both are truth over the result would be true  if
+both x and y would be incremented  in that case similarly the order of the
+evaluation of the argument for a function call is not specified by c  you
+know that we used the several library functions and most of our program and
+when we pass parameters for  arguments to be functioned the order in which
+these arguments are evaluated is again not specified by the c language its
+upto the compiler  so lets see an example so here x has the x is the
+variable of the type double with the value twenty  four the printf
+statement print two double number the percent f is used t printf an double
+quantity the first quantity is x the value of the expression x plus plus
+and the second quantity is the value of the expression square root x now
+just I said the c language does not specify in what order these two
+operands re going to be evaluated now suppose the argument x plus plus  is
+evaluated first which mans that x gets incremented to twenty five and the
+value f these expression is twenty four and so and then afterwards the
+square root x is computed now here the square root of twenty five will be
+computed because x is already become twenty five so which will of course
+result n the value five and therefore the output will be twenty four point
+zero for this parameter followed by five point zero for this value on the
+other hand the square root x has evaluated first then that will be the
+square root of twenty four which will be something like four point eight
+nine seven and then suppose the second parameter got to be evaluated that
+could again result in the value twenty because the evaluation of the first
+expression didn't have any side effect x remains twenty four so when these
+gets evaluated again the value is twenty four and the side effect is to
+increment x  to make it twenty five so the out put would be twenty four
+point zero followed by  four point eight nine eight nine seven and not five
+point zero ok so we have introduced the many new operators in this lecture
+so where is the some body of the precedence and associativity with their
+own as usual the precedence is decreasing from top to bottom the highest
+precedence operator are the unary operator we had seen logical not the
+unary plus and the unary minus in the last lecture and the increment and
+the decrement operator are the two new unary operators that we have seen in
+this lecture so all these unary operators have the same precedence and they
+associated from right to left the come the arithmetic operations
+multiplications  division remainder associativity is left to right then the
+addition subtraction again the left to right then lass than less than equal
+to grater than greater than equal to left to right again then equals and
+not equals left to right the logical AND and the logical OR both as left to
+right and finally the assignment and the assignment like operators like
+equal assignment  plus equal minus equal star equals and so on  here we
+will little exercise at behind of this lecture please look at this program
+make a note of it and try to find out what it does so you see that the
+first part is clearly split of ?? 29:06 we declare two variable n and p p
+is initialize to one the value of n is read from the terminal while n is
+greater than one the loop is executed and the loop bodies p star is equal
+to n minus one semicolon note that the star equals to is an operator and
+this holds the entire thing  p is an expression and therefore we putting
+the semicolon after it we can use it as the simple c statement so try to
+figure out what this program is doing you will find that it does something
+very familiar so at the as a caution  at the end of the lecture you have to
+introduce to many interesting operators for side effect and as you start
+using these operators we will find use of these operators can make the
+program very compact and elegant in many cases however over use of
+operations is not advice able because if you use these operators too often
+you tend to make the expression very very complicated and hard to
+understand that will mean that the program itself become very hard to
+understand  and therefore of course   ??30:19 try to balance between
+elegance and understandability
+

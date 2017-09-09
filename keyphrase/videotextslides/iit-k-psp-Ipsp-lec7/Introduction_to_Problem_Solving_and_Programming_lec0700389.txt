@@ -1,0 +1,8 @@
+Row 1::Height 2::type hierarchy
+Row 2::Height 1::from higher to lower: long double, double,
+Row 3::Height 1::float, unsigned long, long, insigned int, int
+Row 4::Height 1::integer operands of type smaller than int are
+Row 5::Height 1::converted to type int. thus any arithmetic
+Row 6::Height 1::operator results in a type of at least int
+Row 7::Height 1::thus the experssion 5/2.5 has type double and has
+Row 8::Height 1::value 2.0

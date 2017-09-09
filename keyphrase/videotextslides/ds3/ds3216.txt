@@ -1,0 +1,12 @@
+Row 1::Height 3::the vector adt
+Row 3::Height 1::a sequence s (with n elements) that supports the following
+Row 4::Height 1::methods
+Row 5::Height 1::elematrank(r): return the element of s with rank r; an
+Row 6::Height 1::error occurs if r<0 or r> n-1
+Row 7::Height 1::elematrank(r): return the element at rank r with e
+Row 8::Height 1::and return return the old element; an error condition occues if
+Row 9::Height 1::r<0 or r>n-1
+Row 10::Height 1::insertatrank(r,e):insert a new element into s which will
+Row 11::Height 1::have rank r; an error occurs if r<0 or r>n
+Row 12::Height 1::removeatrank(r): remove from s the element at rank r;
+Row 13::Height 1::an error occurs if r<0 or r>n-1

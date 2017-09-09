@@ -1,0 +1,9 @@
+Row 1::Height 2::physical query plan operators
+Row 2::Height 1::table scan operator
+Row 3::Height 1::scan and return an entire relation r
+Row 4::Height 1::scan and return only those tuples of r that
+Row 5::Height 1::satisfy given predicate
+Row 6::Height 1::table scan: reading all blocks of a
+Row 7::Height 1::sorted data file in sequence
+Row 8::Height 1::index scan: use an index to read al
+Row 9::Height 1::blocks of a data file in sequence

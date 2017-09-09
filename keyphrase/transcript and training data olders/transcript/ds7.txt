@@ -1,0 +1,682 @@
+
+in the last class we looked at definitions of trees we saw what a tree was what a binary tree is what is a complete binary tree what the height of these things are 
+today we are going to continue with our discussion 
+
+
+
+1.23
+on trees in particular we are going to talk of what are called tree walk or tree traversals 
+so a tree walk is is a way of visiting the nodes of a tree in a specified order 
+and there are two different walks that we ill first consider one is called the pre order walk the other is called post order walk 
+so in a pre order walk what happens is that you first visit process each node and then you go process it children okay 
+ill show you soon examples of follow this 1.57
+
+
+
+
+
+clearer 
+in a post order you will first process all the children's or visit all the children and only after you have done that would you process the node okay 
+so lets see example which you clarified [doubt]
+some problem with my 
+
+
+
+
+
+2.37
+some looking at examples preorder tree walks here 
+so suppose you have so recall that we said that um book or a paper 2.46
+
+
+
+
+
+we can construct a tree out of it tree we can look at the organization of a book as a tree 
+so or lets say result such paper 
+
+
+
+
+2.53
+so you have the paper it has a certain sections so the first section lets says the title 
+second section is the abstract discuss what is their in the paper and then you have section one section two section three and then at the end of it you have references you know what are the books saw the other papers that the this particular publication 3.10
+
+
+
+
+
+
+
+as a reference    
+section one let say has two such sub sections section “one point one “ and “one point two” 
+
+
+
+
+
+
+3.17
+section two has three sub sections section three two sub sections so on and on right 
+now when you start reading the paper when you read the paper this is the order you would go in right
+suppose your reading the paper end to end so first you will go to the title read the abstract then you will look at start with section one section sub section “one point one” there “one point two” so on and on right 
+if you were to think of the listing  as the table of contents if you were to think of a book and how the table of contents of the book are listed right
+so the way the table of contents are listed 3.52
+
+
+
+
+is that first you have the chapter and then are listed the um sections within the chapter 
+then the next chapter then the sub section within the chapter so on right 
+so if i were to look at the 
+
+
+
+
+
+
+4.04
+this as the tree 
+these as the nodes of tree in the first node that we are referring to our accessing is this node one right 
+then we go to the this node two 
+then we go to three 
+then we go to four 
+then five
+then six 
+and after we done with six in a table of contents you will have seven and eight nine ten then eleven twelve thirteen then fourteen [noise] 
+yeah 
+this is also called the preorder traversal of a tree right 
+and pseudo code for pre order traversal would look something like in this 
+if i have to do pre order traversal of an node v in a in the tree so to begin with i would call preorder traversal at the root 
+4.49
+
+
+
+
+
+of the tree then i would say first visit the node 
+
+
+
+
+4.52
+so visit here is a generic term we will use visit very often all it mean is that i am doing some computations that node in this particular case if i were listing out the the book as table of contents then visit would correspond to print the title print the heading print the title of that node right 
+so for instance each node corresponds to a section or or some such thing then this would correspond to same print out the name of the section right 
+and then once you done that then you go to each of the children nodes and repeat the process there 
+repeat this same process there on each of the child nodes right
+because this tree could be arbitrary d 
+i could this section subsection “one point one “ could be as could be three sub sub sections  “one point one point one “ one point one point two “ and so on and on right
+if you were to do a pre order traversal then you come to one then you would come “one point one “ then you would go to “one point one point one” “one point one point two “ “one point one point three “ and only then would you go to “one point two “ right 
+that's the need for this kind of a recursive traversal 
+so what your doing here 
+you first first visit the node then visit all its children 
+so these are the six children of that node 
+so we are saying visit this what does visit correspond to well does it have any children so it just means visit this node 
+this correspond to visit  this node 
+this corresponds visit this node and then visit its children 
+so that's what we are doing visit its children and then the next child yeah and so on and on 
+so this is what to called a preorder traversal 
+this is different from so this this i gave you the example its like a reading a document from beginning to end 6.42
+
+
+
+
+6.43
+yeah 
+now we could also have whats called a post order  traversal 
+in a post order traversal recall i said what we are going to do is i am going to visit the node and at the end 6.53
+
+
+
+
+we ill first visit its children and only then we would visit the node 
+okay
+so lets say i  have a directory structure like this okay 
+this is my root directory courses 
+
+
+
+
+
+7.05
+in that  i m there are two this is an example from the book 
+there is two courses here 
+cs 016 cs252 and then in there are two sub directory there is a file called  grades within this sub directory there are three files within this sub directory there are three files and so on and on 
+this is the directory structure okay 
+now suppose i want to do compute the total space occupied by this file system lets say this this entire directory okay now what would i do well i would compute the total space occupied by this subdirectory and then i would add these two up add this node to obtain the total spaces required here yes 
+so in some sense the computation that i am doing i am actually visiting this node or doing some computation on this node after having done the computation at two children nodes 
+after having computed the total spaces required by the sub directory and after having computed total spaces required by [doubt]  
+only then  i am my doing this   right 
+in a post order traversal what you do is that for every child of the node when you do a post order traversal of a node v for a every child of the node first going to perform a post order on that 
+so in this example post order here corresponds to finding the total spaces occupied by that sub directory 
+so to compute the total space is occupied by this directory 
+we are first going to compute the total spaces occupied by this sub directory [noise] the total space occupied by this directory and having computed that you are then going to compute the total spaces required by this directory 
+so in some sense the order in which computation is done is is reverse from the pervious example 
+right and in fact this this is the this is the order in which the disk usage command unix if you ever have use this particular command in unix what it does is that if you typing this command in a directory it tells you what is the total spaces occupied by the various sub directory in their 
+so it the way listed out is if you were to type the disk usage command in the sub directory it was first going to list out the total spaces occupied in this directory then the total spaces occupied in this directory and then eventually at the end it list out the total spaces required here because it would have computed the only after it had done this computation and how does do this computation in a recursive manner that is to compute the total spaces required by this directory its first going to compute the total spaces required here 
+then the total space required here and then had them up to the total space required here 
+yeah
+so that would be  apost order traversal 9.57
+
+
+is this clear [noise] yeah [noise] okay 
+so we are so your question is which child hood would we visited first 
+
+
+
+
+
+10.06
+we are looking at ordered trees [noise]
+so there is notion of a first child second child third child fourth child 10.11
+
+
+
+
+
+so the first child is visited first second next and so on [noise] yeah
+so if you drawn the the trees in such a manner such that the first child is at the left is leftmost that's we would say the leftmost child is visited first after the one right so 
+so it depends upon how you drawn your trees right
+so for binary trees so so um what i just shown you was traversal was in general trees 
+you it's a preorder first visit the node then visit the childrens nodes 
+in postorder visit the children node then visits the nodes 
+lets look at how this specialized case of binary tree right 
+
+
+
+
+
+
+10.54
+so in a preorder traversal what we have seen 
+so v is in node 
+if v is not null if v is null then there is nothing to be done 
+if v is not null then in a preorder traversal we are first saying visit to be 
+visit is some generic computation we do not know what it really is right 
+it depends upon what your particular application 
+so first say visit then do a pre order traversal on the left  child and then do a pre order traversal on the right child 
+so note that this is a recursive procedure right
+we are calling order within the procedure here itself 
+how does this work
+this work by making the call to itself right when we are doing a preorder traversal on the left child and another right child 
+the difference between pre order and post order here is that visit now comes at the very end 
+first you do a pre order traversal on the left child 
+then you do a pre order traversal on the sorry post order traversal on left child then you do a post order traversal on the right child yeah and then eventually you do visit 
+lets see if you understand 11.56
+
+
+
+
+11.57
+lets look at an example [noise] right 
+this is my tree 
+it's a binary tree 
+i want you to tell me what the pre order and post order traversal of this tree is 
+what we are doing when you visit a node is that we just printing out the contents of the node right 
+so lets first look at pre order [noise]
+what do you think be the first thing get printed we are doing a pre order traversal [noise]
+this is the root a right 
+so we come here we printing then we have to go do a pre order traversal left sub tree 
+so when we do a pre order traversal of the left sub tree we are going to come to the root of the left sub tree and first print the node
+first visit the node visit corresponds to printing the content we will just print it out right  b 
+then we ill go to the left sub tree left sub tree is c 
+so we ill  come here will look at the root node first visit the node visit the node here means printing contents we will print c then we try to go to its left sub tree but its left sub tree is null yeah there is nothing there 
+so then we go to right sub tree which is also null nothing to be done 
+so now we are done with the preorder traversal of this guy 
+so where do we go now to the right sub tree because first we went to visited the node we did a pre order traversal of the left sub tree then we did a pre order traversal now we have to do a pre order traversal of right sub tree which means that first visit the node here which is d then we go left f then again we try to go to left null go right null nothing to be done then we go to g and now we are done with the pre order traversal of this sub tree so we are done with a pre order traversal of the left sub tree we are done with a pre order traversal of the right sub tree which means we done with the pre order traversal of the entire sub tree yeah 
+we are done with a pre order traversal 
+so now we would go to the right sub tree 
+right sub tree has only e in it 
+this will be the pre order traversal of this tree 
+any questions here 
+is it clear to every one okay 
+lets do a post order traversal right 
+which you think it's a first node that would be printed [noise] c 
+why c is the right answer lets see 
+so we come to here to do post order traversal so this will be printed at the very end after i have done post order traversal of this and post order traversal 
+so ill first try to do a post order traversal of this 
+now when i try to post order traversal to this i come here 
+so first i will do a post order traversal of this then i will do a post order traversal of this then print this node 
+so i have to come and do post order traversal of this 
+for doing that i will first do a post order traversal of its left child which is null nothing to be done 
+i do a post order traversal of its right child null nothing to be done
+so i am ready to operate the content of the node 
+so the first thing you that you will get printed is c 
+now i am done with the post order traversal here 
+so now i come and do the post order traversal of the right sub tree to do a post order traversal of the right sub tree 
+once again come to the root here
+i first do the post order traversal of this left sub tree 
+then post order traversal of this right sub tree and then print this content
+so post order traversal this would  it's a single node [noise] will just be f 
+so a post order traversal this would be g and then i would print the content of this which means d [HINDI] what will be print now 
+so we have done the post order traversal just we have done the post order traversal so we can now print this node so we will print d 
+so now we have done with post order traversal of this 
+so we go to the right sub tree do the post order traversal here which means which print e and then we done with the post order traversal here we done with the post order traversal here so we can now print the root which is a so this would be the post order traversal is this clear to every one yeah 
+how the procedure works okay good 15.58
+
+
+
+
+
+
+15.59
+so one use of post order traversal can also be in so i am showing an another example for evaluating arithmetic expression  right 
+so this is an arithmetic expression you can we want to evaluate this expression 
+so how does one evaluate expressions well 
+this is minus 
+so in essence we have to compute what the value of this quantity is what the value of this expression this sub expression yeah this corresponds to sub expression so you have to compute value of this sub expression 
+we have to compute what the value of this  sub expression right 
+whatever values we get then take the difference that will be the value the entire thing 
+so as you can see its like a post order traversal we have to compute first value of this then the value of this and then take the difference which is the operator sitting in this node and how do i compute value of the well i have to compute the value of this left sub tree i have to compute the value of this right sub tree and then do the division because that [doubt]
+yeah 
+so we can right a procedure something like this suppose i say evaluate the expression corresponding to v is a node let say this root node here i say evaluate this 
+so v is a leaf then then i just return the variable stored v because that's the 	value 
+the leaf corresponds to numbers in this expression right else if v is not a leaf then that means we are some internal node yeah 
+so to evaluate the expression corresponding to this node i have to first evaluate the left 
+so let say evaluate  v dot left child this arrow should be the other direction so x lets say x gets the value of that y get the value of right child right when i evaluate on the right child and if o is the operator then i just compute x o y whatever that operator o is right
+and return that value that will be the value of expression that corresponding to node v [noise] 
+so this is pseudo code of course but i hope you understand what i am trying to say here 
+so essentially it corresponds to this is like a post order traversal small modification question [noise] 
+
+
+
+
+
+yeah so we are not going to be addressing that problem 
+so the problem of generating this tree given a arithmetic expression  has to you know have to incorporate the priority rules to be generated such a tree 
+so will not worried about that for now right 
+we just looking at traversal given such a tree how you can evaluate the tree expression correspond to this tree [noise]  18.52
+
+
+
+
+
+18.53
+so we seem for a binary tree we seen a preorder traversal we seen inorder traversal 
+pre order traversal and post order traversal there is a third order kind of traversal which is called an inorder traversal 
+so recall that pre order traversal we visited the node first then we went to the left then we went to the right 
+in a post order traversal we first went to the left went to the right then we visited the node 
+so the third possibilities we just visit then node between the visits to the left and the right right
+there should be an and between the visit to the left and right sub tree 
+so pseudo code for inorder traversal [doubt] following 
+so if v is null we just get out else we first do an inorder on the left child then we visit the node and then we do a inorder traversal right child right 
+so these are the only possibilities these are threes binary trees right 
+so whether you first go to the left where do you visit the node either you visit it before  you visit both the left and the right or you visit it after you visit both the left and the right or you visit it in between visits to the left [noise] these are the possibilities these are the traversals that are known 20.06  
+
+
+20.07
+so lets just look at an example and see that i have understood inorder traversal right 
+so which is the first node [noise] a 
+so first in order to do a traversal we come here we first do an inorder traversal of this guy of this left sub tree then we come here and then do an inorder traversal of the right sub tree 
+so to do an inorder traversal of the left sub tree will come here we first do an inorder traversal of the left then the right and then we will print the content 
+to do an inorder traversal of sorry first the left then we will print the content then go right 
+so do an inorder traversal this well this an single node 
+so it corresponds to printing c out right 
+so that's the first thing we ill print 
+then we ill printing the content of this which is will be b and then we will have do an order traversal of this right sub tree 
+right sub tree inorder traversal 
+so once again we ill first printout f then d and then g and now we done with the entire inorder traversal of right sub tree 
+so we will now printout  a and eventually we will print out e right right that would be the inorder traversal of this tree [HINDI] traversals priority given 21.30
+
+
+
+
+
+21.31
+so there is a another way of traversing a tree that's called a eulers rule right 
+suppose this is a tree corresponding to an arithmetic expression and this tours okay 
+so the tour is basically the drawn in blue here right 
+so we start from here keep going down  keep going down when we hit a leaf we go up to his parent go to the right sub tree right and so on and on okay
+so its it's a generic traversal of binary tree and all the three traversals that we seen pre post that inorder traversal we can be viewed at a special cases of eulers rule right
+so each node is basically getting visited thrice why because once you are coming like this then other time we are going like this touching this node lets say third time we are coming like this and touching this node right 
+so three times we touches any node 
+except perhaps the  nodes where you can say that perhaps we are you can account this only once or thrice or what ever you want 
+but every internal node will be touch thrice yeah 
+i should actually qualify every internal node of degree which has two children 
+if the node has only one child then you will touch it only twice okay 23.10
+
+
+23.12
+
+so suppose this this is the arithmetic expression this is tree corresponding to set an arithmetic expression i want to print this arithmetic expression out with parenthesis right 
+i want to draw the parenthesis  print out in this manner 
+okay 
+so i can do an euler walk this thing 
+so before [noise] i so suppose i am here 
+before i start on the left sub tree ill print an left bracket then before i start on the left sub tree when i finish with the right sub tree and ill print the right bracket 
+right this corresponds to taking this path up going up like this and when i am coming like this and touching this node ill just print out the content of the node understand what i am saying 
+so recall that every node was  visited thrice 
+so once when i am visiting it  from the left then essentially i going to print bracket when i am touching it from the right essentially print the right bracket and when i am touching  from below i am going to print the content of this node yeah 
+if you do that then you will get exact this yes 
+first ill touch this node from left so ill print first bracket then touch this node on the left ill print other left bracket i touch this node on the left i print another left bracket i touch this node on the left another bracket 
+so i get four bracket to begin with then i come to this node 
+for leaf ill just print the content of the leaf and ill do nothing else just print three then i am going to touch this node from below i am just going to print a star or a multiplication right 
+then i come at a touch it from the left print a left bracket then i come here one so on and on right 
+so you can think of this as essentially printing out the arithmetic expression some kind of euler walk  on this tree 25.09
+
+
+
+
+so we can actually 
+
+
+
+
+25.16
+right a generic method for tree traversal and then specialized it for whatever particular application you have whether you want to do pre order or post order inorder traversal or any such a thing right 
+so we ill we have so this is just small example 
+so you want to do you want to traverse this node at specified at  the position 
+so if this an  external node then you will lets say called this method called external right 
+you not done anything here just specified certain method left external is a method that you will this will invoke if the node that you trying to traverse is an external node yeah an external node is same as a leaf node 
+so if it's a leaf node then that's the method you invoke when you visit the node you touch the node from the left yeah then you will invoke this method 
+here you continue with the left child when you touch the node from below you will invoke this method then you continue with right child then when you touch the node right you will invoke this method right and now you can specify what these methods are yeah when you are 
+so by specifying these methods you can create you can create the traversal of choice you can specialize this binary tree traversal the generic tree traversal yeah 26.50
+
+
+
+
+so this is an abstract class if you if you go want in to java details this is an abstract class which means that these methods in particular in result in external external is also specified in it result external left below right these are left unspecified right when in an class you left you leave certain methods unspecified then it will become abstract class because you cannot really create object of that class 
+but then you can at some point specify those methods right 
+and in that manner create a sub class sub class of this class which specifies these methods and in that manner specializes this generic tree traversal procedure 
+this is a generic tree traversal procedure 
+so if i were to specify left below and right in an certain manner then i could get a method i could get a class for printing out arithmetic expressions let say yeah 27.55
+
+
+
+
+so let see [noise] left result was trying to store  you know what result was  this is just so when i go go from the left child when i come back from the left child may be i compute a certain result right
+this could be utilize used for instance when we in that example of disk usage right we want to compute  what is the total space occupied by that directory right
+so we compute the space required by let say the left the left child 28.33
+
+
+
+directory in the left child corresponding to the left child compute the space required by the directory corresponding to right child 
+so those when we computed that those could be stored in r dot left  result r dot right result and then we compute the sum
+
+
+
+
+
+28.48
+that would be your final value 
+that would be the value return 
+okay 
+so let say just see how to specialize this our printing arithmetic expression example 
+so recall that if the node is a leaf node then all we said was that we are going to print the content of that node yeah 
+so thast what we are saying just print out the element in that node p is a position just print out the element in it that node what ever is the element there 
+when we touch a node from a left we said just print out a left bracket so that's what we are saying just print out the left 
+then we touch a node from below we just said that whatever is the operator in their just print at out that exactly what we are doing 
+when we touch it from the right print out the right bracket 
+so once i have specialized these methods in this manner 
+this becomes print traversal 
+this is the class which is extending binary tree traversal and when i invoke the traversal method it will now print out with with the arithmetic expressions with the tree corresponding to arithmetic expression  it will print out the arithmetic expression in the parenthesis form right 
+so i could specialized the same  class binary tree traversal to use it to compute the total space occupied by the files by certain directories structure right 
+by specializing these methods in slightly different manner 30.28
+
+
+
+
+so lets continue our discussion on pre and in order so 
+
+
+
+30.36
+suppose i give you pre pre order inorder traversal of binary tree right 
+i have mention this here 
+can you use this to figure out the trees yes or no 
+suppose this was the pre order traversal this was inorder traversal of the binary tree both are given yes 
+i give you these two can you use these to print out to tell me what the tree is 31.10
+
+
+
+
+
+you can yes sir why why we can do that lets see 
+so given this pre order traversal what can i say for [noise] a is the root [noise] okay
+if a is the root so the a the root a is the root now what should i do b's b's left child [noise] is this true that b is the left child no not necessarily the tree might not a left child yeah i saw the root might not have a left child at all that can happen 
+so we cannot anything
+
+
+
+31.48
+all we can say a is root [noise] 
+now lets find a in the inorder traversal a is the root  know that let me just put down node for the root and i know that ill search for a in the inorder traversal [noise] now what i do know 
+i know that e is to the right 
+e is the right sub tree 
+so i know that this is in order inorder traversal of the right sub tree and this is the inorder traversal of the left sub tree of a 
+right 
+the green is the in order  traversal of the right sub tree and blue is the in order of the left sub tree yeah 
+so i am going to now once again 
+so i note that the left sub tree has five elements in it 
+this is the information i know 
+so in the pre order traversal the first five elements following a would correspond to the pre order traversal of the left sub tree yes 
+and their the one element following that would be the pre order pre order traversal of right sub tree 
+so in essence what have manage to do 
+i have manage to identify what the left and right sub tree and i know the pre order and inorder traversal 
+i know the pre order traversal of the left sub tree and i know the pre order traversal and in the inorder traversal of the left sub tree 
+so my problem i can use recursion now 
+so i know e is the right sub tree and now i can basically work on this problem where i am given the pre order traversal of now another tree the rep order inorder traversal of a tree and in need to figure out what the tree is and whatever is that tree ill come in  plug it as the left sub tree of a yeah 
+clear to every one 
+so lets continue with the example let see what you will do now 
+so once again we are going to b is the root of this left sub tree right
+whatever i given to you before 
+so b is the root of the left sub tree we are going to see  where b is in here 
+b is here [noise] and b is the root 
+so this would be the left sub tree of b now c and f d g is to be the right sub tree of b 
+so on the left i have only one element so that would be c here 
+so c this would be the left sub tree this would be per order traversal  of the right sub tree yeah 
+so i  figure out the c since on the left there is only one so i can put the c down i don't know what the right sub tree  is yet
+i just know pre order traversal and inorder traversal 
+i know the it has three nodes  the right sub tree is three nodes 
+so the problem recursively reduce to this problem of 
+given the pre order and inorder traversal of this three node tree and i need to figure out about the trees is 
+so once again i know now  the root is going to be d 
+yeah 
+ill look for d here its there 
+so i know on the left i have f right i have g 
+so i know the root is g and i know that the left sub tree would have f and the right would have g 34.57
+
+
+
+
+
+
+also sees that i get something like this 
+is this clear to every one 35.07
+
+
+
+you can translate this in to a piece of code yeah it will require some thought because you right it in a recursive manner 
+this is second assignment put it up in the web today 
+okay
+[student: these are given as arrays] um
+
+
+
+
+35.24
+this would be some input you will take from this from the user 
+yeah 
+the pre order inorder traversal and you have to compute and you have to compute not the tree but you have to compute the post order traversal which is simple if you compute the tree because you can do a post order traversal this tree now [noise] give the result now 
+now it might be possible that know given any arbitrary c sequence its not necessary there is a binary tree corresponding to that right 
+so you will also have to flag out an error 
+if the sequences that given to you are such that they could do not possibly d the rep and inorder traversal of a of any binary tree yeah 
+this is pre and in order 
+so nothing [doubt] pre and in 36.14
+
+
+
+
+36.15
+given post  and n also you should be able to compute the tree 
+right 
+suppose i gave you the post order in order can you use that to compute the tree 36.25
+
+
+
+
+
+
+so recall what wee did do 
+we try to first figure out where the root was right
+in the pre order very first element is the root 
+in a post order the last element is the root 
+so first once you know the root then you ill search for the root in your inorder traversal and wherever find the root that neatly divides the thing in to a left sub tree and right sub tree yes 
+so once you know the left sub tree what the number of nodes in the left sub tree 
+you can figure out what the post order traversal of the right sub tree is right 
+if there were five nodes in the left sub tree then the very first the first five nodes of your post order traversal would be the post order traversal of the left sub tree 
+so in this manner again you can recursively work [noise]
+yeah
+you can recursive we ill figure what the left and right sub trees and then plugged them up to the tree ‘so given a post and in order
+
+
+
+
+
+
+37.34
+traversal also you can do 
+given whats the third question given pre and post can you do it 37.42
+
+
+
+
+
+37.44
+no 
+so given the pre and post order traversal of a binary tree you can [noise] you can uniquely determine the tree and the reason for that that is there can be two trees which have the same pre and post order traversal 
+so suppose i gave you these this pre order traversal and this post order traversal right
+three nodes from tree okay 
+so what do you think as a tree this this is the tree this pre order traversal a b c 
+post order traversal will be  c b a this tree also has pre and post order traversal 
+a b c is the pre order traversal post order traversal c b a right 
+which of this trees is right one don't know both of them right 
+so there is no unique tree [noise] we could also have right child 
+so these only two but they could be many examples many trees that you concerned yeah 
+so that's the problem given a pre and post order traversal you cannot uniquely determine the tree 38.57
+
+
+
+
+
+because there could be many many different trees with the same pre and post order traversal yeah
+but there note that what was happening was that your tree some nodes in the tress was only one child 
+suppose i gave you this information that every internal node the tree has two children [noise] not complete every internal node of the tree  
+
+
+internal node has two children um what is that called 
+this is an example of a tree
+
+
+
+
+
+
+39.32
+which every internal node has two children this is not a full tree well this is just a tree 
+every internal node having two children right 
+there is no name to it 39.50
+
+
+
+
+
+39.51
+suppose i gave you this information did you say an Indian tree okay um then what 40.02
+
+
+
+41.04
+if each internal node has binary tree has at least two has exactly two children right because the binary tree so i should be exactly two children then actually you can use the pre order and post order to determine the tree uniquely again and lets see just has an exercise why this is  right
+so i gave you the pre and post order traversal right 
+now what you can say whats the first thing you can say [noise] 
+a is the root yeah s 
+a is the root 
+so we can quickly draw the root now 
+what you can say [noise] b has to be the left child [noise] 40.58
+
+
+
+it has two children yeah  
+so we know that something on the left or actually i have done the example with on the right okay 
+what can i say is the right child of a 
+a has the right child because every node ahs two children 
+what is the right child of a [noise]
+it has to be  right 
+since my example worked it out that 
+s e i know is the right child from here from this picture 
+now i see where e is here yeah 
+now e is here and after e there is nothing here what is that say [noise]
+e is a leaf that says e is a leaf right because in a pre order traversal i would have first visited e and then want to it its children but there is nothing following it so which means that the nothing after e has no descends 
+so basically the it means that the left sub tree has b c d f g 
+so e is the right child and the left sub tree has b c d f g has the pre order traversal and c f g d b visits post order traversal now the same thing since i have managed to do divide i am going to continue right 
+so i have b c d f g the left has the pre order traversal left sub tree and c f g d b has the post order traversal of the left sub tree 
+so once again i know now the root has b i [doubt] the root right 
+now what do i know about the right child of b its d 
+i know the right child is d 
+i see where d is here right no right child is d draw 
+so d is the right child so every thing that follows d has to be the right sub tree 
+everything that follows the d in the pre order traversal has to be in the right sub tree why because in the right sub tree when i did in a pre order traversal i have first visited the d and only then visited the other elements 
+so d f g has the right sub tree and c from the left sub tree
+so the left sub tree only one elements 
+so that's what i am going to do here also the right 
+one element could be my left sub tree and this would be my right sub tree 
+so now that i have figure out the left sub tree which has only single element i can just draw it yeah 
+and now i know d f g  have to now i know that right sub tree is d f g sorry has no d f g pre order traversal d f g and post order f g d 
+so now i know root is d actually i have already drawn that out i know the right child is g g is here there is nothing beyond that means g has no children for i can draw that out and then i know what means is the left sub tree only one node it is left yeah 
+so you can do the same same thing 
+i am just showing you showing at you high level in fact this is the level ill be following for all the algorithms we do in this class right 
+the code you will have have to translate in to code  right 
+what you have to do is recursion of whatever it is 44.10
+
+
+
+
+
+so and you will have to so the idea is assignment of would be that many of these algorithms you should learn how to you should figure out how to best program efficiently 
+are any other questions till this point right 
+you can you can write down the code also for this you can given the pre order and post order traversal of a binary tree every internal node of which has exactly two children you can even use that to figure out what the tree is yeah 
+so we why did we work with two traversal why cant we just take pre order and given just pre order traversal can used that to figure out what the tree is [noise]  
+given just a pre order traversal can i figure out what the tree is 
+so we had let say 
+
+
+
+
+45.15
+this has the pre order traversal right a b c d f g e was the pre order traversal of this tree 
+this is one tree with with this as a pre order traversal can you think of another tree which has this has the pre order traversal [noise] i could just have all of the nodes in one line say right 
+a b c d below it f after at it g after at it e at the very end right 
+i could get um huge number of different combinations all of which would give rise to the same tree order traversal yeah 
+so with just one just the knowledge of one traversal you cannot really do much similarly for post order similarly for in order right 
+if i were to give the inorder traversal of this you can construct many many different trees same inorder traversal 
+so just using one you cannot really do anything but two suffices for most purposes in the only case two doesn't suffices when you are given the pre order and the post order traversal in which case it doesn't if the binary tree some internal nodes of it binary tree 
+could have only one child but if you were told that every internal node has two children then even is sufficient right 
+more questions 
+[student: can you find how many tree binary  trees can be given only a pre order pre order ] 47.01
+
+
+
+
+
+can you count the number of binary trees given [noise] only how many  lets say pre order traversal what do you think [noise] two to the power n minus one why [noise] why [student: because every point can ] [noise ] yeah at least two to the power n minus one right why because two to the power n minus just came from 
+
+um  so two to the power so 
+
+
+
+
+
+we said a b c d e f let say is my pre order traversal of binary tree right
+wee said a b c d e and f this is one and all your saying is well i can make each one of them either left or right child right of its parent 
+so this could be one the other option could be beside a b c d e f and so on and on right 
+so just since each of the node can be either the left or right child of its parent 
+but there are many many other possibilities right [student:this is the minimum number] this is absolute minimum right 
+you can have many many other possibilities [noise] yeah 
+there could be  lots and lots of things possible 
+[noise] yes yeah of course it will be finite because there are only finitely many different trees with six nodes on them it will be of some finite number it will just a function of n exactly yeah 
+but i do not know to compute the close form expression for such more questions 
+okay
+so with that we will stop today's class so what we looked at was tree traversals how to traverse so three different ways of traversing trees um in order pre order and post order traversal for binary trees and for general trees there is notion of inorder traversal right as perhaps understand why there is no notion of inorder traversal for general trees [noise] right so in because if node has three children then when do you visit the node itself right 
+after visiting the first child or after visiting the second child or when 
+okay because but in a binary tree there is a notion of left in a right so first you visit the left then you visit the node then you visit the right so there is also a notion of n order traversal and we saw [noise] some applications of these and how given in order pre order post order traversal two of these traversals you can figure out what the tree was which gave raise to those traversals okay 

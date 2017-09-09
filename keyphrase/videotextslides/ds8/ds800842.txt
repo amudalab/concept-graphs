@@ -1,0 +1,9 @@
+Row 1::Height 2::successor
+Row 2::Height 1::given x, find the node with the smallest key
+Row 3::Height 1::greater than key[x]
+Row 4::Height 1::we can distinguish 2 cases depending on the
+Row 5::Height 1::right subtree of x
+Row 6::Height 1::case 1
+Row 7::Height 1::right subtree of x is nonempty
+Row 8::Height 1::successor is leftmost node in the right subtree (why?)
+Row 9::Height 1::this can be done by returning treeminimum(right[x])

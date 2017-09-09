@@ -1,0 +1,1654 @@
+Tree (data structure)
+From Wikipedia, the free encyclopedia
+Not to be confused with trie, a specific type of tree data structure.
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2010)A simple unordered tree; in this diagram, the node labeled 7 has two children, labeled 2 and 6, and one parent, labeled 2. The root node, at the top, has no parent.
+In computer science, a tree is a widely used abstract data type (ADT) or data structure implementing this ADT that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
+A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.
+Alternatively, a tree can be defined abstractly as a whole (globally) as an ordered tree, with a value assigned to each node. Both these perspectives are useful: while a tree can be analyzed mathematically as a whole, when actually represented as a data structure it is usually represented and worked with separately by node (rather than as a list of nodes and an adjacency list of edges between nodes, as one may represent a digraph, for instance). For example, looking at a tree as a whole, one can talk about "the parent node" of a given node, but in general as a data structure a given node only contains the list of its children, but does not contain a reference to its parent (if any).
+Contents
+  [hide] 
+* 1 Definition
+* 2 Terminologies used in Trees
+o 2.1 Data type vs. data structure
+o 2.2 Recursive
+o 2.3 Type theory
+o 2.4 Mathematical
+* 3 Terminology
+* 4 Drawing Trees
+* 5 Representations
+* 6 Generalizations
+o 6.1 Digraphs
+* 7 Traversal methods
+* 8 Common operations
+* 9 Common uses
+* 10 See also
+o 10.1 Other trees
+* 11 Notes
+* 12 References
+* 13 External links
+Definition[edit]
+
+Not a tree: two non-connected parts, A B and C D E
+Not a tree: undirected cycle 1-2-4-3
+Not a tree: cycle B C E D B
+Not a tree: cycle A A
+Each linear list is trivially a tree
+A tree is a (possibly non-linear) data structure made up of nodes or vertices and edges without having any cycle. The tree with no nodes is called the null orempty tree. A tree that is not empty consists of a root node and potentially many levels of additional nodes that form a hierarchy.
+Terminologies used in Trees[edit]
+* Root   The top node in a tree.
+* Parent   The converse notion of child.
+* Siblings   Nodes with the same parent.
+* Descendant   a node reachable by repeated proceeding from parent to child.
+* Ancestor   a node reachable by repeated proceeding from child to parent.
+* Leaf   a node with no children.
+* Internal node   a node with at least one child.
+* External node   a node with no children.
+* Degree   number of sub trees of a node.
+* Edge   connection between one node to another.
+* Path   a sequence of nodes and edges connecting a node with a descendant.
+* Level   The level of a node is defined by 1 + the number of connections between the node and the root.
+* Height of tree  The height of a tree is the number of edges on the longest downward path between the root and a leaf.
+* Height of node  The height of a node is the number of edges on the longest downward path between that node and a leaf.
+* Depth  The depth of a node is the number of edges from the node to the tree's root node.
+* Forest   A forest is a set of n   0 disjoint trees.
+Data type vs. data structure[edit]
+There is a distinction between a tree as an abstract data type and as a concrete data structure, analogous to the distinction between a list and a linked list. As a data type, a tree has a value and children, and the children are themselves trees; the value and children of the tree are interpreted as the value of the root node and the subtrees of the children of the root node. To allow finite trees, one must either allow the list of children to be empty (in which case trees can be required to be non-empty, an "empty tree" instead being represented by a forest of zero trees), or allow trees to be empty, in which case the list of children can be of fixed size (branching factor, especially 2 or "binary"), if desired.
+As a data structure, a linked tree is a group of nodes, where each node has a value and a list of references to other nodes (its children). This data structure actually defines a directed graph,[a] because it may have loops or several references to the same node, just as a linked list may have a loop. Thus there is also the requirement that no two references point to the same node (that each node has at most a single parent, and in fact exactly one parent, except for the root), and a tree that violates this is "corrupt".
+Due to the use of references to trees in the linked tree data structure, trees are often discussed implicitly assuming that they are being represented by references to the root node, as this is often how they are actually implemented. For example, rather than an empty tree, one may have a null reference: a tree is always non-empty, but a reference to a tree may be null.
+Recursive[edit]
+Recursively, as a data type a tree is defined as a value (of some data type, possibly empty), together with a list of trees (possibly an empty list), the subtrees of its children; symbolically:
+t: v [t[1], ..., t[k]]
+(A tree t consists of a value v and a list of other trees.)
+More elegantly, via mutual recursion, of which a tree is one of the most basic examples, a tree can be defined in terms of a forest (a list of trees), where a tree consists of a value and a forest (the subtrees of its children):
+f: [t[1], ..., t[k]]
+t: v f
+Note that this definition is in terms of values, and is appropriate in functional languages (it assumes referential transparency); different trees have no connections, as they are simply lists of values.
+As a data structure, a tree is defined as a node (the root), which itself consists of a value (of some data type, possibly empty), together with a list of references to other nodes (list possibly empty, references possibly null); symbolically:
+n: v [&n[1], ..., &n[k]]
+(A node n consists of a value v and a list of references to other nodes.)
+This data structure defines a directed graph,[b] and for it to be a tree one must add a condition on its global structure (its topology), namely that at most one reference can point to any given node (a node has at most a single parent), and no node in the tree point to the root. In fact, every node (other than the root) must have exactly one parent, and the root must have no parents.
+Indeed, given a list of nodes, and for each node a list of references to its children, one cannot tell if this structure is a tree or not without analyzing its global structure and that it is in fact topologically a tree, as defined below.
+Type theory[edit]
+As an ADT, the abstract tree type T with values of some type E is defined, using the abstract forest type F (list of trees), by the functions:
+value: T   E
+children: T   F
+nil: ()   F
+node: E   F   T
+with the axioms:
+value(node(e, f)) = e
+children(node(e, f)) = f
+In terms of type theory, a tree is an inductive type defined by the constructors nil (empty forest) and node (tree with root node with given value and children).
+Mathematical[edit]
+Viewed as a whole, a tree data structure is an ordered tree, generally with values attached to each node. Concretely, it is (if required to be non-empty):
+* A rooted tree with the "away from root" direction (a more narrow term is an "arborescence"), meaning:
+* A directed graph,
+* whose underlying undirected graph is a tree (any two vertices are connected by exactly one simple path),
+* with a distinguished root (one vertex is designated as the root),
+* which determines the direction on the edges (arrows point away from the root; given an edge, the node that the edge points from is called the parent and the node that the edge points to is called the child),
+together with:
+* an ordering on the child nodes of a given node, and
+* a value (of some data type) at each node.
+Often trees have a fixed (more properly, bounded) branching factor (outdegree), particularly always having two child nodes (possibly empty, hence at most two non-empty child nodes), hence a "binary tree".
+Allowing empty trees makes some definitions simpler, some more complicated: a rooted tree must be non-empty, hence if empty trees are allowed the above definition instead becomes "an empty tree, or a rooted tree such that ...". On the other hand, empty trees simplify defining fixed branching factor: with empty trees allowed, a binary tree is a tree such that every node has exactly two children, each of which is a tree (possibly empty).The complete sets of operations on tree must include fork operation.
+Terminology[edit]
+A node is a structure which may contain a value or condition, or represent a separate data structure (which could be a tree of its own). Each node in a tree has zero or morechild nodes, which are below it in the tree (by convention, trees are drawn growing downwards). A node that has a child is called the child's parent node (or ancestor node, orsuperior). A node has at most one parent.
+An internal node (also known as an inner node, inode for short, or branch node) is any node of a tree that has child nodes. Similarly, an external node (also known as anouter node, leaf node, or terminal node) is any node that does not have child nodes.
+The topmost node in a tree is called the root node. Depending on definition, a tree may be required to have a root node (in which case all trees are non-empty), or may be allowed to be empty, in which case it does not necessarily have a root node. Being the topmost node, the root node will not have a parent. It is the node at which algorithms on the tree begin, since as a data structure, one can only pass from parents to children. Note that some algorithms (such as post-order depth-first search) begin at the root, but first visit leaf nodes (access the value of leaf nodes), only visit the root last (i.e., they first access the children of the root, but only access the value of the root last). All other nodes can be reached from it by following edges or links. (In the formal definition, each such path is also unique.) In diagrams, the root node is conventionally drawn at the top. In some trees, such as heaps, the root node has special properties. Every node in a tree can be seen as the root node of the subtree rooted at that node.
+The height of a node is the length of the longest downward path to a leaf from that node. The height of the root is the height of the tree. The depth of a node is the length of the path to its root (i.e., its root path). This is commonly needed in the manipulation of the various self-balancing trees, AVL Trees in particular. The root node has depth zero, leaf nodes have height zero, and a tree with only a single node (hence both a root and leaf) has depth and height zero. Conventionally, an empty tree (tree with no nodes, if such are allowed) has depth and height  1.
+A subtree of a tree T is a tree consisting of a node in T and all of its descendants in T.[c][1] Nodes thus correspond to subtrees (each node corresponds to the subtree of itself and all its descendants)   the subtree corresponding to the root node is the entire tree, and each node is the root node of the subtree it determines; the subtree corresponding to any other node is called a proper subtree (by analogy to a proper subset).
+Drawing Trees[edit]
+Trees are often drawn in the plane. Ordered trees can be represented essentially uniquely in the plane, and are hence called plane trees, as follows: if one fixes a conventional order (say, counterclockwise), and arranges the child nodes in that order (first incoming parent edge, then first child edge, etc.), this yields an embedding of the tree in the plane, unique up to ambient isotopy. Conversely, such an embedding determines an ordering of the child nodes.
+If one places the root at the top (parents above children, as in a family tree) and places all nodes that are a given distance from the root (in terms of number of edges: the "level" of a tree) on a given horizontal line, one obtains a standard drawing of the tree. Given a binary tree, the first child is on the left (the "left node"), and the second child is on the right (the "right node").
+Representations[edit]
+There are many different ways to represent trees; common representations represent the nodes as dynamically allocated records with pointers to their children, their parents, or both, or as items in an array, with relationships between them determined by their positions in the array (e.g., binary heap).
+Indeed, a binary tree can be implemented as a list of lists (a list where the values are lists): the head of a list (the value of the first term) is the left child (subtree), while the tail (the list of second and future terms) is the right child (subtree). This can be modified to allow values as well, as in Lisp S-expressions, where the head (value of first term) is the value of the node, the head of the tail (value of second term) is the left child, and the tail of the tail (list of third and future terms) is the right child.
+In general a node in a tree will not have pointers to its parents, but this information can be included (expanding the data structure to also include a pointer to the parent) or stored separately. Alternatively, upward links can be included in the child node data, as in a threaded binary tree.
+Generalizations[edit]
+Digraphs[edit]
+If edges (to child nodes) are thought of as references, then a tree is a special case of a digraph, and the tree data structure can be generalized to represent directed graphs by removing the constraints that a node may have at most one parent, and that no cycles are allowed. Edges are still abstractly considered as pairs of nodes, however, the termsparent and child are usually replaced by different terminology (for example, source and target). Different implementation strategies exist: a digraph can be represented by the same local data structure as a tree (node with value and list of children), assuming that "list of children" is a list of references, or globally by such structures as adjacency lists.
+In graph theory, a tree is a connected acyclic graph; unless stated otherwise, in graph theory trees and graphs are assumed undirected. There is no one-to-one correspondence between such trees and trees as data structure. We can take an arbitrary undirected tree, arbitrarily pick one of its vertices as the root, make all its edges directed by making them point away from the root node   producing an arborescence   and assign an order to all the nodes. The result corresponds to a tree data structure. Picking a different root or different ordering produces a different one.
+Given a node in a tree, its children define an ordered forest (the union of subtrees given by all the children, or equivalently taking the subtree given by the node itself and erasing the root). Just as subtrees are natural for recursion (as in a depth-first search), forests are natural for corecursion (as in a breadth-first search).
+Via mutual recursion, a forest can be defined as a list of trees (represented by root nodes), where a node (of a tree) consists of a value and a forest (its children):
+f: [n[1], ..., n[k]]
+n: v f
+Traversal methods[edit]
+Main article: Tree traversal
+Stepping through the items of a tree, by means of the connections between parents and children, is called walking the tree, and the action is a walk of the tree. Often, an operation might be performed when a pointer arrives at a particular node. A walk in which each parent node is traversed before its children is called a pre-order walk; a walk in which the children are traversed before their respective parents are traversed is called a post-order walk; a walk in which a node's left subtree, then the node itself, and finally its right subtree are traversed is called an in-order traversal. (This last scenario, referring to exactly two subtrees, a left subtree and a right subtree, assumes specifically a binary tree.) A level-order walk effectively performs a breadth-first search over the entirety of a tree; nodes are traversed level by level, where the root node is visited first, followed by its direct child nodes and their siblings, followed by its grandchild nodes and their siblings, etc., until all nodes in the tree have been traversed.
+Common operations[edit]
+* Enumerating all the items
+* Enumerating a section of a tree
+* Searching for an item
+* Adding a new item at a certain position on the tree
+* Deleting an item
+* Pruning: Removing a whole section of a tree
+* Grafting: Adding a whole section to a tree
+* Finding the root for any node
+Common uses[edit]
+* Representing hierarchical data
+* Storing data in a way that makes it easily searchable (see binary search tree and tree traversal)
+* Representing sorted lists of data
+* As a workflow for compositing digital images for visual effects
+* Routing algorithms
+See also[edit]
+* Tree structure
+* Tree (graph theory)
+* Tree (set theory)
+* Hierarchy (mathematics)
+* Dialog tree
+* Single inheritance
+Other trees[edit]
+* Trie
+* DSW algorithm
+* Enfilade
+* Left child-right sibling binary tree
+* Hierarchical temporal memory
+Notes[edit]
+1. Jump up^ Properly, a rooted, ordered directed graph.
+2. Jump up^ Properly, a rooted, ordered directed graph.
+3. Jump up^ This is different from the formal definition of subtree used in graph theory, which is a subgraph that forms a tree   it need not include all descendants. For example, the root node by itself is a subtree in the graph theory sense, but not in the data structure sense (unless there are no descendants).
+References[edit]
+1. Jump up^ Weisstein, Eric W., "Subtree", MathWorld.
+* Donald Knuth. The Art of Computer Programming: Fundamental Algorithms, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89683-4 . Section 2.3: Trees, pp. 308 423.
+* Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. Introduction to Algorithms, Second Edition. MIT Press and McGraw-Hill, 2001. ISBN 0-262-03293-7 . Section 10.4: Representing rooted trees, pp. 214 217. Chapters 12 14 (Binary Search Trees, Red-Black Trees, Augmenting Data Structures), pp. 253 320.
+External links[edit]
+
+Wikimedia Commons has media related to Tree structures.
+* Data Trees as a Means of Presenting Complex Data Analysis by Sally Knipe
+* Description from the Dictionary of Algorithms and Data Structures
+* WormWeb.org: Interactive Visualization of the C. elegans Cell Tree   Visualize the entire cell lineage tree of the nematode C. elegans (javascript)
+* Binary Trees by L. Allison
+[show]
+* V
+* T
+* E
+Tree data structures
+[show]
+* V
+* T
+* E
+Data structures
+
+Categories: 
+* Data types
+* Trees (data structures)
+* Knowledge representation
+Binary tree
+From Wikipedia, the free encyclopedia
+Not to be confused with B-tree.
+
+A labeled binary tree of size 9 and height 3, with a root node whose value is 2. The above tree is unbalanced and not sorted.
+In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child. A recursive definition using just set theory notions is that a (non-empty) binary tree is a triple (L, S, R), where L and R are binary trees or the empty set and S is a singleton set.[1] Some authors allow the binary tree to be the empty set as well.[2]
+From a graph theory perspective, binary (and K-ary) trees as defined here are actually arborescences.[3] A binary tree may thus be also called a bifurcating arborescence[3] a term which actually appears in some very old programming books,[4] before the modern computer science terminology prevailed. It is also possible to interpret a binary tree as an undirected, rather than a directed graph, in which case a binary tree is an ordered, rooted tree.[5] Some authors use rooted binary tree instead of binary tree to emphasize the fact that the tree is rooted, but as defined above, a binary tree is always rooted.[6] A binary tree is a special case of an ordered K-ary tree, where k is 2.
+In computing, binary trees are seldom used solely for their structure. Much more typical is to define a labeling function on the nodes, which associates some value to each node.[7] Binary trees labelled this way are used to implement binary search trees and binary heaps, and are used for efficient searching and sorting. The designation of non-root nodes as left or right child even when there is only one child present matters in some of these applications, in particular it is significant in binary search trees.[8] In mathematics, what is termed binary tree can vary significantly from author to author. Some use the definition commonly used in computer science,[9] but others define it as every non-leaf having exactly two children and don't necessarily order (as left/right) the children either.[10]
+Contents
+  [hide] 
+* 1 Definitions
+o 1.1 Recursive definition
+o 1.2 Using graph theory concepts
+* 2 Types of binary trees
+* 3 Properties of binary trees
+* 4 Combinatorics
+* 5 Methods for storing binary trees
+o 5.1 Nodes and references
+o 5.2 Arrays
+* 6 Encodings
+o 6.1 Succinct encodings
+o 6.2 Encoding general trees as binary trees
+* 7 Common operations
+o 7.1 Insertion
+* 7.1.1 Leaf nodes
+* 7.1.2 Internal nodes
+o 7.2 Deletion
+* 7.2.1 Node with zero or one children
+* 7.2.2 Node with two children
+o 7.3 Traversal
+* 7.3.1 Depth-first order
+* 7.3.2 Breadth-first order
+* 8 See also
+* 9 References
+o 9.1 Citations
+o 9.2 Bibliography
+* 10 External links
+Definitions[edit]
+Recursive definition[edit]
+This article may need to be rewritten entirely to comply with Wikipedia's quality standards, as section. You can help. Thediscussion page may contain suggestions. (July 2014)Another way of defining a full binary tree is a recursive definition. A full binary tree is either:[11]
+* A single vertex.
+* A graph formed by taking two (full) binary trees, adding a vertex, and adding an edge directed from the new vertex to the root of each binary tree.
+This also does not establish the order of children, but does fix a specific root node.
+To actually define a binary tree in general, we must allow for the possibility that only one of children may be empty. An artifact, which in some textbooks is called an extended binary tree is needed for that purpose. An extended binary tree is thus recursively defined as:[11]
+* the empty set is an extended binary tree
+* if T1 and T2 are extended binary trees, then denote by T1   T2 the extended binary tree obtained by adding a root r connected to the left to T1 and to the right to T2 by adding edges when these sub-trees are non-empty.
+Another way of imagining this construction (and understanding the terminology) is to consider instead of the empty set a different type of node for instance square nodes if the regular ones are circles.[12]
+Using graph theory concepts[edit]
+A binary tree is a rooted tree that is also an ordered tree (a.k.a. plane tree) in which every node has at most two children. A rooted tree naturally imparts a notion of levels (distance from the root), thus for every node a notion of children may be defined as the nodes connected to it a level below. Ordering of these children (e.g., by drawing them on a plane) makes possible to distinguish left child from right child.[13] But this still doesn't distinguish between a node with left but not a right child from a one with right but no left child.
+The necessary distinction can be made by first partitioning the edges, i.e., defining the binary tree as triplet (V, E1, E2), where (V, E1   E2) is a rooted tree (equivalently arborescence) and E1   E2 is empty, and also requiring that for all j   { 1, 2 } every node has at most one Ej child.[14] A more informal way of making the distinction is to say, quoting the Encyclopedia of Mathematics, that "every node has a left child, a right child, neither, or both" and to specify that these "are all different" binary trees.[9]
+Types of binary trees[edit]
+Tree terminology is not well-standardized and so varies in the literature.
+* A rooted binary tree has a root node and every node has at most two children.
+* A full binary tree (sometimes referred to as a proper[citation needed] or plane binary tree)[15][16] is a tree in which every node in the tree has either 0 or 2 children.
+
+An ancestry chart which maps to a perfect depth-4 binary tree.
+* A perfect binary tree is a binary tree in which all leaves have the same depth or same level.[17] (This is ambiguously also called acomplete or full binary tree.[citation needed]) An example of a perfect binary tree is the ancestry chart of a person to a given depth, as each person has exactly two biological parents (one mother and one father).
+* In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes at the last level h.[18] A binary tree is called an almost complete binary tree or nearly complete binary tree if the last level is not completely filled.[clarification needed] This type of binary tree is used as a specialized data structure called a binary heap.[18]
+* In the infinite complete binary tree, every node has two children (and so the set of levels is countably infinite). The set of all nodes is countably infinite, but the set of all infinite paths from the root is uncountable, having the cardinality of the continuum. These paths correspond by an order-preserving bijection to the points of the Cantor set, or (using the example of a Stern Brocot tree) to the set of positive irrational numbers.
+* A balanced binary tree has the minimum possible maximum height (a.k.a. depth) for the leaf nodes, because for any given number of leaf nodes the leaf nodes are placed at the greatest height possible.[clarification needed]
+ h      Balanced      Unbalanced, h = (n + 1)/2 - 1
+ 0:      ABCDE               ABCDE
+        /     \             /     \
+ 1:    ABCD   E             ABCD   E
+      /    \               /    \
+ 2:  AB    CD             ABC     D
+    /  \  /  \           /   \
+ 3: A  B  C  D          AB   C
+                       /  \
+ 4:                   A   B
+One common balanced tree structure is a binary tree structure in which the left and right subtrees of every node differ in height by no more than 1.[19] One may also consider binary trees where no leaf is much farther away from the root than any other leaf. (Different balancing schemes allow different definitions of "much farther".[20])
+* A degenerate (or pathological) tree is where each parent node has only one associated child node.[citation needed] This means that performance-wise[clarification needed], the tree will behave like a linked list data structure.
+Properties of binary trees[edit]
+* The number of nodes  in a full binary tree, is at least  and at most , where  is the height of the tree. A tree consisting of only a root node has a height of 0.
+* The number of leaf nodes  in a perfect binary tree, is  because the number of non-leaf (a.k.a. internal) nodes .
+* This means that a perfect binary tree with  leaves has  nodes.
+* In a balanced full binary tree,  (see ceiling function).
+* In a perfect full binary tree,  thus .
+* The maximum possible number of null links (i.e., absent children of the nodes) in a complete binary tree of n nodes is (n+1), where only 1 node exists in bottom-most level to the far left.
+* The number of internal nodes in a complete binary tree of n nodes is   n/2  .
+* For any non-empty binary tree with n0 leaf nodes and n2 nodes of degree 2, n0 = n2 + 1.[21]
+Combinatorics[edit]
+This section does not cite any references or sources. Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2014)In combinatorics one considers the problem of counting the number of full binary trees of a given size. Here the trees have no values attached to their nodes (this would just multiply the number of possible trees by an easily determined factor), and trees are distinguished only by their structure; however the left and right child of any node are distinguished (if they are different trees, then interchanging them will produce a tree distinct from the original one). The size of the tree is taken to be the number n of internal nodes (those with two children); the other nodes are leaf nodes and there are n + 1 of them. The number of such binary trees of size n is equal to the number of ways of fully parenthesizing a string of n + 1 symbols (representing leaves) separated by n binary operators (representing internal nodes), so as to determine the argument subexpressions of each operator. For instance for n = 3 one has to parenthesize a string like , which is possible in five ways:
+
+The correspondence to binary trees should be obvious, and the addition of redundant parentheses (around an already parenthesized expression or around the full expression) is disallowed (or at least not counted as producing a new possibility).
+There is a unique binary tree of size 0 (consisting of a single leaf), and any other binary tree is characterized by the pair of its left and right children; if these have sizes i and jrespectively, the full tree has size i + j + 1. Therefore the number  of binary trees of size n has the following recursive description , and  for any positive integer n. It follows that  is the Catalan number of index n.
+The above parenthesized strings should not be confused with the set of words of length 2n in the Dyck language, which consist only of parentheses in such a way that they are properly balanced. The number of such strings satisfies the same recursive description (each Dyck word of length 2n is determined by the Dyck subword enclosed by the initial '(' and its matching ')' together with the Dyck subword remaining after that closing parenthesis, whose lengths 2i and 2j satisfy i + j + 1 = n); this number is therefore also the Catalan number . So there are also five Dyck words of length 10:
+.
+These Dyck words do not correspond in an obvious way to binary trees. A bijective correspondence can nevertheless be defined as follows: enclose the Dyck word in an extra pair of parentheses, so that the result can be interpreted as a Lisp list expression (with the empty list () as only occurring atom); then the dotted-pair expression for that proper list is a fully parenthesized expression (with NIL as symbol and '.' as operator) describing the corresponding binary tree (which is in fact the internal representation of the proper list).
+The ability to represent binary trees as strings of symbols and parentheses implies that binary trees can represent the elements of a free magma on a singleton set.
+Methods for storing binary trees[edit]
+Binary trees can be constructed from programming language primitives in several ways.
+Nodes and references[edit]
+In a language with records and references, binary trees are typically constructed by having a tree node structure which contains some data and references to its left child and its right child. Sometimes it also contains a reference to its unique parent. If a node has fewer than two children, some of the child pointers may be set to a special null value, or to a special sentinel node.
+This method of storing binary trees wastes a fair bit of memory, as the pointers will be null (or point to the sentinel) more than half the time; a more conservative representation alternative is threaded binary tree.[22]
+In languages with tagged unions such as ML, a tree node is often a tagged union of two types of nodes, one of which is a 3-tuple of data, left child, and right child, and the other of which is a "leaf" node, which contains no data and functions much like the null value in a language with pointers. For example, the following line of code in OCaml (an ML dialect) defines a binary tree that stores a character in each node.[23]
+type chr_tree = Empty | Node of char * chr_tree * chr_tree
+Arrays[edit]
+Binary trees can also be stored in breadth-first order as an implicit data structure in arrays, and if the tree is a complete binary tree, this method wastes no space. In this compact arrangement, if a node has an index i, its children are found at indices  (for the left child) and  (for the right), while its parent (if any) is found at index (assuming the root has index zero). This method benefits from more compact storage and better locality of reference, particularly during a preorder traversal. However, it is expensive to grow and wastes space proportional to 2h - n for a tree of depth h with n nodes.
+This method of storage is often used for binary heaps. No space is wasted because nodes are added in breadth-first order.
+
+Encodings[edit]
+Succinct encodings[edit]
+A succinct data structure is one which occupies close to minimum possible space, as established by information theoretical lower bounds. The number of different binary trees on  nodes is , the th Catalan number (assuming we view trees with identical structure as identical). For large , this is about ; thus we need at least about bits to encode it. A succinct binary tree therefore would occupy  bits.
+One simple representation which meets this bound is to visit the nodes of the tree in preorder, outputting "1" for an internal node and "0" for a leaf. [1] If the tree contains data, we can simply simultaneously store it in a consecutive array in preorder. This function accomplishes this:
+function EncodeSuccinct(node n, bitstring structure, array data) {
+    if n = nil then
+        append 0 to structure;
+    else
+        append 1 to structure;
+        append n.data to data;
+        EncodeSuccinct(n.left, structure, data);
+        EncodeSuccinct(n.right, structure, data);
+}
+The string structure has only  bits in the end, where  is the number of (internal) nodes; we don't even have to store its length. To show that no information is lost, we can convert the output back to the original tree like this:
+function DecodeSuccinct(bitstring structure, array data) {
+    remove first bit of structure and put it in b
+    if b = 1 then
+        create a new node n
+        remove first element of data and put it in n.data
+        n.left = DecodeSuccinct(structure, data)
+        n.right = DecodeSuccinct(structure, data)
+        return n
+    else
+        return nil
+}
+More sophisticated succinct representations allow not only compact storage of trees but even useful operations on those trees directly while they're still in their succinct form.
+Encoding general trees as binary trees[edit]
+There is a one-to-one mapping between general ordered trees and binary trees, which in particular is used by Lisp to represent general ordered trees as binary trees. To convert a general ordered tree to binary tree, we only need to represent the general tree in left child-right sibling way. The result of this representation will be automatically binary tree, if viewed from a different perspective. Each node N in the ordered tree corresponds to a node N' in the binary tree; the left child of N' is the node corresponding to the first child ofN, and the right child of N' is the node corresponding to N 's next sibling --- that is, the next node in order among the children of the parent of N. This binary tree representation of a general order tree is sometimes also referred to as a left child-right sibling binary tree (LCRS tree), or a doubly chained tree, or a Filial-Heir chain.
+One way of thinking about this is that each node's children are in a linked list, chained together with their right fields, and the node only has a pointer to the beginning or head of this list, through its left field.
+For example, in the tree on the left, A has the 6 children {B,C,D,E,F,G}. It can be converted into the binary tree on the right.
+
+The binary tree can be thought of as the original tree tilted sideways, with the black left edges representing first child and the blue right edges representing next sibling. The leaves of the tree on the left would be written in Lisp as:
+(((N O) I J) C D ((P) (Q)) F (M))
+which would be implemented in memory as the binary tree on the right, without any letters on those nodes that have a left child.
+Common operations[edit]
+
+Tree rotations are very common internal operations on self-balancing binary trees.
+There are a variety of different operations that can be performed on binary trees. Some are mutator operations, while others simply return useful information about the tree.
+Insertion[edit]
+Nodes can be inserted into binary trees in between two other nodes or added after a leaf node. In binary trees, a node that is inserted is specified as to which child it is.
+Leaf nodes[edit]
+To add a new node after leaf node A, A assigns the new node as one of its children and the new node assigns node A as its parent.
+Internal nodes[edit]
+
+The process of inserting a node into a binary tree
+Insertion on internal nodes is slightly more complex than on leaf nodes. Say that the internal node is node A and that node B is the child of A. (If the insertion is to insert a right child, then B is the right child of A, and similarly with a left child insertion.) A assigns its child to the new node and the new node assigns its parent to A. Then the new node assigns its child to B and B assigns its parent as the new node.
+Deletion[edit]
+Deletion is the process whereby a node is removed from the tree. Only certain nodes in a binary tree can be removed unambiguously.[24]
+Node with zero or one children[edit]
+
+The process of deleting an internal node in a binary tree
+Suppose that the node to delete is node A. If A has no children, deletion is accomplished by setting the child of A's parent to null. If A has one child, set the parent of A's child to A's parent and set the child of A's parent to A's child.
+Node with two children[edit]
+In a binary tree, a node with two children cannot be deleted unambiguously.[24] However, in certain binary trees (including binary search trees) these nodes can be deleted, though with a rearrangement of the tree structure.
+Traversal[edit]
+Main article: Tree traversal
+Pre-order, in-order, and post-order traversal visit each node in a tree by recursively visiting each node in the left and right subtrees of the root.
+Depth-first order[edit]
+In depth-first order, we always attempt to visit the node farthest from the root node that we can, but with the caveat that it must be a child of a node we have already visited. Unlike a depth-first search on graphs, there is no need to remember all the nodes we have visited, because a tree cannot contain cycles. Pre-order is a special case of this. Seedepth-first search for more information.
+Breadth-first order[edit]
+Contrasting with depth-first order is breadth-first order, which always attempts to visit the node closest to the root that it has not already visited. See breadth-first search for more information. Also called a level-order traversal.
+In a complete binary tree, a node's breadth-index (i - (2d - 1)) can be used as traversal instructions from the root. Reading bitwise from left to right, starting at bit d - 1, where d is the node's distance from the root (d = floor(log2(i+1))) and the node in question is not the root itself (d > 0). When the breadth-index is masked at bit d - 1, the bit values 0 and 1mean to step either left or right, respectively. The process continues by successively checking the next bit to the right until there are no more. The rightmost bit indicates the final traversal from the desired node's parent to the node itself. There is a time-space trade-off between iterating a complete binary tree this way versus each node having pointer/s to its sibling/s.
+See also[edit]
+* 2 3 tree
+* 2 3 4 tree
+* AA tree
+* Ahnentafel
+* AVL tree
+* B-tree
+* Binary space partitioning
+* Huffman tree
+* K-ary tree
+* Kraft's inequality
+* Optimal binary search tree
+* Random binary tree
+* Recursion (computer science)
+* Red black tree
+* Rope (computer science)
+* Self-balancing binary search tree
+* Splay tree
+* Strahler number
+* Tree of primitive Pythagorean triples#Alternative methods of generating the tree
+* Unrooted binary tree
+References[edit]
+Citations[edit]
+1. Jump up^ Rowan Garnier; John Taylor (2009). Discrete Mathematics: Proofs, Structures and Applications, Third Edition. CRC Press. p. 620. ISBN 978-1-4398-1280-8.
+2. Jump up^ Steven S Skiena (2009). The Algorithm Design Manual. Springer Science & Business Media. p. 77. ISBN 978-1-84800-070-4.
+3. ^ Jump up to:a b Knuth (1997). The Art Of Computer Programming, Volume 1, 3/E. Pearson Education. p. 363. ISBN 0-201-89683-4.
+4. Jump up^ Iv n Flores (1971). Computer programming system/360. Prentice-Hall. p. 39.
+5. Jump up^ Kenneth Rosen (2011). Discrete Mathematics and Its Applications, 7th edition. McGraw-Hill Science. p. 749. ISBN 978-0-07-338309-5.
+6. Jump up^ David R. Mazur (2010). Combinatorics: A Guided Tour. Mathematical Association of America. p. 246. ISBN 978-0-88385-762-5.
+7. Jump up^ David Makinson (2009). Sets, Logic and Maths for Computing. Springer Science & Business Media. p. 199. ISBN 978-1-84628-845-6.
+8. Jump up^ Jonathan L. Gross (2007). Combinatorial Methods with Computer Applications. CRC Press. p. 248. ISBN 978-1-58488-743-0.
+9. ^ Jump up to:a b Hazewinkel, Michiel, ed. (2001), "Binary tree", Encyclopedia of Mathematics,Springer, ISBN 978-1-55608-010-4 also in print as Michiel Hazewinkel (1997).Encyclopaedia of Mathematics. Supplement I. Springer Science & Business Media. p. 124. ISBN 978-0-7923-4709-5.
+10. Jump up^ L.R. Foulds (1992). Graph Theory Applications. Springer Science & Business Media. p. 32. ISBN 978-0-387-97599-3.
+11. ^ Jump up to:a b Kenneth Rosen (2011). Discrete Mathematics and Its Applications 7th edition. McGraw-Hill Science. pp. 352 353. ISBN 978-0-07-338309-5.
+12. Jump up^ Te Chiang Hu; Man-tak Shing (2002). Combinatorial Algorithms. Courier Dover Publications. p. 162. ISBN 978-0-486-41962-6.
+13. Jump up^ Lih-Hsing Hsu; Cheng-Kuan Lin (2008). Graph Theory and Interconnection Networks. CRC Press. p. 66. ISBN 978-1-4200-4482-9.
+14. Jump up^ J. Flum; M. Grohe (2006). Parameterized Complexity Theory. Springer. p. 245.ISBN 978-3-540-29953-0.
+15. Jump up^ "full binary tree". NIST.
+16. Jump up^ Richard Stanley, Enumerative Combinatorics, volume 2, p.36
+17. Jump up^ "perfect binary tree". NIST.
+18. ^ Jump up to:a b "complete binary tree". NIST.
+19. Jump up^ Aaron M. Tenenbaum, et al. Data Structures Using C, Prentice Hall, 1990 ISBN 0-13-199746-7
+20. Jump up^ Paul E. Black (ed.), entry for data structure in Dictionary of Algorithms and Data Structures. U.S. National Institute of Standards and Technology. 15 December 2004.Online version Accessed 2010-12-19.
+21. Jump up^ Mehta, Dinesh; Sartaj Sahni (2004). Handbook of Data Structures and Applications.Chapman and Hall. ISBN 1-58488-435-5.
+22. Jump up^ D. Samanta (2004). Classic Data Structures. PHI Learning Pvt. Ltd. pp. 264 265.ISBN 978-81-203-1874-8.
+23. Jump up^ Michael L. Scott (2009). Programming Language Pragmatics (3rd ed.). Morgan Kaufmann. p. 347. ISBN 978-0-08-092299-7.
+24. ^ Jump up to:a b Dung X. Nguyen (2003). "Binary Tree Structure". rice.edu. Retrieved December 28,2010.
+Bibliography[edit]
+* Donald Knuth. The art of computer programming vol 1. Fundamental Algorithms, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89683-4. Section 2.3, especially subsections 2.3.1 2.3.2 (pp. 318 348).
+External links[edit]
+Wikimedia Commons has media related to Binary trees.* binary trees entry in the FindStat database
+* Gamedev.net introduction on binary trees
+* Binary Tree Proof by Induction
+* Balanced binary search tree on array How to create bottom-up an Ahnentafel list, or a balanced binary search tree on array
+[hide]
+* V
+* T
+* E
+Tree data structuresSearch trees
+(dynamic sets/associative arrays)* 2 3
+* 2 3 4
+* AA
+* (a,b)
+* AVL
+* B
+* B+
+* B*
+* Bx
+* (Optimal) Binary search
+* Dancing
+* HTree
+* Interval
+* Order statistic
+* (Left-leaning) Red-black
+* Scapegoat
+* Splay
+* T
+* Treap
+* UB
+* Weight-balancedHeaps* Binary
+* Binomial
+* Fibonacci
+* Leftist
+* Pairing
+* Skew
+* Van Emde BoasTries* Hash
+* Radix
+* Suffix
+* Ternary search
+* X-fast
+* Y-fastSpatial data partitioning trees* BK
+* BSP
+* Cartesian
+* Hilbert R
+* k-d (implicit k-d)
+* M
+* Metric
+* MVP
+* Octree
+* Priority R
+* Quad
+* R
+* R+
+* R*
+* Segment
+* VP
+* XOther trees* Cover
+* Exponential
+* Fenwick
+* Finger
+* Fusion
+* Hash calendar
+* iDistance
+* K-ary
+* Left-child right-sibling
+* Link/cut
+* Log-structured merge
+* Merkle
+* PQ
+* Range
+* SPQR
+* TopCategories: 
+* Binary trees
+* Data structures
+Binary search tree
+From Wikipedia, the free encyclopedia
+Binary search treeTypeTreeInvented1960Invented byP.F. Windley, A.D. Booth, A.J.T. Colin, and T.N. HibbardTime complexity
+in big O notationAverageWorst caseSpaceO(n)O(n)SearchO(log n)O(n)InsertO(log n)O(n)DeleteO(log n)O(n)A binary search tree of size 9 and depth 3, with 8 at the root. The leaves are not drawn.
+In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type ofcontainers: data structures that store "items" (such as numbers, names, etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key(e.g., finding the phone number of a person by name).
+Binary search trees keep their keys in sorted order, so that lookup and other operations can use the principle of binary search: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons to keys stored in the nodes of the tree and deciding, based on the comparison, to continue searching in the left or right subtrees. On average, this means that each comparison allows the operations to skip about half of the tree, so that each lookup, insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree. This is much better than the linear timerequired to find items by key in an (unsorted) array, but slower than the corresponding operations on hash tables.
+Contents
+  [hide] 
+* 1 Definition
+* 2 Operations
+o 2.1 Searching
+o 2.2 Insertion
+o 2.3 Deletion
+o 2.4 Traversal
+o 2.5 Sort
+o 2.6 Verification
+o 2.7 Priority queue operations
+* 3 Types
+o 3.1 Performance comparisons
+o 3.2 Optimal binary search trees
+* 4 See also
+* 5 References
+* 6 Further reading
+* 7 External links
+Definition[edit]
+A binary search tree is a rooted binary tree, whose internal nodes each store a key (and optionally, an associated value) and each have two distinguished sub-trees, commonly denoted left and right. The tree additionally satisfies the binary search tree property, which states that the key in each node must be greater than all keys stored in the left sub-tree, and smaller than all keys in right sub-tree.[1] (The leaves (final nodes) of the tree contain no key and have no structure to distinguish them from one another. Leaves are commonly represented by a special leaf or nil symbol, a NULL pointer, etc.)
+Generally, the information represented by each node is a record rather than a single data element. However, for sequencing purposes, nodes are compared according to their keys rather than any part of their associated records.
+The major advantage of binary search trees over other data structures is that the related sorting algorithms and search algorithms such as in-order traversal can be very efficient; they are also easy to code.
+Binary search trees are a fundamental data structure used to construct more abstract data structures such as sets, multisets, and associative arrays. Some of their disadvantages are as follows:
+* The shape of the binary search tree totally depends on the order of insertions, and it can be degenerated.
+* When inserting or searching for an element in binary search tree, the key of each visited node has to be compared with the key of the element to be inserted or found, i.e., it takes a long time to search an element in a binary search tree.
+* The keys in the binary search tree may be long and the run time may increase.
+* After a long intermixed sequence of random insertion and deletion, the expected height of the tree approaches square root of the number of keys,  n, which grows much faster than log n.
+Operations[edit]
+Binary search trees support three main operations: insertion of keys, deletion of keys, and lookup (checking whether a key is present). Each requires a comparator, a subroutinethat computes the total order (linear order) on any two keys. This comparator can be explicitly or implicitly defined, depending on the language in which the binary search tree was implemented. A common comparator is the less-than function,[dubious   discuss] for example, a < b, where a and b are keys of two nodes a and b in a binary search tree.
+Searching[edit]
+Searching a binary search tree for a specific key can be a recursive or an iterative process.
+We begin by examining the root node. If the tree is null, the key we are searching for does not exist in the tree. Otherwise, if the key equals that of the root, the search is successful and we return the node. If the key is less than that of the root, we search the left subtree. Similarly, if the key is greater than that of the root, we search the right subtree. This process is repeated until the key is found or the remaining subtree is null. If the searched key is not found before a null subtree is reached, then the item must not be present in the tree. This is easily expressed as a recursive algorithm:
+function Find-recursive(key, node):  // call initially with node = root
+    if node = Null or node.key = key then
+        return node
+    else if key < node.key then
+        return Find-recursive(key, node.left)
+    else
+        return Find-recursive(key, node.right)
+The same algorithm can be implemented iteratively:
+function Find(key, root):
+    current-node := root
+    while current-node is not Null do
+        if current-node.key = key then
+            return current-node
+        else if key < current-node.key then
+            current-node   current-node.left
+        else
+            current-node   current-node.right
+    return Null
+Because in the worst case this algorithm must search from the root of the tree to the leaf farthest from the root, the search operation takes time proportional to the tree's height(see tree terminology). On average, binary search trees with n nodes have O(log n) height. However, in the worst case, binary search trees can have O(n) height, when the unbalanced tree resembles a linked list (degenerate tree).
+Insertion[edit]
+Insertion begins as a search would begin; if the key is not equal to that of the root, we search the left or right subtrees as before. Eventually, we will reach an external node and add the new key-value pair (here encoded as a record 'newNode') as its right or left child, depending on the node's key. In other words, we examine the root and recursively insert the new node to the left subtree if its key is less than that of the root, or the right subtree if its key is greater than or equal to the root.
+Here's how a typical binary search tree insertion might be performed in a binary tree in C++:
+void insert(Node*& root, int data) {
+  if (!root) 
+    root = new Node(data);
+  else if (data < root->data)
+    insert(root->left, data);
+  else if (data > root->data)
+    insert(root->right, data);
+}
+The above destructive procedural variant modifies the tree in place. It uses only constant heap space (and the iterative version uses constant stack space as well), but the prior version of the tree is lost. Alternatively, as in the following Python example, we can reconstruct all ancestors of the inserted node; any reference to the original tree root remains valid, making the tree a persistent data structure:
+ def binary_tree_insert(node, key, value):
+     if node is None:
+         return TreeNode(None, key, value, None)
+     if key == node.key:
+         return TreeNode(node.left, key, value, node.right)
+     if key < node.key:
+         return TreeNode(binary_tree_insert(node.left, key, value), node.key, node.value, node.right)
+     else:
+         return TreeNode(node.left, node.key, node.value, binary_tree_insert(node.right, key, value))
+The part that is rebuilt uses O(log n) space in the average case and O(n) in the worst case (see big-O notation).
+In either version, this operation requires time proportional to the height of the tree in the worst case, which is O(log n) time in the average case over all trees, but O(n) time in the worst case.
+Another way to explain insertion is that in order to insert a new node in the tree, its key is first compared with that of the root. If its key is less than the root's, it is then compared with the key of the root's left child. If its key is greater, it is compared with the root's right child. This process continues, until the new node is compared with a leaf node, and then it is added as this node's right or left child, depending on its key.
+There are other ways of inserting nodes into a binary tree, but this is the only way of inserting nodes at the leaves and at the same time preserving the BST structure.
+Deletion[edit]
+There are three possible cases to consider:
+* Deleting a node with no children: simply remove the node from the tree.
+* Deleting a node with one child: remove the node and replace it with its child.
+* Deleting a node with two children: call the node to be deleted N. Do not delete N. Instead, choose either its in-order successor node or its in-order predecessor node, R. Copy the value of R to N, then recursively call delete on R until reaching one of the first two cases. If you choose in-order successor of a node, as right sub tree is not NIL (Our present case is node has 2 children), then its in-order successor is node with least value in its right sub tree, which will have at a maximum of 1 sub tree, so deleting it would fall in one of first 2 cases.
+Broadly speaking, nodes with children are harder to delete. As with all binary trees, a node's in-order successor is its right subtree's left-most child, and a node's in-order predecessor is the left subtree's right-most child. In either case, this node will have zero or one children. Delete it according to one of the two simpler cases above.
+
+Deleting a node with two children from a binary search tree. First the rightmost node in the left subtree, the inorder predecessor 6, is identified. Its value is copied into the node being deleted. The inorder predecessor can then be easily deleted because it has at most one child. The same method works symmetrically using the inorder successor labelled 9.
+Consistently using the in-order successor or the in-order predecessor for every instance of the two-child case can lead to an unbalanced tree, so some implementations select one or the other at different times.
+Runtime analysis: Although this operation does not always traverse the tree down to a leaf, this is always a possibility; thus in the worst case it requires time proportional to the height of the tree. It does not require more even when the node has two children, since it still follows a single path and does not visit any node twice.
+def find_min(self):   # Gets minimum node in a subtree
+    current_node = self
+    while current_node.left_child:
+        current_node = current_node.left_child
+    return current_node
+
+def replace_node_in_parent(self, new_value=None):
+    if self.parent:
+        if self == self.parent.left_child:
+            self.parent.left_child = new_value
+        else:
+            self.parent.right_child = new_value
+    if new_value:
+        new_value.parent = self.parent
+
+def binary_tree_delete(self, key):
+    if key < self.key:
+        self.left_child.binary_tree_delete(key)
+    elif key > self.key:
+        self.right_child.binary_tree_delete(key)
+    else: # delete the key here
+        if self.left_child and self.right_child: # if both children are present
+            successor = self.right_child.find_min()
+            self.key = successor.key
+            successor.binary_tree_delete(successor.key)
+        elif self.left_child:   # if the node has only a *left* child
+            self.replace_node_in_parent(self.left_child)
+        elif self.right_child:  # if the node has only a *right* child
+            self.replace_node_in_parent(self.right_child)
+        else: # this node has no children
+            self.replace_node_in_parent(None)
+Traversal[edit]
+Main article: Tree traversal
+Once the binary search tree has been created, its elements can be retrieved in-order by recursively traversing the left subtree of the root node, accessing the node itself, then recursively traversing the right subtree of the node, continuing this pattern with each node in the tree as it's recursively accessed. As with all binary trees, one may conduct a pre-order traversal or a post-order traversal, but neither are likely to be useful for binary search trees. An in-order traversal of a binary search tree will always result in a sorted list of node items (numbers, strings or other comparable items).
+The code for in-order traversal in Python is given below. It will call callback for every node in the tree.
+def traverse_binary_tree(node, callback):
+    if node is None:
+        return
+    traverse_binary_tree(node.leftChild, callback)
+    callback(node.value)
+    traverse_binary_tree(node.rightChild, callback)
+
+Traversal requires O(n) time, since it must visit every node. This algorithm is also O(n), so it is asymptotically optimal.
+Sort[edit]
+Main article: Tree sort
+A binary search tree can be used to implement a simple sorting algorithm. Similar to heapsort, we insert all the values we wish to sort into a new ordered data structure in this case a binary search tree and then traverse it in order.
+The worst-case time of build_binary_tree is  if you feed it a sorted list of values, it chains them into a linked list with no left subtrees. For example,build_binary_tree([1, 2, 3, 4, 5]) yields the tree (1 (2 (3 (4 (5))))).
+There are several schemes for overcoming this flaw with simple binary trees; the most common is the self-balancing binary search tree. If this same procedure is done using such a tree, the overall worst-case time is O(nlog n), which is asymptotically optimal for a comparison sort. In practice, the poor cache performance and added overhead in time and space for a tree-based sort (particularly for node allocation) make it inferior to other asymptotically optimal sorts such as heapsort for static list sorting. On the other hand, it is one of the most efficient methods of incremental sorting, adding items to a list over time while keeping the list sorted at all times.
+Verification[edit]
+Sometimes we already have a binary tree, and we need to determine whether it is a BST. This problem has a simple recursive solution.
+The BST property every node on the right subtree has to be larger than the current node and every node on the left subtree has to be smaller than (or equal to - should not be the case as only unique values should be in the tree - this also poses the question as to if such nodes should be left or right of this parent) the current node is the key to figuring out whether a tree is a BST or not. The greedy algorithm   simply traverse the tree, at every node check whether the node contains a value larger than the value at the left child and smaller than the value on the right child   does not work for all cases. Consider the following tree:
+     20
+    /  \
+  10    30
+       /  \
+      5    40
+In the tree above, each node meets the condition that the node contains a value larger than its left child and smaller than its right child hold, and yet it is not a BST: the value 5 is on the right subtree of the node containing 20, a violation of the BST property.
+Instead of making a decision based solely on the values of a node and its children, we also need information flowing down from the parent as well. In the case of the tree above, if we could remember about the node containing the value 20, we would see that the node with value 5 is violating the BST property contract.
+So the condition we need to check at each node is:
+* if the node is the left child of its parent, then it must be smaller than (or equal to) the parent and it must pass down the value from its parent to its right subtree to make sure none of the nodes in that subtree is greater than the parent
+* if the node is the right child of its parent, then it must be larger than the parent and it must pass down the value from its parent to its left subtree to make sure none of the nodes in that subtree is lesser than the parent.
+A recursive solution in C++ can explain this further:
+struct TreeNode {
+    int data;
+    TreeNode *left;
+    TreeNode *right;
+};
+
+bool isBST(TreeNode *node, int minData, int maxData) {
+    if(node == NULL) return true;
+    if(node->data < minData || node->data > maxData) return false;
+    
+    return isBST(node->left, minData, node->data) && isBST(node->right, node->data, maxData);
+}
+The initial call to this function can be something like this:
+if(isBST(root, INT_MIN, INT_MAX)) {
+    puts("This is a BST.");
+} else {
+    puts("This is NOT a BST!");
+}
+Essentially we keep creating a valid range (starting from [MIN_VALUE, MAX_VALUE]) and keep shrinking it down for each node as we go down recursively.
+Priority queue operations[edit]
+Binary search trees can serve as priority queues: structures that allow insertion of arbitrary key as well as lookup and deletion of the minimum (or maximum) key. Insertion works as previously explained. Find-min walks the tree, following left pointers as far as it can without hitting a leaf:
+// Precondition: T is not a leaf
+function find-min(T):
+    while hasLeft(T):
+        T   left(T)
+    return key(T)
+Find-max is analogous: follow right pointers as far as possible. Delete-min (max) can simply look up the minimum (maximum), then delete it. This way, insertion and deletion both take logarithmic time, just as they do in a binary heap, but unlike a binary heap and most other priority queue implementations, a single tree can support all of find-min, find-max,delete-min and delete-max at the same time, making binary search trees suitable as double-ended priority queues.[2]:156
+Types[edit]
+There are many types of binary search trees. AVL trees and red-black trees are both forms of self-balancing binary search trees. A splay tree is a binary search tree that automatically moves frequently accessed elements nearer to the root. In a treap (tree heap), each node also holds a (randomly chosen) priority and the parent node has higher priority than its children. Tango trees are trees optimized for fast searches.
+Two other titles describing binary search trees are that of a complete and degenerate tree.
+A complete binary tree is a binary tree, which is completely filled, with the possible exception of the bottom level, which is filled from left to right. In complete binary tree, all nodes are far left as possible. It is a tree with n levels, where for each level d <= n - 1, the number of existing nodes at level d is equal to 2d. This means all possible nodes exist at these levels. An additional requirement for a complete binary tree is that for the nth level, while every node does not have to exist, the nodes that do exist must fill from left to right.
+A degenerate tree is a tree where for each parent node, there is only one associated child node. It is unbalanced and, in the worst case, performance degrades to that of a linked list. If your added node function does not handle re-balancing, then you can easily construct a degenerate tree by feeding it with data that is already sorted. What this means is that in a performance measurement, the tree will essentially behave like a linked list data structure.
+Performance comparisons[edit]
+D. A. Heger (2004)[3] presented a performance comparison of binary search trees. Treap was found to have the best average performance, while red-black tree was found to have the smallest amount of performance variations.
+Optimal binary search trees[edit]
+Main article: Optimal binary search tree
+
+Tree rotations are very common internal operations in binary trees to keep perfect, or near-to-perfect, internal balance in the tree.
+If we do not plan on modifying a search tree, and we know exactly how often each item will be accessed, we can construct[4]an optimal binary search tree, which is a search tree where the average cost of looking up an item (the expected search cost) is minimized.
+Even if we only have estimates of the search costs, such a system can considerably speed up lookups on average. For example, if you have a BST of English words used in a spell checker, you might balance the tree based on word frequency intext corpora, placing words like the near the root and words like agerasia near the leaves. Such a tree might be compared with Huffman trees, which similarly seek to place frequently used items near the root in order to produce a dense information encoding; however, Huffman trees store data elements only in leaves, and these elements need not be ordered.
+If we do not know the sequence in which the elements in the tree will be accessed in advance, we can use splay trees which are asymptotically as good as any static search tree we can construct for any particular sequence of lookup operations.
+Alphabetic trees are Huffman trees with the additional constraint on order, or, equivalently, search trees with the modification that all elements are stored in the leaves. Faster algorithms exist for optimal alphabetic binary trees (OABTs).
+See also[edit]
+* Search tree
+* Binary search algorithm
+* Randomized binary search tree
+* Tango trees
+* Self-balancing binary search tree
+* Geometry of binary search trees
+* Red-black tree
+* AVL trees
+* Day Stout Warren algorithm
+References[edit]
+1. Jump up^ Cormen, Thomas H.; Leiserson, Charles E., Rivest, Ronald L., Stein, Clifford (2009) [1990]. Introduction to Algorithms (3rd ed.). MIT Press and McGraw-Hill. p. 287. ISBN 0-262-03384-4.
+2. Jump up^ Mehlhorn, Kurt; Sanders, Peter (2008). Algorithms and Data Structures: The Basic Toolbox. Springer.
+3. Jump up^ Heger, Dominique A. (2004), "A Disquisition on The Performance Behavior of Binary Search Tree Data Structures" (PDF), European Journal for the Informatics Professional 5 (5): 67 75
+4. Jump up^ Gonnet, Gaston. "Optimal Binary Search Trees". Scientific Computation. ETH Z rich. Retrieved 1 December 2013.
+Further reading[edit]
+* Black, Paul E. "Binary Search Tree". Dictionary of Algorithms and Data Structures. NIST.
+* Cormen, Thomas H.; Leiserson, Charles E.; Rivest, Ronald L.; Stein, Clifford (2001). "12: Binary search trees, 15.5: Optimal binary search trees". Introduction to Algorithms(2nd ed.). MIT Press & McGraw-Hill. pp. 253 272, 356 363. ISBN 0-262-03293-7.
+* Jarc, Duane J. (3 December 2005). "Binary Tree Traversals". Interactive Data Structure Visualizations. University of Maryland.
+* Knuth, Donald (1997). "6.2.2: Binary Tree Searching". The Art of Computer Programming. 3: "Sorting and Searching" (3rd ed.). Addison-Wesley. pp. 426 458. ISBN 0-201-89685-0.
+* Long, Sean. "Binary Search Tree" (PPT). Data Structures and Algorithms Visualization-A PowerPoint Slides Based Approach. SUNY Oneonta.
+* Parlante, Nick (2001). "Binary Trees". CS Education Library. Stanford University.
+External links[edit]
+* Literate implementations of binary search trees in various languages on LiteratePrograms
+* Binary Tree Visualizer (JavaScript animation of various BT-based data structures)
+* Kovac, Kubo. "Binary Search Trees" (JAVA APPLET). Kore ponden n  semin r z programovania.
+* Madru, Justin (18 August 2009). "Binary Search Tree". JDServer. C++ implementation.
+* Binary Search Tree Example in Python
+* "References to Pointers (C++)". MSDN. Microsoft. 2005. Gives an example binary tree implementation.
+[show]
+* V
+* T
+* E
+Tree data structures[show]
+* V
+* T
+* E
+Data structuresCategories: 
+* Binary trees
+* Data types
+* Search trees
+AVL tree
+From Wikipedia, the free encyclopedia
+AVL treeTypeTreeInvented1962Invented byGeorgy Adelson-Velsky and E. M. LandisTime complexity
+in big O notationAverageWorst caseSpaceO(n)O(n)SearchO(log n)O(log n)InsertO(log n)O(log n)DeleteO(log n)O(log n)Example AVL tree
+In computer science, an AVL tree (Georgy Adelson-Velsky and Landis' tree, named after the inventors) is a self-balancing binary search tree. It was the first such data structure to be invented.[1] In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation. Insertions and deletions may require the tree to be rebalanced by one or more tree rotations.
+The AVL tree is named after its two Soviet inventors, Georgy Adelson-Velsky and E. M. Landis, who published it in their 1962 paper "An algorithm for the organization of information".[2]
+AVL trees are often compared with red-black trees because both support the same set of operations and take O(log n) time for the basic operations. For lookup-intensive applications, AVL trees are faster than red-black trees because they are more rigidly balanced.[3] Similar to red-black trees, AVL trees are height-balanced. Both are in general not weight-balanced nor  -balanced for any ;[4] that is, sibling nodes can have hugely differing numbers of descendants.
+Contents
+  [hide] 
+* 1 Operations
+o 1.1 Searching
+o 1.2 Traversal
+o 1.3 Insertion
+o 1.4 Deletion
+* 2 Comparison to other structures
+* 3 See also
+* 4 References
+* 5 Further reading
+* 6 External links
+Operations[edit]
+
+Tree rotations
+Basic operations of an AVL tree involve carrying out the same actions as would be carried out on an unbalanced binary search tree, but modifications are followed by zero or more operations called tree rotations, which help to restore the height balance of the subtrees.
+Searching[edit]
+Searching for a specific key in an AVL tree can be done the same way as that of a normal unbalanced binary search tree.
+Traversal[edit]
+Once a node has been found in a balanced tree, the next or previous nodes can be explored in amortized constant time. Some instances of exploring these "nearby" nodes require traversing up to log(n) links (particularly when moving from the rightmost leaf of the root's left subtree to the root or from the root to the leftmost leaf of the root's right subtree; in the example AVL tree, moving from node 14 to the next but onenode 19 takes 4 steps). However, exploring all n nodes of the tree in this manner would use each link exactly twice: one traversal to enter the subtree rooted at that node, another to leave that node's subtree after having explored it. And since there are n 1 links in any tree, the amortized cost is found to be 2 (n 1)/n, or approximately 2.
+Insertion[edit]
+After inserting a node, it is necessary to check each of the node's ancestors for consistency with the invariants of AVL trees: this is called "retracing". This is achieved by considering the balance factor of each node, which is defined as follows:
+balanceFactor = height(left subtree) - height(right subtree)
+
+Pictorial description of how rotations rebalance a node in AVL tree. The numbered circles represent the nodes being rebalanced. The lettered triangles represent subtrees which are themselves balanced AVL trees. A blue number next to a node denotes possible balance factors (those in parentheses occurring only in case of deletion).
+Thus the balance factor of any node of an AVL tree is in the integer range [-1,+1]. This balance factor is stored in the node, but may have to be corrected after an insertion or a deletion, which is also done during retracing. Since with a single insertion the height of an AVL subtree cannot increase by more than one, the temporarily recomputed balance factor of a node after an insertion will be in the range [ 2,+2]. For each node checked, if the recomputed balance factor remains in the range from  1 to +1 then only corrections of the balance factor, but no rotations are necessary. However, if the recomputed balance factor becomes less than  1 or greater than +1, the subtree rooted at this node is unbalanced, and a rotation is needed.
+Description of the Rotations
+Let us first assume the balance factor of a node P is 2 (as opposed to the other possible unbalanced value  2). This case is depicted in the left column of the illustration with P:=5. We then look at the left subtree (the higher one) with root N. If this subtree does not lean to the right - i.e. N has balance factor 1 (or, when deletion also 0) - we can rotate the whole tree to the right to get a balanced tree. This is labelled as the "Left Left Case" in the illustration with N:=4. If the subtree does lean to the right - i.e. N:=3 has balance factor  1 - we first rotate the subtree to the left and end up the previous case. This second case is labelled as "Left Right Case" in the illustration.
+If the balance factor of the node P is  2 (this case is depicted in the right column of the illustration P:=3) we can mirror the above algorithm. I.e. if the root N of the (higher) right subtree has balance factor  1 (or, when deletion also 0) we can rotate the whole tree to the left to get a balanced tree. This is labelled as the "Right Right Case" in the illustration with N:=4. If the root N:=5 of the right subtree has balance factor 1 ("Right Left Case") we can rotate the subtree to the right to end up in the "Right Right Case".
+The whole retracing loop for an insertion looks like this:
+ // N is the child of P whose height increases by 1.
+ do {
+   if (N == left_child(P)) {
+     if (balance_factor(P) == 1) { // The left column in the picture
+       // Temporary balance_factor(P) == 2 ==> rebalancing is required.
+       if (balance_factor(N) == -1) { // Left Right Case
+          rotate_left(N); // Reduce to Left Left Case
+       }
+       // Left Left Case
+       rotate_right(P);
+       break; // Leave the loop
+     }
+     if (balance_factor(P) == -1) {
+       balance_factor(P) = 0; // N s height increase is absorbed at P.
+       break; // Leave the loop
+     }
+     balance_factor(P) = 1; // Height increases at P
+   } else { // N == right_child(P), the child whose height increases by 1.
+     if (balance_factor(P) == -1) { // The right column in the picture
+       // Temporary balance_factor(P) == -2 ==> rebalancing is required.
+       if (balance_factor(N) == 1) { // Right Left Case
+          rotate_right(N); // Reduce to Right Right Case
+       }
+       // Right Right Case
+       rotate_left(P);
+       break; // Leave the loop
+     }
+     if (balance_factor(P) == 1) {
+       balance_factor(P) = 0; // N s height increase is absorbed at P.
+       break; // Leave the loop
+     }
+     balance_factor(P) = -1; // Height increases at P
+   }
+   N = P;
+   P = parent(N);
+ } while (P != null); // Possibly up to the root
+After a rotation a subtree has the same height as before, so retracing can stop. In order to restore the balance factors of all nodes, first observe that all nodes requiring correction lie along the path used during the initial insertion. If the above procedure is applied to nodes along this path, starting from the bottom (i.e. the inserted node), then every node in the tree will again have a balance factor of  1, 0, or 1.
+The time required is O(log n) for lookup, plus a maximum of O(log n) retracing levels on the way back to the root, so the operation can be completed in O(log n) time.
+Deletion[edit]
+Let node X be the node with the value we need to delete, and let node Y be a node in the tree we need to find to take node X's place, and let node Z be the actual node we take out of the tree.
+
+Deleting a node with two children from a binary search tree using the in-order predecessor (rightmost node in the left subtree, labelled 6).
+Steps to consider when deleting a node in an AVL tree are the following:
+1. If node X is a leaf or has only one child, skip to step 5 with Z:=X.
+2. Otherwise, determine node Y by finding the largest[citation needed] node in node X's left subtree (the in-order predecessor of X   it does not have a right child) or the smallest in its right subtree (the in-order successor of X   it does not have a left child).
+3. Exchange all the child and parent links of node X with those of node Y. In this step, the in-order sequence between nodes X and Y is temporarily disturbed, but the tree structure doesn't change.
+4. Choose node Z to be all the child and parent links of old node Y = those of new node X.
+5. If node Z has a subtree (which then is a leaf), attach it to Z's parent.
+6. If node Z was the root (its parent is null), update root.
+7. Delete node Z.
+8. Retrace the path back up the tree (starting with node Z's parent) to the root, adjusting the balance factors as needed.
+Since with a single deletion the height of an AVL subtree cannot decrease by more than one, the temporary balance factor of a node will be in the range from  2 to +2.
+If the balance factor becomes  2 then the subtree is unbalanced and needs to be rotated. The various cases of rotations are depicted in section "Insertion".
+The whole retracing loop for a deletion looks like this:
+ // N is the child of P whose height decreases by 1.
+ do {
+   if (N == right_child(P)) {
+     if (balance_factor(P) == 1) { // The left column in the picture
+       // Temporary balance_factor(P) == 2 ==> rebalancing is required.
+       S = left_child(P); // Sibling of N
+       B = balance_factor(S);
+       if (B == -1) { // Left Right Case
+          rotate_left(S); // Reduce to Left Left Case
+       }
+       // Left Left Case
+       rotate_right(P);
+       if (B == 0) // (in the picture the small blue (0) at node 4)
+         break; // Height does not change: Leave the loop
+     }
+     if (balance_factor(P) == 0) {
+       balance_factor(P) = 1; // N s height decrease is absorbed at P.
+       break; // Leave the loop
+     }
+     balance_factor(P) = 0; // Height decreases at P
+   } else { // N == left_child(P), the child whose height decreases by 1.
+     if (balance_factor(P) == -1) { // The right column in the picture
+       // Temporary balance_factor(P) == -2 ==> rebalancing is required.
+       S = right_child(P); // Sibling of N
+       B = balance_factor(S);
+       if (B == 1) { // Right Left Case
+          rotate_right(S); // Reduce to Right Right Case
+       }
+       // Right Right Case
+       rotate_left(P);
+       if (B == 0) // (in the picture the small blue (0) at node 4)
+         break; // Height does not change: Leave the loop
+     }
+     if (balance_factor(P) == 0) {
+       balance_factor(P) = -1; // N s height decrease is absorbed at P.
+       break; // Leave the loop
+     }
+     balance_factor(P) = 0; // Height decreases at P
+   }
+   N = P;
+   P = parent(N);
+ } while (P != null); // Possibly up to the root
+The retracing can stop if the balance factor becomes  1 indicating that the height of that subtree has remained unchanged. This can also result from a rotation when the higher child tree has a balance factor of 0.
+If the balance factor becomes 0 then the height of the subtree has decreased by one and the retracing needs to continue. This can also result from a rotation.
+The time required is O(log n) for lookup, plus a maximum of O(log n) retracing levels on the way back to the root, so the operation can be completed in O(log n) time.
+Comparison to other structures[edit]
+Both AVL trees and red-black trees are self-balancing binary search trees and they are very similar mathematically.[5] The operations to balance the trees are different, but both occur on the average in O(1) with maximum in O(log n). The real difference between the two is the limiting height. For a tree of size :
+* An AVL tree's height is strictly less than:[6][7]
+
+where  is the golden ratio.
+* A red-black tree's height is at most [8]
+AVL trees are more rigidly balanced than red-black trees, leading to slower insertion and removal but faster retrieval.
+See also[edit]
+* Trees
+* Tree rotation
+* Red-black tree
+* Splay tree
+* Scapegoat tree
+* B-tree
+* T-tree
+* List of data structures
+References[edit]
+1. Jump up^ Robert Sedgewick, Algorithms, Addison-Wesley, 1983, ISBN 0-201-06672-6, page 199, chapter 15: Balanced Trees.
+2. Jump up^ Georgy Adelson-Velsky, G.; E. M. Landis (1962). "An algorithm for the organization of information". Proceedings of the USSR Academy of Sciences (in Russian) 146: 263 266. English translation by Myron J. Ricci in Soviet Math. Doklady, 3:1259 1263, 1962.
+3. Jump up^ Pfaff, Ben (June 2004). "Performance Analysis of BSTs in System Software" (PDF). Stanford University.
+4. Jump up^ AVL trees are not weight-balanced  (meaning: AVL trees are not  -balanced )
+Thereby: A Binary Tree is called -balanced, with , if for every node , the inequality
+
+holds and  is minimal with this property.  is the number of nodes below the tree with  as root (including the root) and  is the left child node of .
+5. Jump up^ In fact, each AVL tree can be colored red-black.
+6. Jump up^ Burkhard, Walt (Spring 2012). "AVL Dictionary Data Type Implementation". Advanced Data Structures (PDF). La Jolla: A.S. Soft Reserves, UC San Diego. p. 103.
+7. Jump up^ Knuth, Donald E. (2000). Sorting and searching (2. ed., 6. printing, newly updated and rev. ed.). Boston [u.a.]: Addison-Wesley. p. 460. ISBN 0-201-89685-0.
+8. Jump up^ Proof of asymptotic bounds
+Further reading[edit]
+* Donald Knuth. The Art of Computer Programming, Volume 3: Sorting and Searching, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89685-0. Pages 458 475 of section 6.2.3: Balanced Trees.
+External links[edit]
+The Wikibook Algorithm Implementation has a page on the topic of: AVL treeWikimedia Commons has media related to AVL-trees.* xdg library by Dmitriy Vilkov: Serializable straight C-implementation could easily be taken from this library under GNU-LGPL and AFL v2.0 licenses.
+* Description from the Dictionary of Algorithms and Data Structures
+* Python Implementation
+* Single C header file by Ian Piumarta
+* AVL Tree Demonstration
+* AVL tree applet   all operations
+* Fast and efficient implementation of AVL Trees
+* PHP Implementation
+* AVL Threaded Tree PHP Implementation
+* C++ implementation which can be used as an array
+* Self balancing AVL tree with Concat and Split operations
+[show]
+* V
+* T
+* E
+Tree data structures[show]
+* V
+* T
+* E
+Data structuresCategories: 
+* 1962 in computer science
+* Binary trees
+* Soviet inventions
+* Search trees
+2 3 4 tree
+From Wikipedia, the free encyclopedia
+In computer science, a 2 3 4 tree (also called a 2 4 tree) is a self-balancing data structure that is commonly used to implement dictionaries.[citation needed] The numbers mean atree where every node with children (internal node) has either two, three, or four child nodes:
+* a 2-node has one data element, and if internal has two child nodes;
+* a 3-node has two data elements, and if internal has three child nodes;
+* a 4-node has three data elements, and if internal has four child nodes.
+* 
+2-node
+ 
+* 
+3-node
+ 
+* 
+4-node
+2 3 4 trees are B-trees of order 4;[1] like B-trees in general, they can search, insert and delete in O(log n) time. One property of a 2 3 4 tree is that all external nodes are at the same depth.
+2 3 4 trees are an isometry of red black trees, meaning that they are equivalent data structures. In other words, for every 2 3 4 tree, there exists at least one red black tree with data elements in the same order. Moreover, insertion and deletion operations on 2 3 4 trees that cause node expansions, splits and merges are equivalent to the color-flipping and rotations in red black trees. Introductions to red black trees usually introduce 2 3 4 trees first, because they are conceptually simpler. 2 3 4 trees, however, can be difficult to implement in most programming languages because of the large number of special cases involved in operations on the tree. Red black trees are simpler to implement,[2] so tend to be used instead.
+Contents
+  [hide] 
+* 1 Properties
+* 2 Insertion
+o 2.1 Example
+* 3 Deletion
+* 4 See also
+* 5 References
+* 6 External links
+Properties[edit]
+* Every node (leaf or internal) is a 2-node, 3-node or a 4-node, and holds one, two, or three data elements, respectively.
+* All leaves are at the same depth (the bottom level).
+* All data is kept in sorted order.
+Insertion[edit]
+To insert a value, we start at the root of the 2 3 4 tree:-
+1. If the current node is a 4-node:
+* Remove and save the middle value to get a 3-node.
+* Split the remaining 3-node up into a pair of 2-nodes (the now missing middle value is handled in the next step).
+* If this is the root node (which thus has no parent):
+* the middle value becomes the new root 2-node and the tree height increases by 1. Ascend into the root.
+* Otherwise, push the middle value up into the parent node. Ascend into the parent node.
+2. Find the child whose interval contains the value to be inserted.
+3. If that child is a leaf, insert the value into the child node and finish.
+* Otherwise, descend into the child and repeat from step 1.[3][4]
+Example[edit]
+To insert the value "25" into this 2 3 4 tree:
+
+* Begin at the root (10, 20) and descend towards the rightmost child (22, 24, 29). (Its interval (20,  ) contains 25.)
+* Node (22, 24, 29) is a 4-node, so its middle element 24 is pushed up into the parent node.
+
+* The remaining 3-node (22, 29) is split into a pair of 2-nodes (22) and (29). Ascend back into the new parent (10, 20, 24).
+* Descend towards the rightmost child (29). (Its interval (24 - 29) contains 25.)
+
+* Node (29) has no leftmost child. (The child for interval (24 - 29) is empty.) Stop here and insert value 25 into this node.
+
+Deletion[edit]
+Consider just leaving the element there, marking it  deleted,  possibly to be re-used for a future insertion.
+To remove a value from the 2 3 4 tree:
+1. Find the element to be deleted.
+* If the element is not in a leaf node, remember its location and continue searching until a leaf, which will contain the element s successor, is reached. The successor can be either the largest key that is smaller than the one to be removed, or the smallest key that is larger than the one to be removed. It is simplest to make adjustments to the tree from the top down such that the leaf node found is not a 2-node. That way, after the swap, there will not be an empty leaf node.
+* If the element is in a 2-node leaf, just make the adjustments below.
+Make the following adjustments when a 2-node   except the root node   is encountered on the way to the leaf we want to remove:
+1. If a sibling on either side of this node is a 3-node or a 4-node (thus having more than 1 key), perform a rotation with that sibling:
+* The key from the other sibling closest to this node moves up to the parent key that overlooks the two nodes.
+* The parent key moves down to this node to form a 3-node.
+* The child that was originally with the rotated sibling key is now this node's additional child.
+2. If the parent is a 2-node and the sibling is also a 2-node, combine all three elements to form a new 4-node and shorten the tree. (This rule can only trigger if the parent 2-node is the root, since all other 2-nodes along the way will have been modified to not be 2-nodes. This is why "shorten the tree" here preserves balance; this is also an important assumption for the fusion operation.)
+3. If the parent is a 3-node or a 4-node and all adjacent siblings are 2-nodes, do a fusion operation with the parent and an adjacent sibling:
+* The adjacent sibling and the parent key overlooking the two sibling nodes come together to form a 4-node.
+* Transfer the sibling's children to this node.
+Once the sought value is reached, it can now be placed at the removed entry's location without a problem because we have ensured that the leaf node has more than 1 key.
+Deletion in a 2 3 4 tree is O(log n), assuming transfer and fusion run in constant time ( O(1) ).[3][5]
+See also[edit]
+Computer programming portal* 2 3 tree
+* Red black tree
+* B-tree
+References[edit]
+1. Jump up^ Knuth, Donald (1998). Sorting and Searching. The Art of Computer Programming. Volume 3 (Second ed.). Addison Wesley. ISBN 0-201-89685-0.. Section 6.2.4: Multiway Trees, pp. 481 491. Also, pp. 476 477 of section 6.2.3 (Balanced Trees) discusses 2-3 trees.
+2. Jump up^ Sedgewick, Robert (2008). "Left-Leaning Red-Black Trees" (PDF). Left-Leaning Red-Black Trees. Department of Computer Science, Purdue University.
+3. ^ Jump up to:a b Ford, William; Topp, William (2002), Data Structures with C++ Using STL (2nd ed.), New Jersey: Prentice Hall, p. 683, ISBN 0-13-085850-1
+4. Jump up^ Goodrich, Michael T; Tamassia, Roberto; Mount, David M (2002), Data Structures and Algorithms in C++, Wiley, ISBN 0-471-20208-8
+5. Jump up^ Grama, Ananth (2004). "(2,4) Trees" (PDF). CS251: Data Structures Lecture Notes. Department of Computer Science, Purdue University. Retrieved 2008-04-10.
+External links[edit]
+Wikimedia Commons has media related to 2-3-4-Trees.* Algorithms In Action, with 2 3 4 Tree animation
+* Animation of a 2 3 4 Tree
+* Java Applet showing a 2 3 4 Tree
+* Left-leaning Red Black Trees   Princeton University, 2008
+* Open Data Structures   Section 9.1   2 4 Trees
+[hide]
+* V
+* T
+* E
+Tree data structuresSearch trees
+(dynamic sets/associative arrays)* 2 3
+* 2 3 4
+* AA
+* (a,b)
+* AVL
+* B
+* B+
+* B*
+* Bx
+* (Optimal) Binary search
+* Dancing
+* HTree
+* Interval
+* Order statistic
+* (Left-leaning) Red-black
+* Scapegoat
+* Splay
+* T
+* Treap
+* UB
+* Weight-balancedHeaps* Binary
+* Binomial
+* Fibonacci
+* Leftist
+* Pairing
+* Skew
+* Van Emde BoasTries* Hash
+* Radix
+* Suffix
+* Ternary search
+* X-fast
+* Y-fastSpatial data partitioning trees* BK
+* BSP
+* Cartesian
+* Hilbert R
+* k-d (implicit k-d)
+* M
+* Metric
+* MVP
+* Octree
+* Priority R
+* Quad
+* R
+* R+
+* R*
+* Segment
+* VP
+* XOther trees* Cover
+* Exponential
+* Fenwick
+* Finger
+* Fusion
+* Hash calendar
+* iDistance
+* K-ary
+* Left-child right-sibling
+* Link/cut
+* Log-structured merge
+* Merkle
+* PQ
+* Range
+* SPQR
+* TopCategories: 
+* B-tree
+B-tree
+From Wikipedia, the free encyclopedia
+Not to be confused with Binary tree.
+B-treeTypeTreeInvented1972Invented byRudolf Bayer, Edward M. McCreightTime complexity
+in big O notationAverageWorst caseSpaceO(n)O(n)SearchO(log n)O(log n)InsertO(log n)O(log n)DeleteO(log n)O(log n)In computer science, a B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children (Comer 1979, p. 123). Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. B-trees are a good example of a data structure for external memory. It is commonly used in databases and filesystems.
+Contents
+  [hide] 
+* 1 Overview
+o 1.1 Variants
+o 1.2 Etymology
+* 2 The database problem
+o 2.1 Time to search a sorted file
+o 2.2 An index speeds the search
+o 2.3 Insertions and deletions cause trouble
+o 2.4 The B-tree uses all those ideas
+* 3 Technical description
+o 3.1 Terminology
+o 3.2 Definition
+* 4 Best case and worst case heights
+* 5 Algorithms
+o 5.1 Search
+o 5.2 Insertion
+o 5.3 Deletion
+* 5.3.1 Deletion from a leaf node
+* 5.3.2 Deletion from an internal node
+* 5.3.3 Rebalancing after deletion
+o 5.4 Sequential access
+o 5.5 Initial construction
+* 6 In filesystems
+* 7 Variations
+o 7.1 Access concurrency
+* 8 See also
+* 9 Notes
+* 10 References
+o 10.1 Original papers
+* 11 External links
+Overview[edit]
+
+A B-tree of order 2 (Bayer & McCreight 1972) or order 5 (Knuth 1998).
+In B-trees, internal (non-leaf) nodes can have a variable number of child nodes within some pre-defined range. When data is inserted or removed from a node, its number of child nodes changes. In order to maintain the pre-defined range, internal nodes may be joined or split. Because a range of child nodes is permitted, B-trees do not need re-balancing as frequently as other self-balancing search trees, but may waste some space, since nodes are not entirely full. The lower and upper bounds on the number of child nodes are typically fixed for a particular implementation. For example, in a 2-3 B-tree (often simply referred to as a 2-3 tree), each internal node may have only 2 or 3 child nodes.
+Each internal node of a B-tree will contain a number of keys. The keys act as separation values which divide its subtrees. For example, if an internal node has 3 child nodes (or subtrees) then it must have 2 keys: a1 and a2. All values in the leftmost subtree will be less than a1, all values in the middle subtree will be between a1 and a2, and all values in the rightmost subtree will be greater than a2.
+Usually, the number of keys is chosen to vary between  and , where  is the minimum number of keys, and  is the minimum degree or branching factor of the tree. In practice, the keys take up the most space in a node. The factor of 2 will guarantee that nodes can be split or combined. If an internal node has  keys, then adding a key to that node can be accomplished by splitting the  key node into two  key nodes and adding the key to the parent node. Each split node has the required minimum number of keys. Similarly, if an internal node and its neighbor each have  keys, then a key may be deleted from the internal node by combining with its neighbor. Deleting the key would make the internal node have  keys; joining the neighbor would add  keys plus one more key brought down from the neighbor's parent. The result is an entirely full node of keys.
+The number of branches (or child nodes) from a node will be one more than the number of keys stored in the node. In a 2-3 B-tree, the internal nodes will store either one key (with two child nodes) or two keys (with three child nodes). A B-tree is sometimes described with the parameters     or simply with the highest branching order, .
+A B-tree is kept balanced by requiring that all leaf nodes be at the same depth. This depth will increase slowly as elements are added to the tree, but an increase in the overall depth is infrequent, and results in all leaf nodes being one more node farther away from the root.
+B-trees have substantial advantages over alternative implementations when the time to access the data of a node greatly exceeds the time spent processing that data, because then the cost of accessing the node may be amortized over multiple operations within the node. This usually occurs when the node data are in secondary storage such as disk drives. By maximizing the number of keys within each internal node, the height of the tree decreases and the number of expensive node accesses is reduced. In addition, rebalancing of the tree occurs less often. The maximum number of child nodes depends on the information that must be stored for each child node and the size of a full disk block or an analogous size in secondary storage. While 2-3 B-trees are easier to explain, practical B-trees using secondary storage need a large number of child nodes to improve performance.
+Variants[edit]
+The term B-tree may refer to a specific design or it may refer to a general class of designs. In the narrow sense, a B-tree stores keys in its internal nodes but need not store those keys in the records at the leaves. The general class includes variations such as the B+ tree and the B*.
+* In the B+ tree, copies of the keys are stored in the internal nodes; the keys and records are stored in leaves; in addition, a leaf node may include a pointer to the next leaf node to speed sequential access (Comer 1979, p. 129).
+* The B*-tree balances more neighboring internal nodes to keep the internal nodes more densely packed (Comer 1979, p. 129). This variant requires non-root nodes to be at least 2/3 full instead of 1/2 (Knuth 1998, p. 488). To maintain this, instead of immediately splitting up a node when it gets full, its keys are shared with a node next to it. When both nodes are full, then the two nodes are split into three. Deleting nodes is somewhat more complex than inserting however.
+* B-trees can be turned into order statistic trees to allow rapid searches for the Nth record in key order, or counting the number of records between any two records, and various other related operations.[1]
+Etymology[edit]
+Rudolf Bayer and Ed McCreight invented the B-tree while working at Boeing Research Labs in 1971 (Bayer & McCreight 1972), but they did not explain what, if anything, the Bstands for. Douglas Comer explains:
+The origin of "B-tree" has never been explained by the authors. As we shall see, "balanced," "broad," or "bushy" might apply. Others suggest that the "B" stands for Boeing. Because of his contributions, however, it seems appropriate to think of B-trees as "Bayer"-trees. (Comer 1979, p. 123 footnote 1)
+Donald Knuth speculates on the etymology of B-trees in his May, 1980 lecture on the topic "CS144C classroom lecture about disk storage and B-trees", suggesting the "B" may have originated from Boeing or from Bayer's name.[2]
+After a talk at CPM 2013 (24th Annual Symposium on Combinatorial Pattern Matching, Bad Herrenalb, Germany, June 17 19, 2013), Ed McCreight answered a question on B-tree's name by Martin Farach-Colton saying: "Bayer and I were in a lunch time where we get to think a name. And we were, so, B, we were thinking  B is, you know  We were working for Boeing at the time, we couldn't use the name without talking to lawyers. So, there is a B. It has to do with balance, another B. Bayer was the senior author, who did have several years older than I am and had many more publications than I did. So there is another B. And so, at the lunch table we never did resolve whether there was one of those that made more sense than the rest. What really lives to say is: the more you think about what the B in B-trees means, the better you understand B-trees."[3]
+The database problem[edit]
+This section describes a problem faced by database designers, outlines a series of increasingly effective solutions to the problem, and ends by describing how the B-tree solves the problem completely.
+Time to search a sorted file[edit]
+Usually, sorting and searching algorithms have been characterized by the number of comparison operations that must be performed using order notation. A binary search of a sorted table with  records, for example, can be done in roughly  comparisons. If the table had 1,000,000 records, then a specific record could be located with at most 20 comparisons: .
+Large databases have historically been kept on disk drives. The time to read a record on a disk drive far exceeds the time needed to compare keys once the record is available. The time to read a record from a disk drive involves a seek time and a rotational delay. The seek time may be 0 to 20 or more milliseconds, and the rotational delay averages about half the rotation period. For a 7200 RPM drive, the rotation period is 8.33 milliseconds. For a drive such as the Seagate ST3500320NS, the track-to-track seek time is 0.8 milliseconds and the average reading seek time is 8.5 milliseconds.[4] For simplicity, assume reading from disk takes about 10 milliseconds.
+Naively, then, the time to locate one record out of a million would take 20 disk reads times 10 milliseconds per disk read, which is 0.2 seconds.
+The time won't be that bad because individual records are grouped together in a disk block. A disk block might be 16 kilobytes. If each record is 160 bytes, then 100 records could be stored in each block. The disk read time above was actually for an entire block. Once the disk head is in position, one or more disk blocks can be read with little delay. With 100 records per block, the last 6 or so comparisons don't need to do any disk reads the comparisons are all within the last disk block read.
+To speed the search further, the first 13 to 14 comparisons (which each required a disk access) must be sped up.
+An index speeds the search[edit]
+A significant improvement can be made with an index. In the example above, initial disk reads narrowed the search range by a factor of two. That can be improved substantially by creating an auxiliary index that contains the first record in each disk block (sometimes called a sparse index). This auxiliary index would be 1% of the size of the original database, but it can be searched more quickly. Finding an entry in the auxiliary index would tell us which block to search in the main database; after searching the auxiliary index, we would have to search only that one block of the main database at a cost of one more disk read. The index would hold 10,000 entries, so it would take at most 14 comparisons. Like the main database, the last 6 or so comparisons in the aux index would be on the same disk block. The index could be searched in about 8 disk reads, and the desired record could be accessed in 9 disk reads.
+The trick of creating an auxiliary index can be repeated to make an auxiliary index to the auxiliary index. That would make an aux-aux index that would need only 100 entries and would fit in one disk block.
+Instead of reading 14 disk blocks to find the desired record, we only need to read 3 blocks. Reading and searching the first (and only) block of the aux-aux index identifies the relevant block in aux-index. Reading and searching that aux-index block identifies the relevant block in the main database. Instead of 150 milliseconds, we need only 30 milliseconds to get the record.
+The auxiliary indices have turned the search problem from a binary search requiring roughly  disk reads to one requiring only  disk reads where  is the blocking factor (the number of entries per block:  entries per block;  reads).
+In practice, if the main database is being frequently searched, the aux-aux index and much of the aux index may reside in a disk cache, so they would not incur a disk read.
+Insertions and deletions cause trouble[edit]
+If the database does not change, then compiling the index is simple to do, and the index need never be changed. If there are changes, then managing the database and its index becomes more complicated.
+Deleting records from a database doesn't cause much trouble. The index can stay the same, and the record can just be marked as deleted. The database stays in sorted order. If there is a large number of deletions, then the searching and storage become less efficient.
+Insertions can be very slow in a sorted sequential file because room for the inserted record must be made. Inserting a record before the first record in the file requires shifting all of the records down one. Such an operation is just too expensive to be practical. A trick is to leave some space lying around to be used for insertions. Instead of densely storing all the records in a block, the block can have some free space to allow for subsequent insertions. Those records would be marked as if they were "deleted" records.
+Both insertions and deletions are fast as long as space is available on a block. If an insertion won't fit on the block, then some free space on some nearby block must be found and the auxiliary indices adjusted. The hope is that enough space is nearby such that a lot of blocks do not need to be reorganized. Alternatively, some out-of-sequence disk blocks may be used.
+The B-tree uses all those ideas[edit]
+The B-tree uses all of the ideas described above. In particular, a B-tree:
+* keeps keys in sorted order for sequential traversing
+* uses a hierarchical index to minimize the number of disk reads
+* uses partially full blocks to speed insertions and deletions
+* keeps the index balanced with an elegant recursive algorithm
+In addition, a B-tree minimizes waste by making sure the interior nodes are at least half full. A B-tree can handle an arbitrary number of insertions and deletions.
+Technical description[edit]
+Terminology[edit]
+Unfortunately, the literature on B-trees is not uniform in its terminology (Folk & Zoellick 1992, p. 362).
+Bayer & McCreight (1972), Comer (1979), and others define the order of B-tree as the minimum number of keys in a non-root node. Folk & Zoellick (1992) points out that terminology is ambiguous because the maximum number of keys is not clear. An order 3 B-tree might hold a maximum of 6 keys or a maximum of 7 keys. Knuth (1998, p. 483) avoids the problem by defining the order to be maximum number of children (which is one more than the maximum number of keys).
+The term leaf is also inconsistent. Bayer & McCreight (1972) considered the leaf level to be the lowest level of keys, but Knuth considered the leaf level to be one level below the lowest keys (Folk & Zoellick 1992, p. 363). There are many possible implementation choices. In some designs, the leaves may hold the entire data record; in other designs, the leaves may only hold pointers to the data record. Those choices are not fundamental to the idea of a B-tree.[5]
+There are also unfortunate choices like using the variable k to represent the number of children when k could be confused with the number of keys.
+For simplicity, most authors assume there are a fixed number of keys that fit in a node. The basic assumption is the key size is fixed and the node size is fixed. In practice, variable length keys may be employed (Folk & Zoellick 1992, p. 379).
+Definition[edit]
+According to Knuth's definition, a B-tree of order m is a tree which satisfies the following properties:
+1. Every node has at most m children.
+2. Every non-leaf node (except root) has at least  m 2  children.
+3. The root has at least two children if it is not a leaf node.
+4. A non-leaf node with k children contains k 1 keys.
+5. All leaves appear in the same level
+Each internal node s keys act as separation values which divide its subtrees. For example, if an internal node has 3 child nodes (or subtrees) then it must have 2 keys: a1 and a2. All values in the leftmost subtree will be less than a1, all values in the middle subtree will be between a1 and a2, and all values in the rightmost subtree will be greater than a2.
+Internal nodes
+Internal nodes are all nodes except for leaf nodes and the root node. They are usually represented as an ordered set of elements and child pointers. Every internal node contains a maximum of U children and a minimum of L children. Thus, the number of elements is always 1 less than the number of child pointers (the number of elements is between L 1 and U 1). U must be either 2L or 2L 1; therefore each internal node is at least half full. The relationship between U and L implies that two half-full nodes can be joined to make a legal node, and one full node can be split into two legal nodes (if there s room to push one element up into the parent). These properties make it possible to delete and insert new values into a B-tree and adjust the tree to preserve the B-tree properties.
+The root node
+The root node s number of children has the same upper limit as internal nodes, but has no lower limit. For example, when there are fewer than L 1 elements in the entire tree, the root will be the only node in the tree, with no children at all.
+Leaf nodes
+Leaf nodes have the same restriction on the number of elements, but have no children, and no child pointers.
+A B-tree of depth n+1 can hold about U times as many items as a B-tree of depth n, but the cost of search, insert, and delete operations grows with the depth of the tree. As with any balanced tree, the cost grows much more slowly than the number of elements.
+Some balanced trees store values only at leaf nodes, and use different kinds of nodes for leaf nodes and internal nodes. B-trees keep values in every node in the tree, and may use the same structure for all nodes. However, since leaf nodes never have children, the B-trees benefit from improved performance if they use a specialized structure.
+Best case and worst case heights[edit]
+Let h be the height of the classic B-tree. Let n > 0 be the number of entries in the tree.[6] Let m be the maximum number of children a node can have. Each node can have at most m 1 keys.
+It can be shown (by induction for example) that a B-tree of height h with all its nodes completely filled has n= mh 1 entries. Hence, the best case height of a B-tree is:
+
+Let d be the minimum number of children an internal (non-root) node can have. For an ordinary B-tree, d= m/2 .
+Comer (1979, p. 127) and Cormen et al. (2001, pp. 383 384) give the worst case height of a B-tree (where the root node is considered to have height 0) as
+
+Algorithms[edit]
+This article may be confusing or unclear to readers. In particular, the discussion below uses "element", "value", "key", "separator", and "separation value" to mean essentially the same thing. The terms are not clearly defined. There are some subtle issues at the root and leaves. Please help us clarify the article; suggestions may be found on the talk page. (February 2012)Search[edit]
+Searching is similar to searching a binary search tree. Starting at the root, the tree is recursively traversed from top to bottom. At each level, the search chooses the child pointer (subtree) whose separation values are on either side of the search value.
+Binary search is typically (but not necessarily) used within nodes to find the separation values and child tree of interest.
+Insertion[edit]
+
+A B Tree insertion example with each iteration. The nodes of this B tree have at most 3 children (Knuth order 3).
+All insertions start at a leaf node. To insert a new element, search the tree to find the leaf node where the new element should be added. Insert the new element into that node with the following steps:
+1. If the node contains fewer than the maximum legal number of elements, then there is room for the new element. Insert the new element in the node, keeping the node's elements ordered.
+2. Otherwise the node is full, evenly split it into two nodes so:
+1. A single median is chosen from among the leaf's elements and the new element.
+2. Values less than the median are put in the new left node and values greater than the median are put in the new right node, with the median acting as a separation value.
+3. The separation value is inserted in the node's parent, which may cause it to be split, and so on. If the node has no parent (i.e., the node was the root), create a new root above this node (increasing the height of the tree).
+If the splitting goes all the way up to the root, it creates a new root with a single separator value and two children, which is why the lower bound on the size of internal nodes does not apply to the root. The maximum number of elements per node is U 1. When a node is split, one element moves to the parent, but one element is added. So, it must be possible to divide the maximum number U 1 of elements into two legal nodes. If this number is odd, then U=2L and one of the new nodes contains (U 2)/2 = L 1 elements, and hence is a legal node, and the other contains one more element, and hence it is legal too. If U 1 is even, then U=2L 1, so there are 2L 2 elements in the node. Half of this number is L 1, which is the minimum number of elements allowed per node.
+An improved algorithm (Mond & Raz 1985) supports a single pass down the tree from the root to the node where the insertion will take place, splitting any full nodes encountered on the way. This prevents the need to recall the parent nodes into memory, which may be expensive if the nodes are on secondary storage. However, to use this improved algorithm, we must be able to send one element to the parent and split the remaining U 2 elements into two legal nodes, without adding a new element. This requires U = 2L rather than U = 2L 1, which accounts for why some textbooks impose this requirement in defining B-trees.
+Deletion[edit]
+There are two popular strategies for deletion from a B-tree.
+1. Locate and delete the item, then restructure the tree to regain its invariants, OR
+2. Do a single pass down the tree, but before entering (visiting) a node, restructure the tree so that once the key to be deleted is encountered, it can be deleted without triggering the need for any further restructuring
+The algorithm below uses the former strategy.
+There are two special cases to consider when deleting an element:
+1. The element in an internal node is a separator for its child nodes
+2. Deleting an element may put its node under the minimum number of elements and children
+The procedures for these cases are in order below.
+Deletion from a leaf node[edit]
+1. Search for the value to delete.
+2. If the value is in a leaf node, simply delete it from the node.
+3. If underflow happens, rebalance the tree as described in section "Rebalancing after deletion" below.
+Deletion from an internal node[edit]
+Each element in an internal node acts as a separation value for two subtrees, therefore we need to find a replacement for separation. Note that the largest element in the left subtree is still less than the separator. Likewise, the smallest element in the right subtree is still greater than the separator. Both of those elements are in leaf nodes, and either one can be the new separator for the two subtrees. Algorithmically described below:
+1. Choose a new separator (either the largest element in the left subtree or the smallest element in the right subtree), remove it from the leaf node it is in, and replace the element to be deleted with the new separator.
+2. The previous step deleted an element (the new separator) from a leaf node. If that leaf node is now deficient (has fewer than the required number of nodes), then rebalance the tree starting from the leaf node.
+Rebalancing after deletion[edit]
+Rebalancing starts from a leaf and proceeds toward the root until the tree is balanced. If deleting an element from a node has brought it under the minimum size, then some elements must be redistributed to bring all nodes up to the minimum. Usually, the redistribution involves moving an element from a sibling node that has more than the minimum number of nodes. That redistribution operation is called a rotation. If no sibling can spare an element, then the deficient node must be merged with a sibling. The merge causes the parent to lose a separator element, so the parent may become deficient and need rebalancing. The merging and rebalancing may continue all the way to the root. Since the minimum element count doesn't apply to the root, making the root be the only deficient node is not a problem. The algorithm to rebalance the tree is as follows:[citation needed]
+* If the deficient node's right sibling exists and has more than the minimum number of elements, then rotate left
+1. Copy the separator from the parent to the end of the deficient node (the separator moves down; the deficient node now has the minimum number of elements)
+2. Replace the separator in the parent with the first element of the right sibling (right sibling loses one node but still has at least the minimum number of elements)
+3. The tree is now balanced
+* Otherwise, if the deficient node's left sibling exists and has more than the minimum number of elements, then rotate right
+1. Copy the separator from the parent to the start of the deficient node (the separator moves down; deficient node now has the minimum number of elements)
+2. Replace the separator in the parent with the last element of the left sibling (left sibling loses one node but still has at least the minimum number of elements)
+3. The tree is now balanced
+* Otherwise, if both immediate siblings have only the minimum number of elements, then merge with a sibling sandwiching their separator taken off from their parent
+1. Copy the separator to the end of the left node (the left node may be the deficient node or it may be the sibling with the minimum number of elements)
+2. Move all elements from the right node to the left node (the left node now has the maximum number of elements, and the right node   empty)
+3. Remove the separator from the parent along with its empty right child (the parent loses an element)
+* If the parent is the root and now has no elements, then free it and make the merged node the new root (tree becomes shallower)
+* Otherwise, if the parent has fewer than the required number of elements, then rebalance the parent
+Note: The rebalancing operations are different for B+ trees (e.g., rotation is different because parent has copy of the key) and B*-tree (e.g., three siblings are merged into two siblings).
+Sequential access[edit]
+While freshly loaded databases tend to have good sequential behavior, this behavior becomes increasingly difficult to maintain as a database grows, resulting in more random I/O and performance challenges.[7]
+Initial construction[edit]
+In applications, it is frequently useful to build a B-tree to represent a large existing collection of data and then update it incrementally using standard B-tree operations. In this case, the most efficient way to construct the initial B-tree is not to insert every element in the initial collection successively, but instead to construct the initial set of leaf nodes directly from the input, then build the internal nodes from these. This approach to B-tree construction is called bulkloading. Initially, every leaf but the last one has one extra element, which will be used to build the internal nodes.[citation needed]
+For example, if the leaf nodes have maximum size 4 and the initial collection is the integers 1 through 24, we would initially construct 4 leaf nodes containing 5 values each and 1 which contains 4 values:
+123456789101112131415161718192021222324We build the next level up from the leaves by taking the last element from each leaf node except the last one. Again, each node except the last will contain one extra value. In the example, suppose the internal nodes contain at most 2 values (3 child pointers). Then the next level up of internal nodes would be:
+51015 201234678911121314 1617181921222324This process is continued until we reach a level with only one node and it is not overfilled. In the example only the root level remains:
+15510 201234678911121314 1617181921222324In filesystems[edit]
+In addition to its use in databases, the B-tree is also used in filesystems to allow quick random access to an arbitrary block in a particular file. The basic problem is turning the file block  address into a disk block (or perhaps to a cylinder-head-sector) address.
+Some operating systems require the user to allocate the maximum size of the file when the file is created. The file can then be allocated as contiguous disk blocks. Converting to a disk block: the operating system just adds the file block address to the starting disk block of the file. The scheme is simple, but the file cannot exceed its created size.
+Other operating systems allow a file to grow. The resulting disk blocks may not be contiguous, so mapping logical blocks to physical blocks is more involved.
+MS-DOS, for example, used a simple File Allocation Table (FAT). The FAT has an entry for each disk block,[note 1] and that entry identifies whether its block is used by a file and if so, which block (if any) is the next disk block of the same file. So, the allocation of each file is represented as a linked list in the table. In order to find the disk address of file block , the operating system (or disk utility) must sequentially follow the file's linked list in the FAT. Worse, to find a free disk block, it must sequentially scan the FAT. For MS-DOS, that was not a huge penalty because the disks and files were small and the FAT had few entries and relatively short file chains. In the FAT12 filesystem (used on floppy disks and early hard disks), there were no more than 4,080 [note 2] entries, and the FAT would usually be resident in memory. As disks got bigger, the FAT architecture began to confront penalties. On a large disk using FAT, it may be necessary to perform disk reads to learn the disk location of a file block to be read or written.
+TOPS-20 (and possibly TENEX) used a 0 to 2 level tree that has similarities to a B-tree[citation needed]. A disk block was 512 36-bit words. If the file fit in a 512 (29) word block, then the file directory would point to that physical disk block. If the file fit in 218 words, then the directory would point to an aux index; the 512 words of that index would either be NULL (the block isn't allocated) or point to the physical address of the block. If the file fit in 227 words, then the directory would point to a block holding an aux-aux index; each entry would either be NULL or point to an aux index. Consequently, the physical disk block for a 227 word file could be located in two disk reads and read on the third.
+Apple's filesystem HFS+, Microsoft's NTFS,[8] AIX (jfs2) and some Linux filesystems, such as btrfs and Ext4, use B-trees.
+B*-trees are used in the HFS and Reiser4 file systems.
+Variations[edit]
+Access concurrency[edit]
+Lehman and Yao[9] showed that all read locks could be avoided (and thus concurrent access greatly improved) by linking the tree blocks at each level together with a "next" pointer. This results in a tree structure where both insertion and search operations descend from the root to the leaf. Write locks are only required as a tree block is modified. This maximizes access concurrency by multiple users, an important consideration for databases and/or other B-tree based ISAM storage methods. The cost associated with this improvement is that empty pages cannot be removed from the btree during normal operations. (However, see [10] for various strategies to implement node merging, and source code at.[11])
+United States Patent 5283894, granted in 1994, appears to show a way to use a 'Meta Access Method' [12] to allow concurrent B+ tree access and modification without locks. The technique accesses the tree 'upwards' for both searches and updates by means of additional in-memory indexes that point at the blocks in each level in the block cache. No reorganization for deletes is needed and there are no 'next' pointers in each block as in Lehman and Yao.
+See also[edit]
+* R-tree
+* 2 3 tree
+* 2 3 4 tree
+Notes[edit]
+1. Jump up^ For FAT, what is called a "disk block" here is what the FAT documentation calls a "cluster", which is fixed-size group of one or more contiguous whole physical disk sectors. For the purposes of this discussion, a cluster has no significant difference from a physical sector.
+2. Jump up^ Two of these were reserved for special purposes, so only 4078 could actually represent disk blocks (clusters).
+References[edit]
+1. Jump up^ Counted B-Trees, retrieved 2010-01-25
+2. Jump up^ Knuth's video lectures from Stanford
+3. Jump up^ Talk's video, retrieved 2014-01-17
+4. Jump up^ Seagate Technology LLC, Product Manual: Barracuda ES.2 Serial ATA, Rev. F., publication 100468393, 2008 [1], page 6
+5. Jump up^ Bayer & McCreight (1972) avoided the issue by saying an index element is a (physically adjacent) pair of (x, a) where x is the key, and a is some associated information. The associated information might be a pointer to a record or records in a random access, but what it was didn't really matter. Bayer & McCreight (1972) states, "For this paper the associated information is of no further interest."
+6. Jump up^ If n is zero, then no root node is needed, so the height of an empty tree is not well defined.
+7. Jump up^ "Cache Oblivious B-trees". State University of New York (SUNY) at Stony Brook. Retrieved 2011-01-17.
+8. Jump up^ Mark Russinovich. "Inside Win2K NTFS, Part 1". Microsoft Developer Network.Archived from the original on 13 April 2008. Retrieved 2008-04-18.
+9. Jump up^ "Efficient locking for concurrent operations on B-trees". Portal.acm.org.doi:10.1145/319628.319663. Retrieved 2012-06-28.
+10. Jump up^ http://www.dtic.mil/cgi-bin/GetTRDoc AD=ADA232287&Location=U2&doc=GetTRDoc.pdf
+11. Jump up^ "Downloads - high-concurrency-btree - High Concurrency B-Tree code in C - GitHub Project Hosting". Retrieved 2014-01-27.
+12. Jump up^ Lockless Concurrent B+Tree
+General
+* Bayer, R.; McCreight, E. (1972), "Organization and Maintenance of Large Ordered Indexes" (PDF), Acta Informatica 1 (3): 173 189, doi:10.1007/bf00288683
+* Comer, Douglas (June 1979), "The Ubiquitous B-Tree", Computing Surveys 11 (2): 123 137, doi:10.1145/356770.356776, ISSN 0360-0300.
+* Cormen, Thomas; Leiserson, Charles; Rivest, Ronald; Stein, Clifford (2001), Introduction to Algorithms (Second ed.), MIT Press and McGraw-Hill, pp. 434 454, ISBN 0-262-03293-7. Chapter 18: B-Trees.
+* Folk, Michael J.; Zoellick, Bill (1992), File Structures (2nd ed.), Addison-Wesley, ISBN 0-201-55713-4
+* Knuth, Donald (1998), Sorting and Searching, The Art of Computer Programming, Volume 3 (Second ed.), Addison-Wesley, ISBN 0-201-89685-0. Section 6.2.4: Multiway Trees, pp. 481 491. Also, pp. 476 477 of section 6.2.3 (Balanced Trees) discusses 2-3 trees.
+* Mond, Yehudit; Raz, Yoav (1985), "Concurrency Control in B+-Trees Databases Using Preparatory Operations", VLDB'85, Proceedings of 11th International Conference on Very Large Data Bases: 331 334.
+Original papers[edit]
+* Bayer, Rudolf; McCreight, E. (July 1970), Organization and Maintenance of Large Ordered Indices, Mathematical and Information Sciences Report No. 20, Boeing Scientific Research Laboratories.
+* Bayer, Rudolf (1971), "Binary B-Trees for Virtual Memory", Proceedings of 1971 ACM-SIGFIDET Workshop on Data Description, Access and Control, San Diego, CaliforniaMissing or empty |title= (help). November 11 12, 1971.
+External links[edit]
+* B-tree lecture by David Scot Taylor, SJSU
+* B-Tree animation applet by slady
+* B-tree and UB-tree on Scholarpedia Curator: Dr Rudolf Bayer
+* B-Trees: Balanced Tree Data Structures
+* NIST's Dictionary of Algorithms and Data Structures: B-tree
+* B-Tree Tutorial
+* The InfinityDB BTree implementation
+* Cache Oblivious B(+)-trees
+* Dictionary of Algorithms and Data Structures entry for B*-tree
+* Open Data Structures - Section 14.2 - B-Trees
+* Counted B-Trees
+[show]
+* V
+* T
+* E
+Tree data structures[show]
+* V
+* T
+* E
+Data structuresCategories: 
+* 1971 introductions
+* B-tree
+* Database index techniques
+Red black tree
+From Wikipedia, the free encyclopedia
+Red black treeTypeTreeInvented1972Invented byRudolf BayerTime complexity
+in big O notationAverageWorst caseSpaceO(n)O(n)SearchO(log n)O(log n)InsertO(log n)O(log n)DeleteO(log n)O(log n)A red black tree is a binary search tree with an extra bit of data per node, its color, which can be either red or black.[1] The extra bit of storage ensures an approximately balanced tree by constraining how nodes are colored from any path from the root to the leaf.[1]Thus, it is a data structure which is a type of self-balancing binary search tree.
+Balance is preserved by painting each node of the tree with one of two colors (typically called 'red' and 'black') in a way that satisfies certain properties, which collectively constrain how unbalanced the tree can become in the worst case. When the tree is modified, the new tree is subsequently rearranged and repainted to restore the coloring properties. The properties are designed in such a way that this rearranging and recoloring can be performed efficiently.
+The balancing of the tree is not perfect but it is good enough to allow it to guarantee searching in O(log n) time, where n is the total number of elements in the tree. The insertion and deletion operations, along with the tree rearrangement and recoloring, are also performed in O(log n) time.[2]
+Tracking the color of each node requires only 1 bit of information per node because there are only two colors. The tree does not contain any other data specific to its being a red black tree so its memory footprint is almost identical to a classic (uncolored) binary search tree. In many cases the additional bit of information can be stored at no additional memory cost.
+Contents
+  [hide] 
+* 1 History
+* 2 Terminology
+* 3 Properties
+* 4 Analogy to B-trees of order 4
+* 5 Applications and related data structures
+* 6 Operations
+o 6.1 Insertion
+o 6.2 Removal
+* 7 Proof of asymptotic bounds
+o 7.1 Insertion complexity
+* 8 Parallel algorithms
+* 9 See also
+* 10 Notes
+* 11 References
+* 12 External links
+History[edit]
+The original data structure was invented in 1972 by Rudolf Bayer[3] and named "symmetric binary B-tree", but acquired its modern name in a paper in 1978 by Leonidas J. Guibas and Robert Sedgewick entitled "A Dichromatic Framework for Balanced Trees".[4] The color "red" was chosen because it was the best-looking color produced by the color laser printer available to the authors while working at Xerox PARC.[5]
+Terminology[edit]
+A red black tree is a special type of binary tree, used in computer science to organize pieces of comparable data, such as text fragments or numbers.
+The leaf nodes of red black trees do not contain data. These leaves need not be explicit in computer memory a null child pointer can encode the fact that this child is a leaf but it simplifies some algorithms for operating on red black trees if the leaves really are explicit nodes. To save memory, sometimes a single sentinel node performs the role of all leaf nodes; all references from internal nodes to leaf nodes then point to the sentinel node.
+Red black trees, like all binary search trees, allow efficient in-order traversal (that is: in the order Left Root Right) of their elements. The search-time results from the traversal from root to leaf, and therefore a balanced tree of n nodes, having the least possible tree height, results in O(log n) search time.
+Properties[edit]
+
+An example of a red black tree
+In addition to the requirements imposed on a binary search tree the following must be satisfied by a red black tree:[6]
+1. A node is either red or black.
+2. The root is black. (This rule is sometimes omitted. Since the root can always be changed from red to black, but not necessarily vice versa, this rule has little effect on analysis).
+3. All leaves (NIL) are black. All leaves are of the same color as the root.
+4. Every red node must have two black child nodes, and therefore it must have a black parent.
+5. Every path from a given node to any of its descendant NIL nodes contains the same number of black nodes.
+These constraints enforce a critical property of red black trees: the path from the root to the farthest leaf is no more than twice as long as the path from the root to the nearest leaf. The result is that the tree is roughly height-balanced. Since operations such as inserting, deleting, and finding values require worst-case time proportional to the height of the tree, this theoretical upper bound on the height allows red black trees to be efficient in the worst case, unlike ordinary binary search trees.
+To see why this is guaranteed, it suffices to consider the effect of properties 4 and 5 together. For a red black tree T, let B be the number of black nodes in property 5. Let the shortest possible path from the root of T to any leaf consist of B black nodes. Longer possible paths may be constructed by inserting red nodes. However, property 4 makes it impossible to insert more than one consecutive red node. Therefore the longest possible path consists of 2B nodes, alternating black and red (this is the worst case).
+The shortest possible path has all black nodes, and the longest possible path alternates between red and black nodes. Since all maximal paths have the same number of black nodes, by property 5, this shows that no path is more than twice as long as any other path.
+Analogy to B-trees of order 4[edit]
+
+The same red black tree as in the example above, seen as a B-tree.
+A red black tree is similar in structure to a B-tree of order[note 1] 4, where each node can contain between 1 and 3 values and (accordingly) between 2 and 4 child pointers. In such a B-tree, each node will contain only one value matching the value in a black node of the red black tree, with an optional value before and/or after it in the same node, both matching an equivalent red node of the red black tree.
+One way to see this equivalence is to "move up" the red nodes in a graphical representation of the red black tree, so that they align horizontally with their parent black node, by creating together a horizontal cluster. In the B-tree, or in the modified graphical representation of the red black tree, all leaf nodes are at the same depth.
+The red black tree is then structurally equivalent to a B-tree of order 4, with a minimum fill factor of 33% of values per cluster with a maximum capacity of 3 values.
+This B-tree type is still more general than a red black tree though, as it allows ambiguity in a red black tree conversion multiple red black trees can be produced from an equivalent B-tree of order 4. If a B-tree cluster contains only 1 value, it is the minimum, black, and has two child pointers. If a cluster contains 3 values, then the central value will be black and each value stored on its sides will be red. If the cluster contains two values, however, either one can become the black node in the red black tree (and the other one will be red).
+So the order-4 B-tree does not maintain which of the values contained in each cluster is the root black tree for the whole cluster and the parent of the other values in the same cluster. Despite this, the operations on red black trees are more economical in time because you don't have to maintain the vector of values.[citation needed] It may be costly if values are stored directly in each node rather than being stored by reference. B-tree nodes, however, are more economical in space because you don't need to store the color attribute for each node. Instead, you have to know which slot in the cluster vector is used. If values are stored by reference, e.g. objects, null references can be used and so the cluster can be represented by a vector containing 3 slots for value pointers plus 4 slots for child references in the tree. In that case, the B-tree can be more compact in memory, improving data locality.
+The same analogy can be made with B-trees with larger orders that can be structurally equivalent to a colored binary tree: you just need more colors. Suppose that you add blue, then the blue red black tree defined like red black trees but with the additional constraint that no two successive nodes in the hierarchy will be blue and all blue nodes will be children of a red node, then it becomes equivalent to a B-tree whose clusters will have at most 7 values in the following colors: blue, red, blue, black, blue, red, blue (For each cluster, there will be at most 1 black node, 2 red nodes, and 4 blue nodes).
+For moderate volumes of values, insertions and deletions in a colored binary tree are faster compared to B-trees because colored trees don't attempt to maximize the fill factor of each horizontal cluster of nodes (only the minimum fill factor is guaranteed in colored binary trees, limiting the number of splits or junctions of clusters). B-trees will be faster for performing rotations (because rotations will frequently occur within the same cluster rather than with multiple separate nodes in a colored binary tree). However for storing large volumes, B-trees will be much faster as they will be more compact by grouping several children in the same cluster where they can be accessed locally.
+All optimizations possible in B-trees to increase the average fill factors of clusters are possible in the equivalent multicolored binary tree. Notably, maximizing the average fill factor in a structurally equivalent B-tree is the same as reducing the total height of the multicolored tree, by increasing the number of non-black nodes. The worst case occurs when all nodes in a colored binary tree are black, the best case occurs when only a third of them are black (and the other two thirds are red nodes).
+Notes
+1. Jump up^ Using Knuth's definition of order: the maximum number of children
+Applications and related data structures[edit]
+Red black trees offer worst-case guarantees for insertion time, deletion time, and search time. Not only does this make them valuable in time-sensitive applications such as real-time applications, but it makes them valuable building blocks in other data structures which provide worst-case guarantees; for example, many data structures used incomputational geometry can be based on red black trees, and the Completely Fair Scheduler used in current Linux kernels uses red black trees.
+The AVL tree is another structure supporting O(log n) search, insertion, and removal. It is more rigidly balanced than red black trees, leading to slower insertion and removal but faster retrieval. This makes it attractive for data structures that may be built once and loaded without reconstruction, such as language dictionaries (or program dictionaries, such as the opcodes of an assembler or interpreter).
+Red black trees are also particularly valuable in functional programming, where they are one of the most common persistent data structures, used to construct associative arraysand sets which can retain previous versions after mutations. The persistent version of red black trees requires O(log n) space for each insertion or deletion, in addition to time.
+For every 2-4 tree, there are corresponding red black trees with data elements in the same order. The insertion and deletion operations on 2-4 trees are also equivalent to color-flipping and rotations in red black trees. This makes 2-4 trees an important tool for understanding the logic behind red black trees, and this is why many introductory algorithm texts introduce 2-4 trees just before red black trees, even though 2-4 trees are not often used in practice.
+In 2008, Sedgewick introduced a simpler version of the red black tree called the left-leaning red black tree[7] by eliminating a previously unspecified degree of freedom in the implementation. The LLRB maintains an additional invariant that all red links must lean left except during inserts and deletes. Red black trees can be made isometric to either 2-3 trees,[8] or 2-4 trees,[7] for any sequence of operations. The 2-4 tree isometry was described in 1978 by Sedgewick.[this quote needs a citation] With 2-4 trees, the isometry is resolved by a "color flip," corresponding to a split, in which the red color of two children nodes leaves the children and moves to the parent node. The tango tree, a type of tree optimized for fast searches, usually[when ] uses red black trees as part of its data structure.
+Operations[edit]
+Read-only operations on a red black tree require no modification from those used for binary search trees, because every red black tree is a special case of a simple binary search tree. However, the immediate result of an insertion or removal may violate the properties of a red black tree. Restoring the red black properties requires a small number (O(log n) or amortized O(1)) of color changes (which are very quick in practice) and no more than three tree rotations (two for insertion). Although insert and delete operations are complicated, their times remain O(log n).
+Insertion[edit]
+Insertion begins by adding the node as any binary search tree insertion does and by coloring it red. Whereas in the binary search tree, we always add a leaf, in the red black tree, leaves contain no information, so instead we add a red interior node, with two black leaves, in place of an existing black leaf.
+What happens next depends on the color of other nearby nodes. The term uncle node will be used to refer to the sibling of a node's parent, as in human family trees. Note that:
+* property 3 (all leaves are black) always holds.
+* property 4 (both children of every red node are black) is threatened only by adding a red node, repainting a black node red, or a rotation.
+* property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes) is threatened only by adding a black node, repainting a red node black (or vice versa), or a rotation.
+Note: The label N will be used to denote the current node (colored red). At the beginning, this is the new node being inserted, but the entire procedure may also be applied recursively to other nodes (see case 3). P will denote N's parent node, G will denote N's grandparent, and U will denote N's uncle. Note that in between some cases, the roles and labels of the nodes are exchanged, but in each case, every label continues to represent the same node it represented at the beginning of the case. Any color shown in the diagram is either assumed in its case or implied by those assumptions. A numbered triangle represents a subtree of unspecified depth. A black circle atop the triangle designates a black root node, otherwise the root node's color is unspecified.
+There are several cases of red black tree insertion to handle:
+* N is the root node, i.e., first node of red black tree
+* N's parent (P) is black
+* N's parent (P) and uncle (U) are red
+* N is added to right of left child of grandparent, or N is added to left of right child of grandparent (P is red and U is black)
+* N is added to left of left child of grandparent, or N is added to right of right child of grandparent (P is red and U is black)
+Each case will be demonstrated with example C code. The uncle and grandparent nodes can be found by these functions:
+struct node *grandparent(struct node *n)
+{
+ if ((n != NULL) && (n->parent != NULL))
+  return n->parent->parent;
+ else
+  return NULL;
+}
+
+struct node *uncle(struct node *n)
+{
+ struct node *g = grandparent(n);
+ if (g == NULL)
+  return NULL; // No grandparent means no uncle
+ if (n->parent == g->left)
+  return g->right;
+ else
+  return g->left;
+}
+Case 1: The current node N is at the root of the tree. In this case, it is repainted black to satisfy property 2 (the root is black). Since this adds one black node to every path at once, property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes) is not violated.
+void insert_case1(struct node *n)
+{
+ if (n->parent == NULL)
+  n->color = BLACK;
+ else
+  insert_case2(n);
+}
+Case 2: The current node's parent P is black, so property 4 (both children of every red node are black) is not invalidated. In this case, the tree is still valid. Property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes) is not threatened, because the current node N has two black leaf children, but because N is red, the paths through each of its children have the same number of black nodes as the path through the leaf it replaced, which was black, and so this property remains satisfied.
+void insert_case2(struct node *n)
+{
+ if (n->parent->color == BLACK)
+  return; /* Tree is still valid */
+ else
+  insert_case3(n);
+}
+Note: In the following cases it can be assumed that N has a grandparent node G, because its parent P is red, and if it were the root, it would be black. Thus, N also has an uncle node U, although it may be a leaf in cases 4 and 5.
+
+Case 3: If both the parent P and the uncle U are red, then both of them can be repainted black and the grandparent G becomes red (to maintain property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes)). Now, the current red node N has a black parent. Since any path through the parent or uncle must pass through the grandparent, the number of black nodes on these paths has not changed. However, the grandparent G may now violate properties 2 (The root is black) or 4 (Both children of every red node are black) (property 4 possibly being violated since G may have a red parent). To fix this, the entire procedure is recursively performed on G from case 1. Note that this is a tail-recursive call, so it could be rewritten as a loop; since this is the only loop, and any rotations occur after this loop, this proves that a constant number of rotations occur.void insert_case3(struct node *n)
+{
+ struct node *u = uncle(n), *g;
+
+ if ((u != NULL) && (u->color == RED)) {
+  n->parent->color = BLACK;
+  u->color = BLACK;
+  g = grandparent(n);
+  g->color = RED;
+  insert_case1(g);
+ } else {
+  insert_case4(n);
+ }
+}
+Note: In the remaining cases, it is assumed that the parent node P is the left child of its parent. If it is the right child, left and right should be reversed throughout cases 4 and 5. The code samples take care of this.
+
+Case 4: The parent P is red but the uncle U is black; also, the current node N is the right child of P, and P in turn is the left child of its parent G. In this case, a left rotation on P that switches the roles of the current node N and its parent P can be performed; then, the former parent node P is dealt with using case 5 (relabeling N and P) because property 4 (both children of every red node are black) is still violated. The rotation causes some paths (those in the sub-tree labelled "1") to pass through the node N where they did not before. It also causes some paths (those in the sub-tree labelled "3") not to pass through the node P where they did before. However, both of these nodes are red, so property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes) is not violated by the rotation. After this case has been completed, property 4 (both children of every red node are black) is still violated, but now we can resolve this by continuing to case 5.void insert_case4(struct node *n)
+{
+ struct node *g = grandparent(n);
+
+ if ((n == n->parent->right) && (n->parent == g->left)) {
+  rotate_left(n->parent);
+
+ /*
+ * rotate_left can be the below because of already having *g =  grandparent(n) 
+ *
+ * struct node *saved_p=g->left, *saved_left_n=n->left;
+ * g->left=n; 
+ * n->left=saved_p;
+ * saved_p->right=saved_left_n;
+ * 
+ * and modify the parent's nodes properly
+ */
+
+  n = n->left;
+
+ } else if ((n == n->parent->left) && (n->parent == g->right)) {
+  rotate_right(n->parent);
+
+ /*
+ * rotate_right can be the below to take advantage of already having *g =  grandparent(n) 
+ *
+ * struct node *saved_p=g->right, *saved_right_n=n->right;
+ * g->right=n; 
+ * n->right=saved_p;
+ * saved_p->left=saved_right_n;
+ * 
+ */
+
+  n = n->right; 
+ }
+ insert_case5(n);
+}
+
+Case 5: The parent P is red but the uncle U is black, the current node N is the left child of P, and P is the left child of its parent G. In this case, a right rotation on G is performed; the result is a tree where the former parentP is now the parent of both the current node N and the former grandparent G. G is known to be black, since its former child P could not have been red otherwise (without violating property 4). Then, the colors of P and G are switched, and the resulting tree satisfies property 4 (both children of every red node are black). Property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes) also remains satisfied, since all paths that went through any of these three nodes went through G before, and now they all go through P. In each case, this is the only black node of the three.void insert_case5(struct node *n)
+{
+ struct node *g = grandparent(n);
+
+ n->parent->color = BLACK;
+ g->color = RED;
+ if (n == n->parent->left)
+  rotate_right(g);
+ else
+  rotate_left(g);
+}
+Note that inserting is actually in-place, since all the calls above use tail recursion.
+Removal[edit]
+In a regular binary search tree when deleting a node with two non-leaf children, we find either the maximum element in its left subtree (which is the in-order predecessor) or the minimum element in its right subtree (which is the in-order successor) and move its value into the node being deleted (as shown here). We then delete the node we copied the value from, which must have fewer than two non-leaf children. (Non-leaf children, rather than all children, are specified here because unlike normal binary search trees, red black trees can have leaf nodes anywhere, so that all nodes are either internal nodes with two children or leaf nodes with, by definition, zero children. In effect, internal nodes having two leaf children in a red black tree are like the leaf nodes in a regular binary search tree.) Because merely copying a value does not violate any red black properties, this reduces to the problem of deleting a node with at most one non-leaf child. Once we have solved that problem, the solution applies equally to the case where the node we originally want to delete has at most one non-leaf child as to the case just considered where it has two non-leaf children.
+Therefore, for the remainder of this discussion we address the deletion of a node with at most one non-leaf child. We use the label M to denote the node to be deleted; C will denote a selected child of M, which we will also call "its child". If M does have a non-leaf child, call that its child, C; otherwise, choose either leaf as its child, C.
+If M is a red node, we simply replace it with its child C, which must be black by property 4. (This can only occur when M has two leaf children, because if the red node M had a black non-leaf child on one side but just a leaf child on the other side, then the count of black nodes on both sides would be different, thus the tree would violate property 5.) All paths through the deleted node will simply pass through one fewer red node, and both the deleted node's parent and child must be black, so property 3 (all leaves are black) and property 4 (both children of every red node are black) still hold.
+Another simple case is when M is black and C is red. Simply removing a black node could break Properties 4 ( Both children of every red node are black ) and 5 ( All paths from any given node to its leaf nodes contain the same number of black nodes ), but if we repaint C black, both of these properties are preserved.
+The complex case is when both M and C are black. (This can only occur when deleting a black node which has two leaf children, because if the black node M had a black non-leaf child on one side but just a leaf child on the other side, then the count of black nodes on both sides would be different, thus the tree would have been an invalid red black tree by violation of property 5.) We begin by replacing M with its child C. We will call (or label that is, relabel) this child (in its new position) N, and its sibling (its new parent's other child) S. (S was previously the sibling of M.) In the diagrams below, we will also use P for N's new parent (M's old parent), SL for S's left child, and SR for S's right child (Scannot be a leaf because if M and C were black, then P's one subtree which included M counted two black-height and thus P's other subtree which includes S must also count two black-height, which cannot be the case if S is a leaf node).
+Note: In between some cases, we exchange the roles and labels of the nodes, but in each case, every label continues to represent the same node it represented at the beginning of the case. Any color shown in the diagram is either assumed in its case or implied by those assumptions. White represents an unknown color (either red or black).
+We will find the sibling using this function:
+struct node *sibling(struct node *n)
+{
+ if (n == n->parent->left)
+  return n->parent->right;
+ else
+  return n->parent->left;
+}
+Note: In order that the tree remains well-defined, we need that every null leaf remains a leaf after all transformations (that it will not have any children). If the node we are deleting has a non-leaf (non-null) child N, it is easy to see that the property is satisfied. If, on the other hand, N would be a null leaf, it can be verified from the diagrams (or code) for all the cases that the property is satisfied as well.
+We can perform the steps outlined above with the following code, where the function replace_node substitutes child into n's place in the tree. For convenience, code in this section will assume that null leaves are represented by actual node objects rather than NULL (the code in the Insertion section works with either representation).
+void delete_one_child(struct node *n)
+{
+ /*
+  * Precondition: n has at most one non-null child.
+  */
+ struct node *child = is_leaf(n->right)   n->left : n->right;
+
+ replace_node(n, child);
+ if (n->color == BLACK) {
+  if (child->color == RED)
+   child->color = BLACK;
+  else
+   delete_case1(child);
+ }
+ free(n);
+}
+Note: If N is a null leaf and we do not want to represent null leaves as actual node objects, we can modify the algorithm by first calling delete_case1() on its parent (the node that we delete, n in the code above) and deleting it afterwards. We can do this because the parent is black, so it behaves in the same way as a null leaf (and is sometimes called a 'phantom' leaf). And we can safely delete it at the end as n will remain a leaf after all operations, as shown above.
+If both N and its original parent are black, then deleting this original parent causes paths which proceed through N to have one fewer black node than paths that do not. As this violates property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes), the tree must be rebalanced. There are several cases to consider:
+Case 1: N is the new root. In this case, we are done. We removed one black node from every path, and the new root is black, so the properties are preserved.
+void delete_case1(struct node *n)
+{
+ if (n->parent != NULL)
+  delete_case2(n);
+}
+Note: In cases 2, 5, and 6, we assume N is the left child of its parent P. If it is the right child, left and right should be reversed throughout these three cases. Again, the code examples take both cases into account.
+
+Case 2: S is red. In this case we reverse the colors of P and S, and then rotate left at P, turning S into N's grandparent. Note that P has to be black as it had a red child. Although all paths still have the same number of black nodes, now N has a black sibling and a red parent, so we can proceed to step 4, 5, or 6. (Its new sibling is black because it was once the child of the red S.) In later cases, we will relabel N's new sibling as S.void delete_case2(struct node *n)
+{
+ struct node *s = sibling(n);
+
+ if (s->color == RED) {
+  n->parent->color = RED;
+  s->color = BLACK;
+  if (n == n->parent->left)
+   rotate_left(n->parent);
+  else
+   rotate_right(n->parent);
+ }
+ delete_case3(n);
+}
+
+Case 3: P, S, and S's children are black. In this case, we simply repaint S red. The result is that all paths passing throughS, which are precisely those paths not passing through N, have one less black node. Because deleting N's original parent made all paths passing through N have one less black node, this evens things up. However, all paths through P now have one fewer black node than paths that do not pass through P, so property 5 (all paths from any given node to its leaf nodes contain the same number of black nodes) is still violated. To correct this, we perform the rebalancing procedure on P, starting at case 1.void delete_case3(struct node *n)
+{
+ struct node *s = sibling(n);
+
+ if ((n->parent->color == BLACK) &&
+     (s->color == BLACK) &&
+     (s->left->color == BLACK) &&
+     (s->right->color == BLACK)) {
+  s->color = RED;
+  delete_case1(n->parent);
+ } else
+  delete_case4(n);
+}
+
+Case 4: S and S's children are black, but P is red. In this case, we simply exchange the colors of S and P. This does not affect the number of black nodes on paths going through S, but it does add one to the number of black nodes on paths going through N, making up for the deleted black node on those paths.void delete_case4(struct node *n)
+{
+ struct node *s = sibling(n);
+
+ if ((n->parent->color == RED) &&
+     (s->color == BLACK) &&
+     (s->left->color == BLACK) &&
+     (s->right->color == BLACK)) {
+  s->color = RED;
+  n->parent->color = BLACK;
+ } else
+  delete_case5(n);
+}
+
+Case 5: S is black, S's left child is red, S's right child is black, and N is the left child of its parent. In this case we rotate right at S, so thatS's left child becomes S's parent and N's new sibling. We then exchange the colors of S and its new parent. All paths still have the same number of black nodes, but now N has a black sibling whose right child is red, so we fall into case 6. Neither N nor its parent are affected by this transformation. (Again, for case 6, we relabel N's new sibling as S.)void delete_case5(struct node *n)
+{
+ struct node *s = sibling(n);
+
+ if  (s->color == BLACK) { /* this if statement is trivial,
+due to case 2 (even though case 2 changed the sibling to a sibling's child,
+the sibling's child can't be red, since no red parent can have a red child). */
+/* the following statements just force the red to be on the left of the left of the parent,
+   or right of the right, so case six will rotate correctly. */
+  if ((n == n->parent->left) &&
+      (s->right->color == BLACK) &&
+      (s->left->color == RED)) { /* this last test is trivial too due to cases 2-4. */
+   s->color = RED;
+   s->left->color = BLACK;
+   rotate_right(s);
+  } else if ((n == n->parent->right) &&
+             (s->left->color == BLACK) &&
+             (s->right->color == RED)) {/* this last test is trivial too due to cases 2-4. */
+   s->color = RED;
+   s->right->color = BLACK;
+   rotate_left(s);
+  }
+ }
+ delete_case6(n);
+}
+
+Case 6: S is black, S's right child is red, and N is the left child of its parent P. In this case we rotate left at P, so that Sbecomes the parent of P and S's right child. We then exchange the colors of P and S, and make S's right child black. The subtree still has the same color at its root, so Properties 4 (Both children of every red node are black) and 5 (All paths from any given node to its leaf nodes contain the same number of black nodes) are not violated. However, N now has one additional black ancestor: either P has become black, or it was black and S was added as a black grandparent. Thus, the paths passing through N pass through one additional black node.
+Meanwhile, if a path does not go through N, then there are two possibilities:
+* It goes through N's new sibling. Then, it must go through S and P, both formerly and currently, as they have only exchanged colors and places. Thus the path contains the same number of black nodes.
+* It goes through N's new uncle, S's right child. Then, it formerly went through S, S's parent, and S's right child (which was red), but now only goes through S, which has assumed the color of its former parent, and S's right child, which has changed from red to black (assuming S's color: black). The net effect is that this path goes through the same number of black nodes.
+Either way, the number of black nodes on these paths does not change. Thus, we have restored Properties 4 (Both children of every red node are black) and 5 (All paths from any given node to its leaf nodes contain the same number of black nodes). The white node in the diagram can be either red or black, but must refer to the same color both before and after the transformation.void delete_case6(struct node *n)
+{
+ struct node *s = sibling(n);
+
+ s->color = n->parent->color;
+ n->parent->color = BLACK;
+
+ if (n == n->parent->left) {
+  s->right->color = BLACK;
+  rotate_left(n->parent);
+ } else {
+  s->left->color = BLACK;
+  rotate_right(n->parent);
+ }
+}
+Again, the function calls all use tail recursion, so the algorithm is in-place. In the algorithm above, all cases are chained in order, except in delete case 3 where it can recurse to case 1 back to the parent node: this is the only case where an in-place implementation will effectively loop (after only one rotation in case 3).
+Additionally, no tail recursion ever occurs on a child node, so the tail recursion loop can only move from a child back to its successive ancestors. No more than O(log n) loops back to case 1 will occur (where n is the total number of nodes in the tree before deletion). If a rotation occurs in case 2 (which is the only possibility of rotation within the loop of cases 1 3), then the parent of the node N becomes red after the rotation and we will exit the loop. Therefore at most one rotation will occur within this loop. Since no more than two additional rotations will occur after exiting the loop, at most three rotations occur in total.
+Proof of asymptotic bounds[edit]
+A red black tree which contains n internal nodes has a height of O(log(n)).
+Definitions:
+* h(v) = height of subtree rooted at node v
+* bh(v) = the number of black nodes (not counting v if it is black) from v to any leaf in the subtree (called the black-height).
+Lemma: A subtree rooted at node v has at least  internal nodes.
+Proof of Lemma (by induction height):
+Basis: h(v) = 0
+If v has a height of zero then it must be null, therefore bh(v) = 0. So:
+
+Inductive Step: v such that h(v) = k, has at least  internal nodes implies that  such that h() = k+1 has at least  internal nodes.
+Since  has h() > 0 it is an internal node. As such it has two children each of which have a black-height of either bh() or bh()-1 (depending on whether the child is red or black, respectively). By the inductive hypothesis each child has at least  internal nodes, so  has at least:
+
+internal nodes.
+Using this lemma we can now show that the height of the tree is logarithmic. Since at least half of the nodes on any path from the root to a leaf are black (property 4 of a red black tree), the black-height of the root is at least h(root)/2. By the lemma we get:
+
+Therefore the height of the root is O(log(n)).
+Insertion complexity[edit]
+In the tree code there is only one loop where the node of the root of the red black property that we wish to restore, x, can be moved up the tree by one level at each iteration.
+Since the original height of the tree is O(log n), there are O(log n) iterations. So overall the insert routine has O(log n) complexity.
+Parallel algorithms[edit]
+Parallel algorithms for constructing red black trees from sorted lists of items can run in constant time or O(log log n) time, depending on the computer model, if the number of processors available is asymptotically proportional to the number of items. Fast search, insertion, and deletion parallel algorithms are also known.[9]
+See also[edit]
+* Tree data structure
+* Tree rotation
+* Scapegoat tree
+* Splay tree
+* AVL tree
+* B-tree (2-3 tree, 2-3-4 tree, B+ tree, B*-tree, UB-tree)
+* T-tree
+* List of data structures
+Notes[edit]
+1. ^ Jump up to:a b Cormen, Thomas H. (2001). Introduction To Algorithms. Charles E Leiserson, Ronald L Rivest, Clifford Stein. MIT Press. p. 273. ISBN 0262032937.
+2. Jump up^ John Morris. "Red Black Trees".
+3. Jump up^ Rudolf Bayer (1972). "Symmetric binary B-Trees: Data structure and maintenance algorithms". Acta Informatica 1 (4): 290 306. doi:10.1007/BF00289509.
+4. Jump up^ Leonidas J. Guibas and Robert Sedgewick (1978). "A Dichromatic Framework for Balanced Trees". Proceedings of the 19th Annual Symposium on Foundations of Computer Science. pp. 8 21. doi:10.1109/SFCS.1978.3.
+5. Jump up^ Robert Sedgewick (2012). Red-Black BSTs. Coursera. A lot of people ask why did we use the name red black. Well, we invented this data structure, this way of looking at balanced trees, at Xerox PARC which was the home of the personal computer and many other innovations that we live with today entering[sic] graphic user interfaces, ethernet and object-oriented programmings[sic] and many other things. But one of the things that was invented there was laser printing and we were very excited to have nearby color laser printer that could print things out in color and out of the colors the red looked the best. So, that s why we picked the color red to distinguish red links, the types of links, in three nodes. So, that s an answer to the question for people that have been asking.
+6. Jump up^ Cormen, Thomas; Leiserson, Charles; Rivest, Ronald; Stein, Clifford (2009). "13". Introduction to Algorithms (3rd ed.). MIT Press. pp. 308 309. ISBN 978-0-262-03384-8.
+7. ^ Jump up to:a b http://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf
+8. Jump up^ http://www.cs.princeton.edu/courses/archive/fall08/cos226/lectures/10BalancedTrees-2x2.pdf
+9. Jump up^ Park, Heejin; Park, Kunsoo (2001). "Parallel algorithms for red black trees". Theoretical computer science (Elsevier) 262 (1 2): 415 435. doi:10.1016/S0304-3975(00)00287-5. Our parallel algorithm for constructing a red black tree from a sorted list of n items runs in O(1) time with n processors on the CRCW PRAM and runs in O(log log n) time with n / log log nprocessors on the EREW PRAM.
+References[edit]
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (July 2013)* Mathworld: Red Black Tree
+* San Diego State University: CS 660: Red Black tree notes, by Roger Whitney
+* Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. Introduction to Algorithms, Second Edition. MIT Press and McGraw-Hill, 2001. ISBN 0-262-03293-7 . Chapter 13: Red Black Trees, pp. 273 301.
+* Pfaff, Ben (June 2004). "Performance Analysis of BSTs in System Software" (PDF). Stanford University.
+* Okasaki, Chris. "Red Black Trees in a Functional Setting" (PS).
+External links[edit]
+* A complete and working implementation in C
+* Red Black Tree Demonstration
+* OCW MIT Lecture by Prof. Erik Demaine on Red Black Trees -
+* Binary Search Tree Insertion Visualization on YouTube   Visualization of random and pre-sorted data insertions, in elementary binary search trees, and left-leaning red black trees
+* An intrusive red-black tree written in C++
+[show]
+* V
+* T
+* E
+Tree data structures[show]
+* V
+* T
+* E
+Data structuresCategories: 
+* 1972 in computer science
+* Binary trees
+* Search trees
+
