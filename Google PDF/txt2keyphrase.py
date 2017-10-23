@@ -1,6 +1,6 @@
 import os
 
-path="C:\\Users\\Varun Shankar S\\Desktop\\Google PDF\\transcript"
+path="/home/varun/Documents/Research/keyphrase/test_transcript/"
 txt=[]
 
 def updatekey(x):
@@ -18,7 +18,7 @@ def readtxtfile():
 def callshell():
     for f in os.listdir(path):
         if f not in txt:
-            command="sh ss2.sh \""+path+"\\"+f+"\""
+            command="sh ss2.sh \""+os.path.join(path,f)+"\""
             os.system(command)
             print(command)
             txt.append(f)

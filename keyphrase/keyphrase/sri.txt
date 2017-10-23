@@ -6,26 +6,26 @@ python audio_features/localspan.py osn5.txt 4 "none"
 python audio_features/cue.py osn5.txt "none" 4
 python audio_features/dispersion.py osn5.txt 4 "none"
 python ml_audio/write.py osn5.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn5.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab osn5.txt
 
-python preprocess_audio/pos1.py 0000172.txt none enable
-python preprocess_audio/grams.py 0000172.txt 3 none
-python audio_features/cscore.py 0000172.txt none
-python audio_features/tfidf.py "none" 3 "0000172.txt"
-python audio_features/localspan.py 0000172.txt 3 "none"
-python audio_features/cue.py 0000172.txt "none" 3
-python audio_features/dispersiontest.py 0000172.txt 3 "none"
-python keyphrase/write.py 0000172.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python preprocess_audio/pos1.py 0000021.txt "Porter-Stemmer" enable
+python preprocess_audio/grams.py 0000021.txt 3 "Porter-Stemmer"
+python audio_features/cscore.py 0000021.txt "Porter-Stemmer"
+python audio_features/tfidf.py "Porter-Stemmer" 3 "0000021.txt.txt"
+python audio_features/localspan.py 0000021.txt.txt 3 "Porter-Stemmer"
+python audio_features/cue.py 0000021.txt.txt "Porter-Stemmer" 3
+python audio_features/dispersiontest.py 0000021.txt.txt 3 "Porter-Stemmer"
+python audio_features/write.py 0000021.txt.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
 
-python pos.py osn4.txt none enable
-python grams.py osn4.txt 4 none
-python audio_features/cscore.py osn4.txt none
-python audio_features/tfidf.py "none" 4 "osn4.txt"
-python audio_features/localspan.py osn4.txt 4 "none"
-python audio_features/cue.py osn4.txt "none" 4
-python audio_features/dispersion.py osn4.txt 4 "none"
-python ml_audio/write.py osn4.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn4.txt
+python pos1.py 1.txt none enable
+python grams.py 1.txt 4 none
+python audio_features/cscore.py 1.txt none
+python audio_features/tfidf.py "none" 4 "1.txt"
+python audio_features/localspan.py 1.txt 4 "none"
+python audio_features/cue.py 1.txt "none" 4
+python audio_features/dispersion.py 1.txt 4 "none"
+python ml_audio/write.py 1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab 1.txt
 
 python pos.py osn3.txt none enable
 python grams.py osn3.txt 4 none
@@ -35,7 +35,7 @@ python audio_features/localspan.py osn3.txt 4 "none"
 python audio_features/cue.py osn3.txt "none" 4
 python audio_features/dispersion.py osn3.txt 4 "none"
 python ml_audio/write.py osn3.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn3.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab osn3.txt
 
 python pos.py osn2.txt none enable
 python grams.py osn2.txt 4 none
@@ -45,7 +45,7 @@ python audio_features/localspan.py osn2.txt 4 "none"
 python audio_features/cue.py osn2.txt "none" 4
 python audio_features/dispersion.py osn2.txt 4 "none"
 python ml_audio/write.py osn2.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn2.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab osn2.txt
 
 python pos.py osn1.txt none enable
 python grams.py osn1.txt 4 none
@@ -55,7 +55,7 @@ python audio_features/localspan.py osn1.txt 4 "none"
 python audio_features/cue.py osn1.txt "none" 4
 python audio_features/dispersion.py osn1.txt 4 "none"
 python ml_audio/write.py osn1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab osn1.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab osn1.txt
 
 python pos.py queue1.txt none enable
 python grams.py queue1.txt 4 none
@@ -65,7 +65,7 @@ python audio_features/localspan.py queue1.txt 4 "none"
 python audio_features/cue.py queue1.txt "none" 4
 python audio_features/dispersion.py queue1.txt 4 "none"
 python ml_audio/write.py queue1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab queue1.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab queue1.txt
 
 python pos.py stack1.txt none enable
 python grams.py stack1.txt 4 none
@@ -75,7 +75,7 @@ python audio_features/localspan.py stack1.txt 4 "none"
 python audio_features/cue.py stack1.txt "none" 4
 python audio_features/dispersion.py stack1.txt 4 "none"
 python ml_audio/write.py stack1.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab stack1.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab stack1.txt
 
 python pos.py queue2n.txt none enable
 python grams.py queue2n.txt 4 none
@@ -85,7 +85,7 @@ python audio_features/localspan.py queue2n.txt 4 "none"
 python audio_features/cue.py queue2n.txt "none" 4
 python audio_features/dispersion.py queue2n.txt 4 "none"
 python ml_audio/write.py queue2n.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab queue2n.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab queue2n.txt
 
 python pos.py arrayn2.txt none enable
 python grams.py arrayn2.txt 4 none
@@ -95,7 +95,7 @@ python audio_features/localspan.py arrayn2.txt 4 "none"
 python audio_features/cue.py arrayn2.txt "none" 4
 python audio_features/dispersion.py arrayn2.txt 4 "none"
 python ml_audio/write.py arrayn2.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab arrayn2.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab arrayn2.txt
 
 
 
@@ -107,7 +107,7 @@ python audio_features/localspan.py darray.txt 4 "none"
 python audio_features/cue.py darray.txt "none" 4
 python audio_features/dispersion.py darray.txt 4 "none"
 python ml_audio/write.py darray.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab darray.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab darray.txt
 
 python pos.py dequen2.txt none enable
 python grams.py dequen2.txt 4 none
@@ -117,7 +117,7 @@ python audio_features/localspan.py dequen2.txt 4 "none"
 python audio_features/cue.py dequen2.txt "none" 4
 python audio_features/dispersion.py dequen2.txt 4 "none"
 python ml_audio/write.py dequen2.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab dequen2.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab dequen2.txt
 
 python pos.py arrayn3.txt none enable
 python grams.py arrayn3.txt 4 none
@@ -127,7 +127,7 @@ python audio_features/localspan.py arrayn3.txt 4 "none"
 python audio_features/cue.py arrayn3.txt "none" 4
 python audio_features/dispersion.py arrayn3.txt 4 "none"
 python ml_audio/write.py arrayn3.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab arrayn3.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab arrayn3.txt
 
 
 
@@ -145,7 +145,7 @@ python audio_features/cscore.py biochem2.txt none
 
  python ml_audio/write.py biochem2.txt 'cscore' '_cscore.txt' none
 
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab biochem2.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab biochem2.txt
 
 
 
@@ -156,7 +156,7 @@ python grams.py cg3.txt 4 none
 
 python audio_features/cscore.py cg3.txt none
 
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab cg3.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab cg3.txt
 
 
 
@@ -167,4 +167,4 @@ python grams.py cg4.txt 4 none
 
 python audio_features/cscore.py cg4.txt none
 
-python ml_audio/Naive-Bayes/Naive-Bayes.py all_features.tab cg4.txt
+python ml_audio/N0000021ve-Bayes/N0000021ve-Bayes.py all_features.tab cg4.txt

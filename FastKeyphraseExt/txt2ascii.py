@@ -2,7 +2,7 @@ import os
 import codecs
 import unicodedata
 
-path="/home/varun/Documents/Research/keyphrase/test_transcript/"
+path="/home/varun/concept-graphs/FastKeyphraseExt/transcript/"
 txt=[]
 asciitext=""
 valid=['!','@','#','$','%','^','&','*','(',')','_','-','+','=','{','}','[',']',':',';','"','\'','<','>',',','.','?','/','|','\\','\n','\t',' ','~','`']
