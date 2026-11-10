@@ -5,5 +5,5 @@ stemmer=$2
 pos_tagging=$3
 
 for transcript in $transcript_list; do 
-	python preprocess_audio/pos.py $transcript $stemmer $pos_tagging
+	python -m preprocess.pos_tag $transcript $stemmer $pos_tagging
 done

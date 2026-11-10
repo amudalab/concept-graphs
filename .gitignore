@@ -32,3 +32,8 @@ google_pdf_search/Gsearch/
 # Uncomment to ignore newly generated feature files:
 # keyphrase_extraction/data/output/*
 # !keyphrase_extraction/data/output/.gitkeep
+
+# Caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/

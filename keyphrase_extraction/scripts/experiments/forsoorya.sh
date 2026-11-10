@@ -8,7 +8,7 @@ echo "training data file Generation"
 echo $trainingDataInputList
 echo $trainingDataSetName
 
-python ml/training_data/write_all.py $trainingDataInputList $trainingDataSetName data/output data/keys data/training_data Porter-Stemmer
+python -m classifiers.write_all $trainingDataInputList $trainingDataSetName data/output data/keys data/training_data Porter-Stemmer
 
 cp TrainingDataSet/$trainingDataSetName data/training_data
 

@@ -7,7 +7,7 @@ sh scripts/localspan.sh ds5.txt none 3
 sh scripts/cue.sh ds5.txt none 3
 sh scripts/cscore.sh ds5.txt none
 sh scripts/dispersion.sh ds5.txt
-python ml/test_data/write.py ds5.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python -m features.feature_table ds5.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
 
 
 sh scripts/pos1.sh ds6.txt none enable
@@ -17,7 +17,7 @@ sh scripts/localspan.sh ds6.txt none 3
 sh scripts/cue.sh ds6.txt none 3
 sh scripts/cscore.sh ds6.txt none
 sh scripts/dispersion.sh ds6.txt
-python ml/test_data/write.py ds6.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python -m features.feature_table ds6.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
 
 
 sh scripts/pos1.sh ds7.txt none enable
@@ -27,7 +27,7 @@ sh scripts/localspan.sh ds7.txt none 3
 sh scripts/cue.sh ds7.txt none 3
 sh scripts/cscore.sh ds7.txt none
 sh scripts/dispersion.sh ds7.txt
-python ml/test_data/write.py ds7.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python -m features.feature_table ds7.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
 
 
 sh scripts/pos1.sh ds8.txt none enable
@@ -37,4 +37,4 @@ sh scripts/localspan.sh ds8.txt none 3
 sh scripts/cue.sh ds8.txt none 3
 sh scripts/cscore.sh ds8.txt none
 sh scripts/dispersion.sh ds8.txt
-python ml/test_data/write.py ds8.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none
+python -m features.feature_table ds8.txt 'cscore,localspan,cuewords,dispersion,tfidf' '_cscore.txt,_localspan.txt,_cue.txt,_disp.txt,_tfidf.txt' none

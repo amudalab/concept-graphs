@@ -5,7 +5,7 @@ gramSize=$2
 stemmer=$3
 
 for transcript in $transcript_list; do 
-	python audio_features/localspan.py $transcript $gramSize $stemmer
+	python -m features.local_span $transcript $gramSize $stemmer
 done
 
 

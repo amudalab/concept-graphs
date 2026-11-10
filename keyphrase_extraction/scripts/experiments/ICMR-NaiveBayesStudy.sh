@@ -7,6 +7,6 @@ echo "Keyphrase extraction"
 
 for testing in $testing_list; do 
 	echo $testing
-	python ml/naive_bayes/ICMR_NaiveBayesStudy.py $trainingData $testing
+	python -m classifiers.naive_bayes $trainingData $testing
 	echo "done"
 done

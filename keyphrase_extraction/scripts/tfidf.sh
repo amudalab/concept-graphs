@@ -5,5 +5,5 @@ gramSize=$2
 transcript_list=$3
 
 for transcript in $transcript_list; do 
-	python audio_features/tfidf.py $stemmer $gramSize $transcript
+	python -m features.tfidf $stemmer $gramSize $transcript
 done

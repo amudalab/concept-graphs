@@ -5,7 +5,7 @@ stemmer=$2
 gramSize=$3
 
 for transcript in $transcript_list; do 
-	python audio_features/cue.py  $transcript $stemmer $gramSize
+	python -m features.cue  $transcript $stemmer $gramSize
 done
 
 
