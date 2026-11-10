@@ -1,2 +1,34 @@
-# Python bytecode
+# Bytecode / caches
 *.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Editor / OS
+*~
+.*.swp
+.DS_Store
+.~lock.*
+.idea/
+.vscode/
+*.sublime-*
+
+# Environments
+.venv/
+venv/
+.env
+.env.*
+
+# NLTK data (download with nltk.download(...); do not vendor)
+nltk_data/
+
+# Local search / download caches
+google_pdf_search/Gsearch/
+
+# Optional regenerated outputs (checked-in samples are kept under data/output)
+# Uncomment to ignore newly generated feature files:
+# keyphrase_extraction/data/output/*
+# !keyphrase_extraction/data/output/.gitkeep
