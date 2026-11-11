@@ -14,15 +14,15 @@ echo "Hello"
 	then
 		echo $transcript_list
 		echo "first if"		
-		python preprocess_audio/grams.py $transcript_list $gramSize $stemmer
+		python -m preprocess.ngrams $transcript_list $gramSize $stemmer
 		
 	elif [ "$posFilter_file" = "default_posfilter" ]
 	then
 		echo "second if"
-		python preprocess_audio/grams_pos.py $transcript_list $gramSize config/pos_filter.txt $stemmer
+		python -m preprocess.ngrams $transcript_list $gramSize config/pos_filter.txt $stemmer
 	else
 		echo "third else"
-		python preprocess_audio/grams_pos.py $transcript_list $gramSize $posFilter_file $stemmer
+		python -m preprocess.ngrams $transcript_list $gramSize $posFilter_file $stemmer
 	fi
 #done
 

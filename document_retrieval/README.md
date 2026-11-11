@@ -1,49 +1,30 @@
 # Document retrieval over concept graphs
 
-Builds concept graphs (adjacency matrices, taxonomies, enhanced semantic nets)
-from document keyphrases and runs retrieval / graph-analysis algorithms over
-them. Includes small `web.py` demos that serve the `static/` UI.
+Builds concept graphs from document keyphrases and runs retrieval /
+graph-analysis algorithms over them.
 
-Run from this directory.
+Requires **Python 3.10+**. Run every command from this directory.
 
 ## Layout
 
 ```
 document_retrieval/
-├── graph_init.py          # was test.py — entry point that builds graphs
-├── adjmatrix.py / edge.py / textmodel.py / textgraph.py
-├── doc_ret_*.py           # retrieval variants (bag-of-words, BFS, edge/node enh.)
-├── bfs*.py / taxonomy*.py / edge_enhancement*.py / …
-├── ret_*.py               # web.py front-ends
-├── static/                # CSS / JS for the web demos (must stay here)
-├── archive/               # older alternate implementations
-└── data/
-    ├── corpus/                  # source documents
-    ├── keys/                    # per-document keyphrase lists
-    ├── wikipedia_articles/      # supporting Wikipedia text dumps
-    ├── db/                      # master hierarchy graphs (.gdf)
-    ├── doc_graphs/              # per-document graphs
-    ├── taxonomies/              # per-document taxonomy graphs
-    ├── enhanced_semantic_nets/  # edge-enhanced nets
-    ├── doc_details/             # cluster / degree spreadsheets
-    └── *.gdf / *.xls / …        # aggregated graph artefacts & query files
+├── core/         # edge, adjacency, text_model, text_graph, graph_init, gdf_io
+├── retrieval/    # bag_of_words, edge_enhanced, node_degree, node_term_freq, …
+├── analysis/     # bfs, betweenness, closeness, degree, prim, shortest paths, …
+├── taxonomy/     # taxonomy builders, edge enhancement, EM clustering
+├── web/          # web.py front-ends + static/
+├── tools/        # extract_phrases, extract_keys, text_convert
+├── archive/      # legacy Python 2 snapshots (not maintained)
+└── data/         # corpora, keys, graphs
 ```
 
 ## Examples
 
 ```bash
-python graph_init.py
-python doc_ret_bag_of_words.py
-python doc_ret_edge_enh.py
-python bfs.py
-python edge_enhancement.py
+python -m core.graph_init
+python -m retrieval.bag_of_words "stack queue tree"
+python -m retrieval.node_degree "binary search tree"
+python -m analysis.bfs
+python -m web.bag_of_words
 ```
-
-Python modules import each other by bare name (`from adjmatrix import …`,
-`import graph_init`), so keep the working directory here (or put this folder on
-`PYTHONPATH`).
-
-## Note on `graph_init`
-
-Previously named `test.py`, which conflicted with Python’s standard library
-`test` package. All callers now `import graph_init`.
